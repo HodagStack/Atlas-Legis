@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Legis — Law School Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --navy:  #0f1e2e;
+      --gold:  #c9a84c;
+      --cream: #f5f0e8;
+      --panel: #162233;
+      --accent:#e8d5a3;
+      --text:  #e4ddd0;
+      --muted: #8a9bb0;
+      --green: #5cb97e;
+      --yellow:#d4aa45;
+      --red:   #d4614a;
+    }
+    body { font-family:'Source Sans 3',sans-serif; background:var(--navy); color:var(--text); height:100vh; display:flex; flex-direction:column; overflow:hidden; }
+
+    /* ── HEADER ── */
+    header { display:flex; align-items:center; justify-content:space-between; padding:0 20px; height:60px; background:var(--panel); border-bottom:1px solid rgba(201,168,76,0.25); flex-shrink:0; z-index:1000; gap:12px; }
+    .logo { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--gold); letter-spacing:0.03em; white-space:nowrap; }
+    .logo span { color:var(--accent); font-weight:300; font-size:0.85rem; margin-left:8px; font-family:'Source Sans 3',sans-serif; letter-spacing:0.12em; text-transform:uppercase; }
+    .header-center { display:flex; align-items:center; gap:8px; flex:1; justify-content:center; }
+    .header-right { display:flex; align-items:center; gap:10px; }
+    .school-count { font-size:0.75rem; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; white-space:nowrap; }
+
+    /* ── HEADER BUTTONS ── */
+    .hdr-btn { display:flex; align-items:center; gap:6px; padding:6px 14px; border-radius:6px; font-family:'Source Sans 3',sans-serif; font-size:0.82rem; cursor:pointer; border:1px solid rgba(201,168,76,0.35); background:rgba(201,168,76,0.08); color:var(--accent); transition:all 0.2s; white-space:nowrap; letter-spacing:0.04em; }
+    .hdr-btn:hover, .hdr-btn.active { background:rgba(201,168,76,0.18); border-color:var(--gold); color:var(--gold); }
+    .hdr-btn svg { flex-shrink:0; }
+
+    #search-input { background:rgba(255,255,255,0.06); border:1px solid rgba(201,168,76,0.3); border-radius:6px; color:var(--text); padding:6px 14px; font-size:0.85rem; font-family:'Source Sans 3',sans-serif; width:220px; outline:none; transition:border-color 0.2s; }
+    #search-input::placeholder { color:var(--muted); }
+    #search-input:focus { border-color:var(--gold); }
+
+    /* ── LAYOUT ── */
+    .main { display:flex; flex:1; overflow:hidden; position:relative; }
+    #map { flex:1; z-index:1; }
+    .leaflet-tile { filter:brightness(1.15) saturate(0.55) contrast(0.88); }
+    .leaflet-control-attribution { background:rgba(15,30,46,0.75)!important; color:#8a9bb0!important; }
+    .leaflet-control-attribution a { color:var(--muted)!important; }
+
+    /* ── SIDEBAR ── */
+    #sidebar { width:330px; background:var(--panel); border-left:1px solid transparent; display:flex; flex-direction:column; transform:translateX(100%); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.35s; z-index:10; flex-shrink:0; overflow-y:auto; position:absolute; right:0; top:0; bottom:0; }
+    #sidebar.open { transform:translateX(0); border-left-color:rgba(201,168,76,0.18); }
+    .sidebar-header { padding:22px 24px 14px; border-bottom:1px solid rgba(201,168,76,0.15); position:relative; }
+    .sidebar-tag { font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+    .sidebar-name { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--cream); line-height:1.35; padding-right:28px; }
+    .sidebar-body { padding:16px 22px; }
+    .info-section { margin-bottom:18px; }
+    .section-title { font-size:0.63rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:9px; border-bottom:1px solid rgba(201,168,76,0.15); padding-bottom:5px; }
+    .stat-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; }
+    .stat-box { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:8px 5px; text-align:center; transition:border-color 0.2s, background 0.2s; }
+    .stat-box.standing-great { background:rgba(92,185,126,0.15); border-color:rgba(92,185,126,0.45); }
+    .stat-box.standing-ok    { background:rgba(212,170,69,0.13); border-color:rgba(212,170,69,0.4); }
+    .stat-box.standing-reach { background:rgba(212,97,74,0.13); border-color:rgba(212,97,74,0.4); }
+    .stat-label { font-size:0.58rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--muted); margin-bottom:3px; }
+    .stat-value { font-size:1.02rem; font-weight:600; color:var(--cream); }
+    .info-row { display:flex; flex-direction:column; gap:3px; margin-bottom:12px; }
+    .info-label { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
+    .info-value { font-size:0.9rem; color:var(--text); }
+    .tier-badge { display:inline-block; padding:3px 10px; border-radius:4px; font-size:0.76rem; font-weight:600; letter-spacing:0.05em; }
+    .tier-1 { background:rgba(201,168,76,0.2); color:var(--gold); border:1px solid rgba(201,168,76,0.4); }
+    .tier-2 { background:rgba(100,160,200,0.15); color:#7eb8d4; border:1px solid rgba(100,160,200,0.3); }
+    .tier-3 { background:rgba(160,200,140,0.12); color:#9ec48a; border:1px solid rgba(160,200,140,0.25); }
+    .visit-btn { display:block; margin-top:4px; padding:10px 18px; background:transparent; border:1px solid var(--gold); color:var(--gold); border-radius:6px; font-family:'Source Sans 3',sans-serif; font-size:0.83rem; letter-spacing:0.06em; cursor:pointer; text-decoration:none; text-align:center; transition:background 0.2s,color 0.2s; }
+    .visit-btn:hover { background:var(--gold); color:var(--navy); }
+    #close-btn { position:absolute; top:12px; right:14px; background:none; border:none; color:var(--muted); font-size:1.2rem; cursor:pointer; line-height:1; padding:4px; transition:color 0.2s; }
+    #close-btn:hover { color:var(--gold); }
+
+    /* ── STANDING PILL in sidebar ── */
+    .standing-pill { display:inline-flex; align-items:center; gap:6px; padding:5px 12px; border-radius:20px; font-size:0.78rem; font-weight:600; margin-bottom:14px; }
+    .standing-pill.great  { background:rgba(92,185,126,0.15); color:var(--green); border:1px solid rgba(92,185,126,0.35); }
+    .standing-pill.ok     { background:rgba(212,170,69,0.13); color:var(--yellow); border:1px solid rgba(212,170,69,0.35); }
+    .standing-pill.reach  { background:rgba(212,97,74,0.13); color:var(--red); border:1px solid rgba(212,97,74,0.35); }
+    .standing-pill.none   { display:none; }
+
+    /* ── MARKERS ── */
+    .school-marker { width:11px; height:11px; border-radius:50%; background:var(--gold); border:2px solid rgba(245,240,232,0.6); box-shadow:0 0 0 2px rgba(201,168,76,0.2),0 2px 6px rgba(0,0,0,0.5); cursor:pointer; transition:transform 0.15s, opacity 0.2s; }
+    .school-marker:hover,.school-marker.active { transform:scale(1.8); }
+    .school-marker.t2 { background:#7eb8d4; box-shadow:0 0 0 2px rgba(126,184,212,0.2),0 2px 6px rgba(0,0,0,0.5); }
+    .school-marker.t3 { background:#9ec48a; box-shadow:0 0 0 2px rgba(158,196,138,0.2),0 2px 6px rgba(0,0,0,0.5); }
+    /* standing-mode overrides */
+    .school-marker.s-great { background:var(--green) !important; box-shadow:0 0 0 3px rgba(92,185,126,0.3),0 2px 8px rgba(0,0,0,0.5) !important; }
+    .school-marker.s-ok    { background:var(--yellow) !important; box-shadow:0 0 0 3px rgba(212,170,69,0.3),0 2px 8px rgba(0,0,0,0.5) !important; }
+    .school-marker.s-reach { background:var(--red) !important; box-shadow:0 0 0 3px rgba(212,97,74,0.3),0 2px 8px rgba(0,0,0,0.5) !important; }
+    .school-marker.s-dim   { opacity:0.18; }
+    /* filtered-out */
+    .school-marker.filtered-out { opacity:0.1; pointer-events:none; }
+
+    /* ── TOOLTIP ── */
+    #map-tooltip { position:absolute; z-index:800; pointer-events:none; background:rgba(15,26,40,0.95); border:1px solid rgba(201,168,76,0.35); border-radius:8px; padding:10px 14px; min-width:190px; backdrop-filter:blur(8px); box-shadow:0 4px 20px rgba(0,0,0,0.5); opacity:0; transition:opacity 0.15s; }
+    #map-tooltip.visible { opacity:1; }
+    .tt-name { font-family:'Playfair Display',serif; font-size:0.9rem; color:var(--cream); margin-bottom:6px; line-height:1.3; }
+    .tt-row { display:flex; justify-content:space-between; gap:12px; font-size:0.75rem; margin-bottom:3px; }
+    .tt-label { color:var(--muted); }
+    .tt-val { color:var(--text); font-weight:600; }
+    .tt-standing { margin-top:6px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.07); font-size:0.73rem; font-weight:600; }
+    .tt-standing.great { color:var(--green); }
+    .tt-standing.ok    { color:var(--yellow); }
+    .tt-standing.reach { color:var(--red); }
+
+    /* ── LEGEND ── */
+    .legend { position:absolute; bottom:28px; left:14px; z-index:500; background:rgba(22,34,51,0.93); border:1px solid rgba(201,168,76,0.2); border-radius:8px; padding:11px 15px; backdrop-filter:blur(6px); }
+    .legend-title { font-size:0.63rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:9px; }
+    .legend-item { display:flex; align-items:center; gap:8px; margin-bottom:5px; font-size:0.76rem; color:var(--text); }
+    .legend-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    /* standing legend */
+    #standing-legend { display:none; }
+    #standing-legend.visible { display:block; }
+    .legend-divider { border:none; border-top:1px solid rgba(255,255,255,0.08); margin:8px 0; }
+
+    /* ── SEARCH DROPDOWN ── */
+    #search-results { position:absolute; top:60px; right:20px; width:220px; background:var(--panel); border:1px solid rgba(201,168,76,0.3); border-top:none; border-radius:0 0 8px 8px; z-index:2000; display:none; max-height:280px; overflow-y:auto; }
+    .search-result-item { padding:9px 14px; font-size:0.82rem; cursor:pointer; border-bottom:1px solid rgba(255,255,255,0.05); transition:background 0.15s; }
+    .search-result-item:hover { background:rgba(201,168,76,0.1); color:var(--gold); }
+    .search-result-item:last-child { border-bottom:none; }
+    .sri-city { font-size:0.71rem; color:var(--muted); margin-top:1px; }
+
+    /* ── WHERE DO I STAND PANEL ── */
+    #wdis-panel { position:absolute; top:72px; left:50%; transform:translateX(-50%); z-index:900; background:var(--panel); border:1px solid rgba(201,168,76,0.3); border-radius:12px; padding:20px 24px; width:380px; box-shadow:0 8px 32px rgba(0,0,0,0.5); backdrop-filter:blur(10px); display:none; }
+    #wdis-panel.visible { display:block; }
+    .wdis-title { font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:4px; }
+    .wdis-sub { font-size:0.78rem; color:var(--muted); margin-bottom:16px; line-height:1.4; }
+    .wdis-inputs { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px; }
+    .wdis-field label { display:block; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
+    .wdis-field input { width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(201,168,76,0.3); border-radius:6px; color:var(--cream); padding:8px 12px; font-size:0.92rem; font-family:'Source Sans 3',sans-serif; outline:none; transition:border-color 0.2s; }
+    .wdis-field input:focus { border-color:var(--gold); }
+    .wdis-field input::placeholder { color:var(--muted); }
+    .wdis-actions { display:flex; gap:8px; }
+    .wdis-btn { flex:1; padding:9px; border-radius:6px; font-family:'Source Sans 3',sans-serif; font-size:0.83rem; cursor:pointer; border:none; transition:all 0.2s; letter-spacing:0.04em; }
+    .wdis-btn.primary { background:var(--gold); color:var(--navy); font-weight:600; }
+    .wdis-btn.primary:hover { background:var(--accent); }
+    .wdis-btn.secondary { background:rgba(255,255,255,0.06); color:var(--muted); border:1px solid rgba(255,255,255,0.12); }
+    .wdis-btn.secondary:hover { color:var(--text); }
+    .wdis-key { display:flex; gap:14px; margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.07); }
+    .wdis-key-item { display:flex; align-items:center; gap:5px; font-size:0.72rem; color:var(--muted); }
+    .wdis-key-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+
+    /* ── FILTERS PANEL ── */
+    #filter-panel { position:absolute; top:72px; left:50%; transform:translateX(-50%); z-index:900; background:var(--panel); border:1px solid rgba(201,168,76,0.3); border-radius:12px; padding:20px 24px; width:420px; box-shadow:0 8px 32px rgba(0,0,0,0.5); backdrop-filter:blur(10px); display:none; }
+    #filter-panel.visible { display:block; }
+    .filter-title { font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:14px; }
+    .filter-section { margin-bottom:16px; }
+    .filter-label { font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; display:block; }
+    .filter-tiers { display:flex; gap:8px; flex-wrap:wrap; }
+    .tier-toggle { padding:5px 14px; border-radius:20px; font-size:0.78rem; cursor:pointer; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05); color:var(--muted); transition:all 0.2s; user-select:none; }
+    .tier-toggle.on.t14  { background:rgba(201,168,76,0.2); border-color:var(--gold); color:var(--gold); }
+    .tier-toggle.on.t2   { background:rgba(100,160,200,0.18); border-color:#7eb8d4; color:#7eb8d4; }
+    .tier-toggle.on.t3   { background:rgba(160,200,140,0.15); border-color:#9ec48a; color:#9ec48a; }
+    .range-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .range-field { display:flex; flex-direction:column; gap:4px; }
+    .range-field input { background:rgba(255,255,255,0.06); border:1px solid rgba(201,168,76,0.25); border-radius:5px; color:var(--cream); padding:6px 10px; font-size:0.88rem; font-family:'Source Sans 3',sans-serif; outline:none; width:100%; }
+    .range-field input:focus { border-color:var(--gold); }
+    .filter-actions { display:flex; gap:8px; margin-top:6px; }
+    .filter-btn { flex:1; padding:9px; border-radius:6px; font-family:'Source Sans 3',sans-serif; font-size:0.83rem; cursor:pointer; border:none; transition:all 0.2s; }
+    .filter-btn.primary { background:var(--gold); color:var(--navy); font-weight:600; }
+    .filter-btn.primary:hover { background:var(--accent); }
+    .filter-btn.secondary { background:rgba(255,255,255,0.06); color:var(--muted); border:1px solid rgba(255,255,255,0.12); }
+    .filter-btn.secondary:hover { color:var(--text); }
+    #filter-count-badge { display:none; background:var(--gold); color:var(--navy); border-radius:10px; font-size:0.68rem; font-weight:700; padding:1px 6px; margin-left:2px; }
+    #filter-count-badge.visible { display:inline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Atlas Legis <span>Law School Atlas</span></div>
+
+  <div class="header-center">
+    <!-- Where Do I Stand button -->
+    <button class="hdr-btn" id="wdis-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Where Do I Stand?
+    </button>
+    <!-- Filters button -->
+    <button class="hdr-btn" id="filter-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      Filters
+      <span id="filter-count-badge"></span>
+    </button>
+  </div>
+
+  <div class="header-right">
+    <span class="school-count" id="count-label"></span>
+    <input type="text" id="search-input" placeholder="Search name, city, or state…" autocomplete="off" />
+  </div>
+</header>
+
+<div id="search-results"></div>
+
+<!-- WHERE DO I STAND PANEL -->
+<div id="wdis-panel">
+  <div class="wdis-title">Where Do I Stand?</div>
+  <div class="wdis-sub">Enter your GPA and LSAT score to see how you compare at each school. The map dots will update to show your chances.</div>
+  <div class="wdis-inputs">
+    <div class="wdis-field">
+      <label>My GPA</label>
+      <input type="number" id="wdis-gpa" placeholder="e.g. 3.75" min="0" max="4.33" step="0.01" />
+    </div>
+    <div class="wdis-field">
+      <label>My LSAT</label>
+      <input type="number" id="wdis-lsat" placeholder="e.g. 168" min="120" max="180" step="1" />
+    </div>
+  </div>
+  <div class="wdis-actions">
+    <button class="wdis-btn primary" id="wdis-apply">Show My Standing</button>
+    <button class="wdis-btn secondary" id="wdis-clear">Clear</button>
+  </div>
+  <div class="wdis-key">
+    <div class="wdis-key-item"><div class="wdis-key-dot" style="background:var(--green)"></div> Above median on both</div>
+    <div class="wdis-key-item"><div class="wdis-key-dot" style="background:var(--yellow)"></div> In range (25th–75th)</div>
+    <div class="wdis-key-item"><div class="wdis-key-dot" style="background:var(--red)"></div> Below 25th percentile</div>
+  </div>
+</div>
+
+<!-- FILTERS PANEL -->
+<div id="filter-panel">
+  <div class="filter-title">Filter Schools</div>
+
+  <div class="filter-section">
+    <span class="filter-label">Ranking Tier</span>
+    <div class="filter-tiers">
+      <div class="tier-toggle on t14" data-tier="t14">T14</div>
+      <div class="tier-toggle on t2"  data-tier="tier2">Tier 2</div>
+      <div class="tier-toggle on t3"  data-tier="tier3">Tier 3</div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <span class="filter-label">LSAT Median Range</span>
+    <div class="range-row">
+      <div class="range-field">
+        <input type="number" id="f-lsat-min" placeholder="Min (e.g. 165)" min="120" max="180" />
+      </div>
+      <div class="range-field">
+        <input type="number" id="f-lsat-max" placeholder="Max (e.g. 175)" min="120" max="180" />
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <span class="filter-label">GPA Median Range</span>
+    <div class="range-row">
+      <div class="range-field">
+        <input type="number" id="f-gpa-min" placeholder="Min (e.g. 3.50)" min="2.0" max="4.33" step="0.01" />
+      </div>
+      <div class="range-field">
+        <input type="number" id="f-gpa-max" placeholder="Max (e.g. 3.95)" min="2.0" max="4.33" step="0.01" />
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-actions">
+    <button class="filter-btn primary" id="filter-apply">Apply Filters</button>
+    <button class="filter-btn secondary" id="filter-reset">Reset</button>
+  </div>
+</div>
+
+<div class="main">
+  <div id="map"></div>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <button id="close-btn" title="Close">✕</button>
+      <div class="sidebar-tag">Law School</div>
+      <div class="sidebar-name" id="s-name">—</div>
+    </div>
+    <div class="sidebar-body">
+      <div class="info-section">
+        <div id="standing-pill" class="standing-pill none"></div>
+        <div class="info-row">
+          <span class="info-label">Location</span>
+          <span class="info-value" id="s-location">—</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">U.S. News Ranking</span>
+          <span class="info-value" id="s-rank">—</span>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="section-title">2025 LSAT — 25th / Median / 75th</div>
+        <div class="stat-grid">
+          <div class="stat-box" id="sb-lsat25"><div class="stat-label">25th %ile</div><div class="stat-value" id="s-lsat25">—</div></div>
+          <div class="stat-box" id="sb-lsat50"><div class="stat-label">Median</div><div class="stat-value" id="s-lsat50">—</div></div>
+          <div class="stat-box" id="sb-lsat75"><div class="stat-label">75th %ile</div><div class="stat-value" id="s-lsat75">—</div></div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="section-title">2025 GPA — 25th / Median / 75th</div>
+        <div class="stat-grid">
+          <div class="stat-box" id="sb-gpa25"><div class="stat-label">25th %ile</div><div class="stat-value" id="s-gpa25">—</div></div>
+          <div class="stat-box" id="sb-gpa50"><div class="stat-label">Median</div><div class="stat-value" id="s-gpa50">—</div></div>
+          <div class="stat-box" id="sb-gpa75"><div class="stat-label">75th %ile</div><div class="stat-value" id="s-gpa75">—</div></div>
+        </div>
+      </div>
+
+      <a class="visit-btn" id="s-link" href="#" target="_blank" rel="noopener">Visit School Website ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- MAP TOOLTIP -->
+<div id="map-tooltip">
+  <div class="tt-name" id="tt-name"></div>
+  <div class="tt-row"><span class="tt-label">Median LSAT</span><span class="tt-val" id="tt-lsat"></span></div>
+  <div class="tt-row"><span class="tt-label">Median GPA</span><span class="tt-val" id="tt-gpa"></span></div>
+  <div class="tt-standing" id="tt-standing"></div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-title">Ranking Tier</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#c9a84c"></div> T14</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#7eb8d4"></div> Tier 2 (#15–50)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#9ec48a"></div> Tier 3 (#51+)</div>
+  <div id="standing-legend">
+    <hr class="legend-divider">
+    <div class="legend-title" style="margin-top:4px">Your Standing</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Above median</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div> In range</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Reach</div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const lawSchools = [
+  { name:"Stanford Law School", city:"Stanford, CA", lat:37.4274, lng:-122.1678, tier:"t14", rank:1, lsat25:171, lsat50:173, lsat75:176, gpa25:3.87, gpa50:3.96, gpa75:4.00, url:"https://law.stanford.edu" },
+  { name:"Yale Law School", city:"New Haven, CT", lat:41.3118, lng:-72.9246, tier:"t14", rank:1, lsat25:171, lsat50:174, lsat75:177, gpa25:3.90, gpa50:3.96, gpa75:4.00, url:"https://law.yale.edu" },
+  { name:"University of Chicago Law School", city:"Chicago, IL", lat:41.7886, lng:-87.5987, tier:"t14", rank:3, lsat25:171, lsat50:174, lsat75:176, gpa25:3.87, gpa50:3.97, gpa75:4.00, url:"https://www.law.uchicago.edu" },
+  { name:"University of Virginia School of Law", city:"Charlottesville, VA", lat:38.0336, lng:-78.5080, tier:"t14", rank:4, lsat25:168, lsat50:173, lsat75:175, gpa25:3.83, gpa50:3.99, gpa75:4.04, url:"https://www.law.virginia.edu" },
+  { name:"Penn Carey Law", city:"Philadelphia, PA", lat:39.9522, lng:-75.1932, tier:"t14", rank:5, lsat25:167, lsat50:173, lsat75:174, gpa25:3.77, gpa50:3.95, gpa75:4.00, url:"https://www.law.upenn.edu" },
+  { name:"Duke University School of Law", city:"Durham, NC", lat:36.0014, lng:-78.9382, tier:"t14", rank:6, lsat25:169, lsat50:171, lsat75:172, gpa25:3.83, gpa50:3.91, gpa75:3.96, url:"https://law.duke.edu" },
+  { name:"Harvard Law School", city:"Cambridge, MA", lat:42.3770, lng:-71.1188, tier:"t14", rank:6, lsat25:171, lsat50:174, lsat75:176, gpa25:3.89, gpa50:3.96, gpa75:4.00, url:"https://hls.harvard.edu" },
+  { name:"University of Michigan Law School", city:"Ann Arbor, MI", lat:42.3507, lng:-83.7458, tier:"t14", rank:8, lsat25:168, lsat50:171, lsat75:173, gpa25:3.74, gpa50:3.88, gpa75:3.95, url:"https://law.umich.edu" },
+  { name:"NYU School of Law", city:"New York, NY", lat:40.7291, lng:-73.9965, tier:"t14", rank:8, lsat25:169, lsat50:172, lsat75:174, gpa25:3.81, gpa50:3.92, gpa75:3.97, url:"https://www.law.nyu.edu" },
+  { name:"Columbia Law School", city:"New York, NY", lat:40.8075, lng:-73.9626, tier:"t14", rank:10, lsat25:169, lsat50:173, lsat75:175, gpa25:3.85, gpa50:3.92, gpa75:3.98, url:"https://www.law.columbia.edu" },
+  { name:"Northwestern Pritzker School of Law", city:"Chicago, IL", lat:41.8962, lng:-87.6254, tier:"t14", rank:10, lsat25:167, lsat50:173, lsat75:175, gpa25:3.76, gpa50:3.96, gpa75:4.00, url:"https://www.law.northwestern.edu" },
+  { name:"UCLA School of Law", city:"Los Angeles, CA", lat:34.0722, lng:-118.4400, tier:"t14", rank:12, lsat25:166, lsat50:171, lsat75:172, gpa25:3.73, gpa50:3.95, gpa75:4.00, url:"https://law.ucla.edu" },
+  { name:"UC Berkeley School of Law", city:"Berkeley, CA", lat:37.8724, lng:-122.2595, tier:"t14", rank:13, lsat25:167, lsat50:170, lsat75:172, gpa25:3.84, gpa50:3.92, gpa75:3.99, url:"https://www.law.berkeley.edu" },
+  { name:"Georgetown University Law Center", city:"Washington, DC", lat:38.9027, lng:-77.0014, tier:"t14", rank:14, lsat25:166, lsat50:171, lsat75:173, gpa25:3.75, gpa50:3.93, gpa75:3.98, url:"https://www.law.georgetown.edu" },
+  { name:"University of Texas School of Law", city:"Austin, TX", lat:30.2890, lng:-97.7394, tier:"t14", rank:14, lsat25:166, lsat50:172, lsat75:173, gpa25:3.75, gpa50:3.89, gpa75:3.96, url:"https://law.utexas.edu" },
+  { name:"Vanderbilt University Law School", city:"Nashville, TN", lat:36.1447, lng:-86.8027, tier:"tier2", rank:14, lsat25:167, lsat50:170, lsat75:171, gpa25:3.77, gpa50:3.91, gpa75:3.97, url:"https://law.vanderbilt.edu" },
+  { name:"Washington University in St. Louis School of Law", city:"St. Louis, MO", lat:38.6488, lng:-90.3108, tier:"tier2", rank:14, lsat25:165, lsat50:175, lsat75:176, gpa25:3.58, gpa50:3.96, gpa75:4.00, url:"https://law.wustl.edu" },
+  { name:"Cornell Law School", city:"Ithaca, NY", lat:42.4474, lng:-76.4850, tier:"t14", rank:18, lsat25:168, lsat50:173, lsat75:175, gpa25:3.75, gpa50:3.92, gpa75:3.97, url:"https://www.lawschool.cornell.edu" },
+  { name:"University of North Carolina School of Law", city:"Chapel Hill, NC", lat:35.9132, lng:-79.0558, tier:"tier2", rank:18, lsat25:165, lsat50:168, lsat75:169, gpa25:3.78, gpa50:3.89, gpa75:3.97, url:"https://law.unc.edu" },
+  { name:"University of Minnesota Law School", city:"Minneapolis, MN", lat:44.9740, lng:-93.2351, tier:"tier2", rank:20, lsat25:166, lsat50:171, lsat75:173, gpa25:3.62, gpa50:3.88, gpa75:3.95, url:"https://www.law.umn.edu" },
+  { name:"University of Notre Dame Law School", city:"Notre Dame, IN", lat:41.7002, lng:-86.2380, tier:"tier2", rank:20, lsat25:166, lsat50:170, lsat75:171, gpa25:3.78, gpa50:3.89, gpa75:3.95, url:"https://law.nd.edu" },
+  { name:"Boston University School of Law", city:"Boston, MA", lat:42.3487, lng:-71.1016, tier:"tier2", rank:22, lsat25:164, lsat50:170, lsat75:171, gpa25:3.71, gpa50:3.88, gpa75:3.93, url:"https://www.bu.edu/law" },
+  { name:"University of Georgia School of Law", city:"Athens, GA", lat:33.9519, lng:-83.3750, tier:"tier2", rank:22, lsat25:159, lsat50:169, lsat75:171, gpa25:3.70, gpa50:3.92, gpa75:3.97, url:"https://www.law.uga.edu" },
+  { name:"Texas A&M University School of Law", city:"Fort Worth, TX", lat:32.7213, lng:-97.3243, tier:"tier2", rank:22, lsat25:161, lsat50:169, lsat75:170, gpa25:3.67, gpa50:4.00, gpa75:4.00, url:"https://law.tamu.edu" },
+  { name:"Boston College Law School", city:"Newton, MA", lat:42.3358, lng:-71.1685, tier:"tier2", rank:25, lsat25:162, lsat50:168, lsat75:169, gpa25:3.67, gpa50:3.83, gpa75:3.90, url:"https://www.bc.edu/law" },
+  { name:"USC Gould School of Law", city:"Los Angeles, CA", lat:34.0195, lng:-118.2856, tier:"tier2", rank:26, lsat25:165, lsat50:169, lsat75:170, gpa25:3.73, gpa50:3.91, gpa75:3.97, url:"https://gould.usc.edu" },
+  { name:"Wake Forest University School of Law", city:"Winston-Salem, NC", lat:36.1321, lng:-80.2737, tier:"tier2", rank:26, lsat25:163, lsat50:166, lsat75:168, gpa25:3.60, gpa50:3.79, gpa75:3.90, url:"https://law.wfu.edu" },
+  { name:"BYU J. Reuben Clark Law School", city:"Provo, UT", lat:40.2338, lng:-111.6585, tier:"tier2", rank:28, lsat25:168, lsat50:170, lsat75:172, gpa25:3.82, gpa50:3.95, gpa75:3.98, url:"https://law.byu.edu" },
+  { name:"Ohio State University Moritz College of Law", city:"Columbus, OH", lat:40.0017, lng:-83.0157, tier:"tier2", rank:28, lsat25:163, lsat50:168, lsat75:169, gpa25:3.64, gpa50:3.91, gpa75:3.97, url:"https://moritzlaw.osu.edu" },
+  { name:"University of Wisconsin Law School", city:"Madison, WI", lat:43.0731, lng:-89.4012, tier:"tier2", rank:28, lsat25:161, lsat50:167, lsat75:169, gpa25:3.61, gpa50:3.81, gpa75:3.93, url:"https://law.wisc.edu" },
+  { name:"University of Alabama School of Law", city:"Tuscaloosa, AL", lat:33.2119, lng:-87.5436, tier:"tier2", rank:31, lsat25:161, lsat50:167, lsat75:168, gpa25:3.76, gpa50:3.97, gpa75:4.05, url:"https://www.law.ua.edu" },
+  { name:"George Mason Antonin Scalia Law School", city:"Arlington, VA", lat:38.8847, lng:-77.1008, tier:"tier2", rank:31, lsat25:162, lsat50:169, lsat75:171, gpa25:3.55, gpa50:3.93, gpa75:3.98, url:"https://www.law.gmu.edu" },
+  { name:"George Washington University Law School", city:"Washington, DC", lat:38.8998, lng:-77.0473, tier:"tier2", rank:31, lsat25:162, lsat50:168, lsat75:170, gpa25:3.55, gpa50:3.86, gpa75:3.93, url:"https://www.law.gwu.edu" },
+  { name:"University of Utah S.J. Quinney College of Law", city:"Salt Lake City, UT", lat:40.7648, lng:-111.8453, tier:"tier2", rank:31, lsat25:162, lsat50:166, lsat75:168, gpa25:3.62, gpa50:3.87, gpa75:3.94, url:"https://law.utah.edu" },
+  { name:"William & Mary Law School", city:"Williamsburg, VA", lat:37.2709, lng:-76.7143, tier:"tier2", rank:31, lsat25:161, lsat50:166, lsat75:167, gpa25:3.53, gpa50:3.82, gpa75:3.94, url:"https://law.wm.edu" },
+  { name:"University of Iowa College of Law", city:"Iowa City, IA", lat:41.6614, lng:-91.5347, tier:"tier2", rank:36, lsat25:161, lsat50:164, lsat75:165, gpa25:3.62, gpa50:3.78, gpa75:3.92, url:"https://law.uiowa.edu" },
+  { name:"Washington and Lee University School of Law", city:"Lexington, VA", lat:37.7893, lng:-79.4428, tier:"tier2", rank:36, lsat25:161, lsat50:167, lsat75:168, gpa25:3.51, gpa50:3.75, gpa75:3.85, url:"https://law.wlu.edu" },
+  { name:"UC Irvine School of Law", city:"Irvine, CA", lat:33.6405, lng:-117.8443, tier:"tier2", rank:38, lsat25:166, lsat50:169, lsat75:170, gpa25:3.59, gpa50:3.80, gpa75:3.90, url:"https://www.law.uci.edu" },
+  { name:"Emory University School of Law", city:"Atlanta, GA", lat:33.7914, lng:-84.3239, tier:"tier2", rank:38, lsat25:162, lsat50:166, lsat75:168, gpa25:3.68, gpa50:3.82, gpa75:3.87, url:"https://law.emory.edu" },
+  { name:"Florida State University College of Law", city:"Tallahassee, FL", lat:30.4415, lng:-84.2983, tier:"tier2", rank:38, lsat25:158, lsat50:166, lsat75:167, gpa25:3.60, gpa50:3.93, gpa75:3.99, url:"https://law.fsu.edu" },
+  { name:"University of Florida Levin College of Law", city:"Gainesville, FL", lat:29.6474, lng:-82.3455, tier:"tier2", rank:38, lsat25:165, lsat50:169, lsat75:170, gpa25:3.70, gpa50:3.91, gpa75:3.97, url:"https://www.law.ufl.edu" },
+  { name:"Fordham University School of Law", city:"New York, NY", lat:40.7563, lng:-74.0018, tier:"tier2", rank:38, lsat25:165, lsat50:168, lsat75:170, gpa25:3.60, gpa50:3.79, gpa75:3.88, url:"https://law.fordham.edu" },
+  { name:"Baylor Law School", city:"Waco, TX", lat:31.5488, lng:-97.1131, tier:"tier3", rank:43, lsat25:159, lsat50:164, lsat75:165, gpa25:3.49, gpa50:3.77, gpa75:3.89, url:"https://law.baylor.edu" },
+  { name:"SMU Dedman School of Law", city:"Dallas, TX", lat:32.8434, lng:-96.7844, tier:"tier3", rank:43, lsat25:163, lsat50:167, lsat75:168, gpa25:3.52, gpa50:3.81, gpa75:3.92, url:"https://www.smu.edu/law" },
+  { name:"Arizona State Sandra Day O'Connor College of Law", city:"Phoenix, AZ", lat:33.4255, lng:-111.9400, tier:"tier2", rank:45, lsat25:158, lsat50:165, lsat75:167, gpa25:3.58, gpa50:3.91, gpa75:3.98, url:"https://law.asu.edu" },
+  { name:"University of Colorado Law School", city:"Boulder, CO", lat:40.0076, lng:-105.2659, tier:"tier2", rank:46, lsat25:161, lsat50:164, lsat75:167, gpa25:3.62, gpa50:3.81, gpa75:3.91, url:"https://www.colorado.edu/law" },
+  { name:"Indiana University Maurer School of Law", city:"Bloomington, IN", lat:39.1684, lng:-86.5230, tier:"tier2", rank:46, lsat25:158, lsat50:164, lsat75:166, gpa25:3.63, gpa50:3.91, gpa75:3.98, url:"https://law.indiana.edu" },
+  { name:"University of Illinois College of Law", city:"Champaign, IL", lat:40.1020, lng:-88.2272, tier:"tier2", rank:48, lsat25:160, lsat50:166, lsat75:168, gpa25:3.55, gpa50:3.81, gpa75:3.92, url:"https://law.illinois.edu" },
+  { name:"Villanova University Widger School of Law", city:"Villanova, PA", lat:40.0358, lng:-75.3416, tier:"tier2", rank:48, lsat25:159, lsat50:164, lsat75:166, gpa25:3.64, gpa50:3.80, gpa75:3.90, url:"https://law1.villanova.edu" },
+  { name:"UC Davis School of Law", city:"Davis, CA", lat:38.5382, lng:-121.7617, tier:"tier2", rank:50, lsat25:160, lsat50:165, lsat75:167, gpa25:3.49, gpa50:3.70, gpa75:3.87, url:"https://law.ucdavis.edu" },
+  { name:"University of Connecticut School of Law", city:"Hartford, CT", lat:41.7780, lng:-72.6908, tier:"tier3", rank:50, lsat25:160, lsat50:162, lsat75:164, gpa25:3.55, gpa50:3.78, gpa75:3.90, url:"https://www.law.uconn.edu" },
+  { name:"University of Kansas School of Law", city:"Lawrence, KS", lat:38.9543, lng:-95.2558, tier:"tier3", rank:50, lsat25:158, lsat50:162, lsat75:164, gpa25:3.58, gpa50:3.85, gpa75:3.95, url:"https://law.ku.edu" },
+  { name:"Temple University Beasley School of Law", city:"Philadelphia, PA", lat:39.9813, lng:-75.1551, tier:"tier3", rank:50, lsat25:162, lsat50:165, lsat75:168, gpa25:3.59, gpa50:3.76, gpa75:3.90, url:"https://www.law.temple.edu" },
+  { name:"University of Washington School of Law", city:"Seattle, WA", lat:47.6537, lng:-122.3082, tier:"tier2", rank:50, lsat25:162, lsat50:165, lsat75:167, gpa25:3.60, gpa50:3.76, gpa75:3.86, url:"https://www.law.uw.edu" },
+  { name:"Pepperdine Caruso School of Law", city:"Malibu, CA", lat:34.0367, lng:-118.6951, tier:"tier3", rank:55, lsat25:161, lsat50:164, lsat75:167, gpa25:3.61, gpa50:3.85, gpa75:3.94, url:"https://law.pepperdine.edu" },
+  { name:"University of Tennessee College of Law", city:"Knoxville, TN", lat:35.9544, lng:-83.9270, tier:"tier3", rank:55, lsat25:160, lsat50:164, lsat75:166, gpa25:3.67, gpa50:3.89, gpa75:3.95, url:"https://law.utk.edu" },
+  { name:"University of Missouri School of Law", city:"Columbia, MO", lat:38.9517, lng:-92.3341, tier:"tier3", rank:57, lsat25:156, lsat50:161, lsat75:162, gpa25:3.47, gpa50:3.72, gpa75:3.91, url:"https://law.missouri.edu" },
+  { name:"University of San Diego School of Law", city:"San Diego, CA", lat:32.7726, lng:-117.1895, tier:"tier3", rank:57, lsat25:160, lsat50:163, lsat75:165, gpa25:3.59, gpa50:3.84, gpa75:3.92, url:"https://www.sandiego.edu/law" },
+  { name:"University of Arizona James E. Rogers College of Law", city:"Tucson, AZ", lat:32.2319, lng:-110.9501, tier:"tier3", rank:59, lsat25:162, lsat50:163, lsat75:165, gpa25:3.54, gpa50:3.78, gpa75:3.90, url:"https://law.arizona.edu" },
+  { name:"Marquette University Law School", city:"Milwaukee, WI", lat:43.0368, lng:-87.9303, tier:"tier3", rank:59, lsat25:156, lsat50:158, lsat75:160, gpa25:3.50, gpa50:3.70, gpa75:3.83, url:"https://law.marquette.edu" },
+  { name:"University of Oklahoma College of Law", city:"Norman, OK", lat:35.2058, lng:-97.4474, tier:"tier3", rank:59, lsat25:159, lsat50:162, lsat75:164, gpa25:3.42, gpa50:3.73, gpa75:3.88, url:"https://www.law.ou.edu" },
+  { name:"Penn State Dickinson Law", city:"Carlisle, PA", lat:40.2010, lng:-77.1997, tier:"tier3", rank:59, lsat25:157, lsat50:159, lsat75:161, gpa25:3.50, gpa50:3.71, gpa75:3.86, url:"https://dickinsonlaw.psu.edu" },
+  { name:"Cardozo School of Law", city:"New York, NY", lat:40.7298, lng:-73.9880, tier:"tier3", rank:63, lsat25:162, lsat50:165, lsat75:167, gpa25:3.56, gpa50:3.78, gpa75:3.87, url:"https://cardozo.yu.edu" },
+  { name:"University of Houston Law Center", city:"Houston, TX", lat:29.7216, lng:-95.3403, tier:"tier3", rank:63, lsat25:160, lsat50:163, lsat75:165, gpa25:3.56, gpa50:3.79, gpa75:3.90, url:"https://www.law.uh.edu" },
+  { name:"University of Maryland Carey School of Law", city:"Baltimore, MD", lat:39.2988, lng:-76.5914, tier:"tier3", rank:63, lsat25:156, lsat50:164, lsat75:166, gpa25:3.37, gpa50:3.72, gpa75:3.88, url:"https://www.law.umaryland.edu" },
+  { name:"University of South Carolina School of Law", city:"Columbia, SC", lat:33.9974, lng:-81.0298, tier:"tier3", rank:63, lsat25:160, lsat50:162, lsat75:164, gpa25:3.43, gpa50:3.67, gpa75:3.86, url:"https://www.law.sc.edu" },
+  { name:"St. John's University School of Law", city:"Jamaica, NY", lat:40.7228, lng:-73.7949, tier:"tier3", rank:63, lsat25:156, lsat50:164, lsat75:166, gpa25:3.44, gpa50:3.81, gpa75:3.91, url:"https://www.stjohns.edu/law" },
+  { name:"University of Kentucky College of Law", city:"Lexington, KY", lat:38.0345, lng:-84.5037, tier:"tier3", rank:68, lsat25:156, lsat50:159, lsat75:162, gpa25:3.52, gpa50:3.72, gpa75:3.90, url:"https://law.uky.edu" },
+  { name:"Northeastern University School of Law", city:"Boston, MA", lat:42.3408, lng:-71.0898, tier:"tier3", rank:68, lsat25:161, lsat50:164, lsat75:166, gpa25:3.61, gpa50:3.77, gpa75:3.86, url:"https://www.northeastern.edu/law" },
+  { name:"Catholic University of America Columbus School of Law", city:"Washington, DC", lat:38.9342, lng:-77.0024, tier:"tier3", rank:71, lsat25:158, lsat50:161, lsat75:163, gpa25:3.46, gpa50:3.68, gpa75:3.85, url:"https://www.law.edu" },
+  { name:"University of Cincinnati College of Law", city:"Cincinnati, OH", lat:39.1329, lng:-84.5150, tier:"tier3", rank:71, lsat25:156, lsat50:159, lsat75:161, gpa25:3.64, gpa50:3.80, gpa75:3.91, url:"https://www.law.uc.edu" },
+  { name:"Loyola Law School Los Angeles", city:"Los Angeles, CA", lat:34.0573, lng:-118.2889, tier:"tier3", rank:71, lsat25:160, lsat50:163, lsat75:165, gpa25:3.52, gpa50:3.74, gpa75:3.89, url:"https://www.lls.edu" },
+  { name:"University of Nebraska College of Law", city:"Lincoln, NE", lat:40.8136, lng:-96.7026, tier:"tier3", rank:71, lsat25:156, lsat50:160, lsat75:162, gpa25:3.60, gpa50:3.81, gpa75:3.98, url:"https://law.unl.edu" },
+  { name:"University of Richmond School of Law", city:"Richmond, VA", lat:37.5743, lng:-77.5394, tier:"tier3", rank:71, lsat25:159, lsat50:164, lsat75:167, gpa25:3.66, gpa50:3.81, gpa75:3.92, url:"https://law.richmond.edu" },
+  { name:"Seton Hall University School of Law", city:"Newark, NJ", lat:40.7425, lng:-74.1740, tier:"tier3", rank:71, lsat25:158, lsat50:161, lsat75:164, gpa25:3.51, gpa50:3.71, gpa75:3.86, url:"https://law.shu.edu" },
+  { name:"Tulane University Law School", city:"New Orleans, LA", lat:29.9399, lng:-90.1184, tier:"tier3", rank:71, lsat25:159, lsat50:161, lsat75:164, gpa25:3.47, gpa50:3.67, gpa75:3.81, url:"https://law.tulane.edu" },
+  { name:"Wayne State University Law School", city:"Detroit, MI", lat:42.3580, lng:-83.0683, tier:"tier3", rank:71, lsat25:157, lsat50:164, lsat75:166, gpa25:3.56, gpa50:3.89, gpa75:3.95, url:"https://law.wayne.edu" },
+  { name:"Drexel University Kline School of Law", city:"Philadelphia, PA", lat:39.9564, lng:-75.1897, tier:"tier3", rank:79, lsat25:154, lsat50:160, lsat75:162, gpa25:3.35, gpa50:3.76, gpa75:3.87, url:"https://drexel.edu/law" },
+  { name:"Georgia State University College of Law", city:"Atlanta, GA", lat:33.7530, lng:-84.3863, tier:"tier3", rank:79, lsat25:158, lsat50:160, lsat75:163, gpa25:3.45, gpa50:3.64, gpa75:3.82, url:"https://law.gsu.edu" },
+  { name:"Loyola University Chicago School of Law", city:"Chicago, IL", lat:41.8998, lng:-87.6559, tier:"tier3", rank:79, lsat25:159, lsat50:161, lsat75:163, gpa25:3.55, gpa50:3.70, gpa75:3.83, url:"https://www.luc.edu/law" },
+  { name:"UNLV William S. Boyd School of Law", city:"Las Vegas, NV", lat:36.1156, lng:-115.1423, tier:"tier3", rank:79, lsat25:156, lsat50:160, lsat75:162, gpa25:3.39, gpa50:3.76, gpa75:3.88, url:"https://law.unlv.edu" },
+  { name:"University of Pittsburgh School of Law", city:"Pittsburgh, PA", lat:40.4443, lng:-79.9528, tier:"tier3", rank:79, lsat25:158, lsat50:160, lsat75:163, gpa25:3.26, gpa50:3.54, gpa75:3.74, url:"https://www.law.pitt.edu" },
+  { name:"Belmont University College of Law", city:"Nashville, TN", lat:36.1354, lng:-86.7979, tier:"tier3", rank:84, lsat25:158, lsat50:161, lsat75:163, gpa25:3.66, gpa50:3.84, gpa75:3.94, url:"https://law.belmont.edu" },
+  { name:"Drake University Law School", city:"Des Moines, IA", lat:41.6005, lng:-93.6510, tier:"tier3", rank:84, lsat25:153, lsat50:156, lsat75:159, gpa25:3.38, gpa50:3.67, gpa75:3.89, url:"https://law.drake.edu" },
+  { name:"Florida International University College of Law", city:"Miami, FL", lat:25.7582, lng:-80.3748, tier:"tier3", rank:84, lsat25:159, lsat50:161, lsat75:162, gpa25:3.66, gpa50:3.80, gpa75:3.89, url:"https://law.fiu.edu" },
+  { name:"LSU Paul M. Hebert Law Center", city:"Baton Rouge, LA", lat:30.4125, lng:-91.1801, tier:"tier3", rank:84, lsat25:155, lsat50:157, lsat75:160, gpa25:3.48, gpa50:3.74, gpa75:3.93, url:"https://law.lsu.edu" },
+  { name:"University of Denver Sturm College of Law", city:"Denver, CO", lat:39.6767, lng:-104.9619, tier:"tier3", rank:88, lsat25:156, lsat50:160, lsat75:162, gpa25:3.36, gpa50:3.66, gpa75:3.80, url:"https://www.law.du.edu" },
+  { name:"University of Maine School of Law", city:"Portland, ME", lat:43.6591, lng:-70.2568, tier:"tier3", rank:88, lsat25:154, lsat50:158, lsat75:162, gpa25:3.41, gpa50:3.70, gpa75:3.80, url:"https://mainelaw.maine.edu" },
+  { name:"Texas Tech University School of Law", city:"Lubbock, TX", lat:33.5779, lng:-101.8552, tier:"tier3", rank:88, lsat25:157, lsat50:159, lsat75:160, gpa25:3.41, gpa50:3.69, gpa75:3.85, url:"https://www.law.ttu.edu" },
+  { name:"Duquesne University School of Law", city:"Pittsburgh, PA", lat:40.4381, lng:-79.9955, tier:"tier3", rank:92, lsat25:155, lsat50:157, lsat75:160, gpa25:3.35, gpa50:3.62, gpa75:3.85, url:"https://www.duq.edu/law" },
+  { name:"University of Miami School of Law", city:"Coral Gables, FL", lat:25.7218, lng:-80.2789, tier:"tier3", rank:92, lsat25:160, lsat50:164, lsat75:165, gpa25:3.58, gpa50:3.79, gpa75:3.88, url:"https://www.law.miami.edu" },
+  { name:"University at Buffalo School of Law", city:"Buffalo, NY", lat:43.0018, lng:-78.7877, tier:"tier3", rank:94, lsat25:155, lsat50:157, lsat75:161, gpa25:3.51, gpa50:3.71, gpa75:3.88, url:"https://www.buffalo.edu/law" },
+  { name:"University of Oregon School of Law", city:"Eugene, OR", lat:44.0448, lng:-123.0722, tier:"tier3", rank:94, lsat25:157, lsat50:160, lsat75:162, gpa25:3.32, gpa50:3.62, gpa75:3.79, url:"https://law.uoregon.edu" },
+  { name:"Regent University School of Law", city:"Virginia Beach, VA", lat:36.8465, lng:-76.1169, tier:"tier3", rank:94, lsat25:153, lsat50:158, lsat75:161, gpa25:3.37, gpa50:3.68, gpa75:3.89, url:"https://www.regent.edu/law" },
+  { name:"Saint Louis University School of Law", city:"St. Louis, MO", lat:38.6375, lng:-90.2350, tier:"tier3", rank:94, lsat25:154, lsat50:157, lsat75:161, gpa25:3.37, gpa50:3.61, gpa75:3.83, url:"https://law.slu.edu" },
+  { name:"University of St. Thomas School of Law", city:"Minneapolis, MN", lat:44.9556, lng:-93.1655, tier:"tier3", rank:94, lsat25:155, lsat50:159, lsat75:162, gpa25:3.46, gpa50:3.72, gpa75:3.88, url:"https://www.stthomas.edu/law" },
+  { name:"University of Hawaii Richardson School of Law", city:"Honolulu, HI", lat:21.2969, lng:-157.8219, tier:"tier3", rank:99, lsat25:155, lsat50:158, lsat75:162, gpa25:3.40, gpa50:3.62, gpa75:3.80, url:"https://www.law.hawaii.edu" },
+  { name:"Lewis & Clark Law School", city:"Portland, OR", lat:45.4586, lng:-122.6716, tier:"tier3", rank:99, lsat25:158, lsat50:161, lsat75:166, gpa25:3.24, gpa50:3.59, gpa75:3.79, url:"https://law.lclark.edu" },
+  { name:"University of Missouri-Kansas City School of Law", city:"Kansas City, MO", lat:39.0392, lng:-94.5783, tier:"tier3", rank:99, lsat25:154, lsat50:156, lsat75:159, gpa25:3.33, gpa50:3.65, gpa75:3.80, url:"https://law.umkc.edu" },
+  { name:"University of Montana School of Law", city:"Missoula, MT", lat:46.8625, lng:-113.9847, tier:"tier3", rank:99, lsat25:153, lsat50:156, lsat75:159, gpa25:3.33, gpa50:3.64, gpa75:3.80, url:"https://www.umt.edu/law" },
+  { name:"Stetson University College of Law", city:"Gulfport, FL", lat:27.7388, lng:-82.6944, tier:"tier3", rank:99, lsat25:157, lsat50:159, lsat75:162, gpa25:3.42, gpa50:3.63, gpa75:3.81, url:"https://www.stetson.edu/law" },
+  { name:"American University Washington College of Law", city:"Washington, DC", lat:38.9342, lng:-77.0861, tier:"tier3", rank:104, lsat25:157, lsat50:162, lsat75:163, gpa25:3.32, gpa50:3.63, gpa75:3.75, url:"https://www.wcl.american.edu" },
+  { name:"Chapman University Fowler School of Law", city:"Orange, CA", lat:33.7888, lng:-117.8531, tier:"tier3", rank:104, lsat25:156, lsat50:163, lsat75:164, gpa25:3.32, gpa50:3.70, gpa75:3.82, url:"https://www.chapman.edu/law" },
+  { name:"Rutgers Law School", city:"Camden, NJ", lat:39.9452, lng:-75.1152, tier:"tier3", rank:104, lsat25:155, lsat50:158, lsat75:161, gpa25:3.35, gpa50:3.66, gpa75:3.82, url:"https://law.rutgers.edu" },
+  { name:"Case Western Reserve University School of Law", city:"Cleveland, OH", lat:41.5038, lng:-81.6101, tier:"tier3", rank:107, lsat25:156, lsat50:162, lsat75:164, gpa25:3.51, gpa50:3.76, gpa75:3.89, url:"https://law.case.edu" },
+  { name:"Chicago-Kent College of Law (IIT)", city:"Chicago, IL", lat:41.8658, lng:-87.6298, tier:"tier3", rank:107, lsat25:156, lsat50:161, lsat75:164, gpa25:3.45, gpa50:3.72, gpa75:3.89, url:"https://www.kentlaw.iit.edu" },
+  { name:"University of Dayton School of Law", city:"Dayton, OH", lat:39.7390, lng:-84.1868, tier:"tier3", rank:107, lsat25:154, lsat50:157, lsat75:160, gpa25:3.31, gpa50:3.60, gpa75:3.87, url:"https://www.udayton.edu/law" },
+  { name:"Indiana University McKinney School of Law", city:"Indianapolis, IN", lat:39.7684, lng:-86.1581, tier:"tier3", rank:107, lsat25:152, lsat50:155, lsat75:159, gpa25:3.33, gpa50:3.58, gpa75:3.82, url:"https://mckinneylaw.iu.edu" },
+  { name:"Mercer University Walter F. George School of Law", city:"Macon, GA", lat:32.8311, lng:-83.6516, tier:"tier3", rank:107, lsat25:155, lsat50:157, lsat75:160, gpa25:3.30, gpa50:3.62, gpa75:3.80, url:"https://law.mercer.edu" },
+  { name:"University of New Mexico School of Law", city:"Albuquerque, NM", lat:35.0844, lng:-106.6504, tier:"tier3", rank:107, lsat25:154, lsat50:157, lsat75:161, gpa25:3.12, gpa50:3.56, gpa75:3.82, url:"https://lawschool.unm.edu" },
+  { name:"Samford University Cumberland School of Law", city:"Birmingham, AL", lat:33.4486, lng:-86.7187, tier:"tier3", rank:107, lsat25:154, lsat50:156, lsat75:160, gpa25:3.42, gpa50:3.63, gpa75:3.84, url:"https://www.samford.edu/law" },
+  { name:"Syracuse University College of Law", city:"Syracuse, NY", lat:43.0396, lng:-76.1352, tier:"tier3", rank:107, lsat25:154, lsat50:158, lsat75:160, gpa25:3.18, gpa50:3.60, gpa75:3.77, url:"https://www.law.syr.edu" },
+  { name:"University of Arkansas School of Law", city:"Fayetteville, AR", lat:36.0683, lng:-94.1760, tier:"tier3", rank:115, lsat25:155, lsat50:158, lsat75:161, gpa25:3.54, gpa50:3.71, gpa75:3.87, url:"https://law.uark.edu" },
+  { name:"Michigan State University College of Law", city:"East Lansing, MI", lat:42.7280, lng:-84.4822, tier:"tier3", rank:115, lsat25:158, lsat50:162, lsat75:164, gpa25:3.47, gpa50:3.73, gpa75:3.87, url:"https://www.law.msu.edu" },
+  { name:"Albany Law School", city:"Albany, NY", lat:42.6570, lng:-73.7742, tier:"tier3", rank:117, lsat25:154, lsat50:158, lsat75:161, gpa25:3.16, gpa50:3.54, gpa75:3.75, url:"https://www.albanylaw.edu" },
+  { name:"Brooklyn Law School", city:"Brooklyn, NY", lat:40.6940, lng:-73.9900, tier:"tier3", rank:117, lsat25:158, lsat50:161, lsat75:163, gpa25:3.37, gpa50:3.59, gpa75:3.75, url:"https://www.brooklaw.edu" },
+  { name:"West Virginia University College of Law", city:"Morgantown, WV", lat:39.6350, lng:-79.9551, tier:"tier3", rank:117, lsat25:151, lsat50:155, lsat75:159, gpa25:3.34, gpa50:3.65, gpa75:3.89, url:"https://law.wvu.edu" },
+  { name:"University of Wyoming College of Law", city:"Laramie, WY", lat:41.3114, lng:-105.5911, tier:"tier3", rank:117, lsat25:153, lsat50:156, lsat75:160, gpa25:3.32, gpa50:3.55, gpa75:3.80, url:"https://www.uwyo.edu/law" },
+  { name:"Cleveland State University College of Law", city:"Cleveland, OH", lat:41.5020, lng:-81.6747, tier:"tier3", rank:121, lsat25:152, lsat50:155, lsat75:158, gpa25:3.11, gpa50:3.50, gpa75:3.76, url:"https://law.csuohio.edu" },
+  { name:"University of Mississippi School of Law", city:"Oxford, MS", lat:34.3644, lng:-89.5391, tier:"tier3", rank:121, lsat25:155, lsat50:157, lsat75:160, gpa25:3.44, gpa50:3.68, gpa75:3.87, url:"https://law.olemiss.edu" },
+  { name:"New York Law School", city:"New York, NY", lat:40.7160, lng:-74.0044, tier:"tier3", rank:121, lsat25:154, lsat50:157, lsat75:160, gpa25:3.41, gpa50:3.63, gpa75:3.78, url:"https://www.nyls.edu" },
+  { name:"Washburn University School of Law", city:"Topeka, KS", lat:39.0564, lng:-95.6890, tier:"tier3", rank:121, lsat25:151, lsat50:155, lsat75:159, gpa25:3.37, gpa50:3.68, gpa75:3.88, url:"https://washburnlaw.edu" },
+  { name:"Hofstra University Deane School of Law", city:"Hempstead, NY", lat:40.7130, lng:-73.5996, tier:"tier3", rank:125, lsat25:154, lsat50:157, lsat75:160, gpa25:3.35, gpa50:3.65, gpa75:3.83, url:"https://law.hofstra.edu" },
+  { name:"University of New Hampshire Franklin Pierce School of Law", city:"Concord, NH", lat:43.2081, lng:-71.5376, tier:"tier3", rank:125, lsat25:151, lsat50:155, lsat75:159, gpa25:3.10, gpa50:3.50, gpa75:3.72, url:"https://law.unh.edu" },
+  { name:"University of Akron School of Law", city:"Akron, OH", lat:41.0814, lng:-81.5190, tier:"tier3", rank:127, lsat25:151, lsat50:154, lsat75:157, gpa25:3.22, gpa50:3.51, gpa75:3.76, url:"https://www.uakron.edu/law" },
+  { name:"Howard University School of Law", city:"Washington, DC", lat:38.9225, lng:-77.0199, tier:"tier3", rank:127, lsat25:153, lsat50:156, lsat75:160, gpa25:3.40, gpa50:3.63, gpa75:3.80, url:"https://law.howard.edu" },
+  { name:"Seattle University School of Law", city:"Seattle, WA", lat:47.6059, lng:-122.3184, tier:"tier3", rank:127, lsat25:155, lsat50:159, lsat75:162, gpa25:3.22, gpa50:3.60, gpa75:3.80, url:"https://law.seattleu.edu" },
+  { name:"University of South Dakota School of Law", city:"Vermillion, SD", lat:42.7797, lng:-96.9295, tier:"tier3", rank:127, lsat25:149, lsat50:152, lsat75:156, gpa25:3.16, gpa50:3.47, gpa75:3.81, url:"https://www.usd.edu/law" },
+  { name:"Suffolk University Law School", city:"Boston, MA", lat:42.3573, lng:-71.0618, tier:"tier3", rank:127, lsat25:152, lsat50:155, lsat75:159, gpa25:3.37, gpa50:3.58, gpa75:3.79, url:"https://www.suffolk.edu/law" },
+  { name:"University of Tulsa College of Law", city:"Tulsa, OK", lat:36.1499, lng:-95.9499, tier:"tier3", rank:127, lsat25:155, lsat50:157, lsat75:160, gpa25:3.27, gpa50:3.45, gpa75:3.72, url:"https://law.utulsa.edu" },
+  { name:"DePaul University College of Law", city:"Chicago, IL", lat:41.9253, lng:-87.6540, tier:"tier3", rank:133, lsat25:154, lsat50:158, lsat75:160, gpa25:3.17, gpa50:3.61, gpa75:3.80, url:"https://law.depaul.edu" },
+  { name:"Campbell University Norman Adrian Wiggins School of Law", city:"Raleigh, NC", lat:35.7796, lng:-78.6382, tier:"tier3", rank:134, lsat25:152, lsat50:156, lsat75:159, gpa25:3.21, gpa50:3.51, gpa75:3.77, url:"https://law.campbell.edu" },
+  { name:"University of Detroit Mercy School of Law", city:"Detroit, MI", lat:42.4224, lng:-83.1313, tier:"tier3", rank:134, lsat25:154, lsat50:156, lsat75:159, gpa25:3.16, gpa50:3.52, gpa75:3.73, url:"https://law.udmercy.edu" },
+  { name:"Loyola University New Orleans College of Law", city:"New Orleans, LA", lat:29.9295, lng:-90.1152, tier:"tier3", rank:134, lsat25:151, lsat50:154, lsat75:157, gpa25:3.21, gpa50:3.47, gpa75:3.71, url:"https://law.loyno.edu" },
+  { name:"Northern Kentucky University Chase College of Law", city:"Highland Heights, KY", lat:39.0312, lng:-84.4625, tier:"tier3", rank:134, lsat25:152, lsat50:154, lsat75:157, gpa25:3.15, gpa50:3.41, gpa75:3.68, url:"https://chaselaw.nku.edu" },
+  { name:"South Texas College of Law Houston", city:"Houston, TX", lat:29.7563, lng:-95.3677, tier:"tier3", rank:138, lsat25:153, lsat50:155, lsat75:158, gpa25:3.08, gpa50:3.41, gpa75:3.65, url:"https://www.stcl.edu" },
+  { name:"UA Little Rock Bowen School of Law", city:"Little Rock, AR", lat:34.7465, lng:-92.2896, tier:"tier3", rank:139, lsat25:150, lsat50:153, lsat75:158, gpa25:2.98, gpa50:3.41, gpa75:3.72, url:"https://law.ualr.edu" },
+  { name:"University of Baltimore School of Law", city:"Baltimore, MD", lat:39.3120, lng:-76.6177, tier:"tier3", rank:139, lsat25:152, lsat50:155, lsat75:158, gpa25:3.12, gpa50:3.45, gpa75:3.70, url:"https://law.ubalt.edu" },
+  { name:"Gonzaga University School of Law", city:"Spokane, WA", lat:47.6670, lng:-117.4020, tier:"tier3", rank:141, lsat25:153, lsat50:155, lsat75:158, gpa25:3.24, gpa50:3.55, gpa75:3.76, url:"https://www.law.gonzaga.edu" },
+  { name:"University of Idaho College of Law", city:"Moscow, ID", lat:46.7295, lng:-117.0029, tier:"tier3", rank:141, lsat25:149, lsat50:153, lsat75:157, gpa25:3.07, gpa50:3.54, gpa75:3.81, url:"https://www.uidaho.edu/law" },
+  { name:"Liberty University School of Law", city:"Lynchburg, VA", lat:37.3546, lng:-79.1797, tier:"tier3", rank:141, lsat25:151, lsat50:154, lsat75:158, gpa25:3.36, gpa50:3.54, gpa75:3.81, url:"https://www.liberty.edu/law" },
+  { name:"Pace University Elisabeth Haub School of Law", city:"White Plains, NY", lat:41.0340, lng:-73.7629, tier:"tier3", rank:141, lsat25:151, lsat50:154, lsat75:157, gpa25:3.31, gpa50:3.54, gpa75:3.74, url:"https://www.pace.edu/school-of-law" },
+  { name:"Quinnipiac University School of Law", city:"North Haven, CT", lat:41.3965, lng:-72.8618, tier:"tier3", rank:141, lsat25:153, lsat50:155, lsat75:158, gpa25:3.41, gpa50:3.65, gpa75:3.84, url:"https://www.quinnipiac.edu/law" },
+  { name:"University of Louisville Brandeis School of Law", city:"Louisville, KY", lat:38.2527, lng:-85.7585, tier:"tier3", rank:146, lsat25:154, lsat50:157, lsat75:161, gpa25:3.32, gpa50:3.67, gpa75:3.90, url:"https://louisville.edu/law" },
+  { name:"University of Memphis Humphreys School of Law", city:"Memphis, TN", lat:35.1495, lng:-90.0490, tier:"tier3", rank:146, lsat25:152, lsat50:155, lsat75:159, gpa25:3.22, gpa50:3.53, gpa75:3.77, url:"https://www.memphis.edu/law" },
+  { name:"Creighton University School of Law", city:"Omaha, NE", lat:41.2565, lng:-95.9345, tier:"tier3", rank:148, lsat25:150, lsat50:153, lsat75:156, gpa25:3.14, gpa50:3.51, gpa75:3.74, url:"https://law.creighton.edu" },
+  { name:"St. Mary's University School of Law", city:"San Antonio, TX", lat:29.4413, lng:-98.5460, tier:"tier3", rank:148, lsat25:151, lsat50:153, lsat75:156, gpa25:3.14, gpa50:3.49, gpa75:3.69, url:"https://www.stmarytx.edu/law" },
+  { name:"Northern Illinois University College of Law", city:"DeKalb, IL", lat:41.9295, lng:-88.7490, tier:"tier3", rank:150, lsat25:148, lsat50:150, lsat75:154, gpa25:3.17, gpa50:3.41, gpa75:3.64, url:"https://law.niu.edu" },
+  { name:"University of Toledo College of Law", city:"Toledo, OH", lat:41.6639, lng:-83.5552, tier:"tier3", rank:150, lsat25:150, lsat50:153, lsat75:156, gpa25:3.37, gpa50:3.53, gpa75:3.79, url:"https://www.utoledo.edu/law" },
+  { name:"Willamette University College of Law", city:"Salem, OR", lat:44.9429, lng:-123.0351, tier:"tier3", rank:150, lsat25:151, lsat50:154, lsat75:157, gpa25:3.22, gpa50:3.48, gpa75:3.70, url:"https://willamette.edu/law" },
+  { name:"Ave Maria School of Law", city:"Naples, FL", lat:26.1420, lng:-81.7948, tier:"tier3", rank:153, lsat25:152, lsat50:155, lsat75:158, gpa25:3.07, gpa50:3.36, gpa75:3.66, url:"https://www.avemarialaw.edu" },
+  { name:"Mitchell Hamline School of Law", city:"St. Paul, MN", lat:44.9440, lng:-93.0937, tier:"tier3", rank:154, lsat25:151, lsat50:154, lsat75:158, gpa25:2.96, gpa50:3.29, gpa75:3.60, url:"https://mitchellhamline.edu" },
+  { name:"Southwestern Law School", city:"Los Angeles, CA", lat:34.0614, lng:-118.3571, tier:"tier3", rank:154, lsat25:154, lsat50:157, lsat75:160, gpa25:3.23, gpa50:3.51, gpa75:3.72, url:"https://www.swlaw.edu" },
+  { name:"CUNY School of Law", city:"Long Island City, NY", lat:40.7448, lng:-73.9463, tier:"tier3", rank:156, lsat25:152, lsat50:155, lsat75:161, gpa25:3.26, gpa50:3.54, gpa75:3.77, url:"https://www.law.cuny.edu" },
+  { name:"Santa Clara University School of Law", city:"Santa Clara, CA", lat:37.3496, lng:-121.9390, tier:"tier3", rank:156, lsat25:157, lsat50:159, lsat75:162, gpa25:3.21, gpa50:3.50, gpa75:3.74, url:"https://law.scu.edu" },
+  { name:"Elon University School of Law", city:"Greensboro, NC", lat:36.0726, lng:-79.7920, tier:"tier3", rank:158, lsat25:151, lsat50:154, lsat75:158, gpa25:3.11, gpa50:3.40, gpa75:3.70, url:"https://www.elon.edu/u/law" },
+  { name:"Mississippi College School of Law", city:"Jackson, MS", lat:32.2988, lng:-90.1848, tier:"tier3", rank:158, lsat25:148, lsat50:152, lsat75:155, gpa25:3.03, gpa50:3.37, gpa75:3.73, url:"https://law.mc.edu" },
+  { name:"Oklahoma City University School of Law", city:"Oklahoma City, OK", lat:35.4676, lng:-97.5164, tier:"tier3", rank:158, lsat25:149, lsat50:151, lsat75:155, gpa25:3.21, gpa50:3.56, gpa75:3.78, url:"https://law.okcu.edu" },
+  { name:"University of North Dakota School of Law", city:"Grand Forks, ND", lat:47.9212, lng:-97.0775, tier:"tier3", rank:161, lsat25:148, lsat50:151, lsat75:155, gpa25:3.24, gpa50:3.48, gpa75:3.75, url:"https://law.und.edu" },
+  { name:"University of the Pacific McGeorge School of Law", city:"Sacramento, CA", lat:38.5629, lng:-121.4271, tier:"tier3", rank:163, lsat25:153, lsat50:156, lsat75:160, gpa25:3.17, gpa50:3.52, gpa75:3.73, url:"https://www.mcgeorge.edu" },
+  { name:"Vermont Law School", city:"South Royalton, VT", lat:43.8259, lng:-72.5266, tier:"tier3", rank:163, lsat25:148, lsat50:152, lsat75:157, gpa25:2.81, gpa50:3.25, gpa75:3.61, url:"https://www.vermontlaw.edu" },
+  { name:"UC College of the Law San Francisco", city:"San Francisco, CA", lat:37.7813, lng:-122.4131, tier:"tier3", rank:166, lsat25:158, lsat50:161, lsat75:163, gpa25:3.55, gpa50:3.71, gpa75:3.83, url:"https://uclawsf.edu" },
+  { name:"University of San Francisco School of Law", city:"San Francisco, CA", lat:37.7763, lng:-122.4517, tier:"tier3", rank:166, lsat25:152, lsat50:155, lsat75:157, gpa25:3.16, gpa50:3.47, gpa75:3.68, url:"https://www.usfca.edu/law" },
+  { name:"University of Illinois Chicago School of Law", city:"Chicago, IL", lat:41.8719, lng:-87.6501, tier:"tier3", rank:169, lsat25:150, lsat50:153, lsat75:156, gpa25:3.13, gpa50:3.40, gpa75:3.64, url:"https://law.uic.edu" },
+  { name:"Roger Williams University School of Law", city:"Bristol, RI", lat:41.6783, lng:-71.2697, tier:"tier3", rank:169, lsat25:147, lsat50:150, lsat75:154, gpa25:3.02, gpa50:3.43, gpa75:3.73, url:"https://law.rwu.edu" },
+  { name:"Touro University Jacob D. Fuchsberg Law Center", city:"Central Islip, NY", lat:40.7889, lng:-73.1927, tier:"tier3", rank:169, lsat25:151, lsat50:153, lsat75:156, gpa25:3.05, gpa50:3.35, gpa75:3.66, url:"https://www.tourolaw.edu" },
+  { name:"Widener University Delaware Law School", city:"Wilmington, DE", lat:39.7391, lng:-75.5398, tier:"tier3", rank:169, lsat25:149, lsat50:152, lsat75:154, gpa25:2.95, gpa50:3.33, gpa75:3.60, url:"https://delawarelaw.widener.edu" },
+  { name:"Capital University Law School", city:"Columbus, OH", lat:39.9612, lng:-82.9988, tier:"tier3", rank:174, lsat25:148, lsat50:151, lsat75:157, gpa25:3.07, gpa50:3.44, gpa75:3.66, url:"https://www.law.capital.edu" },
+  { name:"University of Puerto Rico School of Law", city:"San Juan, PR", lat:18.4655, lng:-66.1057, tier:"tier3", rank:175, lsat25:146, lsat50:152, lsat75:156, gpa25:3.57, gpa50:3.77, gpa75:3.90, url:"https://law.upr.edu" },
+  { name:"Southern Illinois University School of Law", city:"Carbondale, IL", lat:37.7144, lng:-89.2138, tier:"tier3", rank:175, lsat25:146, lsat50:149, lsat75:155, gpa25:2.93, gpa50:3.38, gpa75:3.78, url:"https://law.siu.edu" },
+  { name:"Appalachian School of Law", city:"Grundy, VA", lat:37.2726, lng:-82.0974, tier:"tier3", rank:180, lsat25:145, lsat50:146, lsat75:151, gpa25:2.72, gpa50:3.20, gpa75:3.53, url:"https://www.asl.edu" },
+  { name:"Barry University Dwayne O. Andreas School of Law", city:"Orlando, FL", lat:28.5026, lng:-81.3679, tier:"tier3", rank:180, lsat25:148, lsat50:150, lsat75:152, gpa25:2.93, gpa50:3.23, gpa75:3.48, url:"https://www.barry.edu/law" },
+  { name:"California Western School of Law", city:"San Diego, CA", lat:32.7260, lng:-117.1623, tier:"tier3", rank:180, lsat25:152, lsat50:155, lsat75:158, gpa25:3.16, gpa50:3.50, gpa75:3.66, url:"https://www.cwsl.edu" },
+  { name:"Charleston School of Law", city:"Charleston, SC", lat:32.7765, lng:-79.9311, tier:"tier3", rank:180, lsat25:152, lsat50:154, lsat75:157, gpa25:3.26, gpa50:3.51, gpa75:3.75, url:"https://www.charlestonlaw.edu" },
+  { name:"University of the District of Columbia David A. Clarke School of Law", city:"Washington, DC", lat:38.9517, lng:-77.0249, tier:"tier3", rank:180, lsat25:148, lsat50:151, lsat75:153, gpa25:3.05, gpa50:3.28, gpa75:3.55, url:"https://www.law.udc.edu" },
+  { name:"Faulkner University Thomas Goode Jones School of Law", city:"Montgomery, AL", lat:32.3792, lng:-86.3077, tier:"tier3", rank:180, lsat25:148, lsat50:150, lsat75:154, gpa25:2.99, gpa50:3.33, gpa75:3.66, url:"https://www.faulkner.edu/law" },
+  { name:"Florida A&M University College of Law", city:"Orlando, FL", lat:28.5383, lng:-81.3792, tier:"tier3", rank:180, lsat25:149, lsat50:152, lsat75:155, gpa25:3.18, gpa50:3.48, gpa75:3.74, url:"https://www.famu.edu/law" },
+  { name:"North Carolina Central University School of Law", city:"Durham, NC", lat:35.9791, lng:-78.8973, tier:"tier3", rank:180, lsat25:149, lsat50:151, lsat75:154, gpa25:3.05, gpa50:3.31, gpa75:3.56, url:"https://law.nccu.edu" },
+  { name:"Nova Southeastern University Shepard Broad College of Law", city:"Fort Lauderdale, FL", lat:26.0677, lng:-80.2395, tier:"tier3", rank:180, lsat25:152, lsat50:155, lsat75:158, gpa25:3.34, gpa50:3.52, gpa75:3.71, url:"https://www.nova.edu/law" },
+  { name:"Ohio Northern University Pettit College of Law", city:"Ada, OH", lat:40.7701, lng:-83.8221, tier:"tier3", rank:180, lsat25:146, lsat50:149, lsat75:151, gpa25:3.06, gpa50:3.34, gpa75:3.67, url:"https://www.onu.edu/law" },
+  { name:"Southern University Law Center", city:"Baton Rouge, LA", lat:30.4275, lng:-91.1906, tier:"tier3", rank:180, lsat25:145, lsat50:147, lsat75:150, gpa25:2.86, gpa50:3.15, gpa75:3.48, url:"https://www.sulc.edu" },
+  { name:"St. Thomas University School of Law", city:"Miami Gardens, FL", lat:25.9416, lng:-80.2432, tier:"tier3", rank:180, lsat25:149, lsat50:152, lsat75:156, gpa25:3.11, gpa50:3.42, gpa75:3.65, url:"https://www.stu.edu/law" },
+  { name:"Texas Southern University Thurgood Marshall School of Law", city:"Houston, TX", lat:29.7236, lng:-95.3577, tier:"tier3", rank:180, lsat25:148, lsat50:150, lsat75:152, gpa25:2.99, gpa50:3.33, gpa75:3.62, url:"https://www.tsulaw.edu" },
+  { name:"Jacksonville University School of Law", city:"Jacksonville, FL", lat:30.3322, lng:-81.4557, tier:"tier3", rank:null, lsat25:154, lsat50:156, lsat75:159, gpa25:3.28, gpa50:3.48, gpa75:3.68, url:"https://www.ju.edu/law" },
+];
+
+// ─── MAP ─────────────────────────────────────────────────────────────────────
+const map = L.map('map', { center:[38.5,-96.5], zoom:5, minZoom:3, maxZoom:14 });
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains:'abcd', maxZoom:19
+}).addTo(map);
+
+// ─── STATE ───────────────────────────────────────────────────────────────────
+let activeEl   = null;
+let userGpa    = null;
+let userLsat   = null;
+let standingOn = false;
+let filterActive = false;
+const sidebar  = document.getElementById('sidebar');
+
+// ─── HELPERS ─────────────────────────────────────────────────────────────────
+function fmt(v)  { return (v==null||v===''||isNaN(Number(v))) ? 'N/A' : v; }
+function fmtG(v) { return (v==null||v===''||isNaN(Number(v))) ? 'N/A' : Number(v).toFixed(2); }
+
+function dotClass(tier) {
+  if (tier==='tier2') return 't2';
+  if (tier==='tier3') return 't3';
+  return '';
+}
+
+function tierBadge(tier, rank) {
+  const r = (rank && rank < 10000) ? ` · #${rank}` : '';
+  if (tier==='t14')   return `<span class="tier-badge tier-1">T14${r}</span>`;
+  if (tier==='tier2') return `<span class="tier-badge tier-2">Tier 2${r}</span>`;
+  return `<span class="tier-badge tier-3">Tier 3${r}</span>`;
+}
+
+// Returns 'great' | 'ok' | 'reach' | null
+function getStanding(s) {
+  if (!standingOn || userGpa == null || userLsat == null) return null;
+  const aboveMedian = userLsat >= s.lsat50 && userGpa >= s.gpa50;
+  const inRangeLsat = userLsat >= s.lsat25 && userLsat < s.lsat50;
+  const inRangeGpa  = userGpa  >= s.gpa25  && userGpa  < s.gpa50;
+  const inRange     = (userLsat >= s.lsat25 && userLsat <= s.lsat75) &&
+                      (userGpa  >= s.gpa25  && userGpa  <= s.gpa75);
+  if (aboveMedian) return 'great';
+  if (inRange)     return 'ok';
+  return 'reach';
+}
+
+// ─── MARKERS ─────────────────────────────────────────────────────────────────
+lawSchools.forEach(s => {
+  const el = document.createElement('div');
+  el.className = `school-marker ${dotClass(s.tier)}`;
+
+  const marker = L.marker([s.lat, s.lng], {
+    icon: L.divIcon({ html:el, className:'', iconSize:[11,11], iconAnchor:[5.5,5.5] })
+  }).addTo(map);
+
+  // Click
+  marker.on('click', () => {
+    if (activeEl) activeEl.classList.remove('active');
+    el.classList.add('active');
+    activeEl = el;
+    openSidebar(s);
+    map.panTo([s.lat, s.lng], { animate:true });
+  });
+
+  // Tooltip on hover
+  marker.on('mouseover', (e) => showTooltip(s, e.originalEvent));
+  marker.on('mousemove', (e) => moveTooltip(e.originalEvent));
+  marker.on('mouseout',  ()  => hideTooltip());
+
+  s._el     = el;
+  s._marker = marker;
+});
+
+// ─── SIDEBAR ─────────────────────────────────────────────────────────────────
+function openSidebar(s) {
+  document.getElementById('s-name').textContent     = s.name;
+  document.getElementById('s-location').textContent = s.city;
+  document.getElementById('s-rank').innerHTML       = tierBadge(s.tier, s.rank);
+  document.getElementById('s-lsat25').textContent   = fmt(s.lsat25);
+  document.getElementById('s-lsat50').textContent   = fmt(s.lsat50);
+  document.getElementById('s-lsat75').textContent   = fmt(s.lsat75);
+  document.getElementById('s-gpa25').textContent    = fmtG(s.gpa25);
+  document.getElementById('s-gpa50').textContent    = fmtG(s.gpa50);
+  document.getElementById('s-gpa75').textContent    = fmtG(s.gpa75);
+  document.getElementById('s-link').href = s.url || '#';
+
+  // Highlight stat boxes based on user standing
+  ['sb-lsat25','sb-lsat50','sb-lsat75'].forEach(id => {
+    document.getElementById(id).className = 'stat-box';
+  });
+  ['sb-gpa25','sb-gpa50','sb-gpa75'].forEach(id => {
+    document.getElementById(id).className = 'stat-box';
+  });
+
+  const pill = document.getElementById('standing-pill');
+  const st = getStanding(s);
+  if (st) {
+    // Color LSAT boxes
+    if (userLsat != null) {
+      if (userLsat >= s.lsat75)      document.getElementById('sb-lsat75').classList.add('standing-great');
+      else if (userLsat >= s.lsat50) document.getElementById('sb-lsat50').classList.add('standing-great');
+      else if (userLsat >= s.lsat25) document.getElementById('sb-lsat25').classList.add('standing-ok');
+      else                           document.getElementById('sb-lsat25').classList.add('standing-reach');
+    }
+    // Color GPA boxes
+    if (userGpa != null) {
+      if (userGpa >= s.gpa75)      document.getElementById('sb-gpa75').classList.add('standing-great');
+      else if (userGpa >= s.gpa50) document.getElementById('sb-gpa50').classList.add('standing-great');
+      else if (userGpa >= s.gpa25) document.getElementById('sb-gpa25').classList.add('standing-ok');
+      else                         document.getElementById('sb-gpa25').classList.add('standing-reach');
+    }
+    const labels = { great:'✦ Strong Candidate', ok:'◈ Competitive Range', reach:'◇ Reach School' };
+    pill.className = `standing-pill ${st}`;
+    pill.textContent = labels[st];
+  } else {
+    pill.className = 'standing-pill none';
+  }
+
+  sidebar.classList.add('open');
+}
+
+document.getElementById('close-btn').addEventListener('click', () => {
+  sidebar.classList.remove('open');
+  if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
+});
+
+// ─── TOOLTIP ─────────────────────────────────────────────────────────────────
+const tooltip = document.getElementById('map-tooltip');
+let tooltipTimer = null;
+
+function showTooltip(s, e) {
+  clearTimeout(tooltipTimer);
+  document.getElementById('tt-name').textContent = s.name;
+  document.getElementById('tt-lsat').textContent = fmt(s.lsat50);
+  document.getElementById('tt-gpa').textContent  = fmtG(s.gpa50);
+  const ttSt = document.getElementById('tt-standing');
+  const st = getStanding(s);
+  if (st) {
+    const labels = { great:'✦ Strong Candidate', ok:'◈ In Range', reach:'◇ Reach' };
+    ttSt.textContent  = labels[st];
+    ttSt.className    = `tt-standing ${st}`;
+    ttSt.style.display = '';
+  } else {
+    ttSt.style.display = 'none';
+  }
+  moveTooltip(e);
+  tooltip.classList.add('visible');
+}
+
+function moveTooltip(e) {
+  const mx = e.clientX, my = e.clientY;
+  const tw = tooltip.offsetWidth  || 200;
+  const th = tooltip.offsetHeight || 80;
+  let left = mx + 14;
+  let top  = my - 10;
+  if (left + tw > window.innerWidth  - 10) left = mx - tw - 14;
+  if (top  + th > window.innerHeight - 10) top  = my - th - 10;
+  tooltip.style.left = left + 'px';
+  tooltip.style.top  = top  + 'px';
+}
+
+function hideTooltip() {
+  tooltipTimer = setTimeout(() => tooltip.classList.remove('visible'), 80);
+}
+
+// ─── WHERE DO I STAND ────────────────────────────────────────────────────────
+const wdisBtn   = document.getElementById('wdis-btn');
+const wdisPanel = document.getElementById('wdis-panel');
+const filterPanel = document.getElementById('filter-panel');
+
+wdisBtn.addEventListener('click', () => {
+  const open = wdisPanel.classList.toggle('visible');
+  wdisBtn.classList.toggle('active', open);
+  if (open) filterPanel.classList.remove('visible'),
+            document.getElementById('filter-btn').classList.remove('active');
+});
+
+document.getElementById('wdis-apply').addEventListener('click', () => {
+  const gpaVal  = parseFloat(document.getElementById('wdis-gpa').value);
+  const lsatVal = parseInt(document.getElementById('wdis-lsat').value);
+  if (isNaN(gpaVal) || isNaN(lsatVal)) {
+    document.getElementById('wdis-gpa').style.borderColor  = isNaN(gpaVal)  ? 'var(--red)' : '';
+    document.getElementById('wdis-lsat').style.borderColor = isNaN(lsatVal) ? 'var(--red)' : '';
+    return;
+  }
+  document.getElementById('wdis-gpa').style.borderColor  = '';
+  document.getElementById('wdis-lsat').style.borderColor = '';
+  userGpa  = gpaVal;
+  userLsat = lsatVal;
+  standingOn = true;
+  applyStandingColors();
+  document.getElementById('standing-legend').classList.add('visible');
+  wdisPanel.classList.remove('visible');
+  wdisBtn.classList.add('active');
+  // Refresh sidebar if open
+  if (sidebar.classList.contains('open')) {
+    const active = lawSchools.find(s => s._el === activeEl);
+    if (active) openSidebar(active);
+  }
+});
+
+document.getElementById('wdis-clear').addEventListener('click', () => {
+  document.getElementById('wdis-gpa').value  = '';
+  document.getElementById('wdis-lsat').value = '';
+  userGpa = userLsat = null;
+  standingOn = false;
+  clearStandingColors();
+  document.getElementById('standing-legend').classList.remove('visible');
+  wdisBtn.classList.remove('active');
+  wdisPanel.classList.remove('visible');
+  if (sidebar.classList.contains('open')) {
+    const active = lawSchools.find(s => s._el === activeEl);
+    if (active) openSidebar(active);
+  }
+});
+
+function applyStandingColors() {
+  lawSchools.forEach(s => {
+    const el = s._el;
+    el.classList.remove('s-great','s-ok','s-reach','s-dim');
+    const st = getStanding(s);
+    if (st === 'great') el.classList.add('s-great');
+    else if (st === 'ok') el.classList.add('s-ok');
+    else el.classList.add('s-reach');
+  });
+}
+
+function clearStandingColors() {
+  lawSchools.forEach(s => s._el.classList.remove('s-great','s-ok','s-reach','s-dim'));
+}
+
+// ─── FILTERS ─────────────────────────────────────────────────────────────────
+const filterBtn  = document.getElementById('filter-btn');
+const badge      = document.getElementById('filter-count-badge');
+let activeTiers  = new Set(['t14','tier2','tier3']);
+
+filterBtn.addEventListener('click', () => {
+  const open = filterPanel.classList.toggle('visible');
+  filterBtn.classList.toggle('active', open);
+  if (open) wdisPanel.classList.remove('visible'),
+            wdisBtn.classList.remove('active');
+});
+
+// Tier toggles
+document.querySelectorAll('.tier-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tier = btn.dataset.tier;
+    if (activeTiers.has(tier)) {
+      if (activeTiers.size === 1) return; // keep at least one
+      activeTiers.delete(tier);
+      btn.classList.remove('on');
+    } else {
+      activeTiers.add(tier);
+      btn.classList.add('on');
+    }
+  });
+});
+
+document.getElementById('filter-apply').addEventListener('click', () => {
+  applyFilters();
+  filterPanel.classList.remove('visible');
+  filterBtn.classList.remove('active');
+});
+
+document.getElementById('filter-reset').addEventListener('click', () => {
+  activeTiers = new Set(['t14','tier2','tier3']);
+  document.querySelectorAll('.tier-toggle').forEach(b => b.classList.add('on'));
+  document.getElementById('f-lsat-min').value = '';
+  document.getElementById('f-lsat-max').value = '';
+  document.getElementById('f-gpa-min').value  = '';
+  document.getElementById('f-gpa-max').value  = '';
+  applyFilters();
+  filterPanel.classList.remove('visible');
+  filterBtn.classList.remove('active');
+});
+
+function applyFilters() {
+  const lsatMin = parseFloat(document.getElementById('f-lsat-min').value) || 0;
+  const lsatMax = parseFloat(document.getElementById('f-lsat-max').value) || 999;
+  const gpaMin  = parseFloat(document.getElementById('f-gpa-min').value)  || 0;
+  const gpaMax  = parseFloat(document.getElementById('f-gpa-max').value)  || 10;
+
+  const allDefault = activeTiers.size === 3 && lsatMin === 0 && lsatMax === 999 && gpaMin === 0 && gpaMax === 10;
+
+  let hidden = 0;
+  lawSchools.forEach(s => {
+    const pass = activeTiers.has(s.tier)
+      && s.lsat50 >= lsatMin && s.lsat50 <= lsatMax
+      && s.gpa50  >= gpaMin  && s.gpa50  <= gpaMax;
+    if (pass) {
+      s._el.classList.remove('filtered-out');
+    } else {
+      s._el.classList.add('filtered-out');
+      hidden++;
+    }
+  });
+
+  const showing = lawSchools.length - hidden;
+  document.getElementById('count-label').textContent = allDefault
+    ? `${lawSchools.length} schools`
+    : `${showing} of ${lawSchools.length} schools`;
+
+  filterActive = !allDefault;
+  if (filterActive) {
+    badge.textContent = showing;
+    badge.classList.add('visible');
+    filterBtn.classList.add('active');
+  } else {
+    badge.classList.remove('visible');
+    filterBtn.classList.remove('active');
+  }
+}
+
+// Close panels on map click
+map.on('click', () => {
+  wdisPanel.classList.remove('visible');
+  filterPanel.classList.remove('visible');
+  wdisBtn.classList.remove('active');
+  if (!standingOn && !filterActive) filterBtn.classList.remove('active');
+});
+
+// Close panels on outside click
+document.addEventListener('click', e => {
+  if (!wdisPanel.contains(e.target) && !wdisBtn.contains(e.target))
+    wdisPanel.classList.remove('visible');
+  if (!filterPanel.contains(e.target) && !filterBtn.contains(e.target))
+    filterPanel.classList.remove('visible');
+});
+
+// ─── SEARCH ──────────────────────────────────────────────────────────────────
+const stateMap = {
+  'alabama':'AL','alaska':'AK','arizona':'AZ','arkansas':'AR','california':'CA',
+  'colorado':'CO','connecticut':'CT','delaware':'DE','florida':'FL','georgia':'GA',
+  'hawaii':'HI','idaho':'ID','illinois':'IL','indiana':'IN','iowa':'IA',
+  'kansas':'KS','kentucky':'KY','louisiana':'LA','maine':'ME','maryland':'MD',
+  'massachusetts':'MA','michigan':'MI','minnesota':'MN','mississippi':'MS',
+  'missouri':'MO','montana':'MT','nebraska':'NE','nevada':'NV','new hampshire':'NH',
+  'new jersey':'NJ','new mexico':'NM','new york':'NY','north carolina':'NC',
+  'north dakota':'ND','ohio':'OH','oklahoma':'OK','oregon':'OR','pennsylvania':'PA',
+  'rhode island':'RI','south carolina':'SC','south dakota':'SD','tennessee':'TN',
+  'texas':'TX','utah':'UT','vermont':'VT','virginia':'VA','washington':'WA',
+  'west virginia':'WV','wisconsin':'WI','wyoming':'WY','district of columbia':'DC',
+  'puerto rico':'PR','dc':'DC','pr':'PR'
+};
+
+const searchInput   = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+
+function addResultItem(s, container) {
+  const item = document.createElement('div');
+  item.className = 'search-result-item';
+  item.innerHTML = `<div>${s.name}</div><div class="sri-city">${s.city}</div>`;
+  item.addEventListener('click', () => {
+    map.setView([s.lat, s.lng], 12, { animate:true });
+    searchResults.style.display = 'none';
+    searchInput.value = '';
+    if (activeEl) activeEl.classList.remove('active');
+    s._el.classList.add('active');
+    activeEl = s._el;
+    openSidebar(s);
+  });
+  container.appendChild(item);
+}
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  searchResults.innerHTML = '';
+  if (!q) { searchResults.style.display = 'none'; return; }
+
+  const stateAbbr = stateMap[q] || (Object.values(stateMap).includes(q.toUpperCase()) ? q.toUpperCase() : null);
+  let hits;
+  if (stateAbbr) {
+    hits = lawSchools.filter(s => s.city.endsWith(`, ${stateAbbr}`));
+  } else {
+    hits = lawSchools.filter(s => s.name.toLowerCase().includes(q) || s.city.toLowerCase().includes(q));
+  }
+
+  if (!hits.length) { searchResults.style.display = 'none'; return; }
+
+  if (stateAbbr && hits.length > 1) {
+    const header = document.createElement('div');
+    header.style.cssText = 'padding:7px 14px 5px; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid rgba(201,168,76,0.15);';
+    const stateName = Object.keys(stateMap).find(k => stateMap[k] === stateAbbr && k.length > 2) || stateAbbr;
+    header.textContent = `${hits.length} schools in ${stateName.replace(/\b\w/g, c => c.toUpperCase())}`;
+    searchResults.appendChild(header);
+    hits.forEach(s => addResultItem(s, searchResults));
+  } else {
+    hits.slice(0, 12).forEach(s => addResultItem(s, searchResults));
+  }
+  searchResults.style.display = 'block';
+});
+
+document.addEventListener('click', e => {
+  if (!searchInput.contains(e.target) && !searchResults.contains(e.target))
+    searchResults.style.display = 'none';
+});
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+document.getElementById('count-label').textContent = `${lawSchools.length} schools`;
+</script>
+</body>
+</html>

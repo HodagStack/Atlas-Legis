@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employment Methodology — Atlas Legis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --em:       #1a7a50;
+      --em-deep:  #0f5132;
+      --em-mid:   #22a86a;
+      --em-pale:  #d1ece0;
+      --ink:      #0e2018;
+      --ink-soft: #2d4a38;
+      --muted:    #6b8c78;
+      --soft:     #f0f7f3;
+      --border:   rgba(26,122,80,0.12);
+      --shadow:   rgba(14,32,24,0.08);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(34,197,94,0.13) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 80%, rgba(16,120,70,0.10) 0%, transparent 45%),
+        linear-gradient(160deg, #eef5f1 0%, #ddeee5 50%, #e8f2ed 100%);
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 0 40px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(22px) saturate(1.5);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 1px 0 rgba(26,122,80,0.08), 0 4px 20px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .logo span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-left: 9px;
+    }
+    .header-tag {
+      font-size: 0.71rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      margin-bottom: 56px;
+    }
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--em);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 580px;
+    }
+
+    /* ── PRINCIPLES STRIP ── */
+    .principles {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 56px;
+    }
+    .principle-card {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 14px;
+      padding: 18px 16px;
+      box-shadow: 0 2px 12px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.85);
+    }
+    .principle-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--em-pale);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .principle-title {
+      font-size: 0.77rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      letter-spacing: 0.03em;
+      margin-bottom: 5px;
+    }
+    .principle-desc {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 44px 0;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--em);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .section p {
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section p strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ── DEFINITION CARDS ── */
+    .def-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .def-card {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: 0 1px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .def-term {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      padding-top: 1px;
+      line-height: 1.4;
+    }
+    .def-term .def-sub {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+    }
+    .def-body {
+      font-size: 0.83rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .def-formula {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 5px 10px;
+      background: rgba(26,122,80,0.07);
+      border: 1px solid rgba(26,122,80,0.14);
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--em-deep);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── WHAT WE DON'T DO ── */
+    .dont-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .dont-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.87rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .dont-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(220,38,38,0.08);
+      border: 1px solid rgba(220,38,38,0.2);
+      color: #dc2626;
+      font-size: 0.65rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .do-icon {
+      background: rgba(22,163,74,0.08);
+      border-color: rgba(22,163,74,0.25);
+      color: #16a34a;
+    }
+
+    /* ── SOURCE NOTE ── */
+    .source-note {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-left: 3px solid var(--em);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      box-shadow: 0 1px 8px var(--shadow);
+      font-size: 0.83rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .source-note strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Atlas Legis <span>Law School Atlas</span></a>
+  <a href="index.html" style="
+    display:flex; align-items:center; gap:6px;
+    font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500;
+    color:var(--ink-soft); text-decoration:none;
+    padding:7px 16px; border-radius:100px;
+    border:1px solid rgba(26,122,80,0.2);
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 2px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
+    transition:all 0.22s ease;
+  " onmouseover="this.style.background='rgba(255,255,255,0.85)';this.style.color='#0f5132'"
+     onmouseout="this.style.background='rgba(255,255,255,0.55)';this.style.color='#2d4a38'">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to Map
+  </a>
+  <span class="header-tag">Employment Methodology</span>
+</header>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-eyebrow">How We Work</div>
+    <h1>Employment Data<br>Methodology</h1>
+    <p class="hero-lead">
+      Every employment figure on Atlas Legis comes directly from official ABA disclosures —
+      no rankings publications, no third-party aggregators, no adjustments.
+      Here's exactly how the numbers are sourced, defined, and calculated.
+    </p>
+  </div>
+
+  <!-- Three principles -->
+  <div class="principles">
+    <div class="principle-card">
+      <div class="principle-num">01</div>
+      <div class="principle-title">Raw-Data Integrity</div>
+      <div class="principle-desc">Official ABA counts, preserved exactly as reported. Nothing added, nothing removed.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">02</div>
+      <div class="principle-title">Denominator Clarity</div>
+      <div class="principle-desc">Every percentage is clearly labeled — total graduates vs. subcategory totals are never mixed.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">03</div>
+      <div class="principle-title">Comparative Neutrality</div>
+      <div class="principle-desc">No composite scores, no weighting schemes. Schools are presented, not ranked by us.</div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Data Source -->
+  <div class="section">
+    <div class="section-label">Source</div>
+    <h2>Where the data comes from</h2>
+    <p>
+      All employment figures are drawn from the <strong>ABA Employment Summary Reports for the Class of 2024</strong>,
+      which every ABA-accredited law school is required to publish under accreditation rules.
+      These are the most authoritative, standardized employment disclosures available for U.S. law schools.
+    </p>
+    <div class="source-note" style="margin-top:16px">
+      <strong>Unit of analysis:</strong> The graduating class of each reporting institution.
+      Data reflects outcomes as reported by each school to the ABA — Atlas Legis does not modify,
+      estimate, or infer any values.
+    </div>
+  </div>
+
+  <!-- How it's calculated -->
+  <div class="section">
+    <div class="section-label">Calculations</div>
+    <h2>How percentages are computed</h2>
+    <p>
+      No percentages are stored in our dataset. Every figure you see on the site is
+      <strong>calculated live from raw graduate counts</strong> at the moment you open a school's profile.
+      This preserves precision and makes the underlying math fully auditable.
+    </p>
+    <p>
+      Unless otherwise noted, <strong>total graduates</strong> is always the denominator —
+      this is the total number of graduates reported by the school, including those with unknown employment status.
+      Values are rounded to one decimal place. No smoothing, weighting, or statistical adjustments are applied.
+    </p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Metric Definitions -->
+  <div class="section">
+    <div class="section-label">Definitions</div>
+    <h2>What each metric means</h2>
+
+    <div class="def-list">
+
+      <div class="def-card">
+        <div class="def-term">
+          Bar-Required Jobs
+          <span class="def-sub">% of total graduates</span>
+        </div>
+        <div class="def-body">
+          Positions that require bar admission: all law firm roles, all judicial clerkships, government, and public interest jobs. This is the broadest measure of traditional legal employment.
+          <div class="def-formula">( Law Firms + Clerkships + Government + Public Interest ) ÷ Total Graduates</div>
+        </div>
+      </div>
+
+      <div class="def-card">
+        <div class="def-term">
+          BigLaw
+          <span class="def-sub">% of total graduates</span>
+        </div>
+        <div class="def-body">
+          Employment at law firms with 251 or more attorneys — the threshold commonly used to define "BigLaw" in legal recruiting. Combines the 251–500 and 501+ attorney firm-size bands.
+          <div class="def-formula">( 251–500 attorneys + 501+ attorneys ) ÷ Total Graduates</div>
+        </div>
+      </div>
+
+      <div class="def-card">
+        <div class="def-term">
+          Federal Clerkships
+          <span class="def-sub">% of total graduates</span>
+        </div>
+        <div class="def-body">
+          Placements in federal judicial clerkships only. "All Clerkships" is the broader figure that also includes state/local, tribal, and international clerkships.
+        </div>
+      </div>
+
+      <div class="def-card">
+        <div class="def-term">
+          FTLT Employment Rate
+          <span class="def-sub">Headline metric</span>
+        </div>
+        <div class="def-body">
+          The share of graduates in full-time, long-term employed positions across law firms, clerkships, government, public interest, business, and education. This is the headline figure displayed on each school's profile because it best reflects sustained legal career entry.
+          <div class="def-formula">( LF + Clerkships + Gov + PI + Business + Education ) ÷ Total Graduates</div>
+        </div>
+      </div>
+
+      <div class="def-card">
+        <div class="def-term">
+          Law Firm Distribution
+          <span class="def-sub">Two views</span>
+        </div>
+        <div class="def-body">
+          Law firm outcomes appear in two formats:<br><br>
+          <strong>As % of total graduates</strong> — how many of all graduating students landed at each firm size.<br><br>
+          <strong>As % of law firm hires</strong> — the distribution <em>within</em> firm placements only. This view always sums to 100% and shows where in the firm-size spectrum a school's law firm placements are concentrated.
+        </div>
+      </div>
+
+      <div class="def-card">
+        <div class="def-term">
+          JD-Advantage
+          <span class="def-sub">% of total graduates</span>
+        </div>
+        <div class="def-body">
+          Positions that don't require bar passage but where a JD is considered advantageous — such as compliance, consulting, or legal operations roles. These are not counted within bar-required employment.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- What we don't do -->
+  <div class="section">
+    <div class="section-label">Transparency</div>
+    <h2>What we don't do</h2>
+    <p>A few things Atlas Legis deliberately avoids:</p>
+
+    <div class="dont-list" style="margin-top:20px">
+      <div class="dont-item">
+        <div class="dont-icon">✕</div>
+        <span><strong>No composite employment scores.</strong> We don't combine metrics into a single score that obscures the underlying tradeoffs between BigLaw placement, public interest work, and clerkships.</span>
+      </div>
+      <div class="dont-item">
+        <div class="dont-icon">✕</div>
+        <span><strong>No imputation.</strong> If a school didn't report a value, it shows as unavailable. We never estimate or fill in missing data.</span>
+      </div>
+      <div class="dont-item">
+        <div class="dont-icon">✕</div>
+        <span><strong>No third-party aggregators.</strong> Every number traces directly back to a school's official ABA filing — not a rankings publication or secondary source.</span>
+      </div>
+      <div class="dont-item">
+        <div class="dont-icon do-icon">✓</div>
+        <span><strong>What we do instead:</strong> Present the full ABA-reported distribution so you can weigh what matters to you — whether that's BigLaw, public service, clerkships, or geography.</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Atlas Legis · Employment data sourced from ABA 509 Disclosures · Class of 2024
+</footer>
+
+</body>
+</html>

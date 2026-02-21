@@ -1,10 +1,10 @@
 # Atlas-Legis
 
-**Atlas-Legis** is an interactive, browser-based map of U.S. law schools designed to make legal education geographically and visually modern.
+**Atlas Legis** is an interactive, browser-based map of U.S. law schools designed to make legal education geographically and visually modern.
 
 ## Overview
 
-Atlas-Legis allows users to explore ABA-accredited law schools through a dynamic mapping interface. Users can pan, zoom, and interact with institutions in a way that traditional list-based or search-based websites do not support.
+Atlas Legis allows users to explore ABA-accredited law schools through a dynamic mapping interface. Users can pan, zoom, and interact with institutions in a way that traditional list-based or search-based websites do not support.
 
 In short, I wanted to create an easily-accessible, in-depth geographic map of U.S. law schools that prospective law students could use as a resource.
 
@@ -19,7 +19,7 @@ In short, I wanted to create an easily-accessible, in-depth geographic map of U.
 
 ## Purpose
 
-Atlas-Legis was developed as an independent legal-tech project to:
+Atlas Legis was developed as an independent legal-tech project to:
 
 * Improve accessibility to law school location data
 * Provide a modern research tool for prospective applicants
@@ -43,5 +43,5 @@ Planned expansions include:
 
 ---
 
-*Atlas-Legis is an independent project and is not affiliated with any law school or accrediting body.*
+*Atlas Legis is an independent project and is not affiliated with any law school or accrediting body.*
 *Calculations, employment breakdowns, and other statistical features are not meant to be objective and are not claimed to be objectively accurate.*

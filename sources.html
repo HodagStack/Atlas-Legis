@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Sources — Atlas-Legis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --em:       #1a7a50;
+      --em-deep:  #0f5132;
+      --em-mid:   #22a86a;
+      --em-pale:  #d1ece0;
+      --ink:      #0e2018;
+      --ink-soft: #2d4a38;
+      --muted:    #6b8c78;
+      --soft:     #f0f7f3;
+      --border:   rgba(26,122,80,0.12);
+      --shadow:   rgba(14,32,24,0.08);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(34,197,94,0.13) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 80%, rgba(16,120,70,0.10) 0%, transparent 45%),
+        linear-gradient(160deg, #eef5f1 0%, #ddeee5 50%, #e8f2ed 100%);
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 0 40px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(22px) saturate(1.5);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 1px 0 rgba(26,122,80,0.08), 0 4px 20px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .logo span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-left: 9px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 9px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(255,255,255,0.5);
+      border: 1px solid rgba(26,122,80,0.12);
+      transition: all 0.2s ease;
+      letter-spacing: 0.01em;
+    }
+    .nav-link:hover {
+      background: rgba(26,122,80,0.07);
+      color: var(--em-deep);
+      border-color: rgba(26,122,80,0.22);
+    }
+    .nav-link.active {
+      background: rgba(26,122,80,0.08);
+      color: var(--em-deep);
+      border-color: rgba(26,122,80,0.22);
+      font-weight: 600;
+    }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── HERO ── */
+    .hero { margin-bottom: 56px; }
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--em);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 580px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 44px 0;
+    }
+
+    /* ── SOURCE BLOCK ── */
+    .source-block {
+      margin-bottom: 52px;
+    }
+    .source-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--em);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .source-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .source-org {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+    .source-org a {
+      color: var(--em);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,122,80,0.25);
+      transition: border-color 0.15s;
+    }
+    .source-org a:hover { border-color: var(--em); }
+    .source-block p {
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    .source-block p:last-child { margin-bottom: 0; }
+    .source-block p strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ── DATA FIELD CARDS ── */
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    @media (max-width: 520px) { .field-grid { grid-template-columns: 1fr; } }
+    .field-card {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 12px;
+      padding: 15px 16px;
+      box-shadow: 0 1px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+    .field-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      margin-bottom: 4px;
+      letter-spacing: 0.01em;
+    }
+    .field-desc {
+      font-size: 0.73rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── EMPLOYMENT FIELD CARDS ── */
+    .emp-field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) { .emp-field-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 380px) { .emp-field-grid { grid-template-columns: 1fr; } }
+
+    /* ── NOTE CARD ── */
+    .note-card {
+      background: rgba(26,122,80,0.05);
+      border: 1px solid rgba(26,122,80,0.15);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 20px;
+    }
+    .note-card p {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      margin: 0;
+      font-weight: 400;
+    }
+    .note-card p strong { font-weight: 600; color: var(--em-deep); }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 14px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 12px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.85);
+      margin-top: 60px;
+    }
+    .disclaimer-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .disclaimer p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .disclaimer p + p { margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Atlas-Legis <span>Law School Atlas</span></a>
+  <nav class="header-nav">
+    <a class="nav-link" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      Map
+    </a>
+    <a class="nav-link" href="methodology.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Methodology
+    </a>
+    <a class="nav-link active" href="sources.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M2 12c0 2.2 4.5 4 10 4s10-1.8 10-4"/><path d="M2 12v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6"/></svg>
+      Sources
+    </a>
+  </nav>
+</header>
+
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Transparency &amp; Attribution</div>
+    <h1>Data Sources</h1>
+    <p class="hero-lead">Every number on Atlas-Legis comes from an official public disclosure. No estimates, no scraped rankings sites, no synthesized averages. Here is exactly where each data point originates.</p>
+  </div>
+
+  <!-- ── ABA 509 ────────────────────────────────────────────────────── -->
+  <div class="source-block">
+    <div class="source-eyebrow">Admissions &amp; Aid Data</div>
+    <h2>ABA Standard 509 Disclosure Reports</h2>
+    <div class="source-org">American Bar Association · <a href="https://abarequireddisclosures.org" target="_blank" rel="noopener">abarequireddisclosures.org</a> · Published annually each December</div>
+
+    <p>The ABA requires every accredited law school to publish a <strong>Standard 509 Information Report</strong> each year. These are the official, audited disclosures schools file with the ABA — not self-reported marketing copy. Atlas-Legis downloads the PDF for each of the 194 ABA-accredited schools and parses the following fields directly from the document.</p>
+
+    <div class="field-grid">
+      <div class="field-card">
+        <div class="field-name">LSAT 25th / 50th / 75th Percentile</div>
+        <div class="field-desc">Reported for the entering 1L class. Median LSAT is the figure most commonly referenced in admissions discussions.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">GPA 25th / 50th / 75th Percentile</div>
+        <div class="field-desc">Undergraduate GPA percentiles for the entering 1L class, as reported by the school.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Full-Time Annual Tuition</div>
+        <div class="field-desc">1L full-time tuition and fees, per-year. Schools reporting only per-credit rates are noted separately.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Acceptance Rate</div>
+        <div class="field-desc">Total applicants divided by total offers of admission for the most recent application cycle.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">1L Class Size</div>
+        <div class="field-desc">Total students enrolled in the first-year class, full-time and part-time combined.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Grant / Scholarship Percentiles</div>
+        <div class="field-desc">25th, 50th, and 75th percentile grant amounts awarded to full-time students who received any grant aid.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Conditional Scholarship Risk</div>
+        <div class="field-desc">Number of students who entered with conditional scholarships and the number whose scholarships were reduced or eliminated for failing to meet the GPA condition.</div>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <p><strong>Data vintage:</strong> Atlas-Legis uses the 2025 cycle 509 reports, reflecting the entering class of fall 2024. The ABA publishes updated reports each December; this site will be refreshed after each annual release.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── ABA Employment ────────────────────────────────────────────── -->
+  <div class="source-block">
+    <div class="source-eyebrow">Employment Outcomes</div>
+    <h2>ABA Employment Summary Reports</h2>
+    <div class="source-org">American Bar Association · <a href="https://www.abarequireddisclosures.org/employ509.aspx" target="_blank" rel="noopener">ABA Required Disclosures — Employment</a> · Reflects graduates from the Class of 2024</div>
+
+    <p>Separate from the 509 reports, the ABA collects and publishes <strong>Employment Summary Reports</strong> for each graduating class, typically released in the spring following graduation. These reports track employment outcomes at ten months post-graduation — the standard measurement point used across all law schools.</p>
+
+    <p>Atlas-Legis pulls this data directly from the ABA's downloadable Excel summary file, which covers all 194 accredited schools. All percentages displayed on the site are computed dynamically from raw counts using <strong>total graduates</strong> as the denominator — not just graduates whose employment status is known — to ensure honest, apples-to-apples comparisons.</p>
+
+    <div class="emp-field-grid">
+      <div class="field-card">
+        <div class="field-name">FTLT Employment Rate</div>
+        <div class="field-desc">Full-time, long-term jobs of any type as a share of total graduates.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Bar-Required Jobs</div>
+        <div class="field-desc">Positions requiring bar passage (attorneys, judicial law clerks, etc.).</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">BigLaw (251+ attorneys)</div>
+        <div class="field-desc">Placement at large private law firms with 251 or more attorneys.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Federal Clerkships</div>
+        <div class="field-desc">Article III courts, federal circuit courts, and other federal judicial clerkships.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">All Judicial Clerkships</div>
+        <div class="field-desc">Federal, state, tribal, and international clerkships combined.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Government</div>
+        <div class="field-desc">Federal, state, and local government positions.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Public Interest</div>
+        <div class="field-desc">Nonprofit organizations, legal aid, public defenders, and similar positions.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Business / Industry</div>
+        <div class="field-desc">In-house counsel, compliance, and non-legal business roles.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">JD-Advantage</div>
+        <div class="field-desc">Positions where a law degree is preferred but bar passage is not required.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Unemployed (Seeking)</div>
+        <div class="field-desc">Graduates actively seeking employment at ten months post-graduation.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Firm Size Distribution</div>
+        <div class="field-desc">Breakdown of law firm placements by firm size tier: Solo, 2–10, 11–25, 26–50, 51–100, 101–250, 251–500, and 501+ attorneys.</div>
+      </div>
+      <div class="field-card">
+        <div class="field-name">Top Employer States</div>
+        <div class="field-desc">The three states where the most graduates are employed, with graduate counts.</div>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <p><strong>Denominator note:</strong> Many law school ranking sites compute employment rates using only graduates with known employment status, which inflates the figures. Atlas-Legis uses <strong>total graduates</strong> as the denominator so that schools with large proportions of unknown-status graduates do not appear artificially better than peers. This is the more conservative, more honest calculation.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Rankings ──────────────────────────────────────────────────── -->
+  <div class="source-block">
+    <div class="source-eyebrow">Rankings &amp; Tier Classification</div>
+    <h2>US News &amp; World Report Rankings</h2>
+    <div class="source-org">US News &amp; World Report · Best Law Schools · 2025 edition</div>
+
+    <p>Numerical rankings and the three-tier classification used on Atlas-Legis (T14, Tier 2, Tier 3) are derived from the <strong>US News Best Law Schools rankings</strong>. The T14 label refers to the fourteen schools that have historically occupied the top fourteen positions; the current list reflects the 2025 rankings.</p>
+
+    <p>Tier and rank data is used solely to help users contextualize schools on the map. Atlas-Legis does not endorse any particular ranking methodology and encourages users to weigh multiple factors when evaluating schools.</p>
+  </div>
+
+  <!-- ── Disclaimer ────────────────────────────────────────────────── -->
+  <div class="disclaimer">
+    <div class="disclaimer-title">Important Disclaimer</div>
+    <p>Atlas-Legis is an independent research tool and is not affiliated with the American Bar Association, US News &amp; World Report, or any law school. All data displayed is sourced from public disclosures and is provided for informational purposes only.</p>
+    <p>Data is refreshed annually following ABA publication cycles. Individual school figures may change between releases. Always verify current information directly with each school before making application decisions.</p>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>

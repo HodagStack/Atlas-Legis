@@ -44,4 +44,4 @@ Planned expansions include:
 ---
 
 *Atlas-Legis is an independent project and is not affiliated with any law school or accrediting body.*
-*Tiers within the site are simply meant to show rank*
+*Calculations, employment breakdowns, and other statistical features are not meant to be objective and are not claimed to be objectively accurate.*

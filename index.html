@@ -1317,7 +1317,10 @@
     /* ══════════════════════════════════════════════
        MOBILE — essentials
        ══════════════════════════════════════════════ */
-    @media (max-width: 600px) {
+    /* mob-nav-btn: mobile-only Methodology/Sources icons — hidden on desktop */
+    .mob-nav-btn { display: none; }
+
+    @media (max-width: 768px) {
 
       /* ── Header: two-row layout ── */
       header {
@@ -1326,22 +1329,21 @@
         padding: 10px 14px 8px;
         gap: 8px;
       }
-      /* Row 1: logo + icon buttons */
-      .logo span { display: none; }           /* hide "Law School Atlas" subtitle */
+      /* Row 1: logo left, icon buttons right */
+      .logo span { display: none; }
       .header-center {
         order: 1;
         flex: none;
         gap: 6px;
         margin-left: auto;
       }
-      /* Hide text labels on WDIS + Filter buttons, keep icons */
-      .hdr-btn-label { display: none; }
-      .hdr-btn {
-        padding: 8px 10px;
-        gap: 0;
-      }
-      /* Hide Methodology / Sources nav links entirely on mobile */
+      /* Show mobile nav icons, hide desktop nav links */
+      .mob-nav-btn { display: flex; }
       .header-right a.hdr-btn { display: none; }
+      /* Icon-only buttons */
+      .hdr-btn-label { display: none; }
+      .hdr-btn { padding: 8px 10px; gap: 0; }
+
       /* Row 2: search + count — full width */
       .header-right {
         order: 2;
@@ -1354,15 +1356,15 @@
         flex: 1;
         width: auto;
         min-width: 0;
-        font-size: 0.88rem;      /* prevents iOS auto-zoom (needs ≥16px effective) */
-        font-size: max(0.88rem, 16px);
+        font-size: 16px; /* prevents iOS auto-zoom */
       }
 
-      /* ── Search results dropdown ── */
+      /* ── Search results: full-width ── */
       #search-results {
         left: 10px;
         right: 10px;
-        top: auto;               /* will be positioned relative to header via JS — keep default */
+        width: auto;
+        top: auto;
       }
 
       /* ── WDIS panel: full-width, top-anchored ── */
@@ -1371,19 +1373,16 @@
         right: 10px;
         width: auto;
         transform: none;
-        top: auto;               /* positioned below header dynamically */
+        top: auto;
         border-radius: 14px;
         padding: 18px 16px;
       }
       .wdis-inputs { grid-template-columns: 1fr 1fr; gap: 10px; }
 
-      /* ── Filter drawer: taller, better padding ── */
-      #filter-drawer.open { max-height: 420px; }
+      /* ── Filter drawer ── */
+      #filter-drawer.open { max-height: 460px; }
       #filter-drawer { position: absolute; }
-      .filter-inner {
-        padding: 14px 14px 16px;
-        gap: 14px;
-      }
+      .filter-inner { padding: 14px 14px 16px; gap: 14px; }
       .filter-group { min-width: calc(50% - 7px); }
       .filter-group.wide { min-width: 100%; }
       .filter-actions { width: 100%; margin-left: 0; }
@@ -1391,25 +1390,23 @@
 
       /* ── Sidebar: bottom sheet ── */
       #sidebar {
-        /* Override desktop right-panel layout */
         width: 100%;
         right: 0;
         left: 0;
         top: auto;
         bottom: 0;
-        height: 72vh;
-        max-height: 72vh;
+        height: 68vh;
+        max-height: 68vh;
         border-left: none;
         border-top: 1px solid rgba(255,255,255,0.55);
         border-radius: 20px 20px 0 0;
         box-shadow: 0 -6px 40px var(--shadow-deep), inset 0 1px 0 rgba(255,255,255,0.8);
-        /* Slide up from bottom instead of from right */
         transform: translateY(100%);
         transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
       }
       #sidebar.open { transform: translateY(0); }
 
-      /* Drag handle visual hint */
+      /* Drag handle */
       .sidebar-header::before {
         content: '';
         display: block;
@@ -1420,31 +1417,27 @@
         margin: 0 auto 14px;
       }
 
-      /* ── Legend: move up so it's not behind bottom sheet ── */
-      .legend {
-        bottom: auto;
-        top: auto;
-        /* sits above the bottom sheet when open; otherwise stays put */
-        bottom: 16px;
-        left: 10px;
-        padding: 10px 13px;
-      }
-      /* When sidebar is open, nudge legend up */
-      body.sidebar-open .legend {
-        bottom: calc(72vh + 10px);
-      }
+      /* ── Legend ── */
+      .legend { bottom: 16px; left: 10px; padding: 10px 13px; }
+      body.sidebar-open .legend { bottom: calc(68vh + 10px); }
 
       /* ── Markers: larger tap targets ── */
-      .school-marker {
-        width: 16px;
-        height: 16px;
-      }
+      .school-marker { width: 16px; height: 16px; }
 
-      /* ── Map tooltip: disabled on mobile (touch, not hover) ── */
+      /* ── Tooltip: no hover on touch ── */
       #map-tooltip { display: none !important; }
+    }
 
-      /* ── Zoom control: stays bottom-right, fine as-is ── */
-
+    /* Landscape phones: shorten bottom sheet so map is still visible */
+    @media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+      #sidebar {
+        height: 55vh;
+        max-height: 55vh;
+      }
+      #sidebar.open { transform: translateY(0); }
+      body.sidebar-open .legend { bottom: calc(55vh + 10px); }
+      /* Tighter header in landscape */
+      header { padding: 6px 14px 6px; }
     }
   </style>
 </head>
@@ -1465,6 +1458,13 @@
       <span class="hdr-btn-label">Filters</span>
       <span id="filter-count-badge"></span>
     </button>
+    <!-- Mobile-only: Methodology + Sources icon links -->
+    <a class="hdr-btn mob-nav-btn" href="methodology.html" aria-label="Methodology" style="text-decoration:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </a>
+    <a class="hdr-btn mob-nav-btn" href="sources.html" aria-label="Sources" style="text-decoration:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M2 12c0 2.2 4.5 4 10 4s10-1.8 10-4"/><path d="M2 12v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6"/></svg>
+    </a>
   </div>
 
   <div class="header-right">

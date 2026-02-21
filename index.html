@@ -727,6 +727,203 @@
       box-shadow: 0 2px 8px rgba(26,122,80,0.3);
     }
     #filter-count-badge.visible { display: inline; }
+
+
+    /* ══════════════════════════════════════════════════════
+       EMPLOYMENT OUTCOMES — complete style block
+       ══════════════════════════════════════════════════════ */
+
+    /* Headline score card */
+    .emp-headline-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 0 2px 12px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.85);
+    }
+    .emp-headline-score {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      flex-shrink: 0;
+    }
+    .emp-headline-score.score-great { color: var(--green); }
+    .emp-headline-score.score-ok    { color: var(--yellow); }
+    .emp-headline-score.score-low   { color: var(--red); }
+    .emp-headline-meta { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .emp-headline-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      line-height: 1.3;
+    }
+    .emp-headline-sub {
+      font-size: 0.69rem;
+      color: var(--muted);
+    }
+    .emp-score-bar {
+      height: 5px;
+      border-radius: 3px;
+      background: rgba(26,122,80,0.12);
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    .emp-score-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
+    /* Section bar label */
+    .emp-bar-label {
+      font-size: 0.61rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    /* Stacked destination bar */
+    .emp-stacked-bar {
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      background: rgba(26,122,80,0.08);
+      margin-bottom: 10px;
+      display: flex;
+    }
+
+    /* Legend below stacked bar */
+    .emp-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 12px;
+      margin-bottom: 16px;
+    }
+    .emp-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.69rem;
+      color: var(--ink-soft);
+    }
+    .emp-legend-dot {
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+    .emp-legend-label { color: var(--muted); }
+    .emp-legend-val   { font-weight: 600; color: var(--ink-soft); }
+
+    /* 2×5 metric card grid */
+    .emp-metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .emp-metric-card {
+      background: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 10px;
+      padding: 9px 10px;
+      text-align: center;
+      box-shadow: 0 1px 6px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .emp-metric-card:hover { transform: translateY(-1px); box-shadow: 0 4px 12px var(--shadow); }
+    .emp-metric-card.emp-metric-highlight {
+      background: linear-gradient(145deg,rgba(34,197,94,0.08),rgba(15,81,50,0.06));
+      border-color: rgba(34,197,94,0.25);
+    }
+    .emp-metric-card.emp-metric-warn {
+      background: rgba(220,38,38,0.04);
+      border-color: rgba(220,38,38,0.15);
+    }
+    .emp-metric-val {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .emp-metric-card.emp-metric-highlight .emp-metric-val { color: var(--green); }
+    .emp-metric-card.emp-metric-warn .emp-metric-val      { color: var(--red); }
+    .emp-metric-label {
+      font-size: 0.59rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 3px;
+      line-height: 1.3;
+    }
+
+    /* Law firm size breakdown */
+    .emp-firm-size-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 10px;
+    }
+    .emp-fsize-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(26,122,80,0.07);
+    }
+    .emp-fsize-row:last-child { border-bottom: none; }
+    .emp-fsize-dot {
+      width: 9px; height: 9px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .emp-fsize-label { font-size: 0.78rem; color: var(--muted); flex: 1; }
+    .emp-fsize-val   { font-size: 0.82rem; font-weight: 600; color: var(--ink-soft); }
+
+    /* Top states */
+    .emp-states-list { display: flex; flex-direction: column; gap: 6px; }
+    .emp-state-row {
+      display: grid;
+      grid-template-columns: 18px 1fr 60px 28px;
+      align-items: center;
+      gap: 6px;
+    }
+    .emp-state-rank {
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: var(--em);
+    }
+    .emp-state-name {
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+    .emp-state-bar-wrap {
+      height: 5px;
+      background: rgba(26,122,80,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .emp-state-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+    .emp-state-val {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -749,6 +946,10 @@
   </div>
 
   <div class="header-right">
+    <a class="hdr-btn" href="methodology.html" target="_blank" rel="noopener" style="text-decoration:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      Methodology
+    </a>
     <span class="school-count" id="count-label"></span>
     <input type="text" id="search-input" placeholder="Search name, city, or state…" autocomplete="off" />
   </div>
@@ -922,6 +1123,110 @@
         </div>
       </div>
 
+
+      <!-- ── EMPLOYMENT: HEADLINE ── -->
+      <div class="info-section" id="emp-section">
+        <div class="section-title">Employment Outcomes · Class of 2024</div>
+
+        <!-- Headline score card -->
+        <div class="emp-headline-card">
+          <div id="emp-headline-score" class="emp-headline-score">—</div>
+          <div class="emp-headline-meta">
+            <div id="emp-headline-label" class="emp-headline-label">—</div>
+            <div id="emp-headline-sub"   class="emp-headline-sub">—</div>
+            <div class="emp-score-bar"><div id="emp-score-fill" class="emp-score-fill"></div></div>
+          </div>
+        </div>
+
+        <!-- Where did graduates go? stacked bar -->
+        <div class="emp-bar-label">Where graduates went</div>
+        <div class="emp-stacked-bar" id="emp-dest-bar"></div>
+        <div class="emp-legend" id="emp-dest-legend"></div>
+
+        <!-- Key outcome metrics -->
+        <div class="emp-metrics-grid">
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-bar-req">—</div>
+            <div class="emp-metric-label">Bar-Required<br>Jobs</div>
+          </div>
+          <div class="emp-metric-card emp-metric-highlight">
+            <div class="emp-metric-val" id="emp-biglaw">—</div>
+            <div class="emp-metric-label">BigLaw<br>(251+ atty)</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-fed-clerk">—</div>
+            <div class="emp-metric-label">Federal<br>Clerkships</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-all-clerk">—</div>
+            <div class="emp-metric-label">All<br>Clerkships</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-govt">—</div>
+            <div class="emp-metric-label">Government</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-pi">—</div>
+            <div class="emp-metric-label">Public<br>Interest</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-biz">—</div>
+            <div class="emp-metric-label">Business &amp;<br>Industry</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-jda">—</div>
+            <div class="emp-metric-label">JD-Advantage<br>Positions</div>
+          </div>
+          <div class="emp-metric-card">
+            <div class="emp-metric-val" id="emp-lf-total">—</div>
+            <div class="emp-metric-label">Any Law<br>Firm</div>
+          </div>
+          <div class="emp-metric-card emp-metric-warn">
+            <div class="emp-metric-val" id="emp-unemp-seek">—</div>
+            <div class="emp-metric-label">Unemployed<br>Seeking</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── EMPLOYMENT: LAW FIRM DETAIL ── -->
+      <div class="info-section" id="emp-firms-section">
+        <div class="section-title">Law Firm Placement Detail</div>
+        <div class="emp-bar-label">Firm size distribution (of law firm hires)</div>
+        <div class="emp-stacked-bar" id="emp-firm-bar"></div>
+        <div class="emp-firm-size-grid">
+          <div class="emp-fsize-row">
+            <span class="emp-fsize-dot" style="background:#64748b"></span>
+            <span class="emp-fsize-label">Solo practitioner</span>
+            <span class="emp-fsize-val" id="emp-lf-solo">—</span>
+          </div>
+          <div class="emp-fsize-row">
+            <span class="emp-fsize-dot" style="background:#3b82f6"></span>
+            <span class="emp-fsize-label">Small (2–25 attorneys)</span>
+            <span class="emp-fsize-val" id="emp-lf-small">—</span>
+          </div>
+          <div class="emp-fsize-row">
+            <span class="emp-fsize-dot" style="background:#0f5132"></span>
+            <span class="emp-fsize-label">Mid-size (26–250)</span>
+            <span class="emp-fsize-val" id="emp-lf-mid">—</span>
+          </div>
+          <div class="emp-fsize-row">
+            <span class="emp-fsize-dot" style="background:#1a7a50"></span>
+            <span class="emp-fsize-label">Large (251–500)</span>
+            <span class="emp-fsize-val" id="emp-lf-large">—</span>
+          </div>
+          <div class="emp-fsize-row">
+            <span class="emp-fsize-dot" style="background:#22c55e"></span>
+            <span class="emp-fsize-label">BigLaw (501+ attorneys)</span>
+            <span class="emp-fsize-val" id="emp-lf-big">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── EMPLOYMENT: TOP STATES ── -->
+      <div class="info-section" id="emp-states-section">
+        <div class="section-title">Top Employer States</div>
+        <div id="emp-states-list" class="emp-states-list"></div>
+      </div>
       <a class="visit-btn" id="s-link" href="#" target="_blank" rel="noopener">Visit School Website ↗</a>
     </div>
   </div>
@@ -969,9 +1274,9 @@ const lawSchools = [
   { name:"UC Berkeley School of Law", city:"Berkeley, CA", lat:37.8724, lng:-122.2595, tier:"t14", rank:13, lsat25:167, lsat50:170, lsat75:172, gpa25:3.84, gpa50:3.92, gpa75:3.99, url:"https://www.law.berkeley.edu", tuition:62532, acceptRate:14.84, classSize:374, condIn:"None", condOut:"None", grantP25:20000, grantP50:31158, grantP75:42245 },
   { name:"Georgetown University Law Center", city:"Washington, DC", lat:38.9027, lng:-77.0014, tier:"t14", rank:14, lsat25:166, lsat50:171, lsat75:173, gpa25:3.75, gpa50:3.93, gpa75:3.98, url:"https://www.law.georgetown.edu", tuition:83576, acceptRate:15.75, classSize:672, condIn:"None", condOut:"None", grantP25:25000, grantP50:35000, grantP75:47500 },
   { name:"University of Texas School of Law", city:"Austin, TX", lat:30.2890, lng:-97.7394, tier:"t14", rank:14, lsat25:166, lsat50:172, lsat75:173, gpa25:3.75, gpa50:3.89, gpa75:3.96, url:"https://law.utexas.edu", tuition:38236, acceptRate:13.99, classSize:373, condIn:"None", condOut:"None", grantP25:10000, grantP50:23375, grantP75:38586 },
-  { name:"Vanderbilt University Law School", city:"Nashville, TN", lat:36.1447, lng:-86.8027, tier:"tier2", rank:14, lsat25:167, lsat50:170, lsat75:171, gpa25:3.77, gpa50:3.91, gpa75:3.97, url:"https://law.vanderbilt.edu", tuition:76440, acceptRate:13.26, classSize:172, condIn:"None", condOut:"None", grantP25:17500, grantP50:32792, grantP75:44927 },
-  { name:"Washington University in St. Louis School of Law", city:"St. Louis, MO", lat:38.6488, lng:-90.3108, tier:"tier2", rank:14, lsat25:165, lsat50:175, lsat75:176, gpa25:3.58, gpa50:3.96, gpa75:4.00, url:"https://law.wustl.edu", tuition:72792, acceptRate:18.96, classSize:261, condIn:"None", condOut:"None", grantP25:40000, grantP50:48000, grantP75:60000 },
-  { name:"Cornell Law School", city:"Ithaca, NY", lat:42.4474, lng:-76.4850, tier:"t14", rank:18, lsat25:168, lsat50:173, lsat75:175, gpa25:3.75, gpa50:3.92, gpa75:3.97, url:"https://www.lawschool.cornell.edu", tuition:84722, acceptRate:18.19, classSize:217, condIn:"None", condOut:"None", grantP25:28000, grantP50:30000, grantP75:45000 },
+  { name:"Vanderbilt University Law School", city:"Nashville, TN", lat:36.1447, lng:-86.8027, tier:"t14", rank:14, lsat25:167, lsat50:170, lsat75:171, gpa25:3.77, gpa50:3.91, gpa75:3.97, url:"https://law.vanderbilt.edu", tuition:76440, acceptRate:13.26, classSize:172, condIn:"None", condOut:"None", grantP25:17500, grantP50:32792, grantP75:44927 },
+  { name:"Washington University in St. Louis School of Law", city:"St. Louis, MO", lat:38.6488, lng:-90.3108, tier:"t14", rank:14, lsat25:165, lsat50:175, lsat75:176, gpa25:3.58, gpa50:3.96, gpa75:4.00, url:"https://law.wustl.edu", tuition:72792, acceptRate:18.96, classSize:261, condIn:"None", condOut:"None", grantP25:40000, grantP50:48000, grantP75:60000 },
+  { name:"Cornell Law School", city:"Ithaca, NY", lat:42.4474, lng:-76.4850, tier:"tier2", rank:18, lsat25:168, lsat50:173, lsat75:175, gpa25:3.75, gpa50:3.92, gpa75:3.97, url:"https://www.lawschool.cornell.edu", tuition:84722, acceptRate:18.19, classSize:217, condIn:"None", condOut:"None", grantP25:28000, grantP50:30000, grantP75:45000 },
   { name:"University of North Carolina School of Law", city:"Chapel Hill, NC", lat:35.9132, lng:-79.0558, tier:"tier2", rank:18, lsat25:165, lsat50:168, lsat75:169, gpa25:3.78, gpa50:3.89, gpa75:3.97, url:"https://law.unc.edu", tuition:28082, acceptRate:11.19, classSize:181, condIn:"None", condOut:"None", grantP25:15000, grantP50:17000, grantP75:20000 },
   { name:"University of Minnesota Law School", city:"Minneapolis, MN", lat:44.9740, lng:-93.2351, tier:"tier2", rank:20, lsat25:166, lsat50:171, lsat75:173, gpa25:3.62, gpa50:3.88, gpa75:3.95, url:"https://www.law.umn.edu", tuition:51440, acceptRate:26.7, classSize:228, condIn:"None", condOut:"None", grantP25:25000, grantP50:35000, grantP75:48528 },
   { name:"University of Notre Dame Law School", city:"Notre Dame, IN", lat:41.7002, lng:-86.2380, tier:"tier2", rank:20, lsat25:166, lsat50:170, lsat75:171, gpa25:3.78, gpa50:3.89, gpa75:3.95, url:"https://law.nd.edu", tuition:73430, acceptRate:16.07, classSize:185, condIn:"None", condOut:"None", grantP25:20000, grantP50:30000, grantP75:50000 },
@@ -1286,6 +1591,7 @@ function openSidebar(s) {
     pill.className = 'standing-pill none';
   }
 
+  populateEmployment(s.name);
   sidebar.classList.add('open');
 }
 
@@ -1590,6 +1896,411 @@ document.addEventListener('click', e => {
   if (!searchInput.contains(e.target) && !searchResults.contains(e.target))
     searchResults.style.display = 'none';
 });
+
+
+// ─── EMPLOYMENT DATA — sourced directly from ABA 509 Excel, 192 schools ──────
+const EMP_RAW = {
+  'Albany Law School':{g:205,lf:{solo:0,s10:29,s25:23,s50:11,s100:4,s250:8,s500:6,big:4,t:85},cl:{fed:3,sl:8,tri:0,intl:0,t:11},gov:55,pi:34,biz:4,edu:1,jda:12,pro:1,funded:0,us:11,un:1,foreign:1,states:[{st:'New York',n:171},{st:'District Of Columbia',n:3},{st:'Massachusetts',n:3}]},
+  'American University Washington College of Law':{g:382,lf:{solo:0,s10:33,s25:9,s50:18,s100:4,s250:8,s500:8,big:51,t:131},cl:{fed:7,sl:46,tri:0,intl:0,t:53},gov:73,pi:36,biz:30,edu:2,jda:34,pro:5,funded:1,us:46,un:1,foreign:4,states:[{st:'District Of Columbia',n:146},{st:'Maryland',n:51},{st:'New York',n:27}]},
+  'Appalachian School of Law':{g:39,lf:{solo:1,s10:11,s25:3,s50:1,s100:0,s250:1,s500:1,big:0,t:18},cl:{fed:0,sl:3,tri:0,intl:0,t:3},gov:5,pi:4,biz:3,edu:0,jda:6,pro:0,funded:0,us:2,un:0,foreign:0,states:[{st:'Virginia',n:13},{st:'West Virginia',n:8},{st:'Kentucky',n:3}]},
+  'Arizona State Sandra Day O\'Connor College of Law':{g:291,lf:{solo:0,s10:34,s25:18,s50:14,s100:9,s250:13,s500:15,big:32,t:135},cl:{fed:9,sl:36,tri:1,intl:0,t:46},gov:49,pi:19,biz:19,edu:3,jda:11,pro:2,funded:0,us:6,un:2,foreign:5,states:[{st:'Arizona',n:198},{st:'California',n:18},{st:'District Of Columbia',n:11}]},
+  'Ave Maria School of Law':{g:85,lf:{solo:1,s10:20,s25:5,s50:0,s100:2,s250:7,s500:4,big:2,t:41},cl:{fed:0,sl:1,tri:0,intl:0,t:1},gov:19,pi:5,biz:5,edu:1,jda:6,pro:0,funded:0,us:5,un:3,foreign:0,states:[{st:'Florida',n:54},{st:'New York',n:3},{st:'Indiana',n:2}]},
+  'BYU J. Reuben Clark Law School':{g:142,lf:{solo:0,s10:19,s25:12,s50:4,s100:7,s250:4,s500:5,big:33,t:84},cl:{fed:7,sl:9,tri:0,intl:0,t:16},gov:14,pi:11,biz:11,edu:2,jda:11,pro:0,funded:3,us:0,un:2,foreign:0,states:[{st:'Utah',n:79},{st:'California',n:12},{st:'Texas',n:12}]},
+  'Barry University Dwayne O. Andreas School of Law':{g:236,lf:{solo:2,s10:56,s25:11,s50:8,s100:6,s250:9,s500:10,big:11,t:113},cl:{fed:1,sl:1,tri:0,intl:0,t:2},gov:50,pi:17,biz:18,edu:4,jda:20,pro:3,funded:2,us:11,un:6,foreign:0,states:[{st:'Florida',n:179},{st:'New York',n:5},{st:'Georgia',n:4}]},
+  'Baylor Law School':{g:198,lf:{solo:1,s10:40,s25:24,s50:14,s100:10,s250:10,s500:2,big:14,t:115},cl:{fed:13,sl:6,tri:0,intl:0,t:19},gov:45,pi:6,biz:6,edu:3,jda:3,pro:2,funded:0,us:3,un:0,foreign:0,states:[{st:'Texas',n:172},{st:'Colorado',n:3},{st:'District Of Columbia',n:3}]},
+  'Belmont University College of Law':{g:116,lf:{solo:3,s10:23,s25:14,s50:4,s100:6,s250:2,s500:5,big:9,t:66},cl:{fed:1,sl:10,tri:0,intl:0,t:11},gov:9,pi:8,biz:17,edu:2,jda:7,pro:1,funded:1,us:3,un:0,foreign:0,states:[{st:'Tennessee',n:82},{st:'Florida',n:4},{st:'Colorado',n:3}]},
+  'Boston College Law School':{g:341,lf:{solo:0,s10:6,s25:7,s50:6,s100:11,s250:23,s500:23,big:149,t:225},cl:{fed:14,sl:17,tri:0,intl:0,t:31},gov:27,pi:28,biz:19,edu:3,jda:9,pro:2,funded:7,us:5,un:1,foreign:4,states:[{st:'Massachusetts',n:169},{st:'New York',n:54},{st:'California',n:17}]},
+  'Boston University School of Law':{g:297,lf:{solo:0,s10:18,s25:7,s50:3,s100:4,s250:12,s500:25,big:106,t:175},cl:{fed:11,sl:16,tri:0,intl:0,t:27},gov:25,pi:28,biz:22,edu:9,jda:15,pro:1,funded:14,us:9,un:2,foreign:1,states:[{st:'Massachusetts',n:149},{st:'New York',n:57},{st:'District Of Columbia',n:15}]},
+  'Brooklyn Law School':{g:400,lf:{solo:0,s10:32,s25:22,s50:21,s100:20,s250:12,s500:23,big:72,t:202},cl:{fed:5,sl:14,tri:0,intl:0,t:19},gov:72,pi:38,biz:35,edu:1,jda:27,pro:5,funded:0,us:26,un:1,foreign:2,states:[{st:'New York',n:324},{st:'New Jersey',n:15},{st:'California',n:3}]},
+  'CUNY School of Law':{g:213,lf:{solo:1,s10:18,s25:1,s50:2,s100:0,s250:2,s500:2,big:5,t:31},cl:{fed:1,sl:8,tri:0,intl:0,t:9},gov:23,pi:95,biz:7,edu:6,jda:11,pro:8,funded:2,us:37,un:0,foreign:0,states:[{st:'New York',n:150},{st:'New Jersey',n:5},{st:'California',n:4}]},
+  'California Western School of Law':{g:216,lf:{solo:4,s10:61,s25:16,s50:10,s100:10,s250:11,s500:3,big:2,t:117},cl:{fed:3,sl:1,tri:0,intl:0,t:4},gov:20,pi:22,biz:8,edu:2,jda:14,pro:7,funded:0,us:30,un:5,foreign:1,states:[{st:'California',n:151},{st:'Arizona',n:5},{st:'Nevada',n:5}]},
+  'Campbell University Norman Adrian Wiggins School of Law':{g:174,lf:{solo:1,s10:44,s25:13,s50:10,s100:7,s250:7,s500:2,big:4,t:88},cl:{fed:3,sl:9,tri:0,intl:0,t:12},gov:18,pi:10,biz:8,edu:3,jda:7,pro:2,funded:0,us:17,un:3,foreign:0,states:[{st:'North Carolina',n:124},{st:'Virginia',n:4},{st:'California',n:3}]},
+  'Capital University Law School':{g:144,lf:{solo:3,s10:40,s25:9,s50:7,s100:3,s250:1,s500:4,big:3,t:70},cl:{fed:0,sl:1,tri:0,intl:0,t:1},gov:21,pi:9,biz:12,edu:1,jda:14,pro:7,funded:0,us:23,un:1,foreign:0,states:[{st:'Ohio',n:104},{st:'Florida',n:3},{st:'District Of Columbia',n:2}]},
+  'Cardozo School of Law':{g:311,lf:{solo:0,s10:51,s25:22,s50:18,s100:20,s250:13,s500:10,big:60,t:194},cl:{fed:8,sl:7,tri:0,intl:0,t:15},gov:26,pi:37,biz:28,edu:1,jda:16,pro:1,funded:3,us:8,un:0,foreign:2,states:[{st:'New York',n:253},{st:'New Jersey',n:10},{st:'California',n:8}]},
+  'Case Western Reserve University School of Law':{g:155,lf:{solo:1,s10:25,s25:4,s50:9,s100:5,s250:3,s500:11,big:20,t:78},cl:{fed:1,sl:4,tri:0,intl:0,t:5},gov:34,pi:18,biz:10,edu:4,jda:10,pro:1,funded:10,us:2,un:0,foreign:4,states:[{st:'Ohio',n:97},{st:'New York',n:17},{st:'District Of Columbia',n:4}]},
+  'Catholic University of America Columbus School of Law':{g:126,lf:{solo:1,s10:17,s25:7,s50:2,s100:0,s250:6,s500:1,big:11,t:45},cl:{fed:3,sl:18,tri:0,intl:0,t:21},gov:31,pi:7,biz:12,edu:3,jda:20,pro:1,funded:5,us:3,un:3,foreign:0,states:[{st:'District Of Columbia',n:47},{st:'Maryland',n:23},{st:'Virginia',n:17}]},
+  'Chapman University Fowler School of Law':{g:145,lf:{solo:1,s10:39,s25:19,s50:11,s100:6,s250:4,s500:3,big:9,t:92},cl:{fed:2,sl:1,tri:0,intl:0,t:3},gov:8,pi:9,biz:12,edu:1,jda:18,pro:1,funded:0,us:13,un:1,foreign:0,states:[{st:'California',n:121},{st:'Illinois',n:1},{st:'Indiana',n:1}]},
+  'Charleston School of Law':{g:233,lf:{solo:1,s10:73,s25:16,s50:13,s100:9,s250:5,s500:8,big:9,t:134},cl:{fed:0,sl:13,tri:0,intl:0,t:13},gov:25,pi:15,biz:19,edu:1,jda:15,pro:5,funded:0,us:20,un:6,foreign:0,states:[{st:'South Carolina',n:119},{st:'Georgia',n:15},{st:'North Carolina',n:13}]},
+  'Chicago-Kent College of Law (IIT)':{g:234,lf:{solo:0,s10:40,s25:23,s50:10,s100:17,s250:10,s500:6,big:24,t:130},cl:{fed:2,sl:7,tri:0,intl:0,t:9},gov:30,pi:19,biz:19,edu:2,jda:15,pro:5,funded:0,us:20,un:1,foreign:0,states:[{st:'Illinois',n:186},{st:'Colorado',n:3},{st:'Georgia',n:3}]},
+  'Cleveland State University College of Law':{g:111,lf:{solo:2,s10:26,s25:4,s50:9,s100:8,s250:8,s500:4,big:8,t:69},cl:{fed:2,sl:0,tri:0,intl:0,t:2},gov:17,pi:9,biz:7,edu:0,jda:8,pro:0,funded:0,us:7,un:0,foreign:0,states:[{st:'Ohio',n:92},{st:'New York',n:4},{st:'Pennsylvania',n:2}]},
+  'Columbia Law School':{g:523,lf:{solo:0,s10:3,s25:1,s50:3,s100:4,s250:4,s500:37,big:342,t:394},cl:{fed:29,sl:4,tri:0,intl:1,t:34},gov:26,pi:55,biz:5,edu:1,jda:6,pro:5,funded:10,us:5,un:0,foreign:11,states:[{st:'New York',n:362},{st:'District Of Columbia',n:44},{st:'California',n:34}]},
+  'Cornell Law School':{g:196,lf:{solo:0,s10:3,s25:3,s50:1,s100:2,s250:3,s500:12,big:141,t:165},cl:{fed:13,sl:0,tri:0,intl:1,t:14},gov:4,pi:6,biz:4,edu:0,jda:2,pro:0,funded:1,us:1,un:0,foreign:4,states:[{st:'New York',n:131},{st:'California',n:15},{st:'District Of Columbia',n:8}]},
+  'Creighton University School of Law':{g:145,lf:{solo:0,s10:30,s25:14,s50:9,s100:9,s250:6,s500:0,big:5,t:73},cl:{fed:1,sl:9,tri:0,intl:0,t:10},gov:26,pi:9,biz:11,edu:0,jda:7,pro:3,funded:0,us:10,un:0,foreign:0,states:[{st:'Nebraska',n:76},{st:'Colorado',n:8},{st:'Iowa',n:7}]},
+  'DePaul University College of Law':{g:179,lf:{solo:0,s10:36,s25:15,s50:19,s100:6,s250:6,s500:2,big:14,t:98},cl:{fed:0,sl:4,tri:0,intl:0,t:4},gov:29,pi:11,biz:15,edu:0,jda:21,pro:1,funded:0,us:13,un:0,foreign:0,states:[{st:'Illinois',n:132},{st:'Indiana',n:5},{st:'Michigan',n:4}]},
+  'Drake University Law School':{g:100,lf:{solo:0,s10:16,s25:10,s50:8,s100:7,s250:2,s500:1,big:7,t:51},cl:{fed:1,sl:13,tri:0,intl:0,t:14},gov:16,pi:6,biz:4,edu:0,jda:3,pro:0,funded:0,us:5,un:1,foreign:0,states:[{st:'Iowa',n:72},{st:'Minnesota',n:4},{st:'Missouri',n:4}]},
+  'Drexel University Kline School of Law':{g:136,lf:{solo:2,s10:8,s25:6,s50:7,s100:12,s250:7,s500:4,big:23,t:69},cl:{fed:1,sl:18,tri:0,intl:0,t:19},gov:12,pi:21,biz:7,edu:0,jda:8,pro:0,funded:0,us:4,un:1,foreign:0,states:[{st:'Pennsylvania',n:81},{st:'New Jersey',n:14},{st:'Delaware',n:9}]},
+  'Duke University School of Law':{g:277,lf:{solo:0,s10:0,s25:1,s50:1,s100:2,s250:7,s500:19,big:188,t:218},cl:{fed:29,sl:8,tri:0,intl:0,t:37},gov:9,pi:10,biz:1,edu:0,jda:1,pro:0,funded:3,us:0,un:0,foreign:2,states:[{st:'New York',n:111},{st:'District Of Columbia',n:29},{st:'California',n:25}]},
+  'Duquesne University School of Law':{g:157,lf:{solo:0,s10:30,s25:16,s50:7,s100:6,s250:14,s500:2,big:11,t:86},cl:{fed:2,sl:11,tri:0,intl:0,t:13},gov:20,pi:17,biz:10,edu:2,jda:8,pro:3,funded:0,us:7,un:1,foreign:0,states:[{st:'Pennsylvania',n:126},{st:'Maryland',n:3},{st:'Virginia',n:3}]},
+  'Elon University School of Law':{g:140,lf:{solo:0,s10:49,s25:12,s50:5,s100:6,s250:3,s500:4,big:3,t:82},cl:{fed:2,sl:7,tri:0,intl:0,t:9},gov:21,pi:14,biz:7,edu:1,jda:12,pro:1,funded:0,us:2,un:0,foreign:0,states:[{st:'North Carolina',n:90},{st:'South Carolina',n:10},{st:'Georgia',n:6}]},
+  'Emory University School of Law':{g:288,lf:{solo:0,s10:26,s25:22,s50:8,s100:11,s250:15,s500:18,big:97,t:197},cl:{fed:11,sl:7,tri:0,intl:0,t:18},gov:22,pi:19,biz:9,edu:1,jda:10,pro:0,funded:1,us:8,un:6,foreign:2,states:[{st:'Georgia',n:123},{st:'New York',n:43},{st:'Texas',n:14}]},
+  'Faulkner University Thomas Goode Jones School of Law':{g:74,lf:{solo:2,s10:27,s25:2,s50:3,s100:0,s250:1,s500:1,big:0,t:36},cl:{fed:0,sl:1,tri:0,intl:0,t:1},gov:19,pi:5,biz:5,edu:3,jda:8,pro:6,funded:0,us:4,un:0,foreign:0,states:[{st:'Alabama',n:46},{st:'Georgia',n:9},{st:'Florida',n:5}]},
+  'Florida A&M University College of Law':{g:102,lf:{solo:4,s10:11,s25:1,s50:6,s100:4,s250:1,s500:3,big:6,t:36},cl:{fed:1,sl:1,tri:0,intl:0,t:2},gov:16,pi:14,biz:7,edu:3,jda:8,pro:4,funded:0,us:10,un:1,foreign:0,states:[{st:'Florida',n:62},{st:'Georgia',n:4},{st:'New Jersey',n:4}]},
+  'Florida International University College of Law':{g:172,lf:{solo:2,s10:42,s25:19,s50:9,s100:4,s250:6,s500:4,big:18,t:104},cl:{fed:2,sl:4,tri:0,intl:0,t:6},gov:26,pi:13,biz:9,edu:1,jda:16,pro:1,funded:2,us:4,un:4,foreign:1,states:[{st:'Florida',n:144},{st:'District Of Columbia',n:3},{st:'New York',n:3}]},
+  'Florida State University College of Law':{g:191,lf:{solo:0,s10:18,s25:15,s50:10,s100:9,s250:2,s500:19,big:30,t:103},cl:{fed:2,sl:7,tri:0,intl:0,t:9},gov:38,pi:18,biz:5,edu:1,jda:4,pro:0,funded:0,us:2,un:0,foreign:1,states:[{st:'Florida',n:149},{st:'Alabama',n:3},{st:'District Of Columbia',n:3}]},
+  'Fordham University School of Law':{g:455,lf:{solo:0,s10:21,s25:14,s50:14,s100:19,s250:15,s500:43,big:192,t:318},cl:{fed:15,sl:7,tri:0,intl:0,t:22},gov:33,pi:30,biz:30,edu:0,jda:24,pro:1,funded:0,us:18,un:0,foreign:3,states:[{st:'New York',n:381},{st:'District Of Columbia',n:10},{st:'New Jersey',n:9}]},
+  'George Mason Antonin Scalia Law School':{g:236,lf:{solo:0,s10:35,s25:13,s50:6,s100:4,s250:5,s500:9,big:26,t:98},cl:{fed:15,sl:33,tri:0,intl:0,t:48},gov:53,pi:11,biz:15,edu:2,jda:36,pro:0,funded:5,us:1,un:1,foreign:1,states:[{st:'Virginia',n:90},{st:'District Of Columbia',n:70},{st:'Maryland',n:11}]},
+  'George Washington University Law School':{g:550,lf:{solo:0,s10:42,s25:21,s50:13,s100:22,s250:18,s500:28,big:165,t:309},cl:{fed:16,sl:42,tri:0,intl:0,t:58},gov:84,pi:40,biz:34,edu:10,jda:38,pro:1,funded:3,us:1,un:1,foreign:9,states:[{st:'District Of Columbia',n:249},{st:'New York',n:84},{st:'Virginia',n:61}]},
+  'Georgetown University Law Center':{g:661,lf:{solo:0,s10:7,s25:10,s50:7,s100:11,s250:22,s500:24,big:361,t:442},cl:{fed:33,sl:26,tri:0,intl:0,t:59},gov:46,pi:61,biz:18,edu:14,jda:13,pro:10,funded:40,us:7,un:2,foreign:10,states:[{st:'District Of Columbia',n:255},{st:'New York',n:163},{st:'California',n:57}]},
+  'Georgia State University College of Law':{g:211,lf:{solo:0,s10:42,s25:14,s50:11,s100:16,s250:16,s500:9,big:20,t:128},cl:{fed:2,sl:4,tri:0,intl:0,t:6},gov:28,pi:13,biz:18,edu:2,jda:18,pro:4,funded:0,us:11,un:1,foreign:0,states:[{st:'Georgia',n:178},{st:'Texas',n:3},{st:'District Of Columbia',n:2}]},
+  'Gonzaga University School of Law':{g:166,lf:{solo:0,s10:42,s25:23,s50:3,s100:3,s250:4,s500:1,big:4,t:80},cl:{fed:0,sl:10,tri:0,intl:0,t:10},gov:26,pi:15,biz:1,edu:2,jda:2,pro:2,funded:0,us:19,un:0,foreign:0,states:[{st:'Washington',n:92},{st:'California',n:9},{st:'Arizona',n:4}]},
+  'Harvard Law School':{g:622,lf:{solo:0,s10:5,s25:10,s50:11,s100:9,s250:6,s500:13,big:320,t:374},cl:{fed:112,sl:19,tri:0,intl:2,t:133},gov:21,pi:47,biz:17,edu:9,jda:10,pro:13,funded:24,us:11,un:4,foreign:12,states:[{st:'New York',n:197},{st:'District Of Columbia',n:107},{st:'California',n:75}]},
+  'Hofstra University Deane School of Law':{g:278,lf:{solo:1,s10:47,s25:27,s50:13,s100:19,s250:11,s500:6,big:36,t:160},cl:{fed:1,sl:6,tri:0,intl:0,t:7},gov:53,pi:12,biz:22,edu:3,jda:20,pro:0,funded:0,us:12,un:1,foreign:0,states:[{st:'New York',n:245},{st:'New Jersey',n:5},{st:'Florida',n:2}]},
+  'Howard University School of Law':{g:147,lf:{solo:0,s10:6,s25:4,s50:2,s100:5,s250:2,s500:8,big:58,t:85},cl:{fed:4,sl:15,tri:0,intl:0,t:19},gov:10,pi:14,biz:5,edu:0,jda:6,pro:2,funded:1,us:9,un:1,foreign:1,states:[{st:'District Of Columbia',n:46},{st:'New York',n:34},{st:'Maryland',n:12}]},
+  'Indiana University Maurer School of Law':{g:198,lf:{solo:0,s10:18,s25:16,s50:9,s100:9,s250:12,s500:6,big:34,t:104},cl:{fed:7,sl:17,tri:0,intl:0,t:24},gov:29,pi:17,biz:11,edu:4,jda:13,pro:1,funded:6,us:5,un:2,foreign:8,states:[{st:'Indiana',n:66},{st:'Illinois',n:27},{st:'District Of Columbia',n:12}]},
+  'Indiana University McKinney School of Law':{g:232,lf:{solo:2,s10:47,s25:7,s50:14,s100:5,s250:9,s500:2,big:19,t:105},cl:{fed:1,sl:3,tri:0,intl:0,t:4},gov:46,pi:28,biz:27,edu:3,jda:25,pro:7,funded:0,us:14,un:4,foreign:0,states:[{st:'Indiana',n:191},{st:'Illinois',n:6},{st:'Florida',n:4}]},
+  'Inter American University of Puerto Rico School of Law':{g:135,lf:{solo:0,s10:26,s25:3,s50:4,s100:2,s250:2,s500:1,big:0,t:38},cl:{fed:0,sl:5,tri:0,intl:0,t:5},gov:25,pi:3,biz:25,edu:1,jda:50,pro:10,funded:0,us:26,un:7,foreign:0,states:[{st:'Puerto Rico',n:88},{st:'California',n:2},{st:'Florida',n:2}]},
+  'LSU Paul M. Hebert Law Center':{g:209,lf:{solo:0,s10:35,s25:15,s50:16,s100:13,s250:16,s500:11,big:4,t:110},cl:{fed:6,sl:15,tri:0,intl:0,t:21},gov:29,pi:13,biz:11,edu:1,jda:11,pro:2,funded:0,us:12,un:2,foreign:0,states:[{st:'Louisiana',n:134},{st:'Texas',n:19},{st:'Florida',n:5}]},
+  'Lewis & Clark Law School':{g:194,lf:{solo:1,s10:42,s25:15,s50:9,s100:6,s250:4,s500:1,big:5,t:83},cl:{fed:2,sl:15,tri:0,intl:0,t:17},gov:33,pi:24,biz:9,edu:4,jda:16,pro:5,funded:3,us:19,un:0,foreign:2,states:[{st:'Oregon',n:115},{st:'Washington',n:22},{st:'Alaska',n:9}]},
+  'Liberty University School of Law':{g:112,lf:{solo:1,s10:30,s25:3,s50:1,s100:3,s250:3,s500:0,big:2,t:43},cl:{fed:0,sl:7,tri:0,intl:0,t:7},gov:34,pi:6,biz:5,edu:0,jda:5,pro:1,funded:0,us:7,un:2,foreign:0,states:[{st:'Virginia',n:27},{st:'Texas',n:12},{st:'Florida',n:9}]},
+  'Lincoln Memorial University Duncan School of Law':{g:101,lf:{solo:1,s10:37,s25:5,s50:1,s100:4,s250:2,s500:1,big:2,t:53},cl:{fed:0,sl:2,tri:0,intl:0,t:2},gov:13,pi:8,biz:10,edu:0,jda:5,pro:12,funded:0,us:12,un:3,foreign:0,states:[{st:'Tennessee',n:63},{st:'Kentucky',n:6},{st:'Florida',n:2}]},
+  'Loyola Law School Los Angeles':{g:336,lf:{solo:1,s10:70,s25:35,s50:29,s100:12,s250:19,s500:13,big:56,t:235},cl:{fed:5,sl:3,tri:0,intl:0,t:8},gov:16,pi:29,biz:29,edu:3,jda:18,pro:2,funded:5,us:9,un:2,foreign:1,states:[{st:'California',n:305},{st:'District Of Columbia',n:3},{st:'New York',n:2}]},
+  'Loyola University Chicago School of Law':{g:350,lf:{solo:0,s10:46,s25:30,s50:29,s100:24,s250:17,s500:12,big:56,t:214},cl:{fed:3,sl:8,tri:0,intl:0,t:11},gov:35,pi:29,biz:35,edu:2,jda:47,pro:1,funded:0,us:18,un:2,foreign:0,states:[{st:'Illinois',n:250},{st:'California',n:13},{st:'Indiana',n:9}]},
+  'Loyola University New Orleans College of Law':{g:179,lf:{solo:0,s10:40,s25:26,s50:18,s100:12,s250:6,s500:6,big:2,t:110},cl:{fed:8,sl:4,tri:0,intl:0,t:12},gov:16,pi:13,biz:10,edu:1,jda:10,pro:3,funded:1,us:11,un:0,foreign:0,states:[{st:'Louisiana',n:117},{st:'Texas',n:13},{st:'Georgia',n:7}]},
+  'Marquette University Law School':{g:202,lf:{solo:2,s10:54,s25:26,s50:12,s100:5,s250:7,s500:7,big:13,t:126},cl:{fed:1,sl:3,tri:0,intl:0,t:4},gov:23,pi:17,biz:20,edu:3,jda:20,pro:0,funded:0,us:6,un:0,foreign:0,states:[{st:'Wisconsin',n:156},{st:'Illinois',n:11},{st:'New York',n:4}]},
+  'Mercer University Walter F. George School of Law':{g:104,lf:{solo:0,s10:29,s25:14,s50:9,s100:7,s250:5,s500:2,big:3,t:69},cl:{fed:4,sl:4,tri:0,intl:0,t:8},gov:7,pi:4,biz:9,edu:0,jda:5,pro:0,funded:0,us:4,un:1,foreign:0,states:[{st:'Georgia',n:82},{st:'Florida',n:6},{st:'North Carolina',n:3}]},
+  'Michigan State University College of Law':{g:220,lf:{solo:0,s10:39,s25:22,s50:17,s100:12,s250:15,s500:4,big:9,t:118},cl:{fed:2,sl:9,tri:0,intl:0,t:11},gov:33,pi:25,biz:13,edu:2,jda:19,pro:1,funded:5,us:7,un:0,foreign:1,states:[{st:'Michigan',n:136},{st:'Illinois',n:13},{st:'California',n:7}]},
+  'Mississippi College School of Law':{g:124,lf:{solo:3,s10:38,s25:7,s50:6,s100:2,s250:1,s500:5,big:3,t:65},cl:{fed:5,sl:9,tri:0,intl:0,t:14},gov:16,pi:4,biz:7,edu:0,jda:10,pro:2,funded:0,us:16,un:0,foreign:0,states:[{st:'Mississippi',n:57},{st:'Louisiana',n:8},{st:'Texas',n:6}]},
+  'Mitchell Hamline School of Law':{g:389,lf:{solo:12,s10:77,s25:26,s50:10,s100:3,s250:6,s500:3,big:6,t:143},cl:{fed:0,sl:51,tri:0,intl:0,t:51},gov:55,pi:28,biz:76,edu:4,jda:47,pro:53,funded:0,us:16,un:12,foreign:2,states:[{st:'Minnesota',n:179},{st:'Texas',n:24},{st:'Florida',n:14}]},
+  'NYU School of Law':{g:523,lf:{solo:0,s10:1,s25:2,s50:8,s100:4,s250:5,s500:27,big:283,t:330},cl:{fed:27,sl:10,tri:0,intl:0,t:37},gov:24,pi:116,biz:4,edu:3,jda:7,pro:1,funded:26,us:4,un:1,foreign:4,states:[{st:'New York',n:365},{st:'District Of Columbia',n:33},{st:'California',n:30}]},
+  'New England Law Boston':{g:307,lf:{solo:2,s10:81,s25:31,s50:9,s100:11,s250:4,s500:1,big:7,t:146},cl:{fed:0,sl:14,tri:0,intl:0,t:14},gov:52,pi:11,biz:29,edu:4,jda:50,pro:13,funded:0,us:34,un:3,foreign:2,states:[{st:'Massachusetts',n:148},{st:'California',n:15},{st:'New York',n:14}]},
+  'New York Law School':{g:345,lf:{solo:0,s10:55,s25:18,s50:13,s100:13,s250:5,s500:8,big:45,t:157},cl:{fed:1,sl:28,tri:0,intl:0,t:29},gov:53,pi:34,biz:51,edu:0,jda:51,pro:6,funded:2,us:14,un:2,foreign:2,states:[{st:'New York',n:258},{st:'New Jersey',n:32},{st:'California',n:5}]},
+  'North Carolina Central University School of Law':{g:150,lf:{solo:2,s10:25,s25:7,s50:3,s100:7,s250:4,s500:1,big:6,t:55},cl:{fed:1,sl:2,tri:1,intl:0,t:4},gov:16,pi:25,biz:15,edu:6,jda:16,pro:9,funded:0,us:19,un:0,foreign:0,states:[{st:'North Carolina',n:66},{st:'New York',n:13},{st:'District Of Columbia',n:11}]},
+  'Northeastern University School of Law':{g:214,lf:{solo:1,s10:15,s25:7,s50:6,s100:10,s250:15,s500:8,big:42,t:104},cl:{fed:3,sl:10,tri:0,intl:0,t:13},gov:17,pi:52,biz:10,edu:4,jda:10,pro:2,funded:2,us:13,un:0,foreign:2,states:[{st:'Massachusetts',n:104},{st:'New York',n:26},{st:'District Of Columbia',n:13}]},
+  'Northern Illinois University College of Law':{g:94,lf:{solo:0,s10:21,s25:8,s50:3,s100:3,s250:4,s500:1,big:1,t:41},cl:{fed:0,sl:2,tri:0,intl:0,t:2},gov:18,pi:11,biz:8,edu:0,jda:11,pro:0,funded:0,us:8,un:1,foreign:0,states:[{st:'Illinois',n:67},{st:'California',n:2},{st:'Michigan',n:2}]},
+  'Northern Kentucky University Chase College of Law':{g:124,lf:{solo:3,s10:27,s25:13,s50:3,s100:1,s250:5,s500:2,big:8,t:62},cl:{fed:0,sl:6,tri:0,intl:0,t:6},gov:19,pi:13,biz:18,edu:0,jda:11,pro:3,funded:0,us:5,un:0,foreign:0,states:[{st:'Kentucky',n:58},{st:'Ohio',n:51},{st:'Indiana',n:3}]},
+  'Northwestern Pritzker School of Law':{g:270,lf:{solo:0,s10:3,s25:3,s50:1,s100:5,s250:6,s500:17,big:173,t:208},cl:{fed:14,sl:6,tri:0,intl:0,t:20},gov:11,pi:15,biz:6,edu:4,jda:5,pro:0,funded:7,us:1,un:0,foreign:1,states:[{st:'Illinois',n:119},{st:'New York',n:67},{st:'California',n:27}]},
+  'Nova Southeastern University Shepard Broad College of Law':{g:191,lf:{solo:1,s10:37,s25:8,s50:7,s100:7,s250:6,s500:15,big:13,t:94},cl:{fed:0,sl:0,tri:0,intl:0,t:0},gov:27,pi:10,biz:18,edu:0,jda:10,pro:7,funded:1,us:33,un:3,foreign:4,states:[{st:'Florida',n:139},{st:'New Jersey',n:2},{st:'California',n:1}]},
+  'Ohio Northern University Pettit College of Law':{g:62,lf:{solo:0,s10:14,s25:8,s50:3,s100:1,s250:1,s500:2,big:0,t:29},cl:{fed:0,sl:4,tri:0,intl:0,t:4},gov:12,pi:2,biz:4,edu:2,jda:8,pro:1,funded:0,us:1,un:3,foreign:0,states:[{st:'Ohio',n:22},{st:'Indiana',n:10},{st:'Pennsylvania',n:4}]},
+  'Ohio State University Moritz College of Law':{g:179,lf:{solo:0,s10:25,s25:9,s50:11,s100:7,s250:11,s500:22,big:23,t:108},cl:{fed:9,sl:3,tri:0,intl:0,t:12},gov:23,pi:12,biz:16,edu:2,jda:14,pro:2,funded:2,us:5,un:1,foreign:1,states:[{st:'Ohio',n:121},{st:'California',n:5},{st:'District Of Columbia',n:5}]},
+  'Oklahoma City University School of Law':{g:132,lf:{solo:3,s10:30,s25:13,s50:10,s100:2,s250:2,s500:2,big:0,t:62},cl:{fed:3,sl:0,tri:0,intl:0,t:3},gov:29,pi:16,biz:12,edu:2,jda:17,pro:4,funded:1,us:5,un:2,foreign:1,states:[{st:'Oklahoma',n:89},{st:'Texas',n:19},{st:'Colorado',n:3}]},
+  'Pace University Elisabeth Haub School of Law':{g:252,lf:{solo:0,s10:37,s25:25,s50:12,s100:5,s250:5,s500:3,big:16,t:103},cl:{fed:3,sl:29,tri:0,intl:0,t:32},gov:46,pi:23,biz:24,edu:7,jda:20,pro:8,funded:0,us:8,un:2,foreign:2,states:[{st:'New York',n:162},{st:'New Jersey',n:34},{st:'Connecticut',n:15}]},
+  'Penn Carey Law':{g:304,lf:{solo:0,s10:1,s25:2,s50:2,s100:3,s250:3,s500:13,big:195,t:219},cl:{fed:25,sl:5,tri:0,intl:0,t:30},gov:14,pi:32,biz:7,edu:1,jda:3,pro:3,funded:17,us:0,un:0,foreign:5,states:[{st:'New York',n:118},{st:'Pennsylvania',n:59},{st:'District Of Columbia',n:41}]},
+  'Penn State Dickinson Law':{g:229,lf:{solo:0,s10:19,s25:24,s50:10,s100:11,s250:20,s500:5,big:19,t:108},cl:{fed:1,sl:15,tri:0,intl:0,t:16},gov:52,pi:20,biz:16,edu:3,jda:10,pro:2,funded:0,us:13,un:1,foreign:1,states:[{st:'Pennsylvania',n:90},{st:'New York',n:20},{st:'District Of Columbia',n:13}]},
+  'Pepperdine Caruso School of Law':{g:197,lf:{solo:5,s10:33,s25:31,s50:23,s100:8,s250:3,s500:6,big:23,t:132},cl:{fed:8,sl:6,tri:0,intl:0,t:14},gov:19,pi:10,biz:13,edu:4,jda:14,pro:0,funded:7,us:0,un:0,foreign:2,states:[{st:'California',n:143},{st:'Texas',n:11},{st:'Colorado',n:4}]},
+  'Pontifical Catholic University of Puerto Rico School of Law':{g:113,lf:{solo:4,s10:18,s25:2,s50:2,s100:3,s250:0,s500:2,big:0,t:31},cl:{fed:0,sl:1,tri:0,intl:0,t:1},gov:15,pi:5,biz:10,edu:2,jda:15,pro:13,funded:0,us:38,un:2,foreign:0,states:[{st:'Puerto Rico',n:53},{st:'Florida',n:4},{st:'Texas',n:3}]},
+  'Quinnipiac University School of Law':{g:116,lf:{solo:0,s10:30,s25:18,s50:5,s100:4,s250:2,s500:1,big:2,t:62},cl:{fed:0,sl:8,tri:0,intl:0,t:8},gov:15,pi:9,biz:16,edu:0,jda:18,pro:1,funded:0,us:3,un:2,foreign:0,states:[{st:'Connecticut',n:83},{st:'New York',n:10},{st:'Massachusetts',n:5}]},
+  'Regent University School of Law':{g:112,lf:{solo:2,s10:30,s25:7,s50:3,s100:4,s250:0,s500:1,big:0,t:47},cl:{fed:2,sl:14,tri:0,intl:0,t:16},gov:30,pi:7,biz:4,edu:2,jda:5,pro:1,funded:0,us:3,un:2,foreign:0,states:[{st:'Virginia',n:40},{st:'Pennsylvania',n:11},{st:'Florida',n:7}]},
+  'Roger Williams University School of Law':{g:172,lf:{solo:1,s10:32,s25:7,s50:5,s100:5,s250:6,s500:0,big:2,t:58},cl:{fed:1,sl:26,tri:0,intl:0,t:27},gov:23,pi:24,biz:22,edu:0,jda:13,pro:5,funded:0,us:16,un:0,foreign:3,states:[{st:'Rhode Island',n:76},{st:'Massachusetts',n:19},{st:'New York',n:14}]},
+  'Rutgers Law School':{g:481,lf:{solo:3,s10:39,s25:20,s50:19,s100:13,s250:21,s500:14,big:35,t:164},cl:{fed:4,sl:166,tri:0,intl:0,t:170},gov:52,pi:22,biz:34,edu:8,jda:48,pro:13,funded:0,us:19,un:2,foreign:0,states:[{st:'New Jersey',n:304},{st:'New York',n:55},{st:'Pennsylvania',n:43}]},
+  'SMU Dedman School of Law':{g:247,lf:{solo:0,s10:38,s25:25,s50:17,s100:16,s250:8,s500:14,big:69,t:187},cl:{fed:6,sl:3,tri:0,intl:0,t:9},gov:18,pi:3,biz:23,edu:1,jda:22,pro:0,funded:0,us:1,un:0,foreign:0,states:[{st:'Texas',n:222},{st:'Colorado',n:3},{st:'California',n:2}]},
+  'Saint Louis University School of Law':{g:185,lf:{solo:2,s10:20,s25:24,s50:10,s100:22,s250:11,s500:14,big:13,t:116},cl:{fed:2,sl:1,tri:0,intl:0,t:3},gov:27,pi:14,biz:8,edu:1,jda:8,pro:0,funded:0,us:8,un:3,foreign:0,states:[{st:'Missouri',n:116},{st:'Illinois',n:20},{st:'New York',n:6}]},
+  'Samford University Cumberland School of Law':{g:155,lf:{solo:0,s10:40,s25:15,s50:5,s100:8,s250:9,s500:8,big:10,t:95},cl:{fed:4,sl:5,tri:0,intl:0,t:9},gov:12,pi:8,biz:15,edu:2,jda:16,pro:1,funded:0,us:8,un:2,foreign:0,states:[{st:'Alabama',n:102},{st:'Florida',n:13},{st:'Georgia',n:9}]},
+  'Santa Clara University School of Law':{g:202,lf:{solo:0,s10:32,s25:12,s50:12,s100:7,s250:11,s500:9,big:40,t:123},cl:{fed:1,sl:1,tri:0,intl:0,t:2},gov:13,pi:7,biz:22,edu:5,jda:25,pro:1,funded:5,us:23,un:1,foreign:1,states:[{st:'California',n:160},{st:'Ohio',n:2},{st:'Texas',n:2}]},
+  'Seattle University School of Law':{g:206,lf:{solo:0,s10:42,s25:15,s50:12,s100:1,s250:9,s500:5,big:6,t:90},cl:{fed:2,sl:12,tri:1,intl:0,t:15},gov:31,pi:41,biz:11,edu:1,jda:17,pro:5,funded:0,us:9,un:4,foreign:0,states:[{st:'Washington',n:162},{st:'California',n:6},{st:'District Of Columbia',n:3}]},
+  'Seton Hall University School of Law':{g:314,lf:{solo:0,s10:17,s25:12,s50:14,s100:11,s250:4,s500:14,big:33,t:105},cl:{fed:4,sl:125,tri:0,intl:0,t:129},gov:22,pi:10,biz:32,edu:1,jda:19,pro:11,funded:0,us:8,un:1,foreign:1,states:[{st:'New Jersey',n:201},{st:'New York',n:73},{st:'California',n:5}]},
+  'South Texas College of Law Houston':{g:286,lf:{solo:4,s10:86,s25:28,s50:14,s100:21,s250:24,s500:9,big:16,t:202},cl:{fed:3,sl:2,tri:0,intl:0,t:5},gov:31,pi:8,biz:22,edu:2,jda:20,pro:2,funded:1,us:11,un:0,foreign:0,states:[{st:'Texas',n:256},{st:'Colorado',n:2},{st:'Virginia',n:2}]},
+  'Southern Illinois University School of Law':{g:84,lf:{solo:1,s10:26,s25:7,s50:3,s100:3,s250:2,s500:0,big:1,t:43},cl:{fed:0,sl:2,tri:0,intl:0,t:2},gov:12,pi:12,biz:2,edu:2,jda:4,pro:1,funded:0,us:5,un:1,foreign:0,states:[{st:'Illinois',n:43},{st:'Missouri',n:12},{st:'Indiana',n:4}]},
+  'Southern University Law Center':{g:261,lf:{solo:1,s10:30,s25:7,s50:6,s100:6,s250:5,s500:0,big:6,t:61},cl:{fed:3,sl:20,tri:0,intl:0,t:23},gov:45,pi:18,biz:27,edu:8,jda:36,pro:24,funded:1,us:60,un:5,foreign:0,states:[{st:'Louisiana',n:104},{st:'Texas',n:29},{st:'District Of Columbia',n:10}]},
+  'Southwestern Law School':{g:290,lf:{solo:1,s10:61,s25:36,s50:28,s100:4,s250:3,s500:6,big:20,t:159},cl:{fed:0,sl:4,tri:0,intl:0,t:4},gov:18,pi:24,biz:27,edu:2,jda:26,pro:11,funded:0,us:31,un:15,foreign:0,states:[{st:'California',n:222},{st:'Nevada',n:2},{st:'Texas',n:2}]},
+  'St. John\'s University School of Law':{g:265,lf:{solo:0,s10:27,s25:18,s50:16,s100:22,s250:12,s500:8,big:42,t:145},cl:{fed:7,sl:5,tri:0,intl:0,t:12},gov:44,pi:20,biz:26,edu:0,jda:22,pro:2,funded:0,us:16,un:1,foreign:0,states:[{st:'New York',n:229},{st:'New Jersey',n:6},{st:'Delaware',n:3}]},
+  'St. Mary\'s University School of Law':{g:243,lf:{solo:3,s10:69,s25:24,s50:16,s100:5,s250:11,s500:5,big:1,t:134},cl:{fed:8,sl:3,tri:0,intl:0,t:11},gov:36,pi:15,biz:17,edu:2,jda:11,pro:8,funded:0,us:26,un:1,foreign:0,states:[{st:'Texas',n:196},{st:'Colorado',n:3},{st:'California',n:2}]},
+  'St. Thomas University School of Law':{g:249,lf:{solo:5,s10:76,s25:8,s50:13,s100:5,s250:12,s500:4,big:14,t:137},cl:{fed:0,sl:0,tri:0,intl:0,t:0},gov:28,pi:22,biz:14,edu:1,jda:25,pro:7,funded:0,us:21,un:3,foreign:2,states:[{st:'Florida',n:188},{st:'California',n:2},{st:'New Jersey',n:2}]},
+  'Stanford Law School':{g:199,lf:{solo:0,s10:6,s25:0,s50:5,s100:4,s250:6,s500:7,big:80,t:108},cl:{fed:35,sl:3,tri:0,intl:0,t:38},gov:8,pi:32,biz:4,edu:1,jda:7,pro:1,funded:19,us:0,un:1,foreign:2,states:[{st:'California',n:69},{st:'New York',n:37},{st:'District Of Columbia',n:28}]},
+  'Stetson University College of Law':{g:285,lf:{solo:1,s10:43,s25:21,s50:10,s100:11,s250:24,s500:13,big:22,t:145},cl:{fed:4,sl:2,tri:0,intl:0,t:6},gov:52,pi:29,biz:22,edu:3,jda:24,pro:1,funded:0,us:11,un:3,foreign:2,states:[{st:'Florida',n:222},{st:'California',n:4},{st:'District Of Columbia',n:4}]},
+  'Suffolk University Law School':{g:402,lf:{solo:1,s10:73,s25:31,s50:16,s100:11,s250:15,s500:10,big:49,t:206},cl:{fed:2,sl:11,tri:0,intl:0,t:13},gov:56,pi:27,biz:62,edu:4,jda:52,pro:7,funded:0,us:25,un:1,foreign:0,states:[{st:'Massachusetts',n:301},{st:'New York',n:13},{st:'Rhode Island',n:7}]},
+  'Syracuse University College of Law':{g:202,lf:{solo:2,s10:23,s25:19,s50:8,s100:11,s250:5,s500:11,big:10,t:89},cl:{fed:4,sl:9,tri:0,intl:0,t:13},gov:39,pi:17,biz:23,edu:9,jda:16,pro:18,funded:0,us:5,un:3,foreign:1,states:[{st:'New York',n:94},{st:'District Of Columbia',n:12},{st:'California',n:10}]},
+  'Temple University Beasley School of Law':{g:225,lf:{solo:0,s10:19,s25:14,s50:4,s100:7,s250:14,s500:8,big:41,t:107},cl:{fed:6,sl:29,tri:0,intl:0,t:35},gov:34,pi:21,biz:13,edu:4,jda:20,pro:3,funded:0,us:7,un:0,foreign:0,states:[{st:'Pennsylvania',n:134},{st:'New Jersey',n:20},{st:'New York',n:17}]},
+  'Texas A&M University School of Law':{g:178,lf:{solo:2,s10:34,s25:15,s50:9,s100:17,s250:9,s500:2,big:34,t:122},cl:{fed:3,sl:0,tri:0,intl:0,t:3},gov:28,pi:13,biz:9,edu:3,jda:11,pro:0,funded:0,us:0,un:0,foreign:0,states:[{st:'Texas',n:151},{st:'District Of Columbia',n:5},{st:'North Carolina',n:3}]},
+  'Texas Southern University Thurgood Marshall School of Law':{g:261,lf:{solo:1,s10:30,s25:7,s50:6,s100:6,s250:5,s500:0,big:6,t:61},cl:{fed:3,sl:20,tri:0,intl:0,t:23},gov:45,pi:18,biz:27,edu:8,jda:36,pro:24,funded:1,us:60,un:5,foreign:0,states:[{st:'Louisiana',n:104},{st:'Texas',n:29},{st:'District Of Columbia',n:10}]},
+  'Texas Tech University School of Law':{g:145,lf:{solo:1,s10:32,s25:19,s50:19,s100:13,s250:5,s500:1,big:12,t:102},cl:{fed:1,sl:1,tri:0,intl:0,t:2},gov:15,pi:10,biz:4,edu:1,jda:2,pro:2,funded:1,us:9,un:1,foreign:0,states:[{st:'Texas',n:121},{st:'Colorado',n:3},{st:'New Mexico',n:3}]},
+  'Thomas M. Cooley Law School':{g:124,lf:{solo:2,s10:37,s25:4,s50:4,s100:2,s250:2,s500:1,big:2,t:54},cl:{fed:0,sl:3,tri:0,intl:0,t:3},gov:19,pi:13,biz:12,edu:3,jda:7,pro:10,funded:0,us:13,un:0,foreign:0,states:[{st:'Florida',n:37},{st:'Michigan',n:37},{st:'Indiana',n:9}]},
+  'Touro University Jacob D. Fuchsberg Law Center':{g:147,lf:{solo:1,s10:25,s25:14,s50:9,s100:6,s250:7,s500:2,big:2,t:66},cl:{fed:0,sl:12,tri:0,intl:0,t:12},gov:25,pi:12,biz:17,edu:3,jda:7,pro:12,funded:0,us:4,un:5,foreign:0,states:[{st:'New York',n:120},{st:'New Jersey',n:7},{st:'District Of Columbia',n:2}]},
+  'Tulane University Law School':{g:218,lf:{solo:0,s10:13,s25:12,s50:13,s100:15,s250:11,s500:16,big:41,t:121},cl:{fed:6,sl:7,tri:0,intl:0,t:13},gov:20,pi:25,biz:20,edu:4,jda:16,pro:6,funded:2,us:10,un:0,foreign:1,states:[{st:'Louisiana',n:71},{st:'New York',n:39},{st:'Texas',n:27}]},
+  'UA Little Rock Bowen School of Law':{g:138,lf:{solo:2,s10:33,s25:7,s50:8,s100:7,s250:0,s500:3,big:0,t:60},cl:{fed:3,sl:2,tri:0,intl:0,t:5},gov:27,pi:11,biz:9,edu:2,jda:16,pro:3,funded:0,us:8,un:3,foreign:1,states:[{st:'Arkansas',n:86},{st:'Missouri',n:5},{st:'Texas',n:4}]},
+  'UC Berkeley School of Law':{g:408,lf:{solo:0,s10:5,s25:5,s50:2,s100:6,s250:8,s500:20,big:213,t:259},cl:{fed:37,sl:14,tri:0,intl:0,t:51},gov:19,pi:68,biz:5,edu:2,jda:6,pro:1,funded:21,us:0,un:1,foreign:2,states:[{st:'California',n:244},{st:'New York',n:59},{st:'District Of Columbia',n:26}]},
+  'UC College of the Law San Francisco':{g:366,lf:{solo:0,s10:44,s25:19,s50:18,s100:14,s250:25,s500:11,big:90,t:221},cl:{fed:5,sl:4,tri:0,intl:0,t:9},gov:36,pi:40,biz:26,edu:10,jda:27,pro:5,funded:16,us:9,un:5,foreign:3,states:[{st:'California',n:316},{st:'New York',n:6},{st:'District Of Columbia',n:4}]},
+  'UC Davis School of Law':{g:243,lf:{solo:0,s10:18,s25:16,s50:6,s100:8,s250:7,s500:7,big:64,t:126},cl:{fed:3,sl:10,tri:0,intl:0,t:13},gov:30,pi:44,biz:8,edu:5,jda:4,pro:0,funded:8,us:4,un:3,foreign:4,states:[{st:'California',n:192},{st:'District Of Columbia',n:7},{st:'Alaska',n:4}]},
+  'UC Irvine School of Law':{g:164,lf:{solo:0,s10:14,s25:5,s50:14,s100:5,s250:9,s500:11,big:48,t:106},cl:{fed:3,sl:2,tri:0,intl:0,t:5},gov:12,pi:25,biz:5,edu:0,jda:2,pro:0,funded:0,us:6,un:2,foreign:0,states:[{st:'California',n:131},{st:'District Of Columbia',n:6},{st:'New York',n:6}]},
+  'UCLA School of Law':{g:372,lf:{solo:0,s10:18,s25:15,s50:10,s100:8,s250:15,s500:12,big:188,t:266},cl:{fed:19,sl:4,tri:0,intl:0,t:23},gov:13,pi:53,biz:5,edu:2,jda:8,pro:0,funded:11,us:6,un:1,foreign:5,states:[{st:'California',n:282},{st:'New York',n:37},{st:'Washington',n:6}]},
+  'UNLV William S. Boyd School of Law':{g:179,lf:{solo:3,s10:29,s25:13,s50:11,s100:4,s250:7,s500:3,big:15,t:85},cl:{fed:3,sl:34,tri:0,intl:0,t:37},gov:25,pi:6,biz:7,edu:3,jda:10,pro:3,funded:5,us:5,un:0,foreign:0,states:[{st:'Nevada',n:143},{st:'Utah',n:7},{st:'California',n:3}]},
+  'USC Gould School of Law':{g:221,lf:{solo:0,s10:12,s25:7,s50:4,s100:8,s250:13,s500:9,big:125,t:178},cl:{fed:3,sl:3,tri:0,intl:0,t:6},gov:6,pi:15,biz:9,edu:2,jda:9,pro:1,funded:3,us:3,un:1,foreign:1,states:[{st:'California',n:172},{st:'New York',n:23},{st:'Texas',n:4}]},
+  'University at Buffalo School of Law':{g:160,lf:{solo:0,s10:33,s25:16,s50:12,s100:10,s250:14,s500:7,big:5,t:97},cl:{fed:1,sl:4,tri:0,intl:0,t:5},gov:20,pi:19,biz:6,edu:5,jda:11,pro:1,funded:5,us:4,un:2,foreign:0,states:[{st:'New York',n:142},{st:'Unknown',n:2},{st:'Virginia',n:2}]},
+  'University of Akron School of Law':{g:131,lf:{solo:2,s10:36,s25:12,s50:6,s100:3,s250:8,s500:5,big:4,t:76},cl:{fed:0,sl:0,tri:0,intl:0,t:0},gov:19,pi:10,biz:14,edu:4,jda:14,pro:5,funded:0,us:6,un:2,foreign:0,states:[{st:'Ohio',n:105},{st:'Pennsylvania',n:3},{st:'Illinois',n:2}]},
+  'University of Alabama School of Law':{g:154,lf:{solo:1,s10:18,s25:12,s50:7,s100:3,s250:11,s500:7,big:31,t:90},cl:{fed:17,sl:5,tri:0,intl:0,t:22},gov:10,pi:12,biz:7,edu:1,jda:6,pro:0,funded:0,us:6,un:1,foreign:1,states:[{st:'Alabama',n:70},{st:'District Of Columbia',n:9},{st:'Texas',n:9}]},
+  'University of Arizona James E. Rogers College of Law':{g:120,lf:{solo:0,s10:14,s25:6,s50:7,s100:1,s250:6,s500:3,big:9,t:46},cl:{fed:6,sl:19,tri:0,intl:0,t:25},gov:14,pi:15,biz:3,edu:5,jda:9,pro:2,funded:0,us:11,un:0,foreign:1,states:[{st:'Arizona',n:68},{st:'California',n:6},{st:'Oregon',n:4}]},
+  'University of Arkansas School of Law':{g:124,lf:{solo:1,s10:30,s25:7,s50:3,s100:7,s250:2,s500:5,big:5,t:60},cl:{fed:1,sl:2,tri:0,intl:0,t:3},gov:17,pi:8,biz:18,edu:1,jda:11,pro:3,funded:0,us:6,un:1,foreign:0,states:[{st:'Arkansas',n:74},{st:'Missouri',n:9},{st:'Texas',n:9}]},
+  'University of Baltimore School of Law':{g:207,lf:{solo:0,s10:38,s25:7,s50:4,s100:5,s250:1,s500:1,big:3,t:59},cl:{fed:5,sl:55,tri:0,intl:0,t:60},gov:34,pi:19,biz:15,edu:2,jda:21,pro:8,funded:0,us:13,un:1,foreign:0,states:[{st:'Maryland',n:159},{st:'Virginia',n:8},{st:'District Of Columbia',n:5}]},
+  'University of Chicago Law School':{g:199,lf:{solo:0,s10:1,s25:0,s50:0,s100:2,s250:5,s500:11,big:97,t:116},cl:{fed:56,sl:1,tri:0,intl:0,t:57},gov:6,pi:11,biz:6,edu:1,jda:5,pro:0,funded:4,us:1,un:0,foreign:1,states:[{st:'Illinois',n:48},{st:'New York',n:41},{st:'California',n:34}]},
+  'University of Cincinnati College of Law':{g:130,lf:{solo:0,s10:19,s25:13,s50:6,s100:3,s250:3,s500:3,big:8,t:55},cl:{fed:3,sl:5,tri:0,intl:0,t:8},gov:18,pi:18,biz:15,edu:1,jda:10,pro:4,funded:0,us:6,un:0,foreign:0,states:[{st:'Ohio',n:83},{st:'Kentucky',n:8},{st:'Indiana',n:4}]},
+  'University of Colorado Law School':{g:168,lf:{solo:0,s10:12,s25:7,s50:8,s100:3,s250:6,s500:10,big:31,t:77},cl:{fed:3,sl:28,tri:0,intl:0,t:31},gov:25,pi:14,biz:8,edu:1,jda:5,pro:2,funded:2,us:7,un:3,foreign:0,states:[{st:'Colorado',n:121},{st:'District Of Columbia',n:7},{st:'California',n:6}]},
+  'University of Connecticut School of Law':{g:150,lf:{solo:0,s10:16,s25:9,s50:7,s100:14,s250:2,s500:7,big:17,t:72},cl:{fed:0,sl:18,tri:0,intl:0,t:18},gov:16,pi:10,biz:20,edu:1,jda:14,pro:1,funded:0,us:7,un:2,foreign:1,states:[{st:'Connecticut',n:95},{st:'New York',n:18},{st:'Massachusetts',n:11}]},
+  'University of Dayton School of Law':{g:108,lf:{solo:2,s10:27,s25:6,s50:1,s100:1,s250:1,s500:2,big:8,t:48},cl:{fed:2,sl:2,tri:0,intl:0,t:4},gov:28,pi:6,biz:10,edu:5,jda:11,pro:1,funded:0,us:3,un:3,foreign:1,states:[{st:'Ohio',n:58},{st:'Indiana',n:8},{st:'Colorado',n:4}]},
+  'University of Denver Sturm College of Law':{g:232,lf:{solo:2,s10:43,s25:12,s50:13,s100:8,s250:4,s500:7,big:20,t:109},cl:{fed:0,sl:25,tri:0,intl:0,t:25},gov:25,pi:19,biz:21,edu:4,jda:13,pro:8,funded:3,us:18,un:1,foreign:0,states:[{st:'Colorado',n:175},{st:'District Of Columbia',n:4},{st:'Illinois',n:4}]},
+  'University of Detroit Mercy School of Law':{g:199,lf:{solo:0,s10:47,s25:20,s50:14,s100:22,s250:13,s500:11,big:8,t:135},cl:{fed:0,sl:1,tri:0,intl:1,t:2},gov:14,pi:13,biz:18,edu:1,jda:7,pro:4,funded:0,us:9,un:3,foreign:62,states:[{st:'Michigan',n:114},{st:'Illinois',n:2},{st:'Hawaii',n:1}]},
+  'University of Florida Levin College of Law':{g:264,lf:{solo:0,s10:17,s25:18,s50:14,s100:7,s250:19,s500:25,big:66,t:166},cl:{fed:15,sl:4,tri:0,intl:0,t:19},gov:30,pi:25,biz:8,edu:3,jda:12,pro:0,funded:0,us:4,un:3,foreign:2,states:[{st:'Florida',n:164},{st:'New York',n:16},{st:'District Of Columbia',n:13}]},
+  'University of Georgia School of Law':{g:189,lf:{solo:0,s10:16,s25:18,s50:14,s100:14,s250:3,s500:8,big:33,t:106},cl:{fed:17,sl:10,tri:0,intl:0,t:27},gov:21,pi:14,biz:7,edu:2,jda:3,pro:2,funded:0,us:5,un:1,foreign:0,states:[{st:'Georgia',n:134},{st:'Florida',n:6},{st:'Texas',n:6}]},
+  'University of Hawaii Richardson School of Law':{g:96,lf:{solo:0,s10:7,s25:9,s50:3,s100:4,s250:0,s500:0,big:0,t:23},cl:{fed:6,sl:23,tri:0,intl:0,t:29},gov:19,pi:9,biz:4,edu:4,jda:9,pro:7,funded:0,us:2,un:4,foreign:0,states:[{st:'Hawaii',n:77},{st:'Virginia',n:3},{st:'Illinois',n:2}]},
+  'University of Houston Law Center':{g:260,lf:{solo:2,s10:46,s25:21,s50:19,s100:16,s250:20,s500:8,big:58,t:190},cl:{fed:4,sl:2,tri:0,intl:0,t:6},gov:29,pi:7,biz:11,edu:3,jda:10,pro:2,funded:1,us:7,un:4,foreign:1,states:[{st:'Texas',n:226},{st:'New York',n:4},{st:'California',n:3}]},
+  'University of Idaho College of Law':{g:120,lf:{solo:0,s10:37,s25:9,s50:1,s100:1,s250:3,s500:2,big:0,t:53},cl:{fed:3,sl:12,tri:0,intl:0,t:15},gov:26,pi:6,biz:6,edu:1,jda:3,pro:2,funded:0,us:4,un:1,foreign:0,states:[{st:'Idaho',n:63},{st:'Washington',n:17},{st:'Utah',n:6}]},
+  'University of Illinois Chicago School of Law':{g:203,lf:{solo:0,s10:17,s25:6,s50:16,s100:7,s250:16,s500:7,big:69,t:138},cl:{fed:8,sl:3,tri:0,intl:0,t:11},gov:22,pi:15,biz:8,edu:6,jda:3,pro:0,funded:5,us:0,un:1,foreign:1,states:[{st:'Illinois',n:135},{st:'California',n:13},{st:'Texas',n:9}]},
+  'University of Illinois College of Law':{g:203,lf:{solo:0,s10:17,s25:6,s50:16,s100:7,s250:16,s500:7,big:69,t:138},cl:{fed:8,sl:3,tri:0,intl:0,t:11},gov:22,pi:15,biz:8,edu:6,jda:3,pro:0,funded:5,us:0,un:1,foreign:1,states:[{st:'Illinois',n:135},{st:'California',n:13},{st:'Texas',n:9}]},
+  'University of Iowa College of Law':{g:176,lf:{solo:1,s10:21,s25:11,s50:7,s100:6,s250:9,s500:8,big:28,t:91},cl:{fed:9,sl:21,tri:0,intl:0,t:30},gov:16,pi:15,biz:11,edu:5,jda:14,pro:0,funded:3,us:0,un:1,foreign:1,states:[{st:'Iowa',n:57},{st:'Illinois',n:19},{st:'Minnesota',n:10}]},
+  'University of Kansas School of Law':{g:118,lf:{solo:0,s10:12,s25:15,s50:11,s100:4,s250:3,s500:4,big:12,t:61},cl:{fed:7,sl:3,tri:0,intl:0,t:10},gov:23,pi:9,biz:9,edu:4,jda:8,pro:0,funded:1,us:0,un:0,foreign:0,states:[{st:'Kansas',n:49},{st:'Missouri',n:33},{st:'Texas',n:5}]},
+  'University of Kentucky College of Law':{g:139,lf:{solo:0,s10:22,s25:14,s50:6,s100:5,s250:6,s500:7,big:9,t:69},cl:{fed:8,sl:13,tri:0,intl:0,t:21},gov:18,pi:14,biz:13,edu:1,jda:7,pro:0,funded:0,us:1,un:1,foreign:0,states:[{st:'Kentucky',n:83},{st:'Tennessee',n:9},{st:'Illinois',n:8}]},
+  'University of Louisville Brandeis School of Law':{g:126,lf:{solo:3,s10:31,s25:12,s50:4,s100:1,s250:2,s500:3,big:4,t:60},cl:{fed:2,sl:2,tri:0,intl:0,t:4},gov:19,pi:9,biz:12,edu:3,jda:12,pro:4,funded:0,us:7,un:0,foreign:0,states:[{st:'Kentucky',n:81},{st:'Illinois',n:7},{st:'Indiana',n:6}]},
+  'University of Maine School of Law':{g:82,lf:{solo:2,s10:17,s25:3,s50:4,s100:2,s250:6,s500:3,big:1,t:38},cl:{fed:1,sl:12,tri:0,intl:0,t:13},gov:7,pi:7,biz:7,edu:1,jda:4,pro:3,funded:0,us:8,un:0,foreign:0,states:[{st:'Maine',n:56},{st:'New York',n:4},{st:'North Carolina',n:3}]},
+  'University of Maryland Carey School of Law':{g:244,lf:{solo:0,s10:21,s25:13,s50:7,s100:9,s250:6,s500:3,big:24,t:83},cl:{fed:8,sl:67,tri:0,intl:0,t:75},gov:40,pi:15,biz:13,edu:5,jda:36,pro:3,funded:0,us:9,un:1,foreign:1,states:[{st:'Maryland',n:143},{st:'District Of Columbia',n:34},{st:'Virginia',n:12}]},
+  'University of Massachusetts School of Law':{g:111,lf:{solo:1,s10:18,s25:13,s50:3,s100:1,s250:1,s500:0,big:0,t:37},cl:{fed:0,sl:11,tri:0,intl:0,t:11},gov:23,pi:12,biz:7,edu:4,jda:14,pro:5,funded:0,us:15,un:0,foreign:0,states:[{st:'Massachusetts',n:44},{st:'Rhode Island',n:11},{st:'New Jersey',n:7}]},
+  'University of Memphis Humphreys School of Law':{g:97,lf:{solo:1,s10:25,s25:7,s50:3,s100:3,s250:1,s500:6,big:1,t:47},cl:{fed:3,sl:7,tri:0,intl:0,t:10},gov:10,pi:8,biz:13,edu:2,jda:13,pro:2,funded:0,us:3,un:2,foreign:0,states:[{st:'Tennessee',n:74},{st:'Arkansas',n:2},{st:'Colorado',n:2}]},
+  'University of Miami School of Law':{g:404,lf:{solo:2,s10:62,s25:50,s50:13,s100:6,s250:24,s500:22,big:79,t:258},cl:{fed:5,sl:3,tri:0,intl:0,t:8},gov:31,pi:33,biz:38,edu:4,jda:32,pro:1,funded:2,us:11,un:4,foreign:1,states:[{st:'Florida',n:283},{st:'New York',n:25},{st:'California',n:9}]},
+  'University of Michigan Law School':{g:322,lf:{solo:0,s10:3,s25:4,s50:2,s100:0,s250:10,s500:19,big:162,t:200},cl:{fed:33,sl:21,tri:0,intl:1,t:55},gov:19,pi:35,biz:4,edu:0,jda:3,pro:1,funded:5,us:3,un:2,foreign:3,states:[{st:'New York',n:75},{st:'Illinois',n:52},{st:'Michigan',n:43}]},
+  'University of Minnesota Law School':{g:230,lf:{solo:1,s10:19,s25:14,s50:5,s100:9,s250:5,s500:18,big:37,t:108},cl:{fed:12,sl:43,tri:0,intl:0,t:55},gov:16,pi:29,biz:15,edu:1,jda:10,pro:1,funded:4,us:5,un:0,foreign:1,states:[{st:'Minnesota',n:142},{st:'California',n:11},{st:'Illinois',n:11}]},
+  'University of Mississippi School of Law':{g:175,lf:{solo:2,s10:36,s25:11,s50:7,s100:6,s250:9,s500:15,big:10,t:96},cl:{fed:9,sl:5,tri:0,intl:0,t:14},gov:23,pi:6,biz:14,edu:0,jda:13,pro:2,funded:0,us:15,un:0,foreign:0,states:[{st:'Mississippi',n:49},{st:'Tennessee',n:27},{st:'Texas',n:13}]},
+  'University of Missouri School of Law':{g:132,lf:{solo:1,s10:20,s25:12,s50:4,s100:4,s250:3,s500:5,big:14,t:63},cl:{fed:4,sl:10,tri:0,intl:0,t:14},gov:26,pi:7,biz:11,edu:7,jda:15,pro:1,funded:3,us:2,un:0,foreign:0,states:[{st:'Missouri',n:106},{st:'Illinois',n:4},{st:'Florida',n:3}]},
+  'University of Missouri-Kansas City School of Law':{g:127,lf:{solo:3,s10:35,s25:9,s50:11,s100:8,s250:3,s500:7,big:13,t:89},cl:{fed:0,sl:10,tri:0,intl:0,t:10},gov:9,pi:7,biz:8,edu:0,jda:8,pro:2,funded:0,us:3,un:0,foreign:0,states:[{st:'Missouri',n:90},{st:'Kansas',n:27},{st:'California',n:2}]},
+  'University of Montana School of Law':{g:78,lf:{solo:0,s10:24,s25:4,s50:1,s100:2,s250:4,s500:0,big:2,t:37},cl:{fed:7,sl:11,tri:0,intl:0,t:18},gov:10,pi:8,biz:0,edu:1,jda:3,pro:0,funded:0,us:1,un:0,foreign:0,states:[{st:'Montana',n:60},{st:'Colorado',n:4},{st:'Alaska',n:2}]},
+  'University of Nebraska College of Law':{g:153,lf:{solo:0,s10:30,s25:14,s50:17,s100:1,s250:4,s500:1,big:8,t:75},cl:{fed:0,sl:7,tri:0,intl:0,t:7},gov:30,pi:16,biz:18,edu:1,jda:6,pro:1,funded:0,us:3,un:0,foreign:1,states:[{st:'Nebraska',n:97},{st:'Minnesota',n:6},{st:'Illinois',n:5}]},
+  'University of New Hampshire Franklin Pierce School of Law':{g:187,lf:{solo:2,s10:32,s25:8,s50:18,s100:6,s250:9,s500:3,big:9,t:87},cl:{fed:1,sl:4,tri:0,intl:0,t:5},gov:30,pi:15,biz:27,edu:5,jda:30,pro:8,funded:0,us:9,un:3,foreign:1,states:[{st:'New Hampshire',n:61},{st:'Massachusetts',n:24},{st:'New York',n:10}]},
+  'University of New Mexico School of Law':{g:112,lf:{solo:0,s10:31,s25:3,s50:3,s100:3,s250:1,s500:1,big:0,t:42},cl:{fed:1,sl:10,tri:0,intl:0,t:11},gov:27,pi:16,biz:2,edu:0,jda:2,pro:1,funded:0,us:11,un:0,foreign:1,states:[{st:'New Mexico',n:90},{st:'Colorado',n:2},{st:'Arizona',n:1}]},
+  'University of North Carolina School of Law':{g:210,lf:{solo:0,s10:21,s25:6,s50:11,s100:9,s250:11,s500:10,big:52,t:120},cl:{fed:12,sl:9,tri:0,intl:0,t:21},gov:28,pi:18,biz:12,edu:6,jda:13,pro:0,funded:3,us:1,un:0,foreign:0,states:[{st:'North Carolina',n:115},{st:'District Of Columbia',n:21},{st:'New York',n:13}]},
+  'University of North Dakota School of Law':{g:81,lf:{solo:0,s10:20,s25:2,s50:6,s100:1,s250:1,s500:0,big:0,t:30},cl:{fed:4,sl:10,tri:0,intl:0,t:14},gov:18,pi:8,biz:3,edu:0,jda:4,pro:0,funded:0,us:7,un:0,foreign:2,states:[{st:'North Dakota',n:46},{st:'Minnesota',n:11},{st:'South Dakota',n:5}]},
+  'University of North Texas Dallas College of Law':{g:93,lf:{solo:1,s10:32,s25:6,s50:3,s100:2,s250:6,s500:3,big:1,t:54},cl:{fed:1,sl:1,tri:0,intl:0,t:2},gov:10,pi:2,biz:12,edu:0,jda:8,pro:5,funded:0,us:9,un:1,foreign:0,states:[{st:'Texas',n:75},{st:'District Of Columbia',n:2},{st:'Illinois',n:1}]},
+  'University of Notre Dame Law School':{g:187,lf:{solo:0,s10:2,s25:7,s50:3,s100:4,s250:8,s500:7,big:74,t:105},cl:{fed:32,sl:9,tri:0,intl:0,t:41},gov:23,pi:10,biz:5,edu:1,jda:3,pro:0,funded:6,us:1,un:0,foreign:2,states:[{st:'Illinois',n:41},{st:'New York',n:28},{st:'Indiana',n:16}]},
+  'University of Oklahoma College of Law':{g:193,lf:{solo:0,s10:50,s25:26,s50:12,s100:13,s250:11,s500:5,big:11,t:128},cl:{fed:4,sl:1,tri:0,intl:0,t:5},gov:27,pi:12,biz:9,edu:0,jda:7,pro:0,funded:0,us:6,un:2,foreign:0,states:[{st:'Oklahoma',n:112},{st:'Texas',n:52},{st:'Colorado',n:4}]},
+  'University of Oregon School of Law':{g:164,lf:{solo:1,s10:30,s25:13,s50:10,s100:2,s250:6,s500:4,big:5,t:71},cl:{fed:4,sl:17,tri:0,intl:0,t:21},gov:17,pi:22,biz:11,edu:7,jda:12,pro:3,funded:2,us:13,un:0,foreign:2,states:[{st:'Oregon',n:85},{st:'California',n:17},{st:'Washington',n:9}]},
+  'University of Pittsburgh School of Law':{g:145,lf:{solo:0,s10:14,s25:13,s50:7,s100:3,s250:8,s500:3,big:21,t:69},cl:{fed:5,sl:13,tri:0,intl:0,t:18},gov:18,pi:17,biz:6,edu:1,jda:8,pro:1,funded:0,us:11,un:0,foreign:0,states:[{st:'Pennsylvania',n:99},{st:'New York',n:6},{st:'District Of Columbia',n:4}]},
+  'University of Puerto Rico School of Law':{g:130,lf:{solo:0,s10:16,s25:0,s50:15,s100:0,s250:8,s500:1,big:1,t:41},cl:{fed:1,sl:11,tri:0,intl:0,t:12},gov:12,pi:6,biz:28,edu:2,jda:23,pro:23,funded:0,us:23,un:0,foreign:0,states:[{st:'Puerto Rico',n:92},{st:'New York',n:4},{st:'California',n:1}]},
+  'University of Richmond School of Law':{g:151,lf:{solo:0,s10:17,s25:10,s50:10,s100:9,s250:5,s500:8,big:18,t:77},cl:{fed:6,sl:15,tri:0,intl:0,t:21},gov:21,pi:15,biz:9,edu:2,jda:7,pro:2,funded:0,us:5,un:0,foreign:0,states:[{st:'Virginia',n:91},{st:'District Of Columbia',n:14},{st:'Florida',n:5}]},
+  'University of San Diego School of Law':{g:249,lf:{solo:0,s10:49,s25:19,s50:15,s100:21,s250:11,s500:11,big:33,t:159},cl:{fed:3,sl:0,tri:0,intl:0,t:3},gov:21,pi:23,biz:21,edu:19,jda:13,pro:2,funded:19,us:1,un:1,foreign:0,states:[{st:'California',n:220},{st:'Colorado',n:3},{st:'District Of Columbia',n:3}]},
+  'University of San Francisco School of Law':{g:120,lf:{solo:0,s10:14,s25:9,s50:9,s100:6,s250:1,s500:4,big:16,t:59},cl:{fed:1,sl:0,tri:0,intl:0,t:1},gov:19,pi:8,biz:15,edu:0,jda:14,pro:2,funded:1,us:13,un:1,foreign:1,states:[{st:'California',n:89},{st:'District Of Columbia',n:2},{st:'Washington',n:2}]},
+  'University of South Carolina School of Law':{g:202,lf:{solo:1,s10:35,s25:12,s50:8,s100:11,s250:7,s500:10,big:16,t:100},cl:{fed:4,sl:35,tri:0,intl:0,t:39},gov:23,pi:14,biz:9,edu:3,jda:10,pro:1,funded:0,us:9,un:0,foreign:1,states:[{st:'South Carolina',n:143},{st:'North Carolina',n:13},{st:'Georgia',n:9}]},
+  'University of South Dakota School of Law':{g:75,lf:{solo:0,s10:19,s25:7,s50:5,s100:0,s250:0,s500:0,big:1,t:32},cl:{fed:7,sl:12,tri:0,intl:0,t:19},gov:10,pi:5,biz:2,edu:0,jda:4,pro:0,funded:0,us:4,un:0,foreign:0,states:[{st:'South Dakota',n:46},{st:'Iowa',n:4},{st:'Colorado',n:3}]},
+  'University of St. Thomas School of Law':{g:159,lf:{solo:0,s10:28,s25:16,s50:11,s100:5,s250:3,s500:6,big:4,t:73},cl:{fed:0,sl:35,tri:0,intl:0,t:35},gov:7,pi:16,biz:13,edu:5,jda:14,pro:2,funded:6,us:8,un:0,foreign:1,states:[{st:'Minnesota',n:127},{st:'Wisconsin',n:5},{st:'Colorado',n:3}]},
+  'University of Tennessee College of Law':{g:127,lf:{solo:2,s10:34,s25:11,s50:13,s100:6,s250:4,s500:4,big:13,t:87},cl:{fed:3,sl:4,tri:0,intl:0,t:7},gov:8,pi:10,biz:8,edu:3,jda:4,pro:4,funded:1,us:3,un:1,foreign:0,states:[{st:'Tennessee',n:95},{st:'North Carolina',n:6},{st:'Georgia',n:4}]},
+  'University of Texas School of Law':{g:412,lf:{solo:0,s10:14,s25:15,s50:13,s100:9,s250:10,s500:20,big:175,t:256},cl:{fed:50,sl:15,tri:0,intl:0,t:65},gov:32,pi:33,biz:15,edu:3,jda:13,pro:1,funded:5,us:4,un:0,foreign:1,states:[{st:'Texas',n:290},{st:'New York',n:30},{st:'District Of Columbia',n:24}]},
+  'University of Toledo College of Law':{g:125,lf:{solo:2,s10:29,s25:10,s50:5,s100:10,s250:2,s500:4,big:0,t:62},cl:{fed:4,sl:0,tri:0,intl:0,t:4},gov:18,pi:14,biz:9,edu:1,jda:14,pro:4,funded:0,us:14,un:1,foreign:0,states:[{st:'Ohio',n:49},{st:'Michigan',n:32},{st:'New York',n:5}]},
+  'University of Tulsa College of Law':{g:124,lf:{solo:3,s10:44,s25:15,s50:5,s100:4,s250:4,s500:1,big:1,t:77},cl:{fed:2,sl:0,tri:0,intl:0,t:2},gov:17,pi:10,biz:5,edu:1,jda:10,pro:0,funded:0,us:6,un:1,foreign:1,states:[{st:'Oklahoma',n:81},{st:'Texas',n:20},{st:'Illinois',n:2}]},
+  'University of Utah S.J. Quinney College of Law':{g:95,lf:{solo:0,s10:18,s25:11,s50:2,s100:9,s250:4,s500:4,big:8,t:56},cl:{fed:2,sl:10,tri:0,intl:1,t:13},gov:6,pi:8,biz:1,edu:5,jda:3,pro:0,funded:2,us:4,un:1,foreign:0,states:[{st:'Utah',n:75},{st:'Florida',n:3},{st:'Alaska',n:2}]},
+  'University of Virginia School of Law':{g:299,lf:{solo:0,s10:2,s25:3,s50:3,s100:5,s250:4,s500:11,big:180,t:208},cl:{fed:45,sl:4,tri:0,intl:0,t:49},gov:19,pi:17,biz:2,edu:0,jda:2,pro:0,funded:10,us:2,un:0,foreign:0,states:[{st:'New York',n:86},{st:'District Of Columbia',n:83},{st:'Virginia',n:23}]},
+  'University of Washington School of Law':{g:171,lf:{solo:0,s10:15,s25:8,s50:13,s100:9,s250:5,s500:5,big:27,t:82},cl:{fed:5,sl:14,tri:0,intl:0,t:19},gov:24,pi:20,biz:10,edu:2,jda:12,pro:1,funded:2,us:11,un:0,foreign:1,states:[{st:'Washington',n:122},{st:'California',n:12},{st:'District Of Columbia',n:5}]},
+  'University of Wisconsin Law School':{g:263,lf:{solo:2,s10:43,s25:23,s50:7,s100:12,s250:15,s500:8,big:33,t:143},cl:{fed:8,sl:7,tri:0,intl:0,t:15},gov:44,pi:31,biz:11,edu:12,jda:13,pro:2,funded:8,us:4,un:0,foreign:1,states:[{st:'Wisconsin',n:148},{st:'Illinois',n:32},{st:'District Of Columbia',n:14}]},
+  'University of Wyoming College of Law':{g:86,lf:{solo:0,s10:16,s25:11,s50:2,s100:2,s250:5,s500:1,big:1,t:38},cl:{fed:1,sl:3,tri:0,intl:0,t:4},gov:16,pi:13,biz:3,edu:1,jda:6,pro:2,funded:1,us:8,un:0,foreign:0,states:[{st:'Wyoming',n:25},{st:'Colorado',n:20},{st:'Alaska',n:3}]},
+  'University of the District of Columbia David A. Clarke School of Law':{g:63,lf:{solo:2,s10:6,s25:0,s50:0,s100:3,s250:1,s500:0,big:1,t:13},cl:{fed:0,sl:5,tri:0,intl:0,t:5},gov:16,pi:17,biz:4,edu:0,jda:13,pro:3,funded:4,us:4,un:1,foreign:0,states:[{st:'District Of Columbia',n:24},{st:'Maryland',n:10},{st:'Virginia',n:10}]},
+  'University of the Pacific McGeorge School of Law':{g:146,lf:{solo:3,s10:29,s25:21,s50:15,s100:9,s250:3,s500:0,big:8,t:88},cl:{fed:0,sl:0,tri:0,intl:0,t:0},gov:19,pi:18,biz:3,edu:0,jda:13,pro:2,funded:0,us:14,un:1,foreign:1,states:[{st:'California',n:122},{st:'District Of Columbia',n:2},{st:'Florida',n:1}]},
+  'Vanderbilt University Law School':{g:166,lf:{solo:0,s10:6,s25:4,s50:8,s100:2,s250:9,s500:10,big:79,t:118},cl:{fed:15,sl:4,tri:0,intl:0,t:19},gov:9,pi:10,biz:4,edu:3,jda:4,pro:1,funded:5,us:1,un:0,foreign:1,states:[{st:'Tennessee',n:38},{st:'New York',n:35},{st:'Texas',n:24}]},
+  'Vermont Law School':{g:146,lf:{solo:1,s10:11,s25:5,s50:3,s100:2,s250:2,s500:2,big:2,t:28},cl:{fed:3,sl:33,tri:0,intl:0,t:36},gov:21,pi:28,biz:13,edu:3,jda:25,pro:3,funded:1,us:10,un:1,foreign:0,states:[{st:'Vermont',n:18},{st:'Maryland',n:11},{st:'New York',n:11}]},
+  'Villanova University Widger School of Law':{g:214,lf:{solo:0,s10:10,s25:14,s50:22,s100:5,s250:18,s500:8,big:43,t:120},cl:{fed:4,sl:23,tri:0,intl:0,t:27},gov:22,pi:10,biz:19,edu:1,jda:13,pro:1,funded:0,us:9,un:1,foreign:1,states:[{st:'Pennsylvania',n:111},{st:'New York',n:21},{st:'New Jersey',n:20}]},
+  'Wake Forest University School of Law':{g:155,lf:{solo:0,s10:19,s25:9,s50:5,s100:11,s250:13,s500:9,big:38,t:104},cl:{fed:3,sl:8,tri:0,intl:0,t:11},gov:18,pi:3,biz:15,edu:0,jda:12,pro:0,funded:0,us:2,un:0,foreign:0,states:[{st:'North Carolina',n:71},{st:'Florida',n:15},{st:'Virginia',n:10}]},
+  'Washburn University School of Law':{g:95,lf:{solo:0,s10:19,s25:5,s50:6,s100:7,s250:0,s500:2,big:2,t:41},cl:{fed:1,sl:5,tri:0,intl:0,t:6},gov:18,pi:16,biz:9,edu:2,jda:8,pro:2,funded:0,us:2,un:1,foreign:0,states:[{st:'Kansas',n:67},{st:'Missouri',n:8},{st:'Colorado',n:4}]},
+  'Washington University in St. Louis School of Law':{g:285,lf:{solo:1,s10:6,s25:9,s50:5,s100:10,s250:20,s500:19,big:112,t:182},cl:{fed:27,sl:11,tri:0,intl:0,t:38},gov:22,pi:24,biz:10,edu:5,jda:5,pro:0,funded:5,us:0,un:1,foreign:2,states:[{st:'Illinois',n:51},{st:'Missouri',n:51},{st:'New York',n:36}]},
+  'Washington and Lee University School of Law':{g:141,lf:{solo:0,s10:6,s25:7,s50:4,s100:8,s250:12,s500:12,big:30,t:79},cl:{fed:7,sl:12,tri:0,intl:1,t:20},gov:15,pi:14,biz:4,edu:1,jda:5,pro:1,funded:0,us:2,un:1,foreign:1,states:[{st:'Virginia',n:35},{st:'District Of Columbia',n:18},{st:'New York',n:15}]},
+  'Wayne State University Law School':{g:138,lf:{solo:2,s10:31,s25:14,s50:3,s100:9,s250:10,s500:5,big:7,t:81},cl:{fed:6,sl:1,tri:0,intl:0,t:7},gov:12,pi:14,biz:10,edu:8,jda:15,pro:0,funded:1,us:2,un:0,foreign:0,states:[{st:'Michigan',n:122},{st:'California',n:3},{st:'Florida',n:1}]},
+  'West Virginia University College of Law':{g:107,lf:{solo:3,s10:19,s25:9,s50:5,s100:3,s250:4,s500:9,big:3,t:55},cl:{fed:7,sl:3,tri:0,intl:0,t:10},gov:9,pi:13,biz:6,edu:2,jda:6,pro:0,funded:2,us:7,un:1,foreign:0,states:[{st:'West Virginia',n:63},{st:'Pennsylvania',n:8},{st:'Florida',n:4}]},
+  'Western New England University School of Law':{g:110,lf:{solo:2,s10:23,s25:10,s50:8,s100:1,s250:1,s500:0,big:0,t:45},cl:{fed:1,sl:3,tri:0,intl:0,t:4},gov:15,pi:19,biz:13,edu:4,jda:9,pro:10,funded:1,us:5,un:1,foreign:1,states:[{st:'Massachusetts',n:63},{st:'Connecticut',n:21},{st:'New York',n:5}]},
+  'Widener University Commonwealth Law School':{g:97,lf:{solo:0,s10:16,s25:7,s50:3,s100:4,s250:6,s500:0,big:0,t:36},cl:{fed:0,sl:7,tri:0,intl:0,t:7},gov:22,pi:11,biz:5,edu:1,jda:10,pro:5,funded:0,us:12,un:0,foreign:0,states:[{st:'Pennsylvania',n:63},{st:'New York',n:5},{st:'District Of Columbia',n:3}]},
+  'Widener University Delaware Law School':{g:196,lf:{solo:0,s10:35,s25:13,s50:7,s100:5,s250:15,s500:2,big:5,t:82},cl:{fed:0,sl:58,tri:0,intl:0,t:58},gov:18,pi:7,biz:16,edu:2,jda:9,pro:10,funded:0,us:11,un:0,foreign:0,states:[{st:'Pennsylvania',n:72},{st:'Delaware',n:45},{st:'New Jersey',n:44}]},
+  'Willamette University College of Law':{g:112,lf:{solo:3,s10:39,s25:4,s50:4,s100:1,s250:2,s500:1,big:0,t:54},cl:{fed:1,sl:7,tri:0,intl:0,t:8},gov:13,pi:11,biz:6,edu:1,jda:10,pro:1,funded:0,us:16,un:0,foreign:1,states:[{st:'Oregon',n:62},{st:'Washington',n:13},{st:'California',n:4}]},
+  'William & Mary Law School':{g:170,lf:{solo:1,s10:19,s25:10,s50:4,s100:6,s250:11,s500:4,big:31,t:86},cl:{fed:6,sl:18,tri:0,intl:0,t:24},gov:25,pi:15,biz:7,edu:1,jda:7,pro:1,funded:0,us:4,un:0,foreign:1,states:[{st:'Virginia',n:55},{st:'District Of Columbia',n:27},{st:'New York',n:17}]},
+  'Yale Law School':{g:215,lf:{solo:0,s10:2,s25:1,s50:2,s100:4,s250:3,s500:8,big:66,t:86},cl:{fed:56,sl:4,tri:0,intl:2,t:62},gov:8,pi:34,biz:11,edu:4,jda:12,pro:2,funded:17,us:1,un:1,foreign:4,states:[{st:'New York',n:68},{st:'District Of Columbia',n:44},{st:'California',n:21}]}
+};
+
+// ─── PERCENTAGE ENGINE ────────────────────────────────────────────────────────
+// All math derives from raw counts. Denominator = total_graduates.
+// pct() returns a float rounded to 1 decimal place.
+function calcEmp(d) {
+  if (!d || !d.g) return null;
+  const G = d.g;
+  const lf = d.lf, cl = d.cl;
+  const n = v => v || 0;
+  const pct = v => Math.round(n(v) / G * 1000) / 10;
+
+  // Law firm size groupings
+  const lf_solo  = n(lf.solo);
+  const lf_small = n(lf.s10) + n(lf.s25);              // 2–25 attorneys
+  const lf_mid   = n(lf.s50) + n(lf.s100) + n(lf.s250);// 26–250 attorneys
+  const lf_large = n(lf.s500);                          // 251–500 attorneys
+  const lf_big   = n(lf.big);                           // 501+ attorneys (BigLaw)
+  const lf_total = n(lf.t);
+
+  // Clerkship types
+  const cl_fed   = n(cl.fed);
+  const cl_sl    = n(cl.sl);
+  const cl_total = n(cl.t);
+
+  // Key metrics
+  const biglaw      = lf_large + lf_big;
+  const bar_req     = lf_total + cl_total + n(d.gov) + n(d.pi);
+  const ftlt_emp    = lf_total + cl_total + n(d.gov) + n(d.pi) + n(d.biz) + n(d.edu);
+  const full_emp    = ftlt_emp + n(d.jda) + n(d.pro);  // all employed
+
+  return {
+    G,
+    // headline metrics
+    ftlt_pct:         pct(ftlt_emp),
+    bar_req_pct:      pct(bar_req),
+    biglaw_pct:       pct(biglaw),
+    fed_clerk_pct:    pct(cl_fed),
+    all_clerk_pct:    pct(cl_total),
+    govt_pct:         pct(d.gov),
+    pi_pct:           pct(d.pi),
+    biz_pct:          pct(d.biz),
+    edu_pct:          pct(d.edu),
+    jda_pct:          pct(d.jda),
+    unemp_seek_pct:   pct(d.us),
+    unemp_nosk_pct:   pct(d.un),
+    lf_total_pct:     pct(lf_total),
+    // firm breakdown percents (of total grads)
+    lf_solo_pct:      pct(lf_solo),
+    lf_small_pct:     pct(lf_small),
+    lf_mid_pct:       pct(lf_mid),
+    lf_large_pct:     pct(lf_large),
+    lf_big_pct:       pct(lf_big),
+    // clerkship breakdown
+    cl_fed_pct:       pct(cl_fed),
+    cl_sl_pct:        pct(cl_sl),
+    // raw counts for stacked bar
+    raw: { solo:lf_solo, small:lf_small, mid:lf_mid, large:lf_large, big:lf_big, lf_total,
+           gov:n(d.gov), pi:n(d.pi), biz:n(d.biz), edu:n(d.edu),
+           cl_fed, cl_sl, bar_req, ftlt_emp,
+           us:n(d.us), un:n(d.un), funded:n(d.funded), foreign:n(d.foreign) },
+    states: d.states || []
+  };
+}
+
+// ─── EMPLOYMENT SIDEBAR RENDERER ─────────────────────────────────────────────
+function populateEmployment(schoolName) {
+  const d = EMP_RAW[schoolName];
+  const m = d ? calcEmp(d) : null;
+
+  // ── helpers ──────────────────────────────────────────────────────────────
+  const el = id => document.getElementById(id);
+  const pf = v => (v != null ? v.toFixed(1) + '%' : '—');
+  const ct = (v, total) => v > 0 ? `${v} graduates (${pf(Math.round(v/total*1000)/10)})` : '—';
+
+  if (!m) {
+    el('emp-headline-score').textContent  = '—';
+    el('emp-headline-label').textContent  = 'No employment data';
+    el('emp-headline-sub').textContent    = '';
+    el('emp-score-fill').style.width      = '0%';
+    ['emp-bar-req','emp-biglaw','emp-fed-clerk','emp-all-clerk',
+     'emp-govt','emp-pi','emp-biz','emp-jda',
+     'emp-unemp-seek','emp-lf-total',
+     'emp-lf-solo','emp-lf-small','emp-lf-mid','emp-lf-large','emp-lf-big'].forEach(id => {
+      el(id).textContent = '—';
+    });
+    el('emp-firm-bar').innerHTML    = '';
+    el('emp-dest-bar').innerHTML    = '';
+    el('emp-dest-legend').innerHTML = '';
+    el('emp-states-list').innerHTML = '<span style="color:var(--muted);font-size:0.8rem">No data</span>';
+    return;
+  }
+
+  const r = m.raw;
+
+  // ── Score block (headline = FTLT employed rate) ───────────────────────────
+  const score = m.ftlt_pct;
+  el('emp-headline-score').textContent = score.toFixed(1) + '%';
+  el('emp-headline-score').className   = 'emp-headline-score '
+    + (score >= 80 ? 'score-great' : score >= 60 ? 'score-ok' : 'score-low');
+  el('emp-headline-label').textContent  = 'Full-Time, Long-Term Employed';
+  el('emp-headline-sub').textContent    = `${r.ftlt_emp} of ${m.G} graduates · Class of 2024`;
+  el('emp-score-fill').style.width      = Math.min(score, 100) + '%';
+  el('emp-score-fill').style.background = score >= 80
+    ? 'linear-gradient(90deg,#22c55e,#15803d)'
+    : score >= 60 ? 'linear-gradient(90deg,#f59e0b,#b45309)'
+                  : 'linear-gradient(90deg,#ef4444,#b91c1c)';
+
+  // ── Key metrics rows ──────────────────────────────────────────────────────
+  el('emp-bar-req').textContent    = pf(m.bar_req_pct);
+  el('emp-biglaw').textContent     = pf(m.biglaw_pct);
+  el('emp-fed-clerk').textContent  = pf(m.fed_clerk_pct);
+  el('emp-all-clerk').textContent  = pf(m.all_clerk_pct);
+  el('emp-govt').textContent       = pf(m.govt_pct);
+  el('emp-pi').textContent         = pf(m.pi_pct);
+  el('emp-biz').textContent        = pf(m.biz_pct);
+  el('emp-jda').textContent        = pf(m.jda_pct);
+  el('emp-unemp-seek').textContent = pf(m.unemp_seek_pct);
+  el('emp-lf-total').textContent   = pf(m.lf_total_pct);
+
+  // ── Law firm size rows ────────────────────────────────────────────────────
+  el('emp-lf-solo').textContent    = pf(m.lf_solo_pct);
+  el('emp-lf-small').textContent   = pf(m.lf_small_pct);
+  el('emp-lf-mid').textContent     = pf(m.lf_mid_pct);
+  el('emp-lf-large').textContent   = pf(m.lf_large_pct);
+  el('emp-lf-big').textContent     = pf(m.lf_big_pct);
+
+  // ── Destination stacked bar (where did graduates go?) ────────────────────
+  const destBar    = el('emp-dest-bar');
+  const destLegend = el('emp-dest-legend');
+  destBar.innerHTML = destLegend.innerHTML = '';
+
+  const segments = [
+    { label:'BigLaw',          count: r.big + r.large,             color:'#22c55e' },
+    { label:'Other Law Firms', count: r.solo + r.small + r.mid,    color:'#3b82f6' },
+    { label:'Clerkships',      count: r.cl_fed + r.cl_sl,          color:'#8b5cf6' },
+    { label:'Government',      count: r.gov,                        color:'#f59e0b' },
+    { label:'Public Interest', count: r.pi,                         color:'#ec4899' },
+    { label:'Business',        count: r.biz,                        color:'#06b6d4' },
+    { label:'Education',       count: r.edu,                        color:'#64748b' },
+  ];
+
+  segments.forEach(seg => {
+    if (!seg.count) return;
+    const w = (seg.count / m.G * 100).toFixed(1);
+    const span = document.createElement('span');
+    span.style.cssText = `width:${w}%;background:${seg.color};height:100%;display:block;float:left;`;
+    span.title = `${seg.label}: ${seg.count} (${w}%)`;
+    destBar.appendChild(span);
+
+    const key = document.createElement('div');
+    key.className = 'emp-legend-item';
+    key.innerHTML = `<span class="emp-legend-dot" style="background:${seg.color}"></span>
+      <span class="emp-legend-label">${seg.label}</span>
+      <span class="emp-legend-val">${w}%</span>`;
+    destLegend.appendChild(key);
+  });
+
+  // ── Law firm stacked bar (within firms only) ──────────────────────────────
+  const firmBar = el('emp-firm-bar');
+  firmBar.innerHTML = '';
+  if (r.lf_total > 0) {
+    const firmSegs = [
+      { label:'Solo',    count:r.solo,  color:'#64748b' },
+      { label:'2–25',    count:r.small, color:'#3b82f6' },
+      { label:'26–250',  count:r.mid,   color:'#0f5132' },
+      { label:'251–500', count:r.large, color:'#1a7a50' },
+      { label:'BigLaw',  count:r.big,   color:'#22c55e' },
+    ];
+    firmSegs.forEach(seg => {
+      if (!seg.count) return;
+      const w = (seg.count / r.lf_total * 100).toFixed(1);
+      const span = document.createElement('span');
+      span.style.cssText = `width:${w}%;background:${seg.color};height:100%;display:block;float:left;`;
+      span.title = `${seg.label}: ${seg.count} (${w}% of law firm hires)`;
+      firmBar.appendChild(span);
+    });
+  }
+
+  // ── Top employer states ───────────────────────────────────────────────────
+  const statesList = el('emp-states-list');
+  statesList.innerHTML = '';
+  if (m.states && m.states.length > 0) {
+    m.states.forEach((s,i) => {
+      if (!s.st || !s.n) return;
+      const pctVal = (s.n / m.G * 100).toFixed(0);
+      const div = document.createElement('div');
+      div.className = 'emp-state-row';
+      div.innerHTML =
+        `<span class="emp-state-rank">#${i+1}</span>` +
+        `<span class="emp-state-name">${s.st}</span>` +
+        `<div class="emp-state-bar-wrap"><div class="emp-state-bar-fill" style="width:${pctVal}%;background:var(--em-mid)"></div></div>` +
+        `<span class="emp-state-val">${s.n}</span>`;
+      statesList.appendChild(div);
+    });
+    if (r.foreign > 0) {
+      const div = document.createElement('div');
+      div.className = 'emp-state-row';
+      div.innerHTML =
+        `<span class="emp-state-rank">🌐</span>` +
+        `<span class="emp-state-name">Foreign Countries</span>` +
+        `<div class="emp-state-bar-wrap"><div class="emp-state-bar-fill" style="width:${(r.foreign/m.G*100).toFixed(0)}%;background:var(--muted)"></div></div>` +
+        `<span class="emp-state-val">${r.foreign}</span>`;
+      statesList.appendChild(div);
+    }
+  } else {
+    statesList.innerHTML = '<span style="color:var(--muted);font-size:0.8rem">No data</span>';
+  }
+}
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 document.getElementById('count-label').textContent = `${lawSchools.length} schools`;

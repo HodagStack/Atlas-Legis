@@ -2,29 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Atlas Legis | Law School Employment Outcomes, LSAT Medians & Admissions Analytics</title>
-
-<meta name="description" content="Atlas Legis is an interactive law school analytics platform featuring employment outcomes, BigLaw and federal clerkship rates, LSAT and GPA medians, and personalized admissions positioning tools." />
-
-<link rel="canonical" href="https://atlaslegis.com/" />
-
-<!-- Open Graph (for social sharing) -->
-<meta property="og:title" content="Atlas Legis | Law School Employment, Medians & Admissions Analytics" />
-<meta property="og:description" content="Explore law school employment outcomes, LSAT and GPA medians, BigLaw placement, clerkships, and see where you stand in admissions." />
-<meta property="og:url" content="https://atlaslegis.com/" />
-<meta property="og:type" content="website" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Atlas Legis | Law School Analytics Platform" />
-<meta name="twitter:description" content="Compare law school employment data, medians, and admissions positioning tools." />
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas-Legis — Law School Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -546,6 +528,26 @@
     #tier-legend { display:block; }
     #tier-legend.hidden { display:none; }
     .legend-divider { border:none; border-top:1px solid rgba(26,122,80,0.12); margin:9px 0; }
+
+    /* ── Legend nav links (Methodology / Sources) ── */
+    .legend-nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px solid rgba(26,122,80,0.1);
+    }
+    .legend-nav-link {
+      font-size: 0.63rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+      transition: opacity 0.15s ease, color 0.15s ease;
+    }
+    .legend-nav-link:hover { opacity: 1; color: var(--em-deep); }
+    .legend-nav-sep { font-size: 0.6rem; color: var(--muted); opacity: 0.5; }
 
     /* ── SEARCH DROPDOWN ── */
     #search-results {
@@ -1335,8 +1337,7 @@
     /* ══════════════════════════════════════════════
        MOBILE — essentials
        ══════════════════════════════════════════════ */
-    /* mob-nav-btn: mobile-only Methodology/Sources icons — hidden on desktop */
-    .mob-nav-btn { display: none; }
+    /* mob-nav-btn removed — nav links now live in legend */
 
     @media (max-width: 768px) {
 
@@ -1356,7 +1357,6 @@
         margin-left: auto;
       }
       /* Show mobile nav icons, hide desktop nav links */
-      .mob-nav-btn { display: flex; }
       .header-right a.hdr-btn { display: none; }
       /* Icon-only buttons */
       .hdr-btn-label { display: none; }
@@ -1435,9 +1435,9 @@
         margin: 0 auto 14px;
       }
 
-      /* ── Legend ── */
+      /* ── Legend: hide entirely when school panel is open ── */
       .legend { bottom: 16px; left: 10px; padding: 10px 13px; }
-      body.sidebar-open .legend { bottom: calc(68vh + 10px); }
+      body.sidebar-open #map-legend { display: none; }
 
       /* ── Markers: larger tap targets ── */
       .school-marker { width: 16px; height: 16px; }
@@ -1453,7 +1453,7 @@
         max-height: 55vh;
       }
       #sidebar.open { transform: translateY(0); }
-      body.sidebar-open .legend { bottom: calc(55vh + 10px); }
+      body.sidebar-open #map-legend { display: none; }
       /* Tighter header in landscape */
       header { padding: 6px 14px 6px; }
     }
@@ -1462,7 +1462,7 @@
 <body>
 
 <header>
-  <div class="logo">Atlas Legis <span>Law School Atlas</span></div>
+  <div class="logo">Atlas-Legis <span>Law School Atlas</span></div>
 
   <div class="header-center">
     <!-- Where Do I Stand button -->
@@ -1476,24 +1476,10 @@
       <span class="hdr-btn-label">Filters</span>
       <span id="filter-count-badge"></span>
     </button>
-    <!-- Mobile-only: Methodology + Sources icon links -->
-    <a class="hdr-btn mob-nav-btn" href="methodology.html" aria-label="Methodology" style="text-decoration:none">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-    </a>
-    <a class="hdr-btn mob-nav-btn" href="sources.html" aria-label="Sources" style="text-decoration:none">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M2 12c0 2.2 4.5 4 10 4s10-1.8 10-4"/><path d="M2 12v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6"/></svg>
-    </a>
+
   </div>
 
   <div class="header-right">
-    <a class="hdr-btn" href="methodology.html" style="text-decoration:none">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      Methodology
-    </a>
-    <a class="hdr-btn" href="sources.html" style="text-decoration:none">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M2 12c0 2.2 4.5 4 10 4s10-1.8 10-4"/><path d="M2 12v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6"/></svg>
-      Sources
-    </a>
     <span class="school-count" id="count-label"></span>
     <input type="text" id="search-input" placeholder="Search name, city, or state…" autocomplete="off" />
   </div>
@@ -1816,7 +1802,7 @@
 </div>
 
 <!-- LEGEND -->
-<div class="legend">
+<div class="legend" id="map-legend">
   <div id="tier-legend">
     <div class="legend-title">Ranking Tier</div>
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#22a86a,#0f5132)"></div> T14</div>
@@ -1831,6 +1817,11 @@
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#f59e0b,#b45309)"></div> Target</div>
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#ef4444,#b91c1c)"></div> Reach</div>
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#7f1d1d,#450a0a)"></div> High Reach</div>
+  </div>
+  <div class="legend-nav">
+    <a href="methodology.html" class="legend-nav-link">Methodology</a>
+    <span class="legend-nav-sep">·</span>
+    <a href="sources.html" class="legend-nav-link">Sources</a>
   </div>
 </div>
 
@@ -2251,6 +2242,60 @@ document.getElementById('close-btn').addEventListener('click', () => {
   document.body.classList.remove('sidebar-open');
   if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
 });
+
+// ─── DRAG-TO-DISMISS (mobile bottom sheet) ────────────────────────────────────
+(function() {
+  let dragStartY   = null;
+  let dragCurrentY = null;
+  let isDragging   = false;
+  const DISMISS_THRESHOLD = 80; // px downward to trigger dismiss
+
+  const header = sidebar.querySelector('.sidebar-header');
+
+  function onTouchStart(e) {
+    if (window.innerWidth > 768) return;
+    dragStartY   = e.touches[0].clientY;
+    dragCurrentY = dragStartY;
+    isDragging   = true;
+    sidebar.style.transition = 'none'; // disable animation while dragging
+  }
+
+  function onTouchMove(e) {
+    if (!isDragging) return;
+    dragCurrentY = e.touches[0].clientY;
+    const delta  = dragCurrentY - dragStartY;
+    if (delta > 0) {
+      // Only allow dragging downward
+      sidebar.style.transform = `translateY(${delta}px)`;
+    }
+  }
+
+  function onTouchEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    sidebar.style.transition = ''; // restore animation
+    const delta = dragCurrentY - dragStartY;
+    if (delta > DISMISS_THRESHOLD) {
+      // Dismissed — same as clicking ✕
+      sidebar.style.transform = '';
+      sidebar.classList.remove('open');
+      document.body.classList.remove('sidebar-open');
+      if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
+      window.history.pushState({}, '', window.location.pathname);
+      document.getElementById('seo-content').innerHTML = '';
+    } else {
+      // Snap back
+      sidebar.style.transform = '';
+    }
+    dragStartY   = null;
+    dragCurrentY = null;
+  }
+
+  // Attach to the drag-handle header area
+  header.addEventListener('touchstart', onTouchStart, { passive: true });
+  header.addEventListener('touchmove',  onTouchMove,  { passive: true });
+  header.addEventListener('touchend',   onTouchEnd);
+})();
 
 // ─── TOOLTIP ─────────────────────────────────────────────────────────────────
 const tooltip = document.getElementById('map-tooltip');
@@ -3371,7 +3416,7 @@ function renderSEOContent(s) {
     <p>Full-Time Annual Tuition: ${s.tuition ? '$' + Number(s.tuition).toLocaleString() : 'N/A'}</p>
     <p>Median Grant: ${s.grantP50 ? '$' + Number(s.grantP50).toLocaleString() : 'N/A'}</p>
     ${empHtml}
-    <p><a href="/?school=${s.slug}">${s.name} profile on Atlas Legis</a></p>
+    <p><a href="/?school=${s.slug}">${s.name} profile on Atlas-Legis</a></p>
   `;
 }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atlas-Legis — Law School Map</title>
+  <title>Atlas Legis — Law School Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -1462,7 +1462,7 @@
 <body>
 
 <header>
-  <div class="logo">Atlas-Legis <span>Law School Atlas</span></div>
+  <div class="logo">Atlas Legis <span>Law School Atlas</span></div>
 
   <div class="header-center">
     <!-- Where Do I Stand button -->
@@ -1819,6 +1819,8 @@
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#7f1d1d,#450a0a)"></div> High Reach</div>
   </div>
   <div class="legend-nav">
+    <a href="about.html" class="legend-nav-link">About</a>
+    <span class="legend-nav-sep">·</span>
     <a href="methodology.html" class="legend-nav-link">Methodology</a>
     <span class="legend-nav-sep">·</span>
     <a href="sources.html" class="legend-nav-link">Sources</a>
@@ -3416,7 +3418,7 @@ function renderSEOContent(s) {
     <p>Full-Time Annual Tuition: ${s.tuition ? '$' + Number(s.tuition).toLocaleString() : 'N/A'}</p>
     <p>Median Grant: ${s.grantP50 ? '$' + Number(s.grantP50).toLocaleString() : 'N/A'}</p>
     ${empHtml}
-    <p><a href="/?school=${s.slug}">${s.name} profile on Atlas-Legis</a></p>
+    <p><a href="/?school=${s.slug}">${s.name} profile on Atlas Legis</a></p>
   `;
 }
 

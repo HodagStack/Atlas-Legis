@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Atlas Legis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --em:       #1a7a50;
+      --em-deep:  #0f5132;
+      --em-mid:   #22a86a;
+      --em-pale:  #d1ece0;
+      --ink:      #0e2018;
+      --ink-soft: #2d4a38;
+      --muted:    #6b8c78;
+      --soft:     #f0f7f3;
+      --border:   rgba(26,122,80,0.12);
+      --shadow:   rgba(14,32,24,0.08);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(34,197,94,0.13) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 80%, rgba(16,120,70,0.10) 0%, transparent 45%),
+        linear-gradient(160deg, #eef5f1 0%, #ddeee5 50%, #e8f2ed 100%);
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 0 40px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(22px) saturate(1.5);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 1px 0 rgba(26,122,80,0.08), 0 4px 20px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .logo span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-left: 9px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 9px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(255,255,255,0.5);
+      border: 1px solid rgba(26,122,80,0.12);
+      transition: all 0.2s ease;
+      letter-spacing: 0.01em;
+    }
+    .nav-link:hover {
+      background: rgba(26,122,80,0.07);
+      color: var(--em-deep);
+      border-color: rgba(26,122,80,0.22);
+    }
+    .nav-link.active {
+      background: rgba(26,122,80,0.08);
+      color: var(--em-deep);
+      border-color: rgba(26,122,80,0.22);
+      font-weight: 600;
+    }
+
+    /* ── PAGE ── */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    /* ── HERO ── */
+    .hero { margin-bottom: 52px; }
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--em);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .hero-lead {
+      font-size: 1.08rem;
+      color: var(--ink-soft);
+      line-height: 1.72;
+      font-weight: 300;
+    }
+
+    /* ── PROSE ── */
+    .prose {
+      font-size: 0.97rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .prose p { margin-bottom: 20px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 600; color: var(--ink); }
+    .prose a {
+      color: var(--em);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,122,80,0.3);
+      transition: border-color 0.15s;
+    }
+    .prose a:hover { border-color: var(--em); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 44px 0;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--em);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    /* ── CALLOUT CARD ── */
+    .callout {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-left: 3px solid var(--em);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.85);
+    }
+    .callout p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-weight: 300;
+      margin: 0;
+    }
+    .callout p + p { margin-top: 10px; }
+    .callout p strong { font-weight: 600; color: var(--ink); }
+
+    /* ── FEATURE CARDS ── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0 8px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: 0 2px 10px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.85);
+    }
+    .feature-icon {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .feature-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      margin-bottom: 5px;
+      letter-spacing: 0.01em;
+    }
+    .feature-desc {
+      font-size: 0.74rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ══════════════════════════════════════════════
+       MOBILE
+       ══════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px 16px;
+        height: auto;
+        min-height: 56px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .logo span { display: none; }
+      .header-nav { gap: 6px; }
+      .nav-link { padding: 6px 10px; font-size: 0.74rem; }
+      .nav-link svg { display: none; }
+      .page { padding: 36px 16px 64px; }
+      .hero { margin-bottom: 36px; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero-lead { font-size: 0.95rem; }
+      .feature-grid { grid-template-columns: 1fr; gap: 10px; }
+      .divider { margin: 32px 0; }
+      footer { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Atlas Legis <span>Law School Atlas</span></a>
+  <nav class="header-nav">
+    <a class="nav-link" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      Map
+    </a>
+    <a class="nav-link active" href="about.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      About
+    </a>
+    <a class="nav-link" href="methodology.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Methodology
+    </a>
+    <a class="nav-link" href="sources.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M2 12c0 2.2 4.5 4 10 4s10-1.8 10-4"/><path d="M2 12v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6"/></svg>
+      Sources
+    </a>
+  </nav>
+</header>
+
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-eyebrow">The Project</div>
+    <h1>What is Atlas Legis?</h1>
+    <p class="hero-lead">Atlas Legis is a free tool for anyone thinking seriously about law school. It puts every meaningful number — admissions stats, tuition, scholarships, employment outcomes — on one map, for all 194 ABA-accredited schools.</p>
+  </div>
+
+  <div class="section-label">Why I built it</div>
+  <div class="prose">
+    <p>When I started looking into law schools, I kept running into the same frustration: the information was everywhere and nowhere at the same time. A school's admissions page might have LSAT medians, but you'd have to dig through a separate ABA disclosure PDF to find out what percentage of graduates actually got jobs requiring a bar card. Employment outcomes were buried. Scholarship data was scattered. Comparing two schools meant bouncing between six tabs.</p>
+
+    <p>I built Atlas Legis because I wanted one place where you could just <em>see</em> it all. Pull up a school, get the full picture — admissions, cost, scholarship ranges, what graduates actually did after they left. No subscriptions, no paywalls, no rankings rankings rankings.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">What's on the map</div>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Admissions Statistics</div>
+      <div class="feature-desc">LSAT and GPA at the 25th, median, and 75th percentile for every school's most recent entering class.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💼</div>
+      <div class="feature-title">Employment Outcomes</div>
+      <div class="feature-desc">Where graduates actually land — BigLaw, federal clerkships, government, public interest, and more.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <div class="feature-title">Cost & Scholarships</div>
+      <div class="feature-desc">Full-time annual tuition plus scholarship grant ranges at the 25th, median, and 75th percentile.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚠️</div>
+      <div class="feature-title">Conditional Scholarship Risk</div>
+      <div class="feature-desc">How many students entered with conditional aid, and how many lost it. A number most schools don't highlight.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">On accuracy</div>
+  <div class="prose">
+    <p>Every data point on Atlas Legis comes directly from official ABA disclosures — the Standard 509 reports each school is required to file annually, and the ABA's employment summary data. Nothing is estimated, inferred, or pulled from a secondary source. If a number shows on this site, there's a public ABA document it came from.</p>
+
+    <p>The data reflects the most recent available cycle. Admissions stats are from the 2025 509 reports, covering the fall 2024 entering class. Employment figures are from the Class of 2024 at ten months post-graduation. I update the site after each annual ABA release.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>One honest caveat:</strong> employment rates on Atlas Legis are calculated using total graduates as the denominator — not just graduates whose status is known. This gives a more conservative, more honest number than what you'll sometimes see elsewhere. A school with a lot of "employment status unknown" graduates shouldn't look artificially better than one that tracked everyone down.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Where Do I Stand?</div>
+  <div class="prose">
+    <p>The "Where Do I Stand?" tool lets you enter your GPA and LSAT and see every school color-coded by how your numbers compare to the class that just enrolled there. Safety, Strong, Target, Reach, High Reach — the categories update the map in real time.</p>
+
+    <p>I want to be upfront about this: <strong>the band thresholds are a judgment call.</strong> There's no universally agreed-upon definition of what makes a school a "reach" vs. a "target." My system is based on how your scores compare to the school's 25th, median, and 75th percentile — if your numbers sit comfortably above the 75th percentile, it's a Safety; if they're well below the 25th, it's a High Reach. The exact cutoffs are mine, and a reasonable person could draw them differently.</p>
+
+    <p>Think of the tool as a starting point for a conversation, not a verdict. It's meant to give you a quick visual read across 194 schools at once — something that would otherwise take hours in a spreadsheet. Use it alongside your own research, talk to current students, and if you can afford it, work with an admissions consultant who knows the schools you're interested in.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">A few things this site is not</div>
+  <div class="prose">
+    <p>Atlas Legis is not affiliated with the ABA, US News, or any law school. It doesn't take advertising, sponsored placements, or affiliate fees. No law school has paid to appear on this map or to have its numbers presented favorably. The data is the same for every school.</p>
+
+    <p>It's also not a substitute for doing your homework. Stats can only tell you so much. A school's culture, clinical programs, location, and alumni network matter — and none of that shows up in an ABA disclosure. Use Atlas Legis to narrow your list and understand the numbers. Then go deeper.</p>
+  </div>
+
+</div>
+
+<footer>
+  Atlas Legis &nbsp;·&nbsp; Built for law school applicants &nbsp;·&nbsp; Data from ABA public disclosures
+</footer>
+
+</body>
+</html>

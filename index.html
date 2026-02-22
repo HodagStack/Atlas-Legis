@@ -358,13 +358,7 @@
     }
     /* Mobile: hide lower-priority terms to keep height fixed */
     @media (max-width: 768px) {
-      #context-strip { padding: 0 14px; gap: 0; }
-      #context-strip .cs-term.cs-hide-mobile { display: none; }
-      #context-strip h2.cs-heading { font-size: 0.64rem; }
-      #context-strip .cs-term { font-size: 0.64rem; }
-    }
-    @media (max-width: 480px) {
-      #context-strip .cs-term.cs-hide-small { display: none; }
+      #context-strip { display: none; }
     }
 
     /* ── LAYOUT ── */
@@ -1688,7 +1682,7 @@
       }
 
       /* ── Legend: hide entirely when school panel is open ── */
-      .legend { bottom: 74px; left: 10px; padding: 10px 13px; } /* ~62px mobile footer + 12px gap */
+      .legend { bottom: 58px; left: 10px; padding: 10px 13px; } /* ~38px single-row mobile footer + 20px gap */
       body.sidebar-open #map-legend { display: none; }
 
       /* ── Markers: larger tap targets ── */
@@ -1765,20 +1759,25 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    /* Mobile footer: compact two-row stack */
+    /* Mobile footer: compact single row + Safari safe-area */
     @media (max-width: 768px) {
       #site-footer {
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 10px 16px;
-        gap: 6px;
+        padding: 8px 16px;
+        /* env() pads above iPhone home indicator; fallback 0px for non-notch */
+        padding-bottom: max(8px, env(safe-area-inset-bottom, 8px));
+        gap: 0;
       }
-      .footer-brand span { display: none; }
+      .footer-brand { display: none; }
       .footer-copy { display: none; }
       #site-footer nav { gap: 2px; }
-      .footer-nav-link { font-size: 0.66rem; padding: 4px 7px; }
+      .footer-nav-link { font-size: 0.72rem; padding: 6px 10px; }
+      /* Hide footer on mobile when sidebar or compare panel is open */
+      body.sidebar-open #site-footer,
+      body.compare-open #site-footer { display: none; }
     }
 
     /* Landscape phones: shorten bottom sheet so map is still visible */
@@ -2658,7 +2657,7 @@ document.getElementById('close-btn').addEventListener('click', () => {
       sidebar.classList.remove('open');
       document.body.classList.remove('sidebar-open');
       if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
-      window.history.pushState({}, '', window.location.pathname);
+      window.history.pushState({}, '', '/');
       document.getElementById('seo-content').innerHTML = '';
     } else {
       // Snap back
@@ -3860,7 +3859,7 @@ function renderSEOContent(s) {
     <p>Full-Time Annual Tuition: ${s.tuition ? '$' + Number(s.tuition).toLocaleString() : 'N/A'}</p>
     <p>Median Grant: ${s.grantP50 ? '$' + Number(s.grantP50).toLocaleString() : 'N/A'}</p>
     ${empHtml}
-    <p><a href="/?school=${s.slug}">${s.name} profile on Atlas Legis</a></p>
+    <p><a href="/school/${s.slug}">${s.name} profile on Atlas Legis</a></p>
   `;
 }
 
@@ -3873,8 +3872,8 @@ window._openSidebarWithURL = function(s, fromURL) {
   _originalOpenSidebar(s);
   renderSEOContent(s);
   if (!fromURL) {
-    // Push URL without reload
-    const newUrl = `${window.location.pathname}?school=${s.slug}`;
+    // Push URL without reload — clean path format
+    const newUrl = `/school/${s.slug}`;
     window.history.pushState({ school: s.slug }, '', newUrl);
   }
 };
@@ -3887,7 +3886,8 @@ window._openSidebarWithURL = function(s, fromURL) {
 
 // Back/Forward navigation
 window.addEventListener('popstate', () => {
-  const slug = new URLSearchParams(window.location.search).get('school');
+  const pathMatch = window.location.pathname.match(/^\/school\/([^/]+)/);
+  const slug = pathMatch ? pathMatch[1] : null;
   if (slug) {
     openSchoolBySlug(slug);
   } else {
@@ -3901,7 +3901,7 @@ window.addEventListener('popstate', () => {
 lawSchools.forEach(s => {
   if (!s._marker) return;
   s._marker.on('click', () => {
-    const newUrl = `${window.location.pathname}?school=${s.slug}`;
+    const newUrl = `/school/${s.slug}`;
     window.history.pushState({ school: s.slug }, '', newUrl);
     renderSEOContent(s);
   });
@@ -3909,14 +3909,15 @@ lawSchools.forEach(s => {
 
 // Also handle close button — clear URL and canonical
 document.getElementById('close-btn').addEventListener('click', () => {
-  window.history.pushState({}, '', window.location.pathname);
+  window.history.pushState({}, '', '/');
   document.getElementById('seo-content').innerHTML = '';
   setCanonical('https://atlaslegis.com/');
 });
 
 // On page load: read URL param and open matching school
 (function initFromURL() {
-  const slug = new URLSearchParams(window.location.search).get('school');
+  const pathMatch = window.location.pathname.match(/^\/school\/([^/]+)/);
+  const slug = pathMatch ? pathMatch[1] : null;
   if (slug) {
     // Use a short delay so Leaflet markers are fully rendered
     setTimeout(() => openSchoolBySlug(slug), 250);
@@ -3938,7 +3939,7 @@ document.getElementById('close-btn').addEventListener('click', () => {
     <span class="footer-nav-sep">·</span>
     <a href="/sources.html" class="footer-nav-link">Sources</a>
   </nav>
-  <span class="footer-copy">© 2026 Atlas Legis</span>
+  <span class="footer-copy">© 2025 Atlas Legis</span>
 </footer>
 </body>
 </html>

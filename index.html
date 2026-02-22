@@ -1347,10 +1347,72 @@
     }
     .cmp-emp-val.highlight { color: var(--green); }
 
-    /* Responsive: stack on small screens */
-    @media (max-width: 680px) {
-      #cmp-cards { flex-direction: column; }
-      #comparison-panel { max-height: 90vh; }
+    /* ── Comparison panel: mobile carousel ── */
+    @media (max-width: 768px) {
+      /* Panel: 75vh bottom sheet with drag handle room */
+      #comparison-panel {
+        max-height: 75vh;
+        border-radius: 20px 20px 0 0;
+      }
+
+      /* Drag handle on the panel header — mirrors the school sidebar handle */
+      .cmp-panel-header::before {
+        content: '';
+        display: block;
+        width: 36px;
+        height: 4px;
+        background: rgba(26,122,80,0.18);
+        border-radius: 2px;
+        margin: 0 auto 12px;
+      }
+      .cmp-panel-header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 16px 12px;
+      }
+      /* Title row sits below the handle */
+      .cmp-panel-header-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* Cards: horizontal carousel — one card ~85vw, next peeks in */
+      #cmp-cards {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 14px 16px 20px;
+        gap: 12px;
+        /* Hide scrollbar visually */
+        scrollbar-width: none;
+      }
+      #cmp-cards::-webkit-scrollbar { display: none; }
+
+      .cmp-card {
+        flex: 0 0 82vw;
+        max-width: 82vw;
+        scroll-snap-align: start;
+      }
+
+      /* Tray: lift above sidebar when sidebar is open */
+      body.sidebar-open #compare-tray {
+        bottom: calc(68vh + 16px);
+      }
+
+      /* Legend: hide when comparison panel is open too */
+      body.compare-open #map-legend { display: none; }
+
+      /* Tray: hide when comparison panel is open (redundant on screen) */
+      body.compare-open #compare-tray { opacity: 0; pointer-events: none; }
+    }
+
+    /* Landscape: keep carousel but shorter panel */
+    @media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+      #comparison-panel { max-height: 80vh; }
+      body.sidebar-open #compare-tray { bottom: calc(55vh + 16px); }
     }
 
     /* ══════════════════════════════════════════════
@@ -1802,11 +1864,13 @@
 <!-- COMPARISON PANEL (slides up) -->
 <div id="comparison-panel">
   <div class="cmp-panel-header">
-    <div class="cmp-panel-title">
-      Side-by-Side Comparison
-      <span>Up to 3 schools</span>
+    <div class="cmp-panel-header-row">
+      <div class="cmp-panel-title">
+        Side-by-Side Comparison
+        <span>Up to 3 schools</span>
+      </div>
+      <button id="cmp-close-btn" title="Close">✕</button>
     </div>
-    <button id="cmp-close-btn" title="Close">✕</button>
   </div>
   <div id="cmp-max-msg">Maximum of 3 schools. Remove one to add another.</div>
   <div id="cmp-cards"></div>
@@ -3202,9 +3266,11 @@ function showMaxMsg() {
 // ── Panel open/close ──────────────────────────────────────────────────────────
 function openComparePanel() {
   document.getElementById('comparison-panel').classList.add('open');
+  document.body.classList.add('compare-open');
 }
 function closeComparePanel() {
   document.getElementById('comparison-panel').classList.remove('open');
+  document.body.classList.remove('compare-open');
 }
 
 // ── Render cards ──────────────────────────────────────────────────────────────
@@ -3371,6 +3437,41 @@ document.getElementById('add-compare-btn').addEventListener('click', () => {
 document.getElementById('tray-open-btn').addEventListener('click', openComparePanel);
 document.getElementById('tray-clear-btn').addEventListener('click', clearCompare);
 document.getElementById('cmp-close-btn').addEventListener('click', closeComparePanel);
+
+// ─── DRAG-TO-DISMISS: Comparison Panel (mobile) ───────────────────────────────
+(function() {
+  const panel   = document.getElementById('comparison-panel');
+  const handle  = panel.querySelector('.cmp-panel-header');
+  const THRESHOLD = 80; // px down to dismiss
+  let startY = null, currentY = null, dragging = false;
+
+  handle.addEventListener('touchstart', e => {
+    if (window.innerWidth > 768) return;
+    startY   = e.touches[0].clientY;
+    currentY = startY;
+    dragging = true;
+    panel.style.transition = 'none';
+  }, { passive: true });
+
+  handle.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    currentY = e.touches[0].clientY;
+    const delta = currentY - startY;
+    if (delta > 0) panel.style.transform = `translateY(${delta}px)`;
+  }, { passive: true });
+
+  handle.addEventListener('touchend', () => {
+    if (!dragging) return;
+    dragging = false;
+    panel.style.transition = '';
+    const delta = currentY - startY;
+    panel.style.transform = '';
+    if (delta > THRESHOLD) {
+      closeComparePanel();
+    }
+    startY = null; currentY = null;
+  });
+})();
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 document.getElementById('count-label').textContent = `${lawSchools.length} schools`;

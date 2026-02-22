@@ -16,6 +16,9 @@ In short, I wanted to create an easily-accessible, in-depth geographic map of U.
 * Custom filters
 * Responsive browser interface
 * Lightweight front-end design
+* Mobile accessibility
+* Employment statistics for all schools
+* Compare-and-contrast feature
 
 ## Purpose
 
@@ -31,14 +34,6 @@ Atlas Legis was developed as an independent legal-tech project to:
 * CSS3
 * JavaScript
 * Mapping libraries
-
-## Future Development
-
-Planned expansions include:
-
-* Compare-and-contrast feature
-* The ability to "star" law schools so the user can come back later
-* Note-taking feature to write down thoughts for later
 
 
 ---

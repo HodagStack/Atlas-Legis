@@ -78,54 +78,141 @@
         inset 0 -1px 0 rgba(255,255,255,0.2);
     }
 
+    /* ══════════════════════════════════════════════════════════════
+       HEADER — Two-layer dashboard structure
+       Layer 1: .header-brand  — brand strip (logo + school count)
+       Layer 2: .header-cmd    — floating command bar (buttons + search)
+       ══════════════════════════════════════════════════════════════ */
+
     /* ── HEADER ── */
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      height: 62px;
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(22px) saturate(1.5);
-      -webkit-backdrop-filter: blur(22px) saturate(1.5);
-      border-bottom: 1px solid rgba(255,255,255,0.5);
-      box-shadow:
-        0 1px 0 rgba(26,122,80,0.1),
-        0 4px 20px var(--shadow),
-        inset 0 1px 0 rgba(255,255,255,0.9);
       flex-shrink: 0;
       z-index: 1000;
-      gap: 12px;
+      position: relative;
+      /* Subtle emerald tint — present but not loud */
+      background: linear-gradient(
+        to bottom,
+        rgba(240,247,243,0.98) 0%,
+        rgba(232,244,238,0.97) 100%
+      );
+      backdrop-filter: blur(12px) saturate(1.2);
+      -webkit-backdrop-filter: blur(12px) saturate(1.2);
+      border-bottom: 1px solid rgba(15,81,50,0.12);
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.75),
+        0 4px 20px rgba(15,81,50,0.06);
+      overflow: hidden;
     }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--em-deep);
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    /* Soft radial glow behind controls */
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 140px;
+      background: radial-gradient(
+        ellipse at center top,
+        rgba(16,120,70,0.09) 0%,
+        rgba(16,120,70,0.04) 40%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 0;
     }
-    .logo span {
-      color: var(--muted);
-      font-weight: 400;
-      font-size: 0.78rem;
-      margin-left: 9px;
+
+    /* ── Single main row ── */
+    .header-main-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── LOGO ── */
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .logo-sub {
       font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: #7a9e8a;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    /* ── Controls pill: search + buttons together ── */
+    .header-controls {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(15,81,50,0.14);
+      border-radius: 14px;
+      padding: 5px 6px;
+      box-shadow:
+        0 2px 8px rgba(15,81,50,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    /* header-center / header-right: layout passthrough */
+    .header-center {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    /* ── SCHOOL COUNT ── */
+    .school-count {
+      font-size: 0.6rem;
+      color: #7a9e8a;
       letter-spacing: 0.14em;
       text-transform: uppercase;
+      white-space: nowrap;
+      font-weight: 500;
+      flex-shrink: 0;
     }
 
-    .header-center { display:flex; align-items:center; gap:8px; flex:1; justify-content:center; }
-    .header-right  { display:flex; align-items:center; gap:10px; }
-
-    .school-count {
-      font-size: 0.73rem;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      white-space: nowrap;
+    /* ── TAGLINE substrip ── */
+    .header-tagline-row {
+      display: flex;
+      justify-content: center;
+      padding: 0 28px 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .header-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: #5a8070;
+      opacity: 0.85;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      text-align: center;
     }
 
     /* ── HEADER BUTTONS ── */
@@ -133,57 +220,61 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 16px;
-      border-radius: 100px;
+      padding: 9px 16px;
+      border-radius: 12px;
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.81rem;
       font-weight: 500;
       cursor: pointer;
-      border: 1px solid rgba(26,122,80,0.2);
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: var(--ink-soft);
-      transition: all 0.22s ease;
+      border: 1px solid rgba(0,0,0,0.09);
+      background: #ffffff;
+      color: #374151;
+      transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease, color 0.18s ease;
       white-space: nowrap;
-      letter-spacing: 0.02em;
-      box-shadow: 0 2px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
+      letter-spacing: 0.01em;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+      flex-shrink: 0;
     }
     .hdr-btn:hover {
-      background: rgba(255,255,255,0.82);
-      border-color: rgba(26,122,80,0.38);
-      color: var(--em-deep);
-      box-shadow: 0 4px 16px var(--em-glow), 0 2px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.9);
+      border-color: rgba(15,81,50,0.35);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.09), 0 1px 3px rgba(0,0,0,0.05);
       transform: translateY(-1px);
+      color: var(--em-deep);
     }
     .hdr-btn.active {
-      background: linear-gradient(145deg, var(--em), var(--em-deep));
+      background: var(--em-deep);
       border-color: transparent;
       color: #fff;
-      box-shadow: 0 4px 20px rgba(16,120,70,0.35), 0 2px 8px var(--shadow);
+      box-shadow: 0 3px 10px rgba(15,81,50,0.3), 0 1px 3px rgba(0,0,0,0.08);
     }
-    .hdr-btn svg { flex-shrink:0; }
+    .hdr-btn.active:hover {
+      background: #0d4529;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(15,81,50,0.35), 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .hdr-btn svg { flex-shrink:0; opacity: 0.6; }
+    .hdr-btn:hover svg { opacity: 0.85; }
+    .hdr-btn.active svg { opacity: 0.95; }
 
+    /* ── SEARCH INPUT — lives inside controls pill ── */
     #search-input {
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(26,122,80,0.2);
-      border-radius: 100px;
-      color: var(--ink);
-      padding: 7px 16px;
-      font-size: 0.84rem;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+      color: #111827;
+      padding: 8px 14px;
+      font-size: 0.85rem;
       font-family: 'DM Sans', sans-serif;
-      width: 220px;
+      flex: 1;
+      min-width: 0;
       outline: none;
-      transition: all 0.22s ease;
-      box-shadow: 0 2px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
+      transition: background 0.18s ease, box-shadow 0.18s ease;
     }
-    #search-input::placeholder { color: var(--muted); }
+    #search-input::placeholder { color: #9caf9e; }
     #search-input:focus {
-      border-color: rgba(26,122,80,0.5);
-      box-shadow: 0 0 0 3px rgba(26,122,80,0.12), 0 2px 8px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.9);
-      background: rgba(255,255,255,0.78);
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 0 2px rgba(15,81,50,0.15);
+      border-radius: 9px;
     }
 
     /* ── LAYOUT ── */
@@ -570,17 +661,14 @@
 
     /* ── SEARCH DROPDOWN ── */
     #search-results {
-      position: absolute;
-      top: 62px;
-      right: 20px;
-      width: 234px;
-      background: rgba(255,255,255,0.88);
+      position: fixed;   /* escapes all overflow:hidden ancestors */
+      /* top/left set dynamically by JS based on input position */
+      background: rgba(255,255,255,0.97);
       backdrop-filter: blur(20px) saturate(1.4);
       -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      border: 1px solid rgba(255,255,255,0.6);
-      border-top: none;
-      border-radius: 0 0 14px 14px;
-      z-index: 2000;
+      border: 1px solid rgba(15,81,50,0.12);
+      border-radius: 12px;
+      z-index: 9999;
       display: none;
       max-height: 280px;
       overflow-y: auto;
@@ -601,7 +689,7 @@
     /* ── WHERE DO I STAND PANEL ── */
     #wdis-panel {
       position: absolute;
-      top: 74px;
+      top: 108px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 900;
@@ -704,7 +792,7 @@
     /* ── FILTER DRAWER ── */
     #filter-drawer {
       position: absolute;
-      top: 62px;
+      top: 98px;
       left: 0;
       right: 0;
       background: rgba(255,255,255,0.82);
@@ -1422,49 +1510,57 @@
 
     @media (max-width: 768px) {
 
-      /* ── Header: two-row layout ── */
-      header {
+      /* ── Header: mobile layout ── */
+      .header-main-row {
         flex-wrap: wrap;
-        height: auto;
-        padding: 10px 14px 8px;
+        padding: 12px 14px 8px;
         gap: 8px;
       }
-      /* Row 1: logo left, icon buttons right */
-      .logo span { display: none; }
-      .header-center {
-        order: 1;
-        flex: none;
-        gap: 6px;
-        margin-left: auto;
-      }
-      /* Show mobile nav icons, hide desktop nav links */
-      .header-right a.hdr-btn { display: none; }
-      /* Icon-only buttons */
-      .hdr-btn-label { display: none; }
-      .hdr-btn { padding: 8px 10px; gap: 0; }
+      /* Row 1: logo left, count right */
+      .logo { flex: 1; }
+      .logo-title { font-size: 1.15rem; }
+      .logo-sub { font-size: 0.58rem; }
+      .school-count { font-size: 0.56rem; }
 
-      /* Row 2: search + count — full width */
-      .header-right {
+      /* Row 2: controls pill full-width */
+      .header-controls {
         order: 2;
         width: 100%;
-        flex: none;
-        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7px;
+        padding: 8px;
+        border-radius: 13px;
       }
-      .school-count { font-size: 0.65rem; white-space: nowrap; }
-      #search-input {
+      .header-right { width: 100%; }
+      .header-center { width: 100%; gap: 7px; }
+
+      /* Buttons: share the row equally */
+      .hdr-btn {
         flex: 1;
-        width: auto;
-        min-width: 0;
+        justify-content: center;
+        padding: 10px 10px;
+        font-size: 0.78rem;
+      }
+      .hdr-btn-label { display: inline; }
+
+      /* Search: full-width inside pill */
+      #search-input {
+        width: 100%;
         font-size: 16px; /* prevents iOS auto-zoom */
+        padding: 10px 14px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 9px;
+      }
+      #search-input:focus {
+        background: rgba(255,255,255,0.95);
       }
 
-      /* ── Search results: full-width ── */
-      #search-results {
-        left: 10px;
-        right: 10px;
-        width: auto;
-        top: auto;
-      }
+      /* Tagline: smaller, still centred */
+      .header-tagline-row { padding: 0 14px 10px; }
+      .header-tagline { font-size: 0.67rem; }
+
+      /* search-results: positioned by JS, no CSS override needed */
 
       /* ── WDIS panel: full-width, top-anchored ── */
       #wdis-panel {
@@ -1536,33 +1632,48 @@
       #sidebar.open { transform: translateY(0); }
       body.sidebar-open #map-legend { display: none; }
       /* Tighter header in landscape */
-      header { padding: 6px 14px 6px; }
+      .header-main-row { padding: 8px 18px; gap: 12px; }
+      .logo-title { font-size: 1.1rem; }
+      .header-tagline-row { display: none; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Atlas Legis <span>Law School Atlas</span></div>
+  <div class="header-main-row">
+    <!-- Logo: left -->
+    <div class="logo">
+      <span class="logo-title">Atlas Legis</span>
+      <span class="logo-sub">Law School Atlas</span>
+    </div>
 
-  <div class="header-center">
-    <!-- Where Do I Stand button -->
-    <button class="hdr-btn" id="wdis-btn">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <span class="hdr-btn-label">Where Do I Stand?</span>
-    </button>
-    <!-- Filters button -->
-    <button class="hdr-btn" id="filter-btn">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-      <span class="hdr-btn-label">Filters</span>
-      <span id="filter-count-badge"></span>
-    </button>
+    <!-- Controls: search + buttons together in one pill — centre -->
+    <!-- header-center and header-right divs kept for JS hook safety -->
+    <div class="header-controls">
+      <div class="header-right">
+        <input type="text" id="search-input" placeholder="Search schools by name, city, or state…" autocomplete="off" />
+      </div>
+      <div class="header-center">
+        <button class="hdr-btn" id="wdis-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span class="hdr-btn-label">Where Do I Stand?</span>
+        </button>
+        <button class="hdr-btn" id="filter-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          <span class="hdr-btn-label">Filters</span>
+          <span id="filter-count-badge"></span>
+        </button>
+      </div>
+    </div>
 
+    <!-- School count: right -->
+    <span class="school-count" id="count-label"></span>
   </div>
 
-  <div class="header-right">
-    <span class="school-count" id="count-label"></span>
-    <input type="text" id="search-input" placeholder="Search name, city, or state…" autocomplete="off" />
+  <!-- Tagline substrip -->
+  <div class="header-tagline-row">
+    <span class="header-tagline">Compare employment outcomes, medians, and admissions positioning across 194 U.S. law schools.</span>
   </div>
 </header>
 
@@ -2180,6 +2291,14 @@ function evaluateApplicant(user, school) {
   else if (totalScore <=  3) band = 'Strong';
   else                        band = 'Safety';
 
+  // LSAT floor rule: if LSAT is below the school's 25th percentile,
+  // the band can be no better than "Reach" regardless of GPA strength.
+  // Law school admissions heavily weight LSAT; a sub-25th LSAT is a
+  // meaningful red flag even with a strong GPA.
+  if (lsatScore < 0 && (band === 'Target' || band === 'Strong' || band === 'Safety')) {
+    band = 'Reach';
+  }
+
   return {
     band,
     total_score: totalScore,
@@ -2426,10 +2545,12 @@ const wdisPanel = document.getElementById('wdis-panel');
 
 wdisBtn.addEventListener('click', () => {
   const open = wdisPanel.classList.toggle('visible');
-  wdisBtn.classList.toggle('active', open);
+  // Button stays green only when standing is actively applied, not just when panel is open
+  wdisBtn.classList.toggle('active', standingOn);
   if (open) {
     filterDrawer.classList.remove('open');
-    document.getElementById('filter-btn').classList.remove('active');
+    // Don't clear filterBtn active — it may still have active filters
+    if (!filterActive) document.getElementById('filter-btn').classList.remove('active');
     // On mobile, anchor panel just below the actual header
     if (window.innerWidth <= 600) {
       const hdrH = document.querySelector('header').getBoundingClientRect().height;
@@ -2508,10 +2629,12 @@ let activeTiers    = new Set(['t14','tier2','tier3']);
 
 filterBtn.addEventListener('click', () => {
   const open = filterDrawer.classList.toggle('open');
-  filterBtn.classList.toggle('active', open || filterActive);
+  // Button stays green only when filters are actively applied, not just when drawer is open
+  filterBtn.classList.toggle('active', filterActive);
   if (open) {
     wdisPanel.classList.remove('visible');
-    wdisBtn.classList.remove('active');
+    // Don't clear wdisBtn active — standing may still be applied
+    if (!standingOn) wdisBtn.classList.remove('active');
     // On mobile, anchor drawer just below the actual header height
     if (window.innerWidth <= 600) {
       const hdrH = document.querySelector('header').getBoundingClientRect().height;
@@ -2612,24 +2735,28 @@ function applyFilters() {
     filterBtn.classList.add('active');
   } else {
     badge.classList.remove('visible');
-    if (!filterDrawer.classList.contains('open')) filterBtn.classList.remove('active');
+    filterBtn.classList.remove('active'); // no active filters, never green
   }
 }
 
-// Close panels on map click
+// Close panels on map click — restore button state to reflect actual active status
 map.on('click', () => {
   wdisPanel.classList.remove('visible');
   filterDrawer.classList.remove('open');
-  wdisBtn.classList.remove('active');
-  if (!standingOn && !filterActive) filterBtn.classList.remove('active');
+  wdisBtn.classList.toggle('active', standingOn);
+  filterBtn.classList.toggle('active', filterActive);
 });
 
-// Close panels on outside click
+// Close panels on outside click — restore button state to reflect actual active status
 document.addEventListener('click', e => {
-  if (!wdisPanel.contains(e.target) && !wdisBtn.contains(e.target))
+  if (!wdisPanel.contains(e.target) && !wdisBtn.contains(e.target)) {
     wdisPanel.classList.remove('visible');
-  if (!filterDrawer.contains(e.target) && !filterBtn.contains(e.target))
+    wdisBtn.classList.toggle('active', standingOn);
+  }
+  if (!filterDrawer.contains(e.target) && !filterBtn.contains(e.target)) {
     filterDrawer.classList.remove('open');
+    filterBtn.classList.toggle('active', filterActive);
+  }
 });
 
 // ─── SEARCH ──────────────────────────────────────────────────────────────────
@@ -2667,6 +2794,14 @@ function addResultItem(s, container) {
   container.appendChild(item);
 }
 
+// Position #search-results flush below #search-input using fixed coords
+function positionSearchResults() {
+  const rect = searchInput.getBoundingClientRect();
+  searchResults.style.top    = (rect.bottom + 6) + 'px';
+  searchResults.style.left   = rect.left + 'px';
+  searchResults.style.width  = rect.width + 'px';
+}
+
 searchInput.addEventListener('input', () => {
   const q = searchInput.value.trim().toLowerCase();
   searchResults.innerHTML = '';
@@ -2692,6 +2827,7 @@ searchInput.addEventListener('input', () => {
   } else {
     hits.slice(0, 12).forEach(s => addResultItem(s, searchResults));
   }
+  positionSearchResults();
   searchResults.style.display = 'block';
 });
 

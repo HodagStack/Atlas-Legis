@@ -21,6 +21,27 @@
 <meta name="twitter:title" content="Atlas Legis | Law School Analytics Platform" />
 <meta name="twitter:description" content="Compare law school employment data, medians, and admissions positioning tools." />
 
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Atlas Legis",
+  "url": "https://atlaslegis.com/",
+  "description": "Atlas Legis is an interactive law school analytics platform covering ABA 509 disclosures, employment outcomes, LSAT medians, GPA medians, BigLaw placement, federal clerkships, and admissions positioning across 194 ABA-accredited U.S. law schools.",
+  "sameAs": [],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Law School Admissions Data",
+    "description": "ABA 509 required disclosures, LSAT and GPA percentiles, employment outcomes, BigLaw and federal clerkship placement rates for all ABA-accredited law schools."
+  }
+}
+</script>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -277,8 +298,80 @@
       border-radius: 9px;
     }
 
+    /* ── CONTEXT STRIP ── */
+    /* Sits between header and map; flex-shrink:0 so it never compresses the map */
+    #context-strip {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 0 28px;
+      height: 36px; /* fixed slim height — no layout shift */
+      background: rgba(232,244,238,0.55);
+      border-bottom: 1px solid rgba(15,81,50,0.07);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    #context-strip .cs-inner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 1140px;
+      width: 100%;
+    }
+    #context-strip h2.cs-heading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--em-deep);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    #context-strip .cs-divider {
+      width: 1px;
+      height: 14px;
+      background: rgba(15,81,50,0.18);
+      flex-shrink: 0;
+    }
+    #context-strip .cs-terms {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+    #context-strip .cs-term {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: var(--muted);
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+    #context-strip .cs-term strong {
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+    /* Mobile: hide lower-priority terms to keep height fixed */
+    @media (max-width: 768px) {
+      #context-strip { padding: 0 14px; gap: 0; }
+      #context-strip .cs-term.cs-hide-mobile { display: none; }
+      #context-strip h2.cs-heading { font-size: 0.64rem; }
+      #context-strip .cs-term { font-size: 0.64rem; }
+    }
+    @media (max-width: 480px) {
+      #context-strip .cs-term.cs-hide-small { display: none; }
+    }
+
     /* ── LAYOUT ── */
-    .main { display:flex; flex:1; overflow:hidden; position:relative; }
+    /* <main> fills remaining body height in the flex-column body layout */
+    #site-main { display:flex; flex-direction:column; flex:1; overflow:hidden; min-height:0; }
+    /* .main is the inner flex row containing the map + sidebar */
+    .main { display:flex; flex:1; overflow:hidden; position:relative; min-height:0; }
     #map  { flex:1; z-index:1; }
     .leaflet-tile { filter: saturate(0.8) brightness(1.05); }
     .leaflet-control-attribution {
@@ -609,7 +702,7 @@
     /* ── LEGEND ── */
     .legend {
       position: absolute;
-      bottom: 30px;
+      bottom: 56px; /* 40px footer + 16px gap */
       left: 16px;
       z-index: 500;
       background: rgba(255,255,255,0.72);
@@ -639,25 +732,7 @@
     #tier-legend.hidden { display:none; }
     .legend-divider { border:none; border-top:1px solid rgba(26,122,80,0.12); margin:9px 0; }
 
-    /* ── Legend nav links (Methodology / Sources) ── */
-    .legend-nav {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 10px;
-      padding-top: 9px;
-      border-top: 1px solid rgba(26,122,80,0.1);
-    }
-    .legend-nav-link {
-      font-size: 0.63rem;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      opacity: 0.7;
-      transition: opacity 0.15s ease, color 0.15s ease;
-    }
-    .legend-nav-link:hover { opacity: 1; color: var(--em-deep); }
-    .legend-nav-sep { font-size: 0.6rem; color: var(--muted); opacity: 0.5; }
+
 
     /* ── SEARCH DROPDOWN ── */
     #search-results {
@@ -1613,7 +1688,7 @@
       }
 
       /* ── Legend: hide entirely when school panel is open ── */
-      .legend { bottom: 16px; left: 10px; padding: 10px 13px; }
+      .legend { bottom: 74px; left: 10px; padding: 10px 13px; } /* ~62px mobile footer + 12px gap */
       body.sidebar-open #map-legend { display: none; }
 
       /* ── Markers: larger tap targets ── */
@@ -1621,6 +1696,89 @@
 
       /* ── Tooltip: no hover on touch ── */
       #map-tooltip { display: none !important; }
+    }
+
+    /* ── SITE FOOTER ── */
+    #site-footer {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 0 28px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(224,240,232,0.97) 0%, rgba(215,235,225,0.98) 100%);
+      border-top: 1px solid rgba(15,81,50,0.1);
+      box-shadow: 0 -1px 0 rgba(255,255,255,0.6);
+      position: relative;
+      z-index: 600;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .footer-brand span {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+      margin-left: 6px;
+    }
+    #site-footer nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer-nav-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: color 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+    }
+    .footer-nav-link:hover {
+      color: var(--em-deep);
+      background: rgba(15,81,50,0.07);
+    }
+    .footer-nav-sep {
+      font-size: 0.58rem;
+      color: var(--muted);
+      opacity: 0.4;
+      user-select: none;
+    }
+    .footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem;
+      color: var(--muted);
+      opacity: 0.6;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    /* Mobile footer: compact two-row stack */
+    @media (max-width: 768px) {
+      #site-footer {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        gap: 6px;
+      }
+      .footer-brand span { display: none; }
+      .footer-copy { display: none; }
+      #site-footer nav { gap: 2px; }
+      .footer-nav-link { font-size: 0.66rem; padding: 4px 7px; }
     }
 
     /* Landscape phones: shorten bottom sheet so map is still visible */
@@ -1644,8 +1802,8 @@
   <div class="header-main-row">
     <!-- Logo: left -->
     <div class="logo">
-      <span class="logo-title">Atlas Legis</span>
-      <span class="logo-sub">Law School Atlas</span>
+      <h1 class="logo-title">Atlas Legis</h1>
+      <p class="logo-sub">Law School Atlas</p>
     </div>
 
     <!-- Controls: search + buttons together in one pill — centre -->
@@ -1676,6 +1834,27 @@
     <span class="header-tagline">Compare employment outcomes, medians, and admissions positioning across 194 U.S. law schools.</span>
   </div>
 </header>
+
+<!-- CONTEXT STRIP: crawlable keyword content, visible slim bar above map -->
+<div id="context-strip" role="complementary" aria-label="Platform summary">
+  <div class="cs-inner">
+    <h2 class="cs-heading">Coverage</h2>
+    <div class="cs-divider"></div>
+    <div class="cs-terms">
+      <span class="cs-term"><strong>194</strong> ABA law schools</span>
+      <span class="cs-term cs-hide-mobile">·</span>
+      <span class="cs-term cs-hide-mobile"><strong>ABA 509</strong> disclosures</span>
+      <span class="cs-term">·</span>
+      <span class="cs-term"><strong>LSAT</strong> &amp; <strong>GPA</strong> medians</span>
+      <span class="cs-term cs-hide-mobile">·</span>
+      <span class="cs-term cs-hide-mobile"><strong>Employment</strong> outcomes</span>
+      <span class="cs-term">·</span>
+      <span class="cs-term cs-hide-small"><strong>BigLaw</strong> &amp; federal clerkship rates</span>
+      <span class="cs-term cs-hide-small">·</span>
+      <span class="cs-term cs-hide-small">School comparison tools</span>
+    </div>
+  </div>
+</div>
 
 <div id="search-results"></div>
 
@@ -1779,6 +1958,7 @@
   </div>
 </div>
 
+<main id="site-main" aria-label="Interactive law school map">
 <div class="main">
   <div id="map"></div>
 
@@ -2011,13 +2191,6 @@
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#f59e0b,#b45309)"></div> Target</div>
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#ef4444,#b91c1c)"></div> Reach</div>
     <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(145deg,#7f1d1d,#450a0a)"></div> High Reach</div>
-  </div>
-  <div class="legend-nav">
-    <a href="about.html" class="legend-nav-link">About</a>
-    <span class="legend-nav-sep">·</span>
-    <a href="methodology.html" class="legend-nav-link">Methodology</a>
-    <span class="legend-nav-sep">·</span>
-    <a href="sources.html" class="legend-nav-link">Sources</a>
   </div>
 </div>
 
@@ -3615,9 +3788,21 @@ document.getElementById('count-label').textContent = `${lawSchools.length} schoo
 // ─── URL ROUTING ──────────────────────────────────────────────────────────────
 
 // Open a school by its slug — reuses openSidebar() entirely, no UI duplication
+// ── Canonical URL management ──────────────────────────────────────────────
+function setCanonical(url) {
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'canonical';
+    document.head.appendChild(link);
+  }
+  link.href = url;
+}
+
 function openSchoolBySlug(slug) {
   const s = lawSchools.find(s => s.slug === slug);
   if (!s) return;
+  setCanonical('https://atlaslegis.com/school/' + slug + '/');
   // Activate marker
   if (activeEl) activeEl.classList.remove('active');
   s._el.classList.add('active');
@@ -3636,6 +3821,7 @@ function closeSchoolPanel() {
   document.body.classList.remove('sidebar-open');
   if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
   document.getElementById('seo-content').innerHTML = '';
+  setCanonical('https://atlaslegis.com/');
 }
 
 // Render crawlable SEO content (visually offscreen, present in DOM for crawlers)
@@ -3652,7 +3838,7 @@ function renderSEOContent(s) {
     const gov    = emp.gov != null ? Math.round((emp.gov / g) * 100) : 0;
     const pi     = emp.pi  != null ? Math.round((emp.pi  / g) * 100) : 0;
     empHtml = `
-    <h2>Employment Outcomes — Class of 2024 (${g} graduates)</h2>
+    <h3>Employment Outcomes — Class of 2024 (${g} graduates)</h3>
     <p>BigLaw (251+ attorneys): ${biglaw}%</p>
     <p>Federal Clerkships: ${fedClerk}%</p>
     <p>Government: ${gov}%</p>
@@ -3721,10 +3907,11 @@ lawSchools.forEach(s => {
   });
 });
 
-// Also handle close button — clear URL
+// Also handle close button — clear URL and canonical
 document.getElementById('close-btn').addEventListener('click', () => {
   window.history.pushState({}, '', window.location.pathname);
   document.getElementById('seo-content').innerHTML = '';
+  setCanonical('https://atlaslegis.com/');
 });
 
 // On page load: read URL param and open matching school
@@ -3739,5 +3926,19 @@ document.getElementById('close-btn').addEventListener('click', () => {
 
 <!-- SEO: crawlable school data, populated by URL routing -->
 <div id="seo-content" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true"></div>
+
+</main><!-- /site-main -->
+
+<footer id="site-footer" aria-label="Site footer">
+  <div class="footer-brand">Atlas Legis<span>Law School Analytics</span></div>
+  <nav aria-label="Footer navigation">
+    <a href="/about.html" class="footer-nav-link">About</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/methodology.html" class="footer-nav-link">Methodology</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/sources.html" class="footer-nav-link">Sources</a>
+  </nav>
+  <span class="footer-copy">© 2026 Atlas Legis</span>
+</footer>
 </body>
 </html>

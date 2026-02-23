@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 <title>Atlas Legis | Law School Employment Outcomes, LSAT Medians & Admissions Analytics</title>
 
@@ -79,8 +79,12 @@
         radial-gradient(ellipse at 82% 75%, rgba(16,120,70,0.14) 0%, transparent 42%),
         radial-gradient(ellipse at 50% 50%, rgba(167,243,208,0.08) 0%, transparent 60%),
         linear-gradient(160deg, #eef5f1 0%, #ddeee5 50%, #e8f2ed 100%);
-      min-height: 100vh;
-      height: 100vh;
+      /* 100dvh = dynamic viewport height: tracks Safari bar animation.
+         Falls back to 100vh on browsers that don't support dvh yet. */
+      min-height: 100vh;        /* fallback */
+      min-height: 100dvh;       /* dvh: shrinks when Safari bar expands */
+      height: 100vh;            /* fallback */
+      height: 100dvh;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -1700,7 +1704,9 @@
       justify-content: space-between;
       gap: 24px;
       padding: 0 28px;
-      height: 40px;
+      /* Safe-area padding so content clears home indicator on any device */
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      min-height: 40px;
       background: linear-gradient(to bottom, rgba(224,240,232,0.97) 0%, rgba(215,235,225,0.98) 100%);
       border-top: 1px solid rgba(15,81,50,0.1);
       box-shadow: 0 -1px 0 rgba(255,255,255,0.6);
@@ -1762,19 +1768,18 @@
     /* Mobile footer: compact single row + Safari safe-area */
     @media (max-width: 768px) {
       #site-footer {
-        height: auto;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 8px 16px;
-        /* env() pads above iPhone home indicator; fallback 0px for non-notch */
-        padding-bottom: max(8px, env(safe-area-inset-bottom, 8px));
+        /* 8px top + safe-area-inset bottom so links clear the home indicator */
+        padding: 8px 16px env(safe-area-inset-bottom, 8px);
         gap: 0;
+        min-height: calc(38px + env(safe-area-inset-bottom, 0px));
       }
       .footer-brand { display: none; }
       .footer-copy { display: none; }
       #site-footer nav { gap: 2px; }
-      .footer-nav-link { font-size: 0.72rem; padding: 6px 10px; }
+      .footer-nav-link { font-size: 0.72rem; padding: 8px 12px; min-height: 44px; display:inline-flex; align-items:center; }
       /* Hide footer on mobile when sidebar or compare panel is open */
       body.sidebar-open #site-footer,
       body.compare-open #site-footer { display: none; }
@@ -3923,6 +3928,34 @@ document.getElementById('close-btn').addEventListener('click', () => {
     setTimeout(() => openSchoolBySlug(slug), 250);
   }
 })();
+
+// ─── SAFARI ADDRESS BAR DISMISS ──────────────────────────────────────────────
+// Leaflet calls preventDefault() on touch events, blocking Safari's native
+// scroll-detection heuristic that triggers address bar minimisation.
+// Fix: on first touch on the map, perform an imperceptible 1px scroll on the
+// ghost element — this satisfies Safari without affecting any real layout.
+(function safariBarDismiss() {
+  const ghost = document.getElementById('safari-scroll-ghost');
+  if (!ghost) return;
+
+  // Seed the ghost with a mid-point scroll position so we can scroll
+  // both up and down from it — prevents hitting the boundary immediately.
+  ghost.scrollTop = 2;
+
+  let dir = 1; // alternate direction each touch to stay mid-range
+
+  const mapEl = document.getElementById('map');
+  if (!mapEl) return;
+
+  mapEl.addEventListener('touchstart', function triggerBar() {
+    // rAF ensures this fires after Leaflet's own touchstart handlers
+    requestAnimationFrame(() => {
+      ghost.scrollTop += dir;
+      // Keep ghost in range [1, 3] — never hits boundary
+      if (ghost.scrollTop >= 3 || ghost.scrollTop <= 1) dir *= -1;
+    });
+  }, { passive: true });
+})();
 </script>
 
 <!-- SEO: crawlable school data, populated by URL routing -->
@@ -3941,5 +3974,19 @@ document.getElementById('close-btn').addEventListener('click', () => {
   </nav>
   <span class="footer-copy">© 2025 Atlas Legis</span>
 </footer>
+<!-- Safari address-bar dismiss: ghost scrollable element (1px, offscreen) -->
+<div id="safari-scroll-ghost" aria-hidden="true" style="
+  position:fixed;
+  top:-2px;
+  left:0;
+  width:1px;
+  height:1px;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:none;
+  opacity:0;
+  pointer-events:none;
+  z-index:-1;
+"><div style="height:4px"></div></div>
 </body>
 </html>

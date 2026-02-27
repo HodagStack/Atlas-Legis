@@ -2140,6 +2140,7 @@
         <div class="section-title">Top Employer States</div>
         <div id="emp-states-list" class="emp-states-list"></div>
       </div>
+      <a id="s-profile" href="#" style="display:block;text-align:center;font-size:0.78rem;color:var(--em);margin-bottom:6px;text-decoration:none;opacity:0.85;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">View full profile →</a>
       <a class="visit-btn" id="s-link" href="#" target="_blank" rel="noopener">Visit School Website ↗</a>
       <button id="add-compare-btn">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -2560,6 +2561,7 @@ function openSidebar(s) {
   document.getElementById('s-gpa50').textContent    = fmtG(s.gpa50);
   document.getElementById('s-gpa75').textContent    = fmtG(s.gpa75);
   document.getElementById('s-link').href = s.url || '#';
+  document.getElementById('s-profile').href = s.slug ? '/schools/' + s.slug + '/' : '#';
 
   // Phase 3 — Admissions & Aid fields
   document.getElementById('s-accept').textContent    = s.acceptRate != null ? s.acceptRate + '%' : '—';

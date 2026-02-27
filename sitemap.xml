@@ -1,1190 +1,1196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.atlaslegis.com/</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://atlaslegis.com/</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/methodology.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-   <url>
-    <loc>https://www.atlaslegis.com/about.html</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/sources.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/about.html</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=stanford-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/methodology.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://atlaslegis.com/sources.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://atlaslegis.com/schools/albany-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=yale-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/american-university-washington-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-chicago-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/appalachian-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-virginia-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/arizona-state-sandra-day-oconnor-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=penn-carey-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/ave-maria-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=duke-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/byu-j-reuben-clark-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=harvard-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/barry-university-dwayne-o-andreas-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-michigan-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/baylor-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=nyu-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/belmont-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=columbia-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/boston-college-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=northwestern-pritzker-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/boston-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=ucla-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/brooklyn-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=uc-berkeley-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/cuny-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=georgetown-university-law-center</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/california-western-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-texas-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/campbell-university-norman-adrian-wiggins-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=vanderbilt-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/capital-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=washington-university-in-st-louis-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/cardozo-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=cornell-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/case-western-reserve-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-north-carolina-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/catholic-university-of-america-columbus-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-minnesota-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/chapman-university-fowler-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-notre-dame-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/charleston-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=boston-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/chicago-kent-college-of-law-iit/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-georgia-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/cleveland-state-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=texas-a-m-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/columbia-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=boston-college-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/cornell-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=usc-gould-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/creighton-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=wake-forest-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/depaul-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=byu-j-reuben-clark-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/drake-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=ohio-state-university-moritz-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/drexel-university-kline-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-wisconsin-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/duke-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-alabama-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/duquesne-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=george-mason-antonin-scalia-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/elon-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=george-washington-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/emory-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-utah-s-j-quinney-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/faulkner-university-thomas-goode-jones-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=william-mary-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/florida-a-m-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-iowa-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/florida-international-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=washington-and-lee-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/florida-state-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=uc-irvine-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/fordham-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=emory-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/george-mason-antonin-scalia-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=florida-state-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/george-washington-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-florida-levin-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/georgetown-university-law-center/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=fordham-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/georgia-state-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=baylor-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/gonzaga-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=smu-dedman-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/harvard-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=arizona-state-sandra-day-oconnor-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/hofstra-university-deane-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-colorado-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/howard-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=indiana-university-maurer-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/indiana-university-maurer-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-illinois-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/indiana-university-mckinney-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=villanova-university-widger-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/inter-american-university-of-puerto-rico-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=uc-davis-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/jacksonville-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-connecticut-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/lsu-paul-m-hebert-law-center/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-kansas-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/lewis-clark-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=temple-university-beasley-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/liberty-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-washington-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/lincoln-memorial-university-duncan-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=pepperdine-caruso-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/loyola-law-school-los-angeles/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-tennessee-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/loyola-university-chicago-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-missouri-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/loyola-university-new-orleans-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-san-diego-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/marquette-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-arizona-james-e-rogers-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/mercer-university-walter-f-george-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=marquette-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/michigan-state-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-oklahoma-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/mississippi-college-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=penn-state-dickinson-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/mitchell-hamline-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=cardozo-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/nyu-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-houston-law-center</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/new-england-law-boston/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-maryland-carey-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/new-york-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-south-carolina-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/north-carolina-central-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=st-johns-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/northeastern-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-kentucky-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/northern-illinois-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=northeastern-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/northern-kentucky-university-chase-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=catholic-university-of-america-columbus-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/northwestern-pritzker-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-cincinnati-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/nova-southeastern-university-shepard-broad-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=loyola-law-school-los-angeles</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/ohio-northern-university-pettit-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-nebraska-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/ohio-state-university-moritz-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-richmond-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/oklahoma-city-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=seton-hall-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/pace-university-elisabeth-haub-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=tulane-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/penn-carey-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=wayne-state-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/penn-state-dickinson-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=drexel-university-kline-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/pepperdine-caruso-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=georgia-state-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/pontifical-catholic-university-of-puerto-rico-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=loyola-university-chicago-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/quinnipiac-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=unlv-william-s-boyd-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/regent-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-pittsburgh-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/roger-williams-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=belmont-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/rutgers-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=drake-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/smu-dedman-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=florida-international-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/saint-louis-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=lsu-paul-m-hebert-law-center</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/samford-university-cumberland-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-denver-sturm-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/santa-clara-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-maine-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/seattle-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=texas-tech-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/seton-hall-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=duquesne-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/south-texas-college-of-law-houston/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-miami-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/southern-illinois-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-at-buffalo-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/southern-university-law-center/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-oregon-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/southwestern-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=regent-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/st-johns-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=saint-louis-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/st-marys-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-st-thomas-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/st-thomas-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-hawaii-richardson-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/stanford-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=lewis-clark-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/stetson-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-missouri-kansas-city-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/suffolk-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-montana-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/syracuse-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=stetson-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/temple-university-beasley-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=american-university-washington-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/texas-a-m-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=chapman-university-fowler-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/texas-southern-university-thurgood-marshall-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=rutgers-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/texas-tech-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=case-western-reserve-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/thomas-m-cooley-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=chicago-kent-college-of-law-iit</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/touro-university-jacob-d-fuchsberg-law-center/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-dayton-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/tulane-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=indiana-university-mckinney-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/ua-little-rock-bowen-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=mercer-university-walter-f-george-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/uc-berkeley-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-new-mexico-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/uc-college-of-the-law-san-francisco/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=samford-university-cumberland-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/uc-davis-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=syracuse-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/uc-irvine-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-arkansas-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/ucla-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=michigan-state-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/unlv-william-s-boyd-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=albany-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/usc-gould-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=brooklyn-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-at-buffalo-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=west-virginia-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-akron-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-wyoming-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-alabama-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=cleveland-state-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-arizona-james-e-rogers-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-mississippi-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-arkansas-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=new-york-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-baltimore-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=washburn-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-chicago-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=hofstra-university-deane-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-cincinnati-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-new-hampshire-franklin-pierce-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-colorado-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-akron-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-connecticut-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=howard-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-dayton-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=seattle-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-denver-sturm-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-south-dakota-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-detroit-mercy-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=suffolk-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-florida-levin-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-tulsa-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-georgia-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=depaul-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-hawaii-richardson-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=campbell-university-norman-adrian-wiggins-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-houston-law-center/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-detroit-mercy-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-idaho-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=loyola-university-new-orleans-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-illinois-chicago-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=northern-kentucky-university-chase-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-illinois-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=south-texas-college-of-law-houston</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-iowa-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=ua-little-rock-bowen-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-kansas-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-baltimore-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-kentucky-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=gonzaga-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-louisville-brandeis-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-idaho-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-maine-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=liberty-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-maryland-carey-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=pace-university-elisabeth-haub-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-massachusetts-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=quinnipiac-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-memphis-humphreys-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-louisville-brandeis-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-miami-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-memphis-humphreys-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-michigan-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=creighton-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-minnesota-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=st-marys-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-mississippi-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=northern-illinois-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-missouri-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-toledo-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-missouri-kansas-city-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=willamette-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-montana-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=ave-maria-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-nebraska-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=mitchell-hamline-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-new-hampshire-franklin-pierce-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=southwestern-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-new-mexico-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=cuny-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-north-carolina-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=santa-clara-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-north-dakota-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=elon-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-north-texas-dallas-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=mississippi-college-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-notre-dame-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=oklahoma-city-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-oklahoma-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-north-dakota-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-oregon-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-the-pacific-mcgeorge-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-pittsburgh-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=vermont-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-puerto-rico-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=uc-college-of-the-law-san-francisco</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-richmond-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-san-francisco-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-san-diego-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-illinois-chicago-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-san-francisco-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=roger-williams-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-south-carolina-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=touro-university-jacob-d-fuchsberg-law-center</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-south-dakota-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=widener-university-delaware-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-st-thomas-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=capital-university-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-tennessee-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-puerto-rico-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-texas-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=southern-illinois-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-toledo-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=appalachian-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-tulsa-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=barry-university-dwayne-o-andreas-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-utah-s-j-quinney-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=california-western-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-virginia-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=charleston-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-washington-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-the-district-of-columbia-david-a-clarke-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-wisconsin-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=faulkner-university-thomas-goode-jones-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-wyoming-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=florida-a-m-university-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-the-district-of-columbia-david-a-clarke-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=north-carolina-central-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/university-of-the-pacific-mcgeorge-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=nova-southeastern-university-shepard-broad-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/vanderbilt-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=ohio-northern-university-pettit-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/vermont-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=southern-university-law-center</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/villanova-university-widger-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=st-thomas-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/wake-forest-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=texas-southern-university-thurgood-marshall-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/washburn-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=jacksonville-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/washington-university-in-st-louis-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=lincoln-memorial-university-duncan-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/washington-and-lee-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=thomas-m-cooley-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/wayne-state-university-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=western-new-england-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/west-virginia-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-north-texas-dallas-college-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/western-new-england-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=widener-university-commonwealth-law-school</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/widener-university-commonwealth-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=pontifical-catholic-university-of-puerto-rico-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/widener-university-delaware-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=university-of-massachusetts-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/willamette-university-college-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=inter-american-university-of-puerto-rico-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/william-mary-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=new-england-law-boston</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/wilmington-university-school-of-law/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.atlaslegis.com/?school=wilmington-university-school-of-law</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://atlaslegis.com/schools/yale-law-school/</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

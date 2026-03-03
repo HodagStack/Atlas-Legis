@@ -40,3 +40,4 @@ Atlas Legis was developed as an independent legal-tech project to:
 
 *Atlas Legis is an independent project and is not affiliated with any law school or accrediting body.*
 *Calculations, employment breakdowns, and other statistical features are not meant to be objective and are not claimed to be objectively accurate.*
+

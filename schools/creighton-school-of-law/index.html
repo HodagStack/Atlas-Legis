@@ -73,6 +73,9 @@
     .nav-links a:hover { color: var(--ink); background: var(--bg); }
     .nav-links .nav-map { background: var(--em-600); color: #fff; padding: 5px 14px; }
     .nav-links .nav-map:hover { background: var(--em-700); color: #fff; }
+    @media (max-width: 600px) {
+      .nav-links li:not(:last-child) { display: none; }
+    }
 
     /* ── Breadcrumb ───────────────────────────────────────────── */
     .bc-wrap { max-width: 1200px; margin: 0 auto; padding: 12px 20px 0; }

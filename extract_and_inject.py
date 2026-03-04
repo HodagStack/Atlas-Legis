@@ -19,24 +19,27 @@ def extract_fields(pdf_path):
         return None, None, f"PDF read error: {e}"
 
     # ── Application deadline ──────────────────────────────────────────
+    # Known field labels that indicate a blank deadline (next field bled in)
+    FIELD_LABELS = {"application", "financial", "academic", "type"}
+
     deadline = None
-    m = re.search(r'Application deadline\s+([^\n]+)', text)
+    m = re.search(r'Application deadline\s*\n?\s*([^\n]*)', text)
     if m:
         raw = m.group(1).strip()
-        # Take first 1-3 meaningful tokens before the next field starts
-        # Fields usually start with a capital word followed by more caps/words
-        # We want: "March 15", "Rolling", "None", "February 1", "April 15", etc.
         tokens = raw.split()
-        if tokens:
-            if tokens[0] in MONTHS and len(tokens) >= 2 and tokens[1].isdigit():
-                deadline = f"{tokens[0]} {tokens[1]}"
-            elif tokens[0].lower() in {"rolling", "none", "varies", "open"}:
-                deadline = tokens[0].capitalize()
-            elif tokens[0] in MONTHS:
-                deadline = tokens[0]
-            else:
-                # Take up to 3 tokens as a fallback
-                deadline = " ".join(tokens[:3])
+        # If the captured text is empty or starts with a known field label,
+        # the deadline field was blank — treat as rolling.
+        if not tokens or tokens[0].lower() in FIELD_LABELS:
+            deadline = "Rolling"
+        elif tokens[0] in MONTHS and len(tokens) >= 2 and tokens[1].isdigit():
+            deadline = f"{tokens[0]} {tokens[1]}"
+        elif tokens[0].lower() in {"rolling", "none", "varies", "open"}:
+            deadline = tokens[0].capitalize()
+        elif tokens[0] in MONTHS:
+            deadline = tokens[0]
+        else:
+            # Take up to 3 tokens as a fallback
+            deadline = " ".join(tokens[:3])
 
     # ── Application fee ───────────────────────────────────────────────
     fee = None

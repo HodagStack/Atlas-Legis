@@ -11,7 +11,7 @@
 
   vals.forEach(function (v) {
     var n = parseInt(v.textContent.trim(), 10) || 0;
-    var pct = Math.round((n / total) * 100);
+    var pct = ((n / total) * 100).toFixed(1);
     var span = document.createElement('span');
     span.textContent = '\u00a0(' + pct + '%)';
     span.style.cssText = 'opacity:0.20;font-size:0.82em;font-family:Inter,sans-serif;font-weight:400;';

@@ -906,6 +906,8 @@
       font-weight: 600;
     }
     .filter-tiers { display:flex; gap:6px; flex-wrap:wrap; }
+    .filter-checkbox-row { display:flex; align-items:center; gap:7px; font-size:0.78rem; color:var(--ink); cursor:pointer; }
+    .filter-checkbox-row input[type="checkbox"] { width:14px; height:14px; cursor:pointer; accent-color:var(--accent,#2563eb); }
     .tier-toggle {
       padding: 4px 13px;
       border-radius: 100px;
@@ -1968,6 +1970,14 @@
       </div>
     </div>
 
+    <div class="filter-group wide">
+      <span class="filter-label">Scholarships</span>
+      <label class="filter-checkbox-row">
+        <input type="checkbox" id="f-cond-scholarship" />
+        <span>Has conditional scholarships</span>
+      </label>
+    </div>
+
     <div class="filter-actions">
       <button class="filter-btn primary" id="filter-apply">Apply</button>
       <button class="filter-btn secondary" id="filter-reset">Reset</button>
@@ -2866,6 +2876,7 @@ document.getElementById('filter-reset').addEventListener('click', () => {
    'f-acc-min','f-acc-max','f-size-min','f-size-max'].forEach(id => {
     document.getElementById(id).value = '';
   });
+  document.getElementById('f-cond-scholarship').checked = false;
   applyFilters();
   filterDrawer.classList.remove('open');
 });
@@ -2883,6 +2894,7 @@ function applyFilters() {
   const sizeMax    = parseFloat(document.getElementById('f-size-max').value)    || 99999;
   const rankMin    = parseFloat(document.getElementById('f-rank-min').value)    || 0;
   const rankMax    = parseFloat(document.getElementById('f-rank-max').value)    || 99999;
+  const condOnly   = document.getElementById('f-cond-scholarship').checked;
 
   const allDefault = activeTiers.size === 3
     && lsatMin === 0 && lsatMax === 999
@@ -2890,7 +2902,8 @@ function applyFilters() {
     && tuitionMin === 0 && tuitionMax === 999999
     && accMin  === 0 && accMax  === 100
     && sizeMin === 0 && sizeMax === 99999
-    && rankMin === 0 && rankMax === 99999;
+    && rankMin === 0 && rankMax === 99999
+    && !condOnly;
 
   let hidden = 0;
   lawSchools.forEach(s => {
@@ -2900,13 +2913,15 @@ function applyFilters() {
     const size    = s.classSize  != null ? s.classSize  : -1;
     const rank    = s.rank       != null ? s.rank        : 999;
 
+    const hasCondScholarship = s.condIn !== "None" || s.condOut !== "None";
     const pass = activeTiers.has(s.tier)
       && (s.lsat50 != null ? s.lsat50 >= lsatMin && s.lsat50 <= lsatMax : true)
       && (s.gpa50  != null ? s.gpa50  >= gpaMin  && s.gpa50  <= gpaMax  : true)
       && (tuitionMin === 0 || tuition >= tuitionMin) && tuition <= tuitionMax
       && (accMin === 0 || accept >= accMin) && (accMax === 100 || accept <= accMax)
       && (sizeMin === 0 || size >= sizeMin) && (sizeMax === 99999 || size <= sizeMax)
-      && (rankMin === 0 || rank >= rankMin) && (rankMax === 99999 || rank <= rankMax);
+      && (rankMin === 0 || rank >= rankMin) && (rankMax === 99999 || rank <= rankMax)
+      && (!condOnly || hasCondScholarship);
 
     if (pass) {
       s._el.classList.remove('filtered-out');

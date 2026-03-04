@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 \"C:/Users/hunte/OneDrive/Documents/GitHub/Atlas-Legis/crosscheck_deadlines.py\")"
+    ]
+  }
+}

@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 \"C:/Users/hunte/OneDrive/Documents/GitHub/Atlas-Legis/crosscheck_deadlines.py\")"
+      "Bash(python3 \"C:/Users/hunte/OneDrive/Documents/GitHub/Atlas-Legis/crosscheck_deadlines.py\")",
+      "Bash(__NEW_LINE_53b24edbbcd50040__ echo \"=== about.html ===\")",
+      "Bash(__NEW_LINE_53b24edbbcd50040__ echo \"=== sources.html ===\")",
+      "Bash(__NEW_LINE_53b24edbbcd50040__ echo \"=== index.html \\(root\\) ===\")",
+      "Bash(python3 \"C:/Users/hunte/OneDrive/Documents/GitHub/Atlas-Legis/fix_emp_year.py\")"
     ]
   }
 }

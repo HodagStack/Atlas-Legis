@@ -9,7 +9,13 @@
       "Bash(sort grep -o '\"\"slug\"\":\"\"[^\"\"]*\"\"' \"C:\\\\Users\\\\hunte\\\\OneDrive\\\\Documents\\\\GitHub\\\\Atlas-Legis/index.html\")",
       "Bash(xargs grep -l \"enrolls approximately\")",
       "Bash(xargs grep -h 'logo-sub\\\\|logo-title\\\\|class=\"\"logo\"\"')",
-      "Bash(xargs sed -i 's/Law School Data/Law School Analytics/g; s/Law School Atlas/Law School Analytics/g')"
+      "Bash(xargs sed -i 's/Law School Data/Law School Analytics/g; s/Law School Atlas/Law School Analytics/g')",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs sed -i 's|        <li><a href=\"\"/about.html\"\">About</a></li>|        <li><a href=\"\"/about.html\"\">About</a></li>\\\\n        <li><a href=\"\"/sources.html\"\">Sources</a></li>|g')",
+      "Bash(grep -c 'sources.html' schools/*/index.html)",
+      "Bash(grep -rL 'href=\"\"/sources.html\"\"' schools/*/index.html)",
+      "Bash(xargs sed -i ':a;N;$!ba;s|        <li><a href=\"\"/about\\\\.html\"\">About</a></li>\\\\n        <li><a href=\"\"/sources\\\\.html\"\">Sources</a></li>|        <li><a href=\"\"/about.html\"\">About</a></li>|g')",
+      "Bash(python3 -c \":*)"
     ]
   }
 }

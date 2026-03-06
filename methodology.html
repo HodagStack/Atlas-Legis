@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Employment Methodology — Atlas Legis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -55,8 +55,9 @@
                    border-radius: 6px; transition: color .14s, background .14s; white-space: nowrap; text-decoration: none; }
     .nav-links a:hover { color: var(--ink); background: var(--soft); }
     .nav-links a[aria-current="page"] { color: var(--em-deep); font-weight: 600; }
-    .nav-links .nav-map { background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px; }
-    .nav-links .nav-map:hover { background: var(--em-deep); color: #fff; }
+    .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .nav-map { background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px; font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; }
+    .nav-map:hover { background: var(--em-deep); color: #fff; }
     .nav-burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--ink); line-height: 0; }
     @media (max-width: 600px) {
       .nav { position: relative; }
@@ -66,7 +67,6 @@
       .nav-links.open { display: flex; }
       .nav-links li { display: block; }
       .nav-links a { display: block; padding: 10px 12px; border-radius: 6px; }
-      .nav-links .nav-map { text-align: center; margin-top: 4px; }
     }
     .header-tag {
       font-size: 0.71rem;
@@ -297,14 +297,14 @@
     }
 
     /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      border-top: 1px solid var(--border);
-    }
+    .footer { background: #0d1117; padding: 36px 20px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex;
+                    flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+    .footer-brand { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.05rem; font-weight: 400; color: rgba(255,255,255,.75); }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; list-style: none; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: color .14s; text-decoration: none; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-copy { font-size: .72rem; color: rgba(255,255,255,.25); }
 
     /* ══════════════════════════════════════════════
        MOBILE
@@ -350,8 +350,6 @@
       /* Source block spacing */
       .source-block { margin-bottom: 36px; }
 
-      /* Footer */
-      footer { padding: 24px 16px; font-size: 0.68rem; }
     }
 
     @media (max-width: 400px) {
@@ -372,14 +370,17 @@
       <li><a href="/schools/">Schools</a></li>
       <li><a href="/methodology.html" aria-current="page">Methodology</a></li>
       <li><a href="/about.html">About</a></li>
-      <li><a href="/" class="nav-map">View Map</a></li>
+      <li><a href="/sources.html">Sources</a></li>
     </ul>
-    <button class="nav-burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"
-      onclick="var o=!this.getAttribute('aria-expanded')||this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',o);document.getElementById('nav-links').classList.toggle('open',o)">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
-    </button>
+    <div class="nav-actions">
+      <a href="/" class="nav-map">View Map</a>
+      <button class="nav-burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"
+        onclick="var o=!this.getAttribute('aria-expanded')||this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',o);document.getElementById('nav-links').classList.toggle('open',o)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -556,8 +557,17 @@
 
 </div>
 
-<footer>
-  Atlas Legis · Employment data sourced from ABA 509 Disclosures · Class of 2024
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Atlas Legis</div>
+    <ul class="footer-links" role="list">
+      <li><a href="/schools/">Schools</a></li>
+      <li><a href="/methodology.html">Methodology</a></li>
+      <li><a href="/sources.html">Sources</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Atlas Legis. Data from ABA Required Disclosures.</p>
+  </div>
 </footer>
 
 </body>

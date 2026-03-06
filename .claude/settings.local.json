@@ -7,7 +7,9 @@
       "Bash(__NEW_LINE_53b24edbbcd50040__ echo \"=== index.html \\(root\\) ===\")",
       "Bash(python3 \"C:/Users/hunte/OneDrive/Documents/GitHub/Atlas-Legis/fix_emp_year.py\")",
       "Bash(sort grep -o '\"\"slug\"\":\"\"[^\"\"]*\"\"' \"C:\\\\Users\\\\hunte\\\\OneDrive\\\\Documents\\\\GitHub\\\\Atlas-Legis/index.html\")",
-      "Bash(xargs grep -l \"enrolls approximately\")"
+      "Bash(xargs grep -l \"enrolls approximately\")",
+      "Bash(xargs grep -h 'logo-sub\\\\|logo-title\\\\|class=\"\"logo\"\"')",
+      "Bash(xargs sed -i 's/Law School Data/Law School Analytics/g; s/Law School Atlas/Law School Analytics/g')"
     ]
   }
 }

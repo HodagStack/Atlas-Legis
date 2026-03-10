@@ -50,23 +50,18 @@
     .nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--em-deep); letter-spacing: -.01em; text-decoration: none; }
     .nav-tagline { font-size: .72rem; font-weight: 500; color: var(--muted); letter-spacing: .02em; display: none; }
     @media (min-width: 480px) { .nav-tagline { display: block; } }
+    .nav-right { display: flex; align-items: center; gap: 2px; }
     .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
     .nav-links a { font-size: .82rem; font-weight: 500; color: var(--muted); padding: 5px 11px;
                    border-radius: 6px; transition: color .14s, background .14s; white-space: nowrap; text-decoration: none; }
     .nav-links a:hover { color: var(--ink); background: var(--soft); }
     .nav-links a[aria-current="page"] { color: var(--em-deep); font-weight: 600; }
-    .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-    .nav-map { background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px; font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; }
+    .nav-map { background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px; font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; margin-left: 6px; }
     .nav-map:hover { background: var(--em-deep); color: #fff; }
-    .nav-burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--ink); line-height: 0; }
-    @media (max-width: 600px) {
-      .nav { position: relative; }
-      .nav-burger { display: flex; align-items: center; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; z-index: 100;
-                   background: rgba(255,255,255,.97); border-bottom: 1px solid var(--border); padding: 8px 12px 12px; gap: 2px; }
-      .nav-links.open { display: flex; }
-      .nav-links li { display: block; }
-      .nav-links a { display: block; padding: 10px 12px; border-radius: 6px; }
+    @media (max-width: 500px) {
+      .nav-tagline { display: none !important; }
+      .nav-links a { padding: 5px 7px; }
+      .nav-map { padding: 5px 10px; margin-left: 4px; }
     }
     .header-tag {
       font-size: 0.71rem;
@@ -366,20 +361,12 @@
       <a href="/" class="nav-wordmark" aria-label="Atlas Legis — home">Atlas Legis</a>
       <span class="nav-tagline">Law School Analytics</span>
     </div>
-    <ul class="nav-links" role="list" id="nav-links">
-      <li><a href="/schools/">Schools</a></li>
-      <li><a href="/methodology.html" aria-current="page">Methodology</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/sources.html">Sources</a></li>
-    </ul>
-    <div class="nav-actions">
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="/schools/">Schools</a></li>
+        <li><a href="/debt-planner.html">Debt Planner</a></li>
+      </ul>
       <a href="/" class="nav-map">View Map</a>
-      <button class="nav-burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"
-        onclick="var o=!this.getAttribute('aria-expanded')||this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',o);document.getElementById('nav-links').classList.toggle('open',o)">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
     </div>
   </div>
 </nav>
@@ -561,10 +548,9 @@
   <div class="footer-inner">
     <div class="footer-brand">Atlas Legis</div>
     <ul class="footer-links" role="list">
-      <li><a href="/schools/">Schools</a></li>
-      <li><a href="/methodology.html">Methodology</a></li>
-      <li><a href="/sources.html">Sources</a></li>
       <li><a href="/about.html">About</a></li>
+      <li><a href="/sources.html">Sources</a></li>
+      <li><a href="/methodology.html">Methodology</a></li>
     </ul>
     <p class="footer-copy">© 2026 Atlas Legis. Data from ABA Required Disclosures.</p>
   </div>

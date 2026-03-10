@@ -57,10 +57,15 @@
     .nav-links a { font-size: .82rem; font-weight: 500; color: var(--muted); padding: 5px 11px;
                    border-radius: 6px; transition: color .14s, background .14s; white-space: nowrap; text-decoration: none; }
     .nav-links a:hover { color: var(--ink); background: var(--soft); }
+    .nav-right { display: flex; align-items: center; gap: 2px; }
     .nav-map { background: var(--em); color: #fff !important; padding: 5px 14px; border-radius: 6px;
-               font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; }
+               font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; margin-left: 6px; }
     .nav-map:hover { background: var(--em-deep) !important; }
-    @media (max-width: 600px) { .nav-links li:not(:last-child) { display: none; } }
+    @media (max-width: 500px) {
+      .nav-tagline { display: none !important; }
+      .nav-links a { padding: 5px 7px; }
+      .nav-map { padding: 5px 10px; margin-left: 4px; }
+    }
 
     /* ── Main ── */
     .wrap {
@@ -204,12 +209,13 @@
         <a href="/" class="nav-wordmark" aria-label="Atlas Legis — home">Atlas Legis</a>
         <span class="nav-tagline">Law School Analytics</span>
       </div>
-      <ul class="nav-links" role="list">
-        <li><a href="/schools/">Schools</a></li>
-        <li><a href="/methodology.html">Methodology</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/" class="nav-map">View Map</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" role="list">
+          <li><a href="/schools/">Schools</a></li>
+          <li><a href="/debt-planner.html">Debt Planner</a></li>
+        </ul>
+        <a href="/" class="nav-map">View Map</a>
+      </div>
     </div>
   </nav>
 
@@ -250,10 +256,9 @@
     <div class="footer-inner">
       <div class="footer-brand">Atlas Legis</div>
       <ul class="footer-links" role="list">
-        <li><a href="/schools/">Schools</a></li>
-        <li><a href="/methodology.html">Methodology</a></li>
-        <li><a href="/sources.html">Sources</a></li>
         <li><a href="/about.html">About</a></li>
+        <li><a href="/sources.html">Sources</a></li>
+        <li><a href="/methodology.html">Methodology</a></li>
       </ul>
       <p class="footer-copy">&copy; 2026 Atlas Legis. Data from ABA Required Disclosures.</p>
     </div>

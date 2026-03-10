@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWMH5ER9YS"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LWMH5ER9YS');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Scenario Modeler — Atlas Legis</title>
+  <meta name="description" content="Model your law school debt across three scenarios: Standard, High Risk (scholarship loss), and Public Interest (PSLF). Built on 2026 federal loan rates."/>
+  <link rel="canonical" href="https://atlaslegis.com/modeler.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --em:#1a7a50;--em-deep:#0f5132;--em-mid:#22a86a;--em-pale:#d1ece0;
+      --ink:#0e2018;--ink-soft:#2d4a38;--muted:#6b8c78;--subtle:#94a3b8;
+      --soft:#f0f7f3;--surface:#ffffff;--bg:#f6f8fb;
+      --border:rgba(26,122,80,0.12);--border-2:#f1f5f9;
+      --shadow:rgba(14,32,24,0.08);
+      --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:20px;
+      --sh-sm:0 1px 4px rgba(0,0,0,.06),0 2px 8px rgba(0,0,0,.04);
+      --red:#dc2626;--blue:#2563eb;--amber:#d97706;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 15% 10%,rgba(34,197,94,.13) 0%,transparent 45%),radial-gradient(ellipse at 85% 80%,rgba(16,120,70,.10) 0%,transparent 45%),linear-gradient(160deg,#eef5f1 0%,#ddeee5 50%,#e8f2ed 100%);min-height:100vh;color:var(--ink);-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .nav-brand{display:flex;align-items:baseline;gap:8px;flex-shrink:0;}
+    .nav-wordmark{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--em-deep);letter-spacing:-.01em;}
+    .nav-tagline{font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.02em;display:none;}
+    @media(min-width:480px){.nav-tagline{display:block;}}
+    .nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+    .nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);padding:5px 11px;border-radius:var(--r-sm);transition:color .14s,background .14s;white-space:nowrap;}
+    .nav-links a:hover{color:var(--ink);background:var(--soft);}
+    .nav-links .nav-active{color:var(--em-deep);font-weight:600;}
+    .nav-map{background:var(--em);color:#fff!important;padding:5px 14px;border-radius:var(--r-sm);}
+    .nav-map:hover{background:var(--em-deep)!important;}
+    @media(max-width:600px){.nav-links li:not(:last-child){display:none;}}
+
+    /* PAGE WRAP */
+    .page{max-width:1100px;margin:0 auto;padding:40px 20px 80px;}
+
+    /* HERO */
+    .hero{margin-bottom:32px;}
+    .hero-eyebrow{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--em);font-weight:600;margin-bottom:10px;}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;color:var(--em-deep);line-height:1.15;letter-spacing:-.01em;margin-bottom:12px;}
+    .hero-lead{font-size:.97rem;color:var(--ink-soft);line-height:1.72;font-weight:300;max-width:640px;}
+
+    /* CARD */
+    .card{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--r-xl);box-shadow:var(--sh-sm);}
+    .card-head{padding:18px 22px 14px;border-bottom:1px solid var(--border-2);display:flex;align-items:baseline;justify-content:space-between;gap:10px;}
+    .card-head h2{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);letter-spacing:-.01em;}
+    .card-note{font-size:.73rem;color:var(--muted);white-space:nowrap;}
+    .card-body{padding:20px 22px 22px;}
+
+    /* INPUT SECTION */
+    .input-card{margin-bottom:28px;}
+    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;}
+    @media(max-width:640px){.input-grid{grid-template-columns:1fr;}}
+    .input-group{display:flex;flex-direction:column;gap:6px;}
+    .input-group.full{grid-column:1/-1;}
+    label{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+    .field-note{font-size:.7rem;color:var(--subtle);margin-top:2px;}
+    input[type=number],input[type=text],select{width:100%;height:46px;padding:0 14px;border:1px solid rgba(26,122,80,.22);border-radius:var(--r-md);font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--ink);background:var(--surface);transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;}
+    input[type=number]:focus,input[type=text]:focus,select:focus{outline:none;border-color:var(--em);box-shadow:0 0 0 3px rgba(26,122,80,.12);}
+    input.warn{border-color:var(--amber);}
+    select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b8c78' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+    .radio-group{display:flex;gap:8px;flex-wrap:wrap;}
+    .radio-pill{position:relative;}
+    .radio-pill input{position:absolute;opacity:0;width:0;height:0;}
+    .radio-pill label{display:inline-flex;align-items:center;height:44px;padding:0 16px;border:1px solid rgba(26,122,80,.22);border-radius:100px;font-size:.82rem;font-weight:500;color:var(--muted);cursor:pointer;transition:all .14s;text-transform:none;letter-spacing:0;}
+    .radio-pill input:checked+label{background:var(--em);border-color:var(--em);color:#fff;}
+    .radio-pill label:hover{border-color:var(--em);color:var(--em);}
+    .tuition-flag{font-size:.72rem;color:var(--amber);font-weight:500;margin-top:3px;display:none;}
+    .tuition-flag.visible{display:block;}
+
+    /* RESULTS */
+    .results-section{display:flex;flex-direction:column;gap:20px;}
+    .scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    @media(max-width:860px){.scenario-grid{grid-template-columns:1fr;}}
+
+    /* SCENARIO CARDS */
+    .sc-card{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-sm);background:var(--surface);}
+    .sc-head{padding:14px 20px 12px;display:flex;align-items:center;justify-content:space-between;}
+    .sc-head-standard{background:linear-gradient(135deg,var(--em-deep) 0%,var(--em) 100%);}
+    .sc-head-highrisk{background:linear-gradient(135deg,#7f1d1d 0%,var(--red) 100%);}
+    .sc-head-pslf{background:linear-gradient(135deg,#1e3a8a 0%,var(--blue) 100%);}
+    .sc-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:#fff;}
+    .sc-badge{font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);padding:3px 9px;border-radius:100px;}
+    .sc-hero{padding:16px 20px 14px;border-bottom:1px solid var(--border-2);}
+    .sc-hero-lbl{font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+    .sc-hero-val{font-family:'Playfair Display',serif;font-size:2rem;line-height:1;letter-spacing:-.02em;color:var(--ink);}
+    .sc-hero-sub{font-size:.72rem;color:var(--muted);margin-top:3px;}
+    .sc-rows{padding:6px 20px 16px;}
+    .sc-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--border-2);}
+    .sc-row:last-child{border-bottom:none;}
+    .sc-lbl{font-size:.78rem;color:var(--muted);}
+    .sc-val{font-family:'Playfair Display',serif;font-size:.98rem;color:var(--ink);letter-spacing:-.01em;text-align:right;}
+    .sc-val.positive{color:#059669;}
+    .sc-val.negative{color:var(--red);}
+    .sc-note{font-size:.7rem;color:var(--subtle);padding:0 20px 14px;line-height:1.5;}
+
+    /* CHART */
+    .chart-card .card-body{padding:20px 16px 16px;}
+    .chart-wrap{position:relative;height:320px;}
+    @media(max-width:640px){.chart-wrap{height:240px;}}
+    .chart-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;padding:0 6px;}
+    .legend-item{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--muted);}
+    .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+    /* SHARE */
+    .share-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+    .disclaimer{font-size:.74rem;color:var(--muted);line-height:1.65;max-width:780px;}
+    .disclaimer a{color:var(--em);border-bottom:1px solid rgba(26,122,80,.25);}
+
+    /* BUTTONS */
+    .btn-copy{display:inline-flex;align-items:center;gap:7px;background:var(--em);color:#fff;padding:11px 22px;border-radius:var(--r-md);font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;border:none;cursor:pointer;transition:background .14s,transform .12s;white-space:nowrap;}
+    .btn-copy:hover{background:var(--em-deep);transform:translateY(-1px);}
+    .btn-copy svg{flex-shrink:0;}
+
+    /* TOAST */
+    .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 22px;border-radius:100px;font-size:.83rem;font-weight:500;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;z-index:999;white-space:nowrap;}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+    /* FOOTER */
+    .footer{background:#0d1117;padding:36px 20px;}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:1.05rem;color:rgba(255,255,255,.75);}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px;list-style:none;}
+    .footer-links a{font-size:.78rem;color:rgba(255,255,255,.35);transition:color .14s;}
+    .footer-links a:hover{color:rgba(255,255,255,.7);}
+    .footer-copy{font-size:.72rem;color:rgba(255,255,255,.22);}
+
+    /* EMPTY STATE */
+    .empty-state{text-align:center;padding:48px 20px;color:var(--muted);}
+    .empty-state p{font-size:.9rem;line-height:1.7;}
+  </style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="/" class="nav-wordmark">Atlas Legis</a>
+      <span class="nav-tagline">Law School Analytics</span>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="/schools/">Schools</a></li>
+      <li><a href="/methodology.html">Methodology</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/" class="nav-map">View Map</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="hero">
+    <p class="hero-eyebrow">Financial Planning Tool</p>
+    <h1>Scenario Modeler</h1>
+    <p class="hero-lead">Project your law school debt across three scenarios using 2026 federal loan rates. Adjust tuition, scholarship, and cost of living to model your specific situation.</p>
+  </div>
+
+  <!-- INPUTS -->
+  <section class="card input-card" aria-labelledby="inputs-h">
+    <div class="card-head">
+      <h2 id="inputs-h">Your Numbers</h2>
+      <span class="card-note">2026 federal rates: 7.94% Unsub &middot; 8.94% PLUS</span>
+    </div>
+    <div class="card-body">
+      <div class="input-grid">
+
+        <div class="input-group full">
+          <label for="schoolSelect">School</label>
+          <select id="schoolSelect">
+            <option value="">— Select a school or enter manually below —</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="tuitionInput">Annual Tuition ($)</label>
+          <input type="number" id="tuitionInput" min="0" max="200000" placeholder="e.g. 63994"/>
+          <span class="tuition-flag" id="tuitionFlag">&#9888; Tuition data unavailable for this school — please enter manually.</span>
+        </div>
+
+        <div class="input-group">
+          <label for="scholarshipInput">Annual Scholarship ($)</label>
+          <input type="number" id="scholarshipInput" min="0" max="200000" placeholder="0" value="0"/>
+        </div>
+
+        <div class="input-group">
+          <label for="colInput">Annual Cost of Living ($)</label>
+          <input type="number" id="colInput" min="0" max="100000" placeholder="e.g. 22000" value="20000"/>
+          <span class="field-note">Housing, food, transport — excluding tuition.</span>
+        </div>
+
+        <div class="input-group">
+          <label>Loan Type</label>
+          <div class="radio-group">
+            <div class="radio-pill">
+              <input type="radio" name="loanType" id="lt-mixed" value="mixed" checked/>
+              <label for="lt-mixed">Mixed <small style="opacity:.7">(default)</small></label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="loanType" id="lt-unsub" value="unsub"/>
+              <label for="lt-unsub">Unsub 7.94%</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="loanType" id="lt-plus" value="plus"/>
+              <label for="lt-plus">PLUS 8.94%</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="pubSalaryInput">Public Interest Starting Salary ($)</label>
+          <input type="number" id="pubSalaryInput" min="20000" max="500000" value="55000"/>
+          <span class="field-note">Used for PSLF / IBR monthly payment estimate.</span>
+        </div>
+
+        <div class="input-group">
+          <label for="privSalaryInput">Private Sector Starting Salary ($)</label>
+          <input type="number" id="privSalaryInput" min="20000" max="1000000" value="85000"/>
+          <span class="field-note">Used for debt-to-income calculation.</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <div class="results-section" id="resultsSection">
+    <div class="empty-state" id="emptyState">
+      <p>Select a school or enter your tuition above to see projections.</p>
+    </div>
+    <div id="scenarioGrid" class="scenario-grid" style="display:none"></div>
+    <div id="chartCard" class="card chart-card" style="display:none">
+      <div class="card-head">
+        <h2>Loan Balance Over Time</h2>
+        <span class="card-note">School years 0 – 3 &middot; Repayment years 3 – 13</span>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap"><canvas id="balanceChart"></canvas></div>
+        <div class="chart-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#059669"></div>Standard</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>High Risk</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Public Interest (PSLF)</div>
+        </div>
+      </div>
+    </div>
+    <div id="shareRow" class="share-row" style="display:none">
+      <p class="disclaimer">
+        Projections are estimates for planning purposes only. Interest accrual uses daily compounding on the effective annual rate. High Risk assumes scholarship loss after Year 1. PSLF assumes 120 qualifying payments at a government or nonprofit employer; forgiveness is tax-free under current law. Loan limits, eligibility, and repayment plan rules subject to change. Verify details with your financial aid office and <a href="https://studentaid.gov" target="_blank" rel="noopener">StudentAid.gov</a>.
+      </p>
+      <button class="btn-copy" onclick="copyLink()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy Link
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Atlas Legis</div>
+    <ul class="footer-links" role="list">
+      <li><a href="/schools/">Schools</a></li>
+      <li><a href="/methodology.html">Methodology</a></li>
+      <li><a href="/sources.html">Sources</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Atlas Legis. Data from ABA Required Disclosures.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Link copied to clipboard</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+// ─────────────────────────────────────────────────────────────
+// DATA LAYER
+// ─────────────────────────────────────────────────────────────
+// [slug, displayName, annualTuition|null, city, stateAbbr]
+const _SD = [
+  ['albany-law-school','Albany Law School',63994,'Albany','NY'],
+  ['american-university-washington-college-of-law','American University',66990,'Washington','DC'],
+  ['appalachian-school-of-law','Appalachian School of Law',41000,'Grundy','VA'],
+  ['arizona-state-sandra-day-oconnor-college-of-law','Arizona State University',28390,'Phoenix','AZ'],
+  ['atlantas-john-marshall-law-school',"Atlanta's John Marshall Law School",52536,'Atlanta','GA'],
+  ['ave-maria-school-of-law','Ave Maria School of Law',49500,'Naples','FL'],
+  ['barry-university-dwayne-o-andreas-school-of-law','Barry University',42000,'Orlando','FL'],
+  ['baylor-law-school','Baylor Law School',null,'Waco','TX'],
+  ['belmont-university-college-of-law','Belmont University',55500,'Nashville','TN'],
+  ['boston-college-law-school','Boston College',72380,'Newton','MA'],
+  ['boston-university-school-of-law','Boston University',69870,'Boston','MA'],
+  ['brooklyn-law-school','Brooklyn Law School',75496,'Brooklyn','NY'],
+  ['byu-j-reuben-clark-law-school','Brigham Young University',15992,'Provo','UT'],
+  ['california-western-school-of-law','California Western School of Law',64720,'San Diego','CA'],
+  ['campbell-university-norman-adrian-wiggins-school-of-law','Campbell University',51840,'Raleigh','NC'],
+  ['capital-university-law-school','Capital University',45066,'Columbus','OH'],
+  ['cardozo-school-of-law','Cardozo / Yeshiva University',74438,'New York','NY'],
+  ['case-western-reserve-university-school-of-law','Case Western Reserve University',64600,'Cleveland','OH'],
+  ['catholic-university-of-america-columbus-school-of-law','Catholic University of America',61580,'Washington','DC'],
+  ['chapman-university-fowler-school-of-law','Chapman University',63126,'Orange','CA'],
+  ['charleston-school-of-law','Charleston School of Law',48600,'Charleston','SC'],
+  ['chicago-kent-college-of-law-iit','Chicago-Kent / IIT',null,'Chicago','IL'],
+  ['cleveland-state-university-college-of-law','Cleveland State University',29766,'Cleveland','OH'],
+  ['columbia-law-school','Columbia University',85368,'New York','NY'],
+  ['cornell-law-school','Cornell University',84722,'Ithaca','NY'],
+  ['creighton-university-school-of-law','Creighton University',null,'Omaha','NE'],
+  ['cuny-school-of-law','CUNY School of Law',15450,'New York','NY'],
+  ['depaul-university-college-of-law','DePaul University',55328,'Chicago','IL'],
+  ['drake-university-law-school','Drake University',50920,'Des Moines','IA'],
+  ['drexel-university-kline-school-of-law','Drexel University',57000,'Philadelphia','PA'],
+  ['duke-university-school-of-law','Duke University',80100,'Durham','NC'],
+  ['duquesne-university-school-of-law','Duquesne University',58898,'Pittsburgh','PA'],
+  ['elon-university-school-of-law','Elon University',45333,'Greensboro','NC'],
+  ['emory-university-school-of-law','Emory University',69510,'Atlanta','GA'],
+  ['faulkner-university-thomas-goode-jones-school-of-law','Faulkner University',39900,'Montgomery','AL'],
+  ['florida-a-m-university-college-of-law','Florida A&M University',null,'Orlando','FL'],
+  ['florida-international-university-college-of-law','Florida International University',null,'Miami','FL'],
+  ['florida-state-university-college-of-law','Florida State University',null,'Tallahassee','FL'],
+  ['fordham-university-school-of-law','Fordham University',78078,'New York','NY'],
+  ['george-mason-antonin-scalia-law-school','George Mason University',24864,'Arlington','VA'],
+  ['george-washington-university-law-school','George Washington University',75420,'Washington','DC'],
+  ['georgetown-university-law-center','Georgetown University',83576,'Washington','DC'],
+  ['georgia-state-university-college-of-law','Georgia State University',16162,'Atlanta','GA'],
+  ['gonzaga-university-school-of-law','Gonzaga University',57962,'Spokane','WA'],
+  ['harvard-law-school','Harvard University',77100,'Cambridge','MA'],
+  ['hofstra-university-deane-school-of-law','Hofstra University',73344,'Hempstead','NY'],
+  ['howard-university-school-of-law','Howard University',39780,'Washington','DC'],
+  ['indiana-university-maurer-school-of-law','Indiana University – Bloomington',36950,'Bloomington','IN'],
+  ['indiana-university-mckinney-school-of-law','Indiana University – Indianapolis',null,'Indianapolis','IN'],
+  ['inter-american-university-of-puerto-rico-school-of-law','Inter American University of PR',16585,'San Juan','PR'],
+  ['jacksonville-university-school-of-law','Jacksonville University',null,'Jacksonville','FL'],
+  ['kenneth-f-kahn-school-of-law-at-high-point-university','High Point University',46350,'High Point','NC'],
+  ['lewis-clark-law-school','Lewis & Clark',61434,'Portland','OR'],
+  ['liberty-university-school-of-law','Liberty University',43150,'Lynchburg','VA'],
+  ['lincoln-memorial-university-duncan-school-of-law','Lincoln Memorial University',null,'Knoxville','TN'],
+  ['loyola-law-school-los-angeles','Loyola – Los Angeles',70360,'Los Angeles','CA'],
+  ['loyola-university-chicago-school-of-law','Loyola – Chicago',58670,'Chicago','IL'],
+  ['loyola-university-new-orleans-college-of-law','Loyola – New Orleans',55024,'New Orleans','LA'],
+  ['lsu-paul-m-hebert-law-center','Louisiana State University',19750,'Baton Rouge','LA'],
+  ['marquette-university-law-school','Marquette University',51970,'Milwaukee','WI'],
+  ['mercer-university-walter-f-george-school-of-law','Mercer University',44782,'Macon','GA'],
+  ['michigan-state-university-college-of-law','Michigan State University',43480,'East Lansing','MI'],
+  ['mississippi-college-school-of-law','Mississippi College',37980,'Jackson','MS'],
+  ['mitchell-hamline-school-of-law','Mitchell Hamline',55300,'St. Paul','MN'],
+  ['new-england-law-boston','New England Law | Boston',62896,'Boston','MA'],
+  ['new-york-law-school','New York Law School',71052,'New York','NY'],
+  ['north-carolina-central-university-school-of-law','North Carolina Central University',13444,'Durham','NC'],
+  ['northeastern-university-school-of-law','Northeastern University',65652,'Boston','MA'],
+  ['northern-illinois-university-college-of-law','Northern Illinois University',23667,'DeKalb','IL'],
+  ['northern-kentucky-university-chase-college-of-law','Northern Kentucky University',24388,'Highland Heights','KY'],
+  ['northwestern-pritzker-school-of-law','Northwestern University',79772,'Chicago','IL'],
+  ['nova-southeastern-university-shepard-broad-college-of-law','Nova Southeastern University',49350,'Davie','FL'],
+  ['nyu-school-of-law','New York University',83952,'New York','NY'],
+  ['ohio-northern-university-pettit-college-of-law','Ohio Northern University',33900,'Ada','OH'],
+  ['ohio-state-university-moritz-college-of-law','Ohio State University',35650,'Columbus','OH'],
+  ['oklahoma-city-university-school-of-law','Oklahoma City University',null,'Oklahoma City','OK'],
+  ['pace-university-elisabeth-haub-school-of-law','Pace University',56648,'White Plains','NY'],
+  ['penn-carey-law','University of Pennsylvania',78348,'Philadelphia','PA'],
+  ['penn-state-dickinson-law','Penn State Dickinson Law',60048,'Carlisle','PA'],
+  ['pepperdine-caruso-school-of-law','Pepperdine University',72920,'Malibu','CA'],
+  ['pontifical-catholic-university-of-puerto-rico-school-of-law','Pontifical Catholic Univ. of PR',null,'Ponce','PR'],
+  ['quinnipiac-university-school-of-law','Quinnipiac University',56610,'Hamden','CT'],
+  ['regent-university-school-of-law','Regent University',null,'Virginia Beach','VA'],
+  ['roger-williams-university-school-of-law','Roger Williams University',47400,'Bristol','RI'],
+  ['rutgers-law-school','Rutgers University',31577,'Newark','NJ'],
+  ['saint-louis-university-school-of-law','Saint Louis University',55260,'St. Louis','MO'],
+  ['samford-university-cumberland-school-of-law','Samford University',46334,'Birmingham','AL'],
+  ['santa-clara-university-school-of-law','Santa Clara University',null,'Santa Clara','CA'],
+  ['seattle-university-school-of-law','Seattle University',null,'Seattle','WA'],
+  ['seton-hall-university-school-of-law','Seton Hall University',69660,'Newark','NJ'],
+  ['smu-dedman-school-of-law','Southern Methodist University',60844,'Dallas','TX'],
+  ['south-texas-college-of-law-houston','South Texas College of Law Houston',42960,'Houston','TX'],
+  ['southern-illinois-university-school-of-law','Southern Illinois University',null,'Carbondale','IL'],
+  ['southern-university-law-center','Southern University',11338,'Baton Rouge','LA'],
+  ['southwestern-law-school','Southwestern Law School',63160,'Los Angeles','CA'],
+  ['st-johns-university-school-of-law',"St. John's University",75170,'Queens','NY'],
+  ['st-marys-university-school-of-law',"St. Mary's University",44910,'San Antonio','TX'],
+  ['st-thomas-university-school-of-law','St. Thomas University (Miami)',44730,'Miami Gardens','FL'],
+  ['stanford-law-school','Stanford University',77454,'Stanford','CA'],
+  ['stetson-university-college-of-law','Stetson University',56521,'Gulfport','FL'],
+  ['suffolk-university-law-school','Suffolk University',62610,'Boston','MA'],
+  ['syracuse-university-college-of-law','Syracuse University',64650,'Syracuse','NY'],
+  ['temple-university-beasley-school-of-law','Temple University',32588,'Philadelphia','PA'],
+  ['texas-a-m-university-school-of-law','Texas A&M University',32634,'Fort Worth','TX'],
+  ['texas-southern-university-thurgood-marshall-school-of-law','Texas Southern University',19202,'Houston','TX'],
+  ['texas-tech-university-school-of-law','Texas Tech University',22590,'Lubbock','TX'],
+  ['thomas-m-cooley-law-school','Thomas M. Cooley Law School',null,'Lansing','MI'],
+  ['touro-university-jacob-d-fuchsberg-law-center','Touro University',61000,'Central Islip','NY'],
+  ['tulane-university-law-school','Tulane University',69578,'New Orleans','LA'],
+  ['ua-little-rock-bowen-school-of-law','Univ. of Arkansas – Little Rock',13770,'Little Rock','AR'],
+  ['uc-berkeley-school-of-law','UC Berkeley',62532,'Berkeley','CA'],
+  ['uc-college-of-the-law-san-francisco','UC College of Law San Francisco',53087,'San Francisco','CA'],
+  ['uc-davis-school-of-law','UC Davis',57460,'Davis','CA'],
+  ['uc-irvine-school-of-law','UC Irvine',59080,'Irvine','CA'],
+  ['ucla-school-of-law','UCLA',59084,'Los Angeles','CA'],
+  ['university-at-buffalo-school-of-law','University at Buffalo',26430,'Buffalo','NY'],
+  ['university-of-akron-school-of-law','University of Akron',22359,'Akron','OH'],
+  ['university-of-alabama-school-of-law','University of Alabama',24980,'Tuscaloosa','AL'],
+  ['university-of-arizona-james-e-rogers-college-of-law','University of Arizona',26490,'Tucson','AZ'],
+  ['university-of-arkansas-school-of-law','University of Arkansas',null,'Fayetteville','AR'],
+  ['university-of-baltimore-school-of-law','University of Baltimore',33944,'Baltimore','MD'],
+  ['university-of-chicago-law-school','University of Chicago',83316,'Chicago','IL'],
+  ['university-of-cincinnati-college-of-law','University of Cincinnati',24010,'Cincinnati','OH'],
+  ['university-of-colorado-law-school','University of Colorado',35992,'Boulder','CO'],
+  ['university-of-connecticut-school-of-law','University of Connecticut',30354,'Hartford','CT'],
+  ['university-of-dayton-school-of-law','University of Dayton',null,'Dayton','OH'],
+  ['university-of-denver-sturm-college-of-law','University of Denver',63390,'Denver','CO'],
+  ['university-of-detroit-mercy-school-of-law','University of Detroit Mercy',null,'Detroit','MI'],
+  ['university-of-florida-levin-college-of-law','University of Florida',19139,'Gainesville','FL'],
+  ['university-of-georgia-school-of-law','University of Georgia',18044,'Athens','GA'],
+  ['university-of-hawaii-richardson-school-of-law','University of Hawaii',23304,'Honolulu','HI'],
+  ['university-of-houston-law-center','University of Houston',31326,'Houston','TX'],
+  ['university-of-idaho-college-of-law','University of Idaho',27516,'Moscow','ID'],
+  ['university-of-illinois-chicago-school-of-law','University of Illinois – Chicago',null,'Chicago','IL'],
+  ['university-of-illinois-college-of-law','University of Illinois – Urbana',36500,'Champaign','IL'],
+  ['university-of-iowa-college-of-law','University of Iowa',30944,'Iowa City','IA'],
+  ['university-of-kansas-school-of-law','University of Kansas',null,'Lawrence','KS'],
+  ['university-of-kentucky-college-of-law','University of Kentucky',25685,'Lexington','KY'],
+  ['university-of-louisville-brandeis-school-of-law','University of Louisville',27000,'Louisville','KY'],
+  ['university-of-maine-school-of-law','University of Maine',26100,'Portland','ME'],
+  ['university-of-maryland-carey-school-of-law','University of Maryland',37830,'Baltimore','MD'],
+  ['university-of-massachusetts-school-of-law','University of Massachusetts',31766,'North Dartmouth','MA'],
+  ['university-of-memphis-humphreys-school-of-law','University of Memphis',18634,'Memphis','TN'],
+  ['university-of-miami-school-of-law','University of Miami',66720,'Coral Gables','FL'],
+  ['university-of-michigan-law-school','University of Michigan',76108,'Ann Arbor','MI'],
+  ['university-of-minnesota-law-school','University of Minnesota',51440,'Minneapolis','MN'],
+  ['university-of-mississippi-school-of-law','University of Mississippi',19797,'Oxford','MS'],
+  ['university-of-missouri-kansas-city-school-of-law','University of Missouri – Kansas City',null,'Kansas City','MO'],
+  ['university-of-missouri-school-of-law','University of Missouri',null,'Columbia','MO'],
+  ['university-of-montana-school-of-law','University of Montana',24582,'Missoula','MT'],
+  ['university-of-nebraska-college-of-law','University of Nebraska',null,'Lincoln','NE'],
+  ['university-of-new-hampshire-franklin-pierce-school-of-law','University of New Hampshire',42000,'Concord','NH'],
+  ['university-of-new-mexico-school-of-law','University of New Mexico',19474,'Albuquerque','NM'],
+  ['university-of-north-carolina-school-of-law','University of North Carolina',28082,'Chapel Hill','NC'],
+  ['university-of-north-dakota-school-of-law','University of North Dakota',null,'Grand Forks','ND'],
+  ['university-of-north-texas-dallas-college-of-law','University of North Texas – Dallas',null,'Dallas','TX'],
+  ['university-of-notre-dame-law-school','Notre Dame',73430,'Notre Dame','IN'],
+  ['university-of-oklahoma-college-of-law','University of Oklahoma',18739,'Norman','OK'],
+  ['university-of-oregon-school-of-law','University of Oregon',47240,'Eugene','OR'],
+  ['university-of-pittsburgh-school-of-law','University of Pittsburgh',39936,'Pittsburgh','PA'],
+  ['university-of-puerto-rico-school-of-law','University of Puerto Rico',null,'San Juan','PR'],
+  ['university-of-richmond-school-of-law','University of Richmond',57700,'Richmond','VA'],
+  ['university-of-san-diego-school-of-law','University of San Diego',66950,'San Diego','CA'],
+  ['university-of-san-francisco-school-of-law','University of San Francisco',59800,'San Francisco','CA'],
+  ['university-of-south-carolina-school-of-law','University of South Carolina',20322,'Columbia','SC'],
+  ['university-of-south-dakota-school-of-law','University of South Dakota',12076,'Vermillion','SD'],
+  ['university-of-st-thomas-school-of-law','University of St. Thomas (MN)',50998,'Minneapolis','MN'],
+  ['university-of-tennessee-college-of-law','University of Tennessee',16696,'Knoxville','TN'],
+  ['university-of-texas-school-of-law','University of Texas',38236,'Austin','TX'],
+  ['university-of-the-district-of-columbia-david-a-clarke-school-of-law','University of the District of Columbia',12438,'Washington','DC'],
+  ['university-of-the-pacific-mcgeorge-school-of-law','University of the Pacific (McGeorge)',62678,'Sacramento','CA'],
+  ['university-of-toledo-college-of-law','University of Toledo',26446,'Toledo','OH'],
+  ['university-of-tulsa-college-of-law','University of Tulsa',30840,'Tulsa','OK'],
+  ['university-of-utah-s-j-quinney-college-of-law','University of Utah',34721,'Salt Lake City','UT'],
+  ['university-of-virginia-school-of-law','University of Virginia',74078,'Charlottesville','VA'],
+  ['university-of-washington-school-of-law','University of Washington',45927,'Seattle','WA'],
+  ['university-of-wisconsin-law-school','University of Wisconsin',36526,'Madison','WI'],
+  ['university-of-wyoming-college-of-law','University of Wyoming',null,'Laramie','WY'],
+  ['unlv-william-s-boyd-school-of-law','UNLV Boyd School of Law',31518,'Las Vegas','NV'],
+  ['usc-gould-school-of-law','University of Southern California',84034,'Los Angeles','CA'],
+  ['vanderbilt-university-law-school','Vanderbilt University',76440,'Nashville','TN'],
+  ['vermont-law-school','Vermont Law School',55382,'South Royalton','VT'],
+  ['villanova-university-widger-school-of-law','Villanova University',59800,'Villanova','PA'],
+  ['wake-forest-university-school-of-law','Wake Forest University',57920,'Winston-Salem','NC'],
+  ['washburn-university-school-of-law','Washburn University',null,'Topeka','KS'],
+  ['washington-and-lee-university-school-of-law','Washington and Lee University',57450,'Lexington','VA'],
+  ['washington-university-in-st-louis-school-of-law','Washington University in St. Louis',72792,'St. Louis','MO'],
+  ['wayne-state-university-law-school','Wayne State University',38861,'Detroit','MI'],
+  ['west-virginia-university-college-of-law','West Virginia University',26370,'Morgantown','WV'],
+  ['western-new-england-university-school-of-law','Western New England University',50320,'Springfield','MA'],
+  ['western-state-college-of-law-at-westcliff-university','Western State College of Law',54840,'Irvine','CA'],
+  ['widener-university-commonwealth-law-school','Widener – Commonwealth',null,'Harrisburg','PA'],
+  ['widener-university-delaware-law-school','Widener – Delaware',null,'Wilmington','DE'],
+  ['willamette-university-college-of-law','Willamette University',56600,'Salem','OR'],
+  ['william-mary-law-school','William & Mary',38734,'Williamsburg','VA'],
+  ['wilmington-university-school-of-law','Wilmington University',null,'Wilmington','DE'],
+  ['yale-law-school','Yale University',76636,'New Haven','CT'],
+];
+
+// Build lookup object
+const tuitionData = {};
+_SD.forEach(([slug, name, tuition, city, state]) => {
+  tuitionData[slug] = { name, tuition, city, state };
+});
+
+// COL defaults by city (annual, excluding tuition)
+const colDefaults = {
+  'New York':28000,'Brooklyn':27000,'Queens':26000,'Hempstead':24000,'White Plains':23000,'Central Islip':22000,'Ithaca':19000,
+  'Los Angeles':25000,'Malibu':24000,'Orange':23000,'San Diego':23000,'Santa Clara':26000,'San Francisco':28000,'Berkeley':27000,'Davis':20000,'Irvine':23000,'Sacramento':20000,'Stanford':26000,
+  'Chicago':22000,'DeKalb':16000,'Carbondale':14000,
+  'Washington':25000,'Arlington':24000,
+  'Boston':25000,'Newton':24000,'Cambridge':25000,'North Dartmouth':20000,
+  'Philadelphia':22000,'Villanova':22000,'Carlisle':17000,
+  'Pittsburgh':19000,'Harrisburg':18000,
+  'Atlanta':21000,'Athens':17000,'Macon':16000,
+  'Miami':23000,'Coral Gables':23000,'Miami Gardens':22000,'Davie':21000,'Gulfport':19000,'Naples':20000,'Orlando':20000,'Tallahassee':17000,'Jacksonville':17000,'Gainesville':17000,
+  'Houston':20000,'Dallas':20000,'Austin':21000,'Fort Worth':19000,'San Antonio':17000,'Waco':15000,'Lubbock':14000,
+  'Seattle':25000,'Spokane':19000,'Tacoma':21000,
+  'Denver':22000,'Boulder':22000,
+  'Nashville':21000,'Memphis':16000,'Knoxville':16000,
+  'Minneapolis':21000,'St. Paul':20000,
+  'St. Louis':18000,'Kansas City':18000,'Columbia':16000,
+  'New Orleans':20000,'Baton Rouge':17000,
+  'Baltimore':21000,
+  'Newark':22000,
+  'Phoenix':19000,'Tucson':17000,
+  'Portland':23000,'Eugene':19000,'Salem':18000,'South Royalton':15000,
+  'Detroit':18000,'Lansing':16000,'East Lansing':17000,'Ann Arbor':20000,
+  'Cleveland':17000,'Columbus':18000,'Cincinnati':18000,'Akron':16000,'Dayton':16000,'Toledo':15000,'Ada':13000,
+  'Indianapolis':18000,'Bloomington':16000,
+  'Milwaukee':19000,
+  'Charlotte':20000,'Durham':19000,'Chapel Hill':19000,'Raleigh':19000,'Greensboro':17000,'High Point':17000,'Winston-Salem':17000,
+  'Columbia':17000,'Charleston':19000,
+  'Charlottesville':18000,'Richmond':18000,'Williamsburg':17000,'Lexington':16000,'Arlington':24000,'Virginia Beach':18000,'Lynchburg':15000,
+  'Salt Lake City':20000,'Provo':16000,
+  'Las Vegas':19000,
+  'Honolulu':29000,
+  'Omaha':17000,'Lincoln':15000,'Fayetteville':15000,'Little Rock':16000,'Grand Forks':13000,'Vermillion':12000,'Laramie':13000,'Moscow':13000,'Missoula':17000,
+  'Iowa City':16000,'Des Moines':17000,
+  'Lawrence':15000,'Topeka':14000,'Oklahoma City':16000,'Norman':15000,'Tulsa':16000,
+  'Concord':20000,'Hartford':20000,'Hamden':21000,'New Haven':21000,'Springfield':17000,'Bristol':19000,
+  'Syracuse':17000,'Buffalo':17000,
+  'Wilmington':19000,'Morgantown':15000,'Albuquerque':17000,'Oxford':15000,'Jackson':16000,
+  'San Juan':15000,'Ponce':12000,'Madison':19000,'Tuscaloosa':15000,'Birmingham':17000,'Montgomery':15000,'Grundy':12000,'Morgantown':15000,'Harrisburg':18000,
+};
+function getCol(city) { return colDefaults[city] || 18000; }
+
+// ─────────────────────────────────────────────────────────────
+// CALCULATIONS
+// ─────────────────────────────────────────────────────────────
+const UNSUB = 0.0794, PLUS = 0.0894;
+
+function effectiveRate(loanType, annualAmt) {
+  if (loanType === 'unsub') return UNSUB;
+  if (loanType === 'plus')  return PLUS;
+  // mixed: first $20,500 at unsub, rest at plus
+  if (annualAmt <= 0) return UNSUB;
+  const u = Math.min(20500, annualAmt);
+  const p = Math.max(0, annualAmt - u);
+  return (u * UNSUB + p * PLUS) / annualAmt;
+}
+
+function ear(rate) { return Math.pow(1 + rate / 365.25, 365.25) - 1; }
+
+function buildBalanceTimeline(yearAmounts, loanType) {
+  // Returns balance at end of each school year [y1, y2, y3]
+  const points = [0];
+  let bal = 0;
+  yearAmounts.forEach(amt => {
+    const r = ear(effectiveRate(loanType, amt));
+    bal = (bal + amt) * (1 + r);
+    points.push(Math.round(bal));
+  });
+  return points; // length 4: [0, endY1, endY2, endY3=gradBalance]
+}
+
+function stdMonthlyPayment(P, annualRate) {
+  const r = annualRate / 12, n = 120;
+  if (r === 0) return P / n;
+  return P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+}
+
+function ibrMonthly(salary) {
+  const fpl = 15860; // 2026 approx
+  return Math.max(0, (salary - 1.5 * fpl) * 0.10 / 12);
+}
+
+function repaySchedule(gradBal, loanType, annualBorrow, scenario, pubSalary) {
+  const avgRate = effectiveRate(loanType, annualBorrow);
+  const mr = avgRate / 12;
+  const yearBalances = [];
+
+  if (scenario === 'standard' || scenario === 'highrisk') {
+    const pmt = stdMonthlyPayment(gradBal, avgRate);
+    let bal = gradBal;
+    for (let yr = 1; yr <= 10; yr++) {
+      for (let m = 0; m < 12; m++) {
+        bal = Math.max(0, bal * (1 + mr) - pmt);
+      }
+      yearBalances.push(Math.round(bal));
+    }
+    const totalPaid = pmt * 120;
+    return { monthlyPayment: pmt, totalPaid, totalInterest: totalPaid - gradBal, amountForgiven: 0, yearBalances };
+  } else {
+    // PSLF / IBR
+    const pmt = ibrMonthly(pubSalary);
+    let bal = gradBal, totalPaid = 0;
+    for (let yr = 1; yr <= 10; yr++) {
+      for (let m = 0; m < 12; m++) {
+        bal = Math.max(0, bal * (1 + mr) - pmt);
+        totalPaid += pmt;
+      }
+      if (yr < 10) yearBalances.push(Math.round(bal));
+      else {
+        const forgiven = Math.round(bal);
+        yearBalances.push(0); // PSLF forgiveness at year 10
+        return { monthlyPayment: pmt, totalPaid, amountForgiven: forgiven, effectiveCost: totalPaid, yearBalances };
+      }
+    }
+  }
+}
+
+function calcScenario(inputs, scenario) {
+  const { tuition, scholarship, col, loanType, pubSalary, privSalary } = inputs;
+  const netTuition = Math.max(0, tuition - scholarship);
+
+  let yearAmounts;
+  if (scenario === 'highrisk') {
+    yearAmounts = [netTuition + col, tuition + col, tuition + col]; // scholarship lost Y2+
+  } else {
+    yearAmounts = [netTuition + col, netTuition + col, netTuition + col];
+  }
+
+  const avgBorrow = (yearAmounts[0] + yearAmounts[1] + yearAmounts[2]) / 3;
+  const schoolTimeline = buildBalanceTimeline(yearAmounts, loanType);
+  const gradBal = schoolTimeline[3];
+  const repay = repaySchedule(gradBal, loanType, avgBorrow, scenario, pubSalary);
+
+  const fullTimeline = [...schoolTimeline, ...repay.yearBalances]; // 14 points: year 0-13
+
+  const annualPayment = (repay.monthlyPayment || 0) * 12;
+  const dti = privSalary > 0 ? (annualPayment / privSalary) * 100 : null;
+
+  return { ...repay, gradBal, totalBorrowed: yearAmounts.reduce((a,b)=>a+b,0), annualPayment, dti, fullTimeline, yearAmounts };
+}
+
+// ─────────────────────────────────────────────────────────────
+// STATE & URL HASH
+// ─────────────────────────────────────────────────────────────
+function getInputs() {
+  return {
+    schoolSlug: document.getElementById('schoolSelect').value,
+    tuition:    parseFloat(document.getElementById('tuitionInput').value) || 0,
+    scholarship:parseFloat(document.getElementById('scholarshipInput').value) || 0,
+    col:        parseFloat(document.getElementById('colInput').value) || 0,
+    loanType:   document.querySelector('input[name="loanType"]:checked').value,
+    pubSalary:  parseFloat(document.getElementById('pubSalaryInput').value) || 55000,
+    privSalary: parseFloat(document.getElementById('privSalaryInput').value) || 85000,
+  };
+}
+
+function encodeHash(inputs) {
+  try {
+    const s = { sl:inputs.schoolSlug,t:inputs.tuition,sc:inputs.scholarship,cl:inputs.col,lt:inputs.loanType,ps:inputs.pubSalary,pr:inputs.privSalary };
+    return btoa(encodeURIComponent(JSON.stringify(s)));
+  } catch(e) { return ''; }
+}
+
+function decodeHash(h) {
+  try { return JSON.parse(decodeURIComponent(atob(h))); }
+  catch(e) { return null; }
+}
+
+function applyState(s) {
+  if (!s) return;
+  if (s.sl) document.getElementById('schoolSelect').value = s.sl;
+  if (s.t  != null) document.getElementById('tuitionInput').value = s.t;
+  if (s.sc != null) document.getElementById('scholarshipInput').value = s.sc;
+  if (s.cl != null) document.getElementById('colInput').value = s.cl;
+  if (s.lt) {
+    const el = document.querySelector(`input[name="loanType"][value="${s.lt}"]`);
+    if (el) el.checked = true;
+  }
+  if (s.ps) document.getElementById('pubSalaryInput').value = s.ps;
+  if (s.pr) document.getElementById('privSalaryInput').value = s.pr;
+}
+
+// ─────────────────────────────────────────────────────────────
+// FORMATTING
+// ─────────────────────────────────────────────────────────────
+function fmt(n) {
+  if (n == null || isNaN(n)) return '—';
+  return '$' + Math.round(n).toLocaleString();
+}
+function fmtK(n) {
+  if (n == null || isNaN(n)) return '—';
+  return '$' + (Math.round(n / 1000)).toLocaleString() + 'k';
+}
+function fmtPct(n) {
+  if (n == null || isNaN(n)) return '—';
+  return n.toFixed(1) + '%';
+}
+
+// ─────────────────────────────────────────────────────────────
+// CHART
+// ─────────────────────────────────────────────────────────────
+let chart = null;
+function updateChart(std, hr, pslf) {
+  const labels = Array.from({length:14},(_,i)=>`Yr ${i}`);
+  const cfg = {
+    type:'line',
+    data:{
+      labels,
+      datasets:[
+        { label:'Standard',         data:std.fullTimeline,  borderColor:'#059669',backgroundColor:'rgba(5,150,105,.06)',  tension:.35,fill:true,pointRadius:3,pointHoverRadius:5,borderWidth:2 },
+        { label:'High Risk',        data:hr.fullTimeline,   borderColor:'#dc2626',backgroundColor:'rgba(220,38,38,.06)',  tension:.35,fill:true,pointRadius:3,pointHoverRadius:5,borderWidth:2 },
+        { label:'Public Interest',  data:pslf.fullTimeline, borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.06)',  tension:.35,fill:true,pointRadius:3,pointHoverRadius:5,borderWidth:2 },
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'rgba(14,32,24,.92)',titleFont:{family:"'DM Sans',sans-serif",size:12},bodyFont:{family:"'DM Sans',sans-serif",size:12},padding:10,
+          callbacks:{ label: ctx => ` ${ctx.dataset.label}: ${fmt(ctx.parsed.y)}` }
+        }
+      },
+      scales:{
+        x:{ grid:{color:'rgba(0,0,0,.04)'}, ticks:{font:{family:"'DM Sans',sans-serif",size:11},color:'#6b8c78'} },
+        y:{ grid:{color:'rgba(0,0,0,.04)'}, ticks:{font:{family:"'DM Sans',sans-serif",size:11},color:'#6b8c78', callback:v=>'$'+(v/1000).toFixed(0)+'k'}, beginAtZero:true }
+      }
+    }
+  };
+  if (chart) { chart.data = cfg.data; chart.update(); }
+  else { chart = new Chart(document.getElementById('balanceChart'), cfg); }
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER SCENARIO CARD
+// ─────────────────────────────────────────────────────────────
+function scenarioCard(title, headClass, badge, result, scenario) {
+  const isHR   = scenario === 'highrisk';
+  const isPSLF = scenario === 'pslf';
+
+  const heroLbl   = isPSLF ? 'Effective Career Cost' : 'Balance at Graduation';
+  const heroVal   = isPSLF ? fmt(result.effectiveCost) : fmt(result.gradBal);
+  const heroSub   = isPSLF ? 'What you actually pay out of pocket' : 'Capitalized balance entering repayment';
+
+  let rows = '';
+  if (!isPSLF) {
+    rows += row('Monthly Payment',   fmt(result.monthlyPayment));
+    rows += row('Annual Payment',    fmt(result.annualPayment));
+    rows += row('Total Paid (10yr)', fmt(result.totalPaid));
+    rows += row('Total Interest',    fmt(result.totalInterest), result.totalInterest > 0 ? 'negative' : '');
+    rows += row('Total Borrowed',    fmt(result.totalBorrowed));
+    if (result.dti != null) rows += row('Annual Pmt / Salary', fmtPct(result.dti), result.dti > 20 ? 'negative' : 'positive');
+    if (isHR) rows += row('Extra vs. Standard', '', '');
+  } else {
+    rows += row('Monthly IBR Payment', fmt(result.monthlyPayment));
+    rows += row('Total Paid (10yr)',    fmt(result.totalPaid));
+    rows += row('Amount Forgiven',      fmt(result.amountForgiven), result.amountForgiven > 0 ? 'positive' : '');
+    rows += row('Balance at Graduation',fmt(result.gradBal));
+    rows += row('Total Borrowed',       fmt(result.totalBorrowed));
+  }
+
+  return `<div class="sc-card">
+    <div class="sc-head ${headClass}">
+      <span class="sc-title">${title}</span>
+      <span class="sc-badge">${badge}</span>
+    </div>
+    <div class="sc-hero">
+      <div class="sc-hero-lbl">${heroLbl}</div>
+      <div class="sc-hero-val">${heroVal}</div>
+      <div class="sc-hero-sub">${heroSub}</div>
+    </div>
+    <div class="sc-rows">${rows}</div>
+    ${isPSLF ? `<div class="sc-note">Requires 120 qualifying payments at a government or 501(c)(3) employer. Forgiveness is tax-free under current law.</div>` : ''}
+    ${isHR   ? `<div class="sc-note">Assumes conditional scholarship is lost after Year 1. Years 2 &amp; 3 borrow at full tuition.</div>` : ''}
+  </div>`;
+}
+function row(lbl, val, cls='') {
+  return `<div class="sc-row"><span class="sc-lbl">${lbl}</span><span class="sc-val ${cls}">${val}</span></div>`;
+}
+
+// ─────────────────────────────────────────────────────────────
+// MAIN UPDATE
+// ─────────────────────────────────────────────────────────────
+function updateResults() {
+  const inputs = getInputs();
+  const tuition = inputs.tuition;
+
+  const empty = document.getElementById('emptyState');
+  const grid  = document.getElementById('scenarioGrid');
+  const chartCard = document.getElementById('chartCard');
+  const shareRow  = document.getElementById('shareRow');
+
+  if (!tuition || tuition <= 0) {
+    empty.style.display = '';
+    grid.style.display  = 'none';
+    chartCard.style.display = 'none';
+    shareRow.style.display  = 'none';
+    return;
+  }
+
+  empty.style.display = 'none';
+  grid.style.display  = 'grid';
+  chartCard.style.display = '';
+  shareRow.style.display  = 'flex';
+
+  const std  = calcScenario(inputs, 'standard');
+  const hr   = calcScenario(inputs, 'highrisk');
+  const pslf = calcScenario(inputs, 'pslf');
+
+  // Inject extra row into High Risk card to show delta vs Standard
+  const hrDelta = hr.gradBal - std.gradBal;
+  const hrDeltaStr = hrDelta > 0 ? `+${fmt(hrDelta)}` : fmt(hrDelta);
+
+  grid.innerHTML =
+    scenarioCard('Standard',         'sc-head-standard', '10-yr Repayment', std,  'standard') +
+    scenarioCard('High Risk',        'sc-head-highrisk',  'Scholarship Loss', hr,  'highrisk') +
+    scenarioCard('Public Interest',  'sc-head-pslf',      'PSLF / IBR',      pslf, 'pslf');
+
+  // Patch High Risk extra row
+  const hrCard = grid.children[1];
+  const hrRows = hrCard.querySelector('.sc-rows');
+  if (hrRows && hrDelta !== 0) {
+    const deltaRow = document.createElement('div');
+    deltaRow.className = 'sc-row';
+    deltaRow.innerHTML = `<span class="sc-lbl">Extra vs. Standard</span><span class="sc-val ${hrDelta > 0 ? 'negative' : 'positive'}">${hrDeltaStr}</span>`;
+    hrRows.appendChild(deltaRow);
+  }
+
+  updateChart(std, hr, pslf);
+
+  // Update URL hash
+  const h = encodeHash(inputs);
+  if (h) history.replaceState(null, '', '#' + h);
+}
+
+// ─────────────────────────────────────────────────────────────
+// COPY LINK
+// ─────────────────────────────────────────────────────────────
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2400);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Populate dropdown
+  const sel = document.getElementById('schoolSelect');
+  _SD.sort((a,b) => a[1].localeCompare(b[1])).forEach(([slug, name]) => {
+    const opt = document.createElement('option');
+    opt.value = slug; opt.textContent = name;
+    sel.appendChild(opt);
+  });
+
+  // School selector → auto-fill tuition + COL
+  sel.addEventListener('change', () => {
+    const d = tuitionData[sel.value];
+    if (!d) return;
+    const tInput = document.getElementById('tuitionInput');
+    const flag   = document.getElementById('tuitionFlag');
+    if (d.tuition) {
+      tInput.value = d.tuition;
+      tInput.classList.remove('warn');
+      flag.classList.remove('visible');
+    } else {
+      tInput.value = '';
+      tInput.classList.add('warn');
+      flag.classList.add('visible');
+    }
+    document.getElementById('colInput').value = getCol(d.city);
+    updateResults();
+  });
+
+  // Wire all other inputs
+  ['tuitionInput','scholarshipInput','colInput','pubSalaryInput','privSalaryInput'].forEach(id => {
+    document.getElementById(id).addEventListener('input', updateResults);
+  });
+  document.querySelectorAll('input[name="loanType"]').forEach(el => {
+    el.addEventListener('change', updateResults);
+  });
+
+  // Load from hash
+  const hash = window.location.hash.replace('#','');
+  if (hash) {
+    const s = decodeHash(hash);
+    if (s) {
+      applyState(s);
+      // Trigger school-select side effects manually
+      const slug = s.sl;
+      if (slug && tuitionData[slug]) {
+        const d = tuitionData[slug];
+        const flag = document.getElementById('tuitionFlag');
+        if (!d.tuition) { document.getElementById('tuitionInput').classList.add('warn'); flag.classList.add('visible'); }
+      }
+    }
+  }
+  updateResults();
+});
+</script>
+</body>
+</html>

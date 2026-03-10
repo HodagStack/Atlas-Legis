@@ -3955,10 +3955,24 @@ document.getElementById('close-btn').addEventListener('click', () => {
   setCanonical('https://atlaslegis.com/');
 });
 
-// On page load: read URL param and open matching school
+// On page load: read URL path (or sessionStorage redirect from 404) and open matching school
 (function initFromURL() {
-  const pathMatch = window.location.pathname.match(/^\/school\/([^/]+)/);
-  const slug = pathMatch ? pathMatch[1] : null;
+  let pathMatch = window.location.pathname.match(/^\/school\/([^/]+)/);
+  let slug = pathMatch ? pathMatch[1] : null;
+
+  // Check for a school path saved by the 404 redirect handler
+  if (!slug) {
+    const pending = sessionStorage.getItem('pendingSchool');
+    if (pending) {
+      sessionStorage.removeItem('pendingSchool');
+      const pendingMatch = pending.match(/^\/school\/([^/]+)/);
+      if (pendingMatch) {
+        slug = pendingMatch[1];
+        window.history.replaceState({ school: slug }, '', pending);
+      }
+    }
+  }
+
   if (slug) {
     // Use a short delay so Leaflet markers are fully rendered
     setTimeout(() => openSchoolBySlug(slug), 250);

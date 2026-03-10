@@ -264,5 +264,14 @@
     </div>
   </footer>
 
+  <script>
+    // If this is a school map URL (e.g. /school/mitchell-hamline-school-of-law),
+    // save it and bounce back to the homepage so the SPA can open the panel.
+    var path = window.location.pathname;
+    if (path.startsWith('/school/')) {
+      sessionStorage.setItem('pendingSchool', path);
+      window.location.replace('/');
+    }
+  </script>
 </body>
 </html>

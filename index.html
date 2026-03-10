@@ -1787,15 +1787,15 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        /* 8px top + safe-area-inset bottom so links clear the home indicator */
-        padding: 8px 16px env(safe-area-inset-bottom, 8px);
+        padding: 4px 8px env(safe-area-inset-bottom, 4px);
         gap: 0;
-        min-height: calc(38px + env(safe-area-inset-bottom, 0px));
+        min-height: calc(34px + env(safe-area-inset-bottom, 0px));
       }
       .footer-brand { display: none; }
       .footer-copy { display: none; }
-      #site-footer nav { gap: 2px; }
-      .footer-nav-link { font-size: 0.72rem; padding: 8px 12px; min-height: 44px; display:inline-flex; align-items:center; }
+      .footer-nav-sep { display: none; }
+      #site-footer nav { gap: 0; flex-wrap: nowrap; }
+      .footer-nav-link { font-size: 0.65rem; padding: 6px 7px; min-height: 38px; display:inline-flex; align-items:center; letter-spacing: 0; }
       /* Hide footer on mobile when sidebar or compare panel is open */
       body.sidebar-open #site-footer,
       body.compare-open #site-footer { display: none; }

@@ -232,26 +232,7 @@
       line-height: 1;
     }
 
-    /* ── Condensed header on scroll ── */
-    body.header-condensed header {
-      background: linear-gradient(
-        to bottom,
-        rgba(240,247,243,0.985) 0%,
-        rgba(232,244,238,0.985) 100%
-      );
-      box-shadow: none;
-    }
-    body.header-condensed .header-main-row {
-      padding: 7px 28px;
-      gap: 14px;
-    }
-    body.header-condensed .logo-title { font-size: 1.22rem; }
-    body.header-condensed .logo-sub   { opacity: 0.9; }
-    /* tagline row stays visible even when header is condensed */
-
-    /* Ensure tagline row can animate */
     .header-tagline-row {
-      transition: opacity 0.22s ease, transform 0.22s ease, max-height 0.28s ease;
       overflow: hidden;
       max-height: 60px;
     }
@@ -4366,40 +4347,6 @@ document.getElementById('close-btn').addEventListener('click', () => {
   }
 })();
 
-/* ── HEADER: condensed-on-scroll (sidebar/compare scrolling) ── */
-(function () {
-  const threshold = 12;
-  const body = document.body;
-  const header = document.querySelector('header');
-  if (!header) return;
-
-  const sidebar = document.getElementById('sidebar');
-  const comparePanel = document.getElementById('comparison-panel');
-
-  let raf = 0;
-  function computeY() {
-    const wy = window.scrollY || document.documentElement.scrollTop || 0;
-    const sy = sidebar ? sidebar.scrollTop : 0;
-    const cy = comparePanel ? comparePanel.scrollTop : 0;
-    return Math.max(wy, sy, cy);
-  }
-  function tick() {
-    raf = 0;
-    const y = computeY();
-    body.classList.toggle('header-condensed', y > threshold);
-  }
-  function requestTick() {
-    if (raf) return;
-    raf = requestAnimationFrame(tick);
-  }
-
-  window.addEventListener('scroll', requestTick, { passive: true });
-  if (sidebar) sidebar.addEventListener('scroll', requestTick, { passive: true });
-  if (comparePanel) comparePanel.addEventListener('scroll', requestTick, { passive: true });
-
-  // Initial state
-  tick();
-})();
 
 </script>
 

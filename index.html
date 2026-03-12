@@ -188,6 +188,11 @@
       z-index: 0;
     }
 
+    /* Hide decorative gutter lines on mobile — they only look right on wide screens */
+    @media (max-width: 768px) {
+      header::after { display: none; }
+    }
+
     /* ── Single main row ── */
     .header-main-row {
       display: grid;
@@ -242,12 +247,7 @@
     }
     body.header-condensed .logo-title { font-size: 1.22rem; }
     body.header-condensed .logo-sub   { opacity: 0.9; }
-    body.header-condensed .header-tagline-row {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-6px);
-      pointer-events: none;
-    }
+    /* tagline row stays visible even when header is condensed */
 
     /* Ensure tagline row can animate */
     .header-tagline-row {
@@ -2592,7 +2592,7 @@ const lawSchools = [
   { name:"University of Illinois College of Law", slug:"university-of-illinois-college-of-law", city:"Champaign, IL", lat:40.1020, lng:-88.2272, tier:"tier2", rank:48, lsat25:160, lsat50:166, lsat75:168, gpa25:3.55, gpa50:3.81, gpa75:3.92, url:"https://law.illinois.edu", tuition:36500, acceptRate:32.93, classSize:188, condIn:"None", condOut:"None", grantP25:13125, grantP50:32000, grantP75:46500 },
   { name:"Villanova University Widger School of Law", slug:"villanova-university-widger-school-of-law", city:"Villanova, PA", lat:40.0358, lng:-75.3416, tier:"tier2", rank:48, lsat25:159, lsat50:164, lsat75:166, gpa25:3.64, gpa50:3.80, gpa75:3.90, url:"https://law1.villanova.edu", tuition:59800, acceptRate:25.93, classSize:232, condIn:"None", condOut:"None", grantP25:25000, grantP50:40000, grantP75:50000 },
   { name:"UC Davis School of Law", slug:"uc-davis-school-of-law", city:"Davis, CA", lat:38.5382, lng:-121.7617, tier:"tier2", rank:50, lsat25:160, lsat50:165, lsat75:167, gpa25:3.49, gpa50:3.70, gpa75:3.87, url:"https://law.ucdavis.edu", tuition:57460, acceptRate:15.97, classSize:209, condIn:"None", condOut:"None", grantP25:14500, grantP50:25000, grantP75:35000 },
-  { name:"University of Connecticut School of Law", slug:"university-of-connecticut-school-of-law", city:"Hartford, CT", lat:41.7780, lng:-72.6908, tier:"tier3", rank:50, lsat25:160, lsat50:162, lsat75:164, gpa25:3.55, gpa50:3.78, gpa75:3.90, url:"https://www.law.uconn.edu", tuition:30354, acceptRate:20.05, classSize:151, condIn:"None", condOut:"None", grantP25:10000, grantP50:15177, grantP75:22034 },
+  { name:"University of Connecticut School of Law", slug:"university-of-connecticut-school-of-law", city:"Hartford, CT", lat:41.7780, lng:-72.6908, tier:"tier2", rank:50, lsat25:160, lsat50:162, lsat75:164, gpa25:3.55, gpa50:3.78, gpa75:3.90, url:"https://www.law.uconn.edu", tuition:30354, acceptRate:20.05, classSize:151, condIn:"None", condOut:"None", grantP25:10000, grantP50:15177, grantP75:22034 },
   { name:"University of Kansas School of Law", slug:"university-of-kansas-school-of-law", city:"Lawrence, KS", lat:38.9543, lng:-95.2558, tier:"tier3", rank:50, lsat25:158, lsat50:162, lsat75:164, gpa25:3.58, gpa50:3.85, gpa75:3.95, url:"https://law.ku.edu", tuition:0, acceptRate:39.08, classSize:122, condIn:34, condOut:6, grantP25:5375, grantP50:15000, grantP75:24700 },
   { name:"Temple University Beasley School of Law", slug:"temple-university-beasley-school-of-law", city:"Philadelphia, PA", lat:39.9813, lng:-75.1551, tier:"tier3", rank:50, lsat25:162, lsat50:165, lsat75:168, gpa25:3.59, gpa50:3.76, gpa75:3.90, url:"https://www.law.temple.edu", tuition:32588, acceptRate:24.38, classSize:237, condIn:"None", condOut:"None", grantP25:22271, grantP50:31334, grantP75:41500 },
   { name:"University of Washington School of Law", slug:"university-of-washington-school-of-law", city:"Seattle, WA", lat:47.6537, lng:-122.3082, tier:"tier2", rank:50, lsat25:162, lsat50:165, lsat75:167, gpa25:3.60, gpa50:3.76, gpa75:3.86, url:"https://www.law.uw.edu", tuition:45927, acceptRate:19.61, classSize:207, condIn:"None", condOut:"None", grantP25:7500, grantP50:14000, grantP75:18930 },

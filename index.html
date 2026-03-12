@@ -592,6 +592,18 @@
       line-height: 1.35;
       padding-right: 30px;
     }
+    .sidebar-profile-link {
+      display: inline-block;
+      margin-top: 7px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--em);
+      opacity: 0.7;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: opacity 0.15s ease;
+    }
+    .sidebar-profile-link:hover { opacity: 1; }
     .sidebar-body { padding: 16px 22px 24px; }
     .info-section { margin-bottom: 20px; }
     .section-title {
@@ -2293,6 +2305,7 @@
       <button id="close-btn" title="Close">✕</button>
       <div class="sidebar-tag">Law School</div>
       <div class="sidebar-name" id="s-name">—</div>
+      <a id="s-profile" class="sidebar-profile-link" href="#">View full profile →</a>
     </div>
     <div class="sidebar-body">
       <div class="info-section">
@@ -2455,7 +2468,6 @@
         <div class="section-title">Top Employer States</div>
         <div id="emp-states-list" class="emp-states-list"></div>
       </div>
-      <a id="s-profile" href="#" style="display:block;text-align:center;font-size:0.78rem;color:var(--em);margin-bottom:6px;text-decoration:none;opacity:0.85;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">View full profile →</a>
       <a class="visit-btn" id="s-link" href="#" target="_blank" rel="noopener">Visit School Website ↗</a>
       <button id="add-compare-btn">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>

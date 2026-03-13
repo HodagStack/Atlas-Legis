@@ -1,0 +1,27 @@
+/* ── DARK MODE (site-wide) ── */
+html[data-theme="dark"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Toggle icon visibility */
+#theme-icon-sun  { display: none; }
+#theme-icon-moon { display: block; }
+html[data-theme="dark"] #theme-icon-sun  { display: block; }
+html[data-theme="dark"] #theme-icon-moon { display: none; }
+
+/* Nav toggle button (non-index pages) */
+.nav-theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--muted);
+  transition: color .14s, background .14s;
+  margin-left: 2px;
+}
+.nav-theme-btn:hover { color: var(--ink); background: var(--soft); }

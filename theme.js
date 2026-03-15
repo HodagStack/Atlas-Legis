@@ -50,6 +50,82 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.insertBefore(schLi, aboutLi || null);
   }
 
+  // ── Hamburger drawer ─────────────────────────────────────────────────────────
+  var navRight2 = document.querySelector('.nav-right');
+  if (navRight2 && !document.getElementById('nav-hamburger')) {
+
+    // Build drawer link HTML by cloning current nav-links (Scholarships already injected above)
+    var navLinksList = document.querySelector('.nav-links');
+    var drawerLinksHtml = '';
+    if (navLinksList) {
+      var linkItems = navLinksList.querySelectorAll('li');
+      for (var k = 0; k < linkItems.length; k++) {
+        drawerLinksHtml += linkItems[k].outerHTML;
+      }
+    }
+
+    // Hamburger button
+    var hbtn = document.createElement('button');
+    hbtn.id = 'nav-hamburger';
+    hbtn.className = 'nav-hamburger';
+    hbtn.setAttribute('aria-label', 'Open navigation menu');
+    hbtn.setAttribute('aria-expanded', 'false');
+    hbtn.innerHTML = '<span></span><span></span><span></span>';
+    // Insert before the theme toggle
+    var themeToggle = document.getElementById('theme-toggle');
+    navRight2.insertBefore(hbtn, themeToggle || navRight2.firstChild);
+
+    // Backdrop
+    var backdrop = document.createElement('div');
+    backdrop.className = 'nav-drawer-backdrop';
+    document.body.appendChild(backdrop);
+
+    // Drawer
+    var drawer = document.createElement('nav');
+    drawer.id = 'nav-drawer';
+    drawer.className = 'nav-drawer';
+    drawer.setAttribute('aria-label', 'Mobile navigation');
+    drawer.innerHTML =
+      '<div class="nav-drawer-header">' +
+        '<a href="/" class="nav-drawer-brand">Atlas Legis</a>' +
+        '<button class="nav-drawer-close" aria-label="Close navigation menu">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>' +
+      '</div>' +
+      '<ul class="nav-drawer-links">' + drawerLinksHtml + '</ul>';
+    document.body.appendChild(drawer);
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      hbtn.classList.add('active');
+      hbtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
+      hbtn.classList.remove('active');
+      hbtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hbtn.addEventListener('click', openDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    drawer.querySelector('.nav-drawer-close').addEventListener('click', closeDrawer);
+
+    // Close when a drawer link is clicked
+    var drawerLinks = drawer.querySelectorAll('a');
+    for (var l = 0; l < drawerLinks.length; l++) {
+      drawerLinks[l].addEventListener('click', closeDrawer);
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDrawer();
+    });
+  }
+
   // ── Methodology footer popup ─────────────────────────────────────────────────
   var footerLinks = document.querySelectorAll('.footer-links a');
   var methLink = null;

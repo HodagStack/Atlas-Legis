@@ -2104,6 +2104,42 @@
       font-weight: 600;
       color: var(--ink);
     }
+
+    /* ── TOOLS DROPDOWN ── */
+    #tools-dropdown {
+      position: fixed;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px) saturate(1.4);
+      -webkit-backdrop-filter: blur(20px) saturate(1.4);
+      border: 1px solid rgba(15,81,50,0.12);
+      border-radius: 12px;
+      z-index: 9999;
+      display: none;
+      min-width: 180px;
+      box-shadow: 0 8px 32px var(--shadow-deep);
+      overflow: hidden;
+    }
+    #tools-dropdown.open { display: block; }
+    .tools-dd-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 15px;
+      font-size: 0.82rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--em-deep);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,122,80,0.07);
+      transition: background 0.15s ease;
+      white-space: nowrap;
+    }
+    .tools-dd-item:last-child { border-bottom: none; }
+    .tools-dd-item:hover { background: rgba(26,122,80,0.07); }
+    .tools-dd-item svg { flex-shrink: 0; opacity: 0.7; }
+    .tools-dd-item:hover svg { opacity: 0.95; }
+    @media (max-width: 768px) {
+      #tools-btn .hdr-btn-label { display: none; }
+    }
   </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
@@ -2139,6 +2175,11 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
           <span class="hdr-btn-label">Filters</span>
           <span id="filter-count-badge"></span>
+        </button>
+        <button class="hdr-btn" id="tools-btn" aria-label="Tools" aria-haspopup="true" aria-expanded="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span class="hdr-btn-label">Tools</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <button class="hdr-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
           <svg id="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -3139,14 +3180,48 @@ function applyFilters() {
   }
 }
 
+// ─── TOOLS DROPDOWN ──────────────────────────────────────────────────────────
+const toolsBtn      = document.getElementById('tools-btn');
+const toolsDropdown = document.getElementById('tools-dropdown');
+
+function positionToolsDropdown() {
+  const rect = toolsBtn.getBoundingClientRect();
+  toolsDropdown.style.top = (rect.bottom + 6) + 'px';
+  if (window.innerWidth <= 768) {
+    toolsDropdown.style.left  = 'auto';
+    toolsDropdown.style.right = '8px';
+  } else {
+    toolsDropdown.style.left  = rect.left + 'px';
+    toolsDropdown.style.right = 'auto';
+  }
+}
+
+toolsBtn.addEventListener('click', () => {
+  const open = toolsDropdown.classList.toggle('open');
+  toolsBtn.classList.toggle('open', open);
+  toolsBtn.setAttribute('aria-expanded', String(open));
+  if (open) {
+    positionToolsDropdown();
+    wdisPanel.classList.remove('visible');
+    if (!standingOn) wdisBtn.classList.remove('active');
+    wdisBtn.classList.remove('open');
+    filterDrawer.classList.remove('open');
+    if (!filterActive) filterBtn.classList.remove('active');
+    filterBtn.classList.remove('open');
+  }
+});
+
 // Close panels on map click — restore button state to reflect actual active status
 map.on('click', () => {
   wdisPanel.classList.remove('visible');
   filterDrawer.classList.remove('open');
+  toolsDropdown.classList.remove('open');
   wdisBtn.classList.toggle('active', standingOn);
   filterBtn.classList.toggle('active', filterActive);
   wdisBtn.classList.remove('open');
   filterBtn.classList.remove('open');
+  toolsBtn.classList.remove('open');
+  toolsBtn.setAttribute('aria-expanded', 'false');
 });
 
 // Close panels on outside click — restore button state to reflect actual active status
@@ -3160,6 +3235,11 @@ document.addEventListener('click', e => {
     filterDrawer.classList.remove('open');
     filterBtn.classList.toggle('active', filterActive);
     filterBtn.classList.remove('open');
+  }
+  if (!toolsDropdown.contains(e.target) && !toolsBtn.contains(e.target)) {
+    toolsDropdown.classList.remove('open');
+    toolsBtn.classList.remove('open');
+    toolsBtn.setAttribute('aria-expanded', 'false');
   }
 });
 
@@ -4061,6 +4141,22 @@ document.getElementById('close-btn').addEventListener('click', () => {
   </nav>
   <span class="footer-copy">© 2026 Atlas Legis</span>
 </footer>
+
+<!-- Tools dropdown (positioned by JS) -->
+<div id="tools-dropdown" role="menu" aria-label="Tools menu">
+  <a class="tools-dd-item" href="/scholarship-estimator.html" role="menuitem">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    Scholarship Estimator
+  </a>
+  <a class="tools-dd-item" href="/debt-planner.html" role="menuitem">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
+    Debt Planner
+  </a>
+  <a class="tools-dd-item" href="/schools/index.html" role="menuitem">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+    Schools Directory
+  </a>
+</div>
 
 </body>
 </html>

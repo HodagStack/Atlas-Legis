@@ -191,6 +191,20 @@
           </select>
         </div>
 
+        <div class="input-group full" id="residencyGroup" style="display:none">
+          <label>Residency</label>
+          <div class="radio-group">
+            <div class="radio-pill">
+              <input type="radio" name="residency" id="res-in" value="in" checked/>
+              <label for="res-in">In-State</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="residency" id="res-out" value="out"/>
+              <label for="res-out">Out-of-State</label>
+            </div>
+          </div>
+        </div>
+
         <div class="input-group">
           <label for="tuitionInput">Annual Tuition ($)</label>
           <input type="number" id="tuitionInput" min="0" max="200000" placeholder="e.g. 63994"/>
@@ -299,7 +313,7 @@ const _SD = [
   ['albany-law-school','Albany Law School',63994,'Albany','NY'],
   ['american-university-washington-college-of-law','American University',66990,'Washington','DC'],
   ['appalachian-school-of-law','Appalachian School of Law',41000,'Grundy','VA'],
-  ['arizona-state-sandra-day-oconnor-college-of-law','Arizona State University',28390,'Phoenix','AZ'],
+  ['arizona-state-sandra-day-oconnor-college-of-law','Arizona State University',28390,'Phoenix','AZ',52099],
   ['atlantas-john-marshall-law-school',"Atlanta's John Marshall Law School",52536,'Atlanta','GA'],
   ['ave-maria-school-of-law','Ave Maria School of Law',49500,'Naples','FL'],
   ['barry-university-dwayne-o-andreas-school-of-law','Barry University',42000,'Orlando','FL'],
@@ -308,7 +322,7 @@ const _SD = [
   ['boston-college-law-school','Boston College',72380,'Newton','MA'],
   ['boston-university-school-of-law','Boston University',69870,'Boston','MA'],
   ['brooklyn-law-school','Brooklyn Law School',75496,'Brooklyn','NY'],
-  ['byu-j-reuben-clark-law-school','Brigham Young University',15992,'Provo','UT'],
+  ['byu-j-reuben-clark-law-school','Brigham Young University',15992,'Provo','UT',31984],
   ['california-western-school-of-law','California Western School of Law',64720,'San Diego','CA'],
   ['campbell-university-norman-adrian-wiggins-school-of-law','Campbell University',51840,'Raleigh','NC'],
   ['capital-university-law-school','Capital University',45066,'Columbus','OH'],
@@ -318,11 +332,11 @@ const _SD = [
   ['chapman-university-fowler-school-of-law','Chapman University',63126,'Orange','CA'],
   ['charleston-school-of-law','Charleston School of Law',48600,'Charleston','SC'],
   ['chicago-kent-college-of-law-iit','Chicago-Kent / IIT',null,'Chicago','IL'],
-  ['cleveland-state-university-college-of-law','Cleveland State University',29766,'Cleveland','OH'],
+  ['cleveland-state-university-college-of-law','Cleveland State University',29766,'Cleveland','OH',29866],
   ['columbia-law-school','Columbia University',85368,'New York','NY'],
   ['cornell-law-school','Cornell University',84722,'Ithaca','NY'],
   ['creighton-university-school-of-law','Creighton University',null,'Omaha','NE'],
-  ['cuny-school-of-law','CUNY School of Law',15450,'New York','NY'],
+  ['cuny-school-of-law','CUNY School of Law',15450,'New York','NY',25640],
   ['depaul-university-college-of-law','DePaul University',55328,'Chicago','IL'],
   ['drake-university-law-school','Drake University',50920,'Des Moines','IA'],
   ['drexel-university-kline-school-of-law','Drexel University',57000,'Philadelphia','PA'],
@@ -335,15 +349,15 @@ const _SD = [
   ['florida-international-university-college-of-law','Florida International University',null,'Miami','FL'],
   ['florida-state-university-college-of-law','Florida State University',null,'Tallahassee','FL'],
   ['fordham-university-school-of-law','Fordham University',78078,'New York','NY'],
-  ['george-mason-antonin-scalia-law-school','George Mason University',24864,'Arlington','VA'],
+  ['george-mason-antonin-scalia-law-school','George Mason University',24864,'Arlington','VA',40978],
   ['george-washington-university-law-school','George Washington University',75420,'Washington','DC'],
   ['georgetown-university-law-center','Georgetown University',83576,'Washington','DC'],
-  ['georgia-state-university-college-of-law','Georgia State University',16162,'Atlanta','GA'],
+  ['georgia-state-university-college-of-law','Georgia State University',16162,'Atlanta','GA',37886],
   ['gonzaga-university-school-of-law','Gonzaga University',57962,'Spokane','WA'],
   ['harvard-law-school','Harvard University',77100,'Cambridge','MA'],
   ['hofstra-university-deane-school-of-law','Hofstra University',73344,'Hempstead','NY'],
   ['howard-university-school-of-law','Howard University',39780,'Washington','DC'],
-  ['indiana-university-maurer-school-of-law','Indiana University – Bloomington',36950,'Bloomington','IN'],
+  ['indiana-university-maurer-school-of-law','Indiana University – Bloomington',36950,'Bloomington','IN',58000],
   ['indiana-university-mckinney-school-of-law','Indiana University – Indianapolis',null,'Indianapolis','IN'],
   ['inter-american-university-of-puerto-rico-school-of-law','Inter American University of PR',16585,'San Juan','PR'],
   ['jacksonville-university-school-of-law','Jacksonville University',null,'Jacksonville','FL'],
@@ -357,20 +371,20 @@ const _SD = [
   ['lsu-paul-m-hebert-law-center','Louisiana State University',19750,'Baton Rouge','LA'],
   ['marquette-university-law-school','Marquette University',51970,'Milwaukee','WI'],
   ['mercer-university-walter-f-george-school-of-law','Mercer University',44782,'Macon','GA'],
-  ['michigan-state-university-college-of-law','Michigan State University',43480,'East Lansing','MI'],
+  ['michigan-state-university-college-of-law','Michigan State University',43480,'East Lansing','MI',48222],
   ['mississippi-college-school-of-law','Mississippi College',37980,'Jackson','MS'],
   ['mitchell-hamline-school-of-law','Mitchell Hamline',55300,'St. Paul','MN'],
   ['new-england-law-boston','New England Law | Boston',62896,'Boston','MA'],
   ['new-york-law-school','New York Law School',71052,'New York','NY'],
-  ['north-carolina-central-university-school-of-law','North Carolina Central University',13444,'Durham','NC'],
+  ['north-carolina-central-university-school-of-law','North Carolina Central University',13444,'Durham','NC',36116],
   ['northeastern-university-school-of-law','Northeastern University',65652,'Boston','MA'],
   ['northern-illinois-university-college-of-law','Northern Illinois University',23667,'DeKalb','IL'],
-  ['northern-kentucky-university-chase-college-of-law','Northern Kentucky University',24388,'Highland Heights','KY'],
+  ['northern-kentucky-university-chase-college-of-law','Northern Kentucky University',24388,'Highland Heights','KY',38454],
   ['northwestern-pritzker-school-of-law','Northwestern University',79772,'Chicago','IL'],
   ['nova-southeastern-university-shepard-broad-college-of-law','Nova Southeastern University',49350,'Davie','FL'],
   ['nyu-school-of-law','New York University',83952,'New York','NY'],
   ['ohio-northern-university-pettit-college-of-law','Ohio Northern University',33900,'Ada','OH'],
-  ['ohio-state-university-moritz-college-of-law','Ohio State University',35650,'Columbus','OH'],
+  ['ohio-state-university-moritz-college-of-law','Ohio State University',35650,'Columbus','OH',50902],
   ['oklahoma-city-university-school-of-law','Oklahoma City University',null,'Oklahoma City','OK'],
   ['pace-university-elisabeth-haub-school-of-law','Pace University',56648,'White Plains','NY'],
   ['penn-carey-law','University of Pennsylvania',78348,'Philadelphia','PA'],
@@ -380,7 +394,7 @@ const _SD = [
   ['quinnipiac-university-school-of-law','Quinnipiac University',56610,'Hamden','CT'],
   ['regent-university-school-of-law','Regent University',null,'Virginia Beach','VA'],
   ['roger-williams-university-school-of-law','Roger Williams University',47400,'Bristol','RI'],
-  ['rutgers-law-school','Rutgers University',31577,'Newark','NJ'],
+  ['rutgers-law-school','Rutgers University',31577,'Newark','NJ',47863],
   ['saint-louis-university-school-of-law','Saint Louis University',55260,'St. Louis','MO'],
   ['samford-university-cumberland-school-of-law','Samford University',46334,'Birmingham','AL'],
   ['santa-clara-university-school-of-law','Santa Clara University',null,'Santa Clara','CA'],
@@ -398,83 +412,83 @@ const _SD = [
   ['stetson-university-college-of-law','Stetson University',56521,'Gulfport','FL'],
   ['suffolk-university-law-school','Suffolk University',62610,'Boston','MA'],
   ['syracuse-university-college-of-law','Syracuse University',64650,'Syracuse','NY'],
-  ['temple-university-beasley-school-of-law','Temple University',32588,'Philadelphia','PA'],
-  ['texas-a-m-university-school-of-law','Texas A&M University',32634,'Fort Worth','TX'],
-  ['texas-southern-university-thurgood-marshall-school-of-law','Texas Southern University',19202,'Houston','TX'],
-  ['texas-tech-university-school-of-law','Texas Tech University',22590,'Lubbock','TX'],
+  ['temple-university-beasley-school-of-law','Temple University',32588,'Philadelphia','PA',48996],
+  ['texas-a-m-university-school-of-law','Texas A&M University',32634,'Fort Worth','TX',48522],
+  ['texas-southern-university-thurgood-marshall-school-of-law','Texas Southern University',19202,'Houston','TX',26331],
+  ['texas-tech-university-school-of-law','Texas Tech University',22590,'Lubbock','TX',33840],
   ['thomas-m-cooley-law-school','Thomas M. Cooley Law School',null,'Lansing','MI'],
   ['touro-university-jacob-d-fuchsberg-law-center','Touro University',61000,'Central Islip','NY'],
   ['tulane-university-law-school','Tulane University',69578,'New Orleans','LA'],
   ['ua-little-rock-bowen-school-of-law','Univ. of Arkansas – Little Rock',13770,'Little Rock','AR'],
-  ['uc-berkeley-school-of-law','UC Berkeley',62532,'Berkeley','CA'],
-  ['uc-college-of-the-law-san-francisco','UC College of Law San Francisco',53087,'San Francisco','CA'],
-  ['uc-davis-school-of-law','UC Davis',57460,'Davis','CA'],
-  ['uc-irvine-school-of-law','UC Irvine',59080,'Irvine','CA'],
-  ['ucla-school-of-law','UCLA',59084,'Los Angeles','CA'],
-  ['university-at-buffalo-school-of-law','University at Buffalo',26430,'Buffalo','NY'],
+  ['uc-berkeley-school-of-law','UC Berkeley',62532,'Berkeley','CA',76149],
+  ['uc-college-of-the-law-san-francisco','UC College of Law San Francisco',53087,'San Francisco','CA',61773],
+  ['uc-davis-school-of-law','UC Davis',57460,'Davis','CA',69705],
+  ['uc-irvine-school-of-law','UC Irvine',59080,'Irvine','CA',71325],
+  ['ucla-school-of-law','UCLA',59084,'Los Angeles','CA',71329],
+  ['university-at-buffalo-school-of-law','University at Buffalo',26430,'Buffalo','NY',32100],
   ['university-of-akron-school-of-law','University of Akron',22359,'Akron','OH'],
-  ['university-of-alabama-school-of-law','University of Alabama',24980,'Tuscaloosa','AL'],
-  ['university-of-arizona-james-e-rogers-college-of-law','University of Arizona',26490,'Tucson','AZ'],
+  ['university-of-alabama-school-of-law','University of Alabama',24980,'Tuscaloosa','AL',48100],
+  ['university-of-arizona-james-e-rogers-college-of-law','University of Arizona',26490,'Tucson','AZ',31360],
   ['university-of-arkansas-school-of-law','University of Arkansas',null,'Fayetteville','AR'],
-  ['university-of-baltimore-school-of-law','University of Baltimore',33944,'Baltimore','MD'],
+  ['university-of-baltimore-school-of-law','University of Baltimore',33944,'Baltimore','MD',50624],
   ['university-of-chicago-law-school','University of Chicago',83316,'Chicago','IL'],
-  ['university-of-cincinnati-college-of-law','University of Cincinnati',24010,'Cincinnati','OH'],
-  ['university-of-colorado-law-school','University of Colorado',35992,'Boulder','CO'],
-  ['university-of-connecticut-school-of-law','University of Connecticut',30354,'Hartford','CT'],
+  ['university-of-cincinnati-college-of-law','University of Cincinnati',24010,'Cincinnati','OH',29010],
+  ['university-of-colorado-law-school','University of Colorado',35992,'Boulder','CO',44002],
+  ['university-of-connecticut-school-of-law','University of Connecticut',30354,'Hartford','CT',61396],
   ['university-of-dayton-school-of-law','University of Dayton',null,'Dayton','OH'],
   ['university-of-denver-sturm-college-of-law','University of Denver',63390,'Denver','CO'],
   ['university-of-detroit-mercy-school-of-law','University of Detroit Mercy',null,'Detroit','MI'],
-  ['university-of-florida-levin-college-of-law','University of Florida',19139,'Gainesville','FL'],
-  ['university-of-georgia-school-of-law','University of Georgia',18044,'Athens','GA'],
-  ['university-of-hawaii-richardson-school-of-law','University of Hawaii',23304,'Honolulu','HI'],
-  ['university-of-houston-law-center','University of Houston',31326,'Houston','TX'],
-  ['university-of-idaho-college-of-law','University of Idaho',27516,'Moscow','ID'],
+  ['university-of-florida-levin-college-of-law','University of Florida',19139,'Gainesville','FL',36148],
+  ['university-of-georgia-school-of-law','University of Georgia',18044,'Athens','GA',38944],
+  ['university-of-hawaii-richardson-school-of-law','University of Hawaii',23304,'Honolulu','HI',46728],
+  ['university-of-houston-law-center','University of Houston',31326,'Houston','TX',46051],
+  ['university-of-idaho-college-of-law','University of Idaho',27516,'Moscow','ID',46752],
   ['university-of-illinois-chicago-school-of-law','University of Illinois – Chicago',null,'Chicago','IL'],
-  ['university-of-illinois-college-of-law','University of Illinois – Urbana',36500,'Champaign','IL'],
-  ['university-of-iowa-college-of-law','University of Iowa',30944,'Iowa City','IA'],
+  ['university-of-illinois-college-of-law','University of Illinois – Urbana',36500,'Champaign','IL',46500],
+  ['university-of-iowa-college-of-law','University of Iowa',30944,'Iowa City','IA',52191],
   ['university-of-kansas-school-of-law','University of Kansas',null,'Lawrence','KS'],
-  ['university-of-kentucky-college-of-law','University of Kentucky',25685,'Lexington','KY'],
-  ['university-of-louisville-brandeis-school-of-law','University of Louisville',27000,'Louisville','KY'],
-  ['university-of-maine-school-of-law','University of Maine',26100,'Portland','ME'],
-  ['university-of-maryland-carey-school-of-law','University of Maryland',37830,'Baltimore','MD'],
-  ['university-of-massachusetts-school-of-law','University of Massachusetts',31766,'North Dartmouth','MA'],
-  ['university-of-memphis-humphreys-school-of-law','University of Memphis',18634,'Memphis','TN'],
+  ['university-of-kentucky-college-of-law','University of Kentucky',25685,'Lexington','KY',49836],
+  ['university-of-louisville-brandeis-school-of-law','University of Louisville',27000,'Louisville','KY',32000],
+  ['university-of-maine-school-of-law','University of Maine',26100,'Portland','ME',38160],
+  ['university-of-maryland-carey-school-of-law','University of Maryland',37830,'Baltimore','MD',55844],
+  ['university-of-massachusetts-school-of-law','University of Massachusetts',31766,'North Dartmouth','MA',41565],
+  ['university-of-memphis-humphreys-school-of-law','University of Memphis',18634,'Memphis','TN',24354],
   ['university-of-miami-school-of-law','University of Miami',66720,'Coral Gables','FL'],
-  ['university-of-michigan-law-school','University of Michigan',76108,'Ann Arbor','MI'],
-  ['university-of-minnesota-law-school','University of Minnesota',51440,'Minneapolis','MN'],
-  ['university-of-mississippi-school-of-law','University of Mississippi',19797,'Oxford','MS'],
+  ['university-of-michigan-law-school','University of Michigan',76108,'Ann Arbor','MI',79108],
+  ['university-of-minnesota-law-school','University of Minnesota',51440,'Minneapolis','MN',61845],
+  ['university-of-mississippi-school-of-law','University of Mississippi',19797,'Oxford','MS',26797],
   ['university-of-missouri-kansas-city-school-of-law','University of Missouri – Kansas City',null,'Kansas City','MO'],
   ['university-of-missouri-school-of-law','University of Missouri',null,'Columbia','MO'],
-  ['university-of-montana-school-of-law','University of Montana',24582,'Missoula','MT'],
+  ['university-of-montana-school-of-law','University of Montana',24582,'Missoula','MT',51582],
   ['university-of-nebraska-college-of-law','University of Nebraska',null,'Lincoln','NE'],
-  ['university-of-new-hampshire-franklin-pierce-school-of-law','University of New Hampshire',42000,'Concord','NH'],
-  ['university-of-new-mexico-school-of-law','University of New Mexico',19474,'Albuquerque','NM'],
-  ['university-of-north-carolina-school-of-law','University of North Carolina',28082,'Chapel Hill','NC'],
+  ['university-of-new-hampshire-franklin-pierce-school-of-law','University of New Hampshire',42000,'Concord','NH',50000],
+  ['university-of-new-mexico-school-of-law','University of New Mexico',19474,'Albuquerque','NM',43192],
+  ['university-of-north-carolina-school-of-law','University of North Carolina',28082,'Chapel Hill','NC',51320],
   ['university-of-north-dakota-school-of-law','University of North Dakota',null,'Grand Forks','ND'],
   ['university-of-north-texas-dallas-college-of-law','University of North Texas – Dallas',null,'Dallas','TX'],
   ['university-of-notre-dame-law-school','Notre Dame',73430,'Notre Dame','IN'],
-  ['university-of-oklahoma-college-of-law','University of Oklahoma',18739,'Norman','OK'],
-  ['university-of-oregon-school-of-law','University of Oregon',47240,'Eugene','OR'],
-  ['university-of-pittsburgh-school-of-law','University of Pittsburgh',39936,'Pittsburgh','PA'],
+  ['university-of-oklahoma-college-of-law','University of Oklahoma',18739,'Norman','OK',33357],
+  ['university-of-oregon-school-of-law','University of Oregon',47240,'Eugene','OR',59495],
+  ['university-of-pittsburgh-school-of-law','University of Pittsburgh',39936,'Pittsburgh','PA',53434],
   ['university-of-puerto-rico-school-of-law','University of Puerto Rico',null,'San Juan','PR'],
   ['university-of-richmond-school-of-law','University of Richmond',57700,'Richmond','VA'],
   ['university-of-san-diego-school-of-law','University of San Diego',66950,'San Diego','CA'],
   ['university-of-san-francisco-school-of-law','University of San Francisco',59800,'San Francisco','CA'],
-  ['university-of-south-carolina-school-of-law','University of South Carolina',20322,'Columbia','SC'],
-  ['university-of-south-dakota-school-of-law','University of South Dakota',12076,'Vermillion','SD'],
+  ['university-of-south-carolina-school-of-law','University of South Carolina',20322,'Columbia','SC',38100],
+  ['university-of-south-dakota-school-of-law','University of South Dakota',12076,'Vermillion','SD',32184],
   ['university-of-st-thomas-school-of-law','University of St. Thomas (MN)',50998,'Minneapolis','MN'],
-  ['university-of-tennessee-college-of-law','University of Tennessee',16696,'Knoxville','TN'],
-  ['university-of-texas-school-of-law','University of Texas',38236,'Austin','TX'],
-  ['university-of-the-district-of-columbia-david-a-clarke-school-of-law','University of the District of Columbia',12438,'Washington','DC'],
+  ['university-of-tennessee-college-of-law','University of Tennessee',16696,'Knoxville','TN',35140],
+  ['university-of-texas-school-of-law','University of Texas',38236,'Austin','TX',56822],
+  ['university-of-the-district-of-columbia-david-a-clarke-school-of-law','University of the District of Columbia',12438,'Washington','DC',24874],
   ['university-of-the-pacific-mcgeorge-school-of-law','University of the Pacific (McGeorge)',62678,'Sacramento','CA'],
   ['university-of-toledo-college-of-law','University of Toledo',26446,'Toledo','OH'],
   ['university-of-tulsa-college-of-law','University of Tulsa',30840,'Tulsa','OK'],
-  ['university-of-utah-s-j-quinney-college-of-law','University of Utah',34721,'Salt Lake City','UT'],
-  ['university-of-virginia-school-of-law','University of Virginia',74078,'Charlottesville','VA'],
-  ['university-of-washington-school-of-law','University of Washington',45927,'Seattle','WA'],
-  ['university-of-wisconsin-law-school','University of Wisconsin',36526,'Madison','WI'],
+  ['university-of-utah-s-j-quinney-college-of-law','University of Utah',34721,'Salt Lake City','UT',45382],
+  ['university-of-virginia-school-of-law','University of Virginia',74078,'Charlottesville','VA',76396],
+  ['university-of-washington-school-of-law','University of Washington',45927,'Seattle','WA',57810],
+  ['university-of-wisconsin-law-school','University of Wisconsin',36526,'Madison','WI',53640],
   ['university-of-wyoming-college-of-law','University of Wyoming',null,'Laramie','WY'],
-  ['unlv-william-s-boyd-school-of-law','UNLV Boyd School of Law',31518,'Las Vegas','NV'],
+  ['unlv-william-s-boyd-school-of-law','UNLV Boyd School of Law',31518,'Las Vegas','NV',46040],
   ['usc-gould-school-of-law','University of Southern California',84034,'Los Angeles','CA'],
   ['vanderbilt-university-law-school','Vanderbilt University',76440,'Nashville','TN'],
   ['vermont-law-school','Vermont Law School',55382,'South Royalton','VT'],
@@ -483,22 +497,22 @@ const _SD = [
   ['washburn-university-school-of-law','Washburn University',null,'Topeka','KS'],
   ['washington-and-lee-university-school-of-law','Washington and Lee University',57450,'Lexington','VA'],
   ['washington-university-in-st-louis-school-of-law','Washington University in St. Louis',72792,'St. Louis','MO'],
-  ['wayne-state-university-law-school','Wayne State University',38861,'Detroit','MI'],
-  ['west-virginia-university-college-of-law','West Virginia University',26370,'Morgantown','WV'],
+  ['wayne-state-university-law-school','Wayne State University',38861,'Detroit','MI',42632],
+  ['west-virginia-university-college-of-law','West Virginia University',26370,'Morgantown','WV',45666],
   ['western-new-england-university-school-of-law','Western New England University',50320,'Springfield','MA'],
   ['western-state-college-of-law-at-westcliff-university','Western State College of Law',54840,'Irvine','CA'],
   ['widener-university-commonwealth-law-school','Widener – Commonwealth',null,'Harrisburg','PA'],
   ['widener-university-delaware-law-school','Widener – Delaware',null,'Wilmington','DE'],
   ['willamette-university-college-of-law','Willamette University',56600,'Salem','OR'],
-  ['william-mary-law-school','William & Mary',38734,'Williamsburg','VA'],
+  ['william-mary-law-school','William & Mary',38734,'Williamsburg','VA',62900],
   ['wilmington-university-school-of-law','Wilmington University',null,'Wilmington','DE'],
   ['yale-law-school','Yale University',76636,'New Haven','CT'],
 ];
 
 // Build lookup object
 const tuitionData = {};
-_SD.forEach(([slug, name, tuition, city, state]) => {
-  tuitionData[slug] = { name, tuition, city, state };
+_SD.forEach(([slug, name, tuition, city, state, tuitionNR]) => {
+  tuitionData[slug] = { name, tuition, tuitionNR: tuitionNR || null, city, state };
 });
 
 // Schools with conditional scholarships (condIn is numeric in school data)
@@ -671,6 +685,11 @@ function calcScenario(inputs, scenario) {
 // ─────────────────────────────────────────────────────────────
 // STATE & URL HASH
 // ─────────────────────────────────────────────────────────────
+function getResidency() {
+  const el = document.querySelector('input[name="residency"]:checked');
+  return el ? el.value : 'in';
+}
+
 function getInputs() {
   return {
     schoolSlug: document.getElementById('schoolSelect').value,
@@ -680,12 +699,13 @@ function getInputs() {
     loanType:   document.querySelector('input[name="loanType"]:checked').value,
     pubSalary:  (s => s === '' ? 55000 : (parseFloat(s) || 0))(document.getElementById('pubSalaryInput').value.trim()),
     privSalary: (s => s === '' ? 85000 : (parseFloat(s) || 0))(document.getElementById('privSalaryInput').value.trim()),
+    residency:  getResidency(),
   };
 }
 
 function encodeHash(inputs) {
   try {
-    const s = { sl:inputs.schoolSlug,t:inputs.tuition,sc:inputs.scholarship,cl:inputs.col,lt:inputs.loanType,ps:inputs.pubSalary,pr:inputs.privSalary };
+    const s = { sl:inputs.schoolSlug,t:inputs.tuition,sc:inputs.scholarship,cl:inputs.col,lt:inputs.loanType,ps:inputs.pubSalary,pr:inputs.privSalary,rs:inputs.residency };
     return btoa(encodeURIComponent(JSON.stringify(s)));
   } catch(e) { return ''; }
 }
@@ -707,6 +727,10 @@ function applyState(s) {
   }
   if (s.ps) document.getElementById('pubSalaryInput').value = s.ps;
   if (s.pr) document.getElementById('privSalaryInput').value = s.pr;
+  if (s.rs) {
+    const el = document.querySelector(`input[name="residency"][value="${s.rs}"]`);
+    if (el) el.checked = true;
+  }
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -900,14 +924,18 @@ document.addEventListener('DOMContentLoaded', () => {
     sel.appendChild(opt);
   });
 
-  // School selector → auto-fill tuition + COL
-  sel.addEventListener('change', () => {
+  // Apply tuition from selected school + current residency
+  function applySchoolTuition() {
     const d = tuitionData[sel.value];
     if (!d) return;
-    const tInput = document.getElementById('tuitionInput');
-    const flag   = document.getElementById('tuitionFlag');
-    if (d.tuition) {
-      tInput.value = d.tuition;
+    const tInput      = document.getElementById('tuitionInput');
+    const flag        = document.getElementById('tuitionFlag');
+    const resGroup    = document.getElementById('residencyGroup');
+    const hasOOS      = d.tuitionNR && d.tuitionNR !== d.tuition;
+    resGroup.style.display = hasOOS ? '' : 'none';
+    const tuition = hasOOS && getResidency() === 'out' ? d.tuitionNR : d.tuition;
+    if (tuition) {
+      tInput.value = tuition;
       tInput.classList.remove('warn');
       flag.classList.remove('visible');
     } else {
@@ -915,8 +943,23 @@ document.addEventListener('DOMContentLoaded', () => {
       tInput.classList.add('warn');
       flag.classList.add('visible');
     }
+  }
+
+  // School selector → auto-fill tuition + COL
+  sel.addEventListener('change', () => {
+    const d = tuitionData[sel.value];
+    if (!d) {
+      document.getElementById('residencyGroup').style.display = 'none';
+      return;
+    }
+    applySchoolTuition();
     document.getElementById('colInput').value = getCol(d.city);
     updateResults();
+  });
+
+  // Residency toggle → update tuition field
+  document.querySelectorAll('input[name="residency"]').forEach(el => {
+    el.addEventListener('change', () => { applySchoolTuition(); updateResults(); });
   });
 
   // Wire all other inputs
@@ -937,6 +980,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const slug = s.sl;
       if (slug && tuitionData[slug]) {
         const d = tuitionData[slug];
+        const hasOOS = d.tuitionNR && d.tuitionNR !== d.tuition;
+        document.getElementById('residencyGroup').style.display = hasOOS ? '' : 'none';
         const flag = document.getElementById('tuitionFlag');
         if (!d.tuition) { document.getElementById('tuitionInput').classList.add('warn'); flag.classList.add('visible'); }
       }

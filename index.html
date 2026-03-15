@@ -623,6 +623,7 @@
       font-weight: 600;
     }
     .stat-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; }
+    .stat-grid-2 { grid-template-columns:1fr 1fr; }
     .stat-box {
       background: rgba(255,255,255,0.55);
       border: 1px solid rgba(255,255,255,0.65);
@@ -2361,10 +2362,17 @@
 
       <div class="info-section">
         <div class="section-title">Admissions</div>
-        <div class="stat-grid">
+        <div class="stat-grid stat-grid-2">
           <div class="stat-box"><div class="stat-label">Accept Rate</div><div class="stat-value" id="s-accept">—</div></div>
           <div class="stat-box"><div class="stat-label">1L Class Size</div><div class="stat-value" id="s-classsize">—</div></div>
-          <div class="stat-box"><div class="stat-label">FT Tuition</div><div class="stat-value" id="s-tuition">—</div></div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="section-title">Tuition (Annual)</div>
+        <div class="stat-grid stat-grid-2" id="tuition-grid">
+          <div class="stat-box" id="sb-tuition-res"><div class="stat-label" id="s-tuition-res-label">Full-Time</div><div class="stat-value" id="s-tuition-res">—</div></div>
+          <div class="stat-box" id="sb-tuition-nonres"><div class="stat-label">Non-Resident</div><div class="stat-value" id="s-tuition-nonres">—</div></div>
         </div>
       </div>
 
@@ -2742,7 +2750,25 @@ function openSidebar(s) {
   // Phase 3 — Admissions & Aid fields
   document.getElementById('s-accept').textContent    = s.acceptRate != null ? s.acceptRate + '%' : '—';
   document.getElementById('s-classsize').textContent = s.classSize  != null ? s.classSize        : '—';
-  document.getElementById('s-tuition').textContent   = s.tuition    != null ? '$' + Number(s.tuition).toLocaleString() : '—';
+  (function renderTuition() {
+    const res    = s.tuition    != null && s.tuition    > 0 ? s.tuition    : null;
+    const nonRes = s.tuitionNonRes != null && s.tuitionNonRes > 0 ? s.tuitionNonRes : null;
+    const sbRes    = document.getElementById('sb-tuition-res');
+    const sbNonRes = document.getElementById('sb-tuition-nonres');
+    const resLabel = document.getElementById('s-tuition-res-label');
+    if (res && nonRes && nonRes !== res) {
+      resLabel.textContent = 'Resident';
+      document.getElementById('s-tuition-res').textContent    = '$' + Number(res).toLocaleString();
+      document.getElementById('s-tuition-nonres').textContent = '$' + Number(nonRes).toLocaleString();
+      sbNonRes.style.display  = '';
+      sbRes.style.gridColumn  = '';
+    } else {
+      resLabel.textContent = 'Full-Time';
+      document.getElementById('s-tuition-res').textContent = res ? '$' + Number(res).toLocaleString() : '—';
+      sbNonRes.style.display = 'none';
+      sbRes.style.gridColumn = '1 / -1';
+    }
+  })();
   document.getElementById('s-grant50').textContent   = s.grantP50   != null ? '$' + Number(s.grantP50).toLocaleString() : '—';
   document.getElementById('s-grantrange').textContent =
     (s.grantP25 != null && s.grantP75 != null)

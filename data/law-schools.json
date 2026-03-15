@@ -21,7 +21,8 @@
     "condOut": "None",
     "grantP25": 34240,
     "grantP50": 52797,
-    "grantP75": 72247
+    "grantP75": 72247,
+    "tuitionNonRes": null
   },
   {
     "name": "Yale Law School",
@@ -45,7 +46,8 @@
     "condOut": "None",
     "grantP25": 24825,
     "grantP50": 34747,
-    "grantP75": 47286
+    "grantP75": 47286,
+    "tuitionNonRes": 76636
   },
   {
     "name": "University of Chicago Law School",
@@ -69,7 +71,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 15000,
-    "grantP75": 30000
+    "grantP75": 30000,
+    "tuitionNonRes": 83316
   },
   {
     "name": "University of Virginia School of Law",
@@ -93,7 +96,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 35000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 76396
   },
   {
     "name": "Penn Carey Law",
@@ -117,7 +121,8 @@
     "condOut": "None",
     "grantP25": 29512,
     "grantP50": 42246,
-    "grantP75": 60000
+    "grantP75": 60000,
+    "tuitionNonRes": 78348
   },
   {
     "name": "Duke University School of Law",
@@ -141,7 +146,8 @@
     "condOut": "None",
     "grantP25": 27000,
     "grantP50": 35000,
-    "grantP75": 40000
+    "grantP75": 40000,
+    "tuitionNonRes": 80100
   },
   {
     "name": "Harvard Law School",
@@ -165,7 +171,8 @@
     "condOut": "None",
     "grantP25": 12106,
     "grantP50": 27510,
-    "grantP75": 43338
+    "grantP75": 43338,
+    "tuitionNonRes": 77100
   },
   {
     "name": "University of Michigan Law School",
@@ -189,7 +196,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 32000,
-    "grantP75": 41000
+    "grantP75": 41000,
+    "tuitionNonRes": 79108
   },
   {
     "name": "NYU School of Law",
@@ -213,7 +221,8 @@
     "condOut": "None",
     "grantP25": 12000,
     "grantP50": 20000,
-    "grantP75": 35750
+    "grantP75": 35750,
+    "tuitionNonRes": 83952
   },
   {
     "name": "Columbia Law School",
@@ -237,7 +246,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 32000,
-    "grantP75": 48000
+    "grantP75": 48000,
+    "tuitionNonRes": 85368
   },
   {
     "name": "Northwestern Pritzker School of Law",
@@ -261,7 +271,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 40000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 79722
   },
   {
     "name": "UCLA School of Law",
@@ -285,7 +296,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 24456,
-    "grantP75": 43333
+    "grantP75": 43333,
+    "tuitionNonRes": 71329
   },
   {
     "name": "UC Berkeley School of Law",
@@ -309,7 +321,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 31158,
-    "grantP75": 42245
+    "grantP75": 42245,
+    "tuitionNonRes": 76149
   },
   {
     "name": "Georgetown University Law Center",
@@ -333,7 +346,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 35000,
-    "grantP75": 47500
+    "grantP75": 47500,
+    "tuitionNonRes": 83576
   },
   {
     "name": "University of Texas School of Law",
@@ -357,7 +371,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 23375,
-    "grantP75": 38586
+    "grantP75": 38586,
+    "tuitionNonRes": 56822
   },
   {
     "name": "Vanderbilt University Law School",
@@ -381,7 +396,8 @@
     "condOut": "None",
     "grantP25": 17500,
     "grantP50": 32792,
-    "grantP75": 44927
+    "grantP75": 44927,
+    "tuitionNonRes": 76440
   },
   {
     "name": "Washington University in St. Louis School of Law",
@@ -405,7 +421,8 @@
     "condOut": "None",
     "grantP25": 40000,
     "grantP50": 48000,
-    "grantP75": 60000
+    "grantP75": 60000,
+    "tuitionNonRes": 72792
   },
   {
     "name": "Cornell Law School",
@@ -429,7 +446,8 @@
     "condOut": "None",
     "grantP25": 28000,
     "grantP50": 30000,
-    "grantP75": 45000
+    "grantP75": 45000,
+    "tuitionNonRes": 84722
   },
   {
     "name": "University of North Carolina School of Law",
@@ -453,7 +471,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 17000,
-    "grantP75": 20000
+    "grantP75": 20000,
+    "tuitionNonRes": 51320
   },
   {
     "name": "University of Minnesota Law School",
@@ -477,7 +496,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 35000,
-    "grantP75": 48528
+    "grantP75": 48528,
+    "tuitionNonRes": 61845
   },
   {
     "name": "University of Notre Dame Law School",
@@ -501,7 +521,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 30000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 73430
   },
   {
     "name": "Boston University School of Law",
@@ -525,7 +546,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 29000,
-    "grantP75": 43000
+    "grantP75": 43000,
+    "tuitionNonRes": 69870
   },
   {
     "name": "University of Georgia School of Law",
@@ -549,7 +571,8 @@
     "condOut": "None",
     "grantP25": 5200,
     "grantP50": 19460,
-    "grantP75": 22059
+    "grantP75": 22059,
+    "tuitionNonRes": 38944
   },
   {
     "name": "Texas A&M University School of Law",
@@ -573,7 +596,8 @@
     "condOut": "None",
     "grantP25": 17500,
     "grantP50": 26048,
-    "grantP75": 35534
+    "grantP75": 35534,
+    "tuitionNonRes": 48522
   },
   {
     "name": "Boston College Law School",
@@ -597,7 +621,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 24000,
-    "grantP75": 28000
+    "grantP75": 28000,
+    "tuitionNonRes": 72380
   },
   {
     "name": "USC Gould School of Law",
@@ -621,7 +646,8 @@
     "condOut": "None",
     "grantP25": 38220,
     "grantP50": 40092,
-    "grantP75": 48160
+    "grantP75": 48160,
+    "tuitionNonRes": 84034
   },
   {
     "name": "Wake Forest University School of Law",
@@ -645,7 +671,8 @@
     "condOut": "None",
     "grantP25": 30000,
     "grantP50": 40000,
-    "grantP75": 55162
+    "grantP75": 55162,
+    "tuitionNonRes": 57920
   },
   {
     "name": "BYU J. Reuben Clark Law School",
@@ -669,7 +696,8 @@
     "condOut": 0,
     "grantP25": 3882,
     "grantP50": 11646,
-    "grantP75": 15528
+    "grantP75": 15528,
+    "tuitionNonRes": 31984
   },
   {
     "name": "Ohio State University Moritz College of Law",
@@ -693,7 +721,8 @@
     "condOut": "None",
     "grantP25": 17360,
     "grantP50": 29984,
-    "grantP75": 37220
+    "grantP75": 37220,
+    "tuitionNonRes": 50902
   },
   {
     "name": "University of Wisconsin Law School",
@@ -717,7 +746,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 35000,
-    "grantP75": 52332
+    "grantP75": 52332,
+    "tuitionNonRes": 53640
   },
   {
     "name": "University of Alabama School of Law",
@@ -741,7 +771,8 @@
     "condOut": "None",
     "grantP25": 12000,
     "grantP50": 21500,
-    "grantP75": 30000
+    "grantP75": 30000,
+    "tuitionNonRes": 48100
   },
   {
     "name": "George Mason Antonin Scalia Law School",
@@ -765,7 +796,8 @@
     "condOut": "None",
     "grantP25": 14000,
     "grantP50": 21000,
-    "grantP75": 32000
+    "grantP75": 32000,
+    "tuitionNonRes": 40978
   },
   {
     "name": "George Washington University Law School",
@@ -789,7 +821,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 28000,
-    "grantP75": 40000
+    "grantP75": 40000,
+    "tuitionNonRes": 75420
   },
   {
     "name": "University of Utah S.J. Quinney College of Law",
@@ -813,7 +846,8 @@
     "condOut": "None",
     "grantP25": 14205,
     "grantP50": 28410,
-    "grantP75": 37996
+    "grantP75": 37996,
+    "tuitionNonRes": 45382
   },
   {
     "name": "William & Mary Law School",
@@ -837,7 +871,8 @@
     "condOut": "None",
     "grantP25": 21782,
     "grantP50": 29302,
-    "grantP75": 37112
+    "grantP75": 37112,
+    "tuitionNonRes": 62900
   },
   {
     "name": "University of Iowa College of Law",
@@ -861,7 +896,8 @@
     "condOut": "None",
     "grantP25": 24000,
     "grantP50": 30043,
-    "grantP75": 34527
+    "grantP75": 34527,
+    "tuitionNonRes": 52191
   },
   {
     "name": "Washington and Lee University School of Law",
@@ -885,7 +921,8 @@
     "condOut": "None",
     "grantP25": 19000,
     "grantP50": 33500,
-    "grantP75": 41500
+    "grantP75": 41500,
+    "tuitionNonRes": 57450
   },
   {
     "name": "UC Irvine School of Law",
@@ -909,7 +946,8 @@
     "condOut": "None",
     "grantP25": 17500,
     "grantP50": 25000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 71325
   },
   {
     "name": "Emory University School of Law",
@@ -933,7 +971,8 @@
     "condOut": "None",
     "grantP25": 28000,
     "grantP50": 36000,
-    "grantP75": 45000
+    "grantP75": 45000,
+    "tuitionNonRes": 69510
   },
   {
     "name": "Florida State University College of Law",
@@ -957,7 +996,8 @@
     "condOut": "None",
     "grantP25": 5737,
     "grantP50": 15464,
-    "grantP75": 20640
+    "grantP75": 20640,
+    "tuitionNonRes": null
   },
   {
     "name": "University of Florida Levin College of Law",
@@ -981,7 +1021,8 @@
     "condOut": "None",
     "grantP25": 6000,
     "grantP50": 19000,
-    "grantP75": 30804
+    "grantP75": 30804,
+    "tuitionNonRes": 36148
   },
   {
     "name": "Fordham University School of Law",
@@ -1005,7 +1046,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 35000,
-    "grantP75": 43000
+    "grantP75": 43000,
+    "tuitionNonRes": 78078
   },
   {
     "name": "Baylor Law School",
@@ -1029,7 +1071,8 @@
     "condOut": "None",
     "grantP25": 18000,
     "grantP50": 33518,
-    "grantP75": 57873
+    "grantP75": 57873,
+    "tuitionNonRes": null
   },
   {
     "name": "SMU Dedman School of Law",
@@ -1053,7 +1096,8 @@
     "condOut": 1,
     "grantP25": 22000,
     "grantP50": 26000,
-    "grantP75": 33333
+    "grantP75": 33333,
+    "tuitionNonRes": 60844
   },
   {
     "name": "Arizona State Sandra Day O'Connor College of Law",
@@ -1077,7 +1121,8 @@
     "condOut": "None",
     "grantP25": 5000,
     "grantP50": 20000,
-    "grantP75": 33336
+    "grantP75": 33336,
+    "tuitionNonRes": 52099
   },
   {
     "name": "University of Colorado Law School",
@@ -1101,7 +1146,8 @@
     "condOut": "None",
     "grantP25": 10300,
     "grantP50": 15000,
-    "grantP75": 27440
+    "grantP75": 27440,
+    "tuitionNonRes": 44002
   },
   {
     "name": "Indiana University Maurer School of Law",
@@ -1125,7 +1171,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 33000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 58000
   },
   {
     "name": "University of Illinois College of Law",
@@ -1149,7 +1196,8 @@
     "condOut": "None",
     "grantP25": 13125,
     "grantP50": 32000,
-    "grantP75": 46500
+    "grantP75": 46500,
+    "tuitionNonRes": 46500
   },
   {
     "name": "Villanova University Widger School of Law",
@@ -1173,7 +1221,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 40000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 59800
   },
   {
     "name": "UC Davis School of Law",
@@ -1197,7 +1246,8 @@
     "condOut": "None",
     "grantP25": 14500,
     "grantP50": 25000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 69705
   },
   {
     "name": "University of Connecticut School of Law",
@@ -1221,7 +1271,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 15177,
-    "grantP75": 22034
+    "grantP75": 22034,
+    "tuitionNonRes": 61396
   },
   {
     "name": "University of Kansas School of Law",
@@ -1245,7 +1296,8 @@
     "condOut": 6,
     "grantP25": 5375,
     "grantP50": 15000,
-    "grantP75": 24700
+    "grantP75": 24700,
+    "tuitionNonRes": null
   },
   {
     "name": "Temple University Beasley School of Law",
@@ -1269,7 +1321,8 @@
     "condOut": "None",
     "grantP25": 22271,
     "grantP50": 31334,
-    "grantP75": 41500
+    "grantP75": 41500,
+    "tuitionNonRes": 48996
   },
   {
     "name": "University of Washington School of Law",
@@ -1293,7 +1346,8 @@
     "condOut": "None",
     "grantP25": 7500,
     "grantP50": 14000,
-    "grantP75": 18930
+    "grantP75": 18930,
+    "tuitionNonRes": 57810
   },
   {
     "name": "Pepperdine Caruso School of Law",
@@ -1317,7 +1371,8 @@
     "condOut": 27,
     "grantP25": 30000,
     "grantP50": 30000,
-    "grantP75": 55000
+    "grantP75": 55000,
+    "tuitionNonRes": 72920
   },
   {
     "name": "University of Tennessee College of Law",
@@ -1341,7 +1396,8 @@
     "condOut": "None",
     "grantP25": 8000,
     "grantP50": 10550,
-    "grantP75": 14000
+    "grantP75": 14000,
+    "tuitionNonRes": 35140
   },
   {
     "name": "University of Missouri School of Law",
@@ -1365,7 +1421,8 @@
     "condOut": 3,
     "grantP25": 8000,
     "grantP50": 17500,
-    "grantP75": 24000
+    "grantP75": 24000,
+    "tuitionNonRes": null
   },
   {
     "name": "University of San Diego School of Law",
@@ -1389,7 +1446,8 @@
     "condOut": 25,
     "grantP25": 27375,
     "grantP50": 32000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 66950
   },
   {
     "name": "University of Arizona James E. Rogers College of Law",
@@ -1413,7 +1471,8 @@
     "condOut": "None",
     "grantP25": 15018,
     "grantP50": 25235,
-    "grantP75": 29870
+    "grantP75": 29870,
+    "tuitionNonRes": 31360
   },
   {
     "name": "Marquette University Law School",
@@ -1437,7 +1496,8 @@
     "condOut": "None",
     "grantP25": 16000,
     "grantP50": 23000,
-    "grantP75": 30000
+    "grantP75": 30000,
+    "tuitionNonRes": 51970
   },
   {
     "name": "University of Oklahoma College of Law",
@@ -1461,7 +1521,8 @@
     "condOut": "None",
     "grantP25": 7700,
     "grantP50": 12000,
-    "grantP75": 17000
+    "grantP75": 17000,
+    "tuitionNonRes": 33357
   },
   {
     "name": "Penn State Dickinson Law",
@@ -1485,7 +1546,8 @@
     "condOut": "None",
     "grantP25": 26000,
     "grantP50": 36000,
-    "grantP75": 56928
+    "grantP75": 56928,
+    "tuitionNonRes": 60048
   },
   {
     "name": "Cardozo School of Law",
@@ -1509,7 +1571,8 @@
     "condOut": "None",
     "grantP25": 30000,
     "grantP50": 40000,
-    "grantP75": 50000
+    "grantP75": 50000,
+    "tuitionNonRes": 74438
   },
   {
     "name": "University of Houston Law Center",
@@ -1533,7 +1596,8 @@
     "condOut": "None",
     "grantP25": 4000,
     "grantP50": 11500,
-    "grantP75": 16900
+    "grantP75": 16900,
+    "tuitionNonRes": 46051
   },
   {
     "name": "University of Maryland Carey School of Law",
@@ -1557,7 +1621,8 @@
     "condOut": "None",
     "grantP25": 10161,
     "grantP50": 28000,
-    "grantP75": 40000
+    "grantP75": 40000,
+    "tuitionNonRes": 55844
   },
   {
     "name": "University of South Carolina School of Law",
@@ -1581,7 +1646,8 @@
     "condOut": "None",
     "grantP25": 8000,
     "grantP50": 12562,
-    "grantP75": 18000
+    "grantP75": 18000,
+    "tuitionNonRes": 38100
   },
   {
     "name": "St. John's University School of Law",
@@ -1605,7 +1671,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 60000,
-    "grantP75": 72630
+    "grantP75": 72630,
+    "tuitionNonRes": 75170
   },
   {
     "name": "University of Kentucky College of Law",
@@ -1629,7 +1696,8 @@
     "condOut": "None",
     "grantP25": 6000,
     "grantP50": 11000,
-    "grantP75": 18000
+    "grantP75": 18000,
+    "tuitionNonRes": 49836
   },
   {
     "name": "Northeastern University School of Law",
@@ -1653,7 +1721,8 @@
     "condOut": "None",
     "grantP25": 14666,
     "grantP50": 31000,
-    "grantP75": 45000
+    "grantP75": 45000,
+    "tuitionNonRes": 65652
   },
   {
     "name": "Catholic University of America Columbus School of Law",
@@ -1677,7 +1746,8 @@
     "condOut": 12,
     "grantP25": 15727,
     "grantP50": 26000,
-    "grantP75": 45000
+    "grantP75": 45000,
+    "tuitionNonRes": 61580
   },
   {
     "name": "University of Cincinnati College of Law",
@@ -1701,7 +1771,8 @@
     "condOut": "None",
     "grantP25": 11700,
     "grantP50": 19000,
-    "grantP75": 23400
+    "grantP75": 23400,
+    "tuitionNonRes": 29010
   },
   {
     "name": "Loyola Law School Los Angeles",
@@ -1725,7 +1796,8 @@
     "condOut": 36,
     "grantP25": 35000,
     "grantP50": 45000,
-    "grantP75": 52000
+    "grantP75": 52000,
+    "tuitionNonRes": 70360
   },
   {
     "name": "University of Nebraska College of Law",
@@ -1749,7 +1821,8 @@
     "condOut": "None",
     "grantP25": 9510,
     "grantP50": 20000,
-    "grantP75": 35100
+    "grantP75": 35100,
+    "tuitionNonRes": null
   },
   {
     "name": "University of Richmond School of Law",
@@ -1773,7 +1846,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 40000,
-    "grantP75": 55550
+    "grantP75": 55550,
+    "tuitionNonRes": null
   },
   {
     "name": "Seton Hall University School of Law",
@@ -1797,7 +1871,8 @@
     "condOut": "None",
     "grantP25": 20500,
     "grantP50": 40000,
-    "grantP75": 60000
+    "grantP75": 60000,
+    "tuitionNonRes": 69660
   },
   {
     "name": "Tulane University Law School",
@@ -1821,7 +1896,8 @@
     "condOut": "None",
     "grantP25": 30000,
     "grantP50": 37500,
-    "grantP75": 45000
+    "grantP75": 45000,
+    "tuitionNonRes": null
   },
   {
     "name": "Wayne State University Law School",
@@ -1845,7 +1921,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 34636,
-    "grantP75": 38547
+    "grantP75": 38547,
+    "tuitionNonRes": 42632
   },
   {
     "name": "Drexel University Kline School of Law",
@@ -1869,7 +1946,8 @@
     "condOut": 4,
     "grantP25": 13000,
     "grantP50": 28667,
-    "grantP75": 45000
+    "grantP75": 45000,
+    "tuitionNonRes": 57000
   },
   {
     "name": "Georgia State University College of Law",
@@ -1893,7 +1971,8 @@
     "condOut": 5,
     "grantP25": 2336,
     "grantP50": 7776,
-    "grantP75": 10627
+    "grantP75": 10627,
+    "tuitionNonRes": 37886
   },
   {
     "name": "Loyola University Chicago School of Law",
@@ -1917,7 +1996,8 @@
     "condOut": "None",
     "grantP25": 22000,
     "grantP50": 30000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 58670
   },
   {
     "name": "UNLV William S. Boyd School of Law",
@@ -1941,7 +2021,8 @@
     "condOut": "None",
     "grantP25": 14980,
     "grantP50": 22998,
-    "grantP75": 39946
+    "grantP75": 39946,
+    "tuitionNonRes": 46040
   },
   {
     "name": "University of Pittsburgh School of Law",
@@ -1965,7 +2046,8 @@
     "condOut": "None",
     "grantP25": 24000,
     "grantP50": 30000,
-    "grantP75": 38000
+    "grantP75": 38000,
+    "tuitionNonRes": 53434
   },
   {
     "name": "Belmont University College of Law",
@@ -1989,7 +2071,8 @@
     "condOut": 10,
     "grantP25": 27140,
     "grantP50": 40710,
-    "grantP75": 54280
+    "grantP75": 54280,
+    "tuitionNonRes": 55500
   },
   {
     "name": "Drake University Law School",
@@ -2013,7 +2096,8 @@
     "condOut": "None",
     "grantP25": 24000,
     "grantP50": 31000,
-    "grantP75": 37080
+    "grantP75": 37080,
+    "tuitionNonRes": 50920
   },
   {
     "name": "Florida International University College of Law",
@@ -2037,7 +2121,8 @@
     "condOut": 16,
     "grantP25": 7000,
     "grantP50": 10365,
-    "grantP75": 20716
+    "grantP75": 20716,
+    "tuitionNonRes": null
   },
   {
     "name": "LSU Paul M. Hebert Law Center",
@@ -2061,7 +2146,8 @@
     "condOut": 34,
     "grantP25": 9937,
     "grantP50": 19750,
-    "grantP75": 20600
+    "grantP75": 20600,
+    "tuitionNonRes": 19750
   },
   {
     "name": "University of Denver Sturm College of Law",
@@ -2085,7 +2171,8 @@
     "condOut": 0,
     "grantP25": 23000,
     "grantP50": 30000,
-    "grantP75": 41000
+    "grantP75": 41000,
+    "tuitionNonRes": 63390
   },
   {
     "name": "University of Maine School of Law",
@@ -2109,7 +2196,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 23535,
-    "grantP75": 32926
+    "grantP75": 32926,
+    "tuitionNonRes": 38160
   },
   {
     "name": "Texas Tech University School of Law",
@@ -2133,7 +2221,8 @@
     "condOut": "None",
     "grantP25": 5869,
     "grantP50": 12000,
-    "grantP75": 17850
+    "grantP75": 17850,
+    "tuitionNonRes": 33840
   },
   {
     "name": "Duquesne University School of Law",
@@ -2157,7 +2246,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 30000,
-    "grantP75": 43000
+    "grantP75": 43000,
+    "tuitionNonRes": 58898
   },
   {
     "name": "University of Miami School of Law",
@@ -2181,7 +2271,8 @@
     "condOut": "None",
     "grantP25": 39374,
     "grantP50": 47000,
-    "grantP75": 52188
+    "grantP75": 52188,
+    "tuitionNonRes": 66720
   },
   {
     "name": "University at Buffalo School of Law",
@@ -2205,7 +2296,8 @@
     "condOut": "None",
     "grantP25": 3500,
     "grantP50": 7500,
-    "grantP75": 11500
+    "grantP75": 11500,
+    "tuitionNonRes": 32100
   },
   {
     "name": "University of Oregon School of Law",
@@ -2229,7 +2321,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 25000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 59495
   },
   {
     "name": "Regent University School of Law",
@@ -2253,7 +2346,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 22500,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": null
   },
   {
     "name": "Saint Louis University School of Law",
@@ -2277,7 +2371,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 25000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 55260
   },
   {
     "name": "University of St. Thomas School of Law",
@@ -2301,7 +2396,8 @@
     "condOut": 55,
     "grantP25": 12500,
     "grantP50": 25320,
-    "grantP75": 34750
+    "grantP75": 34750,
+    "tuitionNonRes": 44730
   },
   {
     "name": "University of Hawaii Richardson School of Law",
@@ -2325,7 +2421,8 @@
     "condOut": "None",
     "grantP25": 6000,
     "grantP50": 7000,
-    "grantP75": 13000
+    "grantP75": 13000,
+    "tuitionNonRes": 46728
   },
   {
     "name": "Lewis & Clark Law School",
@@ -2349,7 +2446,8 @@
     "condOut": "None",
     "grantP25": 19000,
     "grantP50": 26000,
-    "grantP75": 36000
+    "grantP75": 36000,
+    "tuitionNonRes": 61434
   },
   {
     "name": "University of Missouri-Kansas City School of Law",
@@ -2373,7 +2471,8 @@
     "condOut": 0,
     "grantP25": 4000,
     "grantP50": 7270,
-    "grantP75": 11250
+    "grantP75": 11250,
+    "tuitionNonRes": null
   },
   {
     "name": "University of Montana School of Law",
@@ -2397,7 +2496,8 @@
     "condOut": 0,
     "grantP25": 6630,
     "grantP50": 10000,
-    "grantP75": 15585
+    "grantP75": 15585,
+    "tuitionNonRes": 51582
   },
   {
     "name": "Stetson University College of Law",
@@ -2421,7 +2521,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 25000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 56521
   },
   {
     "name": "American University Washington College of Law",
@@ -2445,7 +2546,8 @@
     "condOut": "None",
     "grantP25": 40000,
     "grantP50": 40000,
-    "grantP75": 40000
+    "grantP75": 40000,
+    "tuitionNonRes": 66990
   },
   {
     "name": "Chapman University Fowler School of Law",
@@ -2469,7 +2571,8 @@
     "condOut": 36,
     "grantP25": 35000,
     "grantP50": 59500,
-    "grantP75": 64500
+    "grantP75": 64500,
+    "tuitionNonRes": 63126
   },
   {
     "name": "Rutgers Law School",
@@ -2493,7 +2596,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 16000,
-    "grantP75": 22000
+    "grantP75": 22000,
+    "tuitionNonRes": 47863
   },
   {
     "name": "Case Western Reserve University School of Law",
@@ -2517,7 +2621,8 @@
     "condOut": "None",
     "grantP25": 31000,
     "grantP50": 42500,
-    "grantP75": 48500
+    "grantP75": 48500,
+    "tuitionNonRes": 64600
   },
   {
     "name": "Chicago-Kent College of Law (IIT)",
@@ -2541,7 +2646,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 35000,
-    "grantP75": 43862
+    "grantP75": 43862,
+    "tuitionNonRes": null
   },
   {
     "name": "University of Dayton School of Law",
@@ -2565,7 +2671,8 @@
     "condOut": "None",
     "grantP25": 28000,
     "grantP50": 33000,
-    "grantP75": 37000
+    "grantP75": 37000,
+    "tuitionNonRes": null
   },
   {
     "name": "Indiana University McKinney School of Law",
@@ -2589,7 +2696,8 @@
     "condOut": 20,
     "grantP25": 5000,
     "grantP50": 15000,
-    "grantP75": 29232
+    "grantP75": 29232,
+    "tuitionNonRes": null
   },
   {
     "name": "Mercer University Walter F. George School of Law",
@@ -2613,7 +2721,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 20000,
-    "grantP75": 29000
+    "grantP75": 29000,
+    "tuitionNonRes": 44782
   },
   {
     "name": "University of New Mexico School of Law",
@@ -2637,7 +2746,8 @@
     "condOut": 6,
     "grantP25": 5000,
     "grantP50": 10000,
-    "grantP75": 16000
+    "grantP75": 16000,
+    "tuitionNonRes": 43192
   },
   {
     "name": "Samford University Cumberland School of Law",
@@ -2661,7 +2771,8 @@
     "condOut": 7,
     "grantP25": 7500,
     "grantP50": 20000,
-    "grantP75": 27000
+    "grantP75": 27000,
+    "tuitionNonRes": 46334
   },
   {
     "name": "Syracuse University College of Law",
@@ -2685,7 +2796,8 @@
     "condOut": "None",
     "grantP25": 14000,
     "grantP50": 24351,
-    "grantP75": 40211
+    "grantP75": 40211,
+    "tuitionNonRes": 64650
   },
   {
     "name": "University of Arkansas School of Law",
@@ -2709,7 +2821,8 @@
     "condOut": "None",
     "grantP25": 5500,
     "grantP50": 9000,
-    "grantP75": 11000
+    "grantP75": 11000,
+    "tuitionNonRes": null
   },
   {
     "name": "Michigan State University College of Law",
@@ -2733,7 +2846,8 @@
     "condOut": "None",
     "grantP25": 35000,
     "grantP50": 42682,
-    "grantP75": 47424
+    "grantP75": 47424,
+    "tuitionNonRes": 48222
   },
   {
     "name": "Albany Law School",
@@ -2757,7 +2871,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 38000,
-    "grantP75": 46000
+    "grantP75": 46000,
+    "tuitionNonRes": 63994
   },
   {
     "name": "Brooklyn Law School",
@@ -2781,7 +2896,8 @@
     "condOut": 69,
     "grantP25": 25000,
     "grantP50": 34000,
-    "grantP75": 48000
+    "grantP75": 48000,
+    "tuitionNonRes": 75496
   },
   {
     "name": "West Virginia University College of Law",
@@ -2805,7 +2921,8 @@
     "condOut": 0,
     "grantP25": 10848,
     "grantP50": 17500,
-    "grantP75": 26110
+    "grantP75": 26110,
+    "tuitionNonRes": 45666
   },
   {
     "name": "University of Wyoming College of Law",
@@ -2829,7 +2946,8 @@
     "condOut": 3,
     "grantP25": 6000,
     "grantP50": 8000,
-    "grantP75": 13460
+    "grantP75": 13460,
+    "tuitionNonRes": null
   },
   {
     "name": "Cleveland State University College of Law",
@@ -2853,7 +2971,8 @@
     "condOut": "None",
     "grantP25": 6000,
     "grantP50": 11000,
-    "grantP75": 18000
+    "grantP75": 18000,
+    "tuitionNonRes": 29866
   },
   {
     "name": "University of Mississippi School of Law",
@@ -2877,7 +2996,8 @@
     "condOut": "None",
     "grantP25": 5000,
     "grantP50": 7000,
-    "grantP75": 12000
+    "grantP75": 12000,
+    "tuitionNonRes": 26797
   },
   {
     "name": "New York Law School",
@@ -2901,7 +3021,8 @@
     "condOut": 68,
     "grantP25": 21300,
     "grantP50": 40000,
-    "grantP75": 55000
+    "grantP75": 55000,
+    "tuitionNonRes": 83952
   },
   {
     "name": "Washburn University School of Law",
@@ -2925,7 +3046,8 @@
     "condOut": 16,
     "grantP25": 11915,
     "grantP50": 15000,
-    "grantP75": 21500
+    "grantP75": 21500,
+    "tuitionNonRes": null
   },
   {
     "name": "Hofstra University Deane School of Law",
@@ -2949,7 +3071,8 @@
     "condOut": 123,
     "grantP25": 17500,
     "grantP50": 35793,
-    "grantP75": 71586
+    "grantP75": 71586,
+    "tuitionNonRes": 73344
   },
   {
     "name": "University of New Hampshire Franklin Pierce School of Law",
@@ -2973,7 +3096,8 @@
     "condOut": "None",
     "grantP25": 7500,
     "grantP50": 20000,
-    "grantP75": 34000
+    "grantP75": 34000,
+    "tuitionNonRes": 50000
   },
   {
     "name": "University of Akron School of Law",
@@ -2997,7 +3121,8 @@
     "condOut": "None",
     "grantP25": 3000,
     "grantP50": 9000,
-    "grantP75": 18300
+    "grantP75": 18300,
+    "tuitionNonRes": 22359
   },
   {
     "name": "Howard University School of Law",
@@ -3021,7 +3146,8 @@
     "condOut": 0,
     "grantP25": 10037,
     "grantP50": 23657,
-    "grantP75": 32364
+    "grantP75": 32364,
+    "tuitionNonRes": 39780
   },
   {
     "name": "Seattle University School of Law",
@@ -3045,7 +3171,8 @@
     "condOut": 36,
     "grantP25": 20000,
     "grantP50": 30000,
-    "grantP75": 40000
+    "grantP75": 40000,
+    "tuitionNonRes": null
   },
   {
     "name": "University of South Dakota School of Law",
@@ -3069,7 +3196,8 @@
     "condOut": 0,
     "grantP25": 590,
     "grantP50": 5000,
-    "grantP75": 10000
+    "grantP75": 10000,
+    "tuitionNonRes": 32184
   },
   {
     "name": "Suffolk University Law School",
@@ -3093,7 +3221,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 22445,
-    "grantP75": 40000
+    "grantP75": 40000,
+    "tuitionNonRes": 62610
   },
   {
     "name": "University of Tulsa College of Law",
@@ -3117,7 +3246,8 @@
     "condOut": "None",
     "grantP25": 5950,
     "grantP50": 12500,
-    "grantP75": 26633
+    "grantP75": 26633,
+    "tuitionNonRes": 30840
   },
   {
     "name": "DePaul University College of Law",
@@ -3141,7 +3271,8 @@
     "condOut": "None",
     "grantP25": 20000,
     "grantP50": 34950,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 55328
   },
   {
     "name": "Campbell University Norman Adrian Wiggins School of Law",
@@ -3165,7 +3296,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 21771,
-    "grantP75": 29850
+    "grantP75": 29850,
+    "tuitionNonRes": 51840
   },
   {
     "name": "University of Detroit Mercy School of Law",
@@ -3189,7 +3321,8 @@
     "condOut": "None",
     "grantP25": 10504,
     "grantP50": 18636,
-    "grantP75": 32614
+    "grantP75": 32614,
+    "tuitionNonRes": null
   },
   {
     "name": "Loyola University New Orleans College of Law",
@@ -3213,7 +3346,8 @@
     "condOut": 18,
     "grantP25": 15000,
     "grantP50": 26000,
-    "grantP75": 36000
+    "grantP75": 36000,
+    "tuitionNonRes": 55024
   },
   {
     "name": "Northern Kentucky University Chase College of Law",
@@ -3237,7 +3371,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 18000,
-    "grantP75": 25000
+    "grantP75": 25000,
+    "tuitionNonRes": 38454
   },
   {
     "name": "South Texas College of Law Houston",
@@ -3261,7 +3396,8 @@
     "condOut": 94,
     "grantP25": 3399,
     "grantP50": 11000,
-    "grantP75": 18000
+    "grantP75": 18000,
+    "tuitionNonRes": 42960
   },
   {
     "name": "UA Little Rock Bowen School of Law",
@@ -3285,7 +3421,8 @@
     "condOut": 30,
     "grantP25": 3443,
     "grantP50": 7461,
-    "grantP75": 13770
+    "grantP75": 13770,
+    "tuitionNonRes": null
   },
   {
     "name": "University of Baltimore School of Law",
@@ -3309,7 +3446,8 @@
     "condOut": 20,
     "grantP25": 7648,
     "grantP50": 15000,
-    "grantP75": 22000
+    "grantP75": 22000,
+    "tuitionNonRes": 50624
   },
   {
     "name": "Gonzaga University School of Law",
@@ -3333,7 +3471,8 @@
     "condOut": "None",
     "grantP25": 27000,
     "grantP50": 32000,
-    "grantP75": 34140
+    "grantP75": 34140,
+    "tuitionNonRes": 57962
   },
   {
     "name": "University of Idaho College of Law",
@@ -3357,7 +3496,8 @@
     "condOut": "None",
     "grantP25": 5000,
     "grantP50": 8000,
-    "grantP75": 11000
+    "grantP75": 11000,
+    "tuitionNonRes": 46752
   },
   {
     "name": "Liberty University School of Law",
@@ -3381,7 +3521,8 @@
     "condOut": 0,
     "grantP25": 16000,
     "grantP50": 24000,
-    "grantP75": 32000
+    "grantP75": 32000,
+    "tuitionNonRes": 43150
   },
   {
     "name": "Pace University Elisabeth Haub School of Law",
@@ -3405,7 +3546,8 @@
     "condOut": 119,
     "grantP25": 20000,
     "grantP50": 29000,
-    "grantP75": 38500
+    "grantP75": 38500,
+    "tuitionNonRes": 56648
   },
   {
     "name": "Quinnipiac University School of Law",
@@ -3429,7 +3571,8 @@
     "condOut": "None",
     "grantP25": 14000,
     "grantP50": 25000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 56610
   },
   {
     "name": "University of Louisville Brandeis School of Law",
@@ -3453,7 +3596,8 @@
     "condOut": "None",
     "grantP25": 5000,
     "grantP50": 12000,
-    "grantP75": 20000
+    "grantP75": 20000,
+    "tuitionNonRes": 32000
   },
   {
     "name": "University of Memphis Humphreys School of Law",
@@ -3477,7 +3621,8 @@
     "condOut": 9,
     "grantP25": 5000,
     "grantP50": 11000,
-    "grantP75": 20000
+    "grantP75": 20000,
+    "tuitionNonRes": 24354
   },
   {
     "name": "Creighton University School of Law",
@@ -3501,7 +3646,8 @@
     "condOut": "None",
     "grantP25": 15200,
     "grantP50": 25600,
-    "grantP75": 37458
+    "grantP75": 37458,
+    "tuitionNonRes": null
   },
   {
     "name": "St. Mary's University School of Law",
@@ -3525,7 +3671,8 @@
     "condOut": "None",
     "grantP25": 8500,
     "grantP50": 12500,
-    "grantP75": 17605
+    "grantP75": 17605,
+    "tuitionNonRes": 44910
   },
   {
     "name": "Northern Illinois University College of Law",
@@ -3549,7 +3696,8 @@
     "condOut": "None",
     "grantP25": 4137,
     "grantP50": 8274,
-    "grantP75": 12411
+    "grantP75": 12411,
+    "tuitionNonRes": 23667
   },
   {
     "name": "University of Toledo College of Law",
@@ -3573,7 +3721,8 @@
     "condOut": "None",
     "grantP25": 8300,
     "grantP50": 20000,
-    "grantP75": 25676
+    "grantP75": 25676,
+    "tuitionNonRes": 26446
   },
   {
     "name": "Willamette University College of Law",
@@ -3597,7 +3746,8 @@
     "condOut": "None",
     "grantP25": 10000,
     "grantP50": 20000,
-    "grantP75": 30000
+    "grantP75": 30000,
+    "tuitionNonRes": 56600
   },
   {
     "name": "Ave Maria School of Law",
@@ -3621,7 +3771,8 @@
     "condOut": 27,
     "grantP25": 7365,
     "grantP50": 30000,
-    "grantP75": 47400
+    "grantP75": 47400,
+    "tuitionNonRes": 49500
   },
   {
     "name": "Mitchell Hamline School of Law",
@@ -3645,7 +3796,8 @@
     "condOut": "None",
     "grantP25": 21372,
     "grantP50": 34730,
-    "grantP75": 42744
+    "grantP75": 42744,
+    "tuitionNonRes": 55300
   },
   {
     "name": "Southwestern Law School",
@@ -3669,7 +3821,8 @@
     "condOut": 142,
     "grantP25": 12500,
     "grantP50": 29166,
-    "grantP75": 42372
+    "grantP75": 42372,
+    "tuitionNonRes": 63160
   },
   {
     "name": "CUNY School of Law",
@@ -3693,7 +3846,8 @@
     "condOut": "None",
     "grantP25": 8000,
     "grantP50": 8000,
-    "grantP75": 8000
+    "grantP75": 8000,
+    "tuitionNonRes": 25640
   },
   {
     "name": "Santa Clara University School of Law",
@@ -3717,7 +3871,8 @@
     "condOut": 32,
     "grantP25": 30000,
     "grantP50": 40000,
-    "grantP75": 57262
+    "grantP75": 57262,
+    "tuitionNonRes": null
   },
   {
     "name": "Elon University School of Law",
@@ -3741,7 +3896,8 @@
     "condOut": 0,
     "grantP25": 11429,
     "grantP50": 23571,
-    "grantP75": 32543
+    "grantP75": 32543,
+    "tuitionNonRes": 45333
   },
   {
     "name": "Mississippi College School of Law",
@@ -3765,7 +3921,8 @@
     "condOut": 27,
     "grantP25": 14000,
     "grantP50": 22000,
-    "grantP75": 32000
+    "grantP75": 32000,
+    "tuitionNonRes": 37980
   },
   {
     "name": "Oklahoma City University School of Law",
@@ -3789,7 +3946,8 @@
     "condOut": 1,
     "grantP25": 10000,
     "grantP50": 14000,
-    "grantP75": 20000
+    "grantP75": 20000,
+    "tuitionNonRes": null
   },
   {
     "name": "University of North Dakota School of Law",
@@ -3813,7 +3971,8 @@
     "condOut": 0,
     "grantP25": 1775,
     "grantP50": 3875,
-    "grantP75": 10500
+    "grantP75": 10500,
+    "tuitionNonRes": null
   },
   {
     "name": "University of the Pacific McGeorge School of Law",
@@ -3837,7 +3996,8 @@
     "condOut": 43,
     "grantP25": 3388,
     "grantP50": 30426,
-    "grantP75": 60852
+    "grantP75": 60852,
+    "tuitionNonRes": 62678
   },
   {
     "name": "Vermont Law School",
@@ -3861,7 +4021,8 @@
     "condOut": "None",
     "grantP25": 18000,
     "grantP50": 28000,
-    "grantP75": 41250
+    "grantP75": 41250,
+    "tuitionNonRes": null
   },
   {
     "name": "UC College of the Law San Francisco",
@@ -3885,7 +4046,8 @@
     "condOut": 50,
     "grantP25": 10000,
     "grantP50": 20000,
-    "grantP75": 25000
+    "grantP75": 25000,
+    "tuitionNonRes": 61773
   },
   {
     "name": "University of San Francisco School of Law",
@@ -3909,7 +4071,8 @@
     "condOut": 36,
     "grantP25": 24343,
     "grantP50": 33718,
-    "grantP75": 43928
+    "grantP75": 43928,
+    "tuitionNonRes": 59800
   },
   {
     "name": "University of Illinois Chicago School of Law",
@@ -3933,7 +4096,8 @@
     "condOut": 76,
     "grantP25": 9000,
     "grantP50": 23250,
-    "grantP75": 33750
+    "grantP75": 33750,
+    "tuitionNonRes": null
   },
   {
     "name": "Roger Williams University School of Law",
@@ -3957,7 +4121,8 @@
     "condOut": 12,
     "grantP25": 18562,
     "grantP50": 28000,
-    "grantP75": 34804
+    "grantP75": 34804,
+    "tuitionNonRes": 47400
   },
   {
     "name": "Touro University Jacob D. Fuchsberg Law Center",
@@ -3981,7 +4146,8 @@
     "condOut": 112,
     "grantP25": 10000,
     "grantP50": 22000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 61000
   },
   {
     "name": "Widener University Delaware Law School",
@@ -4005,7 +4171,8 @@
     "condOut": "None",
     "grantP25": 25000,
     "grantP50": 32000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": null
   },
   {
     "name": "Capital University Law School",
@@ -4029,7 +4196,8 @@
     "condOut": 0,
     "grantP25": 12000,
     "grantP50": 21000,
-    "grantP75": 32000
+    "grantP75": 32000,
+    "tuitionNonRes": 45066
   },
   {
     "name": "University of Puerto Rico School of Law",
@@ -4053,7 +4221,8 @@
     "condOut": "None",
     "grantP25": 1000,
     "grantP50": 1000,
-    "grantP75": 1000
+    "grantP75": 1000,
+    "tuitionNonRes": null
   },
   {
     "name": "Southern Illinois University School of Law",
@@ -4077,7 +4246,8 @@
     "condOut": "None",
     "grantP25": 6000,
     "grantP50": 9500,
-    "grantP75": 16540
+    "grantP75": 16540,
+    "tuitionNonRes": null
   },
   {
     "name": "Appalachian School of Law",
@@ -4101,7 +4271,8 @@
     "condOut": "None",
     "grantP25": 5500,
     "grantP50": 10250,
-    "grantP75": 24600
+    "grantP75": 24600,
+    "tuitionNonRes": 41000
   },
   {
     "name": "Barry University Dwayne O. Andreas School of Law",
@@ -4125,7 +4296,8 @@
     "condOut": 148,
     "grantP25": 6500,
     "grantP50": 16000,
-    "grantP75": 22000
+    "grantP75": 22000,
+    "tuitionNonRes": 42000
   },
   {
     "name": "California Western School of Law",
@@ -4149,7 +4321,8 @@
     "condOut": 126,
     "grantP25": 18720,
     "grantP50": 37440,
-    "grantP75": 53040
+    "grantP75": 53040,
+    "tuitionNonRes": 64720
   },
   {
     "name": "Charleston School of Law",
@@ -4173,7 +4346,8 @@
     "condOut": "None",
     "grantP25": 13000,
     "grantP50": 20000,
-    "grantP75": 28500
+    "grantP75": 28500,
+    "tuitionNonRes": 48600
   },
   {
     "name": "University of the District of Columbia David A. Clarke School of Law",
@@ -4197,7 +4371,8 @@
     "condOut": "None",
     "grantP25": 5458,
     "grantP50": 8292,
-    "grantP75": 12436
+    "grantP75": 12436,
+    "tuitionNonRes": 24874
   },
   {
     "name": "Faulkner University Thomas Goode Jones School of Law",
@@ -4221,7 +4396,8 @@
     "condOut": "None",
     "grantP25": 3990,
     "grantP50": 15960,
-    "grantP75": 25935
+    "grantP75": 25935,
+    "tuitionNonRes": 39900
   },
   {
     "name": "Florida A&M University College of Law",
@@ -4245,7 +4421,8 @@
     "condOut": "None",
     "grantP25": 5000,
     "grantP50": 7500,
-    "grantP75": 10000
+    "grantP75": 10000,
+    "tuitionNonRes": null
   },
   {
     "name": "North Carolina Central University School of Law",
@@ -4269,7 +4446,8 @@
     "condOut": "None",
     "grantP25": 8080,
     "grantP50": 12982,
-    "grantP75": 20907
+    "grantP75": 20907,
+    "tuitionNonRes": 36116
   },
   {
     "name": "Nova Southeastern University Shepard Broad College of Law",
@@ -4293,7 +4471,8 @@
     "condOut": "None",
     "grantP25": 10750,
     "grantP50": 15000,
-    "grantP75": 21310
+    "grantP75": 21310,
+    "tuitionNonRes": 49350
   },
   {
     "name": "Ohio Northern University Pettit College of Law",
@@ -4317,7 +4496,8 @@
     "condOut": "None",
     "grantP25": 9125,
     "grantP50": 17250,
-    "grantP75": 25700
+    "grantP75": 25700,
+    "tuitionNonRes": 33900
   },
   {
     "name": "Southern University Law Center",
@@ -4341,7 +4521,8 @@
     "condOut": 8,
     "grantP25": 8000,
     "grantP50": 11000,
-    "grantP75": 13000
+    "grantP75": 13000,
+    "tuitionNonRes": 11338
   },
   {
     "name": "St. Thomas University School of Law",
@@ -4365,7 +4546,8 @@
     "condOut": 55,
     "grantP25": 12500,
     "grantP50": 25320,
-    "grantP75": 34750
+    "grantP75": 34750,
+    "tuitionNonRes": 44730
   },
   {
     "name": "Texas Southern University Thurgood Marshall School of Law",
@@ -4389,7 +4571,8 @@
     "condOut": 56,
     "grantP25": 3500,
     "grantP50": 7363,
-    "grantP75": 10519
+    "grantP75": 10519,
+    "tuitionNonRes": 26331
   },
   {
     "name": "Jacksonville University School of Law",
@@ -4413,7 +4596,8 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 18000,
-    "grantP75": 22000
+    "grantP75": 22000,
+    "tuitionNonRes": null
   },
   {
     "name": "Lincoln Memorial University Duncan School of Law",
@@ -4437,7 +4621,8 @@
     "condOut": "None",
     "grantP25": 15988,
     "grantP50": 28000,
-    "grantP75": 32736
+    "grantP75": 32736,
+    "tuitionNonRes": null
   },
   {
     "name": "Thomas M. Cooley Law School",
@@ -4461,7 +4646,8 @@
     "condOut": "None",
     "grantP25": 9279,
     "grantP50": 13746,
-    "grantP75": 23463
+    "grantP75": 23463,
+    "tuitionNonRes": null
   },
   {
     "name": "Western New England University School of Law",
@@ -4485,7 +4671,8 @@
     "condOut": null,
     "grantP25": 23000,
     "grantP50": 30000,
-    "grantP75": 35000
+    "grantP75": 35000,
+    "tuitionNonRes": 50320
   },
   {
     "name": "University of North Texas Dallas College of Law",
@@ -4509,7 +4696,8 @@
     "condOut": "None",
     "grantP25": 2000,
     "grantP50": 5000,
-    "grantP75": 7000
+    "grantP75": 7000,
+    "tuitionNonRes": null
   },
   {
     "name": "Widener University Commonwealth Law School",
@@ -4533,7 +4721,8 @@
     "condOut": "None",
     "grantP25": 15625,
     "grantP50": 25000,
-    "grantP75": 34000
+    "grantP75": 34000,
+    "tuitionNonRes": null
   },
   {
     "name": "Pontifical Catholic University of Puerto Rico School of Law",
@@ -4557,7 +4746,8 @@
     "condOut": 12,
     "grantP25": 1000,
     "grantP50": 1593,
-    "grantP75": 4372
+    "grantP75": 4372,
+    "tuitionNonRes": null
   },
   {
     "name": "University of Massachusetts School of Law",
@@ -4581,7 +4771,8 @@
     "condOut": "None",
     "grantP25": 8000,
     "grantP50": 15000,
-    "grantP75": 20787
+    "grantP75": 20787,
+    "tuitionNonRes": 41565
   },
   {
     "name": "Inter American University of Puerto Rico School of Law",
@@ -4605,7 +4796,8 @@
     "condOut": 0,
     "grantP25": 1189,
     "grantP50": 2379,
-    "grantP75": 3568
+    "grantP75": 3568,
+    "tuitionNonRes": 16585
   },
   {
     "name": "New England Law Boston",
@@ -4629,7 +4821,8 @@
     "condOut": 75,
     "grantP25": 19500,
     "grantP50": 40000,
-    "grantP75": 59900
+    "grantP75": 59900,
+    "tuitionNonRes": 62896
   },
   {
     "name": "Wilmington University School of Law",
@@ -4653,7 +4846,8 @@
     "condOut": "None",
     "grantP25": 3000,
     "grantP50": 6000,
-    "grantP75": 24302
+    "grantP75": 24302,
+    "tuitionNonRes": null
   },
   {
     "name": "Atlanta's John Marshall Law School",
@@ -4677,7 +4871,8 @@
     "condOut": 42,
     "grantP25": 10000,
     "grantP50": 18000,
-    "grantP75": 24000
+    "grantP75": 24000,
+    "tuitionNonRes": 52536
   },
   {
     "name": "Kenneth F. Kahn School of Law at High Point University",
@@ -4701,7 +4896,8 @@
     "condOut": "None",
     "grantP25": 0,
     "grantP50": 10000,
-    "grantP75": 23000
+    "grantP75": 23000,
+    "tuitionNonRes": null
   },
   {
     "name": "Western State College of Law at Westcliff University",
@@ -4725,6 +4921,7 @@
     "condOut": "None",
     "grantP25": 15000,
     "grantP50": 22000,
-    "grantP75": 27000
+    "grantP75": 27000,
+    "tuitionNonRes": 54840
   }
 ]

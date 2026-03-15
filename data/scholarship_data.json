@@ -8,7 +8,7 @@
       2024,
       2025
     ],
-    "schoolCount": 196,
+    "schoolCount": 197,
     "hasTuitionData": true
   },
   "schools": {
@@ -2681,6 +2681,39 @@
       "tuition": {
         "ftResident": null,
         "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Kenneth F. Kahn School of Law at High Point University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.04,
+        "p50": 3.33,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": 75.0,
+        "tiers": {
+          "lessThanHalf": 26.0,
+          "halfToFull": 40.0,
+          "full": 8.0,
+          "moreThanFull": 0.0
+        },
+        "amounts": {
+          "p25": 10000,
+          "p50": 30000,
+          "p75": 45000
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 46350,
+        "ftNonResident": 46350,
         "ptResident": null,
         "ptNonResident": null
       }

@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWMH5ER9YS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LWMH5ER9YS");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <title>Scholarship Estimator — Atlas Legis</title>
+  <meta name="description" content="Estimate merit scholarship amounts at ABA-accredited law schools based on your LSAT and GPA, using historical ABA 509 disclosure data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --em:       #1a7a50;
+      --em-deep:  #0f5132;
+      --em-mid:   #22a86a;
+      --em-pale:  #d1ece0;
+      --ink:      #0e2018;
+      --ink-soft: #2d4a38;
+      --muted:    #6b8c78;
+      --soft:     #f0f7f3;
+      --border:   rgba(26,122,80,0.12);
+      --shadow:   rgba(14,32,24,0.08);
+      --green:    #16a34a;
+      --yellow:   #ca8a04;
+      --red:      #dc2626;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f8f6;
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    /* ── Nav (exact match to about.html) ── */
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .nav-brand { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
+    .nav-wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; color: var(--em-deep);
+      letter-spacing: -.01em; text-decoration: none;
+    }
+    .nav-tagline {
+      font-size: .72rem; font-weight: 500; color: var(--muted);
+      letter-spacing: .02em; display: none;
+    }
+    @media (min-width: 480px) { .nav-tagline { display: block; } }
+    .nav-right { display: flex; align-items: center; gap: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a {
+      font-size: .82rem; font-weight: 500; color: var(--muted);
+      padding: 5px 11px; border-radius: 6px;
+      transition: color .14s, background .14s; white-space: nowrap; text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--ink); background: var(--soft); }
+    .nav-links a[aria-current="page"] { color: var(--em-deep); font-weight: 600; }
+    .nav-map {
+      background: var(--em); color: #fff; padding: 5px 14px;
+      border-radius: 6px; font-size: .82rem; font-weight: 500;
+      white-space: nowrap; text-decoration: none;
+      transition: background .14s; margin-left: 6px;
+    }
+    .nav-map:hover { background: var(--em-deep); color: #fff; }
+    @media (max-width: 500px) {
+      .nav-tagline { display: none !important; }
+      .nav-links a { padding: 5px 7px; }
+      .nav-map { padding: 5px 10px; margin-left: 4px; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background:
+        radial-gradient(ellipse at 18% 50%, rgba(34,168,106,0.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 82% 15%, rgba(15,81,50,0.10) 0%, transparent 50%),
+        linear-gradient(155deg, #e8f3ed 0%, #daeae2 60%, #e4efe9 100%);
+      padding: 72px 24px 80px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-inner { max-width: 740px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--em); font-weight: 600; margin-bottom: 22px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 22px; height: 1.5px;
+      background: var(--em); border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700; color: var(--em-deep);
+      line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 24px;
+    }
+    .hero h1 em { font-style: italic; color: var(--em); }
+    .hero-lead {
+      font-size: 1.08rem; color: var(--ink-soft);
+      line-height: 1.75; font-weight: 300; max-width: 580px;
+    }
+
+    /* ── Main ── */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 100px;
+    }
+
+    /* ── Section chrome ── */
+    .section { padding: 56px 0 0; }
+    .section-label {
+      font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--em); font-weight: 600; margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem; font-weight: 700; color: var(--ink);
+      line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 20px;
+    }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 56px 0 0; }
+
+    /* ── Callout ── */
+    .callout {
+      background: rgba(26,122,80,0.04);
+      border: 1px solid rgba(26,122,80,0.15);
+      border-left: 3px solid var(--em);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin-top: 20px;
+    }
+    .callout p {
+      font-size: 0.88rem; color: var(--ink-soft);
+      line-height: 1.72; font-weight: 300; margin: 0;
+    }
+    .callout p + p { margin-top: 10px; }
+    .callout p strong { font-weight: 600; color: var(--ink); }
+
+    /* ── Stats bar ── */
+    .results-meta {
+      display: flex; align-items: center; gap: 10px;
+      margin: 28px 0 12px; flex-wrap: wrap;
+    }
+    .results-count {
+      font-size: 0.8rem; color: var(--muted); font-weight: 400;
+    }
+    .results-count strong { color: var(--em-deep); font-weight: 600; }
+    .data-badge {
+      font-size: 0.7rem; font-weight: 600; color: var(--em);
+      background: var(--em-pale); padding: 3px 10px;
+      border-radius: 999px; letter-spacing: 0.04em;
+    }
+    .need-toggle {
+      margin-left: auto; display: flex; align-items: center;
+      gap: 6px; font-size: 0.78rem; color: var(--ink-soft);
+      cursor: pointer; user-select: none;
+    }
+    .need-toggle input[type="checkbox"] {
+      accent-color: var(--em); width: 14px; height: 14px; cursor: pointer;
+    }
+
+    /* ── Input panel ── */
+    .input-panel {
+      background: #fff;
+      border: 1px solid rgba(26,122,80,0.09);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 2px 16px var(--shadow), 0 1px 4px rgba(14,32,24,0.05);
+      margin-top: 32px;
+    }
+    .panel-label {
+      font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--em); font-weight: 600; margin-bottom: 20px;
+    }
+    .inputs-row {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    /* ── Stepper ── */
+    .stepper-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-width: 180px;
+      max-width: 260px;
+    }
+    .stepper-field-label {
+      font-size: 0.78rem; font-weight: 600; color: var(--ink-soft);
+      letter-spacing: 0.01em;
+    }
+    .stepper {
+      display: inline-flex;
+      align-items: stretch;
+      border: 1.5px solid rgba(26,122,80,0.22);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+    .stepper:focus-within { border-color: var(--em); }
+    .stepper-btn {
+      flex-shrink: 0;
+      width: 40px;
+      background: var(--soft);
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--em-deep);
+      line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.12s, color 0.12s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    .stepper-btn:hover { background: var(--em-pale); color: var(--em-deep); }
+    .stepper-btn:active { background: #b8dece; }
+    .stepper-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      background: transparent;
+      min-width: 0;
+      padding: 10px 4px;
+      /* hide browser spinner arrows */
+      -moz-appearance: textfield;
+    }
+    .stepper-input::-webkit-outer-spin-button,
+    .stepper-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .stepper-hint {
+      font-size: 0.68rem; color: var(--muted); font-weight: 400;
+    }
+
+    /* ── Filter row ── */
+    .filter-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(26,122,80,0.08);
+      flex: 1;
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 6px; }
+    .filter-group label {
+      font-size: 0.72rem; font-weight: 600;
+      color: var(--ink-soft); letter-spacing: 0.01em;
+    }
+    .filter-group.grow { flex: 2; min-width: 200px; }
+    .filter-group.narrow { flex: 1; min-width: 160px; }
+    .filter-input, .filter-select {
+      padding: 8px 12px;
+      border: 1.5px solid rgba(26,122,80,0.2);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: var(--ink);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+    .filter-input:focus, .filter-select:focus { border-color: var(--em); }
+    .filter-input::placeholder { color: var(--muted); }
+    .filter-select {
+      cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%236b8c78' d='M5 7L0 2h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+
+    /* ── Table ── */
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(26,122,80,0.12);
+      box-shadow: 0 2px 16px var(--shadow), 0 1px 4px rgba(14,32,24,0.04);
+    }
+    table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.875rem; background: #fff;
+    }
+    thead tr { background: var(--em-deep); }
+    thead th {
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+      white-space: nowrap; cursor: pointer; user-select: none;
+      transition: background 0.12s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    thead th:hover { background: #1a5c3d; }
+    thead th.sorted { background: var(--em); color: #fff; }
+    thead th .sort-icon {
+      margin-left: 4px; font-size: 0.6rem; opacity: 0.5; vertical-align: middle;
+    }
+    thead th.sorted .sort-icon { opacity: 1; }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(26,122,80,0.06);
+      transition: background 0.08s;
+    }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #f7fbf9; }
+    tbody td { padding: 11px 14px; vertical-align: middle; }
+
+    .school-cell { max-width: 240px; }
+    .school-link {
+      color: var(--em-deep); text-decoration: none; font-weight: 600;
+      font-size: 0.84rem; line-height: 1.3; transition: color 0.12s;
+    }
+    .school-link:hover { color: var(--em); text-decoration: underline; }
+
+    .pdf-link {
+      display: inline-block; margin-left: 6px;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.03em;
+      color: var(--muted); border: 1px solid var(--border);
+      border-radius: 4px; padding: 1px 5px; text-decoration: none;
+      vertical-align: middle; transition: color 0.12s, border-color 0.12s, background 0.12s;
+    }
+    .pdf-link:hover { color: var(--em-deep); border-color: var(--em-pale); background: var(--soft); }
+
+    /* Need-based tag */
+    .need-tag {
+      display: inline-block; font-size: 0.64rem; color: #92400e;
+      background: #fef3c7; border-radius: 4px;
+      padding: 2px 6px; margin-top: 3px;
+      font-weight: 600; letter-spacing: 0.02em;
+    }
+
+    .amount { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .amount-pos { font-weight: 600; color: #166534; font-variant-numeric: tabular-nums; }
+    .no-data { color: #b8ccc0; font-style: italic; font-size: 0.78rem; }
+    .zero-grant { color: var(--muted); font-size: 0.82rem; }
+    .net-unavail {
+      font-size: 0.75rem; color: #b8ccc0;
+      font-style: italic;
+    }
+
+    /* Strength badges */
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 999px;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+    }
+    .badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; }
+    .badge-strong      { background: #dcfce7; color: #166534; }
+    .badge-strong::before { background: #16a34a; }
+    .badge-competitive { background: #fef9c3; color: #92400e; }
+    .badge-competitive::before { background: #ca8a04; }
+    .badge-reach       { background: #fee2e2; color: #991b1b; }
+    .badge-reach::before { background: #dc2626; }
+
+    /* Confidence */
+    .conf {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.74rem; font-weight: 500;
+    }
+    .conf::before { content: ''; width: 7px; height: 7px; border-radius: 50%; }
+    .conf-high { color: var(--green); }
+    .conf-high::before { background: var(--green); }
+    .conf-med  { color: var(--yellow); }
+    .conf-med::before  { background: var(--yellow); }
+    .conf-low  { color: var(--red); }
+    .conf-low::before  { background: var(--red); }
+
+    /* Table states */
+    .state-cell {
+      padding: 56px 24px; text-align: center;
+      color: var(--muted); font-style: italic; font-size: 0.9rem;
+    }
+    .state-cell.error { color: var(--red); font-style: normal; font-size: 0.875rem; }
+    .state-cell code {
+      display: block; margin-top: 8px; font-size: 0.78rem; color: var(--muted);
+    }
+
+    /* ── Methodology prose ── */
+    .prose {
+      font-size: 0.94rem; color: var(--ink-soft); line-height: 1.82; font-weight: 300;
+    }
+    .prose p { margin-bottom: 16px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 600; color: var(--ink); }
+
+    /* ── Fade-up ── */
+    .fade-up {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Footer (exact match to about.html) ── */
+    .footer { background: #0d1117; padding: 36px 20px; }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center;
+    }
+    .footer-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.05rem; font-weight: 400; color: rgba(255,255,255,.75);
+    }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; list-style: none; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: color .14s; text-decoration: none; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-copy { font-size: .72rem; color: rgba(255,255,255,.25); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero { padding: 48px 20px 56px; }
+      .hero h1 { font-size: 2rem; }
+      .hero-lead { font-size: 0.97rem; }
+      .main { padding: 0 16px 72px; }
+      .section { padding: 44px 0 0; }
+      .divider { margin: 44px 0 0; }
+      .input-panel { padding: 20px; }
+      .stepper-group { max-width: 100%; }
+      .inputs-row { gap: 16px; }
+    }
+    @media (max-width: 500px) {
+      .filter-row { flex-direction: column; }
+      .filter-group.grow, .filter-group.narrow { min-width: 0; width: 100%; }
+    }
+  </style>
+  <link rel="stylesheet" href="/theme.css">
+  <script src="/theme.js"></script>
+</head>
+<body>
+
+<!-- Nav (matches about.html exactly) -->
+<nav class="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="/" class="nav-wordmark" aria-label="Atlas Legis — home">Atlas Legis</a>
+      <span class="nav-tagline">Law School Analytics</span>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="/schools/">Schools</a></li>
+        <li><a href="/debt-planner.html">Debt Planner</a></li>
+        <li><a href="/scholarship-estimator.html" aria-current="page">Scholarships</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="/" class="nav-map">View Map</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">ABA 509 Data</div>
+    <h1>Estimate your<br><em>scholarship</em> at every<br>law school.</h1>
+    <p class="hero-lead">Enter your LSAT and GPA to see estimated merit scholarship amounts across all ABA-accredited schools — calculated from official 509 disclosure data. No account. No paywall.</p>
+  </div>
+</section>
+
+<div class="main">
+
+  <!-- Estimator section -->
+  <div class="section fade-up">
+    <div class="section-label">Your Profile</div>
+    <div class="section-title">Enter your stats</div>
+
+    <div class="input-panel">
+      <div class="panel-label">Stats</div>
+      <div class="inputs-row">
+
+        <!-- LSAT stepper -->
+        <div class="stepper-group">
+          <div class="stepper-field-label">LSAT Score</div>
+          <div class="stepper" id="lsat-stepper">
+            <button type="button" class="stepper-btn" id="lsat-dec" aria-label="Decrease LSAT by 1">−</button>
+            <input type="number" class="stepper-input" id="lsat-input"
+                   value="160" min="120" max="180" step="1" aria-label="LSAT score">
+            <button type="button" class="stepper-btn" id="lsat-inc" aria-label="Increase LSAT by 1">+</button>
+          </div>
+          <div class="stepper-hint">Range 120–180 · National median ~157</div>
+        </div>
+
+        <!-- GPA stepper -->
+        <div class="stepper-group">
+          <div class="stepper-field-label">Undergraduate GPA</div>
+          <div class="stepper" id="gpa-stepper">
+            <button type="button" class="stepper-btn" id="gpa-dec" aria-label="Decrease GPA by 0.01">−</button>
+            <input type="number" class="stepper-input" id="gpa-input"
+                   value="3.60" min="2.00" max="4.33" step="0.01" aria-label="GPA">
+            <button type="button" class="stepper-btn" id="gpa-inc" aria-label="Increase GPA by 0.01">+</button>
+          </div>
+          <div class="stepper-hint">Range 2.00–4.33 · National median ~3.55</div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-row">
+          <div class="filter-group grow">
+            <label for="school-search">Search Schools</label>
+            <input type="text" id="school-search" class="filter-input"
+                   placeholder="Filter by school name…" autocomplete="off">
+          </div>
+          <div class="filter-group narrow">
+            <label for="strength-filter">Show</label>
+            <select id="strength-filter" class="filter-select">
+              <option value="all">All Schools</option>
+              <option value="strong">Strong applicant</option>
+              <option value="competitive">Competitive or better</option>
+              <option value="reach">Reaches only</option>
+            </select>
+          </div>
+          <div class="filter-group narrow">
+            <label for="tuition-type">Tuition</label>
+            <select id="tuition-type" class="filter-select">
+              <option value="resident">In-State / Resident</option>
+              <option value="nonresident">Out-of-State / Non-Resident</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Results meta bar -->
+    <div class="results-meta">
+      <span class="results-count">Showing <strong id="result-count">—</strong> schools</span>
+      <span class="data-badge" id="data-year-note" style="display:none;"></span>
+      <label class="need-toggle">
+        <input type="checkbox" id="hide-need-based">
+        Hide need-based schools
+      </label>
+    </div>
+
+    <!-- Results table -->
+    <div class="table-wrap">
+      <table aria-label="Scholarship estimates by school">
+        <thead>
+          <tr>
+            <th data-col="name" data-default-dir="asc">School <span class="sort-icon">↕</span></th>
+            <th data-col="grant" data-default-dir="desc">Est. Grant / Year <span class="sort-icon">↕</span></th>
+            <th data-col="grant3" data-default-dir="desc">Est. 3-Year Total <span class="sort-icon">↕</span></th>
+            <th data-col="net" data-default-dir="asc">
+              Est. Net Cost / Yr
+              <span class="sort-icon">↕</span>
+            </th>
+            <th data-col="pct" data-default-dir="desc">% Receiving Aid <span class="sort-icon">↕</span></th>
+            <th data-col="strength" data-default-dir="desc">Strength <span class="sort-icon">↕</span></th>
+            <th data-col="conf" data-default-dir="desc">Confidence <span class="sort-icon">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="results-body">
+          <tr><td colspan="7" class="state-cell">Loading scholarship data…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /section -->
+
+  <hr class="divider fade-up">
+
+  <!-- Methodology -->
+  <div class="section fade-up">
+    <div class="section-label">Methodology</div>
+    <div class="section-title">How estimates are calculated</div>
+    <div class="prose">
+      <p>Your LSAT and GPA are each compared to the school's published 25th, 50th, and 75th percentiles from ABA 509 disclosures. Linear interpolation determines where your stats fall within that distribution — your position becomes your "applicant strength" for that school. LSAT is weighted at 60% and GPA at 40%, reflecting typical merit-scholarship practice.</p>
+      <p>That strength score is then mapped to an estimated grant amount by interpolating across the school's reported full-time grant percentiles (p25 / p50 / p75). If your combined strength puts you near the school's 65th percentile, the estimate sits between that school's p50 and p75 grant amounts.</p>
+      <p><strong>Confidence</strong> reflects how close your stats are to the school's reported enrollment range. "High" means your LSAT and GPA both fall within the school's 25th–75th percentile band. "Low" means one or both fall significantly outside it — the further outside, the less reliable the interpolation.</p>
+    </div>
+    <div class="callout">
+      <p><strong>These are statistical estimates, not guarantees.</strong> Actual awards depend on many factors not captured here: application cycle, class composition, demonstrated interest, competing offers, and institutional priorities. Use these figures as a budgeting starting point — real scholarship letters can and do vary significantly from any estimate.</p>
+      <p><strong>Need-based schools</strong> — including Harvard, Yale, and Stanford — award financial aid primarily on demonstrated financial need, not LSAT/GPA credentials. Estimates for those schools are suppressed. Contact each school's financial aid office directly for accurate aid information.</p>
+    </div>
+    <p style="margin-top:16px; font-size:0.82rem; color:var(--muted);">
+      <a href="/estimator-methodology.html" style="color:var(--em); text-decoration:none; border-bottom:1px solid rgba(26,122,80,0.3); transition:border-color 0.15s;">View full methodology</a> — how estimates are calculated from ABA 509 data.
+    </p>
+  </div>
+
+</div><!-- /main -->
+
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Atlas Legis</div>
+    <ul class="footer-links" role="list">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/sources.html">Sources</a></li>
+      <li><a href="/methodology.html">Methodology</a></li>
+    </ul>
+    <p class="footer-copy">© <span id="footer-year"></span> Atlas Legis. Data from ABA Required Disclosures. Estimates are for informational purposes only.</p>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════════════
+   Atlas Legis — Scholarship Estimator
+   Client-side only. Loads scholarship_data.json + tuition_data.json via fetch.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+const DATA_URL    = '/data/scholarship_data.json';
+const TUITION_URL = '/data/tuition_data.json';
+
+// ── State ────────────────────────────────────────────────────────────────────
+let schoolData  = {};
+let tuitionData = {};
+let sortCol     = 'grant';
+let sortAsc     = false;
+let currentLsat    = 160;
+let currentGpa     = 3.60;
+let currentTuition = 'resident';
+
+// ── URL slug (for linking to Atlas Legis school pages) ───────────────────────
+const SCHOOL_SLUGS = {
+  "Akron, The University of":                     "university-of-akron-school-of-law",
+  "Alabama, The University of":                   "university-of-alabama-school-of-law",
+  "Albany Law School":                            "albany-law-school",
+  "American University":                          "american-university-washington-college-of-law",
+  "Appalachian School of Law":                    "appalachian-school-of-law",
+  "Arizona State University":                     "arizona-state-sandra-day-oconnor-college-of-law",
+  "Arizona, The University of":                   "university-of-arizona-james-e-rogers-college-of-law",
+  "Arkansas at Little Rock, University of":       "ua-little-rock-bowen-school-of-law",
+  "Arkansas, University of":                      "university-of-arkansas-school-of-law",
+  "Atlanta's John Marshall Law School":           "atlantas-john-marshall-law-school",
+  "Ave Maria School of Law":                      "ave-maria-school-of-law",
+  "Baltimore, University of":                     "university-of-baltimore-school-of-law",
+  "Barry University":                             "barry-university-dwayne-o-andreas-school-of-law",
+  "Baylor University":                            "baylor-law-school",
+  "Belmont University":                           "belmont-university-college-of-law",
+  "Boston College":                               "boston-college-law-school",
+  "Boston University":                            "boston-university-school-of-law",
+  "Brigham Young University":                     "byu-j-reuben-clark-law-school",
+  "Brooklyn Law School":                          "brooklyn-law-school",
+  "Buffalo, University at":                       "university-at-buffalo-school-of-law",
+  "California Western School of Law":             "california-western-school-of-law",
+  "California-Berkeley, University of":           "uc-berkeley-school-of-law",
+  "California-Davis, University of":              "uc-davis-school-of-law",
+  "California-Irvine, University of":             "uc-irvine-school-of-law",
+  "California-Los Angeles, University of":        "ucla-school-of-law",
+  "California-San Francisco, University of":      "uc-college-of-the-law-san-francisco",
+  "Campbell University":                          "campbell-university-norman-adrian-wiggins-school-of-law",
+  "Capital University Law School":                "capital-university-law-school",
+  "Cardozo, Yeshiva University":                  "cardozo-school-of-law",
+  "Case Western Reserve University":              "case-western-reserve-university-school-of-law",
+  "Catholic University of America, The":          "catholic-university-of-america-columbus-school-of-law",
+  "Chapman University":                           "chapman-university-fowler-school-of-law",
+  "Charleston School of Law":                     "charleston-school-of-law",
+  "Chicago, The University of":                   "university-of-chicago-law-school",
+  "Chicago-Kent, Illinois Institute of Technology": "chicago-kent-college-of-law-iit",
+  "Cincinnati, University of":                    "university-of-cincinnati-college-of-law",
+  "City University of New York, University of":   "cuny-school-of-law",
+  "Cleveland State University":                   "cleveland-state-university-college-of-law",
+  "Colorado, University of":                      "university-of-colorado-law-school",
+  "Columbia University":                          "columbia-law-school",
+  "Connecticut, University of":                   "university-of-connecticut-school-of-law",
+  "Cooley Law School":                            "thomas-m-cooley-law-school",
+  "Cornell University":                           "cornell-law-school",
+  "Creighton University":                         "creighton-university-school-of-law",
+  "Dayton, University of":                        "university-of-dayton-school-of-law",
+  "DePaul University":                            "depaul-university-college-of-law",
+  "Denver, University of":                        "university-of-denver-sturm-college-of-law",
+  "Detroit Mercy, University of":                 "university-of-detroit-mercy-school-of-law",
+  "District of Columbia, University of":          "university-of-the-district-of-columbia-david-a-clarke-school-of-law",
+  "Drake University":                             "drake-university-law-school",
+  "Drexel University":                            "drexel-university-kline-school-of-law",
+  "Duke University":                              "duke-university-school-of-law",
+  "Duquesne University":                          "duquesne-university-school-of-law",
+  "Elon University":                              "elon-university-school-of-law",
+  "Emory University":                             "emory-university-school-of-law",
+  "Faulkner University":                          "faulkner-university-thomas-goode-jones-school-of-law",
+  "Florida A&M University":                       "florida-a-m-university-college-of-law",
+  "Florida International University":             "florida-international-university-college-of-law",
+  "Florida State University":                     "florida-state-university-college-of-law",
+  "Florida, University of":                       "university-of-florida-levin-college-of-law",
+  "Fordham University":                           "fordham-university-school-of-law",
+  "George Mason University":                      "george-mason-antonin-scalia-law-school",
+  "George Washington University, The":            "george-washington-university-law-school",
+  "Georgetown University":                        "georgetown-university-law-center",
+  "Georgia State University":                     "georgia-state-university-college-of-law",
+  "Georgia, University of":                       "university-of-georgia-school-of-law",
+  "Gonzaga University":                           "gonzaga-university-school-of-law",
+  "Harvard University":                           "harvard-law-school",
+  "Hawaii, University of":                        "university-of-hawaii-richardson-school-of-law",
+  "Hofstra University":                           "hofstra-university-deane-school-of-law",
+  "Houston, University of":                       "university-of-houston-law-center",
+  "Howard University":                            "howard-university-school-of-law",
+  "Idaho, University of":                         "university-of-idaho-college-of-law",
+  "Illinois, University of":                      "university-of-illinois-college-of-law",
+  "Illinois-Chicago, University of":              "university-of-illinois-chicago-school-of-law",
+  "Indiana University-Bloomington":               "indiana-university-maurer-school-of-law",
+  "Indiana University-Indianapolis":              "indiana-university-mckinney-school-of-law",
+  "Inter American University of Puerto Rico":     "inter-american-university-of-puerto-rico-school-of-law",
+  "Iowa, University of":                          "university-of-iowa-college-of-law",
+  "Jacksonville University":                      "jacksonville-university-school-of-law",
+  "Kansas, The University of":                    "university-of-kansas-school-of-law",
+  "Kentucky, University of":                      "university-of-kentucky-college-of-law",
+  "Lewis & Clark Law School":                     "lewis-clark-law-school",
+  "Liberty University":                           "liberty-university-school-of-law",
+  "Lincoln Memorial University":                  "lincoln-memorial-university-duncan-school-of-law",
+  "Louisiana State University":                   "lsu-paul-m-hebert-law-center",
+  "Louisville, University of":                    "university-of-louisville-brandeis-school-of-law",
+  "Loyola Marymount University-Los Angeles":      "loyola-law-school-los-angeles",
+  "Loyola University-Chicago":                    "loyola-university-chicago-school-of-law",
+  "Loyola University-New Orleans":                "loyola-university-new-orleans-college-of-law",
+  "Maine, University of":                         "university-of-maine-school-of-law",
+  "Marquette University":                         "marquette-university-law-school",
+  "Maryland, University of":                      "university-of-maryland-carey-school-of-law",
+  "Massachusetts/Dartmouth, University of":       "university-of-massachusetts-school-of-law",
+  "Memphis, The University of":                   "university-of-memphis-humphreys-school-of-law",
+  "Mercer University":                            "mercer-university-walter-f-george-school-of-law",
+  "Miami, University of":                         "university-of-miami-school-of-law",
+  "Michigan State University":                    "michigan-state-university-college-of-law",
+  "Michigan, University of":                      "university-of-michigan-law-school",
+  "Minnesota, University of":                     "university-of-minnesota-law-school",
+  "Mississippi College":                          "mississippi-college-school-of-law",
+  "Mississippi, The University of":               "university-of-mississippi-school-of-law",
+  "Missouri, University of":                      "university-of-missouri-school-of-law",
+  "Missouri-Kansas City, University of":          "university-of-missouri-kansas-city-school-of-law",
+  "Mitchell/Hamline School of Law":               "mitchell-hamline-school-of-law",
+  "Montana, University of":                       "university-of-montana-school-of-law",
+  "Nebraska, University of":                      "university-of-nebraska-college-of-law",
+  "Nevada-Las Vegas, University of":              "unlv-william-s-boyd-school-of-law",
+  "New England Law/Boston":                       "new-england-law-boston",
+  "New Hampshire, University of":                 "university-of-new-hampshire-franklin-pierce-school-of-law",
+  "New Mexico, The University of":                "university-of-new-mexico-school-of-law",
+  "New York Law School":                          "new-york-law-school",
+  "New York University":                          "nyu-school-of-law",
+  "North Carolina Central University":            "north-carolina-central-university-school-of-law",
+  "North Carolina, University of":                "university-of-north-carolina-school-of-law",
+  "North Dakota, University of":                  "university-of-north-dakota-school-of-law",
+  "North Texas at Dallas, University of":         "university-of-north-texas-dallas-college-of-law",
+  "Northeastern University":                      "northeastern-university-school-of-law",
+  "Northern Illinois University":                 "northern-illinois-university-college-of-law",
+  "Northern Kentucky University":                 "northern-kentucky-university-chase-college-of-law",
+  "Northwestern University":                      "northwestern-pritzker-school-of-law",
+  "Notre Dame, University of":                    "university-of-notre-dame-law-school",
+  "Nova Southeastern University":                 "nova-southeastern-university-shepard-broad-college-of-law",
+  "Ohio Northern University":                     "ohio-northern-university-pettit-college-of-law",
+  "Oklahoma City University":                     "oklahoma-city-university-school-of-law",
+  "Oklahoma, University of":                      "university-of-oklahoma-college-of-law",
+  "Oregon, University of":                        "university-of-oregon-school-of-law",
+  "Pace University":                              "pace-university-elisabeth-haub-school-of-law",
+  "Pacific, University of the":                   "university-of-the-pacific-mcgeorge-school-of-law",
+  "Penn State Dickinson Law":                     "penn-state-dickinson-law",
+  "Pennsylvania, University of":                  "penn-carey-law",
+  "Pepperdine University":                        "pepperdine-caruso-school-of-law",
+  "Pittsburgh, University of":                    "university-of-pittsburgh-school-of-law",
+  "Pontifical Catholic University of Puerto Rico": "pontifical-catholic-university-of-puerto-rico-school-of-law",
+  "Puerto Rico, University of":                   "university-of-puerto-rico-school-of-law",
+  "Quinnipiac University":                        "quinnipiac-university-school-of-law",
+  "Regent University":                            "regent-university-school-of-law",
+  "Richmond, University of":                      "university-of-richmond-school-of-law",
+  "Roger Williams University":                    "roger-williams-university-school-of-law",
+  "Rutgers University":                           "rutgers-law-school",
+  "Saint Louis University":                       "saint-louis-university-school-of-law",
+  "Samford University":                           "samford-university-cumberland-school-of-law",
+  "San Diego, University of":                     "university-of-san-diego-school-of-law",
+  "San Francisco, University of":                 "university-of-san-francisco-school-of-law",
+  "Santa Clara University":                       "santa-clara-university-school-of-law",
+  "Seattle University":                           "seattle-university-school-of-law",
+  "Seton Hall University":                        "seton-hall-university-school-of-law",
+  "South Carolina, University of":               "university-of-south-carolina-school-of-law",
+  "South Dakota, University of":                  "university-of-south-dakota-school-of-law",
+  "South Texas College of Law Houston":           "south-texas-college-of-law-houston",
+  "Southern California, University of":           "usc-gould-school-of-law",
+  "Southern Illinois University":                 "southern-illinois-university-school-of-law",
+  "Southern Methodist University":                "smu-dedman-school-of-law",
+  "Southern University":                          "southern-university-law-center",
+  "Southwestern Law School":                      "southwestern-law-school",
+  "St. John's University":                        "st-johns-university-school-of-law",
+  "St. Mary's University":                        "st-marys-university-school-of-law",
+  "St. Thomas University (Miami)":                "st-thomas-university-school-of-law",
+  "St. Thomas, (Minneapolis) University of":      "university-of-st-thomas-school-of-law",
+  "Stanford University":                          "stanford-law-school",
+  "Stetson University":                           "stetson-university-college-of-law",
+  "Suffolk University":                           "suffolk-university-law-school",
+  "Syracuse University":                          "syracuse-university-college-of-law",
+  "Temple University":                            "temple-university-beasley-school-of-law",
+  "Tennessee, University of":                     "university-of-tennessee-college-of-law",
+  "Texas A&M University":                         "texas-a-m-university-school-of-law",
+  "Texas Southern University":                    "texas-southern-university-thurgood-marshall-school-of-law",
+  "Texas Tech University":                        "texas-tech-university-school-of-law",
+  "Texas, University of":                         "university-of-texas-school-of-law",
+  "The Ohio State University":                    "ohio-state-university-moritz-college-of-law",
+  "Toledo, The University of":                    "university-of-toledo-college-of-law",
+  "Touro University":                             "touro-university-jacob-d-fuchsberg-law-center",
+  "Tulane University":                            "tulane-university-law-school",
+  "Tulsa, The University of":                     "university-of-tulsa-college-of-law",
+  "Utah, The University of":                      "university-of-utah-s-j-quinney-college-of-law",
+  "Vanderbilt University":                        "vanderbilt-university-law-school",
+  "Vermont Law School":                           "vermont-law-school",
+  "Villanova University":                         "villanova-university-widger-school-of-law",
+  "Virginia, University of":                      "university-of-virginia-school-of-law",
+  "Wake Forest University":                       "wake-forest-university-school-of-law",
+  "Washburn University":                          "washburn-university-school-of-law",
+  "Washington University (St. Louis)":            "washington-university-in-st-louis-school-of-law",
+  "Washington and Lee University":                "washington-and-lee-university-school-of-law",
+  "Washington, University of":                    "university-of-washington-school-of-law",
+  "Wayne State University":                       "wayne-state-university-law-school",
+  "West Virginia University":                     "west-virginia-university-college-of-law",
+  "Western New England University":               "western-new-england-university-school-of-law",
+  "Western State, Westcliff University":          "western-state-college-of-law-at-westcliff-university",
+  "Widener University Commonwealth Law School":   "widener-university-commonwealth-law-school",
+  "Widener University Delaware Law School":       "widener-university-delaware-law-school",
+  "Willamette University":                        "willamette-university-college-of-law",
+  "William & Mary":                               "william-mary-law-school",
+  "Wilmington University School of Law":          "wilmington-university-school-of-law",
+  "Wisconsin, University of":                     "university-of-wisconsin-law-school",
+  "Wyoming, University of":                       "university-of-wyoming-college-of-law",
+  "Yale University":                              "yale-law-school",
+};
+
+function toSlug(name) {
+  return SCHOOL_SLUGS[name] || name
+    .toLowerCase()
+    .replace(/[',.()\[\]]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// ── Atlas Legis display names (keyed by ABA name) ─────────────────────────────
+const SCHOOL_DISPLAY_NAMES = {
+  "Akron, The University of":                     "University of Akron School of Law",
+  "Alabama, The University of":                   "University of Alabama School of Law",
+  "Albany Law School":                            "Albany Law School",
+  "American University":                          "American University Washington College of Law",
+  "Appalachian School of Law":                    "Appalachian School of Law",
+  "Arizona State University":                     "Arizona State Sandra Day O'Connor College of Law",
+  "Arizona, The University of":                   "University of Arizona James E. Rogers College of Law",
+  "Arkansas at Little Rock, University of":       "UA Little Rock Bowen School of Law",
+  "Arkansas, University of":                      "University of Arkansas School of Law",
+  "Atlanta's John Marshall Law School":           "Atlanta's John Marshall Law School",
+  "Ave Maria School of Law":                      "Ave Maria School of Law",
+  "Baltimore, University of":                     "University of Baltimore School of Law",
+  "Barry University":                             "Barry University Dwayne O. Andreas School of Law",
+  "Baylor University":                            "Baylor Law School",
+  "Belmont University":                           "Belmont University College of Law",
+  "Boston College":                               "Boston College Law School",
+  "Boston University":                            "Boston University School of Law",
+  "Brigham Young University":                     "BYU J. Reuben Clark Law School",
+  "Brooklyn Law School":                          "Brooklyn Law School",
+  "Buffalo, University at":                       "University at Buffalo School of Law",
+  "California Western School of Law":             "California Western School of Law",
+  "California-Berkeley, University of":           "UC Berkeley School of Law",
+  "California-Davis, University of":              "UC Davis School of Law",
+  "California-Irvine, University of":             "UC Irvine School of Law",
+  "California-Los Angeles, University of":        "UCLA School of Law",
+  "California-San Francisco, University of":      "UC College of the Law San Francisco",
+  "Campbell University":                          "Campbell University Norman Adrian Wiggins School of Law",
+  "Capital University Law School":                "Capital University Law School",
+  "Cardozo, Yeshiva University":                  "Cardozo School of Law",
+  "Case Western Reserve University":              "Case Western Reserve University School of Law",
+  "Catholic University of America, The":          "Catholic University of America Columbus School of Law",
+  "Chapman University":                           "Chapman University Fowler School of Law",
+  "Charleston School of Law":                     "Charleston School of Law",
+  "Chicago, The University of":                   "University of Chicago Law School",
+  "Chicago-Kent, Illinois Institute of Technology": "Chicago-Kent College of Law IIT",
+  "Cincinnati, University of":                    "University of Cincinnati College of Law",
+  "City University of New York, University of":   "CUNY School of Law",
+  "Cleveland State University":                   "Cleveland State University College of Law",
+  "Colorado, University of":                      "University of Colorado Law School",
+  "Columbia University":                          "Columbia Law School",
+  "Connecticut, University of":                   "University of Connecticut School of Law",
+  "Cooley Law School":                            "Thomas M. Cooley Law School",
+  "Cornell University":                           "Cornell Law School",
+  "Creighton University":                         "Creighton University School of Law",
+  "Dayton, University of":                        "University of Dayton School of Law",
+  "DePaul University":                            "DePaul University College of Law",
+  "Denver, University of":                        "University of Denver Sturm College of Law",
+  "Detroit Mercy, University of":                 "University of Detroit Mercy School of Law",
+  "District of Columbia, University of":          "University of the District of Columbia David A. Clarke School of Law",
+  "Drake University":                             "Drake University Law School",
+  "Drexel University":                            "Drexel University Kline School of Law",
+  "Duke University":                              "Duke University School of Law",
+  "Duquesne University":                          "Duquesne University School of Law",
+  "Elon University":                              "Elon University School of Law",
+  "Emory University":                             "Emory University School of Law",
+  "Faulkner University":                          "Faulkner University Thomas Goode Jones School of Law",
+  "Florida A&M University":                       "Florida A&M University College of Law",
+  "Florida International University":             "Florida International University College of Law",
+  "Florida State University":                     "Florida State University College of Law",
+  "Florida, University of":                       "University of Florida Levin College of Law",
+  "Fordham University":                           "Fordham University School of Law",
+  "George Mason University":                      "George Mason Antonin Scalia Law School",
+  "George Washington University, The":            "George Washington University Law School",
+  "Georgetown University":                        "Georgetown University Law Center",
+  "Georgia State University":                     "Georgia State University College of Law",
+  "Georgia, University of":                       "University of Georgia School of Law",
+  "Gonzaga University":                           "Gonzaga University School of Law",
+  "Harvard University":                           "Harvard Law School",
+  "Hawaii, University of":                        "University of Hawaii Richardson School of Law",
+  "Hofstra University":                           "Hofstra University Deane School of Law",
+  "Houston, University of":                       "University of Houston Law Center",
+  "Howard University":                            "Howard University School of Law",
+  "Idaho, University of":                         "University of Idaho College of Law",
+  "Illinois, University of":                      "University of Illinois College of Law",
+  "Illinois-Chicago, University of":              "University of Illinois Chicago School of Law",
+  "Indiana University-Bloomington":               "Indiana University Maurer School of Law",
+  "Indiana University-Indianapolis":              "Indiana University McKinney School of Law",
+  "Inter American University of Puerto Rico":     "Inter American University of Puerto Rico School of Law",
+  "Iowa, University of":                          "University of Iowa College of Law",
+  "Jacksonville University":                      "Jacksonville University School of Law",
+  "Kansas, The University of":                    "University of Kansas School of Law",
+  "Kentucky, University of":                      "University of Kentucky College of Law",
+  "Lewis & Clark Law School":                     "Lewis & Clark Law School",
+  "Liberty University":                           "Liberty University School of Law",
+  "Lincoln Memorial University":                  "Lincoln Memorial University Duncan School of Law",
+  "Louisiana State University":                   "LSU Paul M. Hebert Law Center",
+  "Louisville, University of":                    "University of Louisville Brandeis School of Law",
+  "Loyola Marymount University-Los Angeles":      "Loyola Law School Los Angeles",
+  "Loyola University-Chicago":                    "Loyola University Chicago School of Law",
+  "Loyola University-New Orleans":                "Loyola University New Orleans College of Law",
+  "Maine, University of":                         "University of Maine School of Law",
+  "Marquette University":                         "Marquette University Law School",
+  "Maryland, University of":                      "University of Maryland Carey School of Law",
+  "Massachusetts/Dartmouth, University of":       "University of Massachusetts School of Law",
+  "Memphis, The University of":                   "University of Memphis Humphreys School of Law",
+  "Mercer University":                            "Mercer University Walter F. George School of Law",
+  "Miami, University of":                         "University of Miami School of Law",
+  "Michigan State University":                    "Michigan State University College of Law",
+  "Michigan, University of":                      "University of Michigan Law School",
+  "Minnesota, University of":                     "University of Minnesota Law School",
+  "Mississippi College":                          "Mississippi College School of Law",
+  "Mississippi, The University of":               "University of Mississippi School of Law",
+  "Missouri, University of":                      "University of Missouri School of Law",
+  "Missouri-Kansas City, University of":          "University of Missouri Kansas City School of Law",
+  "Mitchell/Hamline School of Law":               "Mitchell Hamline School of Law",
+  "Montana, University of":                       "University of Montana School of Law",
+  "Nebraska, University of":                      "University of Nebraska College of Law",
+  "Nevada-Las Vegas, University of":              "UNLV William S. Boyd School of Law",
+  "New England Law/Boston":                       "New England Law Boston",
+  "New Hampshire, University of":                 "University of New Hampshire Franklin Pierce School of Law",
+  "New Mexico, The University of":                "University of New Mexico School of Law",
+  "New York Law School":                          "New York Law School",
+  "New York University":                          "NYU School of Law",
+  "North Carolina Central University":            "North Carolina Central University School of Law",
+  "North Carolina, University of":                "University of North Carolina School of Law",
+  "North Dakota, University of":                  "University of North Dakota School of Law",
+  "North Texas at Dallas, University of":         "University of North Texas Dallas College of Law",
+  "Northeastern University":                      "Northeastern University School of Law",
+  "Northern Illinois University":                 "Northern Illinois University College of Law",
+  "Northern Kentucky University":                 "Northern Kentucky University Chase College of Law",
+  "Northwestern University":                      "Northwestern Pritzker School of Law",
+  "Notre Dame, University of":                    "University of Notre Dame Law School",
+  "Nova Southeastern University":                 "Nova Southeastern University Shepard Broad College of Law",
+  "Ohio Northern University":                     "Ohio Northern University Pettit College of Law",
+  "Oklahoma City University":                     "Oklahoma City University School of Law",
+  "Oklahoma, University of":                      "University of Oklahoma College of Law",
+  "Oregon, University of":                        "University of Oregon School of Law",
+  "Pace University":                              "Pace University Elisabeth Haub School of Law",
+  "Pacific, University of the":                   "University of the Pacific McGeorge School of Law",
+  "Penn State Dickinson Law":                     "Penn State Dickinson Law",
+  "Pennsylvania, University of":                  "Penn Carey Law",
+  "Pepperdine University":                        "Pepperdine Caruso School of Law",
+  "Pittsburgh, University of":                    "University of Pittsburgh School of Law",
+  "Pontifical Catholic University of Puerto Rico": "Pontifical Catholic University of Puerto Rico School of Law",
+  "Puerto Rico, University of":                   "University of Puerto Rico School of Law",
+  "Quinnipiac University":                        "Quinnipiac University School of Law",
+  "Regent University":                            "Regent University School of Law",
+  "Richmond, University of":                      "University of Richmond School of Law",
+  "Roger Williams University":                    "Roger Williams University School of Law",
+  "Rutgers University":                           "Rutgers Law School",
+  "Saint Louis University":                       "Saint Louis University School of Law",
+  "Samford University":                           "Samford University Cumberland School of Law",
+  "San Diego, University of":                     "University of San Diego School of Law",
+  "San Francisco, University of":                 "University of San Francisco School of Law",
+  "Santa Clara University":                       "Santa Clara University School of Law",
+  "Seattle University":                           "Seattle University School of Law",
+  "Seton Hall University":                        "Seton Hall University School of Law",
+  "South Carolina, University of":                "University of South Carolina School of Law",
+  "South Dakota, University of":                  "University of South Dakota School of Law",
+  "South Texas College of Law Houston":           "South Texas College of Law Houston",
+  "Southern California, University of":           "USC Gould School of Law",
+  "Southern Illinois University":                 "Southern Illinois University School of Law",
+  "Southern Methodist University":                "SMU Dedman School of Law",
+  "Southern University":                          "Southern University Law Center",
+  "Southwestern Law School":                      "Southwestern Law School",
+  "St. John's University":                        "St. John's University School of Law",
+  "St. Mary's University":                        "St. Mary's University School of Law",
+  "St. Thomas University (Miami)":                "St. Thomas University School of Law",
+  "St. Thomas, (Minneapolis) University of":      "University of St. Thomas School of Law",
+  "Stanford University":                          "Stanford Law School",
+  "Stetson University":                           "Stetson University College of Law",
+  "Suffolk University":                           "Suffolk University Law School",
+  "Syracuse University":                          "Syracuse University College of Law",
+  "Temple University":                            "Temple University Beasley School of Law",
+  "Tennessee, University of":                     "University of Tennessee College of Law",
+  "Texas A&M University":                         "Texas A&M University School of Law",
+  "Texas Southern University":                    "Texas Southern University Thurgood Marshall School of Law",
+  "Texas Tech University":                        "Texas Tech University School of Law",
+  "Texas, University of":                         "University of Texas School of Law",
+  "The Ohio State University":                    "Ohio State University Moritz College of Law",
+  "Toledo, The University of":                    "University of Toledo College of Law",
+  "Touro University":                             "Touro University Jacob D. Fuchsberg Law Center",
+  "Tulane University":                            "Tulane University Law School",
+  "Tulsa, The University of":                     "University of Tulsa College of Law",
+  "Utah, The University of":                      "University of Utah S.J. Quinney College of Law",
+  "Vanderbilt University":                        "Vanderbilt University Law School",
+  "Vermont Law School":                           "Vermont Law School",
+  "Villanova University":                         "Villanova University Widger School of Law",
+  "Virginia, University of":                      "University of Virginia School of Law",
+  "Wake Forest University":                       "Wake Forest University School of Law",
+  "Washburn University":                          "Washburn University School of Law",
+  "Washington University (St. Louis)":            "Washington University in St. Louis School of Law",
+  "Washington and Lee University":                "Washington and Lee University School of Law",
+  "Washington, University of":                    "University of Washington School of Law",
+  "Wayne State University":                       "Wayne State University Law School",
+  "West Virginia University":                     "West Virginia University College of Law",
+  "Western New England University":               "Western New England University School of Law",
+  "Western State, Westcliff University":          "Western State College of Law at Westcliff University",
+  "Widener University Commonwealth Law School":   "Widener University Commonwealth Law School",
+  "Widener University Delaware Law School":       "Widener University Delaware Law School",
+  "Willamette University":                        "Willamette University College of Law",
+  "William & Mary":                               "William & Mary Law School",
+  "Wilmington University School of Law":          "Wilmington University School of Law",
+  "Wisconsin, University of":                     "University of Wisconsin Law School",
+  "Wyoming, University of":                       "University of Wyoming College of Law",
+  "Yale University":                              "Yale Law School",
+};
+
+// ── Math ─────────────────────────────────────────────────────────────────────
+/**
+ * Where does `value` sit in the distribution defined by p25/p50/p75?
+ * Returns 0–1 (extrapolates linearly outside the given range).
+ */
+function scorePercentile(value, p25, p50, p75) {
+  if (p25 == null || p50 == null || p75 == null) return null;
+  if (p25 === p75) return 0.5;
+
+  if (value <= p25) {
+    const step = p50 - p25;
+    if (step <= 0) return 0;
+    return Math.max(0, 0.25 - 0.25 * (p25 - value) / step);
+  }
+  if (value <= p50) return 0.25 + 0.25 * (value - p25) / (p50 - p25);
+  if (value <= p75) return 0.50 + 0.25 * (value - p50) / (p75 - p50);
+
+  const step = p75 - p50;
+  if (step <= 0) return 1;
+  return Math.min(1, 0.75 + 0.25 * (value - p75) / step);
+}
+
+/**
+ * Interpolate an estimated grant from score (0–1) and grant percentile anchors.
+ * score 0.25 → p25grant | 0.50 → p50grant | 0.75 → p75grant
+ */
+function interpolateGrant(score, p25g, p50g, p75g) {
+  const hasP25 = p25g != null, hasP50 = p50g != null, hasP75 = p75g != null;
+  if (!hasP25 && !hasP50 && !hasP75) return null;
+
+  const lo  = hasP25 ? p25g : (hasP50 ? Math.max(0, p50g * 0.5) : p75g * 0.3);
+  const mid = hasP50 ? p50g : ((hasP25 && hasP75) ? (p25g + p75g) / 2 : (hasP25 ? p25g * 1.6 : p75g * 0.65));
+  const hi  = hasP75 ? p75g : (hasP50 ? p50g * 1.55 : lo * 2.2);
+
+  if (score <= 0)    return 0;
+  if (score <= 0.25) return Math.max(0, lo * (score / 0.25));
+  if (score <= 0.50) return lo  + (mid - lo)  * (score - 0.25) / 0.25;
+  if (score <= 0.75) return mid + (hi  - mid) * (score - 0.50) / 0.25;
+
+  const step = hi - mid;
+  return Math.min(hi * 1.5, hi + step * (score - 0.75) / 0.25);
+}
+
+// ── Per-school calculation ────────────────────────────────────────────────────
+function calcRow(name, school, lsat, gpa) {
+  const l = school.lsat, g = school.gpa, gr = school.grants;
+
+  const lsatScore = scorePercentile(lsat, l.p25, l.p50, l.p75);
+  const gpaScore  = scorePercentile(gpa,  g.p25, g.p50, g.p75);
+
+  let combinedScore = null;
+  if      (lsatScore != null && gpaScore != null) combinedScore = 0.6 * lsatScore + 0.4 * gpaScore;
+  else if (lsatScore != null)                     combinedScore = lsatScore;
+  else if (gpaScore  != null)                     combinedScore = gpaScore;
+
+  // Grant estimate
+  let grantAmt = null;
+  if (combinedScore != null && !school.needBased) {
+    const a = gr.amounts;
+    grantAmt = interpolateGrant(combinedScore, a.p25, a.p50, a.p75);
+    if (gr.percentReceiving != null && gr.percentReceiving < 15 && combinedScore < 0.60) grantAmt = 0;
+    if (grantAmt != null) grantAmt = Math.round(grantAmt);
+  }
+
+  // Applicant strength
+  let strength = null;
+  if (combinedScore != null) {
+    if      (combinedScore >= 0.60) strength = 'strong';
+    else if (combinedScore >= 0.38) strength = 'competitive';
+    else                            strength = 'reach';
+  }
+
+  // Confidence
+  let conf = null;
+  if (combinedScore != null && l.p25 != null && l.p75 != null && g.p25 != null && g.p75 != null) {
+    const lsatIn  = lsat >= l.p25 && lsat <= l.p75;
+    const gpaIn   = gpa  >= g.p25 && gpa  <= g.p75;
+    const lsatNear = lsat >= (l.p25 - 5)   && lsat <= (l.p75 + 5);
+    const gpaNear  = gpa  >= (g.p25 - 0.2) && gpa  <= (g.p75 + 0.2);
+    if (lsatIn && gpaIn)        conf = 'high';
+    else if (lsatNear && gpaNear) conf = 'med';
+    else                          conf = 'low';
+  }
+
+  // Net cost — tuition is embedded in scholarship_data.json; tuition_data.json is a fallback
+  const tuition = school.tuition || tuitionData[name] || null;
+  let netCost = null;
+  if (grantAmt != null && grantAmt > 0 && tuition) {
+    const tuitionAmt = currentTuition === 'nonresident'
+      ? (tuition.ftNonResident ?? tuition.ftResident ?? null)
+      : (tuition.ftResident ?? tuition.ftNonResident ?? null);
+    if (tuitionAmt != null) netCost = Math.max(0, tuitionAmt - grantAmt);
+  }
+
+  return { name, school, combinedScore, grantAmt, strength, conf, tuition, netCost };
+}
+
+// ── Formatting ───────────────────────────────────────────────────────────────
+const fmt$ = n => (n == null || isNaN(n)) ? null : '$' + Math.round(n).toLocaleString('en-US');
+
+function strengthBadge(s) {
+  if (!s) return '<span class="no-data">—</span>';
+  const label = { strong: 'Strong', competitive: 'Competitive', reach: 'Reach' }[s];
+  return `<span class="badge badge-${s}">${label}</span>`;
+}
+
+function confBadge(c) {
+  if (!c) return '<span class="no-data">—</span>';
+  const label = { high: 'High', med: 'Medium', low: 'Low' }[c];
+  return `<span class="conf conf-${c}">${label}</span>`;
+}
+
+// ── Row HTML ──────────────────────────────────────────────────────────────────
+function renderRow(r) {
+  const slug        = toSlug(r.name);
+  const url         = `https://atlaslegis.com/schools/${slug}`;
+  const displayName = SCHOOL_DISPLAY_NAMES[r.name] || r.name;
+
+  let grantCell, grant3Cell, netCell;
+
+  if (r.school.needBased) {
+    grantCell  = '<span class="need-tag">Need-based — contact school</span>';
+    grant3Cell = '<span class="no-data">—</span>';
+    netCell    = '<span class="no-data">—</span>';
+
+  } else if (r.grantAmt === null) {
+    grantCell  = '<span class="no-data">Insufficient data</span>';
+    grant3Cell = '<span class="no-data">—</span>';
+    netCell    = '<span class="no-data">—</span>';
+
+  } else if (r.grantAmt === 0) {
+    grantCell  = '<span class="zero-grant">Est. $0</span>';
+    grant3Cell = '<span class="zero-grant">$0</span>';
+    // Net cost when grant is $0 = full sticker price
+    if (r.tuition) {
+      const sticker = currentTuition === 'nonresident'
+        ? (r.tuition.ftNonResident ?? r.tuition.ftResident ?? null)
+        : (r.tuition.ftResident ?? r.tuition.ftNonResident ?? null);
+      netCell = sticker != null
+        ? `<span class="amount">${fmt$(sticker)}</span>`
+        : '<span class="no-data">—</span>';
+    } else {
+      netCell = '<span class="no-data">—</span>';
+    }
+
+  } else {
+    grantCell  = `<span class="amount-pos">${fmt$(r.grantAmt)}</span>`;
+    grant3Cell = `<span class="amount">${fmt$(r.grantAmt * 3)}</span>`;
+    if (r.netCost != null) {
+      netCell = `<span class="amount">${fmt$(r.netCost)}</span>`;
+    } else {
+      netCell = '<span class="no-data">—</span>';
+    }
+  }
+
+  const pctRecv = r.school.grants.percentReceiving;
+  const pctCell = pctRecv != null
+    ? `<span style="font-weight:500;color:var(--ink-soft)">${pctRecv}%</span>`
+    : '<span class="no-data">—</span>';
+
+  const pdfUrl = `/reports/${slug}.pdf`;
+
+  return `<tr>
+    <td class="school-cell">
+      <a class="school-link" href="${url}" target="_blank" rel="noopener noreferrer">${displayName}</a>
+      <a class="pdf-link" href="${pdfUrl}" target="_blank" rel="noopener noreferrer" title="View full report PDF">PDF</a>
+      ${r.school.needBased ? '<br><span class="need-tag">Need-based</span>' : ''}
+    </td>
+    <td>${grantCell}</td>
+    <td>${grant3Cell}</td>
+    <td>${netCell}</td>
+    <td>${pctCell}</td>
+    <td>${strengthBadge(r.strength)}</td>
+    <td>${confBadge(r.conf)}</td>
+  </tr>`;
+}
+
+// ── Sort key ──────────────────────────────────────────────────────────────────
+function sortKey(r, col) {
+  switch (col) {
+    case 'name':     return r.name.toLowerCase();
+    case 'grant':    return r.school.needBased ? -2 : (r.grantAmt ?? -1);
+    case 'grant3':   return r.school.needBased ? -2 : (r.grantAmt != null ? r.grantAmt * 3 : -1);
+    case 'net':      return r.netCost ?? 1e9;
+    case 'pct':      return r.school.grants.percentReceiving ?? -1;
+    case 'strength': return { strong: 3, competitive: 2, reach: 1 }[r.strength] ?? 0;
+    case 'conf':     return { high: 3, med: 2, low: 1 }[r.conf] ?? 0;
+    default:         return 0;
+  }
+}
+
+// ── Main render ───────────────────────────────────────────────────────────────
+function renderTable() {
+  const searchQ   = document.getElementById('school-search').value.toLowerCase().trim();
+  const strFilter = document.getElementById('strength-filter').value;
+  const hideNeed  = document.getElementById('hide-need-based').checked;
+
+  let rows = Object.entries(schoolData).map(([name, school]) =>
+    calcRow(name, school, currentLsat, currentGpa)
+  );
+
+  if (searchQ)  rows = rows.filter(r => (SCHOOL_DISPLAY_NAMES[r.name] || r.name).toLowerCase().includes(searchQ));
+  if (strFilter === 'competitive') rows = rows.filter(r => r.strength === 'strong' || r.strength === 'competitive');
+  else if (strFilter !== 'all')    rows = rows.filter(r => r.strength === strFilter);
+  if (hideNeed) rows = rows.filter(r => !r.school.needBased);
+
+  const dir = sortAsc ? 1 : -1;
+  rows.sort((a, b) => {
+    const av = sortKey(a, sortCol), bv = sortKey(b, sortCol);
+    return av < bv ? -dir : av > bv ? dir : 0;
+  });
+
+  document.getElementById('result-count').textContent = rows.length;
+  const tbody = document.getElementById('results-body');
+  tbody.innerHTML = rows.length
+    ? rows.map(renderRow).join('')
+    : '<tr><td colspan="7" class="state-cell">No schools match your filters.</td></tr>';
+}
+
+// ── Stepper wiring ────────────────────────────────────────────────────────────
+function wireStepper(inputId, decId, incId, step, decimals, min, max, setter) {
+  const input = document.getElementById(inputId);
+  const dec   = document.getElementById(decId);
+  const inc   = document.getElementById(incId);
+  let pressTimer = null;
+  let pressInterval = null;
+
+  function clamp(v) { return Math.min(max, Math.max(min, v)); }
+
+  function commit(val) {
+    const n = parseFloat(val);
+    if (isNaN(n)) return;
+    const clamped = clamp(Math.round(n / step) * step);
+    const fmt = decimals === 0 ? String(clamped) : clamped.toFixed(decimals);
+    input.value = fmt;
+    setter(clamped);
+    renderTable();
+  }
+
+  function step_(delta) {
+    const cur = parseFloat(input.value) || 0;
+    commit(+(cur + delta).toFixed(decimals + 2));
+  }
+
+  function startPress(delta) {
+    step_(delta);
+    pressTimer = setTimeout(() => {
+      pressInterval = setInterval(() => step_(delta), 80);
+    }, 400);
+  }
+
+  function endPress() {
+    clearTimeout(pressTimer);
+    clearInterval(pressInterval);
+  }
+
+  dec.addEventListener('mousedown',  () => startPress(-step));
+  inc.addEventListener('mousedown',  () => startPress(+step));
+  dec.addEventListener('touchstart', e => { e.preventDefault(); startPress(-step); }, { passive: false });
+  inc.addEventListener('touchstart', e => { e.preventDefault(); startPress(+step); }, { passive: false });
+  ['mouseup','mouseleave','touchend','touchcancel'].forEach(evt => {
+    dec.addEventListener(evt, endPress);
+    inc.addEventListener(evt, endPress);
+  });
+
+  input.addEventListener('change', () => commit(input.value));
+  input.addEventListener('blur',   () => commit(input.value));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowUp')   { e.preventDefault(); step_(+step); }
+    if (e.key === 'ArrowDown') { e.preventDefault(); step_(-step); }
+  });
+}
+
+// ── Sort header wiring ────────────────────────────────────────────────────────
+function wireSortHeaders() {
+  document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      if (sortCol === col) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = th.dataset.defaultDir === 'asc';
+      }
+      document.querySelectorAll('thead th').forEach(h => {
+        h.classList.remove('sorted');
+        const icon = h.querySelector('.sort-icon');
+        if (icon) icon.textContent = '↕';
+      });
+      th.classList.add('sorted');
+      const icon = th.querySelector('.sort-icon');
+      if (icon) icon.textContent = sortAsc ? '↑' : '↓';
+      renderTable();
+    });
+  });
+  // Initial indicator
+  const th0 = document.querySelector(`thead th[data-col="${sortCol}"]`);
+  if (th0) {
+    th0.classList.add('sorted');
+    const icon = th0.querySelector('.sort-icon');
+    if (icon) icon.textContent = '↓';
+  }
+}
+
+// ── Bootstrap ─────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  wireStepper('lsat-input', 'lsat-dec', 'lsat-inc',
+    1, 0, 120, 180, v => { currentLsat = Math.round(v); });
+
+  wireStepper('gpa-input', 'gpa-dec', 'gpa-inc',
+    0.01, 2, 2.00, 4.33, v => { currentGpa = Math.round(v * 100) / 100; });
+
+  document.getElementById('school-search').addEventListener('input', renderTable);
+  document.getElementById('strength-filter').addEventListener('change', renderTable);
+  document.getElementById('hide-need-based').addEventListener('change', renderTable);
+  document.getElementById('tuition-type').addEventListener('change', e => {
+    currentTuition = e.target.value;
+    renderTable();
+  });
+
+  wireSortHeaders();
+
+  // Fade-up observer
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Load data
+  Promise.all([
+    fetch(DATA_URL).then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status} — could not load ${DATA_URL}`);
+      return r.json();
+    }),
+    fetch(TUITION_URL)
+      .then(r => r.ok ? r.json() : { schools: {} })
+      .catch(() => ({ schools: {} })),
+  ])
+  .then(([schData, tuData]) => {
+    schoolData  = schData.schools || {};
+    tuitionData = tuData.schools  || {};
+
+    const meta = schData.metadata || {};
+    if (meta.yearsIncluded?.length) {
+      const yrs  = meta.yearsIncluded;
+      const note = document.getElementById('data-year-note');
+      note.textContent = `ABA ${yrs.length === 1 ? yrs[0] : yrs[0] + '–' + yrs[yrs.length - 1]}`;
+      note.style.display = '';
+    }
+    renderTable();
+  })
+  .catch(err => {
+    document.getElementById('results-body').innerHTML = `
+      <tr><td colspan="7" class="state-cell error">
+        <strong>Could not load scholarship data.</strong>
+        Make sure <code>scholarship_data.json</code> is in the same directory as this page
+        and was generated by running <code>python build_scholarship_data.py</code>.
+        <code>${err.message}</code>
+      </td></tr>`;
+  });
+});
+</script>
+
+</body>
+</html>

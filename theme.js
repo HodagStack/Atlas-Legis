@@ -7,7 +7,8 @@
 
 // Button injection + toggle — runs after DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
-  // Inject button into nav on pages that don't already have it (index.html has it inline)
+
+  // ── Inject dark mode toggle button ──────────────────────────────────────────
   if (!document.getElementById('theme-toggle')) {
     var navRight = document.querySelector('.nav-right');
     if (navRight) {
@@ -34,4 +35,58 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('atlas-theme', isDark ? 'light' : 'dark');
     });
   }
+
+  // ── Inject Scholarships nav link if not already present ─────────────────────
+  var navLinks = document.querySelector('.nav-links');
+  if (navLinks && !navLinks.querySelector('a[href="/scholarship-estimator.html"]')) {
+    var schLi = document.createElement('li');
+    schLi.innerHTML = '<a href="/scholarship-estimator.html">Scholarships</a>';
+    // Insert before the About link if it exists, otherwise append
+    var aboutLi = null;
+    var items = navLinks.querySelectorAll('li');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].querySelector('a[href="/about.html"]')) { aboutLi = items[i]; break; }
+    }
+    navLinks.insertBefore(schLi, aboutLi || null);
+  }
+
+  // ── Methodology footer popup ─────────────────────────────────────────────────
+  var footerLinks = document.querySelectorAll('.footer-links a');
+  var methLink = null;
+  for (var j = 0; j < footerLinks.length; j++) {
+    var href = footerLinks[j].getAttribute('href') || '';
+    if (href.indexOf('methodology') !== -1) { methLink = footerLinks[j]; break; }
+  }
+  if (methLink) {
+    var modal = document.createElement('div');
+    modal.id = 'meth-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Choose a methodology guide');
+    modal.innerHTML =
+      '<div class="meth-backdrop"></div>' +
+      '<div class="meth-box">' +
+        '<div class="meth-title">Methodology</div>' +
+        '<p class="meth-desc">Which methodology guide are you looking for?</p>' +
+        '<a href="/methodology.html" class="meth-opt">Employment Data</a>' +
+        '<a href="/estimator-methodology.html" class="meth-opt">Scholarship Estimator</a>' +
+        '<button class="meth-close" aria-label="Close dialog">Close</button>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    methLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('meth-modal').classList.add('open');
+    });
+    modal.querySelector('.meth-backdrop').addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+    modal.querySelector('.meth-close').addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') modal.classList.remove('open');
+    });
+  }
+
 });

@@ -1,0 +1,6484 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-14",
+    "yearsIncluded": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "schoolCount": 196,
+    "hasTuitionData": true
+  },
+  "schools": {
+    "Akron, The University of": {
+      "lsat": {
+        "p25": 151,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.11,
+        "p50": 3.48,
+        "p75": 3.73
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 54.1,
+          "halfToFull": 32.1,
+          "full": 1.2,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 4227,
+          "p50": 10146,
+          "p75": 17807
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 22359,
+        "ftNonResident": 22359,
+        "ptResident": 14906,
+        "ptNonResident": 14906
+      }
+    },
+    "Alabama, The University of": {
+      "lsat": {
+        "p25": 159,
+        "p50": 166,
+        "p75": 168
+      },
+      "gpa": {
+        "p25": 3.66,
+        "p50": 3.95,
+        "p75": 4.02
+      },
+      "grants": {
+        "percentReceiving": 96.0,
+        "tiers": {
+          "lessThanHalf": 25.8,
+          "halfToFull": 41.9,
+          "full": 4.2,
+          "moreThanFull": 20.3
+        },
+        "amounts": {
+          "p25": 12261,
+          "p50": 22105,
+          "p75": 30013
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 24980,
+        "ftNonResident": 48100,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Albany Law School": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.2,
+        "p50": 3.48,
+        "p75": 3.71
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 38.5,
+          "halfToFull": 44.4,
+          "full": 8.3,
+          "moreThanFull": 3.3
+        },
+        "amounts": {
+          "p25": 20000,
+          "p50": 34717,
+          "p75": 44843
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 63994,
+        "ftNonResident": 63994,
+        "ptResident": 57594,
+        "ptNonResident": 57594
+      }
+    },
+    "American University": {
+      "lsat": {
+        "p25": 156,
+        "p50": 161,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.36,
+        "p50": 3.61,
+        "p75": 3.73
+      },
+      "grants": {
+        "percentReceiving": 59.0,
+        "tiers": {
+          "lessThanHalf": 15.3,
+          "halfToFull": 46.0,
+          "full": 9.3,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 32086,
+          "p50": 39043,
+          "p75": 40000
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 66990,
+        "ftNonResident": 66990,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Appalachian School of Law": {
+      "lsat": {
+        "p25": 145,
+        "p50": 146,
+        "p75": 151
+      },
+      "gpa": {
+        "p25": 2.77,
+        "p50": 3.17,
+        "p75": 3.53
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 35.5,
+          "halfToFull": 18.4,
+          "full": 4.8,
+          "moreThanFull": 21.4
+        },
+        "amounts": {
+          "p25": 6033,
+          "p50": 14123,
+          "p75": 30602
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 41000,
+        "ftNonResident": 41000,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Arizona State University": {
+      "lsat": {
+        "p25": 157,
+        "p50": 166,
+        "p75": 168
+      },
+      "gpa": {
+        "p25": 3.48,
+        "p50": 3.88,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 96.0,
+        "tiers": {
+          "lessThanHalf": 46.6,
+          "halfToFull": 34.0,
+          "full": 9.5,
+          "moreThanFull": 3.8
+        },
+        "amounts": {
+          "p25": 10421,
+          "p50": 18161,
+          "p75": 25222
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 28390,
+        "ftNonResident": 52099,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Arizona, The University of": {
+      "lsat": {
+        "p25": 159,
+        "p50": 163,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.5,
+        "p50": 3.75,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 88.0,
+        "tiers": {
+          "lessThanHalf": 10.4,
+          "halfToFull": 28.8,
+          "full": 12.3,
+          "moreThanFull": 41.3
+        },
+        "amounts": {
+          "p25": 12915,
+          "p50": 24126,
+          "p75": 29330
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 26490,
+        "ftNonResident": 31360,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Arkansas at Little Rock, University of": {
+      "lsat": {
+        "p25": 149,
+        "p50": 152,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.06,
+        "p50": 3.42,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": 60.0,
+        "tiers": {
+          "lessThanHalf": 31.5,
+          "halfToFull": 27.6,
+          "full": 5.7,
+          "moreThanFull": 1.8
+        },
+        "amounts": {
+          "p25": 3518,
+          "p50": 7638,
+          "p75": 13422
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 13770,
+        "ftNonResident": null,
+        "ptResident": 11016,
+        "ptNonResident": null
+      }
+    },
+    "Arkansas, University of": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.37,
+        "p50": 3.65,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 48.0,
+          "halfToFull": 34.5,
+          "full": null,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 5100,
+          "p50": 9534,
+          "p75": 12257
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Atlanta's John Marshall Law School": {
+      "lsat": {
+        "p25": 149,
+        "p50": 151,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 2.77,
+        "p50": 3.14,
+        "p75": 3.48
+      },
+      "grants": {
+        "percentReceiving": 84.0,
+        "tiers": {
+          "lessThanHalf": 61.0,
+          "halfToFull": 29.4,
+          "full": 3.4,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 2392,
+          "p50": 8859,
+          "p75": 17049
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 52536,
+        "ftNonResident": 52536,
+        "ptResident": 31794,
+        "ptNonResident": 31794
+      }
+    },
+    "Ave Maria School of Law": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 2.99,
+        "p50": 3.32,
+        "p75": 3.66
+      },
+      "grants": {
+        "percentReceiving": 73.0,
+        "tiers": {
+          "lessThanHalf": 24.8,
+          "halfToFull": 40.2,
+          "full": null,
+          "moreThanFull": 6.7
+        },
+        "amounts": {
+          "p25": 17274,
+          "p50": 32495,
+          "p75": 46485
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 49500,
+        "ftNonResident": 49500,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Baltimore, University of": {
+      "lsat": {
+        "p25": 151,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.06,
+        "p50": 3.4,
+        "p75": 3.62
+      },
+      "grants": {
+        "percentReceiving": 67.0,
+        "tiers": {
+          "lessThanHalf": 42.2,
+          "halfToFull": 20.6,
+          "full": 1.7,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 8001,
+          "p50": 15000,
+          "p75": 22729
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 33944,
+        "ftNonResident": 50624,
+        "ptResident": 25290,
+        "ptNonResident": 35640
+      }
+    },
+    "Barry University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 149,
+        "p75": 152
+      },
+      "gpa": {
+        "p25": 2.9,
+        "p50": 3.21,
+        "p75": 3.5
+      },
+      "grants": {
+        "percentReceiving": 79.0,
+        "tiers": {
+          "lessThanHalf": 60.5,
+          "halfToFull": 24.2,
+          "full": null,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 7480,
+          "p50": 16271,
+          "p75": 23138
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 42000,
+        "ftNonResident": 42000,
+        "ptResident": 31726,
+        "ptNonResident": 31726
+      }
+    },
+    "Baylor University": {
+      "lsat": {
+        "p25": 158,
+        "p50": 163,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.45,
+        "p50": 3.71,
+        "p75": 3.84
+      },
+      "grants": {
+        "percentReceiving": 97.0,
+        "tiers": {
+          "lessThanHalf": 27.8,
+          "halfToFull": 38.1,
+          "full": 13.6,
+          "moreThanFull": 11.6
+        },
+        "amounts": {
+          "p25": 12623,
+          "p50": 31655,
+          "p75": 59894
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Belmont University": {
+      "lsat": {
+        "p25": 156,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.54,
+        "p50": 3.76,
+        "p75": 3.9
+      },
+      "grants": {
+        "percentReceiving": 62.0,
+        "tiers": {
+          "lessThanHalf": 8.6,
+          "halfToFull": 26.8,
+          "full": 25.4,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 25273,
+          "p50": 37910,
+          "p75": 50546
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 55500,
+        "ftNonResident": 55500,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Boston College": {
+      "lsat": {
+        "p25": 161,
+        "p50": 166,
+        "p75": 168
+      },
+      "gpa": {
+        "p25": 3.59,
+        "p50": 3.76,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 89.0,
+        "tiers": {
+          "lessThanHalf": 75.8,
+          "halfToFull": 14.2,
+          "full": 1.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 17074,
+          "p50": 21683,
+          "p75": 28536
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 72380,
+        "ftNonResident": 72380,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Boston University": {
+      "lsat": {
+        "p25": 164,
+        "p50": 170,
+        "p75": 171
+      },
+      "gpa": {
+        "p25": 3.63,
+        "p50": 3.84,
+        "p75": 3.91
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 44.5,
+          "halfToFull": 33.0,
+          "full": 15.3,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 23259,
+          "p50": 31073,
+          "p75": 42797
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 69870,
+        "ftNonResident": 69870,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Brigham Young University": {
+      "lsat": {
+        "p25": 164,
+        "p50": 168,
+        "p75": 170
+      },
+      "gpa": {
+        "p25": 3.68,
+        "p50": 3.91,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 33.4,
+          "halfToFull": 13.4,
+          "full": 17.3,
+          "moreThanFull": 28.6
+        },
+        "amounts": {
+          "p25": 4544,
+          "p50": 12862,
+          "p75": 17271
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 15992,
+        "ftNonResident": 31984,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Brooklyn Law School": {
+      "lsat": {
+        "p25": 157,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.32,
+        "p50": 3.55,
+        "p75": 3.7
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 44.8,
+          "halfToFull": 44.4,
+          "full": 2.8,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 21614,
+          "p50": 32372,
+          "p75": 44416
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 75496,
+        "ftNonResident": 75496,
+        "ptResident": 75496,
+        "ptNonResident": 75496
+      }
+    },
+    "Buffalo, University at": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.44,
+        "p50": 3.67,
+        "p75": 3.84
+      },
+      "grants": {
+        "percentReceiving": 51.0,
+        "tiers": {
+          "lessThanHalf": 51.7,
+          "halfToFull": 22.4,
+          "full": 2.0,
+          "moreThanFull": 2.5
+        },
+        "amounts": {
+          "p25": 5372,
+          "p50": 9856,
+          "p75": 15850
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 26430,
+        "ftNonResident": 32100,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "California-Berkeley, University of": {
+      "lsat": {
+        "p25": 167,
+        "p50": 170,
+        "p75": 172
+      },
+      "gpa": {
+        "p25": 3.78,
+        "p50": 3.87,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 86.0,
+        "tiers": {
+          "lessThanHalf": 50.4,
+          "halfToFull": 31.0,
+          "full": null,
+          "moreThanFull": 5.2
+        },
+        "amounts": {
+          "p25": 14129,
+          "p50": 27490,
+          "p75": 35351
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 62532,
+        "ftNonResident": 76149,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "California-Davis, University of": {
+      "lsat": {
+        "p25": 160,
+        "p50": 165,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.47,
+        "p50": 3.69,
+        "p75": 3.84
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 46.5,
+          "halfToFull": 39.9,
+          "full": 2.0,
+          "moreThanFull": 1.3
+        },
+        "amounts": {
+          "p25": 13557,
+          "p50": 25337,
+          "p75": 37492
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 57460,
+        "ftNonResident": 69705,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "California-Irvine, University of": {
+      "lsat": {
+        "p25": 164,
+        "p50": 167,
+        "p75": 169
+      },
+      "gpa": {
+        "p25": 3.55,
+        "p50": 3.75,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 55.4,
+          "halfToFull": 40.4,
+          "full": 3.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18861,
+          "p50": 25438,
+          "p75": 33303
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 59080,
+        "ftNonResident": 71325,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "California-Los Angeles, University of": {
+      "lsat": {
+        "p25": 166,
+        "p50": 170,
+        "p75": 171
+      },
+      "gpa": {
+        "p25": 3.67,
+        "p50": 3.91,
+        "p75": 3.97
+      },
+      "grants": {
+        "percentReceiving": 83.0,
+        "tiers": {
+          "lessThanHalf": 59.8,
+          "halfToFull": 21.8,
+          "full": 4.4,
+          "moreThanFull": 2.6
+        },
+        "amounts": {
+          "p25": 12578,
+          "p50": 20800,
+          "p75": 34020
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 59084,
+        "ftNonResident": 71329,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "California-San Francisco, University of": {
+      "lsat": {
+        "p25": 157,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.41,
+        "p50": 3.61,
+        "p75": 3.76
+      },
+      "grants": {
+        "percentReceiving": 86.0,
+        "tiers": {
+          "lessThanHalf": 62.3,
+          "halfToFull": 22.7,
+          "full": 1.0,
+          "moreThanFull": 1.4
+        },
+        "amounts": {
+          "p25": 9689,
+          "p50": 17799,
+          "p75": 25915
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 53087,
+        "ftNonResident": 61773,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "California Western School of Law": {
+      "lsat": {
+        "p25": 151,
+        "p50": 153,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.07,
+        "p50": 3.37,
+        "p75": 3.58
+      },
+      "grants": {
+        "percentReceiving": 60.0,
+        "tiers": {
+          "lessThanHalf": 25.3,
+          "halfToFull": 24.2,
+          "full": 12.9,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18520,
+          "p50": 35318,
+          "p75": 51938
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 64720,
+        "ftNonResident": 64720,
+        "ptResident": 48440,
+        "ptNonResident": 48440
+      }
+    },
+    "Campbell University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.22,
+        "p50": 3.5,
+        "p75": 3.72
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 67.3,
+          "halfToFull": 31.1,
+          "full": 2.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 12768,
+          "p50": 17900,
+          "p75": 26525
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 51840,
+        "ftNonResident": 51840,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Capital University Law School": {
+      "lsat": {
+        "p25": 148,
+        "p50": 151,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.04,
+        "p50": 3.38,
+        "p75": 3.66
+      },
+      "grants": {
+        "percentReceiving": 96.0,
+        "tiers": {
+          "lessThanHalf": 53.4,
+          "halfToFull": 38.0,
+          "full": 7.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 12156,
+          "p50": 19552,
+          "p75": 29596
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 45066,
+        "ftNonResident": 45066,
+        "ptResident": 40404,
+        "ptNonResident": 40404
+      }
+    },
+    "Cardozo, Yeshiva University": {
+      "lsat": {
+        "p25": 160,
+        "p50": 164,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.54,
+        "p50": 3.77,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 38.0,
+          "halfToFull": 56.0,
+          "full": 2.4,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 25222,
+          "p50": 38006,
+          "p75": 50000
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 74438,
+        "ftNonResident": 74438,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Case Western Reserve University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.44,
+        "p50": 3.69,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 19.2,
+          "halfToFull": 76.8,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 30565,
+          "p50": 40844,
+          "p75": 46380
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 64600,
+        "ftNonResident": 64600,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Catholic University of America, The": {
+      "lsat": {
+        "p25": 156,
+        "p50": 159,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.39,
+        "p50": 3.61,
+        "p75": 3.76
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 47.2,
+          "halfToFull": 37.6,
+          "full": 22.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 13560,
+          "p50": 27338,
+          "p75": 47040
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 61580,
+        "ftNonResident": 61580,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Chapman University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 161,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.24,
+        "p50": 3.65,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 59.0,
+        "tiers": {
+          "lessThanHalf": 12.0,
+          "halfToFull": 27.6,
+          "full": 9.1,
+          "moreThanFull": 12.1
+        },
+        "amounts": {
+          "p25": 33614,
+          "p50": 54449,
+          "p75": 62243
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 63126,
+        "ftNonResident": 63126,
+        "ptResident": 50400,
+        "ptNonResident": 50400
+      }
+    },
+    "Charleston School of Law": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.17,
+        "p50": 3.45,
+        "p75": 3.69
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 54.6,
+          "halfToFull": 37.3,
+          "full": 3.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 11655,
+          "p50": 18138,
+          "p75": 28694
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 48600,
+        "ftNonResident": 48600,
+        "ptResident": 39000,
+        "ptNonResident": 39000
+      }
+    },
+    "Chicago-Kent, Illinois Institute of Technology": {
+      "lsat": {
+        "p25": 154,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.38,
+        "p50": 3.66,
+        "p75": 3.82
+      },
+      "grants": {
+        "percentReceiving": 92.0,
+        "tiers": {
+          "lessThanHalf": 28.8,
+          "halfToFull": 58.4,
+          "full": 7.9,
+          "moreThanFull": 4.4
+        },
+        "amounts": {
+          "p25": 21576,
+          "p50": 33270,
+          "p75": 43347
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Chicago, The University of": {
+      "lsat": {
+        "p25": 169,
+        "p50": 173,
+        "p75": 175
+      },
+      "gpa": {
+        "p25": 3.83,
+        "p50": 3.93,
+        "p75": 3.99
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 65.2,
+          "halfToFull": 5.4,
+          "full": 1.0,
+          "moreThanFull": 9.0
+        },
+        "amounts": {
+          "p25": 10000,
+          "p50": 15406,
+          "p75": 27403
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 83316,
+        "ftNonResident": 83316,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Cincinnati, University of": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.57,
+        "p50": 3.77,
+        "p75": 3.9
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 26.8,
+          "halfToFull": 57.6,
+          "full": 10.3,
+          "moreThanFull": 3.9
+        },
+        "amounts": {
+          "p25": 10472,
+          "p50": 17738,
+          "p75": 22906
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 24010,
+        "ftNonResident": 29010,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "City University of New York, University of": {
+      "lsat": {
+        "p25": 151,
+        "p50": 154,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.16,
+        "p50": 3.46,
+        "p75": 3.7
+      },
+      "grants": {
+        "percentReceiving": 17.0,
+        "tiers": {
+          "lessThanHalf": 29.3,
+          "halfToFull": 7.6,
+          "full": 2.3,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 4898,
+          "p50": 5756,
+          "p75": 8702
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 15450,
+        "ftNonResident": 25640,
+        "ptResident": 14540,
+        "ptNonResident": 24020
+      }
+    },
+    "Cleveland State University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.04,
+        "p50": 3.45,
+        "p75": 3.72
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 44.8,
+          "halfToFull": 34.1,
+          "full": 7.5,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 6164,
+          "p50": 13551,
+          "p75": 21004
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 29766,
+        "ftNonResident": 29866,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Colorado, University of": {
+      "lsat": {
+        "p25": 160,
+        "p50": 164,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.51,
+        "p50": 3.75,
+        "p75": 3.86
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 56.4,
+          "halfToFull": 24.8,
+          "full": 2.0,
+          "moreThanFull": 2.6
+        },
+        "amounts": {
+          "p25": 9920,
+          "p50": 12729,
+          "p75": 25252
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 35992,
+        "ftNonResident": 44002,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Columbia University": {
+      "lsat": {
+        "p25": 170,
+        "p50": 173,
+        "p75": 175
+      },
+      "gpa": {
+        "p25": 3.8,
+        "p50": 3.89,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 54.0,
+        "tiers": {
+          "lessThanHalf": 45.5,
+          "halfToFull": 17.2,
+          "full": 3.8,
+          "moreThanFull": 4.0
+        },
+        "amounts": {
+          "p25": 14701,
+          "p50": 27180,
+          "p75": 43222
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 85368,
+        "ftNonResident": 85368,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Connecticut, University of": {
+      "lsat": {
+        "p25": 157,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.42,
+        "p50": 3.68,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 58.3,
+          "halfToFull": 29.4,
+          "full": null,
+          "moreThanFull": 2.2
+        },
+        "amounts": {
+          "p25": 10308,
+          "p50": 15177,
+          "p75": 22074
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 30354,
+        "ftNonResident": 61396,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Cooley Law School": {
+      "lsat": {
+        "p25": 146,
+        "p50": 147,
+        "p75": 151
+      },
+      "gpa": {
+        "p25": 2.71,
+        "p50": 3.07,
+        "p75": 3.42
+      },
+      "grants": {
+        "percentReceiving": 57.0,
+        "tiers": {
+          "lessThanHalf": 40.7,
+          "halfToFull": 12.7,
+          "full": 3.7,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 8072,
+          "p50": 13293,
+          "p75": 22639
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Cornell University": {
+      "lsat": {
+        "p25": 169,
+        "p50": 172,
+        "p75": 174
+      },
+      "gpa": {
+        "p25": 3.75,
+        "p50": 3.89,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 65.8,
+          "halfToFull": 19.2,
+          "full": 2.2,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 22651,
+          "p50": 27037,
+          "p75": 39061
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 84722,
+        "ftNonResident": 84722,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Creighton University": {
+      "lsat": {
+        "p25": 149,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.04,
+        "p50": 3.43,
+        "p75": 3.71
+      },
+      "grants": {
+        "percentReceiving": 89.0,
+        "tiers": {
+          "lessThanHalf": 40.1,
+          "halfToFull": 22.7,
+          "full": 8.9,
+          "moreThanFull": 9.6
+        },
+        "amounts": {
+          "p25": 12639,
+          "p50": 22890,
+          "p75": 34584
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Dayton, University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.3,
+        "p50": 3.6,
+        "p75": 3.81
+      },
+      "grants": {
+        "percentReceiving": 102.0,
+        "tiers": {
+          "lessThanHalf": 18.1,
+          "halfToFull": 76.8,
+          "full": null,
+          "moreThanFull": 5.4
+        },
+        "amounts": {
+          "p25": 26313,
+          "p50": 33026,
+          "p75": 36094
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Denver, University of": {
+      "lsat": {
+        "p25": 156,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.35,
+        "p50": 3.62,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 37.0,
+          "halfToFull": 29.2,
+          "full": 11.7,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 21104,
+          "p50": 29792,
+          "p75": 41247
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 63390,
+        "ftNonResident": 63390,
+        "ptResident": 46486,
+        "ptNonResident": 46486
+      }
+    },
+    "DePaul University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 157,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.21,
+        "p50": 3.6,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 37.2,
+          "halfToFull": 59.5,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 18845,
+          "p50": 29841,
+          "p75": 33934
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 55328,
+        "ftNonResident": 55328,
+        "ptResident": 35946,
+        "ptNonResident": 35946
+      }
+    },
+    "Detroit Mercy, University of": {
+      "lsat": {
+        "p25": 151,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.13,
+        "p50": 3.45,
+        "p75": 3.66
+      },
+      "grants": {
+        "percentReceiving": 58.0,
+        "tiers": {
+          "lessThanHalf": 28.0,
+          "halfToFull": 22.0,
+          "full": 5.3,
+          "moreThanFull": 1.6
+        },
+        "amounts": {
+          "p25": 7066,
+          "p50": 18667,
+          "p75": 31474
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "District of Columbia, University of": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 2.88,
+        "p50": 3.2,
+        "p75": 3.48
+      },
+      "grants": {
+        "percentReceiving": 70.0,
+        "tiers": {
+          "lessThanHalf": 37.5,
+          "halfToFull": 32.5,
+          "full": 2.6,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 5175,
+          "p50": 8030,
+          "p75": 11848
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 12438,
+        "ftNonResident": 24874,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Drake University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.29,
+        "p50": 3.56,
+        "p75": 3.8
+      },
+      "grants": {
+        "percentReceiving": 82.0,
+        "tiers": {
+          "lessThanHalf": 22.6,
+          "halfToFull": 49.4,
+          "full": 8.2,
+          "moreThanFull": 3.2
+        },
+        "amounts": {
+          "p25": 21783,
+          "p50": 30397,
+          "p75": 36619
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 50920,
+        "ftNonResident": 50920,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Drexel University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 159,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.38,
+        "p50": 3.7,
+        "p75": 3.82
+      },
+      "grants": {
+        "percentReceiving": 76.0,
+        "tiers": {
+          "lessThanHalf": 34.2,
+          "halfToFull": 43.0,
+          "full": null,
+          "moreThanFull": 3.5
+        },
+        "amounts": {
+          "p25": 14890,
+          "p50": 30860,
+          "p75": 47519
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 57000,
+        "ftNonResident": 57000,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Duke University": {
+      "lsat": {
+        "p25": 168,
+        "p50": 170,
+        "p75": 172
+      },
+      "gpa": {
+        "p25": 3.76,
+        "p50": 3.87,
+        "p75": 3.94
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 66.0,
+          "halfToFull": 26.6,
+          "full": 1.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 24989,
+          "p50": 31378,
+          "p75": 37187
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 80100,
+        "ftNonResident": 80100,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Duquesne University": {
+      "lsat": {
+        "p25": 154,
+        "p50": 156,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.21,
+        "p50": 3.54,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 96.0,
+        "tiers": {
+          "lessThanHalf": 51.8,
+          "halfToFull": 27.4,
+          "full": 15.2,
+          "moreThanFull": 1.8
+        },
+        "amounts": {
+          "p25": 18835,
+          "p50": 27501,
+          "p75": 40236
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 58898,
+        "ftNonResident": 58898,
+        "ptResident": 45264,
+        "ptNonResident": 45264
+      }
+    },
+    "Elon University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.07,
+        "p50": 3.39,
+        "p75": 3.66
+      },
+      "grants": {
+        "percentReceiving": 90.0,
+        "tiers": {
+          "lessThanHalf": 44.3,
+          "halfToFull": 44.8,
+          "full": 3.2,
+          "moreThanFull": 1.8
+        },
+        "amounts": {
+          "p25": 10042,
+          "p50": 19784,
+          "p75": 30937
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 45333,
+        "ftNonResident": 45333,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Emory University": {
+      "lsat": {
+        "p25": 161,
+        "p50": 166,
+        "p75": 168
+      },
+      "gpa": {
+        "p25": 3.58,
+        "p50": 3.81,
+        "p75": 3.89
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 40.9,
+          "halfToFull": 55.2,
+          "full": null,
+          "moreThanFull": 1.4
+        },
+        "amounts": {
+          "p25": 24620,
+          "p50": 35965,
+          "p75": 43346
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 69510,
+        "ftNonResident": 69510,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Faulkner University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 2.89,
+        "p50": 3.26,
+        "p75": 3.58
+      },
+      "grants": {
+        "percentReceiving": 72.0,
+        "tiers": {
+          "lessThanHalf": 50.1,
+          "halfToFull": 30.0,
+          "full": 6.6,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 4850,
+          "p50": 13435,
+          "p75": 27094
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 39900,
+        "ftNonResident": 39900,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Florida A&M University": {
+      "lsat": {
+        "p25": 148,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 3.2,
+        "p50": 3.46,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": 45.0,
+        "tiers": {
+          "lessThanHalf": 42.2,
+          "halfToFull": 18.1,
+          "full": null,
+          "moreThanFull": 5.5
+        },
+        "amounts": {
+          "p25": 4091,
+          "p50": 5909,
+          "p75": 8552
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Florida International University": {
+      "lsat": {
+        "p25": 158,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.47,
+        "p50": 3.74,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 55.0,
+        "tiers": {
+          "lessThanHalf": 23.2,
+          "halfToFull": 14.5,
+          "full": 11.9,
+          "moreThanFull": 4.7
+        },
+        "amounts": {
+          "p25": 7000,
+          "p50": 12800,
+          "p75": 20995
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Florida State University": {
+      "lsat": {
+        "p25": 158,
+        "p50": 165,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.58,
+        "p50": 3.87,
+        "p75": 3.94
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 23.6,
+          "halfToFull": 29.2,
+          "full": 11.9,
+          "moreThanFull": 12.5
+        },
+        "amounts": {
+          "p25": 5486,
+          "p50": 13915,
+          "p75": 19223
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Florida, University of": {
+      "lsat": {
+        "p25": 163,
+        "p50": 169,
+        "p75": 170
+      },
+      "gpa": {
+        "p25": 3.62,
+        "p50": 3.89,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 88.0,
+        "tiers": {
+          "lessThanHalf": 30.1,
+          "halfToFull": 18.0,
+          "full": 14.4,
+          "moreThanFull": 22.2
+        },
+        "amounts": {
+          "p25": 7927,
+          "p50": 21283,
+          "p75": 31055
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 19139,
+        "ftNonResident": 36148,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Fordham University": {
+      "lsat": {
+        "p25": 164,
+        "p50": 167,
+        "p75": 169
+      },
+      "gpa": {
+        "p25": 3.56,
+        "p50": 3.74,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 51.9,
+          "halfToFull": 32.5,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 23023,
+          "p50": 31372,
+          "p75": 39334
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 78078,
+        "ftNonResident": 78078,
+        "ptResident": 58560,
+        "ptNonResident": 58560
+      }
+    },
+    "George Mason University": {
+      "lsat": {
+        "p25": 159,
+        "p50": 166,
+        "p75": 168
+      },
+      "gpa": {
+        "p25": 3.49,
+        "p50": 3.86,
+        "p75": 3.93
+      },
+      "grants": {
+        "percentReceiving": 84.0,
+        "tiers": {
+          "lessThanHalf": 27.9,
+          "halfToFull": 49.1,
+          "full": 5.5,
+          "moreThanFull": 2.6
+        },
+        "amounts": {
+          "p25": 15410,
+          "p50": 22607,
+          "p75": 31599
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 24864,
+        "ftNonResident": 40978,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "George Washington University, The": {
+      "lsat": {
+        "p25": 161,
+        "p50": 168,
+        "p75": 169
+      },
+      "gpa": {
+        "p25": 3.56,
+        "p50": 3.85,
+        "p75": 3.92
+      },
+      "grants": {
+        "percentReceiving": 77.0,
+        "tiers": {
+          "lessThanHalf": 59.8,
+          "halfToFull": 17.0,
+          "full": 2.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18354,
+          "p50": 25200,
+          "p75": 33971
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 75420,
+        "ftNonResident": 75420,
+        "ptResident": 55650,
+        "ptNonResident": 55650
+      }
+    },
+    "Georgetown University": {
+      "lsat": {
+        "p25": 166,
+        "p50": 171,
+        "p75": 173
+      },
+      "gpa": {
+        "p25": 3.69,
+        "p50": 3.9,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 61.0,
+        "tiers": {
+          "lessThanHalf": 32.4,
+          "halfToFull": 27.2,
+          "full": 1.5,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 23682,
+          "p50": 34124,
+          "p75": 46099
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 83576,
+        "ftNonResident": 83576,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Georgia State University": {
+      "lsat": {
+        "p25": 157,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.39,
+        "p50": 3.59,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 49.0,
+        "tiers": {
+          "lessThanHalf": 16.9,
+          "halfToFull": 9.8,
+          "full": 24.6,
+          "moreThanFull": 9.2
+        },
+        "amounts": {
+          "p25": 6970,
+          "p50": 10221,
+          "p75": 16281
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 16162,
+        "ftNonResident": 37886,
+        "ptResident": 12114,
+        "ptNonResident": 28422
+      }
+    },
+    "Georgia, University of": {
+      "lsat": {
+        "p25": 159,
+        "p50": 168,
+        "p75": 169
+      },
+      "gpa": {
+        "p25": 3.59,
+        "p50": 3.87,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 84.0,
+        "tiers": {
+          "lessThanHalf": 36.6,
+          "halfToFull": 23.6,
+          "full": 11.0,
+          "moreThanFull": 16.0
+        },
+        "amounts": {
+          "p25": 5097,
+          "p50": 12581,
+          "p75": 20074
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 18044,
+        "ftNonResident": 38944,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Gonzaga University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.26,
+        "p50": 3.51,
+        "p75": 3.74
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 33.1,
+          "halfToFull": 62.6,
+          "full": 2.3,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 22861,
+          "p50": 29192,
+          "p75": 33121
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 57962,
+        "ftNonResident": 57962,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Harvard University": {
+      "lsat": {
+        "p25": 171,
+        "p50": 174,
+        "p75": 176
+      },
+      "gpa": {
+        "p25": 3.85,
+        "p50": 3.94,
+        "p75": 3.99
+      },
+      "grants": {
+        "percentReceiving": 38.0,
+        "tiers": {
+          "lessThanHalf": 26.2,
+          "halfToFull": 15.8,
+          "full": null,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 15052,
+          "p50": 29124,
+          "p75": 42644
+        }
+      },
+      "needBased": true,
+      "tuition": {
+        "ftResident": 77100,
+        "ftNonResident": 77100,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Hawaii, University of": {
+      "lsat": {
+        "p25": 154,
+        "p50": 157,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.31,
+        "p50": 3.58,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 69.0,
+        "tiers": {
+          "lessThanHalf": 55.9,
+          "halfToFull": 10.2,
+          "full": 1.5,
+          "moreThanFull": 1.2
+        },
+        "amounts": {
+          "p25": 4953,
+          "p50": 5953,
+          "p75": 9650
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 23304,
+        "ftNonResident": 46728,
+        "ptResident": 17478,
+        "ptNonResident": 17478
+      }
+    },
+    "Hofstra University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 156,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.27,
+        "p50": 3.58,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 84.0,
+        "tiers": {
+          "lessThanHalf": 40.6,
+          "halfToFull": 18.6,
+          "full": 25.2,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 15498,
+          "p50": 33661,
+          "p75": 66762
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 73344,
+        "ftNonResident": 73344,
+        "ptResident": 55006,
+        "ptNonResident": 55006
+      }
+    },
+    "Houston, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 161,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.51,
+        "p50": 3.72,
+        "p75": 3.84
+      },
+      "grants": {
+        "percentReceiving": 74.0,
+        "tiers": {
+          "lessThanHalf": 51.1,
+          "halfToFull": 14.4,
+          "full": 1.5,
+          "moreThanFull": 2.5
+        },
+        "amounts": {
+          "p25": 4558,
+          "p50": 11963,
+          "p75": 18261
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 31326,
+        "ftNonResident": 46051,
+        "ptResident": 21221,
+        "ptNonResident": 31196
+      }
+    },
+    "Howard University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.24,
+        "p50": 3.5,
+        "p75": 3.71
+      },
+      "grants": {
+        "percentReceiving": 48.0,
+        "tiers": {
+          "lessThanHalf": 27.9,
+          "halfToFull": 17.3,
+          "full": 5.0,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 7739,
+          "p50": 15398,
+          "p75": 25346
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 39780,
+        "ftNonResident": 39780,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Idaho, University of": {
+      "lsat": {
+        "p25": 149,
+        "p50": 152,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.03,
+        "p50": 3.41,
+        "p75": 3.69
+      },
+      "grants": {
+        "percentReceiving": 46.0,
+        "tiers": {
+          "lessThanHalf": 40.9,
+          "halfToFull": 4.5,
+          "full": 1.7,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 4661,
+          "p50": 7415,
+          "p75": 13033
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 27516,
+        "ftNonResident": 46752,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Illinois-Chicago, University of": {
+      "lsat": {
+        "p25": 149,
+        "p50": 152,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.37,
+        "p75": 3.6
+      },
+      "grants": {
+        "percentReceiving": 61.0,
+        "tiers": {
+          "lessThanHalf": 25.6,
+          "halfToFull": 31.2,
+          "full": 6.6,
+          "moreThanFull": 1.2
+        },
+        "amounts": {
+          "p25": 9867,
+          "p50": 22728,
+          "p75": 33455
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Illinois, University of": {
+      "lsat": {
+        "p25": 161,
+        "p50": 165,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.49,
+        "p50": 3.74,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 23.3,
+          "halfToFull": 72.9,
+          "full": null,
+          "moreThanFull": 2.1
+        },
+        "amounts": {
+          "p25": 21370,
+          "p50": 34867,
+          "p75": 45293
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 36500,
+        "ftNonResident": 46500,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Indiana University-Bloomington": {
+      "lsat": {
+        "p25": 159,
+        "p50": 164,
+        "p75": 165
+      },
+      "gpa": {
+        "p25": 3.56,
+        "p50": 3.85,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 24.8,
+          "halfToFull": 52.5,
+          "full": 16.7,
+          "moreThanFull": 11.1
+        },
+        "amounts": {
+          "p25": 20693,
+          "p50": 34124,
+          "p75": 46918
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 36950,
+        "ftNonResident": 58000,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Indiana University-Indianapolis": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.3,
+        "p50": 3.58,
+        "p75": 3.8
+      },
+      "grants": {
+        "percentReceiving": 101.0,
+        "tiers": {
+          "lessThanHalf": 54.9,
+          "halfToFull": 26.8,
+          "full": 1.0,
+          "moreThanFull": 3.8
+        },
+        "amounts": {
+          "p25": 4990,
+          "p50": 13528,
+          "p75": 27811
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Inter American University of Puerto Rico": {
+      "lsat": {
+        "p25": 140,
+        "p50": 143,
+        "p75": 147
+      },
+      "gpa": {
+        "p25": 3.12,
+        "p50": 3.36,
+        "p75": 3.61
+      },
+      "grants": {
+        "percentReceiving": 8.0,
+        "tiers": {
+          "lessThanHalf": 3.3,
+          "halfToFull": 1.2,
+          "full": null,
+          "moreThanFull": 1.7
+        },
+        "amounts": {
+          "p25": 1326,
+          "p50": 2653,
+          "p75": 3980
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 16585,
+        "ftNonResident": 16585,
+        "ptResident": 12305,
+        "ptNonResident": 12305
+      }
+    },
+    "Iowa, University of": {
+      "lsat": {
+        "p25": 160,
+        "p50": 163,
+        "p75": 165
+      },
+      "gpa": {
+        "p25": 3.55,
+        "p50": 3.73,
+        "p75": 3.88
+      },
+      "grants": {
+        "percentReceiving": 77.0,
+        "tiers": {
+          "lessThanHalf": 20.0,
+          "halfToFull": 25.3,
+          "full": 19.8,
+          "moreThanFull": 9.8
+        },
+        "amounts": {
+          "p25": 18646,
+          "p50": 28096,
+          "p75": 34083
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 30944,
+        "ftNonResident": 52191,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Jacksonville University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.25,
+        "p50": 3.5,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 57.3,
+          "halfToFull": 43.0,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 14798,
+          "p50": 18000,
+          "p75": 22000
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Kansas, The University of": {
+      "lsat": {
+        "p25": 155,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.47,
+        "p50": 3.75,
+        "p75": 3.89
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 40.9,
+          "halfToFull": 16.2,
+          "full": 19.5,
+          "moreThanFull": 10.3
+        },
+        "amounts": {
+          "p25": 6380,
+          "p50": 13893,
+          "p75": 23643
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Kentucky, University of": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.43,
+        "p50": 3.68,
+        "p75": 3.86
+      },
+      "grants": {
+        "percentReceiving": 98.0,
+        "tiers": {
+          "lessThanHalf": 71.4,
+          "halfToFull": 22.0,
+          "full": 1.0,
+          "moreThanFull": 4.0
+        },
+        "amounts": {
+          "p25": 4527,
+          "p50": 9998,
+          "p75": 17518
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 25685,
+        "ftNonResident": 49836,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Lewis & Clark Law School": {
+      "lsat": {
+        "p25": 158,
+        "p50": 161,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.25,
+        "p50": 3.56,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 52.4,
+          "halfToFull": 43.2,
+          "full": null,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 17837,
+          "p50": 25194,
+          "p75": 33146
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 61434,
+        "ftNonResident": 61434,
+        "ptResident": 46060,
+        "ptNonResident": 46060
+      }
+    },
+    "Liberty University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.22,
+        "p50": 3.52,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 36.3,
+          "halfToFull": 59.3,
+          "full": 11.1,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 16756,
+          "p50": 23457,
+          "p75": 31089
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 43150,
+        "ftNonResident": 43150,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Lincoln Memorial University": {
+      "lsat": {
+        "p25": 149,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.44,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 39.2,
+          "halfToFull": 53.3,
+          "full": 3.1,
+          "moreThanFull": 3.7
+        },
+        "amounts": {
+          "p25": 15245,
+          "p50": 24334,
+          "p75": 30279
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Louisiana State University": {
+      "lsat": {
+        "p25": 154,
+        "p50": 157,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.39,
+        "p50": 3.66,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 42.2,
+          "halfToFull": 28.8,
+          "full": 16.8,
+          "moreThanFull": 7.0
+        },
+        "amounts": {
+          "p25": 6616,
+          "p50": 13301,
+          "p75": 19924
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 19750,
+        "ftNonResident": 19750,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Louisville, University of": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.31,
+        "p50": 3.64,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 75.0,
+        "tiers": {
+          "lessThanHalf": 26.6,
+          "halfToFull": 36.4,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 7959,
+          "p50": 16370,
+          "p75": 21598
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 27000,
+        "ftNonResident": 32000,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Loyola Marymount University-Los Angeles": {
+      "lsat": {
+        "p25": 158,
+        "p50": 162,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.49,
+        "p50": 3.7,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 62.0,
+        "tiers": {
+          "lessThanHalf": 18.9,
+          "halfToFull": 42.9,
+          "full": null,
+          "moreThanFull": 1.8
+        },
+        "amounts": {
+          "p25": 31342,
+          "p50": 41738,
+          "p75": 50379
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 70360,
+        "ftNonResident": 70360,
+        "ptResident": 52220,
+        "ptNonResident": 52220
+      }
+    },
+    "Loyola University-Chicago": {
+      "lsat": {
+        "p25": 157,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.37,
+        "p50": 3.58,
+        "p75": 3.74
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 30.7,
+          "halfToFull": 61.4,
+          "full": 1.5,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 24450,
+          "p50": 30358,
+          "p75": 34826
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 58670,
+        "ftNonResident": 58670,
+        "ptResident": 44030,
+        "ptNonResident": 44030
+      }
+    },
+    "Loyola University-New Orleans": {
+      "lsat": {
+        "p25": 150,
+        "p50": 152,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.12,
+        "p50": 3.39,
+        "p75": 3.65
+      },
+      "grants": {
+        "percentReceiving": 75.0,
+        "tiers": {
+          "lessThanHalf": 30.0,
+          "halfToFull": 39.9,
+          "full": 2.8,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 18664,
+          "p50": 27380,
+          "p75": 34810
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 55024,
+        "ftNonResident": 55024,
+        "ptResident": 41278,
+        "ptNonResident": 41278
+      }
+    },
+    "Maine, University of": {
+      "lsat": {
+        "p25": 153,
+        "p50": 158,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.33,
+        "p50": 3.64,
+        "p75": 3.8
+      },
+      "grants": {
+        "percentReceiving": 72.0,
+        "tiers": {
+          "lessThanHalf": 19.3,
+          "halfToFull": 26.0,
+          "full": 20.3,
+          "moreThanFull": 1.7
+        },
+        "amounts": {
+          "p25": 12379,
+          "p50": 18841,
+          "p75": 27535
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 26100,
+        "ftNonResident": 38160,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Marquette University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.44,
+        "p50": 3.64,
+        "p75": 3.78
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 51.0,
+          "halfToFull": 34.6,
+          "full": 1.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 15194,
+          "p50": 21896,
+          "p75": 29198
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 51970,
+        "ftNonResident": 51970,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Maryland, University of": {
+      "lsat": {
+        "p25": 156,
+        "p50": 163,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.38,
+        "p50": 3.72,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 79.0,
+        "tiers": {
+          "lessThanHalf": 35.8,
+          "halfToFull": 37.3,
+          "full": 8.0,
+          "moreThanFull": 2.5
+        },
+        "amounts": {
+          "p25": 11358,
+          "p50": 24991,
+          "p75": 36616
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 37830,
+        "ftNonResident": 55844,
+        "ptResident": 24831,
+        "ptNonResident": 36556
+      }
+    },
+    "Massachusetts/Dartmouth, University of": {
+      "lsat": {
+        "p25": 148,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.39,
+        "p75": 3.67
+      },
+      "grants": {
+        "percentReceiving": 84.0,
+        "tiers": {
+          "lessThanHalf": 61.6,
+          "halfToFull": 20.4,
+          "full": 4.8,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 7379,
+          "p50": 14542,
+          "p75": 20264
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 31766,
+        "ftNonResident": 41565,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Memphis, The University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.11,
+        "p50": 3.41,
+        "p75": 3.7
+      },
+      "grants": {
+        "percentReceiving": 62.0,
+        "tiers": {
+          "lessThanHalf": 30.4,
+          "halfToFull": 14.9,
+          "full": 3.6,
+          "moreThanFull": 2.8
+        },
+        "amounts": {
+          "p25": 4710,
+          "p50": 8683,
+          "p75": 13496
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 18634,
+        "ftNonResident": 24354,
+        "ptResident": 16940,
+        "ptNonResident": 22140
+      }
+    },
+    "Mercer University": {
+      "lsat": {
+        "p25": 154,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.29,
+        "p50": 3.57,
+        "p75": 3.74
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 54.7,
+          "halfToFull": 32.4,
+          "full": null,
+          "moreThanFull": 3.8
+        },
+        "amounts": {
+          "p25": 9030,
+          "p50": 18038,
+          "p75": 26829
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 44782,
+        "ftNonResident": 44782,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Miami, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 162,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.5,
+        "p50": 3.71,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 65.0,
+        "tiers": {
+          "lessThanHalf": 16.4,
+          "halfToFull": 43.5,
+          "full": 15.0,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 31265,
+          "p50": 40468,
+          "p75": 52231
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 66720,
+        "ftNonResident": 66720,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Michigan State University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.3,
+        "p50": 3.59,
+        "p75": 3.79
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 22.7,
+          "halfToFull": 48.2,
+          "full": 26.6,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 25200,
+          "p50": 34790,
+          "p75": 40391
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 43480,
+        "ftNonResident": 48222,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Michigan, University of": {
+      "lsat": {
+        "p25": 166,
+        "p50": 171,
+        "p75": 172
+      },
+      "gpa": {
+        "p25": 3.66,
+        "p50": 3.85,
+        "p75": 3.93
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 54.7,
+          "halfToFull": 31.6,
+          "full": 1.0,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 17942,
+          "p50": 29816,
+          "p75": 39615
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 76108,
+        "ftNonResident": 79108,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Minnesota, University of": {
+      "lsat": {
+        "p25": 163,
+        "p50": 168,
+        "p75": 170
+      },
+      "gpa": {
+        "p25": 3.6,
+        "p50": 3.85,
+        "p75": 3.93
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 34.3,
+          "halfToFull": 53.8,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 22486,
+          "p50": 32984,
+          "p75": 45724
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 51440,
+        "ftNonResident": 61845,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Mississippi College": {
+      "lsat": {
+        "p25": 147,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 2.98,
+        "p50": 3.33,
+        "p75": 3.63
+      },
+      "grants": {
+        "percentReceiving": 65.0,
+        "tiers": {
+          "lessThanHalf": 32.8,
+          "halfToFull": 21.8,
+          "full": 10.6,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 12798,
+          "p50": 19595,
+          "p75": 30339
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 37980,
+        "ftNonResident": 37980,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Mississippi, The University of": {
+      "lsat": {
+        "p25": 153,
+        "p50": 157,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.32,
+        "p50": 3.61,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 45.9,
+          "halfToFull": 32.9,
+          "full": 5.6,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 4465,
+          "p50": 8012,
+          "p75": 15200
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 19797,
+        "ftNonResident": 26797,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Missouri-Kansas City, University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.22,
+        "p50": 3.53,
+        "p75": 3.76
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 62.7,
+          "halfToFull": 18.5,
+          "full": null,
+          "moreThanFull": 3.4
+        },
+        "amounts": {
+          "p25": 3397,
+          "p50": 7033,
+          "p75": 13909
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Missouri, University of": {
+      "lsat": {
+        "p25": 155,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.44,
+        "p50": 3.71,
+        "p75": 3.9
+      },
+      "grants": {
+        "percentReceiving": 79.0,
+        "tiers": {
+          "lessThanHalf": 23.9,
+          "halfToFull": 28.1,
+          "full": 10.1,
+          "moreThanFull": 15.6
+        },
+        "amounts": {
+          "p25": 11320,
+          "p50": 20967,
+          "p75": 23609
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Mitchell/Hamline School of Law": {
+      "lsat": {
+        "p25": 150,
+        "p50": 152,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 2.94,
+        "p50": 3.3,
+        "p75": 3.59
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 52.0,
+          "halfToFull": 40.4,
+          "full": 7.5,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18786,
+          "p50": 30445,
+          "p75": 42210
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 55300,
+        "ftNonResident": 55300,
+        "ptResident": 39930,
+        "ptNonResident": 39930
+      }
+    },
+    "Montana, University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.2,
+        "p50": 3.52,
+        "p75": 3.74
+      },
+      "grants": {
+        "percentReceiving": 89.0,
+        "tiers": {
+          "lessThanHalf": 77.6,
+          "halfToFull": 14.2,
+          "full": 3.0,
+          "moreThanFull": 4.4
+        },
+        "amounts": {
+          "p25": 4091,
+          "p50": 7533,
+          "p75": 12953
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 24582,
+        "ftNonResident": 51582,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Nebraska, University of": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.46,
+        "p50": 3.74,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 12.4,
+          "halfToFull": 47.9,
+          "full": 11.6,
+          "moreThanFull": 19.3
+        },
+        "amounts": {
+          "p25": 8848,
+          "p50": 16313,
+          "p75": 28101
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Nevada-Las Vegas, University of": {
+      "lsat": {
+        "p25": 155,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.38,
+        "p50": 3.75,
+        "p75": 3.88
+      },
+      "grants": {
+        "percentReceiving": 76.0,
+        "tiers": {
+          "lessThanHalf": 27.0,
+          "halfToFull": 26.4,
+          "full": 10.3,
+          "moreThanFull": 7.8
+        },
+        "amounts": {
+          "p25": 12968,
+          "p50": 20420,
+          "p75": 31607
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 31518,
+        "ftNonResident": 46040,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "New England Law/Boston": {
+      "lsat": {
+        "p25": 149,
+        "p50": 153,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.0,
+        "p50": 3.35,
+        "p75": 3.64
+      },
+      "grants": {
+        "percentReceiving": 88.0,
+        "tiers": {
+          "lessThanHalf": 28.4,
+          "halfToFull": 21.8,
+          "full": 37.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 22144,
+          "p50": 41517,
+          "p75": 55221
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 62896,
+        "ftNonResident": 62896,
+        "ptResident": 47164,
+        "ptNonResident": 47164
+      }
+    },
+    "New Hampshire, University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 156,
+        "p75": 159
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.47,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": 69.0,
+        "tiers": {
+          "lessThanHalf": 45.5,
+          "halfToFull": 36.4,
+          "full": 5.9,
+          "moreThanFull": 1.8
+        },
+        "amounts": {
+          "p25": 7594,
+          "p50": 18079,
+          "p75": 30862
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 42000,
+        "ftNonResident": 50000,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "New Mexico, The University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 156,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.26,
+        "p50": 3.57,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 60.0,
+        "tiers": {
+          "lessThanHalf": 45.7,
+          "halfToFull": 12.0,
+          "full": 1.7,
+          "moreThanFull": 4.4
+        },
+        "amounts": {
+          "p25": 2221,
+          "p50": 6568,
+          "p75": 11639
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 19474,
+        "ftNonResident": 43192,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "New York Law School": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.32,
+        "p50": 3.55,
+        "p75": 3.73
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 35.1,
+          "halfToFull": 35.9,
+          "full": 12.0,
+          "moreThanFull": 11.7
+        },
+        "amounts": {
+          "p25": 17886,
+          "p50": 35485,
+          "p75": 52056
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 71052,
+        "ftNonResident": 71052,
+        "ptResident": 54710,
+        "ptNonResident": 54710
+      }
+    },
+    "New York University": {
+      "lsat": {
+        "p25": 169,
+        "p50": 172,
+        "p75": 174
+      },
+      "gpa": {
+        "p25": 3.77,
+        "p50": 3.89,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 66.0,
+        "tiers": {
+          "lessThanHalf": 45.6,
+          "halfToFull": 5.6,
+          "full": 10.2,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 14026,
+          "p50": 23648,
+          "p75": 36543
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 83952,
+        "ftNonResident": 83952,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "North Carolina Central University": {
+      "lsat": {
+        "p25": 146,
+        "p50": 149,
+        "p75": 152
+      },
+      "gpa": {
+        "p25": 3.05,
+        "p50": 3.33,
+        "p75": 3.57
+      },
+      "grants": {
+        "percentReceiving": 72.0,
+        "tiers": {
+          "lessThanHalf": 42.9,
+          "halfToFull": 28.2,
+          "full": 1.0,
+          "moreThanFull": 7.9
+        },
+        "amounts": {
+          "p25": 6824,
+          "p50": 10711,
+          "p75": 17778
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 13444,
+        "ftNonResident": 36116,
+        "ptResident": 13444,
+        "ptNonResident": 36116
+      }
+    },
+    "North Carolina, University of": {
+      "lsat": {
+        "p25": 163,
+        "p50": 166,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.66,
+        "p50": 3.8,
+        "p75": 3.9
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 37.4,
+          "halfToFull": 46.1,
+          "full": 2.4,
+          "moreThanFull": 2.3
+        },
+        "amounts": {
+          "p25": 12316,
+          "p50": 15872,
+          "p75": 19490
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 28082,
+        "ftNonResident": 51320,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "North Dakota, University of": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 3.16,
+        "p50": 3.42,
+        "p75": 3.71
+      },
+      "grants": {
+        "percentReceiving": 52.0,
+        "tiers": {
+          "lessThanHalf": 45.9,
+          "halfToFull": 8.4,
+          "full": null,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 1499,
+          "p50": 4464,
+          "p75": 8205
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "North Texas at Dallas, University of": {
+      "lsat": {
+        "p25": 150,
+        "p50": 152,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.11,
+        "p50": 3.35,
+        "p75": 3.62
+      },
+      "grants": {
+        "percentReceiving": 54.0,
+        "tiers": {
+          "lessThanHalf": 63.2,
+          "halfToFull": 4.7,
+          "full": 2.9,
+          "moreThanFull": 3.5
+        },
+        "amounts": {
+          "p25": 1872,
+          "p50": 3897,
+          "p75": 5354
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Northeastern University": {
+      "lsat": {
+        "p25": 159,
+        "p50": 163,
+        "p75": 165
+      },
+      "gpa": {
+        "p25": 3.52,
+        "p50": 3.72,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 44.4,
+          "halfToFull": 31.2,
+          "full": 17.0,
+          "moreThanFull": 4.0
+        },
+        "amounts": {
+          "p25": 14757,
+          "p50": 31895,
+          "p75": 51442
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 65652,
+        "ftNonResident": 65652,
+        "ptResident": 49230,
+        "ptNonResident": 49230
+      }
+    },
+    "Northern Illinois University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.33,
+        "p75": 3.59
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 47.1,
+          "halfToFull": 23.4,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 4817,
+          "p50": 8229,
+          "p75": 12244
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 23667,
+        "ftNonResident": 23667,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Northern Kentucky University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.44,
+        "p75": 3.69
+      },
+      "grants": {
+        "percentReceiving": 58.0,
+        "tiers": {
+          "lessThanHalf": 32.9,
+          "halfToFull": 28.2,
+          "full": null,
+          "moreThanFull": 2.8
+        },
+        "amounts": {
+          "p25": 7651,
+          "p50": 15181,
+          "p75": 20783
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 24388,
+        "ftNonResident": 38454,
+        "ptResident": 20636,
+        "ptNonResident": 32538
+      }
+    },
+    "Northwestern University": {
+      "lsat": {
+        "p25": 166,
+        "p50": 172,
+        "p75": 173
+      },
+      "gpa": {
+        "p25": 3.68,
+        "p50": 3.92,
+        "p75": 3.97
+      },
+      "grants": {
+        "percentReceiving": 76.0,
+        "tiers": {
+          "lessThanHalf": 37.7,
+          "halfToFull": 35.4,
+          "full": 1.0,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 18017,
+          "p50": 37283,
+          "p75": 42443
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 79772,
+        "ftNonResident": 79722,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Notre Dame, University of": {
+      "lsat": {
+        "p25": 164,
+        "p50": 169,
+        "p75": 170
+      },
+      "gpa": {
+        "p25": 3.67,
+        "p50": 3.83,
+        "p75": 3.91
+      },
+      "grants": {
+        "percentReceiving": 92.0,
+        "tiers": {
+          "lessThanHalf": 52.0,
+          "halfToFull": 36.0,
+          "full": 3.0,
+          "moreThanFull": 1.5
+        },
+        "amounts": {
+          "p25": 19600,
+          "p50": 30393,
+          "p75": 44778
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 73430,
+        "ftNonResident": 73430,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Nova Southeastern University": {
+      "lsat": {
+        "p25": 151,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.16,
+        "p50": 3.42,
+        "p75": 3.64
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 46.3,
+          "halfToFull": 13.1,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 10667,
+          "p50": 15077,
+          "p75": 21295
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 49350,
+        "ftNonResident": 49350,
+        "ptResident": 37000,
+        "ptNonResident": 37000
+      }
+    },
+    "Ohio Northern University": {
+      "lsat": {
+        "p25": 146,
+        "p50": 149,
+        "p75": 151
+      },
+      "gpa": {
+        "p25": 3.06,
+        "p50": 3.36,
+        "p75": 3.68
+      },
+      "grants": {
+        "percentReceiving": null,
+        "tiers": {
+          "lessThanHalf": 34.9,
+          "halfToFull": 48.8,
+          "full": 2.5,
+          "moreThanFull": 3.2
+        },
+        "amounts": {
+          "p25": 12139,
+          "p50": 19425,
+          "p75": 26077
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 33900,
+        "ftNonResident": 33900,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "The Ohio State University": {
+      "lsat": {
+        "p25": 161,
+        "p50": 165,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.61,
+        "p50": 3.85,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 90.0,
+        "tiers": {
+          "lessThanHalf": 31.8,
+          "halfToFull": 22.7,
+          "full": 30.9,
+          "moreThanFull": 7.2
+        },
+        "amounts": {
+          "p25": 14965,
+          "p50": 23759,
+          "p75": 33798
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 35650,
+        "ftNonResident": 50902,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Oklahoma City University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 3.11,
+        "p50": 3.43,
+        "p75": 3.67
+      },
+      "grants": {
+        "percentReceiving": 77.0,
+        "tiers": {
+          "lessThanHalf": 52.4,
+          "halfToFull": 13.3,
+          "full": null,
+          "moreThanFull": 4.6
+        },
+        "amounts": {
+          "p25": 8379,
+          "p50": 14000,
+          "p75": 18719
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Oklahoma, University of": {
+      "lsat": {
+        "p25": 156,
+        "p50": 160,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.4,
+        "p50": 3.69,
+        "p75": 3.86
+      },
+      "grants": {
+        "percentReceiving": 89.0,
+        "tiers": {
+          "lessThanHalf": 63.3,
+          "halfToFull": 28.1,
+          "full": null,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 8752,
+          "p50": 11359,
+          "p75": 13874
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 18739,
+        "ftNonResident": 33357,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Oregon, University of": {
+      "lsat": {
+        "p25": 156,
+        "p50": 159,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.31,
+        "p50": 3.56,
+        "p75": 3.74
+      },
+      "grants": {
+        "percentReceiving": 74.0,
+        "tiers": {
+          "lessThanHalf": 40.1,
+          "halfToFull": 36.1,
+          "full": 2.0,
+          "moreThanFull": 2.3
+        },
+        "amounts": {
+          "p25": 13346,
+          "p50": 23735,
+          "p75": 34813
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 47240,
+        "ftNonResident": 59495,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Pace University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.18,
+        "p50": 3.46,
+        "p75": 3.69
+      },
+      "grants": {
+        "percentReceiving": 93.0,
+        "tiers": {
+          "lessThanHalf": 44.0,
+          "halfToFull": 41.4,
+          "full": 7.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 18824,
+          "p50": 28206,
+          "p75": 37282
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 56648,
+        "ftNonResident": 56648,
+        "ptResident": 42508,
+        "ptNonResident": 42508
+      }
+    },
+    "Pacific, University of the": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.07,
+        "p50": 3.47,
+        "p75": 3.7
+      },
+      "grants": {
+        "percentReceiving": 93.0,
+        "tiers": {
+          "lessThanHalf": 43.6,
+          "halfToFull": 24.7,
+          "full": 21.5,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 4079,
+          "p50": 30542,
+          "p75": 55483
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 62678,
+        "ftNonResident": 62678,
+        "ptResident": 41628,
+        "ptNonResident": 41628
+      }
+    },
+    "Penn State Dickinson Law": {
+      "lsat": {
+        "p25": 156,
+        "p50": 161,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.41,
+        "p50": 3.71,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 15.7,
+          "halfToFull": 56.3,
+          "full": 53.0,
+          "moreThanFull": 8.2
+        },
+        "amounts": {
+          "p25": 31416,
+          "p50": 47374,
+          "p75": 54662
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 60048,
+        "ftNonResident": 60048,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Pennsylvania, University of": {
+      "lsat": {
+        "p25": 167,
+        "p50": 172,
+        "p75": 174
+      },
+      "gpa": {
+        "p25": 3.67,
+        "p50": 3.92,
+        "p75": 3.98
+      },
+      "grants": {
+        "percentReceiving": 59.0,
+        "tiers": {
+          "lessThanHalf": 25.3,
+          "halfToFull": 19.8,
+          "full": 11.2,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 25830,
+          "p50": 37444,
+          "p75": 56497
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 78348,
+        "ftNonResident": 78348,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Pepperdine University": {
+      "lsat": {
+        "p25": 159,
+        "p50": 164,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.52,
+        "p50": 3.84,
+        "p75": 3.93
+      },
+      "grants": {
+        "percentReceiving": 77.0,
+        "tiers": {
+          "lessThanHalf": 40.7,
+          "halfToFull": 36.3,
+          "full": 1.0,
+          "moreThanFull": 5.2
+        },
+        "amounts": {
+          "p25": 25013,
+          "p50": 32988,
+          "p75": 52012
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 72920,
+        "ftNonResident": 72920,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Pittsburgh, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 160,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.26,
+        "p50": 3.54,
+        "p75": 3.75
+      },
+      "grants": {
+        "percentReceiving": 82.0,
+        "tiers": {
+          "lessThanHalf": 25.0,
+          "halfToFull": 46.9,
+          "full": 11.1,
+          "moreThanFull": 3.6
+        },
+        "amounts": {
+          "p25": 17386,
+          "p50": 28226,
+          "p75": 36649
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 39936,
+        "ftNonResident": 53434,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Pontifical Catholic University of Puerto Rico": {
+      "lsat": {
+        "p25": 134,
+        "p50": 137,
+        "p75": 140
+      },
+      "gpa": {
+        "p25": 2.88,
+        "p50": 3.27,
+        "p75": 3.57
+      },
+      "grants": {
+        "percentReceiving": 24.0,
+        "tiers": {
+          "lessThanHalf": 22.4,
+          "halfToFull": 1.6,
+          "full": 1.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 1009,
+          "p50": 1556,
+          "p75": 3713
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Puerto Rico, University of": {
+      "lsat": {
+        "p25": 144,
+        "p50": 149,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 3.54,
+        "p50": 3.74,
+        "p75": 3.89
+      },
+      "grants": {
+        "percentReceiving": 50.0,
+        "tiers": {
+          "lessThanHalf": 26.4,
+          "halfToFull": 4.5,
+          "full": 1.0,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 612,
+          "p50": 552,
+          "p75": 551
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Quinnipiac University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.29,
+        "p50": 3.56,
+        "p75": 3.79
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 52.2,
+          "halfToFull": 27.2,
+          "full": 4.0,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 11925,
+          "p50": 21082,
+          "p75": 34282
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 56610,
+        "ftNonResident": 56610,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Regent University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 157,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.36,
+        "p50": 3.65,
+        "p75": 3.86
+      },
+      "grants": {
+        "percentReceiving": 97.0,
+        "tiers": {
+          "lessThanHalf": 39.0,
+          "halfToFull": 56.2,
+          "full": null,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 11205,
+          "p50": 23997,
+          "p75": 34008
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Richmond, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 163,
+        "p75": 165
+      },
+      "gpa": {
+        "p25": 3.5,
+        "p50": 3.75,
+        "p75": 3.85
+      },
+      "grants": {
+        "percentReceiving": 81.0,
+        "tiers": {
+          "lessThanHalf": 34.3,
+          "halfToFull": 24.1,
+          "full": 22.8,
+          "moreThanFull": 1.2
+        },
+        "amounts": {
+          "p25": 15950,
+          "p50": 32486,
+          "p75": 51862
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 57700,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Roger Williams University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 150,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 2.99,
+        "p50": 3.33,
+        "p75": 3.64
+      },
+      "grants": {
+        "percentReceiving": 65.0,
+        "tiers": {
+          "lessThanHalf": 24.2,
+          "halfToFull": 42.1,
+          "full": 3.8,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 15795,
+          "p50": 24928,
+          "p75": 31902
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 47400,
+        "ftNonResident": 47400,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Rutgers University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.23,
+        "p50": 3.54,
+        "p75": 3.74
+      },
+      "grants": {
+        "percentReceiving": 86.0,
+        "tiers": {
+          "lessThanHalf": 46.9,
+          "halfToFull": 36.5,
+          "full": 2.5,
+          "moreThanFull": 1.5
+        },
+        "amounts": {
+          "p25": 10832,
+          "p50": 15500,
+          "p75": 20378
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 31577,
+        "ftNonResident": 47863,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Saint Louis University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 156,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.3,
+        "p50": 3.58,
+        "p75": 3.81
+      },
+      "grants": {
+        "percentReceiving": 97.0,
+        "tiers": {
+          "lessThanHalf": 48.9,
+          "halfToFull": 40.9,
+          "full": 7.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 13487,
+          "p50": 23589,
+          "p75": 33376
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 55260,
+        "ftNonResident": 55260,
+        "ptResident": 40320,
+        "ptNonResident": 40320
+      }
+    },
+    "Samford University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.37,
+        "p50": 3.61,
+        "p75": 3.81
+      },
+      "grants": {
+        "percentReceiving": 93.0,
+        "tiers": {
+          "lessThanHalf": 58.2,
+          "halfToFull": 35.0,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 8387,
+          "p50": 17384,
+          "p75": 25512
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 46334,
+        "ftNonResident": 46334,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "San Diego, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 161,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.49,
+        "p50": 3.78,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 41.4,
+          "halfToFull": 45.8,
+          "full": 2.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 22810,
+          "p50": 31054,
+          "p75": 45026
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 66950,
+        "ftNonResident": 66950,
+        "ptResident": 49475,
+        "ptNonResident": 49475
+      }
+    },
+    "San Francisco, University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.08,
+        "p50": 3.41,
+        "p75": 3.64
+      },
+      "grants": {
+        "percentReceiving": 62.0,
+        "tiers": {
+          "lessThanHalf": 32.4,
+          "halfToFull": 30.4,
+          "full": 4.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18158,
+          "p50": 28399,
+          "p75": 39586
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 59800,
+        "ftNonResident": 59800,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Santa Clara University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 161
+      },
+      "gpa": {
+        "p25": 3.2,
+        "p50": 3.47,
+        "p75": 3.67
+      },
+      "grants": {
+        "percentReceiving": 61.0,
+        "tiers": {
+          "lessThanHalf": 27.9,
+          "halfToFull": 22.6,
+          "full": 9.5,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 20118,
+          "p50": 31484,
+          "p75": 44522
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Seattle University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 157,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.15,
+        "p50": 3.49,
+        "p75": 3.69
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 48.9,
+          "halfToFull": 26.8,
+          "full": 8.9,
+          "moreThanFull": 2.0
+        },
+        "amounts": {
+          "p25": 16892,
+          "p50": 26892,
+          "p75": 36892
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Seton Hall University": {
+      "lsat": {
+        "p25": 156,
+        "p50": 160,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.41,
+        "p50": 3.65,
+        "p75": 3.81
+      },
+      "grants": {
+        "percentReceiving": 88.0,
+        "tiers": {
+          "lessThanHalf": 37.9,
+          "halfToFull": 46.5,
+          "full": 6.3,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 19734,
+          "p50": 38613,
+          "p75": 57754
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 69660,
+        "ftNonResident": 69660,
+        "ptResident": 52270,
+        "ptNonResident": 52270
+      }
+    },
+    "South Carolina, University of": {
+      "lsat": {
+        "p25": 157,
+        "p50": 160,
+        "p75": 162
+      },
+      "gpa": {
+        "p25": 3.4,
+        "p50": 3.65,
+        "p75": 3.83
+      },
+      "grants": {
+        "percentReceiving": 90.0,
+        "tiers": {
+          "lessThanHalf": 67.8,
+          "halfToFull": 13.4,
+          "full": 1.0,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 5391,
+          "p50": 12028,
+          "p75": 18373
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 20322,
+        "ftNonResident": 38100,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "South Dakota, University of": {
+      "lsat": {
+        "p25": 148,
+        "p50": 151,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.11,
+        "p50": 3.48,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 55.0,
+        "tiers": {
+          "lessThanHalf": 36.5,
+          "halfToFull": 13.1,
+          "full": 3.1,
+          "moreThanFull": 2.8
+        },
+        "amounts": {
+          "p25": 618,
+          "p50": 5053,
+          "p75": 10718
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 12076,
+        "ftNonResident": 32184,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "South Texas College of Law Houston": {
+      "lsat": {
+        "p25": 152,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.02,
+        "p50": 3.33,
+        "p75": 3.57
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 71.9,
+          "halfToFull": 5.5,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 3000,
+          "p50": 9357,
+          "p75": 14887
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 42960,
+        "ftNonResident": 42960,
+        "ptResident": 28640,
+        "ptNonResident": 28640
+      }
+    },
+    "Southern California, University of": {
+      "lsat": {
+        "p25": 165,
+        "p50": 169,
+        "p75": 169
+      },
+      "gpa": {
+        "p25": 3.73,
+        "p50": 3.88,
+        "p75": 3.95
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 34.9,
+          "halfToFull": 60.3,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 34692,
+          "p50": 39059,
+          "p75": 46053
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 84034,
+        "ftNonResident": 84034,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Southern Illinois University": {
+      "lsat": {
+        "p25": 146,
+        "p50": 149,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 2.95,
+        "p50": 3.35,
+        "p75": 3.66
+      },
+      "grants": {
+        "percentReceiving": 64.0,
+        "tiers": {
+          "lessThanHalf": 35.3,
+          "halfToFull": 35.5,
+          "full": 7.5,
+          "moreThanFull": 1.4
+        },
+        "amounts": {
+          "p25": 5894,
+          "p50": 9533,
+          "p75": 13195
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Southern Methodist University": {
+      "lsat": {
+        "p25": 160,
+        "p50": 165,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.51,
+        "p50": 3.79,
+        "p75": 3.9
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 70.9,
+          "halfToFull": 20.3,
+          "full": 1.0,
+          "moreThanFull": 4.2
+        },
+        "amounts": {
+          "p25": 18264,
+          "p50": 24986,
+          "p75": 30374
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 60844,
+        "ftNonResident": 60844,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Southern University": {
+      "lsat": {
+        "p25": 144,
+        "p50": 146,
+        "p75": 149
+      },
+      "gpa": {
+        "p25": 2.8,
+        "p50": 3.11,
+        "p75": 3.46
+      },
+      "grants": {
+        "percentReceiving": 20.0,
+        "tiers": {
+          "lessThanHalf": 16.7,
+          "halfToFull": 10.3,
+          "full": 28.0,
+          "moreThanFull": 1.5
+        },
+        "amounts": {
+          "p25": 7529,
+          "p50": 10616,
+          "p75": 12542
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 11338,
+        "ftNonResident": 11338,
+        "ptResident": 10484,
+        "ptNonResident": 10484
+      }
+    },
+    "Southwestern Law School": {
+      "lsat": {
+        "p25": 153,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.16,
+        "p50": 3.43,
+        "p75": 3.64
+      },
+      "grants": {
+        "percentReceiving": 72.0,
+        "tiers": {
+          "lessThanHalf": 45.2,
+          "halfToFull": 29.5,
+          "full": 1.4,
+          "moreThanFull": 1.4
+        },
+        "amounts": {
+          "p25": 11695,
+          "p50": 24925,
+          "p75": 37564
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 63160,
+        "ftNonResident": 63160,
+        "ptResident": 42124,
+        "ptNonResident": 42124
+      }
+    },
+    "St. John's University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 162,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.42,
+        "p50": 3.71,
+        "p75": 3.84
+      },
+      "grants": {
+        "percentReceiving": 84.0,
+        "tiers": {
+          "lessThanHalf": 23.1,
+          "halfToFull": 38.6,
+          "full": 39.5,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 31053,
+          "p50": 65409,
+          "p75": 67930
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 75170,
+        "ftNonResident": 75170,
+        "ptResident": 56380,
+        "ptNonResident": 56380
+      }
+    },
+    "St. Mary's University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.06,
+        "p50": 3.4,
+        "p75": 3.65
+      },
+      "grants": {
+        "percentReceiving": 81.0,
+        "tiers": {
+          "lessThanHalf": 69.2,
+          "halfToFull": 6.4,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 7164,
+          "p50": 11538,
+          "p75": 16381
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 44910,
+        "ftNonResident": 44910,
+        "ptResident": 29862,
+        "ptNonResident": 29862
+      }
+    },
+    "St. Thomas, (Minneapolis) University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 156,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.38,
+        "p50": 3.62,
+        "p75": 3.79
+      },
+      "grants": {
+        "percentReceiving": 100.0,
+        "tiers": {
+          "lessThanHalf": 62.0,
+          "halfToFull": 33.6,
+          "full": 4.6,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18061,
+          "p50": 25458,
+          "p75": 33884
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 50998,
+        "ftNonResident": 50998,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "St. Thomas University (Miami)": {
+      "lsat": {
+        "p25": 150,
+        "p50": 152,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.03,
+        "p50": 3.35,
+        "p75": 3.59
+      },
+      "grants": {
+        "percentReceiving": 64.0,
+        "tiers": {
+          "lessThanHalf": 35.3,
+          "halfToFull": 32.4,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 11636,
+          "p50": 21978,
+          "p75": 29828
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 44730,
+        "ftNonResident": 44730,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Stanford University": {
+      "lsat": {
+        "p25": 170,
+        "p50": 173,
+        "p75": 175
+      },
+      "gpa": {
+        "p25": 3.83,
+        "p50": 3.93,
+        "p75": 3.99
+      },
+      "grants": {
+        "percentReceiving": 50.0,
+        "tiers": {
+          "lessThanHalf": 26.6,
+          "halfToFull": 24.8,
+          "full": null,
+          "moreThanFull": 9.2
+        },
+        "amounts": {
+          "p25": 17512,
+          "p50": 38654,
+          "p75": 55973
+        }
+      },
+      "needBased": true,
+      "tuition": {
+        "ftResident": 77454,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Stetson University": {
+      "lsat": {
+        "p25": 156,
+        "p50": 158,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.31,
+        "p50": 3.56,
+        "p75": 3.75
+      },
+      "grants": {
+        "percentReceiving": 88.0,
+        "tiers": {
+          "lessThanHalf": 51.8,
+          "halfToFull": 33.0,
+          "full": 3.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 13463,
+          "p50": 22719,
+          "p75": 32621
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 56521,
+        "ftNonResident": 56521,
+        "ptResident": 37698,
+        "ptNonResident": 37698
+      }
+    },
+    "Suffolk University": {
+      "lsat": {
+        "p25": 151,
+        "p50": 154,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.3,
+        "p50": 3.53,
+        "p75": 3.72
+      },
+      "grants": {
+        "percentReceiving": 81.0,
+        "tiers": {
+          "lessThanHalf": 50.7,
+          "halfToFull": 28.8,
+          "full": 1.3,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 13285,
+          "p50": 21080,
+          "p75": 46413
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 62610,
+        "ftNonResident": 62610,
+        "ptResident": 46958,
+        "ptNonResident": 46958
+      }
+    },
+    "Syracuse University": {
+      "lsat": {
+        "p25": 153,
+        "p50": 157,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.19,
+        "p50": 3.57,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 58.3,
+          "halfToFull": 37.0,
+          "full": null,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 15723,
+          "p50": 24540,
+          "p75": 36585
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 64650,
+        "ftNonResident": 64650,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Temple University": {
+      "lsat": {
+        "p25": 160,
+        "p50": 163,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.45,
+        "p50": 3.66,
+        "p75": 3.8
+      },
+      "grants": {
+        "percentReceiving": 85.0,
+        "tiers": {
+          "lessThanHalf": 24.4,
+          "halfToFull": 46.0,
+          "full": 15.8,
+          "moreThanFull": 4.2
+        },
+        "amounts": {
+          "p25": 17866,
+          "p50": 28405,
+          "p75": 35630
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 32588,
+        "ftNonResident": 48996,
+        "ptResident": 26076,
+        "ptNonResident": 39210
+      }
+    },
+    "Tennessee, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 162,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.52,
+        "p50": 3.79,
+        "p75": 3.89
+      },
+      "grants": {
+        "percentReceiving": 89.0,
+        "tiers": {
+          "lessThanHalf": 56.4,
+          "halfToFull": 27.2,
+          "full": 7.4,
+          "moreThanFull": 3.6
+        },
+        "amounts": {
+          "p25": 5439,
+          "p50": 9282,
+          "p75": 15643
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 16696,
+        "ftNonResident": 35140,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Texas A&M University": {
+      "lsat": {
+        "p25": 159,
+        "p50": 166,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.55,
+        "p50": 3.93,
+        "p75": 3.98
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 21.9,
+          "halfToFull": 49.4,
+          "full": 12.4,
+          "moreThanFull": 7.7
+        },
+        "amounts": {
+          "p25": 16990,
+          "p50": 28353,
+          "p75": 32991
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 32634,
+        "ftNonResident": 48522,
+        "ptResident": 25361,
+        "ptNonResident": 37278
+      }
+    },
+    "Texas Southern University": {
+      "lsat": {
+        "p25": 148,
+        "p50": 150,
+        "p75": 152
+      },
+      "gpa": {
+        "p25": 2.8,
+        "p50": 3.23,
+        "p75": 3.58
+      },
+      "grants": {
+        "percentReceiving": 51.0,
+        "tiers": {
+          "lessThanHalf": 40.0,
+          "halfToFull": 15.7,
+          "full": 6.4,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 2155,
+          "p50": 3627,
+          "p75": 6328
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 19202,
+        "ftNonResident": 26331,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Texas Tech University": {
+      "lsat": {
+        "p25": 155,
+        "p50": 158,
+        "p75": 160
+      },
+      "gpa": {
+        "p25": 3.37,
+        "p50": 3.63,
+        "p75": 3.81
+      },
+      "grants": {
+        "percentReceiving": 88.0,
+        "tiers": {
+          "lessThanHalf": 58.6,
+          "halfToFull": 22.2,
+          "full": null,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 5437,
+          "p50": 10118,
+          "p75": 15866
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 22590,
+        "ftNonResident": 33840,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Texas, University of": {
+      "lsat": {
+        "p25": 167,
+        "p50": 171,
+        "p75": 172
+      },
+      "gpa": {
+        "p25": 3.72,
+        "p50": 3.85,
+        "p75": 3.94
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 48.6,
+          "halfToFull": 39.1,
+          "full": 1.7,
+          "moreThanFull": 3.9
+        },
+        "amounts": {
+          "p25": 8375,
+          "p50": 19142,
+          "p75": 32865
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 38236,
+        "ftNonResident": 56822,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Toledo, The University of": {
+      "lsat": {
+        "p25": 149,
+        "p50": 152,
+        "p75": 155
+      },
+      "gpa": {
+        "p25": 3.21,
+        "p50": 3.52,
+        "p75": 3.76
+      },
+      "grants": {
+        "percentReceiving": 82.0,
+        "tiers": {
+          "lessThanHalf": 34.2,
+          "halfToFull": 28.5,
+          "full": 11.6,
+          "moreThanFull": 6.7
+        },
+        "amounts": {
+          "p25": 9297,
+          "p50": 18169,
+          "p75": 24430
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 26446,
+        "ftNonResident": 26446,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Touro University": {
+      "lsat": {
+        "p25": 149,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 2.91,
+        "p50": 3.21,
+        "p75": 3.51
+      },
+      "grants": {
+        "percentReceiving": 76.0,
+        "tiers": {
+          "lessThanHalf": 50.0,
+          "halfToFull": 26.4,
+          "full": 3.5,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 10670,
+          "p50": 20832,
+          "p75": 34793
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 61000,
+        "ftNonResident": 61000,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Tulane University": {
+      "lsat": {
+        "p25": 157,
+        "p50": 161,
+        "p75": 163
+      },
+      "gpa": {
+        "p25": 3.43,
+        "p50": 3.64,
+        "p75": 3.77
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 37.5,
+          "halfToFull": 48.9,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 26808,
+          "p50": 35519,
+          "p75": 42042
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 69578,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Tulsa, The University of": {
+      "lsat": {
+        "p25": 153,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.16,
+        "p50": 3.45,
+        "p75": 3.75
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 57.1,
+          "halfToFull": 24.8,
+          "full": 6.7,
+          "moreThanFull": 2.7
+        },
+        "amounts": {
+          "p25": 4089,
+          "p50": 9521,
+          "p75": 19185
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 30840,
+        "ftNonResident": 30840,
+        "ptResident": 21590,
+        "ptNonResident": 21590
+      }
+    },
+    "Utah, The University of": {
+      "lsat": {
+        "p25": 160,
+        "p50": 164,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.66,
+        "p50": 3.85,
+        "p75": 3.94
+      },
+      "grants": {
+        "percentReceiving": 91.0,
+        "tiers": {
+          "lessThanHalf": 25.0,
+          "halfToFull": 41.2,
+          "full": 8.3,
+          "moreThanFull": 10.4
+        },
+        "amounts": {
+          "p25": 11537,
+          "p50": 20528,
+          "p75": 32073
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 34721,
+        "ftNonResident": 45382,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Vanderbilt University": {
+      "lsat": {
+        "p25": 164,
+        "p50": 170,
+        "p75": 170
+      },
+      "gpa": {
+        "p25": 3.67,
+        "p50": 3.9,
+        "p75": 3.96
+      },
+      "grants": {
+        "percentReceiving": 90.0,
+        "tiers": {
+          "lessThanHalf": 52.0,
+          "halfToFull": 31.8,
+          "full": 2.0,
+          "moreThanFull": 2.2
+        },
+        "amounts": {
+          "p25": 21359,
+          "p50": 31927,
+          "p75": 41106
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 76440,
+        "ftNonResident": 76440,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Vermont Law School": {
+      "lsat": {
+        "p25": 148,
+        "p50": 152,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 2.91,
+        "p50": 3.29,
+        "p75": 3.61
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 43.3,
+          "halfToFull": 45.0,
+          "full": 9.2,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18098,
+          "p50": 28139,
+          "p75": 38351
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 55382,
+        "ftNonResident": null,
+        "ptResident": 41538,
+        "ptNonResident": null
+      }
+    },
+    "Villanova University": {
+      "lsat": {
+        "p25": 158,
+        "p50": 163,
+        "p75": 165
+      },
+      "gpa": {
+        "p25": 3.59,
+        "p50": 3.77,
+        "p75": 3.88
+      },
+      "grants": {
+        "percentReceiving": 87.0,
+        "tiers": {
+          "lessThanHalf": 25.6,
+          "halfToFull": 54.0,
+          "full": 17.4,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 22404,
+          "p50": 36393,
+          "p75": 45195
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 59800,
+        "ftNonResident": 59800,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Virginia, University of": {
+      "lsat": {
+        "p25": 167,
+        "p50": 172,
+        "p75": 173
+      },
+      "gpa": {
+        "p25": 3.73,
+        "p50": 3.95,
+        "p75": 4.0
+      },
+      "grants": {
+        "percentReceiving": 66.0,
+        "tiers": {
+          "lessThanHalf": 39.4,
+          "halfToFull": 19.4,
+          "full": 6.2,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 18038,
+          "p50": 29456,
+          "p75": 45787
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 74078,
+        "ftNonResident": 76396,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Wake Forest University": {
+      "lsat": {
+        "p25": 161,
+        "p50": 165,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.57,
+        "p50": 3.77,
+        "p75": 3.88
+      },
+      "grants": {
+        "percentReceiving": 76.0,
+        "tiers": {
+          "lessThanHalf": 25.0,
+          "halfToFull": 56.0,
+          "full": 1.0,
+          "moreThanFull": 4.7
+        },
+        "amounts": {
+          "p25": 22972,
+          "p50": 38809,
+          "p75": 46837
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 57920,
+        "ftNonResident": 57920,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Washburn University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 154,
+        "p75": 157
+      },
+      "gpa": {
+        "p25": 3.24,
+        "p50": 3.59,
+        "p75": 3.82
+      },
+      "grants": {
+        "percentReceiving": 80.0,
+        "tiers": {
+          "lessThanHalf": 34.3,
+          "halfToFull": 30.3,
+          "full": 1.5,
+          "moreThanFull": 13.4
+        },
+        "amounts": {
+          "p25": 8700,
+          "p50": 13847,
+          "p75": 24962
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Washington and Lee University": {
+      "lsat": {
+        "p25": 159,
+        "p50": 165,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.44,
+        "p50": 3.69,
+        "p75": 3.81
+      },
+      "grants": {
+        "percentReceiving": 97.0,
+        "tiers": {
+          "lessThanHalf": 32.0,
+          "halfToFull": 64.6,
+          "full": 1.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 18811,
+          "p50": 33603,
+          "p75": 38266
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 57450,
+        "ftNonResident": 57450,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Washington, University of": {
+      "lsat": {
+        "p25": 160,
+        "p50": 164,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.53,
+        "p50": 3.71,
+        "p75": 3.84
+      },
+      "grants": {
+        "percentReceiving": 70.0,
+        "tiers": {
+          "lessThanHalf": 70.7,
+          "halfToFull": 5.4,
+          "full": null,
+          "moreThanFull": 3.0
+        },
+        "amounts": {
+          "p25": 7338,
+          "p50": 12952,
+          "p75": 16746
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 45927,
+        "ftNonResident": 57810,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Washington University (St. Louis)": {
+      "lsat": {
+        "p25": 163,
+        "p50": 173,
+        "p75": 174
+      },
+      "gpa": {
+        "p25": 3.5,
+        "p50": 3.95,
+        "p75": 4.0
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 14.7,
+          "halfToFull": 59.1,
+          "full": 10.5,
+          "moreThanFull": 10.8
+        },
+        "amounts": {
+          "p25": 36664,
+          "p50": 43466,
+          "p75": 57284
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 72792,
+        "ftNonResident": 72792,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Wayne State University": {
+      "lsat": {
+        "p25": 156,
+        "p50": 162,
+        "p75": 164
+      },
+      "gpa": {
+        "p25": 3.48,
+        "p50": 3.82,
+        "p75": 3.92
+      },
+      "grants": {
+        "percentReceiving": 83.0,
+        "tiers": {
+          "lessThanHalf": 14.2,
+          "halfToFull": 21.8,
+          "full": 39.0,
+          "moreThanFull": 6.2
+        },
+        "amounts": {
+          "p25": 20233,
+          "p50": 29904,
+          "p75": 35833
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 38861,
+        "ftNonResident": 42632,
+        "ptResident": 20726,
+        "ptNonResident": 22737
+      }
+    },
+    "West Virginia University": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.29,
+        "p50": 3.61,
+        "p75": 3.87
+      },
+      "grants": {
+        "percentReceiving": 77.0,
+        "tiers": {
+          "lessThanHalf": 46.1,
+          "halfToFull": 22.9,
+          "full": 6.6,
+          "moreThanFull": 4.5
+        },
+        "amounts": {
+          "p25": 7515,
+          "p50": 12210,
+          "p75": 19916
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 26370,
+        "ftNonResident": 45666,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Western New England University": {
+      "lsat": {
+        "p25": 147,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 2.97,
+        "p50": 3.35,
+        "p75": 3.64
+      },
+      "grants": {
+        "percentReceiving": 82.0,
+        "tiers": {
+          "lessThanHalf": 24.2,
+          "halfToFull": 53.5,
+          "full": 8.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 22897,
+          "p50": 29587,
+          "p75": 32996
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 50320,
+        "ftNonResident": 50320,
+        "ptResident": 37740,
+        "ptNonResident": 37740
+      }
+    },
+    "Western State, Westcliff University": {
+      "lsat": {
+        "p25": 149,
+        "p50": 151,
+        "p75": 154
+      },
+      "gpa": {
+        "p25": 2.95,
+        "p50": 3.23,
+        "p75": 3.51
+      },
+      "grants": {
+        "percentReceiving": 78.0,
+        "tiers": {
+          "lessThanHalf": 31.9,
+          "halfToFull": 44.0,
+          "full": null,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 14836,
+          "p50": 25508,
+          "p75": 35448
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 54840,
+        "ftNonResident": 54840,
+        "ptResident": 36640,
+        "ptNonResident": 36640
+      }
+    },
+    "Widener University Commonwealth Law School": {
+      "lsat": {
+        "p25": 146,
+        "p50": 148,
+        "p75": 152
+      },
+      "gpa": {
+        "p25": 2.98,
+        "p50": 3.31,
+        "p75": 3.6
+      },
+      "grants": {
+        "percentReceiving": 95.0,
+        "tiers": {
+          "lessThanHalf": 56.1,
+          "halfToFull": 35.4,
+          "full": 2.4,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 14240,
+          "p50": 23818,
+          "p75": 32142
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Widener University Delaware Law School": {
+      "lsat": {
+        "p25": 148,
+        "p50": 150,
+        "p75": 153
+      },
+      "gpa": {
+        "p25": 2.93,
+        "p50": 3.26,
+        "p75": 3.55
+      },
+      "grants": {
+        "percentReceiving": 99.0,
+        "tiers": {
+          "lessThanHalf": 52.3,
+          "halfToFull": 46.9,
+          "full": 1.0,
+          "moreThanFull": 1.0
+        },
+        "amounts": {
+          "p25": 23615,
+          "p50": 29819,
+          "p75": 34209
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Willamette University": {
+      "lsat": {
+        "p25": 150,
+        "p50": 153,
+        "p75": 156
+      },
+      "gpa": {
+        "p25": 3.05,
+        "p50": 3.35,
+        "p75": 3.66
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 53.1,
+          "halfToFull": 23.4,
+          "full": 6.0,
+          "moreThanFull": 1.7
+        },
+        "amounts": {
+          "p25": 10000,
+          "p50": 20000,
+          "p75": 30976
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 56600,
+        "ftNonResident": 56600,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "William & Mary": {
+      "lsat": {
+        "p25": 161,
+        "p50": 165,
+        "p75": 166
+      },
+      "gpa": {
+        "p25": 3.54,
+        "p50": 3.77,
+        "p75": 3.88
+      },
+      "grants": {
+        "percentReceiving": 66.0,
+        "tiers": {
+          "lessThanHalf": 31.7,
+          "halfToFull": 54.2,
+          "full": 2.1,
+          "moreThanFull": 2.7
+        },
+        "amounts": {
+          "p25": 20291,
+          "p50": 26237,
+          "p75": 33509
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 38734,
+        "ftNonResident": 62900,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Wilmington University School of Law": {
+      "lsat": {
+        "p25": 146,
+        "p50": 149,
+        "p75": 152
+      },
+      "gpa": {
+        "p25": 2.67,
+        "p50": 3.13,
+        "p75": 3.49
+      },
+      "grants": {
+        "percentReceiving": 54.0,
+        "tiers": {
+          "lessThanHalf": 41.0,
+          "halfToFull": 11.0,
+          "full": 2.0,
+          "moreThanFull": null
+        },
+        "amounts": {
+          "p25": 3000,
+          "p50": 6000,
+          "p75": 24302
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Wisconsin, University of": {
+      "lsat": {
+        "p25": 158,
+        "p50": 165,
+        "p75": 167
+      },
+      "gpa": {
+        "p25": 3.47,
+        "p50": 3.75,
+        "p75": 3.88
+      },
+      "grants": {
+        "percentReceiving": 94.0,
+        "tiers": {
+          "lessThanHalf": 31.4,
+          "halfToFull": 50.6,
+          "full": 1.0,
+          "moreThanFull": 9.8
+        },
+        "amounts": {
+          "p25": 13832,
+          "p50": 28017,
+          "p75": 44483
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": 36526,
+        "ftNonResident": 53640,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Wyoming, University of": {
+      "lsat": {
+        "p25": 152,
+        "p50": 155,
+        "p75": 158
+      },
+      "gpa": {
+        "p25": 3.17,
+        "p50": 3.46,
+        "p75": 3.71
+      },
+      "grants": {
+        "percentReceiving": 89.0,
+        "tiers": {
+          "lessThanHalf": 46.8,
+          "halfToFull": 18.8,
+          "full": 1.0,
+          "moreThanFull": 4.4
+        },
+        "amounts": {
+          "p25": 4503,
+          "p50": 7577,
+          "p75": 11553
+        }
+      },
+      "needBased": false,
+      "tuition": {
+        "ftResident": null,
+        "ftNonResident": null,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    },
+    "Yale University": {
+      "lsat": {
+        "p25": 171,
+        "p50": 174,
+        "p75": 177
+      },
+      "gpa": {
+        "p25": 3.89,
+        "p50": 3.95,
+        "p75": 4.0
+      },
+      "grants": {
+        "percentReceiving": 63.0,
+        "tiers": {
+          "lessThanHalf": 35.8,
+          "halfToFull": 22.7,
+          "full": null,
+          "moreThanFull": 10.6
+        },
+        "amounts": {
+          "p25": 22531,
+          "p50": 32928,
+          "p75": 43350
+        }
+      },
+      "needBased": true,
+      "tuition": {
+        "ftResident": 76636,
+        "ftNonResident": 76636,
+        "ptResident": null,
+        "ptNonResident": null
+      }
+    }
+  }
+}

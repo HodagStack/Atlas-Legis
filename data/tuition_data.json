@@ -1,0 +1,1180 @@
+{
+  "schools": {
+    "akron university of": {
+      "ftResident": 22359,
+      "ftNonResident": 22359,
+      "ptResident": 14906,
+      "ptNonResident": 14906
+    },
+    "alabama university of": {
+      "ftResident": 24980,
+      "ftNonResident": 48100,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "albany law school": {
+      "ftResident": 63994,
+      "ftNonResident": 63994,
+      "ptResident": 57594,
+      "ptNonResident": 57594
+    },
+    "american university": {
+      "ftResident": 66990,
+      "ftNonResident": 66990,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "appalachian school of law": {
+      "ftResident": 41000,
+      "ftNonResident": 41000,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "arizona state university": {
+      "ftResident": 28390,
+      "ftNonResident": 52099,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "arizona university of": {
+      "ftResident": 26490,
+      "ftNonResident": 31360,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "arkansas at little rock university of": {
+      "ftResident": 13770,
+      "ftNonResident": null,
+      "ptResident": 11016,
+      "ptNonResident": null
+    },
+    "arkansas university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "atlanta s john marshall law school": {
+      "ftResident": 52536,
+      "ftNonResident": 52536,
+      "ptResident": 31794,
+      "ptNonResident": 31794
+    },
+    "ave maria school of law": {
+      "ftResident": 49500,
+      "ftNonResident": 49500,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "baltimore university of": {
+      "ftResident": 33944,
+      "ftNonResident": 50624,
+      "ptResident": 25290,
+      "ptNonResident": 35640
+    },
+    "barry university": {
+      "ftResident": 42000,
+      "ftNonResident": 42000,
+      "ptResident": 31726,
+      "ptNonResident": 31726
+    },
+    "baylor university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "belmont university": {
+      "ftResident": 55500,
+      "ftNonResident": 55500,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "boston college": {
+      "ftResident": 72380,
+      "ftNonResident": 72380,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "boston university": {
+      "ftResident": 69870,
+      "ftNonResident": 69870,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "brigham young university": {
+      "ftResident": 15992,
+      "ftNonResident": 31984,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "brooklyn law school": {
+      "ftResident": 75496,
+      "ftNonResident": 75496,
+      "ptResident": 75496,
+      "ptNonResident": 75496
+    },
+    "buffalo university at": {
+      "ftResident": 26430,
+      "ftNonResident": 32100,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "california western school of law": {
+      "ftResident": 64720,
+      "ftNonResident": 64720,
+      "ptResident": 48440,
+      "ptNonResident": 48440
+    },
+    "california berkeley university of": {
+      "ftResident": 62532,
+      "ftNonResident": 76149,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "california davis university of": {
+      "ftResident": 57460,
+      "ftNonResident": 69705,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "california irvine university of": {
+      "ftResident": 59080,
+      "ftNonResident": 71325,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "california los angeles university of": {
+      "ftResident": 59084,
+      "ftNonResident": 71329,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "california san francisco university of": {
+      "ftResident": 53087,
+      "ftNonResident": 61773,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "campbell university": {
+      "ftResident": 51840,
+      "ftNonResident": 51840,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "capital university law school": {
+      "ftResident": 45066,
+      "ftNonResident": 45066,
+      "ptResident": 40404,
+      "ptNonResident": 40404
+    },
+    "cardozo yeshiva university": {
+      "ftResident": 74438,
+      "ftNonResident": 74438,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "case western reserve university": {
+      "ftResident": 64600,
+      "ftNonResident": 64600,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "catholic university of america": {
+      "ftResident": 61580,
+      "ftNonResident": 61580,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "chapman university": {
+      "ftResident": 63126,
+      "ftNonResident": 63126,
+      "ptResident": 50400,
+      "ptNonResident": 50400
+    },
+    "charleston school of law": {
+      "ftResident": 48600,
+      "ftNonResident": 48600,
+      "ptResident": 39000,
+      "ptNonResident": 39000
+    },
+    "chicago university of": {
+      "ftResident": 83316,
+      "ftNonResident": 83316,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "chicago kent illinois institute of technology": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "cincinnati university of": {
+      "ftResident": 24010,
+      "ftNonResident": 29010,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "city university of new york university of": {
+      "ftResident": 15450,
+      "ftNonResident": 25640,
+      "ptResident": 14540,
+      "ptNonResident": 24020
+    },
+    "cleveland state university": {
+      "ftResident": 29766,
+      "ftNonResident": 29866,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "colorado university of": {
+      "ftResident": 35992,
+      "ftNonResident": 44002,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "columbia university": {
+      "ftResident": 85368,
+      "ftNonResident": 85368,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "connecticut university of": {
+      "ftResident": 30354,
+      "ftNonResident": 61396,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "cooley law school": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "cornell university": {
+      "ftResident": 84722,
+      "ftNonResident": 84722,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "creighton university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "dayton university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "denver university of": {
+      "ftResident": 63390,
+      "ftNonResident": 63390,
+      "ptResident": 46486,
+      "ptNonResident": 46486
+    },
+    "depaul university": {
+      "ftResident": 55328,
+      "ftNonResident": 55328,
+      "ptResident": 35946,
+      "ptNonResident": 35946
+    },
+    "detroit mercy university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "district of columbia university of": {
+      "ftResident": 12438,
+      "ftNonResident": 24874,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "drake university": {
+      "ftResident": 50920,
+      "ftNonResident": 50920,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "drexel university": {
+      "ftResident": 57000,
+      "ftNonResident": 57000,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "duke university": {
+      "ftResident": 80100,
+      "ftNonResident": 80100,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "duquesne university": {
+      "ftResident": 58898,
+      "ftNonResident": 58898,
+      "ptResident": 45264,
+      "ptNonResident": 45264
+    },
+    "elon university": {
+      "ftResident": 45333,
+      "ftNonResident": 45333,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "emory university": {
+      "ftResident": 69510,
+      "ftNonResident": 69510,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "faulkner university": {
+      "ftResident": 39900,
+      "ftNonResident": 39900,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "florida aandm university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "florida international university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "florida state university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "florida university of": {
+      "ftResident": 19139,
+      "ftNonResident": 36148,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "fordham university": {
+      "ftResident": 78078,
+      "ftNonResident": 78078,
+      "ptResident": 58560,
+      "ptNonResident": 58560
+    },
+    "george mason university": {
+      "ftResident": 24864,
+      "ftNonResident": 40978,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "george washington university": {
+      "ftResident": 75420,
+      "ftNonResident": 75420,
+      "ptResident": 55650,
+      "ptNonResident": 55650
+    },
+    "georgetown university": {
+      "ftResident": 83576,
+      "ftNonResident": 83576,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "georgia state university": {
+      "ftResident": 16162,
+      "ftNonResident": 37886,
+      "ptResident": 12114,
+      "ptNonResident": 28422
+    },
+    "georgia university of": {
+      "ftResident": 18044,
+      "ftNonResident": 38944,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "gonzaga university": {
+      "ftResident": 57962,
+      "ftNonResident": 57962,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "harvard university": {
+      "ftResident": 77100,
+      "ftNonResident": 77100,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "hawaii university of": {
+      "ftResident": 23304,
+      "ftNonResident": 46728,
+      "ptResident": 17478,
+      "ptNonResident": 17478
+    },
+    "hofstra university": {
+      "ftResident": 73344,
+      "ftNonResident": 73344,
+      "ptResident": 55006,
+      "ptNonResident": 55006
+    },
+    "houston university of": {
+      "ftResident": 31326,
+      "ftNonResident": 46051,
+      "ptResident": 21221,
+      "ptNonResident": 31196
+    },
+    "howard university": {
+      "ftResident": 39780,
+      "ftNonResident": 39780,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "idaho university of": {
+      "ftResident": 27516,
+      "ftNonResident": 46752,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "illinois university of": {
+      "ftResident": 36500,
+      "ftNonResident": 46500,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "illinois chicago university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "indiana university bloomington": {
+      "ftResident": 36950,
+      "ftNonResident": 58000,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "indiana university indianapolis": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "inter american university of puerto rico": {
+      "ftResident": 16585,
+      "ftNonResident": 16585,
+      "ptResident": 12305,
+      "ptNonResident": 12305
+    },
+    "iowa university of": {
+      "ftResident": 30944,
+      "ftNonResident": 52191,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "jacksonville university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "kansas university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "kentucky university of": {
+      "ftResident": 25685,
+      "ftNonResident": 49836,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "lewis and clark law school": {
+      "ftResident": 61434,
+      "ftNonResident": 61434,
+      "ptResident": 46060,
+      "ptNonResident": 46060
+    },
+    "liberty university": {
+      "ftResident": 43150,
+      "ftNonResident": 43150,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "lincoln memorial university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "louisiana state university": {
+      "ftResident": 19750,
+      "ftNonResident": 19750,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "louisville university of": {
+      "ftResident": 27000,
+      "ftNonResident": 32000,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "loyola marymount university los angeles": {
+      "ftResident": 70360,
+      "ftNonResident": 70360,
+      "ptResident": 52220,
+      "ptNonResident": 52220
+    },
+    "loyola university chicago": {
+      "ftResident": 58670,
+      "ftNonResident": 58670,
+      "ptResident": 44030,
+      "ptNonResident": 44030
+    },
+    "loyola university new orleans": {
+      "ftResident": 55024,
+      "ftNonResident": 55024,
+      "ptResident": 41278,
+      "ptNonResident": 41278
+    },
+    "maine university of": {
+      "ftResident": 26100,
+      "ftNonResident": 38160,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "marquette university": {
+      "ftResident": 51970,
+      "ftNonResident": 51970,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "maryland university of": {
+      "ftResident": 37830,
+      "ftNonResident": 55844,
+      "ptResident": 24831,
+      "ptNonResident": 36556
+    },
+    "massachusetts dartmouth university of": {
+      "ftResident": 31766,
+      "ftNonResident": 41565,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "memphis university of": {
+      "ftResident": 18634,
+      "ftNonResident": 24354,
+      "ptResident": 16940,
+      "ptNonResident": 22140
+    },
+    "mercer university": {
+      "ftResident": 44782,
+      "ftNonResident": 44782,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "miami university of": {
+      "ftResident": 66720,
+      "ftNonResident": 66720,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "michigan state university": {
+      "ftResident": 43480,
+      "ftNonResident": 48222,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "michigan university of": {
+      "ftResident": 76108,
+      "ftNonResident": 79108,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "minnesota university of": {
+      "ftResident": 51440,
+      "ftNonResident": 61845,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "mississippi college": {
+      "ftResident": 37980,
+      "ftNonResident": 37980,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "mississippi university of": {
+      "ftResident": 19797,
+      "ftNonResident": 26797,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "missouri university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "missouri kansas city university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "mitchell hamline school of law": {
+      "ftResident": 55300,
+      "ftNonResident": 55300,
+      "ptResident": 39930,
+      "ptNonResident": 39930
+    },
+    "montana university of": {
+      "ftResident": 24582,
+      "ftNonResident": 51582,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "nebraska university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "nevada las vegas university of": {
+      "ftResident": 31518,
+      "ftNonResident": 46040,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "new england law boston": {
+      "ftResident": 62896,
+      "ftNonResident": 62896,
+      "ptResident": 47164,
+      "ptNonResident": 47164
+    },
+    "new hampshire university of": {
+      "ftResident": 42000,
+      "ftNonResident": 50000,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "new mexico university of": {
+      "ftResident": 19474,
+      "ftNonResident": 43192,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "new york law school": {
+      "ftResident": 71052,
+      "ftNonResident": 71052,
+      "ptResident": 54710,
+      "ptNonResident": 54710
+    },
+    "new york university": {
+      "ftResident": 83952,
+      "ftNonResident": 83952,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "north carolina central university": {
+      "ftResident": 13444,
+      "ftNonResident": 36116,
+      "ptResident": 13444,
+      "ptNonResident": 36116
+    },
+    "north carolina university of": {
+      "ftResident": 28082,
+      "ftNonResident": 51320,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "north dakota university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "north texas at dallas university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "northeastern university": {
+      "ftResident": 65652,
+      "ftNonResident": 65652,
+      "ptResident": 49230,
+      "ptNonResident": 49230
+    },
+    "northern illinois university": {
+      "ftResident": 23667,
+      "ftNonResident": 23667,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "northern kentucky university": {
+      "ftResident": 24388,
+      "ftNonResident": 38454,
+      "ptResident": 20636,
+      "ptNonResident": 32538
+    },
+    "northwestern university": {
+      "ftResident": 79772,
+      "ftNonResident": 79722,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "notre dame university of": {
+      "ftResident": 73430,
+      "ftNonResident": 73430,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "nova southeastern university": {
+      "ftResident": 49350,
+      "ftNonResident": 49350,
+      "ptResident": 37000,
+      "ptNonResident": 37000
+    },
+    "ohio northern university": {
+      "ftResident": 33900,
+      "ftNonResident": 33900,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "oklahoma city university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "oklahoma university of": {
+      "ftResident": 18739,
+      "ftNonResident": 33357,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "oregon university of": {
+      "ftResident": 47240,
+      "ftNonResident": 59495,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "pace university": {
+      "ftResident": 56648,
+      "ftNonResident": 56648,
+      "ptResident": 42508,
+      "ptNonResident": 42508
+    },
+    "pacific university of": {
+      "ftResident": 62678,
+      "ftNonResident": 62678,
+      "ptResident": 41628,
+      "ptNonResident": 41628
+    },
+    "penn state dickinson law": {
+      "ftResident": 60048,
+      "ftNonResident": 60048,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "pennsylvania university of": {
+      "ftResident": 78348,
+      "ftNonResident": 78348,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "pepperdine university": {
+      "ftResident": 72920,
+      "ftNonResident": 72920,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "pittsburgh university of": {
+      "ftResident": 39936,
+      "ftNonResident": 53434,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "pontifical catholic university of puerto rico": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "puerto rico university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "quinnipiac university": {
+      "ftResident": 56610,
+      "ftNonResident": 56610,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "regent university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "richmond university of": {
+      "ftResident": 57700,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "roger williams university": {
+      "ftResident": 47400,
+      "ftNonResident": 47400,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "rutgers university": {
+      "ftResident": 31577,
+      "ftNonResident": 47863,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "saint louis university": {
+      "ftResident": 55260,
+      "ftNonResident": 55260,
+      "ptResident": 40320,
+      "ptNonResident": 40320
+    },
+    "samford university": {
+      "ftResident": 46334,
+      "ftNonResident": 46334,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "san diego university of": {
+      "ftResident": 66950,
+      "ftNonResident": 66950,
+      "ptResident": 49475,
+      "ptNonResident": 49475
+    },
+    "san francisco university of": {
+      "ftResident": 59800,
+      "ftNonResident": 59800,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "santa clara university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "seattle university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "seton hall university": {
+      "ftResident": 69660,
+      "ftNonResident": 69660,
+      "ptResident": 52270,
+      "ptNonResident": 52270
+    },
+    "south carolina university of": {
+      "ftResident": 20322,
+      "ftNonResident": 38100,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "south dakota university of": {
+      "ftResident": 12076,
+      "ftNonResident": 32184,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "south texas college of law houston": {
+      "ftResident": 42960,
+      "ftNonResident": 42960,
+      "ptResident": 28640,
+      "ptNonResident": 28640
+    },
+    "southern california university of": {
+      "ftResident": 84034,
+      "ftNonResident": 84034,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "southern illinois university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "southern methodist university": {
+      "ftResident": 60844,
+      "ftNonResident": 60844,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "southern university": {
+      "ftResident": 11338,
+      "ftNonResident": 11338,
+      "ptResident": 10484,
+      "ptNonResident": 10484
+    },
+    "southwestern law school": {
+      "ftResident": 63160,
+      "ftNonResident": 63160,
+      "ptResident": 42124,
+      "ptNonResident": 42124
+    },
+    "st john s university": {
+      "ftResident": 75170,
+      "ftNonResident": 75170,
+      "ptResident": 56380,
+      "ptNonResident": 56380
+    },
+    "st mary s university": {
+      "ftResident": 44910,
+      "ftNonResident": 44910,
+      "ptResident": 29862,
+      "ptNonResident": 29862
+    },
+    "st thomas university miami": {
+      "ftResident": 44730,
+      "ftNonResident": 44730,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "st thomas minneapolis university of": {
+      "ftResident": 50998,
+      "ftNonResident": 50998,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "stanford university": {
+      "ftResident": 77454,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "stetson university": {
+      "ftResident": 56521,
+      "ftNonResident": 56521,
+      "ptResident": 37698,
+      "ptNonResident": 37698
+    },
+    "suffolk university": {
+      "ftResident": 62610,
+      "ftNonResident": 62610,
+      "ptResident": 46958,
+      "ptNonResident": 46958
+    },
+    "syracuse university": {
+      "ftResident": 64650,
+      "ftNonResident": 64650,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "temple university": {
+      "ftResident": 32588,
+      "ftNonResident": 48996,
+      "ptResident": 26076,
+      "ptNonResident": 39210
+    },
+    "tennessee university of": {
+      "ftResident": 16696,
+      "ftNonResident": 35140,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "texas aandm university": {
+      "ftResident": 32634,
+      "ftNonResident": 48522,
+      "ptResident": 25361,
+      "ptNonResident": 37278
+    },
+    "texas southern university": {
+      "ftResident": 19202,
+      "ftNonResident": 26331,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "texas tech university": {
+      "ftResident": 22590,
+      "ftNonResident": 33840,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "texas university of": {
+      "ftResident": 38236,
+      "ftNonResident": 56822,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "ohio state university": {
+      "ftResident": 35650,
+      "ftNonResident": 50902,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "toledo university of": {
+      "ftResident": 26446,
+      "ftNonResident": 26446,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "touro university": {
+      "ftResident": 61000,
+      "ftNonResident": 61000,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "tulane university": {
+      "ftResident": 69578,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "tulsa university of": {
+      "ftResident": 30840,
+      "ftNonResident": 30840,
+      "ptResident": 21590,
+      "ptNonResident": 21590
+    },
+    "utah university of": {
+      "ftResident": 34721,
+      "ftNonResident": 45382,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "vanderbilt university": {
+      "ftResident": 76440,
+      "ftNonResident": 76440,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "vermont law school": {
+      "ftResident": 55382,
+      "ftNonResident": null,
+      "ptResident": 41538,
+      "ptNonResident": null
+    },
+    "villanova university": {
+      "ftResident": 59800,
+      "ftNonResident": 59800,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "virginia university of": {
+      "ftResident": 74078,
+      "ftNonResident": 76396,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "wake forest university": {
+      "ftResident": 57920,
+      "ftNonResident": 57920,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "washburn university": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "washington and lee university": {
+      "ftResident": 57450,
+      "ftNonResident": 57450,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "washington university st louis": {
+      "ftResident": 72792,
+      "ftNonResident": 72792,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "washington university of": {
+      "ftResident": 45927,
+      "ftNonResident": 57810,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "wayne state university": {
+      "ftResident": 38861,
+      "ftNonResident": 42632,
+      "ptResident": 20726,
+      "ptNonResident": 22737
+    },
+    "west virginia university": {
+      "ftResident": 26370,
+      "ftNonResident": 45666,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "western new england university": {
+      "ftResident": 50320,
+      "ftNonResident": 50320,
+      "ptResident": 37740,
+      "ptNonResident": 37740
+    },
+    "western state westcliff university": {
+      "ftResident": 54840,
+      "ftNonResident": 54840,
+      "ptResident": 36640,
+      "ptNonResident": 36640
+    },
+    "widener university commonwealth law school": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "widener university delaware law school": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "willamette university": {
+      "ftResident": 56600,
+      "ftNonResident": 56600,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "william and mary": {
+      "ftResident": 38734,
+      "ftNonResident": 62900,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "wilmington university school of law": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "wisconsin university of": {
+      "ftResident": 36526,
+      "ftNonResident": 53640,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "wyoming university of": {
+      "ftResident": null,
+      "ftNonResident": null,
+      "ptResident": null,
+      "ptNonResident": null
+    },
+    "yale university": {
+      "ftResident": 76636,
+      "ftNonResident": 76636,
+      "ptResident": null,
+      "ptNonResident": null
+    }
+  }
+}

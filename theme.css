@@ -34,6 +34,11 @@ html[data-theme="dark"] #theme-icon-moon { display: none; }
   .nav-theme-btn { width: 26px !important; margin-left: 1px !important; }
 }
 
+/* ── Nav — hide "View Map" on small screens to prevent overflow ── */
+@media (max-width: 600px) {
+  .nav-map { display: none !important; }
+}
+
 /* ── Methodology modal ── */
 #meth-modal {
   display: none;

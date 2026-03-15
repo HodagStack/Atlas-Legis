@@ -454,6 +454,33 @@
       .filter-row { flex-direction: column; }
       .filter-group.grow, .filter-group.narrow { min-width: 0; width: 100%; }
     }
+
+    /* ── Mobile table: hide 3 least critical columns to fit 4 cols on screen ── */
+    @media (max-width: 640px) {
+      /* Hide: Est. 3-Year Total (3), % Receiving Aid (5), Confidence (7) */
+      thead th:nth-child(3), tbody td:nth-child(3),
+      thead th:nth-child(5), tbody td:nth-child(5),
+      thead th:nth-child(7), tbody td:nth-child(7) { display: none; }
+
+      /* Tighter cell padding */
+      thead th { padding: 10px 10px; }
+      tbody td { padding: 9px 10px; }
+      .school-cell { max-width: 150px; }
+
+      /* Hero */
+      .hero h1 { font-size: 1.8rem; }
+      .hero-lead { font-size: 0.92rem; }
+
+      /* "Hide need-based" toggle: remove auto left margin so it wraps cleanly */
+      .need-toggle { margin-left: 0; width: 100%; }
+    }
+
+    @media (max-width: 400px) {
+      thead th { padding: 9px 8px; font-size: 0.6rem; }
+      tbody td { padding: 8px 8px; }
+      .school-cell { max-width: 120px; }
+      .school-link { font-size: 0.78rem; }
+    }
   </style>
   <link rel="stylesheet" href="/theme.css">
   <script src="/theme.js"></script>

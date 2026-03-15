@@ -473,6 +473,37 @@
 
       /* "Hide need-based" toggle: remove auto left margin so it wraps cleanly */
       .need-toggle { margin-left: 0; width: 100%; }
+
+      /* ── Input card ── */
+      .input-panel { padding: 20px 16px; }
+
+      /* Tighten the flex gap so steppers + filter-row breathe evenly */
+      .inputs-row { gap: 12px; }
+
+      /* Lock the two steppers side-by-side at exactly 50% each */
+      .stepper-group {
+        flex: 0 0 calc(50% - 6px);
+        min-width: 0;
+        max-width: none;
+      }
+
+      /* Filter row: full-width block, column layout, no extra top margin */
+      .filter-row {
+        flex: 0 0 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+        padding-top: 16px;
+      }
+
+      /* Every filter control full-width */
+      .filter-group,
+      .filter-group.grow,
+      .filter-group.narrow {
+        flex: none;
+        min-width: 0;
+        width: 100%;
+      }
     }
 
     @media (max-width: 400px) {

@@ -1979,8 +1979,8 @@
       .footer-brand { display: none; }
       .footer-copy { display: none; }
       .footer-nav-sep { display: none; }
-      #site-footer nav { gap: 0; flex-wrap: nowrap; }
-      .footer-nav-link { font-size: 0.65rem; padding: 6px 7px; min-height: 38px; display:inline-flex; align-items:center; letter-spacing: 0; }
+      #site-footer nav { gap: 0; flex-wrap: wrap; justify-content: center; row-gap: 0; }
+      .footer-nav-link { font-size: 0.64rem; padding: 5px 7px; min-height: 32px; display:inline-flex; align-items:center; letter-spacing: 0; }
       /* Hide footer on mobile when sidebar or compare panel is open */
       body.sidebar-open #site-footer,
       body.compare-open #site-footer { display: none; }
@@ -4392,13 +4392,15 @@ document.getElementById('close-btn').addEventListener('click', () => {
   <nav aria-label="Footer navigation">
     <a href="/schools/index.html" class="footer-nav-link">Schools</a>
     <span class="footer-nav-sep">·</span>
+    <a href="/scholarship-estimator.html" class="footer-nav-link">Scholarships</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/debt-planner.html" class="footer-nav-link">Debt Planner</a>
+    <span class="footer-nav-sep">·</span>
     <a href="/about.html" class="footer-nav-link">About</a>
     <span class="footer-nav-sep">·</span>
     <a href="/methodology.html" class="footer-nav-link">Methodology</a>
     <span class="footer-nav-sep">·</span>
     <a href="/sources.html" class="footer-nav-link">Sources</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/debt-planner.html" class="footer-nav-link">Debt Planner</a>
   </nav>
   <span class="footer-copy">© 2026 Atlas Legis</span>
 </footer>

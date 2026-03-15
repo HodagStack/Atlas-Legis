@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ── Methodology footer popup ─────────────────────────────────────────────────
-  var footerLinks = document.querySelectorAll('.footer-links a');
+  var footerLinks = document.querySelectorAll('.footer-links a, .footer-nav-link');
   var methLink = null;
   for (var j = 0; j < footerLinks.length; j++) {
     var href = footerLinks[j].getAttribute('href') || '';

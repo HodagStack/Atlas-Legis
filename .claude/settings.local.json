@@ -15,7 +15,8 @@
       "Bash(grep -c 'sources.html' schools/*/index.html)",
       "Bash(grep -rL 'href=\"\"/sources.html\"\"' schools/*/index.html)",
       "Bash(xargs sed -i ':a;N;$!ba;s|        <li><a href=\"\"/about\\\\.html\"\">About</a></li>\\\\n        <li><a href=\"\"/sources\\\\.html\"\">Sources</a></li>|        <li><a href=\"\"/about.html\"\">About</a></li>|g')",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(grep:*)"
     ]
   }
 }

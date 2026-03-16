@@ -2141,6 +2141,122 @@
     @media (max-width: 768px) {
       #tools-btn .hdr-btn-label { display: none; }
     }
+
+    /* ── ONBOARDING MODAL ── */
+    #onboarding-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
+    }
+    #onboarding-modal.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .onb-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(14,32,24,0.52);
+    }
+    .onb-box {
+      position: relative;
+      width: min(440px, calc(100vw - 32px));
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      background: var(--glass);
+      backdrop-filter: blur(24px) saturate(1.5);
+      -webkit-backdrop-filter: blur(24px) saturate(1.5);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 12px 48px var(--shadow-deep), inset 0 1px 0 rgba(255,255,255,0.8);
+      transform: translateY(10px) scale(0.98);
+      transition: transform 0.22s ease;
+    }
+    #onboarding-modal.visible .onb-box {
+      transform: translateY(0) scale(1);
+    }
+    .onb-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .onb-wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--em);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .onb-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .onb-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .onb-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .onb-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .onb-list li div {
+      flex: 1;
+    }
+    .onb-list li strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 650;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .onb-list li p {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .onb-link {
+      color: var(--em);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .onb-link:hover { text-decoration: underline; }
+    .onb-cta {
+      display: block;
+      width: 100%;
+      padding: 11px 0;
+      background: var(--em);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      transition: background 0.15s, box-shadow 0.15s;
+    }
+    .onb-cta:hover {
+      background: var(--em-deep);
+      box-shadow: 0 4px 16px var(--em-glow);
+    }
   </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
@@ -2343,7 +2459,7 @@
   <div id="map"></div>
 
   <!-- HELP BUTTON -->
-  <button id="help-btn" aria-label="How to use the map" aria-expanded="false">?</button>
+  <button id="help-btn" aria-label="Open site guide">?</button>
   <div id="help-popup" role="tooltip" aria-hidden="true">
     <div class="help-title">How to use the map</div>
     <ul class="help-steps">
@@ -2360,6 +2476,44 @@
         <span class="hs-text"><strong>Search by school or city</strong> using the search bar to zoom straight there.</span>
       </li>
     </ul>
+  </div>
+
+  <!-- ONBOARDING MODAL -->
+  <div id="onboarding-modal" role="dialog" aria-modal="true" aria-labelledby="onb-title">
+    <div class="onb-backdrop"></div>
+    <div class="onb-box">
+      <div class="onb-header">
+        <div class="onb-wordmark" id="onb-title">Atlas Legis</div>
+        <div class="onb-sub">Your interactive guide to U.S. law schools</div>
+      </div>
+      <ul class="onb-list">
+        <li>
+          <span class="onb-icon">🗺️</span>
+          <div><strong>Explore the map</strong><p>Click any pin to open a school's full data card — admissions stats, employment outcomes, and more.</p></div>
+        </li>
+        <li>
+          <span class="onb-icon">📊</span>
+          <div><strong>See where you stand</strong><p>Enter your GPA &amp; LSAT above to color-code every school by your personal admissions standing.</p></div>
+        </li>
+        <li>
+          <span class="onb-icon">⚖️</span>
+          <div><strong>Compare schools</strong><p>Add any schools to your compare tray and view their key stats side-by-side.</p></div>
+        </li>
+        <li>
+          <span class="onb-icon">🔍</span>
+          <div><strong>Filter &amp; refine</strong><p>Narrow the map by tier, U.S. News rank, LSAT range, tuition, and acceptance rate.</p></div>
+        </li>
+        <li>
+          <span class="onb-icon">💰</span>
+          <div><strong>Scholarship Estimator</strong><p>See merit aid estimates at all 197 schools based on your numbers. <a href="scholarship-estimator.html" class="onb-link">Open the estimator →</a></p></div>
+        </li>
+        <li>
+          <span class="onb-icon">📋</span>
+          <div><strong>Debt Planner</strong><p>Model your law school debt across repayment scenarios, including PSLF. <a href="debt-planner.html" class="onb-link">Open the planner →</a></p></div>
+        </li>
+      </ul>
+      <button class="onb-cta" id="onb-close">Get Started</button>
+    </div>
   </div>
 
   <!-- SIDEBAR -->
@@ -4067,52 +4221,32 @@ document.getElementById('close-btn').addEventListener('click', () => {
 })();
 }
 
-/* ── HELP BUTTON ── */
+/* ── ONBOARDING MODAL ── */
 (function () {
-  const btn = document.getElementById('help-btn');
-  const popup = document.getElementById('help-popup');
-  if (!btn || !popup) return;
+  const SEEN_KEY = 'atlas-onboarding-seen';
+  const modal = document.getElementById('onboarding-modal');
+  if (!modal) return;
 
   function show() {
-    popup.classList.add('visible');
-    btn.classList.add('active');
-    btn.setAttribute('aria-expanded', 'true');
-    popup.setAttribute('aria-hidden', 'false');
+    modal.classList.add('visible');
   }
-  function hide() {
-    popup.classList.remove('visible');
-    btn.classList.remove('active');
-    btn.setAttribute('aria-expanded', 'false');
-    popup.setAttribute('aria-hidden', 'true');
+  function dismiss() {
+    modal.classList.remove('visible');
+    localStorage.setItem(SEEN_KEY, '1');
   }
 
-  const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
-
-  // Desktop: hover on button shows popup; leaving button OR popup hides it
-  btn.addEventListener('mouseenter', () => { if (!isTouchDevice()) show(); });
-  btn.addEventListener('mouseleave', (e) => {
-    if (!isTouchDevice() && !popup.contains(e.relatedTarget)) hide();
-  });
-  popup.addEventListener('mouseleave', (e) => {
-    if (!isTouchDevice() && e.relatedTarget !== btn) hide();
+  document.getElementById('onb-close').addEventListener('click', dismiss);
+  modal.querySelector('.onb-backdrop').addEventListener('click', dismiss);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('visible')) dismiss();
   });
 
-  // Mobile: tap button toggles popup
-  btn.addEventListener('click', (e) => {
-    if (!isTouchDevice()) return;
-    e.stopPropagation();
-    popup.classList.contains('visible') ? hide() : show();
-  });
+  // ? button opens the modal
+  const helpBtn = document.getElementById('help-btn');
+  if (helpBtn) helpBtn.addEventListener('click', show);
 
-  // Mobile: tap anywhere else closes it
-  document.addEventListener('touchstart', (e) => {
-    if (!popup.contains(e.target) && e.target !== btn) hide();
-  }, { passive: true });
-
-  // Mobile: any map touch/scroll closes it
-  const mapEl = document.getElementById('map');
-  if (mapEl) {
-    mapEl.addEventListener('touchstart', () => hide(), { passive: true });
+  if (!localStorage.getItem(SEEN_KEY)) {
+    setTimeout(show, 800);
   }
 })();
 

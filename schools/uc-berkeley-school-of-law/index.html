@@ -537,7 +537,7 @@
                 Each circle represents <strong>1%</strong> of the entering class, colored by scholarship level received.
               </p>
               <div class="schol-grid" id="schol-people-grid" role="img"
-                   aria-label="Scholarship distribution: 143 students with no scholarship, 491 with less than half tuition, 283 with half to full tuition, 4 with full tuition, 9 with more than full tuition">
+                   aria-label="Scholarship distribution: 143 students with no scholarship, 491 with less than half tuition, 283 with half to full tuition, 4 with full tuition, 91 with more than full tuition">
                 <!-- 100 dots injected by inline script below -->
               </div>
               <div class="schol-grid-legend" aria-hidden="true">
@@ -557,7 +557,7 @@
               <div class="schol-seg s-less"    style="flex: 491;"  title="Less than half tuition"></div>
               <div class="schol-seg s-half"    style="flex: 283;"    title="Half to full tuition"></div>
               <div class="schol-seg s-full"    style="flex: 4;"    title="Full tuition"></div>
-              <div class="schol-seg s-stipend" style="flex: 9;"         title="More than full tuition"></div>
+              <div class="schol-seg s-stipend" style="flex: 91;"         title="More than full tuition"></div>
             </div>
 
             <!-- Detail rows -->
@@ -585,7 +585,7 @@
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-stipend" aria-hidden="true"></div>
                 <span class="schol-lbl">More than full tuition</span>
-                <span class="schol-val">9</span>
+                <span class="schol-val">91</span>
               </div>
             </div>
 
@@ -704,7 +704,7 @@
       less:    Number('491'.replace(/[^0-9.]/g, '')) || 0,
       half:    Number('283'.replace(/[^0-9.]/g, '')) || 0,
       full:    Number('4'.replace(/[^0-9.]/g, '')) || 0,
-      stipend: Number('9'.replace(/[^0-9.]/g, '')) || 0,
+      stipend: Number('91'.replace(/[^0-9.]/g, '')) || 0,
     };
 
     var total = raw.none + raw.less + raw.half + raw.full + raw.stipend;

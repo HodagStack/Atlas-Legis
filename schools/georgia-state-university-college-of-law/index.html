@@ -537,7 +537,7 @@
                 Each circle represents <strong>1%</strong> of the entering class, colored by scholarship level received.
               </p>
               <div class="schol-grid" id="schol-people-grid" role="img"
-                   aria-label="Scholarship distribution: 226 students with no scholarship, 90 with less than half tuition, 97 with half to full tuition, 0 with full tuition, 76 with more than full tuition">
+                   aria-label="Scholarship distribution: 332 students with no scholarship, 123 with less than half tuition, 110 with half to full tuition, 0 with full tuition, 82 with more than full tuition">
                 <!-- 100 dots injected by inline script below -->
               </div>
               <div class="schol-grid-legend" aria-hidden="true">
@@ -553,11 +553,11 @@
 
             <!-- Proportional bar -->
             <div class="schol-bar-track" role="presentation" aria-hidden="true">
-              <div class="schol-seg s-none"    style="flex: 226;"           title="No scholarship"></div>
-              <div class="schol-seg s-less"    style="flex: 90;"  title="Less than half tuition"></div>
-              <div class="schol-seg s-half"    style="flex: 97;"    title="Half to full tuition"></div>
+              <div class="schol-seg s-none"    style="flex: 332;"           title="No scholarship"></div>
+              <div class="schol-seg s-less"    style="flex: 123;"  title="Less than half tuition"></div>
+              <div class="schol-seg s-half"    style="flex: 110;"    title="Half to full tuition"></div>
               <div class="schol-seg s-full"    style="flex: 0;"    title="Full tuition"></div>
-              <div class="schol-seg s-stipend" style="flex: 76;"         title="More than full tuition"></div>
+              <div class="schol-seg s-stipend" style="flex: 82;"         title="More than full tuition"></div>
             </div>
 
             <!-- Detail rows -->
@@ -565,17 +565,17 @@
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-none" aria-hidden="true"></div>
                 <span class="schol-lbl">No scholarship</span>
-                <span class="schol-val">226</span>
+                <span class="schol-val">332</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-less" aria-hidden="true"></div>
                 <span class="schol-lbl">Less than ½ tuition</span>
-                <span class="schol-val">90</span>
+                <span class="schol-val">123</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-half" aria-hidden="true"></div>
                 <span class="schol-lbl">Half to full tuition</span>
-                <span class="schol-val">97</span>
+                <span class="schol-val">110</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-full" aria-hidden="true"></div>
@@ -585,7 +585,7 @@
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-stipend" aria-hidden="true"></div>
                 <span class="schol-lbl">More than full tuition</span>
-                <span class="schol-val">76</span>
+                <span class="schol-val">82</span>
               </div>
             </div>
 
@@ -700,11 +700,11 @@
 
     // Raw headcounts from template tokens
     var raw = {
-      none:    Number('226'.replace(/[^0-9.]/g, '')) || 0,
-      less:    Number('90'.replace(/[^0-9.]/g, '')) || 0,
-      half:    Number('97'.replace(/[^0-9.]/g, '')) || 0,
+      none:    Number('332'.replace(/[^0-9.]/g, '')) || 0,
+      less:    Number('123'.replace(/[^0-9.]/g, '')) || 0,
+      half:    Number('110'.replace(/[^0-9.]/g, '')) || 0,
       full:    Number('0'.replace(/[^0-9.]/g, '')) || 0,
-      stipend: Number('76'.replace(/[^0-9.]/g, '')) || 0,
+      stipend: Number('82'.replace(/[^0-9.]/g, '')) || 0,
     };
 
     var total = raw.none + raw.less + raw.half + raw.full + raw.stipend;

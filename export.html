@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Legis — Card Export Bookmarklet</title>
+  <style>
+    :root {
+      --em-600: #059669; --em-700: #047857;
+      --ink: #0d1117; --ink-3: #334155;
+      --muted: #64748b; --subtle: #94a3b8;
+      --border: #e2e8f0; --bg: #f6f8fb; --surface: #ffffff;
+      --serif: Georgia, serif; --sans: system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink);
+           line-height: 1.6; padding: 48px 24px 72px; -webkit-font-smoothing: antialiased; }
+
+    .wrap { max-width: 620px; margin: 0 auto; }
+
+    .wordmark { font-family: var(--serif); font-size: 1.1rem; color: var(--em-700);
+                letter-spacing: -.01em; margin-bottom: 32px; display: block; }
+
+    h1 { font-family: var(--serif); font-size: 1.9rem; font-weight: 400;
+         letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; }
+    .subtitle { font-size: .95rem; color: var(--muted); margin-bottom: 40px; }
+
+    /* ── Bookmarklet button ── */
+    .bm-wrap { background: var(--surface); border: 1px solid var(--border);
+               border-radius: 14px; padding: 28px; margin-bottom: 36px;
+               box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.04); }
+    .bm-label { font-size: .72rem; font-weight: 600; letter-spacing: .08em;
+                text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .bm-link {
+      display: inline-block;
+      background: var(--em-600); color: #fff;
+      font-size: .88rem; font-weight: 600;
+      padding: 11px 22px; border-radius: 8px;
+      text-decoration: none; cursor: grab;
+      box-shadow: 0 2px 8px rgba(5,150,105,.25);
+      transition: background .14s, box-shadow .14s;
+      user-select: none;
+    }
+    .bm-link:hover { background: var(--em-700); box-shadow: 0 4px 12px rgba(5,150,105,.3); }
+    .bm-hint { margin-top: 14px; font-size: .8rem; color: var(--subtle); }
+
+    /* ── Steps ── */
+    .steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 36px; }
+    .step { display: grid; grid-template-columns: 32px 1fr;
+            gap: 0 16px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .step:last-child { border-bottom: none; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%;
+                background: var(--em-600); color: #fff;
+                font-size: .78rem; font-weight: 700;
+                display: flex; align-items: center; justify-content: center;
+                flex-shrink: 0; margin-top: 2px; }
+    .step-body { display: flex; flex-direction: column; gap: 4px; }
+    .step-title { font-size: .92rem; font-weight: 600; color: var(--ink); }
+    .step-desc { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+    code { font-family: monospace; font-size: .82rem; background: var(--bg);
+           border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; color: var(--ink-3); }
+
+    /* ── Notes ── */
+    .notes { background: var(--surface); border: 1px solid var(--border);
+             border-radius: 14px; padding: 24px;
+             box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+    .notes-title { font-size: .72rem; font-weight: 600; letter-spacing: .08em;
+                   text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .notes ul { padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .notes li { font-size: .83rem; color: var(--ink-3); line-height: 1.6; }
+    .notes li strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <span class="wordmark">Atlas Legis</span>
+    <h1>Card Export Bookmarklet</h1>
+    <p class="subtitle">Drag the button below to your bookmarks bar — then click it on any school profile page to download each card as a PNG.</p>
+
+    <!-- ── The bookmarklet itself ── -->
+    <div class="bm-wrap">
+      <div class="bm-label">Step 1 — Drag this to your bookmarks bar</div>
+      <a class="bm-link" href="javascript:(function(){function run(){var h1=document.querySelector('h1');var school=h1?h1.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''):'school';var cards=document.querySelectorAll('.card');if(!cards.length){alert('No cards found on this page.');return;}var i=0;function next(){if(i>=cards.length)return;var card=cards[i];var headEl=card.querySelector('.card-head h2');var label=headEl?headEl.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''):'card-'+(i+1);i++;var scale=2;var r=parseInt(window.getComputedStyle(card).borderRadius||'0')*scale;html2canvas(card,{scale:scale,useCORS:true,backgroundColor:'#ffffff',logging:false}).then(function(canvas){var out=document.createElement('canvas');out.width=canvas.width;out.height=canvas.height;var ctx=out.getContext('2d');var w=out.width,h=out.height;ctx.beginPath();ctx.moveTo(r,0);ctx.lineTo(w-r,0);ctx.quadraticCurveTo(w,0,w,r);ctx.lineTo(w,h-r);ctx.quadraticCurveTo(w,h,w-r,h);ctx.lineTo(r,h);ctx.quadraticCurveTo(0,h,0,h-r);ctx.lineTo(0,r);ctx.quadraticCurveTo(0,0,r,0);ctx.closePath();ctx.clip();ctx.drawImage(canvas,0,0);var a=document.createElement('a');a.download=school+'_'+label+'.png';a.href=out.toDataURL('image/png');document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(next,400);});}next();}if(window.html2canvas){run();}else{var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';s.onload=run;document.head.appendChild(s);}})();">Export Cards as PNG</a>
+      <p class="bm-hint">Drag the green button up into your browser's bookmarks bar. If the bar isn't visible, press <code>Ctrl+Shift+B</code> (Windows) or <code>Cmd+Shift+B</code> (Mac) to show it. Once saved, you only need to do this once.</p>
+    </div>
+
+    <!-- ── Usage instructions ── -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">Navigate to any school profile page</div>
+          <div class="step-desc">Open a school page on Atlas Legis — e.g. Cornell, Stanford, Yale. The page must be fully loaded.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Click "Export Cards as PNG" in your bookmarks bar</div>
+          <div class="step-desc">The bookmarklet loads a rendering library in the background (first use only takes a second), then silently captures each card and triggers a download for each one.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Check your Downloads folder</div>
+          <div class="step-desc">Files are named automatically — e.g. <code>cornell-law-school_admissions-profile.png</code>, <code>cornell-law-school_employment-outcomes.png</code>. Drop them straight into PowerPoint via Insert → Pictures.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Notes / caveats ── -->
+    <div class="notes">
+      <div class="notes-title">Things to know</div>
+      <ul>
+        <li><strong>Browser compatibility:</strong> Works in Chrome, Edge, and Firefox. Safari may block automatic downloads after the first file — click Allow if prompted.</li>
+        <li><strong>Downloads stagger 400ms apart</strong> to avoid the browser suppressing them as a spam flood. A page with 7 cards takes about 3 seconds total.</li>
+        <li><strong>Font rendering:</strong> Output uses system serif/sans-serif fallbacks instead of the site's Google Fonts. Layout, colors, and spacing are pixel-perfect — only the typeface may differ slightly.</li>
+        <li><strong>Resolution:</strong> Cards are rendered at 2× pixel density — sharp on high-DPI screens and projectors.</li>
+        <li><strong>No internet required after first use</strong> on a given browser session — the rendering library is cached once loaded.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

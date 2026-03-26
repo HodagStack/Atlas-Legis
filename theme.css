@@ -221,3 +221,219 @@ html[data-theme="dark"] #theme-icon-moon { display: none; }
   transition: color .14s;
 }
 .meth-close:hover { color: #0e2018; }
+
+/* ── Scroll offset for sticky nav ── */
+.card-head h2[id] {
+  scroll-margin-top: 80px; /* 56px nav + 24px breathing room */
+}
+
+@media (max-width: 959px) {
+  .card-head h2[id] {
+    scroll-margin-top: 112px; /* 56px nav + ~40px mobile pill strip + 16px buffer */
+  }
+}
+
+/* ── School page left nav + 3-column layout ── */
+
+/* 3-column layout when left nav is present */
+@media (min-width: 960px) {
+  .layout--has-leftnav {
+    grid-template-columns: 168px minmax(0, 1fr) 316px;
+  }
+  .layout--has-leftnav .main { grid-column: 2; }
+  .layout--has-leftnav .side { grid-column: 3; }
+}
+
+/* Left nav — desktop only */
+.page-left-nav {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .page-left-nav {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 10;
+    position: sticky;
+    top: 76px;
+    align-self: start;
+  }
+
+  .pln-label {
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--subtle, #94a3b8);
+    padding: 0 0 10px 12px;
+    margin-bottom: 2px;
+  }
+
+  .pln-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .pln-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 12px;
+    border-radius: var(--r-sm, 6px);
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--muted, #64748b);
+    text-decoration: none;
+    transition: color .15s, background .15s;
+    line-height: 1.35;
+  }
+
+  .pln-link::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--border, #e2e8f0);
+    flex-shrink: 0;
+    transition: background .15s, transform .15s;
+  }
+
+  .pln-link:hover {
+    color: var(--ink-2, #1e2a3a);
+    background: var(--bg-2, #f0f4f8);
+  }
+
+  .pln-link:hover::before {
+    background: var(--subtle, #94a3b8);
+  }
+
+  .pln-link.active {
+    color: var(--em-700, #047857);
+    font-weight: 600;
+  }
+
+  .pln-link.active::before {
+    background: var(--em-500, #10b981);
+    transform: scale(1.4);
+  }
+}
+
+/* Mobile: sticky horizontal pill strip */
+.page-nav-mobile {
+  display: none;
+  position: sticky;
+  top: 56px;
+  z-index: 100;
+  background: rgba(246, 248, 251, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border, #e2e8f0);
+}
+
+@media (max-width: 959px) {
+  .page-nav-mobile { display: block; }
+}
+
+.page-nav-mobile-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page-nav-mobile-inner::-webkit-scrollbar { display: none; }
+
+.pnm-link {
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 100px;
+  font-size: .78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--muted, #64748b);
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #e2e8f0);
+  text-decoration: none;
+  transition: color .14s, background .14s, border-color .14s;
+  flex-shrink: 0;
+}
+
+.pnm-link:hover {
+  color: var(--ink, #0d1117);
+  border-color: var(--em-300, #6ee7b7);
+}
+
+.pnm-link.active {
+  color: var(--em-700, #047857);
+  background: var(--em-50, #ecfdf5);
+  border-color: var(--em-400, #34d399);
+  font-weight: 600;
+}
+
+/* ── Admissions year toggle buttons ── */
+.adm-year-tabs {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.adm-year-btn {
+  padding: 3px 11px;
+  border-radius: 100px;
+  border: 1px solid var(--border, #e2e8f0);
+  background: transparent;
+  color: var(--muted, #64748b);
+  font-size: 0.73rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .14s, color .14s, border-color .14s;
+  white-space: nowrap;
+}
+
+.adm-year-btn:hover {
+  border-color: var(--em-300, #6ee7b7);
+  color: var(--ink, #0d1117);
+}
+
+.adm-year-btn.active {
+  background: var(--em-50, #ecfdf5);
+  border-color: var(--em-400, #34d399);
+  color: var(--em-700, #047857);
+  font-weight: 600;
+}
+
+/* ── Score History card ── */
+.adm-trends-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 560px) {
+  .adm-trends-grid { grid-template-columns: 1fr; }
+}
+
+.adm-trend-lbl {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted, #64748b);
+  margin-bottom: 6px;
+}
+
+.adm-hist-note {
+  font-size: 0.78rem;
+  color: var(--muted, #64748b);
+  margin: 0 0 14px;
+}

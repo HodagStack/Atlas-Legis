@@ -1,0 +1,3496 @@
+{
+  "university-of-akron-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.8,
+      "gpa50": 3.52,
+      "gpa25": 3.16
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.81,
+      "gpa50": 3.54,
+      "gpa25": 3.08
+    }
+  },
+  "university-of-alabama-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 168,
+      "lsat50": 167,
+      "lsat25": 159,
+      "gpa75": 4.0,
+      "gpa50": 3.95,
+      "gpa25": 3.63
+    },
+    "2023\u201324": {
+      "lsat75": 168,
+      "lsat50": 165,
+      "lsat25": 158,
+      "gpa75": 4.04,
+      "gpa50": 3.95,
+      "gpa25": 3.68
+    }
+  },
+  "albany-law-school": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.68,
+      "gpa50": 3.47,
+      "gpa25": 3.22
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 154,
+      "gpa75": 3.71,
+      "gpa50": 3.47,
+      "gpa25": 3.19
+    }
+  },
+  "american-university-washington-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 162,
+      "lsat25": 156,
+      "gpa75": 3.75,
+      "gpa50": 3.63,
+      "gpa25": 3.43
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 160,
+      "lsat25": 155,
+      "gpa75": 3.73,
+      "gpa50": 3.61,
+      "gpa25": 3.37
+    }
+  },
+  "appalachian-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 151,
+      "lsat50": 146,
+      "lsat25": 145,
+      "gpa75": 3.5,
+      "gpa50": 3.13,
+      "gpa25": 2.65
+    },
+    "2023\u201324": {
+      "lsat75": 150,
+      "lsat50": 147,
+      "lsat25": 145,
+      "gpa75": 3.56,
+      "gpa50": 3.04,
+      "gpa25": 2.77
+    }
+  },
+  "arizona-state-sandra-day-oconnor-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 169,
+      "lsat50": 167,
+      "lsat25": 157,
+      "gpa75": 3.97,
+      "gpa50": 3.9,
+      "gpa25": 3.47
+    },
+    "2023\u201324": {
+      "lsat75": 167,
+      "lsat50": 165,
+      "lsat25": 156,
+      "gpa75": 4.0,
+      "gpa50": 3.9,
+      "gpa25": 3.62
+    }
+  },
+  "university-of-arizona-james-e-rogers-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 164,
+      "lsat50": 163,
+      "lsat25": 159,
+      "gpa75": 3.88,
+      "gpa50": 3.79,
+      "gpa25": 3.58
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 163,
+      "lsat25": 160,
+      "gpa75": 3.88,
+      "gpa50": 3.78,
+      "gpa25": 3.52
+    }
+  },
+  "university-of-arkansas-at-little-rock-william-h-bowen-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.68,
+      "gpa50": 3.39,
+      "gpa25": 3.15
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.69,
+      "gpa50": 3.47,
+      "gpa25": 3.19
+    }
+  },
+  "university-of-arkansas-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.85,
+      "gpa50": 3.71,
+      "gpa25": 3.45
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.86,
+      "gpa50": 3.63,
+      "gpa25": 3.31
+    }
+  },
+  "atlantas-john-marshall-law-school": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 149,
+      "gpa75": 3.51,
+      "gpa50": 3.19,
+      "gpa25": 2.78
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 149,
+      "gpa75": 3.46,
+      "gpa50": 3.09,
+      "gpa25": 2.72
+    }
+  },
+  "ave-maria-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.64,
+      "gpa50": 3.35,
+      "gpa25": 2.98
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.76,
+      "gpa50": 3.41,
+      "gpa25": 3.06
+    }
+  },
+  "university-of-baltimore-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.6,
+      "gpa50": 3.39,
+      "gpa25": 3.09
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.63,
+      "gpa50": 3.42,
+      "gpa25": 3.1
+    }
+  },
+  "barry-university-dwayne-o-andreas-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 149,
+      "lsat25": 147,
+      "gpa75": 3.51,
+      "gpa50": 3.24,
+      "gpa25": 2.95
+    },
+    "2023\u201324": {
+      "lsat75": 152,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.53,
+      "gpa50": 3.21,
+      "gpa25": 2.91
+    }
+  },
+  "baylor-law-school": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.89,
+      "gpa50": 3.73,
+      "gpa25": 3.53
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 163,
+      "lsat25": 157,
+      "gpa75": 3.85,
+      "gpa50": 3.73,
+      "gpa25": 3.47
+    }
+  },
+  "belmont-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.91,
+      "gpa50": 3.77,
+      "gpa25": 3.56
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.9,
+      "gpa50": 3.79,
+      "gpa25": 3.58
+    }
+  },
+  "boston-college-law-school": {
+    "2022\u201323": {
+      "lsat75": 168,
+      "lsat50": 167,
+      "lsat25": 161,
+      "gpa75": 3.85,
+      "gpa50": 3.77,
+      "gpa25": 3.59
+    },
+    "2023\u201324": {
+      "lsat75": 168,
+      "lsat50": 167,
+      "lsat25": 161,
+      "gpa75": 3.89,
+      "gpa50": 3.8,
+      "gpa25": 3.64
+    }
+  },
+  "boston-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 171,
+      "lsat50": 170,
+      "lsat25": 164,
+      "gpa75": 3.91,
+      "gpa50": 3.86,
+      "gpa25": 3.7
+    },
+    "2023\u201324": {
+      "lsat75": 171,
+      "lsat50": 170,
+      "lsat25": 163,
+      "gpa75": 3.92,
+      "gpa50": 3.88,
+      "gpa25": 3.66
+    }
+  },
+  "byu-j-reuben-clark-law-school": {
+    "2022\u201323": {
+      "lsat75": 170,
+      "lsat50": 168,
+      "lsat25": 162,
+      "gpa75": 3.97,
+      "gpa50": 3.94,
+      "gpa25": 3.74
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 168,
+      "lsat25": 164,
+      "gpa75": 3.98,
+      "gpa50": 3.92,
+      "gpa25": 3.7
+    }
+  },
+  "brooklyn-law-school": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.7,
+      "gpa50": 3.56,
+      "gpa25": 3.35
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.69,
+      "gpa50": 3.54,
+      "gpa25": 3.27
+    }
+  },
+  "university-at-buffalo-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.89,
+      "gpa50": 3.72,
+      "gpa25": 3.48
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.87,
+      "gpa50": 3.71,
+      "gpa25": 3.44
+    }
+  },
+  "california-western-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.57,
+      "gpa50": 3.38,
+      "gpa25": 3.11
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.6,
+      "gpa50": 3.39,
+      "gpa25": 3.07
+    }
+  },
+  "uc-berkeley-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 173,
+      "lsat50": 170,
+      "lsat25": 168,
+      "gpa75": 3.97,
+      "gpa50": 3.87,
+      "gpa25": 3.77
+    },
+    "2023\u201324": {
+      "lsat75": 172,
+      "lsat50": 170,
+      "lsat25": 167,
+      "gpa75": 3.95,
+      "gpa50": 3.87,
+      "gpa25": 3.8
+    }
+  },
+  "uc-davis-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 167,
+      "lsat50": 165,
+      "lsat25": 159,
+      "gpa75": 3.82,
+      "gpa50": 3.69,
+      "gpa25": 3.49
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 159,
+      "gpa75": 3.87,
+      "gpa50": 3.68,
+      "gpa25": 3.48
+    }
+  },
+  "uc-irvine-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 169,
+      "lsat50": 167,
+      "lsat25": 164,
+      "gpa75": 3.84,
+      "gpa50": 3.72,
+      "gpa25": 3.49
+    },
+    "2023\u201324": {
+      "lsat75": 168,
+      "lsat50": 167,
+      "lsat25": 163,
+      "gpa75": 3.89,
+      "gpa50": 3.81,
+      "gpa25": 3.65
+    }
+  },
+  "ucla-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 171,
+      "lsat50": 170,
+      "lsat25": 165,
+      "gpa75": 3.98,
+      "gpa50": 3.92,
+      "gpa25": 3.72
+    },
+    "2023\u201324": {
+      "lsat75": 171,
+      "lsat50": 170,
+      "lsat25": 165,
+      "gpa75": 4.0,
+      "gpa50": 3.95,
+      "gpa25": 3.69
+    }
+  },
+  "uc-college-of-the-law-san-francisco": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.74,
+      "gpa50": 3.59,
+      "gpa25": 3.4
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.77,
+      "gpa50": 3.63,
+      "gpa25": 3.43
+    }
+  },
+  "campbell-university-norman-adrian-wiggins-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 155,
+      "lsat25": 153,
+      "gpa75": 3.73,
+      "gpa50": 3.48,
+      "gpa25": 3.17
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.8,
+      "gpa50": 3.57,
+      "gpa25": 3.28
+    }
+  },
+  "capital-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.7,
+      "gpa50": 3.45,
+      "gpa25": 3.06
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.72,
+      "gpa50": 3.39,
+      "gpa25": 3.07
+    }
+  },
+  "cardozo-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.88,
+      "gpa50": 3.79,
+      "gpa25": 3.55
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.88,
+      "gpa50": 3.8,
+      "gpa25": 3.6
+    }
+  },
+  "case-western-reserve-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.84,
+      "gpa50": 3.7,
+      "gpa25": 3.45
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.85,
+      "gpa50": 3.7,
+      "gpa25": 3.45
+    }
+  },
+  "catholic-university-of-america-columbus-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 161,
+      "lsat50": 159,
+      "lsat25": 155,
+      "gpa75": 3.75,
+      "gpa50": 3.63,
+      "gpa25": 3.39
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 158,
+      "gpa75": 3.76,
+      "gpa50": 3.64,
+      "gpa25": 3.38
+    }
+  },
+  "chapman-university-fowler-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 161,
+      "lsat25": 153,
+      "gpa75": 3.77,
+      "gpa50": 3.67,
+      "gpa25": 3.3
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 155,
+      "gpa75": 3.83,
+      "gpa50": 3.67,
+      "gpa25": 3.27
+    }
+  },
+  "charleston-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 153,
+      "lsat25": 149,
+      "gpa75": 3.72,
+      "gpa50": 3.49,
+      "gpa25": 3.2
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.75,
+      "gpa50": 3.54,
+      "gpa25": 3.26
+    }
+  },
+  "university-of-chicago-law-school": {
+    "2022\u201323": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 169,
+      "gpa75": 3.99,
+      "gpa50": 3.94,
+      "gpa25": 3.83
+    },
+    "2023\u201324": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 169,
+      "gpa75": 3.99,
+      "gpa50": 3.94,
+      "gpa25": 3.83
+    }
+  },
+  "chicago-kent-college-of-law-iit": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 159,
+      "lsat25": 154,
+      "gpa75": 3.8,
+      "gpa50": 3.67,
+      "gpa25": 3.39
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 155,
+      "gpa75": 3.89,
+      "gpa50": 3.74,
+      "gpa25": 3.43
+    }
+  },
+  "university-of-cincinnati-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 161,
+      "lsat50": 158,
+      "lsat25": 154,
+      "gpa75": 3.92,
+      "gpa50": 3.8,
+      "gpa25": 3.54
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 158,
+      "lsat25": 155,
+      "gpa75": 3.92,
+      "gpa50": 3.81,
+      "gpa25": 3.64
+    }
+  },
+  "cuny-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.73,
+      "gpa50": 3.45,
+      "gpa25": 3.12
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.72,
+      "gpa50": 3.44,
+      "gpa25": 3.09
+    }
+  },
+  "cleveland-state-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.72,
+      "gpa50": 3.42,
+      "gpa25": 3.0
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.73,
+      "gpa50": 3.43,
+      "gpa25": 3.02
+    }
+  },
+  "university-of-colorado-law-school": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 159,
+      "gpa75": 3.92,
+      "gpa50": 3.81,
+      "gpa25": 3.51
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.88,
+      "gpa50": 3.79,
+      "gpa25": 3.55
+    }
+  },
+  "columbia-law-school": {
+    "2022\u201323": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 169,
+      "gpa75": 3.97,
+      "gpa50": 3.9,
+      "gpa25": 3.81
+    },
+    "2023\u201324": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 170,
+      "gpa75": 3.96,
+      "gpa50": 3.9,
+      "gpa25": 3.81
+    }
+  },
+  "university-of-connecticut-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 155,
+      "gpa75": 3.86,
+      "gpa50": 3.71,
+      "gpa25": 3.4
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 158,
+      "gpa75": 3.87,
+      "gpa50": 3.72,
+      "gpa25": 3.5
+    }
+  },
+  "thomas-m-cooley-law-school": {
+    "2022\u201323": {
+      "lsat75": 151,
+      "lsat50": 148,
+      "lsat25": 146,
+      "gpa75": 3.42,
+      "gpa50": 3.07,
+      "gpa25": 2.71
+    },
+    "2023\u201324": {
+      "lsat75": 151,
+      "lsat50": 147,
+      "lsat25": 146,
+      "gpa75": 3.49,
+      "gpa50": 3.15,
+      "gpa25": 2.86
+    }
+  },
+  "cornell-law-school": {
+    "2022\u201323": {
+      "lsat75": 175,
+      "lsat50": 172,
+      "lsat25": 169,
+      "gpa75": 3.97,
+      "gpa50": 3.9,
+      "gpa25": 3.78
+    },
+    "2023\u201324": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 169,
+      "gpa75": 3.96,
+      "gpa50": 3.89,
+      "gpa25": 3.73
+    }
+  },
+  "creighton-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.63,
+      "gpa50": 3.35,
+      "gpa25": 3.01
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.73,
+      "gpa50": 3.42,
+      "gpa25": 3.02
+    }
+  },
+  "university-of-dayton-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.83,
+      "gpa50": 3.61,
+      "gpa25": 3.36
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 154,
+      "gpa75": 3.84,
+      "gpa50": 3.66,
+      "gpa25": 3.35
+    }
+  },
+  "university-of-denver-sturm-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.75,
+      "gpa50": 3.58,
+      "gpa25": 3.31
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 159,
+      "lsat25": 155,
+      "gpa75": 3.81,
+      "gpa50": 3.65,
+      "gpa25": 3.43
+    }
+  },
+  "depaul-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 157,
+      "lsat25": 153,
+      "gpa75": 3.79,
+      "gpa50": 3.59,
+      "gpa25": 3.27
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 158,
+      "lsat25": 153,
+      "gpa75": 3.82,
+      "gpa50": 3.65,
+      "gpa25": 3.16
+    }
+  },
+  "university-of-detroit-mercy-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.67,
+      "gpa50": 3.46,
+      "gpa25": 3.11
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.73,
+      "gpa50": 3.55,
+      "gpa25": 3.22
+    }
+  },
+  "university-of-the-district-of-columbia-david-a-clarke-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 151,
+      "lsat25": 147,
+      "gpa75": 3.55,
+      "gpa50": 3.27,
+      "gpa25": 2.92
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.51,
+      "gpa50": 3.18,
+      "gpa25": 2.81
+    }
+  },
+  "drake-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.77,
+      "gpa50": 3.49,
+      "gpa25": 3.29
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.78,
+      "gpa50": 3.56,
+      "gpa25": 3.27
+    }
+  },
+  "drexel-university-thomas-r-kline-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 159,
+      "lsat25": 153,
+      "gpa75": 3.84,
+      "gpa50": 3.7,
+      "gpa25": 3.38
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 153,
+      "gpa75": 3.85,
+      "gpa50": 3.72,
+      "gpa25": 3.45
+    }
+  },
+  "duke-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 172,
+      "lsat50": 170,
+      "lsat25": 168,
+      "gpa75": 3.96,
+      "gpa50": 3.87,
+      "gpa25": 3.78
+    },
+    "2023\u201324": {
+      "lsat75": 171,
+      "lsat50": 170,
+      "lsat25": 168,
+      "gpa75": 3.96,
+      "gpa50": 3.89,
+      "gpa25": 3.79
+    }
+  },
+  "duquesne-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.75,
+      "gpa50": 3.55,
+      "gpa25": 3.2
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 154,
+      "gpa75": 3.83,
+      "gpa50": 3.57,
+      "gpa25": 3.2
+    }
+  },
+  "elon-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.72,
+      "gpa50": 3.43,
+      "gpa25": 3.06
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.68,
+      "gpa50": 3.41,
+      "gpa25": 3.16
+    }
+  },
+  "emory-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 168,
+      "lsat50": 166,
+      "lsat25": 161,
+      "gpa75": 3.93,
+      "gpa50": 3.82,
+      "gpa25": 3.62
+    },
+    "2023\u201324": {
+      "lsat75": 167,
+      "lsat50": 165,
+      "lsat25": 162,
+      "gpa75": 3.88,
+      "gpa50": 3.81,
+      "gpa25": 3.63
+    }
+  },
+  "faulkner-university-thomas-goode-jones-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.57,
+      "gpa50": 3.21,
+      "gpa25": 2.77
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.59,
+      "gpa50": 3.3,
+      "gpa25": 2.92
+    }
+  },
+  "florida-a-m-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.68,
+      "gpa50": 3.52,
+      "gpa25": 3.24
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 147,
+      "gpa75": 3.64,
+      "gpa50": 3.44,
+      "gpa25": 3.21
+    }
+  },
+  "florida-international-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 161,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.88,
+      "gpa50": 3.74,
+      "gpa25": 3.5
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 160,
+      "lsat25": 158,
+      "gpa75": 3.86,
+      "gpa50": 3.73,
+      "gpa25": 3.38
+    }
+  },
+  "florida-state-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 165,
+      "lsat25": 158,
+      "gpa75": 3.93,
+      "gpa50": 3.85,
+      "gpa25": 3.67
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 165,
+      "lsat25": 158,
+      "gpa75": 3.97,
+      "gpa50": 3.91,
+      "gpa25": 3.59
+    }
+  },
+  "university-of-florida-levin-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 171,
+      "lsat50": 169,
+      "lsat25": 163,
+      "gpa75": 3.96,
+      "gpa50": 3.91,
+      "gpa25": 3.55
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 164,
+      "gpa75": 3.96,
+      "gpa50": 3.9,
+      "gpa25": 3.67
+    }
+  },
+  "fordham-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 169,
+      "lsat50": 167,
+      "lsat25": 164,
+      "gpa75": 3.84,
+      "gpa50": 3.75,
+      "gpa25": 3.57
+    },
+    "2023\u201324": {
+      "lsat75": 169,
+      "lsat50": 167,
+      "lsat25": 165,
+      "gpa75": 3.84,
+      "gpa50": 3.76,
+      "gpa25": 3.57
+    }
+  },
+  "george-mason-university-antonin-scalia-law-school": {
+    "2022\u201323": {
+      "lsat75": 169,
+      "lsat50": 168,
+      "lsat25": 160,
+      "gpa75": 3.95,
+      "gpa50": 3.89,
+      "gpa25": 3.53
+    },
+    "2023\u201324": {
+      "lsat75": 169,
+      "lsat50": 168,
+      "lsat25": 160,
+      "gpa75": 3.99,
+      "gpa50": 3.92,
+      "gpa25": 3.63
+    }
+  },
+  "george-washington-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 170,
+      "lsat50": 168,
+      "lsat25": 160,
+      "gpa75": 3.91,
+      "gpa50": 3.85,
+      "gpa25": 3.54
+    },
+    "2023\u201324": {
+      "lsat75": 169,
+      "lsat50": 168,
+      "lsat25": 159,
+      "gpa75": 3.93,
+      "gpa50": 3.87,
+      "gpa25": 3.62
+    }
+  },
+  "georgetown-university-law-center": {
+    "2022\u201323": {
+      "lsat75": 173,
+      "lsat50": 171,
+      "lsat25": 166,
+      "gpa75": 3.97,
+      "gpa50": 3.91,
+      "gpa25": 3.7
+    },
+    "2023\u201324": {
+      "lsat75": 172,
+      "lsat50": 171,
+      "lsat25": 166,
+      "gpa75": 3.97,
+      "gpa50": 3.92,
+      "gpa25": 3.72
+    }
+  },
+  "georgia-state-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 159,
+      "lsat25": 157,
+      "gpa75": 3.77,
+      "gpa50": 3.56,
+      "gpa25": 3.35
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 159,
+      "lsat25": 156,
+      "gpa75": 3.75,
+      "gpa50": 3.56,
+      "gpa25": 3.39
+    }
+  },
+  "university-of-georgia-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 159,
+      "gpa75": 3.95,
+      "gpa50": 3.83,
+      "gpa25": 3.56
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 159,
+      "gpa75": 3.97,
+      "gpa50": 3.91,
+      "gpa25": 3.62
+    }
+  },
+  "golden-gate-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.46,
+      "gpa50": 3.28,
+      "gpa25": 3.02
+    }
+  },
+  "gonzaga-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 152,
+      "gpa75": 3.69,
+      "gpa50": 3.48,
+      "gpa25": 3.28
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 153,
+      "gpa75": 3.8,
+      "gpa50": 3.55,
+      "gpa25": 3.32
+    }
+  },
+  "harvard-law-school": {
+    "2022\u201323": {
+      "lsat75": 176,
+      "lsat50": 174,
+      "lsat25": 171,
+      "gpa75": 3.99,
+      "gpa50": 3.93,
+      "gpa25": 3.84
+    },
+    "2023\u201324": {
+      "lsat75": 176,
+      "lsat50": 174,
+      "lsat25": 171,
+      "gpa75": 4.0,
+      "gpa50": 3.95,
+      "gpa25": 3.89
+    }
+  },
+  "university-of-hawaii-william-s-richardson-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 154,
+      "gpa75": 3.79,
+      "gpa50": 3.48,
+      "gpa25": 3.27
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.84,
+      "gpa50": 3.7,
+      "gpa25": 3.28
+    }
+  },
+  "hofstra-university-maurice-a-deane-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 150,
+      "gpa75": 3.82,
+      "gpa50": 3.59,
+      "gpa25": 3.3
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 151,
+      "gpa75": 3.77,
+      "gpa50": 3.62,
+      "gpa25": 3.32
+    }
+  },
+  "university-of-houston-law-center": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 158,
+      "gpa75": 3.85,
+      "gpa50": 3.72,
+      "gpa25": 3.5
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 158,
+      "gpa75": 3.87,
+      "gpa50": 3.75,
+      "gpa25": 3.6
+    }
+  },
+  "howard-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 153,
+      "gpa75": 3.64,
+      "gpa50": 3.43,
+      "gpa25": 3.2
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 153,
+      "gpa75": 3.7,
+      "gpa50": 3.47,
+      "gpa25": 3.15
+    }
+  },
+  "university-of-idaho-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.67,
+      "gpa50": 3.35,
+      "gpa25": 3.09
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.71,
+      "gpa50": 3.46,
+      "gpa25": 3.07
+    }
+  },
+  "university-of-illinois-chicago-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.64,
+      "gpa50": 3.39,
+      "gpa25": 3.1
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.61,
+      "gpa50": 3.38,
+      "gpa25": 3.12
+    }
+  },
+  "indiana-university-maurer-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 157,
+      "gpa75": 3.97,
+      "gpa50": 3.86,
+      "gpa25": 3.62
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 159,
+      "gpa75": 3.99,
+      "gpa50": 3.91,
+      "gpa25": 3.63
+    }
+  },
+  "indiana-university-robert-h-mckinney-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 151,
+      "gpa75": 3.79,
+      "gpa50": 3.61,
+      "gpa25": 3.3
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.83,
+      "gpa50": 3.59,
+      "gpa25": 3.31
+    }
+  },
+  "inter-american-university-of-puerto-rico-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 147,
+      "lsat50": 142,
+      "lsat25": 140,
+      "gpa75": 3.56,
+      "gpa50": 3.36,
+      "gpa25": 3.07
+    },
+    "2023\u201324": {
+      "lsat75": 148,
+      "lsat50": 143,
+      "lsat25": 140,
+      "gpa75": 3.6,
+      "gpa50": 3.32,
+      "gpa25": 3.07
+    }
+  },
+  "university-of-iowa-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 160,
+      "gpa75": 3.88,
+      "gpa50": 3.76,
+      "gpa25": 3.54
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 157,
+      "gpa75": 3.91,
+      "gpa50": 3.76,
+      "gpa25": 3.6
+    }
+  },
+  "university-of-kansas-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 155,
+      "gpa75": 3.88,
+      "gpa50": 3.71,
+      "gpa25": 3.45
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 156,
+      "gpa75": 3.89,
+      "gpa50": 3.79,
+      "gpa25": 3.59
+    }
+  },
+  "university-of-kentucky-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 155,
+      "gpa75": 3.87,
+      "gpa50": 3.67,
+      "gpa25": 3.35
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 155,
+      "gpa75": 3.86,
+      "gpa50": 3.71,
+      "gpa25": 3.52
+    }
+  },
+  "lewis-clark-law-school": {
+    "2022\u201323": {
+      "lsat75": 164,
+      "lsat50": 160,
+      "lsat25": 158,
+      "gpa75": 3.78,
+      "gpa50": 3.59,
+      "gpa25": 3.22
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.79,
+      "gpa50": 3.58,
+      "gpa25": 3.28
+    }
+  },
+  "liberty-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.8,
+      "gpa50": 3.56,
+      "gpa25": 3.13
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.79,
+      "gpa50": 3.55,
+      "gpa25": 3.24
+    }
+  },
+  "lincoln-memorial-university-duncan-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.75,
+      "gpa50": 3.49,
+      "gpa25": 3.14
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.7,
+      "gpa50": 3.44,
+      "gpa25": 3.05
+    }
+  },
+  "louisiana-state-university-paul-m-hebert-law-center": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 157,
+      "lsat25": 154,
+      "gpa75": 3.83,
+      "gpa50": 3.65,
+      "gpa25": 3.37
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 154,
+      "gpa75": 3.92,
+      "gpa50": 3.71,
+      "gpa25": 3.45
+    }
+  },
+  "university-of-louisville-louis-d-brandeis-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 152,
+      "gpa75": 3.83,
+      "gpa50": 3.68,
+      "gpa25": 3.31
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.86,
+      "gpa50": 3.59,
+      "gpa25": 3.26
+    }
+  },
+  "loyola-law-school": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 157,
+      "gpa75": 3.83,
+      "gpa50": 3.71,
+      "gpa25": 3.51
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 162,
+      "lsat25": 159,
+      "gpa75": 3.85,
+      "gpa50": 3.72,
+      "gpa25": 3.52
+    }
+  },
+  "loyola-university-chicago-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.77,
+      "gpa50": 3.6,
+      "gpa25": 3.37
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.75,
+      "gpa50": 3.6,
+      "gpa25": 3.42
+    }
+  },
+  "loyola-university-new-orleans-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 149,
+      "gpa75": 3.62,
+      "gpa50": 3.37,
+      "gpa25": 3.07
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.66,
+      "gpa50": 3.38,
+      "gpa25": 3.04
+    }
+  },
+  "university-of-maine-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 154,
+      "gpa75": 3.77,
+      "gpa50": 3.62,
+      "gpa25": 3.41
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 157,
+      "lsat25": 152,
+      "gpa75": 3.81,
+      "gpa50": 3.66,
+      "gpa25": 3.3
+    }
+  },
+  "marquette-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.75,
+      "gpa50": 3.61,
+      "gpa25": 3.39
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.85,
+      "gpa50": 3.7,
+      "gpa25": 3.55
+    }
+  },
+  "university-of-maryland-carey-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 164,
+      "lsat50": 163,
+      "lsat25": 156,
+      "gpa75": 3.88,
+      "gpa50": 3.76,
+      "gpa25": 3.42
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 154,
+      "gpa75": 3.86,
+      "gpa50": 3.73,
+      "gpa25": 3.33
+    }
+  },
+  "university-of-massachusetts-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.64,
+      "gpa50": 3.39,
+      "gpa25": 3.05
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.7,
+      "gpa50": 3.39,
+      "gpa25": 3.06
+    }
+  },
+  "university-of-memphis-cecil-c-humphreys-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.68,
+      "gpa50": 3.4,
+      "gpa25": 3.1
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 152,
+      "gpa75": 3.84,
+      "gpa50": 3.48,
+      "gpa25": 3.19
+    }
+  },
+  "mercer-university-walter-f-george-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 153,
+      "gpa75": 3.71,
+      "gpa50": 3.59,
+      "gpa25": 3.33
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 155,
+      "lsat25": 153,
+      "gpa75": 3.78,
+      "gpa50": 3.63,
+      "gpa25": 3.39
+    }
+  },
+  "university-of-miami-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 158,
+      "gpa75": 3.85,
+      "gpa50": 3.72,
+      "gpa25": 3.52
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 163,
+      "lsat25": 158,
+      "gpa75": 3.87,
+      "gpa50": 3.76,
+      "gpa25": 3.58
+    }
+  },
+  "michigan-state-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 161,
+      "lsat50": 159,
+      "lsat25": 157,
+      "gpa75": 3.77,
+      "gpa50": 3.55,
+      "gpa25": 3.25
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.86,
+      "gpa50": 3.63,
+      "gpa25": 3.39
+    }
+  },
+  "university-of-michigan-law-school": {
+    "2022\u201323": {
+      "lsat75": 172,
+      "lsat50": 171,
+      "lsat25": 165,
+      "gpa75": 3.92,
+      "gpa50": 3.85,
+      "gpa25": 3.64
+    },
+    "2023\u201324": {
+      "lsat75": 172,
+      "lsat50": 171,
+      "lsat25": 166,
+      "gpa75": 3.94,
+      "gpa50": 3.86,
+      "gpa25": 3.7
+    }
+  },
+  "university-of-minnesota-law-school": {
+    "2022\u201323": {
+      "lsat75": 169,
+      "lsat50": 168,
+      "lsat25": 162,
+      "gpa75": 3.93,
+      "gpa50": 3.85,
+      "gpa25": 3.62
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 162,
+      "gpa75": 3.95,
+      "gpa50": 3.88,
+      "gpa25": 3.63
+    }
+  },
+  "mississippi-college-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.61,
+      "gpa50": 3.33,
+      "gpa25": 3.02
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.62,
+      "gpa50": 3.31,
+      "gpa25": 3.04
+    }
+  },
+  "university-of-mississippi-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 157,
+      "lsat25": 152,
+      "gpa75": 3.82,
+      "gpa50": 3.62,
+      "gpa25": 3.32
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 157,
+      "lsat25": 153,
+      "gpa75": 3.88,
+      "gpa50": 3.64,
+      "gpa25": 3.41
+    }
+  },
+  "university-of-missouri-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 155,
+      "gpa75": 3.92,
+      "gpa50": 3.7,
+      "gpa25": 3.35
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 160,
+      "lsat25": 154,
+      "gpa75": 3.95,
+      "gpa50": 3.76,
+      "gpa25": 3.44
+    }
+  },
+  "university-of-missouri-kansas-city-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 154,
+      "lsat25": 152,
+      "gpa75": 3.75,
+      "gpa50": 3.55,
+      "gpa25": 3.22
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.78,
+      "gpa50": 3.51,
+      "gpa25": 3.18
+    }
+  },
+  "mitchell-hamline-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 149,
+      "gpa75": 3.55,
+      "gpa50": 3.26,
+      "gpa25": 2.87
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.64,
+      "gpa50": 3.34,
+      "gpa25": 2.99
+    }
+  },
+  "university-of-montana-alexander-blewett-iii-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 154,
+      "lsat25": 150,
+      "gpa75": 3.69,
+      "gpa50": 3.48,
+      "gpa25": 3.23
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.75,
+      "gpa50": 3.52,
+      "gpa25": 3.21
+    }
+  },
+  "university-of-nebraska-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 154,
+      "gpa75": 3.94,
+      "gpa50": 3.75,
+      "gpa25": 3.47
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 158,
+      "lsat25": 154,
+      "gpa75": 3.96,
+      "gpa50": 3.77,
+      "gpa25": 3.44
+    }
+  },
+  "unlv-william-s-boyd-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.89,
+      "gpa50": 3.78,
+      "gpa25": 3.43
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 154,
+      "gpa75": 3.92,
+      "gpa50": 3.78,
+      "gpa25": 3.32
+    }
+  },
+  "new-england-law-boston": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 153,
+      "lsat25": 148,
+      "gpa75": 3.68,
+      "gpa50": 3.44,
+      "gpa25": 3.12
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 153,
+      "lsat25": 149,
+      "gpa75": 3.58,
+      "gpa50": 3.31,
+      "gpa25": 2.95
+    }
+  },
+  "university-of-new-hampshire-franklin-pierce-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 155,
+      "lsat25": 151,
+      "gpa75": 3.65,
+      "gpa50": 3.41,
+      "gpa25": 3.05
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 151,
+      "gpa75": 3.65,
+      "gpa50": 3.45,
+      "gpa25": 3.05
+    }
+  },
+  "university-of-new-mexico-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 155,
+      "lsat25": 151,
+      "gpa75": 3.72,
+      "gpa50": 3.61,
+      "gpa25": 3.36
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 150,
+      "gpa75": 3.74,
+      "gpa50": 3.57,
+      "gpa25": 3.22
+    }
+  },
+  "new-york-law-school": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.72,
+      "gpa50": 3.51,
+      "gpa25": 3.29
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.75,
+      "gpa50": 3.59,
+      "gpa25": 3.33
+    }
+  },
+  "nyu-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 174,
+      "lsat50": 172,
+      "lsat25": 168,
+      "gpa75": 3.96,
+      "gpa50": 3.9,
+      "gpa25": 3.77
+    },
+    "2023\u201324": {
+      "lsat75": 173,
+      "lsat50": 172,
+      "lsat25": 169,
+      "gpa75": 3.96,
+      "gpa50": 3.91,
+      "gpa25": 3.8
+    }
+  },
+  "north-carolina-central-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 151,
+      "lsat50": 149,
+      "lsat25": 146,
+      "gpa75": 3.57,
+      "gpa50": 3.35,
+      "gpa25": 3.13
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.66,
+      "gpa50": 3.41,
+      "gpa25": 3.02
+    }
+  },
+  "university-of-north-carolina-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 167,
+      "lsat50": 166,
+      "lsat25": 162,
+      "gpa75": 3.9,
+      "gpa50": 3.78,
+      "gpa25": 3.61
+    },
+    "2023\u201324": {
+      "lsat75": 168,
+      "lsat50": 167,
+      "lsat25": 164,
+      "gpa75": 3.92,
+      "gpa50": 3.85,
+      "gpa25": 3.73
+    }
+  },
+  "university-of-north-dakota-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 146,
+      "gpa75": 3.79,
+      "gpa50": 3.37,
+      "gpa25": 3.12
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.76,
+      "gpa50": 3.46,
+      "gpa25": 3.19
+    }
+  },
+  "university-of-north-texas-dallas-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.65,
+      "gpa50": 3.43,
+      "gpa25": 3.15
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.72,
+      "gpa50": 3.49,
+      "gpa25": 3.26
+    }
+  },
+  "northeastern-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 158,
+      "gpa75": 3.83,
+      "gpa50": 3.72,
+      "gpa25": 3.52
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 159,
+      "gpa75": 3.85,
+      "gpa50": 3.73,
+      "gpa25": 3.54
+    }
+  },
+  "northern-illinois-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.65,
+      "gpa50": 3.43,
+      "gpa25": 3.13
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.59,
+      "gpa50": 3.26,
+      "gpa25": 3.07
+    }
+  },
+  "northern-kentucky-university-salmon-p-chase-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.66,
+      "gpa50": 3.38,
+      "gpa25": 3.07
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.77,
+      "gpa50": 3.5,
+      "gpa25": 3.14
+    }
+  },
+  "northwestern-pritzker-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 174,
+      "lsat50": 172,
+      "lsat25": 166,
+      "gpa75": 3.97,
+      "gpa50": 3.92,
+      "gpa25": 3.66
+    },
+    "2023\u201324": {
+      "lsat75": 174,
+      "lsat50": 172,
+      "lsat25": 166,
+      "gpa75": 4.0,
+      "gpa50": 3.95,
+      "gpa25": 3.77
+    }
+  },
+  "university-of-notre-dame-law-school": {
+    "2022\u201323": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 164,
+      "gpa75": 3.92,
+      "gpa50": 3.83,
+      "gpa25": 3.67
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 164,
+      "gpa75": 3.92,
+      "gpa50": 3.85,
+      "gpa25": 3.74
+    }
+  },
+  "nova-southeastern-university-shepard-broad-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.62,
+      "gpa50": 3.36,
+      "gpa25": 3.05
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.7,
+      "gpa50": 3.52,
+      "gpa25": 3.29
+    }
+  },
+  "ohio-northern-university-pettit-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 148,
+      "lsat25": 144,
+      "gpa75": 3.73,
+      "gpa50": 3.4,
+      "gpa25": 3.04
+    },
+    "2023\u201324": {
+      "lsat75": 151,
+      "lsat50": 148,
+      "lsat25": 146,
+      "gpa75": 3.59,
+      "gpa50": 3.3,
+      "gpa25": 3.02
+    }
+  },
+  "oklahoma-city-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 149,
+      "lsat25": 146,
+      "gpa75": 3.62,
+      "gpa50": 3.36,
+      "gpa25": 3.02
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.7,
+      "gpa50": 3.47,
+      "gpa25": 3.16
+    }
+  },
+  "university-of-oklahoma-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 159,
+      "lsat25": 154,
+      "gpa75": 3.87,
+      "gpa50": 3.71,
+      "gpa25": 3.49
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.89,
+      "gpa50": 3.74,
+      "gpa25": 3.46
+    }
+  },
+  "university-of-oregon-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 155,
+      "gpa75": 3.7,
+      "gpa50": 3.52,
+      "gpa25": 3.18
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 159,
+      "lsat25": 155,
+      "gpa75": 3.76,
+      "gpa50": 3.56,
+      "gpa25": 3.35
+    }
+  },
+  "pace-university-elisabeth-haub-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.69,
+      "gpa50": 3.47,
+      "gpa25": 3.2
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.75,
+      "gpa50": 3.51,
+      "gpa25": 3.17
+    }
+  },
+  "university-of-the-pacific-mcgeorge-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.63,
+      "gpa50": 3.4,
+      "gpa25": 2.94
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.77,
+      "gpa50": 3.52,
+      "gpa25": 3.13
+    }
+  },
+  "penn-state-dickinson-law": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 157,
+      "gpa75": 3.9,
+      "gpa50": 3.77,
+      "gpa25": 3.62
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.83,
+      "gpa50": 3.71,
+      "gpa25": 3.5
+    }
+  },
+  "penn-carey-law": {
+    "2022\u201323": {
+      "lsat75": 174,
+      "lsat50": 172,
+      "lsat25": 168,
+      "gpa75": 3.98,
+      "gpa50": 3.92,
+      "gpa25": 3.66
+    },
+    "2023\u201324": {
+      "lsat75": 174,
+      "lsat50": 172,
+      "lsat25": 168,
+      "gpa75": 3.99,
+      "gpa50": 3.93,
+      "gpa25": 3.77
+    }
+  },
+  "pepperdine-caruso-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 159,
+      "gpa75": 3.93,
+      "gpa50": 3.86,
+      "gpa25": 3.48
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 159,
+      "gpa75": 3.94,
+      "gpa50": 3.85,
+      "gpa25": 3.49
+    }
+  },
+  "university-of-pittsburgh-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.73,
+      "gpa50": 3.56,
+      "gpa25": 3.3
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 159,
+      "lsat25": 156,
+      "gpa75": 3.79,
+      "gpa50": 3.56,
+      "gpa25": 3.28
+    }
+  },
+  "pontifical-catholic-university-of-puerto-rico-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 141,
+      "lsat50": 138,
+      "lsat25": 135,
+      "gpa75": 3.63,
+      "gpa50": 3.32,
+      "gpa25": 2.92
+    },
+    "2023\u201324": {
+      "lsat75": 140,
+      "lsat50": 137,
+      "lsat25": 135,
+      "gpa75": 3.69,
+      "gpa50": 3.37,
+      "gpa25": 3.0
+    }
+  },
+  "university-of-puerto-rico-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 151,
+      "lsat50": 148,
+      "lsat25": 144,
+      "gpa75": 3.89,
+      "gpa50": 3.76,
+      "gpa25": 3.57
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 148,
+      "lsat25": 144,
+      "gpa75": 3.88,
+      "gpa50": 3.73,
+      "gpa25": 3.52
+    }
+  },
+  "quinnipiac-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.77,
+      "gpa50": 3.51,
+      "gpa25": 3.22
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 149,
+      "gpa75": 3.81,
+      "gpa50": 3.59,
+      "gpa25": 3.33
+    }
+  },
+  "regent-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 152,
+      "gpa75": 3.88,
+      "gpa50": 3.68,
+      "gpa25": 3.4
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 158,
+      "lsat25": 153,
+      "gpa75": 3.8,
+      "gpa50": 3.64,
+      "gpa25": 3.39
+    }
+  },
+  "university-of-richmond-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 157,
+      "gpa75": 3.86,
+      "gpa50": 3.75,
+      "gpa25": 3.5
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 158,
+      "gpa75": 3.83,
+      "gpa50": 3.75,
+      "gpa25": 3.5
+    }
+  },
+  "roger-williams-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.65,
+      "gpa50": 3.3,
+      "gpa25": 2.93
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 149,
+      "lsat25": 146,
+      "gpa75": 3.71,
+      "gpa50": 3.44,
+      "gpa25": 3.1
+    }
+  },
+  "rutgers-law-school": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 154,
+      "gpa75": 3.81,
+      "gpa50": 3.6,
+      "gpa25": 3.37
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 154,
+      "gpa75": 3.8,
+      "gpa50": 3.61,
+      "gpa25": 3.28
+    }
+  },
+  "saint-louis-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.81,
+      "gpa50": 3.59,
+      "gpa25": 3.31
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 156,
+      "lsat25": 153,
+      "gpa75": 3.88,
+      "gpa50": 3.64,
+      "gpa25": 3.37
+    }
+  },
+  "samford-university-cumberland-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.79,
+      "gpa50": 3.61,
+      "gpa25": 3.37
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.8,
+      "gpa50": 3.63,
+      "gpa25": 3.44
+    }
+  },
+  "university-of-san-diego-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 157,
+      "gpa75": 3.89,
+      "gpa50": 3.8,
+      "gpa25": 3.52
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 157,
+      "gpa75": 3.89,
+      "gpa50": 3.8,
+      "gpa25": 3.53
+    }
+  },
+  "university-of-san-francisco-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.67,
+      "gpa50": 3.46,
+      "gpa25": 3.09
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 152,
+      "gpa75": 3.58,
+      "gpa50": 3.37,
+      "gpa25": 3.07
+    }
+  },
+  "santa-clara-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 159,
+      "lsat25": 155,
+      "gpa75": 3.72,
+      "gpa50": 3.55,
+      "gpa25": 3.31
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 154,
+      "gpa75": 3.69,
+      "gpa50": 3.44,
+      "gpa25": 3.15
+    }
+  },
+  "seattle-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 152,
+      "gpa75": 3.71,
+      "gpa50": 3.51,
+      "gpa25": 3.14
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 153,
+      "gpa75": 3.72,
+      "gpa50": 3.53,
+      "gpa25": 3.21
+    }
+  },
+  "seton-hall-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 160,
+      "lsat25": 155,
+      "gpa75": 3.79,
+      "gpa50": 3.66,
+      "gpa25": 3.4
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 157,
+      "gpa75": 3.86,
+      "gpa50": 3.69,
+      "gpa25": 3.47
+    }
+  },
+  "university-of-south-carolina-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.84,
+      "gpa50": 3.7,
+      "gpa25": 3.45
+    },
+    "2023\u201324": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 159,
+      "gpa75": 3.91,
+      "gpa50": 3.74,
+      "gpa25": 3.48
+    }
+  },
+  "university-of-south-dakota-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.72,
+      "gpa50": 3.56,
+      "gpa25": 3.18
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.87,
+      "gpa50": 3.55,
+      "gpa25": 3.15
+    }
+  },
+  "south-texas-college-of-law-houston": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 151,
+      "gpa75": 3.59,
+      "gpa50": 3.36,
+      "gpa25": 3.02
+    },
+    "2023\u201324": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.57,
+      "gpa50": 3.35,
+      "gpa25": 3.04
+    }
+  },
+  "usc-gould-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 169,
+      "lsat50": 169,
+      "lsat25": 165,
+      "gpa75": 3.96,
+      "gpa50": 3.88,
+      "gpa25": 3.77
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 165,
+      "gpa75": 3.97,
+      "gpa50": 3.91,
+      "gpa25": 3.82
+    }
+  },
+  "southern-illinois-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 149,
+      "lsat25": 146,
+      "gpa75": 3.62,
+      "gpa50": 3.3,
+      "gpa25": 2.94
+    },
+    "2023\u201324": {
+      "lsat75": 152,
+      "lsat50": 148,
+      "lsat25": 146,
+      "gpa75": 3.63,
+      "gpa50": 3.38,
+      "gpa25": 3.02
+    }
+  },
+  "southern-methodist-university-dedman-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.91,
+      "gpa50": 3.83,
+      "gpa25": 3.67
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 165,
+      "lsat25": 161,
+      "gpa75": 3.93,
+      "gpa50": 3.86,
+      "gpa25": 3.6
+    }
+  },
+  "southern-university-law-center": {
+    "2022\u201323": {
+      "lsat75": 149,
+      "lsat50": 147,
+      "lsat25": 145,
+      "gpa75": 3.48,
+      "gpa50": 3.12,
+      "gpa25": 2.8
+    },
+    "2023\u201324": {
+      "lsat75": 149,
+      "lsat50": 146,
+      "lsat25": 144,
+      "gpa75": 3.53,
+      "gpa50": 3.15,
+      "gpa25": 2.82
+    }
+  },
+  "southwestern-law-school": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.63,
+      "gpa50": 3.44,
+      "gpa25": 3.17
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 153,
+      "gpa75": 3.67,
+      "gpa50": 3.48,
+      "gpa25": 3.24
+    }
+  },
+  "st-johns-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 155,
+      "gpa75": 3.87,
+      "gpa50": 3.71,
+      "gpa25": 3.42
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 154,
+      "gpa75": 3.85,
+      "gpa50": 3.74,
+      "gpa25": 3.5
+    }
+  },
+  "st-marys-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.65,
+      "gpa50": 3.38,
+      "gpa25": 3.04
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 153,
+      "lsat25": 150,
+      "gpa75": 3.68,
+      "gpa50": 3.41,
+      "gpa25": 3.09
+    }
+  },
+  "st-thomas-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.61,
+      "gpa50": 3.4,
+      "gpa25": 3.09
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.58,
+      "gpa50": 3.3,
+      "gpa25": 2.98
+    }
+  },
+  "university-of-st-thomas-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.79,
+      "gpa50": 3.62,
+      "gpa25": 3.41
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 156,
+      "lsat25": 152,
+      "gpa75": 3.81,
+      "gpa50": 3.64,
+      "gpa25": 3.47
+    }
+  },
+  "stanford-law-school": {
+    "2022\u201323": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 171,
+      "gpa75": 3.99,
+      "gpa50": 3.95,
+      "gpa25": 3.83
+    },
+    "2023\u201324": {
+      "lsat75": 175,
+      "lsat50": 173,
+      "lsat25": 169,
+      "gpa75": 4.0,
+      "gpa50": 3.92,
+      "gpa25": 3.78
+    }
+  },
+  "stetson-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 158,
+      "lsat25": 156,
+      "gpa75": 3.77,
+      "gpa50": 3.59,
+      "gpa25": 3.34
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 158,
+      "lsat25": 156,
+      "gpa75": 3.79,
+      "gpa50": 3.6,
+      "gpa25": 3.37
+    }
+  },
+  "suffolk-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 154,
+      "lsat25": 150,
+      "gpa75": 3.72,
+      "gpa50": 3.55,
+      "gpa25": 3.33
+    },
+    "2023\u201324": {
+      "lsat75": 159,
+      "lsat50": 155,
+      "lsat25": 151,
+      "gpa75": 3.74,
+      "gpa50": 3.55,
+      "gpa25": 3.35
+    }
+  },
+  "syracuse-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 157,
+      "lsat25": 154,
+      "gpa75": 3.8,
+      "gpa50": 3.58,
+      "gpa25": 3.1
+    },
+    "2023\u201324": {
+      "lsat75": 161,
+      "lsat50": 158,
+      "lsat25": 151,
+      "gpa75": 3.83,
+      "gpa50": 3.62,
+      "gpa25": 3.28
+    }
+  },
+  "temple-university-james-e-beasley-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 159,
+      "gpa75": 3.81,
+      "gpa50": 3.65,
+      "gpa25": 3.45
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 163,
+      "lsat25": 159,
+      "gpa75": 3.81,
+      "gpa50": 3.67,
+      "gpa25": 3.42
+    }
+  },
+  "university-of-tennessee-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 162,
+      "lsat25": 158,
+      "gpa75": 3.9,
+      "gpa50": 3.78,
+      "gpa25": 3.54
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 163,
+      "lsat25": 158,
+      "gpa75": 3.93,
+      "gpa50": 3.82,
+      "gpa25": 3.47
+    }
+  },
+  "texas-a-m-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 167,
+      "lsat50": 166,
+      "lsat25": 159,
+      "gpa75": 4.0,
+      "gpa50": 3.97,
+      "gpa25": 3.61
+    },
+    "2023\u201324": {
+      "lsat75": 169,
+      "lsat50": 168,
+      "lsat25": 160,
+      "gpa75": 4.0,
+      "gpa50": 3.97,
+      "gpa25": 3.56
+    }
+  },
+  "texas-southern-university-thurgood-marshall-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.53,
+      "gpa50": 3.16,
+      "gpa25": 2.68
+    },
+    "2023\u201324": {
+      "lsat75": 152,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.61,
+      "gpa50": 3.21,
+      "gpa25": 2.72
+    }
+  },
+  "texas-tech-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 155,
+      "gpa75": 3.81,
+      "gpa50": 3.63,
+      "gpa25": 3.37
+    },
+    "2023\u201324": {
+      "lsat75": 160,
+      "lsat50": 158,
+      "lsat25": 154,
+      "gpa75": 3.82,
+      "gpa50": 3.65,
+      "gpa25": 3.4
+    }
+  },
+  "university-of-texas-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 172,
+      "lsat50": 171,
+      "lsat25": 168,
+      "gpa75": 3.96,
+      "gpa50": 3.86,
+      "gpa25": 3.72
+    },
+    "2023\u201324": {
+      "lsat75": 172,
+      "lsat50": 171,
+      "lsat25": 167,
+      "gpa75": 3.97,
+      "gpa50": 3.89,
+      "gpa25": 3.74
+    }
+  },
+  "ohio-state-university-moritz-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 167,
+      "lsat50": 165,
+      "lsat25": 161,
+      "gpa75": 3.95,
+      "gpa50": 3.83,
+      "gpa25": 3.57
+    },
+    "2023\u201324": {
+      "lsat75": 168,
+      "lsat50": 166,
+      "lsat25": 161,
+      "gpa75": 3.97,
+      "gpa50": 3.89,
+      "gpa25": 3.66
+    }
+  },
+  "university-of-toledo-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 149,
+      "gpa75": 3.83,
+      "gpa50": 3.53,
+      "gpa25": 3.21
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.79,
+      "gpa50": 3.58,
+      "gpa25": 3.26
+    }
+  },
+  "touro-university-jacob-d-fuchsberg-law-center": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 149,
+      "gpa75": 3.47,
+      "gpa50": 3.22,
+      "gpa25": 2.85
+    },
+    "2023\u201324": {
+      "lsat75": 153,
+      "lsat50": 151,
+      "lsat25": 150,
+      "gpa75": 3.52,
+      "gpa50": 3.22,
+      "gpa25": 2.89
+    }
+  },
+  "tulane-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 163,
+      "lsat50": 161,
+      "lsat25": 157,
+      "gpa75": 3.78,
+      "gpa50": 3.64,
+      "gpa25": 3.41
+    },
+    "2023\u201324": {
+      "lsat75": 162,
+      "lsat50": 160,
+      "lsat25": 156,
+      "gpa75": 3.78,
+      "gpa50": 3.64,
+      "gpa25": 3.42
+    }
+  },
+  "university-of-tulsa-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 159,
+      "lsat50": 156,
+      "lsat25": 154,
+      "gpa75": 3.86,
+      "gpa50": 3.53,
+      "gpa25": 3.18
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 154,
+      "gpa75": 3.85,
+      "gpa50": 3.52,
+      "gpa25": 3.21
+    }
+  },
+  "university-of-utah-s-j-quinney-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.95,
+      "gpa50": 3.85,
+      "gpa25": 3.65
+    },
+    "2023\u201324": {
+      "lsat75": 167,
+      "lsat50": 165,
+      "lsat25": 161,
+      "gpa75": 3.95,
+      "gpa50": 3.86,
+      "gpa25": 3.7
+    }
+  },
+  "vanderbilt-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 171,
+      "lsat50": 170,
+      "lsat25": 164,
+      "gpa75": 3.96,
+      "gpa50": 3.89,
+      "gpa25": 3.65
+    },
+    "2023\u201324": {
+      "lsat75": 170,
+      "lsat50": 169,
+      "lsat25": 163,
+      "gpa75": 3.94,
+      "gpa50": 3.89,
+      "gpa25": 3.66
+    }
+  },
+  "vermont-law-and-graduate-school": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.62,
+      "gpa50": 3.3,
+      "gpa25": 2.8
+    },
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 151,
+      "lsat25": 147,
+      "gpa75": 3.53,
+      "gpa50": 3.18,
+      "gpa25": 2.89
+    }
+  },
+  "villanova-university-charles-widger-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 157,
+      "gpa75": 3.9,
+      "gpa50": 3.8,
+      "gpa25": 3.58
+    },
+    "2023\u201324": {
+      "lsat75": 165,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.91,
+      "gpa50": 3.81,
+      "gpa25": 3.65
+    }
+  },
+  "university-of-virginia-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 172,
+      "lsat50": 171,
+      "lsat25": 167,
+      "gpa75": 3.99,
+      "gpa50": 3.94,
+      "gpa25": 3.72
+    },
+    "2023\u201324": {
+      "lsat75": 174,
+      "lsat50": 172,
+      "lsat25": 167,
+      "gpa75": 4.0,
+      "gpa50": 3.96,
+      "gpa25": 3.78
+    }
+  },
+  "wake-forest-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 165,
+      "lsat25": 160,
+      "gpa75": 3.88,
+      "gpa50": 3.79,
+      "gpa25": 3.64
+    },
+    "2023\u201324": {
+      "lsat75": 167,
+      "lsat50": 166,
+      "lsat25": 163,
+      "gpa75": 3.93,
+      "gpa50": 3.84,
+      "gpa25": 3.66
+    }
+  },
+  "washburn-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 157,
+      "lsat50": 154,
+      "lsat25": 150,
+      "gpa75": 3.83,
+      "gpa50": 3.59,
+      "gpa25": 3.25
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 148,
+      "gpa75": 3.83,
+      "gpa50": 3.61,
+      "gpa25": 3.26
+    }
+  },
+  "washington-and-lee-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 166,
+      "lsat50": 165,
+      "lsat25": 159,
+      "gpa75": 3.8,
+      "gpa50": 3.72,
+      "gpa25": 3.4
+    },
+    "2023\u201324": {
+      "lsat75": 167,
+      "lsat50": 166,
+      "lsat25": 159,
+      "gpa75": 3.83,
+      "gpa50": 3.73,
+      "gpa25": 3.42
+    }
+  },
+  "washington-university-in-st-louis-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 174,
+      "lsat50": 173,
+      "lsat25": 162,
+      "gpa75": 4.0,
+      "gpa50": 3.95,
+      "gpa25": 3.49
+    },
+    "2023\u201324": {
+      "lsat75": 176,
+      "lsat50": 173,
+      "lsat25": 163,
+      "gpa75": 4.0,
+      "gpa50": 3.96,
+      "gpa25": 3.45
+    }
+  },
+  "university-of-washington-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 167,
+      "lsat50": 164,
+      "lsat25": 160,
+      "gpa75": 3.86,
+      "gpa50": 3.74,
+      "gpa25": 3.57
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 163,
+      "lsat25": 160,
+      "gpa75": 3.83,
+      "gpa50": 3.67,
+      "gpa25": 3.47
+    }
+  },
+  "wayne-state-university-law-school": {
+    "2022\u201323": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 155,
+      "gpa75": 3.93,
+      "gpa50": 3.83,
+      "gpa25": 3.49
+    },
+    "2023\u201324": {
+      "lsat75": 164,
+      "lsat50": 162,
+      "lsat25": 157,
+      "gpa75": 3.94,
+      "gpa50": 3.84,
+      "gpa25": 3.58
+    }
+  },
+  "west-virginia-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.88,
+      "gpa50": 3.59,
+      "gpa25": 3.25
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 156,
+      "lsat25": 152,
+      "gpa75": 3.83,
+      "gpa50": 3.58,
+      "gpa25": 3.25
+    }
+  },
+  "western-new-england-university-school-of-law": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 147,
+      "gpa75": 3.57,
+      "gpa50": 3.3,
+      "gpa25": 2.92
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.67,
+      "gpa50": 3.29,
+      "gpa25": 2.95
+    }
+  },
+  "western-state-college-of-law-at-westcliff-university": {
+    "2022\u201323": {
+      "lsat75": 154,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.38,
+      "gpa50": 3.16,
+      "gpa25": 2.91
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 151,
+      "lsat25": 149,
+      "gpa75": 3.56,
+      "gpa50": 3.26,
+      "gpa25": 2.97
+    }
+  },
+  "widener-university-commonwealth-law-school": {
+    "2022\u201323": {
+      "lsat75": 152,
+      "lsat50": 148,
+      "lsat25": 146,
+      "gpa75": 3.61,
+      "gpa50": 3.34,
+      "gpa25": 3.0
+    },
+    "2023\u201324": {
+      "lsat75": 151,
+      "lsat50": 148,
+      "lsat25": 147,
+      "gpa75": 3.64,
+      "gpa50": 3.36,
+      "gpa25": 3.06
+    }
+  },
+  "widener-university-delaware-law-school": {
+    "2022\u201323": {
+      "lsat75": 153,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.58,
+      "gpa50": 3.26,
+      "gpa25": 2.93
+    },
+    "2023\u201324": {
+      "lsat75": 154,
+      "lsat50": 150,
+      "lsat25": 148,
+      "gpa75": 3.56,
+      "gpa50": 3.28,
+      "gpa25": 2.95
+    }
+  },
+  "willamette-university-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 156,
+      "lsat50": 152,
+      "lsat25": 150,
+      "gpa75": 3.59,
+      "gpa50": 3.26,
+      "gpa25": 3.01
+    },
+    "2023\u201324": {
+      "lsat75": 155,
+      "lsat50": 152,
+      "lsat25": 149,
+      "gpa75": 3.71,
+      "gpa50": 3.4,
+      "gpa25": 3.06
+    }
+  },
+  "william-mary-law-school": {
+    "2022\u201323": {
+      "lsat75": 168,
+      "lsat50": 166,
+      "lsat25": 162,
+      "gpa75": 3.87,
+      "gpa50": 3.77,
+      "gpa25": 3.54
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 164,
+      "lsat25": 159,
+      "gpa75": 3.86,
+      "gpa50": 3.75,
+      "gpa25": 3.49
+    }
+  },
+  "university-of-wisconsin-law-school": {
+    "2022\u201323": {
+      "lsat75": 167,
+      "lsat50": 165,
+      "lsat25": 157,
+      "gpa75": 3.9,
+      "gpa50": 3.79,
+      "gpa25": 3.49
+    },
+    "2023\u201324": {
+      "lsat75": 166,
+      "lsat50": 165,
+      "lsat25": 158,
+      "gpa75": 3.92,
+      "gpa50": 3.81,
+      "gpa25": 3.54
+    }
+  },
+  "university-of-wyoming-college-of-law": {
+    "2022\u201323": {
+      "lsat75": 158,
+      "lsat50": 154,
+      "lsat25": 152,
+      "gpa75": 3.81,
+      "gpa50": 3.51,
+      "gpa25": 3.18
+    },
+    "2023\u201324": {
+      "lsat75": 158,
+      "lsat50": 155,
+      "lsat25": 152,
+      "gpa75": 3.72,
+      "gpa50": 3.46,
+      "gpa25": 3.06
+    }
+  },
+  "yale-law-school": {
+    "2022\u201323": {
+      "lsat75": 177,
+      "lsat50": 175,
+      "lsat25": 172,
+      "gpa75": 4.0,
+      "gpa50": 3.96,
+      "gpa25": 3.89
+    },
+    "2023\u201324": {
+      "lsat75": 177,
+      "lsat50": 174,
+      "lsat25": 170,
+      "gpa75": 4.0,
+      "gpa50": 3.96,
+      "gpa25": 3.91
+    }
+  },
+  "jacksonville-university-school-of-law": {
+    "2023\u201324": {
+      "lsat75": 156,
+      "lsat50": 154,
+      "lsat25": 151,
+      "gpa75": 3.67,
+      "gpa50": 3.53,
+      "gpa25": 3.19
+    }
+  }
+}

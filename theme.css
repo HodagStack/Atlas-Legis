@@ -382,7 +382,6 @@ html[data-theme="dark"] #theme-icon-moon { display: none; }
 .adm-year-tabs {
   display: flex;
   gap: 5px;
-  margin-top: 10px;
   flex-wrap: wrap;
 }
 

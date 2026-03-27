@@ -358,6 +358,22 @@ document.addEventListener('DOMContentLoaded', function () {
       // Place tabs at top of card-body, above the LSAT/GPA data
       var cardBody = card.querySelector('.card-body');
       if (cardBody) cardBody.insertBefore(tabs, cardBody.firstChild);
+
+      // On mobile, stack the card-head title + note vertically
+      var mq = window.matchMedia('(max-width: 959px)');
+      function applyHeadLayout(mobile) {
+        if (mobile) {
+          head.style.flexDirection = 'column';
+          head.style.alignItems = 'flex-start';
+          head.style.gap = '3px';
+        } else {
+          head.style.flexDirection = '';
+          head.style.alignItems = '';
+          head.style.gap = '';
+        }
+      }
+      applyHeadLayout(mq.matches);
+      mq.addEventListener('change', function (e) { applyHeadLayout(e.matches); });
     }
 
     function buildSvg(hist, years, k25, k50, k75, fmtFn) {

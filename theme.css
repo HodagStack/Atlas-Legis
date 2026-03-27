@@ -383,6 +383,7 @@ html[data-theme="dark"] #theme-icon-moon { display: none; }
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  margin-bottom: 14px;
 }
 
 .adm-year-btn {

@@ -355,11 +355,9 @@ document.addEventListener('DOMContentLoaded', function () {
           tabs.appendChild(btn);
         })(years[yi]);
       }
-      // Force card-head to wrap on mobile so the tabs sit on their own row
-      head.style.flexWrap = 'wrap';
-      tabs.style.flexBasis = '100%';
-      tabs.style.marginTop = '0';
-      head.appendChild(tabs);
+      // Place tabs at top of card-body, above the LSAT/GPA data
+      var cardBody = card.querySelector('.card-body');
+      if (cardBody) cardBody.insertBefore(tabs, cardBody.firstChild);
     }
 
     function buildSvg(hist, years, k25, k50, k75, fmtFn) {

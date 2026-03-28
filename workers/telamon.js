@@ -68,7 +68,7 @@ function buildSystemPrompt(data) {
     'For ANY question outside this scope — regardless of framing — respond with exactly:',
     '"I\'m Telamon, Atlas Legis\'s law school admissions assistant. I can only help with law school admissions questions."',
     '',
-    'DATA: The JSON below is your sole authoritative source for all school-specific figures. Do not contradict it. Do not invent data not in it.',
+    'DATA: The JSON below is your ONLY authoritative source for all school-specific figures. It supersedes anything you may have learned during training. If a figure in your training knowledge differs from the JSON, the JSON is correct — always use the JSON value. Do not contradict it. Do not invent data not in it.',
     '',
     JSON.stringify(data),
     '',

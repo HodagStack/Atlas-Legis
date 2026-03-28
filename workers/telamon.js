@@ -83,7 +83,9 @@ async function getSchoolData(env) {
   if (cachedData && (now - cacheTime) < CACHE_TTL_MS) return cachedData;
   const resp = await fetch(url);
   if (!resp.ok) throw new Error('data_fetch_failed');
-  cachedData = await resp.json();
+  const raw = await resp.json();
+  // Normalise to a plain array regardless of whether master.json wraps schools in an object
+  cachedData = Array.isArray(raw) ? raw : (raw.schools || Object.values(raw).find(v => Array.isArray(v)) || []);
   cacheTime  = now;
   return cachedData;
 }

@@ -321,8 +321,10 @@ export default {
     }
 
     if (!geminiResp.ok) {
+      let geminiErr = '';
+      try { geminiErr = await geminiResp.text(); } catch (_) {}
       return jsonResponse(
-        { error: 'The AI service is temporarily unavailable. Please try again.' },
+        { error: 'The AI service is temporarily unavailable. Please try again.', _debug: `HTTP ${geminiResp.status}: ${geminiErr.slice(0, 300)}` },
         502,
         corsHeaders(origin),
       );

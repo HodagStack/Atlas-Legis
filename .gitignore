@@ -1,0 +1,5 @@
+# Cloudflare Worker local secrets — never commit
+workers/.dev.vars
+
+# Wrangler internal cache
+workers/.wrangler/

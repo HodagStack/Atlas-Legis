@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWMH5ER9YS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWMH5ER9YS');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/180x180 Favicon.png" />
+
+  <title>Ask Telamon — Atlas Legis</title>
+  <meta name="description" content="Ask Telamon, Atlas Legis's AI admissions assistant. Get instant answers about law school LSAT medians, GPA ranges, scholarships, tuition, and employment outcomes." />
+  <link rel="canonical" href="https://atlaslegis.com/ask/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --em:       #1a7a50;
+      --em-deep:  #0f5132;
+      --em-pale:  #d1ece0;
+      --em-glow:  rgba(16,120,70,0.15);
+      --ink:      #0e2018;
+      --ink-soft: #2d4a38;
+      --muted:    #6b8c78;
+      --soft:     #f0f7f3;
+      --border:   rgba(26,122,80,0.13);
+      --shadow:   rgba(14,32,24,0.07);
+    }
+
+    /* ── Dark mode ───────────────────────────────────────────────────────────── */
+    html[data-theme="dark"] { filter: invert(1) hue-rotate(180deg); }
+    #theme-icon-sun  { display: none; }
+    #theme-icon-moon { display: block; }
+    html[data-theme="dark"] #theme-icon-sun  { display: block; }
+    html[data-theme="dark"] #theme-icon-moon { display: none; }
+
+    /* ── Layout skeleton ─────────────────────────────────────────────────────── */
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f9f9f8;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ─────────────────────────────────────────────────────────────────── */
+    .nav {
+      flex-shrink: 0;
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 900px; margin: 0 auto; padding: 0 20px;
+      height: 56px; display: flex; align-items: center;
+      justify-content: space-between; gap: 16px;
+    }
+    .nav-brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; flex-shrink: 0; }
+    .nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--em-deep); letter-spacing: -.01em; }
+    .nav-tagline  { font-size: .72rem; font-weight: 500; color: var(--muted); letter-spacing: .02em; }
+    .nav-right    { display: flex; align-items: center; gap: 2px; }
+    .nav-links    { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a  { font-size: .82rem; font-weight: 500; color: var(--muted); padding: 5px 11px; border-radius: 6px; text-decoration: none; transition: color .14s, background .14s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--ink); background: var(--soft); }
+    .nav-links a[aria-current="page"] { color: var(--em-deep); font-weight: 600; }
+    .nav-map {
+      background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px;
+      font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none;
+      transition: background .14s; margin-left: 6px;
+    }
+    .nav-map:hover { background: var(--em-deep); }
+    .theme-btn {
+      display: flex; align-items: center; justify-content: center;
+      width: 30px; height: 30px; border: none; background: transparent;
+      border-radius: 6px; cursor: pointer; color: var(--muted);
+      transition: color .14s, background .14s;
+    }
+    .theme-btn:hover { color: var(--ink); background: var(--soft); }
+    @media (max-width: 580px) { .nav-links { display: none; } }
+    @media (max-width: 480px) { .nav-tagline { display: none; } }
+
+    /* ── Main ────────────────────────────────────────────────────────────────── */
+    .main {
+      flex: 1 1 0; min-height: 0;
+      display: flex; justify-content: center;
+      overflow: hidden;
+    }
+    .chat-container {
+      width: 100%; max-width: 720px;
+      display: flex; flex-direction: column;
+      overflow: hidden; padding: 0 20px;
+    }
+
+    /* ── Landing state ───────────────────────────────────────────────────────── */
+    .landing {
+      flex: 1 1 0; min-height: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 24px 0 8px;
+      gap: 0;
+      overflow-y: auto;
+    }
+    .landing-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      font-weight: 700; color: var(--em-deep);
+      letter-spacing: -.03em; line-height: 1;
+      margin-bottom: 8px;
+    }
+    .landing-sub {
+      font-size: .85rem; color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .landing-intro {
+      font-size: .93rem; color: var(--ink-soft);
+      line-height: 1.72; max-width: 460px;
+      margin-bottom: 28px;
+    }
+
+    /* Suggestion cards — 2×2 grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%; max-width: 520px;
+    }
+    .suggestion-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left; cursor: pointer;
+      transition: border-color .14s, box-shadow .15s, transform .12s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .suggestion-card:hover {
+      border-color: var(--em);
+      box-shadow: 0 4px 16px var(--em-glow);
+      transform: translateY(-2px);
+    }
+    .card-label {
+      font-size: .63rem; font-weight: 600;
+      letter-spacing: .09em; text-transform: uppercase;
+      color: var(--em); margin-bottom: 5px;
+    }
+    .card-q {
+      font-size: .82rem; font-weight: 500;
+      color: var(--ink); line-height: 1.4;
+    }
+    @media (max-width: 480px) { .cards-grid { grid-template-columns: 1fr; } }
+
+    /* ── Messages area ───────────────────────────────────────────────────────── */
+    .messages-wrap {
+      flex: 1 1 0; min-height: 0;
+      overflow-y: auto; scroll-behavior: smooth;
+    }
+    .messages-wrap { display: none; } /* shown via JS */
+    .messages-wrap::-webkit-scrollbar { width: 4px; }
+    .messages-wrap::-webkit-scrollbar-track { background: transparent; }
+    .messages-wrap::-webkit-scrollbar-thumb { background: var(--em-pale); border-radius: 4px; }
+
+    .chat-messages {
+      display: flex; flex-direction: column;
+      gap: 28px; padding: 28px 0 12px;
+    }
+
+    /* animation */
+    .msg { animation: msg-in .2s ease both; }
+    @keyframes msg-in {
+      from { opacity: 0; transform: translateY(7px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* bot message — Claude style: avatar + flowing text */
+    .msg.bot { display: flex; gap: 14px; align-items: flex-start; }
+    .msg-content { flex: 1; min-width: 0; }
+    .msg-sender {
+      font-size: .7rem; font-weight: 600;
+      letter-spacing: .05em; text-transform: uppercase;
+      color: var(--em); margin-bottom: 6px;
+    }
+    .msg-text {
+      font-size: .93rem; line-height: 1.75;
+      color: var(--ink); white-space: pre-wrap;
+    }
+    .msg-error .msg-text { color: #991b1b; }
+
+    /* user message — right-aligned bubble */
+    .msg.user { display: flex; justify-content: flex-end; }
+    .msg.user .msg-bubble {
+      background: var(--em); color: #fff;
+      border-radius: 18px; border-bottom-right-radius: 4px;
+      padding: 12px 18px;
+      font-size: .93rem; line-height: 1.65;
+      max-width: min(76%, 500px);
+      white-space: pre-wrap;
+    }
+
+    /* typing indicator */
+    .typing-indicator { display: flex; gap: 5px; align-items: center; padding: 3px 0; }
+    .typing-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--em-pale);
+      animation: tbounce .9s ease-in-out infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: .15s; }
+    .typing-dot:nth-child(3) { animation-delay: .30s; }
+    @keyframes tbounce {
+      0%, 80%, 100% { transform: scale(1);   opacity: .5; }
+      40%           { transform: scale(1.45); opacity: 1; }
+    }
+
+    /* ── Input area ──────────────────────────────────────────────────────────── */
+    .input-area {
+      flex-shrink: 0;
+      padding: 10px 0;
+      padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+    .input-box {
+      display: flex; align-items: flex-end; gap: 8px;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 10px 10px 10px 16px;
+      box-shadow: 0 2px 14px var(--shadow);
+      transition: border-color .14s, box-shadow .14s;
+    }
+    .input-box:focus-within {
+      border-color: var(--em);
+      box-shadow: 0 0 0 3px var(--em-glow), 0 2px 14px var(--shadow);
+    }
+    #chat-input {
+      flex: 1; border: none; background: transparent; resize: none;
+      font-family: 'DM Sans', sans-serif; font-size: .93rem;
+      color: var(--ink); line-height: 1.5;
+      min-height: 24px; max-height: 140px; outline: none;
+    }
+    #chat-input::placeholder { color: var(--muted); }
+    .send-btn {
+      flex-shrink: 0; width: 36px; height: 36px; border: none;
+      border-radius: 10px; background: var(--em); color: #fff;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background .14s, transform .1s;
+    }
+    .send-btn:hover:not(:disabled) { background: var(--em-deep); }
+    .send-btn:active:not(:disabled) { transform: scale(.93); }
+    .send-btn:disabled { background: var(--em-pale); cursor: not-allowed; }
+
+    .input-footer {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 6px 4px 0; gap: 12px;
+    }
+    .disclaimer { font-size: .67rem; color: var(--muted); line-height: 1.5; }
+    #char-counter { font-size: .67rem; color: var(--muted); white-space: nowrap; transition: color .14s; flex-shrink: 0; }
+    #char-counter.warn  { color: #ca8a04; }
+    #char-counter.limit { color: #dc2626; font-weight: 600; }
+  </style>
+</head>
+
+<!-- Anti-flicker: set theme before first paint -->
+<script>
+  (function () {
+    var t = localStorage.getItem('atlas-theme');
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches))
+      document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
+
+<body>
+
+<!-- ── Nav ──────────────────────────────────────────────────────────────────── -->
+<nav class="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="Atlas Legis — home">
+      <span class="nav-wordmark">Atlas Legis</span>
+      <span class="nav-tagline">Law School Analytics</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="/schools/">Schools</a></li>
+        <li><a href="/scholarship-estimator.html">Scholarships</a></li>
+        <li><a href="/debt-planner.html">Debt Planner</a></li>
+        <li><a href="/ask/" aria-current="page">Ask Telamon</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg id="theme-icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg id="theme-icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      <a href="/" class="nav-map">View Map</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Main ─────────────────────────────────────────────────────────────────── -->
+<main class="main">
+  <div class="chat-container">
+
+    <!-- Landing state (shown until first message) -->
+    <div class="landing" id="landing">
+      <h1 class="landing-name">Telamon</h1>
+      <p class="landing-sub">Atlas Legis&rsquo; AI &middot; 197 ABA law schools</p>
+      <p class="landing-intro">Hi &mdash; I&rsquo;m Telamon, Atlas Legis&rsquo;s admissions assistant. I can answer questions about LSAT and GPA medians, scholarships, tuition, and employment outcomes for all 197 ABA-accredited law schools.</p>
+
+      <!-- Suggestion cards -->
+      <div class="cards-grid" id="suggestions" aria-label="Suggested questions">
+        <button class="suggestion-card" type="button">
+          <div class="card-label">Admissions</div>
+          <div class="card-q">What&rsquo;s the median LSAT at Stanford?</div>
+        </button>
+        <button class="suggestion-card" type="button">
+          <div class="card-label">Scholarships</div>
+          <div class="card-q">Which T14 schools give the most scholarship aid?</div>
+        </button>
+        <button class="suggestion-card" type="button">
+          <div class="card-label">Employment</div>
+          <div class="card-q">What % of HLS grads go BigLaw?</div>
+        </button>
+        <button class="suggestion-card" type="button">
+          <div class="card-label">Compare</div>
+          <div class="card-q">Compare tuition: NYU vs. Columbia</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages (hidden until first send) -->
+    <div class="messages-wrap" id="messages-wrap">
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-label="Conversation with Telamon"></div>
+    </div>
+
+    <!-- Input — always visible -->
+    <div class="input-area">
+      <form id="chat-form" autocomplete="off">
+        <div class="input-box">
+          <textarea
+            id="chat-input"
+            rows="1"
+            maxlength="500"
+            placeholder="Ask about LSAT medians, scholarships, employment outcomes&hellip;"
+            aria-label="Your question for Telamon"
+          ></textarea>
+          <button type="submit" class="send-btn" id="send-btn" aria-label="Send question" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div class="input-footer">
+        <span class="disclaimer">Telamon uses Atlas Legis data (ABA 509 disclosures). Always verify figures directly with each school.</span>
+        <span id="char-counter" aria-live="polite">0 / 500</span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  // ─────────────────────────────────────────────────────────────────────────────
+  // WORKER ENDPOINT
+  // ─────────────────────────────────────────────────────────────────────────────
+  var WORKER_URL = 'https://atlas-legis-bot.hodagstack.workers.dev';
+
+  // ── Dark mode ─────────────────────────────────────────────────────────────
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('atlas-theme', isDark ? 'light' : 'dark');
+  });
+
+  // ── Elements ──────────────────────────────────────────────────────────────
+  var form         = document.getElementById('chat-form');
+  var input        = document.getElementById('chat-input');
+  var sendBtn      = document.getElementById('send-btn');
+  var messages     = document.getElementById('chat-messages');
+  var messagesWrap = document.getElementById('messages-wrap');
+  var landing      = document.getElementById('landing');
+  var counter      = document.getElementById('char-counter');
+  var busy         = false;
+  var hasStarted   = false;
+
+  var INTRO_TEXT = 'Hi \u2014 I\u2019m Telamon, Atlas Legis\u2019s admissions assistant. I can answer questions about LSAT and GPA medians, scholarships, tuition, and employment outcomes for all 197 ABA-accredited law schools. What would you like to know?';
+
+  // ── Textarea auto-resize ──────────────────────────────────────────────────
+  function resizeInput() {
+    input.style.height = 'auto';
+    input.style.height = Math.min(input.scrollHeight, 140) + 'px';
+  }
+
+  // ── Character counter ─────────────────────────────────────────────────────
+  input.addEventListener('input', function () {
+    var len = input.value.length;
+    counter.textContent = len + ' / 500';
+    counter.className = len >= 500 ? 'limit' : len >= 400 ? 'warn' : '';
+    sendBtn.disabled = len === 0 || busy;
+    resizeInput();
+  });
+
+  // ── Keyboard submit (Enter without Shift) ─────────────────────────────────
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      if (!sendBtn.disabled) form.dispatchEvent(new Event('submit'));
+    }
+  });
+
+  // ── Scroll to bottom ──────────────────────────────────────────────────────
+  function scrollToBottom() {
+    messagesWrap.scrollTop = messagesWrap.scrollHeight;
+  }
+
+  // ── Transition: landing → chat ────────────────────────────────────────────
+  function startChat() {
+    if (hasStarted) return;
+    hasStarted = true;
+    landing.style.display = 'none';
+    messagesWrap.style.display = 'flex';
+    messagesWrap.style.flexDirection = 'column';
+    // Show Telamon's intro as first message
+    appendMessage('bot', INTRO_TEXT);
+  }
+
+  // ── Append a message ──────────────────────────────────────────────────────
+  function appendMessage(role, text, isError) {
+    var row = document.createElement('div');
+    row.className = 'msg ' + role + (isError ? ' msg-error' : '');
+
+    if (role === 'bot') {
+      var content = document.createElement('div');
+      content.className = 'msg-content';
+
+      var sender = document.createElement('div');
+      sender.className = 'msg-sender';
+      sender.textContent = 'Telamon';
+
+      var msgText = document.createElement('div');
+      msgText.className = 'msg-text';
+      msgText.textContent = text;
+
+      content.appendChild(sender);
+      content.appendChild(msgText);
+      row.appendChild(content);
+    } else {
+      var bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+      bubble.textContent = text;
+      row.appendChild(bubble);
+    }
+
+    messages.appendChild(row);
+    scrollToBottom();
+    return row;
+  }
+
+  // ── Typing indicator ──────────────────────────────────────────────────────
+  function showTyping() {
+    var row = document.createElement('div');
+    row.className = 'msg bot';
+    row.id = 'typing-row';
+
+    var content = document.createElement('div');
+    content.className = 'msg-content';
+
+    var sender = document.createElement('div');
+    sender.className = 'msg-sender';
+    sender.textContent = 'Telamon';
+
+    var dots = document.createElement('div');
+    dots.className = 'msg-text';
+    dots.innerHTML = '<div class="typing-indicator" aria-label="Telamon is thinking"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+
+    content.appendChild(sender);
+    content.appendChild(dots);
+    row.appendChild(content);
+    messages.appendChild(row);
+    scrollToBottom();
+  }
+
+  function hideTyping() {
+    var row = document.getElementById('typing-row');
+    if (row) row.remove();
+  }
+
+  // ── Suggestion card clicks — submit immediately ───────────────────────────
+  document.getElementById('suggestions').querySelectorAll('.suggestion-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var question = card.querySelector('.card-q').textContent.trim();
+      startChat();
+      sendQuestion(question);
+    });
+  });
+
+  // ── Form submit ───────────────────────────────────────────────────────────
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var question = input.value.trim();
+    if (!question || busy) return;
+    startChat();
+    input.value = '';
+    input.style.height = 'auto';
+    counter.textContent = '0 / 500';
+    counter.className = '';
+    sendBtn.disabled = true;
+    sendQuestion(question);
+  });
+
+  // ── Core send logic ───────────────────────────────────────────────────────
+  function sendQuestion(question) {
+    busy = true;
+    appendMessage('user', question);
+    showTyping();
+
+    fetch(WORKER_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ question: question }),
+    })
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (result) {
+        hideTyping();
+        if (result.ok && result.data.answer) {
+          appendMessage('bot', result.data.answer);
+        } else {
+          appendMessage('bot', (result.data && result.data.error) || 'Something went wrong. Please try again.', true);
+        }
+      })
+      .catch(function () {
+        hideTyping();
+        appendMessage('bot', 'Unable to reach Telamon right now. Please check your connection and try again.', true);
+      })
+      .finally(function () {
+        busy = false;
+        sendBtn.disabled = input.value.trim().length === 0;
+        input.focus();
+      });
+  }
+</script>
+
+</body>
+</html>

@@ -35,6 +35,42 @@ const rateLimitStore       = new Map(); // ip => { count, windowStart }
 const GEMINI_MODEL    = 'gemini-2.5-flash-lite';
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODEL + ':generateContent';
 
+// ── School name matching ──────────────────────────────────────────────────────
+// Words to ignore when building match tokens from school names
+const STOP_WORDS = new Set([
+  'the','of','at','and','for','law','school','university','college','center',
+  'centre','state','north','south','east','west','new','mount','saint','st',
+]);
+
+function schoolTokens(name) {
+  return name.toLowerCase()
+    .replace(/[^a-z0-9 ]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !STOP_WORDS.has(w));
+}
+
+/**
+ * Returns the subset of schools mentioned in the conversation text.
+ * Falls back to the full list when no specific school is detected
+ * (e.g. ranking/comparison questions).
+ */
+function selectRelevantSchools(allSchools, question, rawHistory) {
+  // Build a single search string from current question + last 6 history texts
+  const historyTexts = (rawHistory || []).slice(-6).map(t => t.text || '').join(' ');
+  const searchText   = (question + ' ' + historyTexts).toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+
+  const matched = allSchools.filter(school => {
+    const tokens = schoolTokens(school.name);
+    // A school matches if ANY of its distinctive tokens appear in the search text
+    return tokens.some(tok => searchText.includes(tok));
+  });
+
+  // If we matched 1–5 specific schools, use that focused set.
+  // 0 matches = comparison/general query → use all schools.
+  // >5 matches = too broad (e.g. "university") → use all schools.
+  return (matched.length >= 1 && matched.length <= 5) ? matched : allSchools;
+}
+
 // ── School data cache (module-scope, persists for isolate lifetime) ───────────
 const PROD_DATA_URL = 'https://atlaslegis.com/data/master.json';
 const CACHE_TTL_MS  = 10 * 60 * 1000; // re-fetch after 10 minutes of isolate uptime
@@ -53,7 +89,11 @@ async function getSchoolData(env) {
 }
 
 // ── System prompt builder ─────────────────────────────────────────────────────
-function buildSystemPrompt(data) {
+function buildSystemPrompt(data, totalCount) {
+  const isFull    = data.length === totalCount;
+  const dataLabel = isFull
+    ? `DATA: Full dataset — all ${totalCount} ABA-accredited law schools. This JSON is your ONLY authoritative source.`
+    : `DATA: Focused dataset — the ${data.length} school(s) relevant to this conversation. Full data for all ${totalCount} schools is available; if asked about a school not listed below, say you don't have that school's data in this session and ask the user to start a new question.`;
   return [
     'You are Telamon, the AI assistant for Atlas Legis (atlaslegis.com) — a free, non-commercial law school analytics platform.',
     'Your sole purpose is helping prospective law students understand law school admissions data.',
@@ -74,7 +114,8 @@ function buildSystemPrompt(data) {
     'Refusal response (use ONLY for clearly off-topic questions):',
     '"I\'m Telamon, Atlas Legis\'s law school admissions assistant. I can only help with law school admissions questions."',
     '',
-    'DATA: The JSON below is your ONLY authoritative source for all school-specific figures. It supersedes anything you may have learned during training. If a figure in your training knowledge differs from the JSON, the JSON is correct — always use the JSON value. Do not contradict it. Do not invent data not in it.',
+    dataLabel,
+    'This data supersedes anything you may have learned during training. If a figure in your training knowledge differs from the JSON, the JSON is correct — always use the JSON value. Do not contradict it. Do not invent data not in it.',
     '',
     'DATA FIELD GUIDE (use these mappings exactly):',
     '• "Median LSAT" or "LSAT median" → admissions.lsat.p50  (NOT scholarshipProfile.lsat.p50)',
@@ -250,7 +291,7 @@ export default {
         signal:  AbortSignal.timeout(25_000), // 25-second hard timeout
         body: JSON.stringify({
           system_instruction: {
-            parts: [{ text: buildSystemPrompt(schoolData) }],
+            parts: [{ text: buildSystemPrompt(selectRelevantSchools(schoolData, question, rawHistory), schoolData.length) }],
           },
           contents: [
             ...history,

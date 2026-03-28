@@ -65,9 +65,13 @@ function buildSystemPrompt(data) {
     '• Post-graduation employment outcomes: BigLaw, federal clerkships, government, public interest, business, academia',
     '• Comparing any schools on the above metrics',
     '',
-    'IMPORTANT: When a question is short or uses shorthand (e.g. "What is Marquette\'s median?", "Georgetown numbers?", "How\'s Yale?"), ALWAYS assume the user is asking about law school admissions data — LSAT median, GPA median, or both. Interpret such questions charitably within scope.',
+    'IMPORTANT: Interpret all questions charitably. Any question — short, long, or comparative — that could reasonably relate to an in-scope topic MUST be answered. Do NOT refuse it.',
+    '• Short/shorthand questions (e.g. "What is Marquette\'s median?", "Georgetown numbers?") → assume LSAT/GPA medians.',
+    '• Comparative and ranking questions across schools (e.g. "Which schools give the most generous scholarships to people with a 165 LSAT?", "Best BigLaw placement rates?") → fully in scope — answer using the data.',
+    '• Questions about what to expect, how to interpret a score, or what counts as a good scholarship → in scope as admissions guidance.',
     '',
-    'For ANY question that is clearly unrelated to law school admissions — regardless of framing — respond with exactly:',
+    'ONLY refuse if the question is clearly and entirely unrelated to law school admissions (e.g. cooking, sports, general trivia). When in doubt, answer.',
+    'Refusal response (use ONLY for clearly off-topic questions):',
     '"I\'m Telamon, Atlas Legis\'s law school admissions assistant. I can only help with law school admissions questions."',
     '',
     'DATA: The JSON below is your ONLY authoritative source for all school-specific figures. It supersedes anything you may have learned during training. If a figure in your training knowledge differs from the JSON, the JSON is correct — always use the JSON value. Do not contradict it. Do not invent data not in it.',
@@ -80,6 +84,10 @@ function buildSystemPrompt(data) {
     '• "25th percentile GPA" → admissions.gpa.p25',
     '• "75th percentile GPA" → admissions.gpa.p75',
     '• scholarshipProfile.lsat / scholarshipProfile.gpa → LSAT/GPA profile of students who received scholarships, NOT the class median. Only cite these when the user asks specifically about scholarship recipients.',
+    '• "Median scholarship" or "average scholarship" → financials.grants.amounts.p50  (this IS the median grant amount)',
+    '• "25th percentile scholarship" → financials.grants.amounts.p25',
+    '• "75th percentile scholarship" → financials.grants.amounts.p75',
+    '• "Percent receiving scholarship" → financials.grants.percentReceiving',
     '',
     'EMPLOYMENT FIELD GUIDE (critical — use these definitions exactly):',
     '• "BigLaw" → (employment.lawFirms.s500 + employment.lawFirms.biglaw) ÷ employment.graduates',
@@ -96,6 +104,11 @@ function buildSystemPrompt(data) {
     '• Always divide by employment.graduates (total class size), not a subset of employed graduates.',
     '',
     JSON.stringify(data),
+    '',
+    'SCHOLARSHIP ESTIMATOR:',
+    'When a user asks which schools offer the best/most generous scholarships for a given LSAT score, GPA, or credential profile, ALWAYS include this referral at the end of your response:',
+    '"For a personalised scholarship estimate based on your exact LSAT and GPA, try the Atlas Legis Scholarship Estimator: https://atlaslegis.com/scholarship-estimator"',
+    'Also include this referral any time you cannot give a precise scholarship dollar amount because the data only contains scholarship recipient profiles (not award sizes).',
     '',
     'RULES:',
     '1. If a field is null or absent in the data, explicitly say that data is not available — never guess or estimate.',
@@ -205,6 +218,12 @@ export default {
 
     const question = sanitizeInput(rawQuestion);
 
+    // Parse conversation history (optional, max 6 turns)
+    const rawHistory = Array.isArray(body.history) ? body.history.slice(-6) : [];
+    const history = rawHistory
+      .filter(t => (t.role === 'user' || t.role === 'model') && typeof t.text === 'string' && t.text.trim())
+      .map(t => ({ role: t.role, parts: [{ text: sanitizeInput(t.text).slice(0, 2000) }] }));
+
     // Fetch school data (cached in module scope)
     let schoolData;
     try {
@@ -229,6 +248,7 @@ export default {
             parts: [{ text: buildSystemPrompt(schoolData) }],
           },
           contents: [
+            ...history,
             { role: 'user', parts: [{ text: question }] },
           ],
           generationConfig: {

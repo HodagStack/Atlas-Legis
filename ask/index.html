@@ -401,6 +401,7 @@
   var counter      = document.getElementById('char-counter');
   var busy         = false;
   var hasStarted   = false;
+  var chatHistory  = []; // [{role:'user'|'model', text:'...'}]
 
   var INTRO_TEXT = 'Hi \u2014 I\u2019m Telamon, Atlas Legis\u2019s admissions assistant. I can answer questions about LSAT and GPA medians, scholarships, tuition, and employment outcomes for all 197 ABA-accredited law schools. What would you like to know?';
 
@@ -533,10 +534,13 @@
     appendMessage('user', question);
     showTyping();
 
+    // Keep last 6 turns (3 user + 3 model) to avoid ballooning the payload
+    var historyToSend = chatHistory.slice(-6);
+
     fetch(WORKER_URL, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ question: question }),
+      body:    JSON.stringify({ question: question, history: historyToSend }),
     })
       .then(function (res) {
         return res.json().then(function (data) { return { ok: res.ok, data: data }; });
@@ -545,6 +549,8 @@
         hideTyping();
         if (result.ok && result.data.answer) {
           appendMessage('bot', result.data.answer);
+          chatHistory.push({ role: 'user',  text: question });
+          chatHistory.push({ role: 'model', text: result.data.answer });
         } else {
           appendMessage('bot', (result.data && result.data.error) || 'Something went wrong. Please try again.', true);
         }

@@ -1,0 +1,1381 @@
+{
+  "Akron, The University of": {
+    "firstTimeTakers": 129,
+    "firstTimePassers": 93,
+    "schoolPassRate": 72.09,
+    "stateAvgPassRate": 80.46,
+    "passDifference": -8.37
+  },
+  "Alabama, The University of": {
+    "firstTimeTakers": 151,
+    "firstTimePassers": 138,
+    "schoolPassRate": 91.39,
+    "stateAvgPassRate": 80.44,
+    "passDifference": 10.95
+  },
+  "Albany Law School": {
+    "firstTimeTakers": 206,
+    "firstTimePassers": 153,
+    "schoolPassRate": 74.27,
+    "stateAvgPassRate": 85.75,
+    "passDifference": -11.48
+  },
+  "American University": {
+    "firstTimeTakers": 374,
+    "firstTimePassers": 304,
+    "schoolPassRate": 81.28,
+    "stateAvgPassRate": 81.98,
+    "passDifference": -0.7
+  },
+  "Appalachian School of Law": {
+    "firstTimeTakers": 38,
+    "firstTimePassers": 24,
+    "schoolPassRate": 63.16,
+    "stateAvgPassRate": 77.16,
+    "passDifference": -14
+  },
+  "Arizona State University": {
+    "firstTimeTakers": 289,
+    "firstTimePassers": 253,
+    "schoolPassRate": 87.54,
+    "stateAvgPassRate": 75.03,
+    "passDifference": 12.51
+  },
+  "Arizona, The University of": {
+    "firstTimeTakers": 115,
+    "firstTimePassers": 83,
+    "schoolPassRate": 72.17,
+    "stateAvgPassRate": 75.3,
+    "passDifference": -3.13
+  },
+  "Arkansas at Little Rock, University of": {
+    "firstTimeTakers": 136,
+    "firstTimePassers": 100,
+    "schoolPassRate": 73.53,
+    "stateAvgPassRate": 76.51,
+    "passDifference": -2.98
+  },
+  "Arkansas, University of": {
+    "firstTimeTakers": 120,
+    "firstTimePassers": 96,
+    "schoolPassRate": 80,
+    "stateAvgPassRate": 77.09,
+    "passDifference": 2.91
+  },
+  "Atlanta's John Marshall Law School": {
+    "firstTimeTakers": 76,
+    "firstTimePassers": 52,
+    "schoolPassRate": 68.42,
+    "stateAvgPassRate": 80.24,
+    "passDifference": -11.82
+  },
+  "Ave Maria School of Law": {
+    "firstTimeTakers": 85,
+    "firstTimePassers": 56,
+    "schoolPassRate": 65.88,
+    "stateAvgPassRate": 73.82,
+    "passDifference": -7.94
+  },
+  "Baltimore, University of": {
+    "firstTimeTakers": 198,
+    "firstTimePassers": 140,
+    "schoolPassRate": 70.71,
+    "stateAvgPassRate": 70.64,
+    "passDifference": 0.07
+  },
+  "Barry University": {
+    "firstTimeTakers": 239,
+    "firstTimePassers": 164,
+    "schoolPassRate": 68.62,
+    "stateAvgPassRate": 73.45,
+    "passDifference": -4.83
+  },
+  "Baylor University": {
+    "firstTimeTakers": 197,
+    "firstTimePassers": 187,
+    "schoolPassRate": 94.92,
+    "stateAvgPassRate": 81.44,
+    "passDifference": 13.48
+  },
+  "Belmont University": {
+    "firstTimeTakers": 120,
+    "firstTimePassers": 114,
+    "schoolPassRate": 95,
+    "stateAvgPassRate": 77.95,
+    "passDifference": 17.05
+  },
+  "Boston College": {
+    "firstTimeTakers": 340,
+    "firstTimePassers": 319,
+    "schoolPassRate": 93.82,
+    "stateAvgPassRate": 83.55,
+    "passDifference": 10.27
+  },
+  "Boston University": {
+    "firstTimeTakers": 298,
+    "firstTimePassers": 275,
+    "schoolPassRate": 92.28,
+    "stateAvgPassRate": 83.3,
+    "passDifference": 8.98
+  },
+  "Brigham Young University": {
+    "firstTimeTakers": 136,
+    "firstTimePassers": 123,
+    "schoolPassRate": 90.44,
+    "stateAvgPassRate": 83.58,
+    "passDifference": 6.86
+  },
+  "Brooklyn Law School": {
+    "firstTimeTakers": 393,
+    "firstTimePassers": 332,
+    "schoolPassRate": 84.48,
+    "stateAvgPassRate": 85.73,
+    "passDifference": -1.25
+  },
+  "Buffalo, University at": {
+    "firstTimeTakers": 154,
+    "firstTimePassers": 132,
+    "schoolPassRate": 85.71,
+    "stateAvgPassRate": 86.24,
+    "passDifference": -0.53
+  },
+  "California Western School of Law": {
+    "firstTimeTakers": 213,
+    "firstTimePassers": 134,
+    "schoolPassRate": 62.91,
+    "stateAvgPassRate": 77.53,
+    "passDifference": -14.62
+  },
+  "California-Berkeley, University of": {
+    "firstTimeTakers": 396,
+    "firstTimePassers": 361,
+    "schoolPassRate": 91.16,
+    "stateAvgPassRate": 79.91,
+    "passDifference": 11.25
+  },
+  "California-Davis, University of": {
+    "firstTimeTakers": 235,
+    "firstTimePassers": 209,
+    "schoolPassRate": 88.94,
+    "stateAvgPassRate": 77.78,
+    "passDifference": 11.16
+  },
+  "California-Irvine, University of": {
+    "firstTimeTakers": 159,
+    "firstTimePassers": 136,
+    "schoolPassRate": 85.53,
+    "stateAvgPassRate": 77.98,
+    "passDifference": 7.55
+  },
+  "California-Los Angeles, University of": {
+    "firstTimeTakers": 364,
+    "firstTimePassers": 343,
+    "schoolPassRate": 94.23,
+    "stateAvgPassRate": 78.85,
+    "passDifference": 15.38
+  },
+  "California-San Francisco, University of": {
+    "firstTimeTakers": 359,
+    "firstTimePassers": 301,
+    "schoolPassRate": 83.84,
+    "stateAvgPassRate": 77.87,
+    "passDifference": 5.97
+  },
+  "Campbell University": {
+    "firstTimeTakers": 164,
+    "firstTimePassers": 140,
+    "schoolPassRate": 85.37,
+    "stateAvgPassRate": 79.05,
+    "passDifference": 6.32
+  },
+  "Capital University Law School": {
+    "firstTimeTakers": 144,
+    "firstTimePassers": 104,
+    "schoolPassRate": 72.22,
+    "stateAvgPassRate": 80.4,
+    "passDifference": -8.18
+  },
+  "Cardozo, Yeshiva University": {
+    "firstTimeTakers": 321,
+    "firstTimePassers": 284,
+    "schoolPassRate": 88.47,
+    "stateAvgPassRate": 85.16,
+    "passDifference": 3.31
+  },
+  "Case Western Reserve University": {
+    "firstTimeTakers": 161,
+    "firstTimePassers": 132,
+    "schoolPassRate": 81.99,
+    "stateAvgPassRate": 81,
+    "passDifference": 0.99
+  },
+  "Catholic University of America, The": {
+    "firstTimeTakers": 130,
+    "firstTimePassers": 108,
+    "schoolPassRate": 83.08,
+    "stateAvgPassRate": 81.09,
+    "passDifference": 1.99
+  },
+  "Chapman University": {
+    "firstTimeTakers": 143,
+    "firstTimePassers": 106,
+    "schoolPassRate": 74.13,
+    "stateAvgPassRate": 77.65,
+    "passDifference": -3.52
+  },
+  "Charleston School of Law": {
+    "firstTimeTakers": 216,
+    "firstTimePassers": 160,
+    "schoolPassRate": 74.07,
+    "stateAvgPassRate": 76.83,
+    "passDifference": -2.76
+  },
+  "Chicago, The University of": {
+    "firstTimeTakers": 194,
+    "firstTimePassers": 189,
+    "schoolPassRate": 97.42,
+    "stateAvgPassRate": 81.49,
+    "passDifference": 15.93
+  },
+  "Chicago-Kent, Illinois Institute of Technology": {
+    "firstTimeTakers": 205,
+    "firstTimePassers": 162,
+    "schoolPassRate": 79.02,
+    "stateAvgPassRate": 78.68,
+    "passDifference": 0.34
+  },
+  "Cincinnati, University of": {
+    "firstTimeTakers": 118,
+    "firstTimePassers": 101,
+    "schoolPassRate": 85.59,
+    "stateAvgPassRate": 80.62,
+    "passDifference": 4.97
+  },
+  "City University of New York, University of": {
+    "firstTimeTakers": 201,
+    "firstTimePassers": 132,
+    "schoolPassRate": 65.67,
+    "stateAvgPassRate": 86,
+    "passDifference": -20.33
+  },
+  "Cleveland State University": {
+    "firstTimeTakers": 110,
+    "firstTimePassers": 83,
+    "schoolPassRate": 75.45,
+    "stateAvgPassRate": 80.52,
+    "passDifference": -5.07
+  },
+  "Colorado, University of": {
+    "firstTimeTakers": 167,
+    "firstTimePassers": 151,
+    "schoolPassRate": 90.42,
+    "stateAvgPassRate": 84.93,
+    "passDifference": 5.49
+  },
+  "Columbia University": {
+    "firstTimeTakers": 506,
+    "firstTimePassers": 485,
+    "schoolPassRate": 95.85,
+    "stateAvgPassRate": 84.98,
+    "passDifference": 10.87
+  },
+  "Connecticut, University of": {
+    "firstTimeTakers": 150,
+    "firstTimePassers": 126,
+    "schoolPassRate": 84,
+    "stateAvgPassRate": 75.84,
+    "passDifference": 8.16
+  },
+  "Cooley Law School": {
+    "firstTimeTakers": 130,
+    "firstTimePassers": 67,
+    "schoolPassRate": 51.54,
+    "stateAvgPassRate": 74.12,
+    "passDifference": -22.58
+  },
+  "Cornell University": {
+    "firstTimeTakers": 195,
+    "firstTimePassers": 188,
+    "schoolPassRate": 96.41,
+    "stateAvgPassRate": 84.73,
+    "passDifference": 11.68
+  },
+  "Creighton University": {
+    "firstTimeTakers": 146,
+    "firstTimePassers": 106,
+    "schoolPassRate": 72.6,
+    "stateAvgPassRate": 82.74,
+    "passDifference": -10.14
+  },
+  "Dayton, University of": {
+    "firstTimeTakers": 108,
+    "firstTimePassers": 95,
+    "schoolPassRate": 87.96,
+    "stateAvgPassRate": 80.1,
+    "passDifference": 7.86
+  },
+  "Denver, University of": {
+    "firstTimeTakers": 225,
+    "firstTimePassers": 191,
+    "schoolPassRate": 84.89,
+    "stateAvgPassRate": 85.07,
+    "passDifference": -0.18
+  },
+  "DePaul University": {
+    "firstTimeTakers": 171,
+    "firstTimePassers": 130,
+    "schoolPassRate": 76.02,
+    "stateAvgPassRate": 78.56,
+    "passDifference": -2.54
+  },
+  "Detroit Mercy, University of": {
+    "firstTimeTakers": 144,
+    "firstTimePassers": 102,
+    "schoolPassRate": 70.83,
+    "stateAvgPassRate": 73.25,
+    "passDifference": -2.42
+  },
+  "District of Columbia, University of": {
+    "firstTimeTakers": 61,
+    "firstTimePassers": 40,
+    "schoolPassRate": 65.57,
+    "stateAvgPassRate": 80.64,
+    "passDifference": -15.07
+  },
+  "Drake University": {
+    "firstTimeTakers": 105,
+    "firstTimePassers": 90,
+    "schoolPassRate": 85.71,
+    "stateAvgPassRate": 83.73,
+    "passDifference": 1.98
+  },
+  "Drexel University": {
+    "firstTimeTakers": 140,
+    "firstTimePassers": 119,
+    "schoolPassRate": 85,
+    "stateAvgPassRate": 79.48,
+    "passDifference": 5.52
+  },
+  "Duke University": {
+    "firstTimeTakers": 278,
+    "firstTimePassers": 271,
+    "schoolPassRate": 97.48,
+    "stateAvgPassRate": 82.94,
+    "passDifference": 14.54
+  },
+  "Duquesne University": {
+    "firstTimeTakers": 151,
+    "firstTimePassers": 134,
+    "schoolPassRate": 88.74,
+    "stateAvgPassRate": 80.14,
+    "passDifference": 8.6
+  },
+  "Elon University": {
+    "firstTimeTakers": 138,
+    "firstTimePassers": 106,
+    "schoolPassRate": 76.81,
+    "stateAvgPassRate": 78.83,
+    "passDifference": -2.02
+  },
+  "Emory University": {
+    "firstTimeTakers": 292,
+    "firstTimePassers": 258,
+    "schoolPassRate": 88.36,
+    "stateAvgPassRate": 80.47,
+    "passDifference": 7.89
+  },
+  "Faulkner University": {
+    "firstTimeTakers": 70,
+    "firstTimePassers": 50,
+    "schoolPassRate": 71.43,
+    "stateAvgPassRate": 80.6,
+    "passDifference": -9.17
+  },
+  "Florida A&M University": {
+    "firstTimeTakers": 65,
+    "firstTimePassers": 49,
+    "schoolPassRate": 75.38,
+    "stateAvgPassRate": 73.28,
+    "passDifference": 2.1
+  },
+  "Florida International University": {
+    "firstTimeTakers": 163,
+    "firstTimePassers": 144,
+    "schoolPassRate": 88.34,
+    "stateAvgPassRate": 72.91,
+    "passDifference": 15.43
+  },
+  "Florida State University": {
+    "firstTimeTakers": 180,
+    "firstTimePassers": 157,
+    "schoolPassRate": 87.22,
+    "stateAvgPassRate": 73.35,
+    "passDifference": 13.87
+  },
+  "Florida, University of": {
+    "firstTimeTakers": 262,
+    "firstTimePassers": 232,
+    "schoolPassRate": 88.55,
+    "stateAvgPassRate": 75.2,
+    "passDifference": 13.35
+  },
+  "Fordham University": {
+    "firstTimeTakers": 456,
+    "firstTimePassers": 424,
+    "schoolPassRate": 92.98,
+    "stateAvgPassRate": 85.77,
+    "passDifference": 7.21
+  },
+  "George Mason University": {
+    "firstTimeTakers": 235,
+    "firstTimePassers": 202,
+    "schoolPassRate": 85.96,
+    "stateAvgPassRate": 80.68,
+    "passDifference": 5.28
+  },
+  "George Washington University, The": {
+    "firstTimeTakers": 511,
+    "firstTimePassers": 461,
+    "schoolPassRate": 90.22,
+    "stateAvgPassRate": 82.71,
+    "passDifference": 7.51
+  },
+  "Georgetown University": {
+    "firstTimeTakers": 633,
+    "firstTimePassers": 589,
+    "schoolPassRate": 93.05,
+    "stateAvgPassRate": 83.29,
+    "passDifference": 9.76
+  },
+  "Georgia State University": {
+    "firstTimeTakers": 189,
+    "firstTimePassers": 170,
+    "schoolPassRate": 89.95,
+    "stateAvgPassRate": 79.87,
+    "passDifference": 10.08
+  },
+  "Georgia, University of": {
+    "firstTimeTakers": 187,
+    "firstTimePassers": 169,
+    "schoolPassRate": 90.37,
+    "stateAvgPassRate": 79.72,
+    "passDifference": 10.65
+  },
+  "Gonzaga University": {
+    "firstTimeTakers": 153,
+    "firstTimePassers": 122,
+    "schoolPassRate": 79.74,
+    "stateAvgPassRate": 81.33,
+    "passDifference": -1.59
+  },
+  "Harvard University": {
+    "firstTimeTakers": 608,
+    "firstTimePassers": 595,
+    "schoolPassRate": 97.86,
+    "stateAvgPassRate": 83.44,
+    "passDifference": 14.42
+  },
+  "Hawaii, University of": {
+    "firstTimeTakers": 91,
+    "firstTimePassers": 70,
+    "schoolPassRate": 76.92,
+    "stateAvgPassRate": 74.94,
+    "passDifference": 1.98
+  },
+  "Hofstra University": {
+    "firstTimeTakers": 275,
+    "firstTimePassers": 217,
+    "schoolPassRate": 78.91,
+    "stateAvgPassRate": 85.69,
+    "passDifference": -6.78
+  },
+  "Houston, University of": {
+    "firstTimeTakers": 255,
+    "firstTimePassers": 226,
+    "schoolPassRate": 88.63,
+    "stateAvgPassRate": 81.34,
+    "passDifference": 7.29
+  },
+  "Howard University": {
+    "firstTimeTakers": 155,
+    "firstTimePassers": 119,
+    "schoolPassRate": 76.77,
+    "stateAvgPassRate": 82.24,
+    "passDifference": -5.47
+  },
+  "Idaho, University of": {
+    "firstTimeTakers": 117,
+    "firstTimePassers": 80,
+    "schoolPassRate": 68.38,
+    "stateAvgPassRate": 78.38,
+    "passDifference": -10
+  },
+  "Illinois, University of": {
+    "firstTimeTakers": 202,
+    "firstTimePassers": 189,
+    "schoolPassRate": 93.56,
+    "stateAvgPassRate": 79.05,
+    "passDifference": 14.51
+  },
+  "Illinois-Chicago, University of": {
+    "firstTimeTakers": 296,
+    "firstTimePassers": 178,
+    "schoolPassRate": 60.14,
+    "stateAvgPassRate": 78.83,
+    "passDifference": -18.69
+  },
+  "Indiana University-Bloomington": {
+    "firstTimeTakers": 190,
+    "firstTimePassers": 166,
+    "schoolPassRate": 87.37,
+    "stateAvgPassRate": 79.1,
+    "passDifference": 8.27
+  },
+  "Indiana University-Indianapolis": {
+    "firstTimeTakers": 222,
+    "firstTimePassers": 164,
+    "schoolPassRate": 73.87,
+    "stateAvgPassRate": 77.95,
+    "passDifference": -4.08
+  },
+  "Inter American University of Puerto Rico": {
+    "firstTimeTakers": 137,
+    "firstTimePassers": 66,
+    "schoolPassRate": 48.18,
+    "stateAvgPassRate": 51.95,
+    "passDifference": -3.77
+  },
+  "Iowa, University of": {
+    "firstTimeTakers": 166,
+    "firstTimePassers": 151,
+    "schoolPassRate": 90.96,
+    "stateAvgPassRate": 82.1,
+    "passDifference": 8.86
+  },
+  "Kansas, The University of": {
+    "firstTimeTakers": 115,
+    "firstTimePassers": 106,
+    "schoolPassRate": 92.17,
+    "stateAvgPassRate": 80.59,
+    "passDifference": 11.58
+  },
+  "Kentucky, University of": {
+    "firstTimeTakers": 136,
+    "firstTimePassers": 113,
+    "schoolPassRate": 83.09,
+    "stateAvgPassRate": 78.83,
+    "passDifference": 4.26
+  },
+  "Lewis & Clark Law School": {
+    "firstTimeTakers": 187,
+    "firstTimePassers": 159,
+    "schoolPassRate": 85.03,
+    "stateAvgPassRate": 75.03,
+    "passDifference": 10
+  },
+  "Liberty University": {
+    "firstTimeTakers": 112,
+    "firstTimePassers": 95,
+    "schoolPassRate": 84.82,
+    "stateAvgPassRate": 77.78,
+    "passDifference": 7.04
+  },
+  "Lincoln Memorial University": {
+    "firstTimeTakers": 102,
+    "firstTimePassers": 65,
+    "schoolPassRate": 63.73,
+    "stateAvgPassRate": 78.36,
+    "passDifference": -14.63
+  },
+  "Louisiana State University": {
+    "firstTimeTakers": 179,
+    "firstTimePassers": 152,
+    "schoolPassRate": 84.92,
+    "stateAvgPassRate": 74.57,
+    "passDifference": 10.35
+  },
+  "Louisville, University of": {
+    "firstTimeTakers": 123,
+    "firstTimePassers": 93,
+    "schoolPassRate": 75.61,
+    "stateAvgPassRate": 78.52,
+    "passDifference": -2.91
+  },
+  "Loyola Marymount University-Los Angeles": {
+    "firstTimeTakers": 329,
+    "firstTimePassers": 277,
+    "schoolPassRate": 84.19,
+    "stateAvgPassRate": 77.65,
+    "passDifference": 6.54
+  },
+  "Loyola University-Chicago": {
+    "firstTimeTakers": 345,
+    "firstTimePassers": 276,
+    "schoolPassRate": 80,
+    "stateAvgPassRate": 78.82,
+    "passDifference": 1.18
+  },
+  "Loyola University-New Orleans": {
+    "firstTimeTakers": 187,
+    "firstTimePassers": 129,
+    "schoolPassRate": 68.98,
+    "stateAvgPassRate": 76.04,
+    "passDifference": -7.06
+  },
+  "Maine, University of": {
+    "firstTimeTakers": 77,
+    "firstTimePassers": 65,
+    "schoolPassRate": 84.42,
+    "stateAvgPassRate": 75.15,
+    "passDifference": 9.27
+  },
+  "Marquette University": {
+    "firstTimeTakers": 2,
+    "firstTimePassers": 1,
+    "schoolPassRate": 50,
+    "stateAvgPassRate": 70.94,
+    "passDifference": -20.94
+  },
+  "Maryland, University of": {
+    "firstTimeTakers": 229,
+    "firstTimePassers": 188,
+    "schoolPassRate": 82.1,
+    "stateAvgPassRate": 72.24,
+    "passDifference": 9.86
+  },
+  "Massachusetts/Dartmouth, University of": {
+    "firstTimeTakers": 108,
+    "firstTimePassers": 63,
+    "schoolPassRate": 58.33,
+    "stateAvgPassRate": 78.83,
+    "passDifference": -20.5
+  },
+  "Memphis, The University of": {
+    "firstTimeTakers": 94,
+    "firstTimePassers": 69,
+    "schoolPassRate": 73.4,
+    "stateAvgPassRate": 78.52,
+    "passDifference": -5.12
+  },
+  "Mercer University": {
+    "firstTimeTakers": 100,
+    "firstTimePassers": 84,
+    "schoolPassRate": 84,
+    "stateAvgPassRate": 79.31,
+    "passDifference": 4.69
+  },
+  "Miami, University of": {
+    "firstTimeTakers": 406,
+    "firstTimePassers": 330,
+    "schoolPassRate": 81.28,
+    "stateAvgPassRate": 74.6,
+    "passDifference": 6.68
+  },
+  "Michigan State University": {
+    "firstTimeTakers": 217,
+    "firstTimePassers": 170,
+    "schoolPassRate": 78.34,
+    "stateAvgPassRate": 74.39,
+    "passDifference": 3.95
+  },
+  "Michigan, University of": {
+    "firstTimeTakers": 316,
+    "firstTimePassers": 302,
+    "schoolPassRate": 95.57,
+    "stateAvgPassRate": 80.44,
+    "passDifference": 15.13
+  },
+  "Minnesota, University of": {
+    "firstTimeTakers": 237,
+    "firstTimePassers": 223,
+    "schoolPassRate": 94.09,
+    "stateAvgPassRate": 83.36,
+    "passDifference": 10.73
+  },
+  "Mississippi College": {
+    "firstTimeTakers": 123,
+    "firstTimePassers": 78,
+    "schoolPassRate": 63.41,
+    "stateAvgPassRate": 79.66,
+    "passDifference": -16.25
+  },
+  "Mississippi, The University of": {
+    "firstTimeTakers": 164,
+    "firstTimePassers": 120,
+    "schoolPassRate": 73.17,
+    "stateAvgPassRate": 79.74,
+    "passDifference": -6.57
+  },
+  "Missouri, University of": {
+    "firstTimeTakers": 132,
+    "firstTimePassers": 110,
+    "schoolPassRate": 83.33,
+    "stateAvgPassRate": 82.12,
+    "passDifference": 1.21
+  },
+  "Missouri-Kansas City, University of": {
+    "firstTimeTakers": 126,
+    "firstTimePassers": 106,
+    "schoolPassRate": 84.13,
+    "stateAvgPassRate": 82.17,
+    "passDifference": 1.96
+  },
+  "Mitchell/Hamline School of Law": {
+    "firstTimeTakers": 379,
+    "firstTimePassers": 269,
+    "schoolPassRate": 70.98,
+    "stateAvgPassRate": 81.61,
+    "passDifference": -10.63
+  },
+  "Montana, University of": {
+    "firstTimeTakers": 78,
+    "firstTimePassers": 64,
+    "schoolPassRate": 82.05,
+    "stateAvgPassRate": 80.67,
+    "passDifference": 1.38
+  },
+  "Nebraska, University of": {
+    "firstTimeTakers": 148,
+    "firstTimePassers": 134,
+    "schoolPassRate": 90.54,
+    "stateAvgPassRate": 83.11,
+    "passDifference": 7.43
+  },
+  "Nevada-Las Vegas, University of": {
+    "firstTimeTakers": 162,
+    "firstTimePassers": 125,
+    "schoolPassRate": 77.16,
+    "stateAvgPassRate": 70.94,
+    "passDifference": 6.22
+  },
+  "New England Law/Boston": {
+    "firstTimeTakers": 269,
+    "firstTimePassers": 213,
+    "schoolPassRate": 79.18,
+    "stateAvgPassRate": 83.29,
+    "passDifference": -4.11
+  },
+  "New Hampshire, University of": {
+    "firstTimeTakers": 156,
+    "firstTimePassers": 124,
+    "schoolPassRate": 79.49,
+    "stateAvgPassRate": 79.2,
+    "passDifference": 0.29
+  },
+  "New Mexico, The University of": {
+    "firstTimeTakers": 112,
+    "firstTimePassers": 96,
+    "schoolPassRate": 85.71,
+    "stateAvgPassRate": 81.2,
+    "passDifference": 4.51
+  },
+  "New York Law School": {
+    "firstTimeTakers": 337,
+    "firstTimePassers": 276,
+    "schoolPassRate": 81.9,
+    "stateAvgPassRate": 84.68,
+    "passDifference": -2.78
+  },
+  "New York University": {
+    "firstTimeTakers": 519,
+    "firstTimePassers": 502,
+    "schoolPassRate": 96.72,
+    "stateAvgPassRate": 85.02,
+    "passDifference": 11.7
+  },
+  "North Carolina Central University": {
+    "firstTimeTakers": 143,
+    "firstTimePassers": 80,
+    "schoolPassRate": 55.94,
+    "stateAvgPassRate": 79.92,
+    "passDifference": -23.98
+  },
+  "North Carolina, University of": {
+    "firstTimeTakers": 207,
+    "firstTimePassers": 191,
+    "schoolPassRate": 92.27,
+    "stateAvgPassRate": 79.6,
+    "passDifference": 12.67
+  },
+  "North Dakota, University of": {
+    "firstTimeTakers": 79,
+    "firstTimePassers": 54,
+    "schoolPassRate": 68.35,
+    "stateAvgPassRate": 73.32,
+    "passDifference": -4.97
+  },
+  "North Texas at Dallas, University of": {
+    "firstTimeTakers": 91,
+    "firstTimePassers": 66,
+    "schoolPassRate": 72.53,
+    "stateAvgPassRate": 81.48,
+    "passDifference": -8.95
+  },
+  "Northeastern University": {
+    "firstTimeTakers": 222,
+    "firstTimePassers": 194,
+    "schoolPassRate": 87.39,
+    "stateAvgPassRate": 82.85,
+    "passDifference": 4.54
+  },
+  "Northern Illinois University": {
+    "firstTimeTakers": 91,
+    "firstTimePassers": 52,
+    "schoolPassRate": 57.14,
+    "stateAvgPassRate": 78.65,
+    "passDifference": -21.51
+  },
+  "Northern Kentucky University": {
+    "firstTimeTakers": 130,
+    "firstTimePassers": 96,
+    "schoolPassRate": 73.85,
+    "stateAvgPassRate": 79.5,
+    "passDifference": -5.65
+  },
+  "Northwestern University": {
+    "firstTimeTakers": 256,
+    "firstTimePassers": 235,
+    "schoolPassRate": 91.8,
+    "stateAvgPassRate": 81,
+    "passDifference": 10.8
+  },
+  "Notre Dame, University of": {
+    "firstTimeTakers": 191,
+    "firstTimePassers": 176,
+    "schoolPassRate": 92.15,
+    "stateAvgPassRate": 79.83,
+    "passDifference": 12.32
+  },
+  "Nova Southeastern University": {
+    "firstTimeTakers": 190,
+    "firstTimePassers": 128,
+    "schoolPassRate": 67.37,
+    "stateAvgPassRate": 72.78,
+    "passDifference": -5.41
+  },
+  "Ohio Northern University": {
+    "firstTimeTakers": 57,
+    "firstTimePassers": 39,
+    "schoolPassRate": 68.42,
+    "stateAvgPassRate": 79.73,
+    "passDifference": -11.31
+  },
+  "Oklahoma City University": {
+    "firstTimeTakers": 125,
+    "firstTimePassers": 94,
+    "schoolPassRate": 75.2,
+    "stateAvgPassRate": 80.27,
+    "passDifference": -5.07
+  },
+  "Oklahoma, University of": {
+    "firstTimeTakers": 187,
+    "firstTimePassers": 166,
+    "schoolPassRate": 88.77,
+    "stateAvgPassRate": 80.56,
+    "passDifference": 8.21
+  },
+  "Oregon, University of": {
+    "firstTimeTakers": 154,
+    "firstTimePassers": 131,
+    "schoolPassRate": 85.06,
+    "stateAvgPassRate": 76.32,
+    "passDifference": 8.74
+  },
+  "Pace University": {
+    "firstTimeTakers": 248,
+    "firstTimePassers": 170,
+    "schoolPassRate": 68.55,
+    "stateAvgPassRate": 84.39,
+    "passDifference": -15.84
+  },
+  "Pacific, University of the": {
+    "firstTimeTakers": 146,
+    "firstTimePassers": 103,
+    "schoolPassRate": 70.55,
+    "stateAvgPassRate": 77.62,
+    "passDifference": -7.07
+  },
+  "Penn State Dickinson Law": {
+    "firstTimeTakers": 216,
+    "firstTimePassers": 188,
+    "schoolPassRate": 87.04,
+    "stateAvgPassRate": 79.66,
+    "passDifference": 7.38
+  },
+  "Pennsylvania, University of": {
+    "firstTimeTakers": 303,
+    "firstTimePassers": 293,
+    "schoolPassRate": 96.7,
+    "stateAvgPassRate": 82.93,
+    "passDifference": 13.77
+  },
+  "Pepperdine University": {
+    "firstTimeTakers": 189,
+    "firstTimePassers": 164,
+    "schoolPassRate": 86.77,
+    "stateAvgPassRate": 78.03,
+    "passDifference": 8.74
+  },
+  "Pittsburgh, University of": {
+    "firstTimeTakers": 139,
+    "firstTimePassers": 120,
+    "schoolPassRate": 86.33,
+    "stateAvgPassRate": 80.21,
+    "passDifference": 6.12
+  },
+  "Pontifical Catholic University of Puerto Rico": {
+    "firstTimeTakers": 102,
+    "firstTimePassers": 56,
+    "schoolPassRate": 54.9,
+    "stateAvgPassRate": 52.08,
+    "passDifference": 2.82
+  },
+  "Puerto Rico, University of": {
+    "firstTimeTakers": 127,
+    "firstTimePassers": 74,
+    "schoolPassRate": 58.27,
+    "stateAvgPassRate": 53.17,
+    "passDifference": 5.1
+  },
+  "Quinnipiac University": {
+    "firstTimeTakers": 114,
+    "firstTimePassers": 84,
+    "schoolPassRate": 73.68,
+    "stateAvgPassRate": 73.89,
+    "passDifference": -0.21
+  },
+  "Regent University": {
+    "firstTimeTakers": 110,
+    "firstTimePassers": 97,
+    "schoolPassRate": 88.18,
+    "stateAvgPassRate": 77.6,
+    "passDifference": 10.58
+  },
+  "Richmond, University of": {
+    "firstTimeTakers": 151,
+    "firstTimePassers": 121,
+    "schoolPassRate": 80.13,
+    "stateAvgPassRate": 77.32,
+    "passDifference": 2.81
+  },
+  "Roger Williams University": {
+    "firstTimeTakers": 177,
+    "firstTimePassers": 101,
+    "schoolPassRate": 57.06,
+    "stateAvgPassRate": 76.37,
+    "passDifference": -19.31
+  },
+  "Rutgers University": {
+    "firstTimeTakers": 434,
+    "firstTimePassers": 316,
+    "schoolPassRate": 72.81,
+    "stateAvgPassRate": 75.12,
+    "passDifference": -2.31
+  },
+  "Saint Louis University": {
+    "firstTimeTakers": 181,
+    "firstTimePassers": 152,
+    "schoolPassRate": 83.98,
+    "stateAvgPassRate": 81.88,
+    "passDifference": 2.1
+  },
+  "Samford University": {
+    "firstTimeTakers": 151,
+    "firstTimePassers": 119,
+    "schoolPassRate": 78.81,
+    "stateAvgPassRate": 80.15,
+    "passDifference": -1.34
+  },
+  "San Diego, University of": {
+    "firstTimeTakers": 250,
+    "firstTimePassers": 212,
+    "schoolPassRate": 84.8,
+    "stateAvgPassRate": 77.82,
+    "passDifference": 6.98
+  },
+  "San Francisco, University of": {
+    "firstTimeTakers": 114,
+    "firstTimePassers": 85,
+    "schoolPassRate": 74.56,
+    "stateAvgPassRate": 77.74,
+    "passDifference": -3.18
+  },
+  "Santa Clara University": {
+    "firstTimeTakers": 214,
+    "firstTimePassers": 160,
+    "schoolPassRate": 74.77,
+    "stateAvgPassRate": 77.97,
+    "passDifference": -3.2
+  },
+  "Seattle University": {
+    "firstTimeTakers": 207,
+    "firstTimePassers": 163,
+    "schoolPassRate": 78.74,
+    "stateAvgPassRate": 82.24,
+    "passDifference": -3.5
+  },
+  "Seton Hall University": {
+    "firstTimeTakers": 305,
+    "firstTimePassers": 266,
+    "schoolPassRate": 87.21,
+    "stateAvgPassRate": 75.69,
+    "passDifference": 11.52
+  },
+  "South Carolina, University of": {
+    "firstTimeTakers": 209,
+    "firstTimePassers": 174,
+    "schoolPassRate": 83.25,
+    "stateAvgPassRate": 75.81,
+    "passDifference": 7.44
+  },
+  "South Dakota, University of": {
+    "firstTimeTakers": 73,
+    "firstTimePassers": 53,
+    "schoolPassRate": 72.6,
+    "stateAvgPassRate": 78.62,
+    "passDifference": -6.02
+  },
+  "South Texas College of Law Houston": {
+    "firstTimeTakers": 293,
+    "firstTimePassers": 267,
+    "schoolPassRate": 91.13,
+    "stateAvgPassRate": 81.42,
+    "passDifference": 9.71
+  },
+  "Southern California, University of": {
+    "firstTimeTakers": 217,
+    "firstTimePassers": 204,
+    "schoolPassRate": 94.01,
+    "stateAvgPassRate": 78.74,
+    "passDifference": 15.27
+  },
+  "Southern Illinois University": {
+    "firstTimeTakers": 79,
+    "firstTimePassers": 47,
+    "schoolPassRate": 59.49,
+    "stateAvgPassRate": 79.22,
+    "passDifference": -19.73
+  },
+  "Southern Methodist University": {
+    "firstTimeTakers": 245,
+    "firstTimePassers": 221,
+    "schoolPassRate": 90.2,
+    "stateAvgPassRate": 81.36,
+    "passDifference": 8.84
+  },
+  "Southern University": {
+    "firstTimeTakers": 121,
+    "firstTimePassers": 73,
+    "schoolPassRate": 60.33,
+    "stateAvgPassRate": 75.91,
+    "passDifference": -15.58
+  },
+  "Southwestern Law School": {
+    "firstTimeTakers": 288,
+    "firstTimePassers": 187,
+    "schoolPassRate": 64.93,
+    "stateAvgPassRate": 77.76,
+    "passDifference": -12.83
+  },
+  "St. John's University": {
+    "firstTimeTakers": 261,
+    "firstTimePassers": 229,
+    "schoolPassRate": 87.74,
+    "stateAvgPassRate": 86.11,
+    "passDifference": 1.63
+  },
+  "St. Mary's University": {
+    "firstTimeTakers": 243,
+    "firstTimePassers": 160,
+    "schoolPassRate": 65.84,
+    "stateAvgPassRate": 81.51,
+    "passDifference": -15.67
+  },
+  "St. Thomas University (Miami)": {
+    "firstTimeTakers": 246,
+    "firstTimePassers": 199,
+    "schoolPassRate": 80.89,
+    "stateAvgPassRate": 72.73,
+    "passDifference": 8.16
+  },
+  "St. Thomas, (Minneapolis) University of": {
+    "firstTimeTakers": 166,
+    "firstTimePassers": 124,
+    "schoolPassRate": 74.7,
+    "stateAvgPassRate": 84.41,
+    "passDifference": -9.71
+  },
+  "Stanford University": {
+    "firstTimeTakers": 200,
+    "firstTimePassers": 193,
+    "schoolPassRate": 96.5,
+    "stateAvgPassRate": 81.4,
+    "passDifference": 15.1
+  },
+  "Stetson University": {
+    "firstTimeTakers": 283,
+    "firstTimePassers": 218,
+    "schoolPassRate": 77.03,
+    "stateAvgPassRate": 73.18,
+    "passDifference": 3.85
+  },
+  "Suffolk University": {
+    "firstTimeTakers": 383,
+    "firstTimePassers": 304,
+    "schoolPassRate": 79.37,
+    "stateAvgPassRate": 83.51,
+    "passDifference": -4.14
+  },
+  "Syracuse University": {
+    "firstTimeTakers": 193,
+    "firstTimePassers": 160,
+    "schoolPassRate": 82.9,
+    "stateAvgPassRate": 82.61,
+    "passDifference": 0.29
+  },
+  "Temple University": {
+    "firstTimeTakers": 216,
+    "firstTimePassers": 195,
+    "schoolPassRate": 90.28,
+    "stateAvgPassRate": 79.72,
+    "passDifference": 10.56
+  },
+  "Tennessee, University of": {
+    "firstTimeTakers": 124,
+    "firstTimePassers": 114,
+    "schoolPassRate": 91.94,
+    "stateAvgPassRate": 78.49,
+    "passDifference": 13.45
+  },
+  "Texas A&M University": {
+    "firstTimeTakers": 174,
+    "firstTimePassers": 167,
+    "schoolPassRate": 95.98,
+    "stateAvgPassRate": 81.39,
+    "passDifference": 14.59
+  },
+  "Texas Southern University": {
+    "firstTimeTakers": 199,
+    "firstTimePassers": 144,
+    "schoolPassRate": 72.36,
+    "stateAvgPassRate": 81.3,
+    "passDifference": -8.94
+  },
+  "Texas Tech University": {
+    "firstTimeTakers": 146,
+    "firstTimePassers": 126,
+    "schoolPassRate": 86.3,
+    "stateAvgPassRate": 81.48,
+    "passDifference": 4.82
+  },
+  "Texas, University of": {
+    "firstTimeTakers": 411,
+    "firstTimePassers": 394,
+    "schoolPassRate": 95.86,
+    "stateAvgPassRate": 81.57,
+    "passDifference": 14.29
+  },
+  "The Ohio State University": {
+    "firstTimeTakers": 174,
+    "firstTimePassers": 160,
+    "schoolPassRate": 91.95,
+    "stateAvgPassRate": 80.32,
+    "passDifference": 11.63
+  },
+  "Toledo, The University of": {
+    "firstTimeTakers": 119,
+    "firstTimePassers": 86,
+    "schoolPassRate": 72.27,
+    "stateAvgPassRate": 77.23,
+    "passDifference": -4.96
+  },
+  "Touro University": {
+    "firstTimeTakers": 154,
+    "firstTimePassers": 95,
+    "schoolPassRate": 61.69,
+    "stateAvgPassRate": 85.78,
+    "passDifference": -24.09
+  },
+  "Tulane University": {
+    "firstTimeTakers": 211,
+    "firstTimePassers": 164,
+    "schoolPassRate": 77.73,
+    "stateAvgPassRate": 79.22,
+    "passDifference": -1.49
+  },
+  "Tulsa, The University of": {
+    "firstTimeTakers": 119,
+    "firstTimePassers": 94,
+    "schoolPassRate": 78.99,
+    "stateAvgPassRate": 80.12,
+    "passDifference": -1.13
+  },
+  "Utah, The University of": {
+    "firstTimeTakers": 95,
+    "firstTimePassers": 90,
+    "schoolPassRate": 94.74,
+    "stateAvgPassRate": 84.88,
+    "passDifference": 9.86
+  },
+  "Vanderbilt University": {
+    "firstTimeTakers": 164,
+    "firstTimePassers": 155,
+    "schoolPassRate": 94.51,
+    "stateAvgPassRate": 81.05,
+    "passDifference": 13.46
+  },
+  "Vermont Law School": {
+    "firstTimeTakers": 134,
+    "firstTimePassers": 87,
+    "schoolPassRate": 64.93,
+    "stateAvgPassRate": 76.45,
+    "passDifference": -11.52
+  },
+  "Villanova University": {
+    "firstTimeTakers": 206,
+    "firstTimePassers": 188,
+    "schoolPassRate": 91.26,
+    "stateAvgPassRate": 80.14,
+    "passDifference": 11.12
+  },
+  "Virginia, University of": {
+    "firstTimeTakers": 299,
+    "firstTimePassers": 284,
+    "schoolPassRate": 94.98,
+    "stateAvgPassRate": 82.83,
+    "passDifference": 12.15
+  },
+  "Wake Forest University": {
+    "firstTimeTakers": 153,
+    "firstTimePassers": 135,
+    "schoolPassRate": 88.24,
+    "stateAvgPassRate": 79.29,
+    "passDifference": 8.95
+  },
+  "Washburn University": {
+    "firstTimeTakers": 90,
+    "firstTimePassers": 64,
+    "schoolPassRate": 71.11,
+    "stateAvgPassRate": 79.97,
+    "passDifference": -8.86
+  },
+  "Washington and Lee University": {
+    "firstTimeTakers": 141,
+    "firstTimePassers": 126,
+    "schoolPassRate": 89.36,
+    "stateAvgPassRate": 80.09,
+    "passDifference": 9.27
+  },
+  "Washington University (St. Louis)": {
+    "firstTimeTakers": 280,
+    "firstTimePassers": 262,
+    "schoolPassRate": 93.57,
+    "stateAvgPassRate": 81.37,
+    "passDifference": 12.2
+  },
+  "Washington, University of": {
+    "firstTimeTakers": 169,
+    "firstTimePassers": 155,
+    "schoolPassRate": 91.72,
+    "stateAvgPassRate": 82.21,
+    "passDifference": 9.51
+  },
+  "Wayne State University": {
+    "firstTimeTakers": 129,
+    "firstTimePassers": 111,
+    "schoolPassRate": 86.05,
+    "stateAvgPassRate": 72.93,
+    "passDifference": 13.12
+  },
+  "West Virginia University": {
+    "firstTimeTakers": 106,
+    "firstTimePassers": 83,
+    "schoolPassRate": 78.3,
+    "stateAvgPassRate": 76.46,
+    "passDifference": 1.84
+  },
+  "Western New England University": {
+    "firstTimeTakers": 101,
+    "firstTimePassers": 78,
+    "schoolPassRate": 77.23,
+    "stateAvgPassRate": 80.82,
+    "passDifference": -3.59
+  },
+  "Western State, Westcliff University": {
+    "firstTimeTakers": 77,
+    "firstTimePassers": 49,
+    "schoolPassRate": 63.64,
+    "stateAvgPassRate": 77.78,
+    "passDifference": -14.14
+  },
+  "Widener University Commonwealth Law School": {
+    "firstTimeTakers": 100,
+    "firstTimePassers": 54,
+    "schoolPassRate": 54,
+    "stateAvgPassRate": 80.07,
+    "passDifference": -26.07
+  },
+  "Widener University Delaware Law School": {
+    "firstTimeTakers": 181,
+    "firstTimePassers": 120,
+    "schoolPassRate": 66.3,
+    "stateAvgPassRate": 76.55,
+    "passDifference": -10.25
+  },
+  "Willamette University": {
+    "firstTimeTakers": 90,
+    "firstTimePassers": 60,
+    "schoolPassRate": 66.67,
+    "stateAvgPassRate": 75.22,
+    "passDifference": -8.55
+  },
+  "William & Mary": {
+    "firstTimeTakers": 171,
+    "firstTimePassers": 143,
+    "schoolPassRate": 83.63,
+    "stateAvgPassRate": 79.98,
+    "passDifference": 3.65
+  },
+  "Wisconsin, University of": {
+    "firstTimeTakers": 5,
+    "firstTimePassers": 4,
+    "schoolPassRate": 80,
+    "stateAvgPassRate": 78.72,
+    "passDifference": 1.28
+  },
+  "Wyoming, University of": {
+    "firstTimeTakers": 78,
+    "firstTimePassers": 61,
+    "schoolPassRate": 78.21,
+    "stateAvgPassRate": 72.71,
+    "passDifference": 5.5
+  },
+  "Yale University": {
+    "firstTimeTakers": 200,
+    "firstTimePassers": 193,
+    "schoolPassRate": 96.5,
+    "stateAvgPassRate": 83.57,
+    "passDifference": 12.93
+  },
+  "*Law School pass rate is how the Law School’s graduates performed across all jurisdictions where they took the bar examination for the first time.": {
+    "firstTimeTakers": null,
+    "firstTimePassers": null,
+    "schoolPassRate": null,
+    "stateAvgPassRate": null,
+    "passDifference": null
+  },
+  "**The ABA weighted average bar pass rate is the average pass rate for graduates from ABA-accredited law schools for each jurisdiction in which the Law School’s graduates sat for the bar exam. This number is weighted so that bar pass rates from jurisdictions where more of the Law School’s graduates sat for the bar exam have a greater impact on the ABA weighted average bar pass rate than bar pass rates from jurisdictions where fewer of the Law School’s graduates sat for the bar exam.": {
+    "firstTimeTakers": null,
+    "firstTimePassers": null,
+    "schoolPassRate": null,
+    "stateAvgPassRate": null,
+    "passDifference": null
+  },
+  "***The difference between the Law School pass rate and the ABA weighted average bar pass rate compares the performance of the Law School’s graduates on the bar exam in all jurisdictions where they took the bar exam for the first time with the performance of graduates from all ABA-accredited law schools on the bar exam in those same jurisdictions.": {
+    "firstTimeTakers": null,
+    "firstTimePassers": null,
+    "schoolPassRate": null,
+    "stateAvgPassRate": null,
+    "passDifference": null
+  }
+}

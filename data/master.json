@@ -9,8 +9,8 @@
       "tuition_data.json"
     ]
   },
-  "schools": [
-    {
+  "schools": {
+    "stanford-law-school": {
       "name": "Stanford Law School",
       "slug": "stanford-law-school",
       "url": "https://law.stanford.edu",
@@ -105,9 +105,16 @@
             "n": 28
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 200,
+        "firstTimePassers": 193,
+        "schoolPassRate": 96.5,
+        "stateAvgPassRate": 81.4,
+        "passDifference": 15.1
       }
     },
-    {
+    "yale-law-school": {
       "name": "Yale Law School",
       "slug": "yale-law-school",
       "url": "https://law.yale.edu",
@@ -202,9 +209,16 @@
             "n": 21
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 200,
+        "firstTimePassers": 193,
+        "schoolPassRate": 96.5,
+        "stateAvgPassRate": 83.57,
+        "passDifference": 12.93
       }
     },
-    {
+    "university-of-chicago-law-school": {
       "name": "University of Chicago Law School",
       "slug": "university-of-chicago-law-school",
       "url": "https://www.law.uchicago.edu",
@@ -299,9 +313,16 @@
             "n": 34
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 194,
+        "firstTimePassers": 189,
+        "schoolPassRate": 97.42,
+        "stateAvgPassRate": 81.49,
+        "passDifference": 15.93
       }
     },
-    {
+    "university-of-virginia-school-of-law": {
       "name": "University of Virginia School of Law",
       "slug": "university-of-virginia-school-of-law",
       "url": "https://www.law.virginia.edu",
@@ -396,9 +417,16 @@
             "n": 23
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 299,
+        "firstTimePassers": 284,
+        "schoolPassRate": 94.98,
+        "stateAvgPassRate": 82.83,
+        "passDifference": 12.15
       }
     },
-    {
+    "penn-carey-law": {
       "name": "Penn Carey Law",
       "slug": "penn-carey-law",
       "url": "https://www.law.upenn.edu",
@@ -493,9 +521,16 @@
             "n": 41
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 303,
+        "firstTimePassers": 293,
+        "schoolPassRate": 96.7,
+        "stateAvgPassRate": 82.93,
+        "passDifference": 13.77
       }
     },
-    {
+    "duke-university-school-of-law": {
       "name": "Duke University School of Law",
       "slug": "duke-university-school-of-law",
       "url": "https://law.duke.edu",
@@ -610,9 +645,16 @@
             "n": 25
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 278,
+        "firstTimePassers": 271,
+        "schoolPassRate": 97.48,
+        "stateAvgPassRate": 82.94,
+        "passDifference": 14.54
       }
     },
-    {
+    "harvard-law-school": {
       "name": "Harvard Law School",
       "slug": "harvard-law-school",
       "url": "https://hls.harvard.edu",
@@ -707,9 +749,16 @@
             "n": 75
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 608,
+        "firstTimePassers": 595,
+        "schoolPassRate": 97.86,
+        "stateAvgPassRate": 83.44,
+        "passDifference": 14.42
       }
     },
-    {
+    "university-of-michigan-law-school": {
       "name": "University of Michigan Law School",
       "slug": "university-of-michigan-law-school",
       "url": "https://law.umich.edu",
@@ -804,9 +853,16 @@
             "n": 43
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 316,
+        "firstTimePassers": 302,
+        "schoolPassRate": 95.57,
+        "stateAvgPassRate": 80.44,
+        "passDifference": 15.13
       }
     },
-    {
+    "nyu-school-of-law": {
       "name": "NYU School of Law",
       "slug": "nyu-school-of-law",
       "url": "https://www.law.nyu.edu",
@@ -901,9 +957,16 @@
             "n": 30
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 519,
+        "firstTimePassers": 502,
+        "schoolPassRate": 96.72,
+        "stateAvgPassRate": 85.02,
+        "passDifference": 11.7
       }
     },
-    {
+    "columbia-law-school": {
       "name": "Columbia Law School",
       "slug": "columbia-law-school",
       "url": "https://www.law.columbia.edu",
@@ -998,9 +1061,16 @@
             "n": 34
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 506,
+        "firstTimePassers": 485,
+        "schoolPassRate": 95.85,
+        "stateAvgPassRate": 84.98,
+        "passDifference": 10.87
       }
     },
-    {
+    "northwestern-pritzker-school-of-law": {
       "name": "Northwestern Pritzker School of Law",
       "slug": "northwestern-pritzker-school-of-law",
       "url": "https://www.law.northwestern.edu",
@@ -1095,9 +1165,16 @@
             "n": 27
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 256,
+        "firstTimePassers": 235,
+        "schoolPassRate": 91.8,
+        "stateAvgPassRate": 81,
+        "passDifference": 10.8
       }
     },
-    {
+    "ucla-school-of-law": {
       "name": "UCLA School of Law",
       "slug": "ucla-school-of-law",
       "url": "https://law.ucla.edu",
@@ -1192,9 +1269,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 364,
+        "firstTimePassers": 343,
+        "schoolPassRate": 94.23,
+        "stateAvgPassRate": 78.85,
+        "passDifference": 15.38
       }
     },
-    {
+    "uc-berkeley-school-of-law": {
       "name": "UC Berkeley School of Law",
       "slug": "uc-berkeley-school-of-law",
       "url": "https://www.law.berkeley.edu",
@@ -1289,9 +1373,16 @@
             "n": 26
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 396,
+        "firstTimePassers": 361,
+        "schoolPassRate": 91.16,
+        "stateAvgPassRate": 79.91,
+        "passDifference": 11.25
       }
     },
-    {
+    "georgetown-university-law-center": {
       "name": "Georgetown University Law Center",
       "slug": "georgetown-university-law-center",
       "url": "https://www.law.georgetown.edu",
@@ -1406,9 +1497,16 @@
             "n": 57
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 633,
+        "firstTimePassers": 589,
+        "schoolPassRate": 93.05,
+        "stateAvgPassRate": 83.29,
+        "passDifference": 9.76
       }
     },
-    {
+    "university-of-texas-school-of-law": {
       "name": "University of Texas School of Law",
       "slug": "university-of-texas-school-of-law",
       "url": "https://law.utexas.edu",
@@ -1503,9 +1601,16 @@
             "n": 24
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 411,
+        "firstTimePassers": 394,
+        "schoolPassRate": 95.86,
+        "stateAvgPassRate": 81.57,
+        "passDifference": 14.29
       }
     },
-    {
+    "vanderbilt-university-law-school": {
       "name": "Vanderbilt University Law School",
       "slug": "vanderbilt-university-law-school",
       "url": "https://law.vanderbilt.edu",
@@ -1620,9 +1725,16 @@
             "n": 24
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 164,
+        "firstTimePassers": 155,
+        "schoolPassRate": 94.51,
+        "stateAvgPassRate": 81.05,
+        "passDifference": 13.46
       }
     },
-    {
+    "washington-university-in-st-louis-school-of-law": {
       "name": "Washington University in St. Louis School of Law",
       "slug": "washington-university-in-st-louis-school-of-law",
       "url": "https://law.wustl.edu",
@@ -1717,9 +1829,16 @@
             "n": 36
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 280,
+        "firstTimePassers": 262,
+        "schoolPassRate": 93.57,
+        "stateAvgPassRate": 81.37,
+        "passDifference": 12.2
       }
     },
-    {
+    "cornell-law-school": {
       "name": "Cornell Law School",
       "slug": "cornell-law-school",
       "url": "https://www.lawschool.cornell.edu",
@@ -1814,9 +1933,16 @@
             "n": 8
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 195,
+        "firstTimePassers": 188,
+        "schoolPassRate": 96.41,
+        "stateAvgPassRate": 84.73,
+        "passDifference": 11.68
       }
     },
-    {
+    "university-of-north-carolina-school-of-law": {
       "name": "University of North Carolina School of Law",
       "slug": "university-of-north-carolina-school-of-law",
       "url": "https://law.unc.edu",
@@ -1911,9 +2037,16 @@
             "n": 13
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 207,
+        "firstTimePassers": 191,
+        "schoolPassRate": 92.27,
+        "stateAvgPassRate": 79.6,
+        "passDifference": 12.67
       }
     },
-    {
+    "university-of-minnesota-law-school": {
       "name": "University of Minnesota Law School",
       "slug": "university-of-minnesota-law-school",
       "url": "https://www.law.umn.edu",
@@ -2008,9 +2141,16 @@
             "n": 11
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 237,
+        "firstTimePassers": 223,
+        "schoolPassRate": 94.09,
+        "stateAvgPassRate": 83.36,
+        "passDifference": 10.73
       }
     },
-    {
+    "university-of-notre-dame-law-school": {
       "name": "University of Notre Dame Law School",
       "slug": "university-of-notre-dame-law-school",
       "url": "https://law.nd.edu",
@@ -2105,9 +2245,16 @@
             "n": 16
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 191,
+        "firstTimePassers": 176,
+        "schoolPassRate": 92.15,
+        "stateAvgPassRate": 79.83,
+        "passDifference": 12.32
       }
     },
-    {
+    "boston-university-school-of-law": {
       "name": "Boston University School of Law",
       "slug": "boston-university-school-of-law",
       "url": "https://www.bu.edu/law",
@@ -2222,9 +2369,16 @@
             "n": 15
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 298,
+        "firstTimePassers": 275,
+        "schoolPassRate": 92.28,
+        "stateAvgPassRate": 83.3,
+        "passDifference": 8.98
       }
     },
-    {
+    "university-of-georgia-school-of-law": {
       "name": "University of Georgia School of Law",
       "slug": "university-of-georgia-school-of-law",
       "url": "https://www.law.uga.edu",
@@ -2319,9 +2473,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 187,
+        "firstTimePassers": 169,
+        "schoolPassRate": 90.37,
+        "stateAvgPassRate": 79.72,
+        "passDifference": 10.65
       }
     },
-    {
+    "texas-a-m-university-school-of-law": {
       "name": "Texas A&M University School of Law",
       "slug": "texas-a-m-university-school-of-law",
       "url": "https://law.tamu.edu",
@@ -2436,9 +2597,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 174,
+        "firstTimePassers": 167,
+        "schoolPassRate": 95.98,
+        "stateAvgPassRate": 81.39,
+        "passDifference": 14.59
       }
     },
-    {
+    "boston-college-law-school": {
       "name": "Boston College Law School",
       "slug": "boston-college-law-school",
       "url": "https://www.bc.edu/law",
@@ -2553,9 +2721,16 @@
             "n": 17
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 340,
+        "firstTimePassers": 319,
+        "schoolPassRate": 93.82,
+        "stateAvgPassRate": 83.55,
+        "passDifference": 10.27
       }
     },
-    {
+    "usc-gould-school-of-law": {
       "name": "USC Gould School of Law",
       "slug": "usc-gould-school-of-law",
       "url": "https://gould.usc.edu",
@@ -2650,9 +2825,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 217,
+        "firstTimePassers": 204,
+        "schoolPassRate": 94.01,
+        "stateAvgPassRate": 78.74,
+        "passDifference": 15.27
       }
     },
-    {
+    "wake-forest-university-school-of-law": {
       "name": "Wake Forest University School of Law",
       "slug": "wake-forest-university-school-of-law",
       "url": "https://law.wfu.edu",
@@ -2767,9 +2949,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 153,
+        "firstTimePassers": 135,
+        "schoolPassRate": 88.24,
+        "stateAvgPassRate": 79.29,
+        "passDifference": 8.95
       }
     },
-    {
+    "byu-j-reuben-clark-law-school": {
       "name": "BYU J. Reuben Clark Law School",
       "slug": "byu-j-reuben-clark-law-school",
       "url": "https://law.byu.edu",
@@ -2864,9 +3053,16 @@
             "n": 12
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 136,
+        "firstTimePassers": 123,
+        "schoolPassRate": 90.44,
+        "stateAvgPassRate": 83.58,
+        "passDifference": 6.86
       }
     },
-    {
+    "ohio-state-university-moritz-college-of-law": {
       "name": "Ohio State University Moritz College of Law",
       "slug": "ohio-state-university-moritz-college-of-law",
       "url": "https://moritzlaw.osu.edu",
@@ -2981,9 +3177,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 174,
+        "firstTimePassers": 160,
+        "schoolPassRate": 91.95,
+        "stateAvgPassRate": 80.32,
+        "passDifference": 11.63
       }
     },
-    {
+    "university-of-wisconsin-law-school": {
       "name": "University of Wisconsin Law School",
       "slug": "university-of-wisconsin-law-school",
       "url": "https://law.wisc.edu",
@@ -3078,9 +3281,16 @@
             "n": 14
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 5,
+        "firstTimePassers": 4,
+        "schoolPassRate": 80,
+        "stateAvgPassRate": 78.72,
+        "passDifference": 1.28
       }
     },
-    {
+    "university-of-alabama-school-of-law": {
       "name": "University of Alabama School of Law",
       "slug": "university-of-alabama-school-of-law",
       "url": "https://www.law.ua.edu",
@@ -3175,9 +3385,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 151,
+        "firstTimePassers": 138,
+        "schoolPassRate": 91.39,
+        "stateAvgPassRate": 80.44,
+        "passDifference": 10.95
       }
     },
-    {
+    "george-mason-antonin-scalia-law-school": {
       "name": "George Mason Antonin Scalia Law School",
       "slug": "george-mason-antonin-scalia-law-school",
       "url": "https://www.law.gmu.edu",
@@ -3272,9 +3489,16 @@
             "n": 11
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 235,
+        "firstTimePassers": 202,
+        "schoolPassRate": 85.96,
+        "stateAvgPassRate": 80.68,
+        "passDifference": 5.28
       }
     },
-    {
+    "george-washington-university-law-school": {
       "name": "George Washington University Law School",
       "slug": "george-washington-university-law-school",
       "url": "https://www.law.gwu.edu",
@@ -3389,9 +3613,16 @@
             "n": 61
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 511,
+        "firstTimePassers": 461,
+        "schoolPassRate": 90.22,
+        "stateAvgPassRate": 82.71,
+        "passDifference": 7.51
       }
     },
-    {
+    "university-of-utah-s-j-quinney-college-of-law": {
       "name": "University of Utah S.J. Quinney College of Law",
       "slug": "university-of-utah-s-j-quinney-college-of-law",
       "url": "https://law.utah.edu",
@@ -3486,9 +3717,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 95,
+        "firstTimePassers": 90,
+        "schoolPassRate": 94.74,
+        "stateAvgPassRate": 84.88,
+        "passDifference": 9.86
       }
     },
-    {
+    "william-mary-law-school": {
       "name": "William & Mary Law School",
       "slug": "william-mary-law-school",
       "url": "https://law.wm.edu",
@@ -3603,9 +3841,16 @@
             "n": 17
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 171,
+        "firstTimePassers": 143,
+        "schoolPassRate": 83.63,
+        "stateAvgPassRate": 79.98,
+        "passDifference": 3.65
       }
     },
-    {
+    "university-of-iowa-college-of-law": {
       "name": "University of Iowa College of Law",
       "slug": "university-of-iowa-college-of-law",
       "url": "https://law.uiowa.edu",
@@ -3700,9 +3945,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 166,
+        "firstTimePassers": 151,
+        "schoolPassRate": 90.96,
+        "stateAvgPassRate": 82.1,
+        "passDifference": 8.86
       }
     },
-    {
+    "washington-and-lee-university-school-of-law": {
       "name": "Washington and Lee University School of Law",
       "slug": "washington-and-lee-university-school-of-law",
       "url": "https://law.wlu.edu",
@@ -3817,9 +4069,16 @@
             "n": 15
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 141,
+        "firstTimePassers": 126,
+        "schoolPassRate": 89.36,
+        "stateAvgPassRate": 80.09,
+        "passDifference": 9.27
       }
     },
-    {
+    "uc-irvine-school-of-law": {
       "name": "UC Irvine School of Law",
       "slug": "uc-irvine-school-of-law",
       "url": "https://www.law.uci.edu",
@@ -3914,9 +4173,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 159,
+        "firstTimePassers": 136,
+        "schoolPassRate": 85.53,
+        "stateAvgPassRate": 77.98,
+        "passDifference": 7.55
       }
     },
-    {
+    "emory-university-school-of-law": {
       "name": "Emory University School of Law",
       "slug": "emory-university-school-of-law",
       "url": "https://law.emory.edu",
@@ -4031,9 +4297,16 @@
             "n": 14
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 292,
+        "firstTimePassers": 258,
+        "schoolPassRate": 88.36,
+        "stateAvgPassRate": 80.47,
+        "passDifference": 7.89
       }
     },
-    {
+    "florida-state-university-college-of-law": {
       "name": "Florida State University College of Law",
       "slug": "florida-state-university-college-of-law",
       "url": "https://law.fsu.edu",
@@ -4148,9 +4421,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 180,
+        "firstTimePassers": 157,
+        "schoolPassRate": 87.22,
+        "stateAvgPassRate": 73.35,
+        "passDifference": 13.87
       }
     },
-    {
+    "university-of-florida-levin-college-of-law": {
       "name": "University of Florida Levin College of Law",
       "slug": "university-of-florida-levin-college-of-law",
       "url": "https://www.law.ufl.edu",
@@ -4245,9 +4525,16 @@
             "n": 13
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 262,
+        "firstTimePassers": 232,
+        "schoolPassRate": 88.55,
+        "stateAvgPassRate": 75.2,
+        "passDifference": 13.35
       }
     },
-    {
+    "fordham-university-school-of-law": {
       "name": "Fordham University School of Law",
       "slug": "fordham-university-school-of-law",
       "url": "https://law.fordham.edu",
@@ -4362,9 +4649,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 456,
+        "firstTimePassers": 424,
+        "schoolPassRate": 92.98,
+        "stateAvgPassRate": 85.77,
+        "passDifference": 7.21
       }
     },
-    {
+    "baylor-law-school": {
       "name": "Baylor Law School",
       "slug": "baylor-law-school",
       "url": "https://law.baylor.edu",
@@ -4459,9 +4753,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 197,
+        "firstTimePassers": 187,
+        "schoolPassRate": 94.92,
+        "stateAvgPassRate": 81.44,
+        "passDifference": 13.48
       }
     },
-    {
+    "smu-dedman-school-of-law": {
       "name": "SMU Dedman School of Law",
       "slug": "smu-dedman-school-of-law",
       "url": "https://www.smu.edu/law",
@@ -4556,9 +4857,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 245,
+        "firstTimePassers": 221,
+        "schoolPassRate": 90.2,
+        "stateAvgPassRate": 81.36,
+        "passDifference": 8.84
       }
     },
-    {
+    "arizona-state-sandra-day-oconnor-college-of-law": {
       "name": "Arizona State Sandra Day O'Connor College of Law",
       "slug": "arizona-state-sandra-day-oconnor-college-of-law",
       "url": "https://law.asu.edu",
@@ -4653,9 +4961,16 @@
             "n": 11
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 289,
+        "firstTimePassers": 253,
+        "schoolPassRate": 87.54,
+        "stateAvgPassRate": 75.03,
+        "passDifference": 12.51
       }
     },
-    {
+    "university-of-colorado-law-school": {
       "name": "University of Colorado Law School",
       "slug": "university-of-colorado-law-school",
       "url": "https://www.colorado.edu/law",
@@ -4750,9 +5065,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 167,
+        "firstTimePassers": 151,
+        "schoolPassRate": 90.42,
+        "stateAvgPassRate": 84.93,
+        "passDifference": 5.49
       }
     },
-    {
+    "indiana-university-maurer-school-of-law": {
       "name": "Indiana University Maurer School of Law",
       "slug": "indiana-university-maurer-school-of-law",
       "url": "https://law.indiana.edu",
@@ -4847,9 +5169,16 @@
             "n": 12
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 190,
+        "firstTimePassers": 166,
+        "schoolPassRate": 87.37,
+        "stateAvgPassRate": 79.1,
+        "passDifference": 8.27
       }
     },
-    {
+    "university-of-illinois-college-of-law": {
       "name": "University of Illinois College of Law",
       "slug": "university-of-illinois-college-of-law",
       "url": "https://law.illinois.edu",
@@ -4944,9 +5273,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 202,
+        "firstTimePassers": 189,
+        "schoolPassRate": 93.56,
+        "stateAvgPassRate": 79.05,
+        "passDifference": 14.51
       }
     },
-    {
+    "villanova-university-widger-school-of-law": {
       "name": "Villanova University Widger School of Law",
       "slug": "villanova-university-widger-school-of-law",
       "url": "https://law1.villanova.edu",
@@ -5061,9 +5397,16 @@
             "n": 20
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 206,
+        "firstTimePassers": 188,
+        "schoolPassRate": 91.26,
+        "stateAvgPassRate": 80.14,
+        "passDifference": 11.12
       }
     },
-    {
+    "uc-davis-school-of-law": {
       "name": "UC Davis School of Law",
       "slug": "uc-davis-school-of-law",
       "url": "https://law.ucdavis.edu",
@@ -5158,9 +5501,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 235,
+        "firstTimePassers": 209,
+        "schoolPassRate": 88.94,
+        "stateAvgPassRate": 77.78,
+        "passDifference": 11.16
       }
     },
-    {
+    "university-of-connecticut-school-of-law": {
       "name": "University of Connecticut School of Law",
       "slug": "university-of-connecticut-school-of-law",
       "url": "https://www.law.uconn.edu",
@@ -5255,9 +5605,16 @@
             "n": 11
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 150,
+        "firstTimePassers": 126,
+        "schoolPassRate": 84,
+        "stateAvgPassRate": 75.84,
+        "passDifference": 8.16
       }
     },
-    {
+    "university-of-kansas-school-of-law": {
       "name": "University of Kansas School of Law",
       "slug": "university-of-kansas-school-of-law",
       "url": "https://law.ku.edu",
@@ -5352,9 +5709,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 115,
+        "firstTimePassers": 106,
+        "schoolPassRate": 92.17,
+        "stateAvgPassRate": 80.59,
+        "passDifference": 11.58
       }
     },
-    {
+    "temple-university-beasley-school-of-law": {
       "name": "Temple University Beasley School of Law",
       "slug": "temple-university-beasley-school-of-law",
       "url": "https://www.law.temple.edu",
@@ -5469,9 +5833,16 @@
             "n": 17
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 216,
+        "firstTimePassers": 195,
+        "schoolPassRate": 90.28,
+        "stateAvgPassRate": 79.72,
+        "passDifference": 10.56
       }
     },
-    {
+    "university-of-washington-school-of-law": {
       "name": "University of Washington School of Law",
       "slug": "university-of-washington-school-of-law",
       "url": "https://www.law.uw.edu",
@@ -5566,9 +5937,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 169,
+        "firstTimePassers": 155,
+        "schoolPassRate": 91.72,
+        "stateAvgPassRate": 82.21,
+        "passDifference": 9.51
       }
     },
-    {
+    "pepperdine-caruso-school-of-law": {
       "name": "Pepperdine Caruso School of Law",
       "slug": "pepperdine-caruso-school-of-law",
       "url": "https://law.pepperdine.edu",
@@ -5663,9 +6041,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 189,
+        "firstTimePassers": 164,
+        "schoolPassRate": 86.77,
+        "stateAvgPassRate": 78.03,
+        "passDifference": 8.74
       }
     },
-    {
+    "university-of-tennessee-college-of-law": {
       "name": "University of Tennessee College of Law",
       "slug": "university-of-tennessee-college-of-law",
       "url": "https://law.utk.edu",
@@ -5760,9 +6145,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 124,
+        "firstTimePassers": 114,
+        "schoolPassRate": 91.94,
+        "stateAvgPassRate": 78.49,
+        "passDifference": 13.45
       }
     },
-    {
+    "university-of-missouri-school-of-law": {
       "name": "University of Missouri School of Law",
       "slug": "university-of-missouri-school-of-law",
       "url": "https://law.missouri.edu",
@@ -5857,9 +6249,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 132,
+        "firstTimePassers": 110,
+        "schoolPassRate": 83.33,
+        "stateAvgPassRate": 82.12,
+        "passDifference": 1.21
       }
     },
-    {
+    "university-of-san-diego-school-of-law": {
       "name": "University of San Diego School of Law",
       "slug": "university-of-san-diego-school-of-law",
       "url": "https://www.sandiego.edu/law",
@@ -5954,9 +6353,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 250,
+        "firstTimePassers": 212,
+        "schoolPassRate": 84.8,
+        "stateAvgPassRate": 77.82,
+        "passDifference": 6.98
       }
     },
-    {
+    "university-of-arizona-james-e-rogers-college-of-law": {
       "name": "University of Arizona James E. Rogers College of Law",
       "slug": "university-of-arizona-james-e-rogers-college-of-law",
       "url": "https://law.arizona.edu",
@@ -6051,9 +6457,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 115,
+        "firstTimePassers": 83,
+        "schoolPassRate": 72.17,
+        "stateAvgPassRate": 75.3,
+        "passDifference": -3.13
       }
     },
-    {
+    "marquette-university-law-school": {
       "name": "Marquette University Law School",
       "slug": "marquette-university-law-school",
       "url": "https://law.marquette.edu",
@@ -6168,9 +6581,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 2,
+        "firstTimePassers": 1,
+        "schoolPassRate": 50,
+        "stateAvgPassRate": 70.94,
+        "passDifference": -20.94
       }
     },
-    {
+    "university-of-oklahoma-college-of-law": {
       "name": "University of Oklahoma College of Law",
       "slug": "university-of-oklahoma-college-of-law",
       "url": "https://www.law.ou.edu",
@@ -6265,9 +6685,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 187,
+        "firstTimePassers": 166,
+        "schoolPassRate": 88.77,
+        "stateAvgPassRate": 80.56,
+        "passDifference": 8.21
       }
     },
-    {
+    "penn-state-dickinson-law": {
       "name": "Penn State Dickinson Law",
       "slug": "penn-state-dickinson-law",
       "url": "https://dickinsonlaw.psu.edu",
@@ -6382,9 +6809,16 @@
             "n": 13
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 216,
+        "firstTimePassers": 188,
+        "schoolPassRate": 87.04,
+        "stateAvgPassRate": 79.66,
+        "passDifference": 7.38
       }
     },
-    {
+    "cardozo-school-of-law": {
       "name": "Cardozo School of Law",
       "slug": "cardozo-school-of-law",
       "url": "https://cardozo.yu.edu",
@@ -6479,9 +6913,16 @@
             "n": 8
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 321,
+        "firstTimePassers": 284,
+        "schoolPassRate": 88.47,
+        "stateAvgPassRate": 85.16,
+        "passDifference": 3.31
       }
     },
-    {
+    "university-of-houston-law-center": {
       "name": "University of Houston Law Center",
       "slug": "university-of-houston-law-center",
       "url": "https://www.law.uh.edu",
@@ -6576,9 +7017,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 255,
+        "firstTimePassers": 226,
+        "schoolPassRate": 88.63,
+        "stateAvgPassRate": 81.34,
+        "passDifference": 7.29
       }
     },
-    {
+    "university-of-maryland-carey-school-of-law": {
       "name": "University of Maryland Carey School of Law",
       "slug": "university-of-maryland-carey-school-of-law",
       "url": "https://www.law.umaryland.edu",
@@ -6673,9 +7121,16 @@
             "n": 12
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 229,
+        "firstTimePassers": 188,
+        "schoolPassRate": 82.1,
+        "stateAvgPassRate": 72.24,
+        "passDifference": 9.86
       }
     },
-    {
+    "university-of-south-carolina-school-of-law": {
       "name": "University of South Carolina School of Law",
       "slug": "university-of-south-carolina-school-of-law",
       "url": "https://www.law.sc.edu",
@@ -6770,9 +7225,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 209,
+        "firstTimePassers": 174,
+        "schoolPassRate": 83.25,
+        "stateAvgPassRate": 75.81,
+        "passDifference": 7.44
       }
     },
-    {
+    "st-johns-university-school-of-law": {
       "name": "St. John's University School of Law",
       "slug": "st-johns-university-school-of-law",
       "url": "https://www.stjohns.edu/law",
@@ -6887,9 +7349,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 261,
+        "firstTimePassers": 229,
+        "schoolPassRate": 87.74,
+        "stateAvgPassRate": 86.11,
+        "passDifference": 1.63
       }
     },
-    {
+    "university-of-kentucky-college-of-law": {
       "name": "University of Kentucky College of Law",
       "slug": "university-of-kentucky-college-of-law",
       "url": "https://law.uky.edu",
@@ -6984,9 +7453,16 @@
             "n": 8
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 136,
+        "firstTimePassers": 113,
+        "schoolPassRate": 83.09,
+        "stateAvgPassRate": 78.83,
+        "passDifference": 4.26
       }
     },
-    {
+    "northeastern-university-school-of-law": {
       "name": "Northeastern University School of Law",
       "slug": "northeastern-university-school-of-law",
       "url": "https://www.northeastern.edu/law",
@@ -7101,9 +7577,16 @@
             "n": 13
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 222,
+        "firstTimePassers": 194,
+        "schoolPassRate": 87.39,
+        "stateAvgPassRate": 82.85,
+        "passDifference": 4.54
       }
     },
-    {
+    "catholic-university-of-america-columbus-school-of-law": {
       "name": "Catholic University of America Columbus School of Law",
       "slug": "catholic-university-of-america-columbus-school-of-law",
       "url": "https://www.law.edu",
@@ -7218,9 +7701,16 @@
             "n": 17
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 130,
+        "firstTimePassers": 108,
+        "schoolPassRate": 83.08,
+        "stateAvgPassRate": 81.09,
+        "passDifference": 1.99
       }
     },
-    {
+    "university-of-cincinnati-college-of-law": {
       "name": "University of Cincinnati College of Law",
       "slug": "university-of-cincinnati-college-of-law",
       "url": "https://www.law.uc.edu",
@@ -7315,9 +7805,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 118,
+        "firstTimePassers": 101,
+        "schoolPassRate": 85.59,
+        "stateAvgPassRate": 80.62,
+        "passDifference": 4.97
       }
     },
-    {
+    "loyola-law-school-los-angeles": {
       "name": "Loyola Law School Los Angeles",
       "slug": "loyola-law-school-los-angeles",
       "url": "https://www.lls.edu",
@@ -7412,9 +7909,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 329,
+        "firstTimePassers": 277,
+        "schoolPassRate": 84.19,
+        "stateAvgPassRate": 77.65,
+        "passDifference": 6.54
       }
     },
-    {
+    "university-of-nebraska-college-of-law": {
       "name": "University of Nebraska College of Law",
       "slug": "university-of-nebraska-college-of-law",
       "url": "https://law.unl.edu",
@@ -7509,9 +8013,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 148,
+        "firstTimePassers": 134,
+        "schoolPassRate": 90.54,
+        "stateAvgPassRate": 83.11,
+        "passDifference": 7.43
       }
     },
-    {
+    "university-of-richmond-school-of-law": {
       "name": "University of Richmond School of Law",
       "slug": "university-of-richmond-school-of-law",
       "url": "https://law.richmond.edu",
@@ -7606,9 +8117,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 151,
+        "firstTimePassers": 121,
+        "schoolPassRate": 80.13,
+        "stateAvgPassRate": 77.32,
+        "passDifference": 2.81
       }
     },
-    {
+    "seton-hall-university-school-of-law": {
       "name": "Seton Hall University School of Law",
       "slug": "seton-hall-university-school-of-law",
       "url": "https://law.shu.edu",
@@ -7723,9 +8241,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 305,
+        "firstTimePassers": 266,
+        "schoolPassRate": 87.21,
+        "stateAvgPassRate": 75.69,
+        "passDifference": 11.52
       }
     },
-    {
+    "tulane-university-law-school": {
       "name": "Tulane University Law School",
       "slug": "tulane-university-law-school",
       "url": "https://law.tulane.edu",
@@ -7840,9 +8365,16 @@
             "n": 27
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 211,
+        "firstTimePassers": 164,
+        "schoolPassRate": 77.73,
+        "stateAvgPassRate": 79.22,
+        "passDifference": -1.49
       }
     },
-    {
+    "wayne-state-university-law-school": {
       "name": "Wayne State University Law School",
       "slug": "wayne-state-university-law-school",
       "url": "https://law.wayne.edu",
@@ -7957,9 +8489,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 129,
+        "firstTimePassers": 111,
+        "schoolPassRate": 86.05,
+        "stateAvgPassRate": 72.93,
+        "passDifference": 13.12
       }
     },
-    {
+    "drexel-university-kline-school-of-law": {
       "name": "Drexel University Kline School of Law",
       "slug": "drexel-university-kline-school-of-law",
       "url": "https://drexel.edu/law",
@@ -8074,9 +8613,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 140,
+        "firstTimePassers": 119,
+        "schoolPassRate": 85,
+        "stateAvgPassRate": 79.48,
+        "passDifference": 5.52
       }
     },
-    {
+    "georgia-state-university-college-of-law": {
       "name": "Georgia State University College of Law",
       "slug": "georgia-state-university-college-of-law",
       "url": "https://law.gsu.edu",
@@ -8191,9 +8737,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 189,
+        "firstTimePassers": 170,
+        "schoolPassRate": 89.95,
+        "stateAvgPassRate": 79.87,
+        "passDifference": 10.08
       }
     },
-    {
+    "loyola-university-chicago-school-of-law": {
       "name": "Loyola University Chicago School of Law",
       "slug": "loyola-university-chicago-school-of-law",
       "url": "https://www.luc.edu/law",
@@ -8288,9 +8841,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 345,
+        "firstTimePassers": 276,
+        "schoolPassRate": 80,
+        "stateAvgPassRate": 78.82,
+        "passDifference": 1.18
       }
     },
-    {
+    "unlv-william-s-boyd-school-of-law": {
       "name": "UNLV William S. Boyd School of Law",
       "slug": "unlv-william-s-boyd-school-of-law",
       "url": "https://law.unlv.edu",
@@ -8385,9 +8945,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 162,
+        "firstTimePassers": 125,
+        "schoolPassRate": 77.16,
+        "stateAvgPassRate": 70.94,
+        "passDifference": 6.22
       }
     },
-    {
+    "university-of-pittsburgh-school-of-law": {
       "name": "University of Pittsburgh School of Law",
       "slug": "university-of-pittsburgh-school-of-law",
       "url": "https://www.law.pitt.edu",
@@ -8482,9 +9049,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 139,
+        "firstTimePassers": 120,
+        "schoolPassRate": 86.33,
+        "stateAvgPassRate": 80.21,
+        "passDifference": 6.12
       }
     },
-    {
+    "belmont-university-college-of-law": {
       "name": "Belmont University College of Law",
       "slug": "belmont-university-college-of-law",
       "url": "https://law.belmont.edu",
@@ -8599,9 +9173,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 120,
+        "firstTimePassers": 114,
+        "schoolPassRate": 95,
+        "stateAvgPassRate": 77.95,
+        "passDifference": 17.05
       }
     },
-    {
+    "drake-university-law-school": {
       "name": "Drake University Law School",
       "slug": "drake-university-law-school",
       "url": "https://law.drake.edu",
@@ -8716,9 +9297,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 105,
+        "firstTimePassers": 90,
+        "schoolPassRate": 85.71,
+        "stateAvgPassRate": 83.73,
+        "passDifference": 1.98
       }
     },
-    {
+    "florida-international-university-college-of-law": {
       "name": "Florida International University College of Law",
       "slug": "florida-international-university-college-of-law",
       "url": "https://law.fiu.edu",
@@ -8833,9 +9421,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 163,
+        "firstTimePassers": 144,
+        "schoolPassRate": 88.34,
+        "stateAvgPassRate": 72.91,
+        "passDifference": 15.43
       }
     },
-    {
+    "lsu-paul-m-hebert-law-center": {
       "name": "LSU Paul M. Hebert Law Center",
       "slug": "lsu-paul-m-hebert-law-center",
       "url": "https://law.lsu.edu",
@@ -8930,9 +9525,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 179,
+        "firstTimePassers": 152,
+        "schoolPassRate": 84.92,
+        "stateAvgPassRate": 74.57,
+        "passDifference": 10.35
       }
     },
-    {
+    "university-of-denver-sturm-college-of-law": {
       "name": "University of Denver Sturm College of Law",
       "slug": "university-of-denver-sturm-college-of-law",
       "url": "https://www.law.du.edu",
@@ -9027,9 +9629,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 225,
+        "firstTimePassers": 191,
+        "schoolPassRate": 84.89,
+        "stateAvgPassRate": 85.07,
+        "passDifference": -0.18
       }
     },
-    {
+    "university-of-maine-school-of-law": {
       "name": "University of Maine School of Law",
       "slug": "university-of-maine-school-of-law",
       "url": "https://mainelaw.maine.edu",
@@ -9124,9 +9733,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 77,
+        "firstTimePassers": 65,
+        "schoolPassRate": 84.42,
+        "stateAvgPassRate": 75.15,
+        "passDifference": 9.27
       }
     },
-    {
+    "texas-tech-university-school-of-law": {
       "name": "Texas Tech University School of Law",
       "slug": "texas-tech-university-school-of-law",
       "url": "https://www.law.ttu.edu",
@@ -9241,9 +9857,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 146,
+        "firstTimePassers": 126,
+        "schoolPassRate": 86.3,
+        "stateAvgPassRate": 81.48,
+        "passDifference": 4.82
       }
     },
-    {
+    "duquesne-university-school-of-law": {
       "name": "Duquesne University School of Law",
       "slug": "duquesne-university-school-of-law",
       "url": "https://www.duq.edu/law",
@@ -9358,9 +9981,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 151,
+        "firstTimePassers": 134,
+        "schoolPassRate": 88.74,
+        "stateAvgPassRate": 80.14,
+        "passDifference": 8.6
       }
     },
-    {
+    "university-of-miami-school-of-law": {
       "name": "University of Miami School of Law",
       "slug": "university-of-miami-school-of-law",
       "url": "https://www.law.miami.edu",
@@ -9455,9 +10085,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 406,
+        "firstTimePassers": 330,
+        "schoolPassRate": 81.28,
+        "stateAvgPassRate": 74.6,
+        "passDifference": 6.68
       }
     },
-    {
+    "university-at-buffalo-school-of-law": {
       "name": "University at Buffalo School of Law",
       "slug": "university-at-buffalo-school-of-law",
       "url": "https://www.buffalo.edu/law",
@@ -9552,9 +10189,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 154,
+        "firstTimePassers": 132,
+        "schoolPassRate": 85.71,
+        "stateAvgPassRate": 86.24,
+        "passDifference": -0.53
       }
     },
-    {
+    "university-of-oregon-school-of-law": {
       "name": "University of Oregon School of Law",
       "slug": "university-of-oregon-school-of-law",
       "url": "https://law.uoregon.edu",
@@ -9649,9 +10293,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 154,
+        "firstTimePassers": 131,
+        "schoolPassRate": 85.06,
+        "stateAvgPassRate": 76.32,
+        "passDifference": 8.74
       }
     },
-    {
+    "regent-university-school-of-law": {
       "name": "Regent University School of Law",
       "slug": "regent-university-school-of-law",
       "url": "https://www.regent.edu/law",
@@ -9766,9 +10417,16 @@
             "n": 7
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 110,
+        "firstTimePassers": 97,
+        "schoolPassRate": 88.18,
+        "stateAvgPassRate": 77.6,
+        "passDifference": 10.58
       }
     },
-    {
+    "saint-louis-university-school-of-law": {
       "name": "Saint Louis University School of Law",
       "slug": "saint-louis-university-school-of-law",
       "url": "https://law.slu.edu",
@@ -9883,9 +10541,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 181,
+        "firstTimePassers": 152,
+        "schoolPassRate": 83.98,
+        "stateAvgPassRate": 81.88,
+        "passDifference": 2.1
       }
     },
-    {
+    "university-of-st-thomas-school-of-law": {
       "name": "University of St. Thomas School of Law",
       "slug": "university-of-st-thomas-school-of-law",
       "url": "https://www.stthomas.edu/law",
@@ -9980,9 +10645,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 166,
+        "firstTimePassers": 124,
+        "schoolPassRate": 74.7,
+        "stateAvgPassRate": 84.41,
+        "passDifference": -9.71
       }
     },
-    {
+    "university-of-hawaii-richardson-school-of-law": {
       "name": "University of Hawaii Richardson School of Law",
       "slug": "university-of-hawaii-richardson-school-of-law",
       "url": "https://www.law.hawaii.edu",
@@ -10077,9 +10749,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 91,
+        "firstTimePassers": 70,
+        "schoolPassRate": 76.92,
+        "stateAvgPassRate": 74.94,
+        "passDifference": 1.98
       }
     },
-    {
+    "lewis-clark-law-school": {
       "name": "Lewis & Clark Law School",
       "slug": "lewis-clark-law-school",
       "url": "https://law.lclark.edu",
@@ -10194,9 +10873,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 187,
+        "firstTimePassers": 159,
+        "schoolPassRate": 85.03,
+        "stateAvgPassRate": 75.03,
+        "passDifference": 10
       }
     },
-    {
+    "university-of-missouri-kansas-city-school-of-law": {
       "name": "University of Missouri-Kansas City School of Law",
       "slug": "university-of-missouri-kansas-city-school-of-law",
       "url": "https://law.umkc.edu",
@@ -10291,9 +10977,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 126,
+        "firstTimePassers": 106,
+        "schoolPassRate": 84.13,
+        "stateAvgPassRate": 82.17,
+        "passDifference": 1.96
       }
     },
-    {
+    "university-of-montana-school-of-law": {
       "name": "University of Montana School of Law",
       "slug": "university-of-montana-school-of-law",
       "url": "https://www.umt.edu/law",
@@ -10388,9 +11081,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 78,
+        "firstTimePassers": 64,
+        "schoolPassRate": 82.05,
+        "stateAvgPassRate": 80.67,
+        "passDifference": 1.38
       }
     },
-    {
+    "stetson-university-college-of-law": {
       "name": "Stetson University College of Law",
       "slug": "stetson-university-college-of-law",
       "url": "https://www.stetson.edu/law",
@@ -10505,9 +11205,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 283,
+        "firstTimePassers": 218,
+        "schoolPassRate": 77.03,
+        "stateAvgPassRate": 73.18,
+        "passDifference": 3.85
       }
     },
-    {
+    "american-university-washington-college-of-law": {
       "name": "American University Washington College of Law",
       "slug": "american-university-washington-college-of-law",
       "url": "https://www.wcl.american.edu",
@@ -10622,9 +11329,16 @@
             "n": 27
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 374,
+        "firstTimePassers": 304,
+        "schoolPassRate": 81.28,
+        "stateAvgPassRate": 81.98,
+        "passDifference": -0.7
       }
     },
-    {
+    "chapman-university-fowler-school-of-law": {
       "name": "Chapman University Fowler School of Law",
       "slug": "chapman-university-fowler-school-of-law",
       "url": "https://www.chapman.edu/law",
@@ -10739,9 +11453,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 143,
+        "firstTimePassers": 106,
+        "schoolPassRate": 74.13,
+        "stateAvgPassRate": 77.65,
+        "passDifference": -3.52
       }
     },
-    {
+    "rutgers-law-school": {
       "name": "Rutgers Law School",
       "slug": "rutgers-law-school",
       "url": "https://law.rutgers.edu",
@@ -10836,9 +11557,16 @@
             "n": 43
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 434,
+        "firstTimePassers": 316,
+        "schoolPassRate": 72.81,
+        "stateAvgPassRate": 75.12,
+        "passDifference": -2.31
       }
     },
-    {
+    "case-western-reserve-university-school-of-law": {
       "name": "Case Western Reserve University School of Law",
       "slug": "case-western-reserve-university-school-of-law",
       "url": "https://law.case.edu",
@@ -10953,9 +11681,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 161,
+        "firstTimePassers": 132,
+        "schoolPassRate": 81.99,
+        "stateAvgPassRate": 81,
+        "passDifference": 0.99
       }
     },
-    {
+    "chicago-kent-college-of-law-iit": {
       "name": "Chicago-Kent College of Law (IIT)",
       "slug": "chicago-kent-college-of-law-iit",
       "url": "https://www.kentlaw.iit.edu",
@@ -11050,9 +11785,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 205,
+        "firstTimePassers": 162,
+        "schoolPassRate": 79.02,
+        "stateAvgPassRate": 78.68,
+        "passDifference": 0.34
       }
     },
-    {
+    "university-of-dayton-school-of-law": {
       "name": "University of Dayton School of Law",
       "slug": "university-of-dayton-school-of-law",
       "url": "https://www.udayton.edu/law",
@@ -11147,9 +11889,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 108,
+        "firstTimePassers": 95,
+        "schoolPassRate": 87.96,
+        "stateAvgPassRate": 80.1,
+        "passDifference": 7.86
       }
     },
-    {
+    "indiana-university-mckinney-school-of-law": {
       "name": "Indiana University McKinney School of Law",
       "slug": "indiana-university-mckinney-school-of-law",
       "url": "https://mckinneylaw.iu.edu",
@@ -11244,9 +11993,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 222,
+        "firstTimePassers": 164,
+        "schoolPassRate": 73.87,
+        "stateAvgPassRate": 77.95,
+        "passDifference": -4.08
       }
     },
-    {
+    "mercer-university-walter-f-george-school-of-law": {
       "name": "Mercer University Walter F. George School of Law",
       "slug": "mercer-university-walter-f-george-school-of-law",
       "url": "https://law.mercer.edu",
@@ -11361,9 +12117,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 100,
+        "firstTimePassers": 84,
+        "schoolPassRate": 84,
+        "stateAvgPassRate": 79.31,
+        "passDifference": 4.69
       }
     },
-    {
+    "university-of-new-mexico-school-of-law": {
       "name": "University of New Mexico School of Law",
       "slug": "university-of-new-mexico-school-of-law",
       "url": "https://lawschool.unm.edu",
@@ -11458,9 +12221,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 112,
+        "firstTimePassers": 96,
+        "schoolPassRate": 85.71,
+        "stateAvgPassRate": 81.2,
+        "passDifference": 4.51
       }
     },
-    {
+    "samford-university-cumberland-school-of-law": {
       "name": "Samford University Cumberland School of Law",
       "slug": "samford-university-cumberland-school-of-law",
       "url": "https://www.samford.edu/law",
@@ -11575,9 +12345,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 151,
+        "firstTimePassers": 119,
+        "schoolPassRate": 78.81,
+        "stateAvgPassRate": 80.15,
+        "passDifference": -1.34
       }
     },
-    {
+    "syracuse-university-college-of-law": {
       "name": "Syracuse University College of Law",
       "slug": "syracuse-university-college-of-law",
       "url": "https://www.law.syr.edu",
@@ -11692,9 +12469,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 193,
+        "firstTimePassers": 160,
+        "schoolPassRate": 82.9,
+        "stateAvgPassRate": 82.61,
+        "passDifference": 0.29
       }
     },
-    {
+    "university-of-arkansas-school-of-law": {
       "name": "University of Arkansas School of Law",
       "slug": "university-of-arkansas-school-of-law",
       "url": "https://law.uark.edu",
@@ -11789,9 +12573,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 120,
+        "firstTimePassers": 96,
+        "schoolPassRate": 80,
+        "stateAvgPassRate": 77.09,
+        "passDifference": 2.91
       }
     },
-    {
+    "michigan-state-university-college-of-law": {
       "name": "Michigan State University College of Law",
       "slug": "michigan-state-university-college-of-law",
       "url": "https://www.law.msu.edu",
@@ -11906,9 +12697,16 @@
             "n": 7
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 217,
+        "firstTimePassers": 170,
+        "schoolPassRate": 78.34,
+        "stateAvgPassRate": 74.39,
+        "passDifference": 3.95
       }
     },
-    {
+    "albany-law-school": {
       "name": "Albany Law School",
       "slug": "albany-law-school",
       "url": "https://www.albanylaw.edu",
@@ -12023,9 +12821,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 206,
+        "firstTimePassers": 153,
+        "schoolPassRate": 74.27,
+        "stateAvgPassRate": 85.75,
+        "passDifference": -11.48
       }
     },
-    {
+    "brooklyn-law-school": {
       "name": "Brooklyn Law School",
       "slug": "brooklyn-law-school",
       "url": "https://www.brooklaw.edu",
@@ -12140,9 +12945,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 393,
+        "firstTimePassers": 332,
+        "schoolPassRate": 84.48,
+        "stateAvgPassRate": 85.73,
+        "passDifference": -1.25
       }
     },
-    {
+    "west-virginia-university-college-of-law": {
       "name": "West Virginia University College of Law",
       "slug": "west-virginia-university-college-of-law",
       "url": "https://law.wvu.edu",
@@ -12257,9 +13069,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 106,
+        "firstTimePassers": 83,
+        "schoolPassRate": 78.3,
+        "stateAvgPassRate": 76.46,
+        "passDifference": 1.84
       }
     },
-    {
+    "university-of-wyoming-college-of-law": {
       "name": "University of Wyoming College of Law",
       "slug": "university-of-wyoming-college-of-law",
       "url": "https://www.uwyo.edu/law",
@@ -12354,9 +13173,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 78,
+        "firstTimePassers": 61,
+        "schoolPassRate": 78.21,
+        "stateAvgPassRate": 72.71,
+        "passDifference": 5.5
       }
     },
-    {
+    "cleveland-state-university-college-of-law": {
       "name": "Cleveland State University College of Law",
       "slug": "cleveland-state-university-college-of-law",
       "url": "https://law.csuohio.edu",
@@ -12471,9 +13297,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 110,
+        "firstTimePassers": 83,
+        "schoolPassRate": 75.45,
+        "stateAvgPassRate": 80.52,
+        "passDifference": -5.07
       }
     },
-    {
+    "university-of-mississippi-school-of-law": {
       "name": "University of Mississippi School of Law",
       "slug": "university-of-mississippi-school-of-law",
       "url": "https://law.olemiss.edu",
@@ -12568,9 +13401,16 @@
             "n": 13
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 164,
+        "firstTimePassers": 120,
+        "schoolPassRate": 73.17,
+        "stateAvgPassRate": 79.74,
+        "passDifference": -6.57
       }
     },
-    {
+    "new-york-law-school": {
       "name": "New York Law School",
       "slug": "new-york-law-school",
       "url": "https://www.nyls.edu",
@@ -12685,9 +13525,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 337,
+        "firstTimePassers": 276,
+        "schoolPassRate": 81.9,
+        "stateAvgPassRate": 84.68,
+        "passDifference": -2.78
       }
     },
-    {
+    "washburn-university-school-of-law": {
       "name": "Washburn University School of Law",
       "slug": "washburn-university-school-of-law",
       "url": "https://washburnlaw.edu",
@@ -12802,9 +13649,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 90,
+        "firstTimePassers": 64,
+        "schoolPassRate": 71.11,
+        "stateAvgPassRate": 79.97,
+        "passDifference": -8.86
       }
     },
-    {
+    "hofstra-university-deane-school-of-law": {
       "name": "Hofstra University Deane School of Law",
       "slug": "hofstra-university-deane-school-of-law",
       "url": "https://law.hofstra.edu",
@@ -12919,9 +13773,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 275,
+        "firstTimePassers": 217,
+        "schoolPassRate": 78.91,
+        "stateAvgPassRate": 85.69,
+        "passDifference": -6.78
       }
     },
-    {
+    "university-of-new-hampshire-franklin-pierce-school-of-law": {
       "name": "University of New Hampshire Franklin Pierce School of Law",
       "slug": "university-of-new-hampshire-franklin-pierce-school-of-law",
       "url": "https://law.unh.edu",
@@ -13016,9 +13877,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 156,
+        "firstTimePassers": 124,
+        "schoolPassRate": 79.49,
+        "stateAvgPassRate": 79.2,
+        "passDifference": 0.29
       }
     },
-    {
+    "university-of-akron-school-of-law": {
       "name": "University of Akron School of Law",
       "slug": "university-of-akron-school-of-law",
       "url": "https://www.uakron.edu/law",
@@ -13113,9 +13981,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 129,
+        "firstTimePassers": 93,
+        "schoolPassRate": 72.09,
+        "stateAvgPassRate": 80.46,
+        "passDifference": -8.37
       }
     },
-    {
+    "howard-university-school-of-law": {
       "name": "Howard University School of Law",
       "slug": "howard-university-school-of-law",
       "url": "https://law.howard.edu",
@@ -13230,9 +14105,16 @@
             "n": 12
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 155,
+        "firstTimePassers": 119,
+        "schoolPassRate": 76.77,
+        "stateAvgPassRate": 82.24,
+        "passDifference": -5.47
       }
     },
-    {
+    "seattle-university-school-of-law": {
       "name": "Seattle University School of Law",
       "slug": "seattle-university-school-of-law",
       "url": "https://law.seattleu.edu",
@@ -13347,9 +14229,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 207,
+        "firstTimePassers": 163,
+        "schoolPassRate": 78.74,
+        "stateAvgPassRate": 82.24,
+        "passDifference": -3.5
       }
     },
-    {
+    "university-of-south-dakota-school-of-law": {
       "name": "University of South Dakota School of Law",
       "slug": "university-of-south-dakota-school-of-law",
       "url": "https://www.usd.edu/law",
@@ -13444,9 +14333,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 73,
+        "firstTimePassers": 53,
+        "schoolPassRate": 72.6,
+        "stateAvgPassRate": 78.62,
+        "passDifference": -6.02
       }
     },
-    {
+    "suffolk-university-law-school": {
       "name": "Suffolk University Law School",
       "slug": "suffolk-university-law-school",
       "url": "https://www.suffolk.edu/law",
@@ -13561,9 +14457,16 @@
             "n": 7
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 383,
+        "firstTimePassers": 304,
+        "schoolPassRate": 79.37,
+        "stateAvgPassRate": 83.51,
+        "passDifference": -4.14
       }
     },
-    {
+    "university-of-tulsa-college-of-law": {
       "name": "University of Tulsa College of Law",
       "slug": "university-of-tulsa-college-of-law",
       "url": "https://law.utulsa.edu",
@@ -13658,9 +14561,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 119,
+        "firstTimePassers": 94,
+        "schoolPassRate": 78.99,
+        "stateAvgPassRate": 80.12,
+        "passDifference": -1.13
       }
     },
-    {
+    "depaul-university-college-of-law": {
       "name": "DePaul University College of Law",
       "slug": "depaul-university-college-of-law",
       "url": "https://law.depaul.edu",
@@ -13775,9 +14685,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 171,
+        "firstTimePassers": 130,
+        "schoolPassRate": 76.02,
+        "stateAvgPassRate": 78.56,
+        "passDifference": -2.54
       }
     },
-    {
+    "campbell-university-norman-adrian-wiggins-school-of-law": {
       "name": "Campbell University Norman Adrian Wiggins School of Law",
       "slug": "campbell-university-norman-adrian-wiggins-school-of-law",
       "url": "https://law.campbell.edu",
@@ -13892,9 +14809,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 164,
+        "firstTimePassers": 140,
+        "schoolPassRate": 85.37,
+        "stateAvgPassRate": 79.05,
+        "passDifference": 6.32
       }
     },
-    {
+    "university-of-detroit-mercy-school-of-law": {
       "name": "University of Detroit Mercy School of Law",
       "slug": "university-of-detroit-mercy-school-of-law",
       "url": "https://law.udmercy.edu",
@@ -13989,9 +14913,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 144,
+        "firstTimePassers": 102,
+        "schoolPassRate": 70.83,
+        "stateAvgPassRate": 73.25,
+        "passDifference": -2.42
       }
     },
-    {
+    "loyola-university-new-orleans-college-of-law": {
       "name": "Loyola University New Orleans College of Law",
       "slug": "loyola-university-new-orleans-college-of-law",
       "url": "https://law.loyno.edu",
@@ -14086,9 +15017,16 @@
             "n": 7
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 187,
+        "firstTimePassers": 129,
+        "schoolPassRate": 68.98,
+        "stateAvgPassRate": 76.04,
+        "passDifference": -7.06
       }
     },
-    {
+    "northern-kentucky-university-chase-college-of-law": {
       "name": "Northern Kentucky University Chase College of Law",
       "slug": "northern-kentucky-university-chase-college-of-law",
       "url": "https://chaselaw.nku.edu",
@@ -14203,9 +15141,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 130,
+        "firstTimePassers": 96,
+        "schoolPassRate": 73.85,
+        "stateAvgPassRate": 79.5,
+        "passDifference": -5.65
       }
     },
-    {
+    "south-texas-college-of-law-houston": {
       "name": "South Texas College of Law Houston",
       "slug": "south-texas-college-of-law-houston",
       "url": "https://www.stcl.edu",
@@ -14320,9 +15265,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 293,
+        "firstTimePassers": 267,
+        "schoolPassRate": 91.13,
+        "stateAvgPassRate": 81.42,
+        "passDifference": 9.71
       }
     },
-    {
+    "ua-little-rock-bowen-school-of-law": {
       "name": "UA Little Rock Bowen School of Law",
       "slug": "ua-little-rock-bowen-school-of-law",
       "url": "https://law.ualr.edu",
@@ -14417,9 +15369,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 136,
+        "firstTimePassers": 100,
+        "schoolPassRate": 73.53,
+        "stateAvgPassRate": 76.51,
+        "passDifference": -2.98
       }
     },
-    {
+    "university-of-baltimore-school-of-law": {
       "name": "University of Baltimore School of Law",
       "slug": "university-of-baltimore-school-of-law",
       "url": "https://law.ubalt.edu",
@@ -14514,9 +15473,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 198,
+        "firstTimePassers": 140,
+        "schoolPassRate": 70.71,
+        "stateAvgPassRate": 70.64,
+        "passDifference": 0.07
       }
     },
-    {
+    "gonzaga-university-school-of-law": {
       "name": "Gonzaga University School of Law",
       "slug": "gonzaga-university-school-of-law",
       "url": "https://www.law.gonzaga.edu",
@@ -14631,9 +15597,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 153,
+        "firstTimePassers": 122,
+        "schoolPassRate": 79.74,
+        "stateAvgPassRate": 81.33,
+        "passDifference": -1.59
       }
     },
-    {
+    "university-of-idaho-college-of-law": {
       "name": "University of Idaho College of Law",
       "slug": "university-of-idaho-college-of-law",
       "url": "https://www.uidaho.edu/law",
@@ -14728,9 +15701,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 117,
+        "firstTimePassers": 80,
+        "schoolPassRate": 68.38,
+        "stateAvgPassRate": 78.38,
+        "passDifference": -10
       }
     },
-    {
+    "liberty-university-school-of-law": {
       "name": "Liberty University School of Law",
       "slug": "liberty-university-school-of-law",
       "url": "https://www.liberty.edu/law",
@@ -14845,9 +15825,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 112,
+        "firstTimePassers": 95,
+        "schoolPassRate": 84.82,
+        "stateAvgPassRate": 77.78,
+        "passDifference": 7.04
       }
     },
-    {
+    "pace-university-elisabeth-haub-school-of-law": {
       "name": "Pace University Elisabeth Haub School of Law",
       "slug": "pace-university-elisabeth-haub-school-of-law",
       "url": "https://www.pace.edu/school-of-law",
@@ -14962,9 +15949,16 @@
             "n": 15
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 248,
+        "firstTimePassers": 170,
+        "schoolPassRate": 68.55,
+        "stateAvgPassRate": 84.39,
+        "passDifference": -15.84
       }
     },
-    {
+    "quinnipiac-university-school-of-law": {
       "name": "Quinnipiac University School of Law",
       "slug": "quinnipiac-university-school-of-law",
       "url": "https://www.quinnipiac.edu/law",
@@ -15079,9 +16073,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 114,
+        "firstTimePassers": 84,
+        "schoolPassRate": 73.68,
+        "stateAvgPassRate": 73.89,
+        "passDifference": -0.21
       }
     },
-    {
+    "university-of-louisville-brandeis-school-of-law": {
       "name": "University of Louisville Brandeis School of Law",
       "slug": "university-of-louisville-brandeis-school-of-law",
       "url": "https://louisville.edu/law",
@@ -15176,9 +16177,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 123,
+        "firstTimePassers": 93,
+        "schoolPassRate": 75.61,
+        "stateAvgPassRate": 78.52,
+        "passDifference": -2.91
       }
     },
-    {
+    "university-of-memphis-humphreys-school-of-law": {
       "name": "University of Memphis Humphreys School of Law",
       "slug": "university-of-memphis-humphreys-school-of-law",
       "url": "https://www.memphis.edu/law",
@@ -15273,9 +16281,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 94,
+        "firstTimePassers": 69,
+        "schoolPassRate": 73.4,
+        "stateAvgPassRate": 78.52,
+        "passDifference": -5.12
       }
     },
-    {
+    "creighton-university-school-of-law": {
       "name": "Creighton University School of Law",
       "slug": "creighton-university-school-of-law",
       "url": "https://law.creighton.edu",
@@ -15390,9 +16405,16 @@
             "n": 7
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 146,
+        "firstTimePassers": 106,
+        "schoolPassRate": 72.6,
+        "stateAvgPassRate": 82.74,
+        "passDifference": -10.14
       }
     },
-    {
+    "st-marys-university-school-of-law": {
       "name": "St. Mary's University School of Law",
       "slug": "st-marys-university-school-of-law",
       "url": "https://www.stmarytx.edu/law",
@@ -15507,9 +16529,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 243,
+        "firstTimePassers": 160,
+        "schoolPassRate": 65.84,
+        "stateAvgPassRate": 81.51,
+        "passDifference": -15.67
       }
     },
-    {
+    "northern-illinois-university-college-of-law": {
       "name": "Northern Illinois University College of Law",
       "slug": "northern-illinois-university-college-of-law",
       "url": "https://law.niu.edu",
@@ -15624,9 +16653,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 91,
+        "firstTimePassers": 52,
+        "schoolPassRate": 57.14,
+        "stateAvgPassRate": 78.65,
+        "passDifference": -21.51
       }
     },
-    {
+    "university-of-toledo-college-of-law": {
       "name": "University of Toledo College of Law",
       "slug": "university-of-toledo-college-of-law",
       "url": "https://www.utoledo.edu/law",
@@ -15721,9 +16757,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 119,
+        "firstTimePassers": 86,
+        "schoolPassRate": 72.27,
+        "stateAvgPassRate": 77.23,
+        "passDifference": -4.96
       }
     },
-    {
+    "willamette-university-college-of-law": {
       "name": "Willamette University College of Law",
       "slug": "willamette-university-college-of-law",
       "url": "https://willamette.edu/law",
@@ -15838,9 +16881,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 90,
+        "firstTimePassers": 60,
+        "schoolPassRate": 66.67,
+        "stateAvgPassRate": 75.22,
+        "passDifference": -8.55
       }
     },
-    {
+    "ave-maria-school-of-law": {
       "name": "Ave Maria School of Law",
       "slug": "ave-maria-school-of-law",
       "url": "https://www.avemarialaw.edu",
@@ -15955,9 +17005,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 85,
+        "firstTimePassers": 56,
+        "schoolPassRate": 65.88,
+        "stateAvgPassRate": 73.82,
+        "passDifference": -7.94
       }
     },
-    {
+    "mitchell-hamline-school-of-law": {
       "name": "Mitchell Hamline School of Law",
       "slug": "mitchell-hamline-school-of-law",
       "url": "https://mitchellhamline.edu",
@@ -16052,9 +17109,16 @@
             "n": 14
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 379,
+        "firstTimePassers": 269,
+        "schoolPassRate": 70.98,
+        "stateAvgPassRate": 81.61,
+        "passDifference": -10.63
       }
     },
-    {
+    "southwestern-law-school": {
       "name": "Southwestern Law School",
       "slug": "southwestern-law-school",
       "url": "https://www.swlaw.edu",
@@ -16169,9 +17233,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 288,
+        "firstTimePassers": 187,
+        "schoolPassRate": 64.93,
+        "stateAvgPassRate": 77.76,
+        "passDifference": -12.83
       }
     },
-    {
+    "cuny-school-of-law": {
       "name": "CUNY School of Law",
       "slug": "cuny-school-of-law",
       "url": "https://www.law.cuny.edu",
@@ -16266,9 +17337,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 201,
+        "firstTimePassers": 132,
+        "schoolPassRate": 65.67,
+        "stateAvgPassRate": 86,
+        "passDifference": -20.33
       }
     },
-    {
+    "santa-clara-university-school-of-law": {
       "name": "Santa Clara University School of Law",
       "slug": "santa-clara-university-school-of-law",
       "url": "https://law.scu.edu",
@@ -16383,9 +17461,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 214,
+        "firstTimePassers": 160,
+        "schoolPassRate": 74.77,
+        "stateAvgPassRate": 77.97,
+        "passDifference": -3.2
       }
     },
-    {
+    "elon-university-school-of-law": {
       "name": "Elon University School of Law",
       "slug": "elon-university-school-of-law",
       "url": "https://www.elon.edu/u/law",
@@ -16500,9 +17585,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 138,
+        "firstTimePassers": 106,
+        "schoolPassRate": 76.81,
+        "stateAvgPassRate": 78.83,
+        "passDifference": -2.02
       }
     },
-    {
+    "mississippi-college-school-of-law": {
       "name": "Mississippi College School of Law",
       "slug": "mississippi-college-school-of-law",
       "url": "https://law.mc.edu",
@@ -16617,9 +17709,16 @@
             "n": 6
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 123,
+        "firstTimePassers": 78,
+        "schoolPassRate": 63.41,
+        "stateAvgPassRate": 79.66,
+        "passDifference": -16.25
       }
     },
-    {
+    "oklahoma-city-university-school-of-law": {
       "name": "Oklahoma City University School of Law",
       "slug": "oklahoma-city-university-school-of-law",
       "url": "https://law.okcu.edu",
@@ -16734,9 +17833,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 125,
+        "firstTimePassers": 94,
+        "schoolPassRate": 75.2,
+        "stateAvgPassRate": 80.27,
+        "passDifference": -5.07
       }
     },
-    {
+    "university-of-north-dakota-school-of-law": {
       "name": "University of North Dakota School of Law",
       "slug": "university-of-north-dakota-school-of-law",
       "url": "https://law.und.edu",
@@ -16831,9 +17937,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 79,
+        "firstTimePassers": 54,
+        "schoolPassRate": 68.35,
+        "stateAvgPassRate": 73.32,
+        "passDifference": -4.97
       }
     },
-    {
+    "university-of-the-pacific-mcgeorge-school-of-law": {
       "name": "University of the Pacific McGeorge School of Law",
       "slug": "university-of-the-pacific-mcgeorge-school-of-law",
       "url": "https://www.mcgeorge.edu",
@@ -16928,9 +18041,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 146,
+        "firstTimePassers": 103,
+        "schoolPassRate": 70.55,
+        "stateAvgPassRate": 77.62,
+        "passDifference": -7.07
       }
     },
-    {
+    "vermont-law-school": {
       "name": "Vermont Law School",
       "slug": "vermont-law-school",
       "url": "https://www.vermontlaw.edu",
@@ -17045,9 +18165,16 @@
             "n": 11
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 134,
+        "firstTimePassers": 87,
+        "schoolPassRate": 64.93,
+        "stateAvgPassRate": 76.45,
+        "passDifference": -11.52
       }
     },
-    {
+    "uc-college-of-the-law-san-francisco": {
       "name": "UC College of the Law San Francisco",
       "slug": "uc-college-of-the-law-san-francisco",
       "url": "https://uclawsf.edu",
@@ -17142,9 +18269,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 359,
+        "firstTimePassers": 301,
+        "schoolPassRate": 83.84,
+        "stateAvgPassRate": 77.87,
+        "passDifference": 5.97
       }
     },
-    {
+    "university-of-san-francisco-school-of-law": {
       "name": "University of San Francisco School of Law",
       "slug": "university-of-san-francisco-school-of-law",
       "url": "https://www.usfca.edu/law",
@@ -17239,9 +18373,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 114,
+        "firstTimePassers": 85,
+        "schoolPassRate": 74.56,
+        "stateAvgPassRate": 77.74,
+        "passDifference": -3.18
       }
     },
-    {
+    "university-of-illinois-chicago-school-of-law": {
       "name": "University of Illinois Chicago School of Law",
       "slug": "university-of-illinois-chicago-school-of-law",
       "url": "https://law.uic.edu",
@@ -17336,9 +18477,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 296,
+        "firstTimePassers": 178,
+        "schoolPassRate": 60.14,
+        "stateAvgPassRate": 78.83,
+        "passDifference": -18.69
       }
     },
-    {
+    "roger-williams-university-school-of-law": {
       "name": "Roger Williams University School of Law",
       "slug": "roger-williams-university-school-of-law",
       "url": "https://law.rwu.edu",
@@ -17453,9 +18601,16 @@
             "n": 14
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 177,
+        "firstTimePassers": 101,
+        "schoolPassRate": 57.06,
+        "stateAvgPassRate": 76.37,
+        "passDifference": -19.31
       }
     },
-    {
+    "touro-university-jacob-d-fuchsberg-law-center": {
       "name": "Touro University Jacob D. Fuchsberg Law Center",
       "slug": "touro-university-jacob-d-fuchsberg-law-center",
       "url": "https://www.tourolaw.edu",
@@ -17570,9 +18725,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 154,
+        "firstTimePassers": 95,
+        "schoolPassRate": 61.69,
+        "stateAvgPassRate": 85.78,
+        "passDifference": -24.09
       }
     },
-    {
+    "widener-university-delaware-law-school": {
       "name": "Widener University Delaware Law School",
       "slug": "widener-university-delaware-law-school",
       "url": "https://delawarelaw.widener.edu",
@@ -17687,9 +18849,16 @@
             "n": 44
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 181,
+        "firstTimePassers": 120,
+        "schoolPassRate": 66.3,
+        "stateAvgPassRate": 76.55,
+        "passDifference": -10.25
       }
     },
-    {
+    "capital-university-law-school": {
       "name": "Capital University Law School",
       "slug": "capital-university-law-school",
       "url": "https://www.law.capital.edu",
@@ -17804,9 +18973,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 144,
+        "firstTimePassers": 104,
+        "schoolPassRate": 72.22,
+        "stateAvgPassRate": 80.4,
+        "passDifference": -8.18
       }
     },
-    {
+    "university-of-puerto-rico-school-of-law": {
       "name": "University of Puerto Rico School of Law",
       "slug": "university-of-puerto-rico-school-of-law",
       "url": "https://law.upr.edu",
@@ -17901,9 +19077,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 127,
+        "firstTimePassers": 74,
+        "schoolPassRate": 58.27,
+        "stateAvgPassRate": 53.17,
+        "passDifference": 5.1
       }
     },
-    {
+    "southern-illinois-university-school-of-law": {
       "name": "Southern Illinois University School of Law",
       "slug": "southern-illinois-university-school-of-law",
       "url": "https://law.siu.edu",
@@ -18018,9 +19201,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 79,
+        "firstTimePassers": 47,
+        "schoolPassRate": 59.49,
+        "stateAvgPassRate": 79.22,
+        "passDifference": -19.73
       }
     },
-    {
+    "appalachian-school-of-law": {
       "name": "Appalachian School of Law",
       "slug": "appalachian-school-of-law",
       "url": "https://www.asl.edu",
@@ -18135,9 +19325,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 38,
+        "firstTimePassers": 24,
+        "schoolPassRate": 63.16,
+        "stateAvgPassRate": 77.16,
+        "passDifference": -14
       }
     },
-    {
+    "barry-university-dwayne-o-andreas-school-of-law": {
       "name": "Barry University Dwayne O. Andreas School of Law",
       "slug": "barry-university-dwayne-o-andreas-school-of-law",
       "url": "https://www.barry.edu/law",
@@ -18252,9 +19449,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 239,
+        "firstTimePassers": 164,
+        "schoolPassRate": 68.62,
+        "stateAvgPassRate": 73.45,
+        "passDifference": -4.83
       }
     },
-    {
+    "california-western-school-of-law": {
       "name": "California Western School of Law",
       "slug": "california-western-school-of-law",
       "url": "https://www.cwsl.edu",
@@ -18369,9 +19573,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 213,
+        "firstTimePassers": 134,
+        "schoolPassRate": 62.91,
+        "stateAvgPassRate": 77.53,
+        "passDifference": -14.62
       }
     },
-    {
+    "charleston-school-of-law": {
       "name": "Charleston School of Law",
       "slug": "charleston-school-of-law",
       "url": "https://www.charlestonlaw.edu",
@@ -18486,9 +19697,16 @@
             "n": 13
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 216,
+        "firstTimePassers": 160,
+        "schoolPassRate": 74.07,
+        "stateAvgPassRate": 76.83,
+        "passDifference": -2.76
       }
     },
-    {
+    "university-of-the-district-of-columbia-david-a-clarke-school-of-law": {
       "name": "University of the District of Columbia David A. Clarke School of Law",
       "slug": "university-of-the-district-of-columbia-david-a-clarke-school-of-law",
       "url": "https://www.law.udc.edu",
@@ -18583,9 +19801,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 61,
+        "firstTimePassers": 40,
+        "schoolPassRate": 65.57,
+        "stateAvgPassRate": 80.64,
+        "passDifference": -15.07
       }
     },
-    {
+    "faulkner-university-thomas-goode-jones-school-of-law": {
       "name": "Faulkner University Thomas Goode Jones School of Law",
       "slug": "faulkner-university-thomas-goode-jones-school-of-law",
       "url": "https://www.faulkner.edu/law",
@@ -18700,9 +19925,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 70,
+        "firstTimePassers": 50,
+        "schoolPassRate": 71.43,
+        "stateAvgPassRate": 80.6,
+        "passDifference": -9.17
       }
     },
-    {
+    "florida-a-m-university-college-of-law": {
       "name": "Florida A&M University College of Law",
       "slug": "florida-a-m-university-college-of-law",
       "url": "https://www.famu.edu/law",
@@ -18817,9 +20049,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 65,
+        "firstTimePassers": 49,
+        "schoolPassRate": 75.38,
+        "stateAvgPassRate": 73.28,
+        "passDifference": 2.1
       }
     },
-    {
+    "north-carolina-central-university-school-of-law": {
       "name": "North Carolina Central University School of Law",
       "slug": "north-carolina-central-university-school-of-law",
       "url": "https://law.nccu.edu",
@@ -18934,9 +20173,16 @@
             "n": 11
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 143,
+        "firstTimePassers": 80,
+        "schoolPassRate": 55.94,
+        "stateAvgPassRate": 79.92,
+        "passDifference": -23.98
       }
     },
-    {
+    "nova-southeastern-university-shepard-broad-college-of-law": {
       "name": "Nova Southeastern University Shepard Broad College of Law",
       "slug": "nova-southeastern-university-shepard-broad-college-of-law",
       "url": "https://www.nova.edu/law",
@@ -19051,9 +20297,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 190,
+        "firstTimePassers": 128,
+        "schoolPassRate": 67.37,
+        "stateAvgPassRate": 72.78,
+        "passDifference": -5.41
       }
     },
-    {
+    "ohio-northern-university-pettit-college-of-law": {
       "name": "Ohio Northern University Pettit College of Law",
       "slug": "ohio-northern-university-pettit-college-of-law",
       "url": "https://www.onu.edu/law",
@@ -19168,9 +20421,16 @@
             "n": 4
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 57,
+        "firstTimePassers": 39,
+        "schoolPassRate": 68.42,
+        "stateAvgPassRate": 79.73,
+        "passDifference": -11.31
       }
     },
-    {
+    "southern-university-law-center": {
       "name": "Southern University Law Center",
       "slug": "southern-university-law-center",
       "url": "https://www.sulc.edu",
@@ -19285,9 +20545,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 121,
+        "firstTimePassers": 73,
+        "schoolPassRate": 60.33,
+        "stateAvgPassRate": 75.91,
+        "passDifference": -15.58
       }
     },
-    {
+    "st-thomas-university-school-of-law": {
       "name": "St. Thomas University School of Law",
       "slug": "st-thomas-university-school-of-law",
       "url": "https://www.stu.edu/law",
@@ -19382,9 +20649,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 246,
+        "firstTimePassers": 199,
+        "schoolPassRate": 80.89,
+        "stateAvgPassRate": 72.73,
+        "passDifference": 8.16
       }
     },
-    {
+    "texas-southern-university-thurgood-marshall-school-of-law": {
       "name": "Texas Southern University Thurgood Marshall School of Law",
       "slug": "texas-southern-university-thurgood-marshall-school-of-law",
       "url": "https://www.tsulaw.edu",
@@ -19499,9 +20773,16 @@
             "n": 10
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 199,
+        "firstTimePassers": 144,
+        "schoolPassRate": 72.36,
+        "stateAvgPassRate": 81.3,
+        "passDifference": -8.94
       }
     },
-    {
+    "jacksonville-university-school-of-law": {
       "name": "Jacksonville University School of Law",
       "slug": "jacksonville-university-school-of-law",
       "url": "https://www.ju.edu/law",
@@ -19568,9 +20849,10 @@
           "p75": 3.68
         }
       },
-      "employment": null
+      "employment": null,
+      "barPassage": null
     },
-    {
+    "lincoln-memorial-university-duncan-school-of-law": {
       "name": "Lincoln Memorial University Duncan School of Law",
       "slug": "lincoln-memorial-university-duncan-school-of-law",
       "url": "https://www.lmunet.edu/duncan-school-of-law/",
@@ -19685,9 +20967,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 102,
+        "firstTimePassers": 65,
+        "schoolPassRate": 63.73,
+        "stateAvgPassRate": 78.36,
+        "passDifference": -14.63
       }
     },
-    {
+    "thomas-m-cooley-law-school": {
       "name": "Thomas M. Cooley Law School",
       "slug": "thomas-m-cooley-law-school",
       "url": "https://www.cooley.edu/",
@@ -19802,9 +21091,16 @@
             "n": 9
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 130,
+        "firstTimePassers": 67,
+        "schoolPassRate": 51.54,
+        "stateAvgPassRate": 74.12,
+        "passDifference": -22.58
       }
     },
-    {
+    "western-new-england-university-school-of-law": {
       "name": "Western New England University School of Law",
       "slug": "western-new-england-university-school-of-law",
       "url": "https://wne.edu/law/",
@@ -19919,9 +21215,16 @@
             "n": 5
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 101,
+        "firstTimePassers": 78,
+        "schoolPassRate": 77.23,
+        "stateAvgPassRate": 80.82,
+        "passDifference": -3.59
       }
     },
-    {
+    "university-of-north-texas-dallas-college-of-law": {
       "name": "University of North Texas Dallas College of Law",
       "slug": "university-of-north-texas-dallas-college-of-law",
       "url": "https://www.untdallas.edu/lawschool/index.php",
@@ -20016,9 +21319,16 @@
             "n": 1
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 91,
+        "firstTimePassers": 66,
+        "schoolPassRate": 72.53,
+        "stateAvgPassRate": 81.48,
+        "passDifference": -8.95
       }
     },
-    {
+    "widener-university-commonwealth-law-school": {
       "name": "Widener University Commonwealth Law School",
       "slug": "widener-university-commonwealth-law-school",
       "url": "https://commonwealthlaw.widener.edu",
@@ -20133,9 +21443,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 100,
+        "firstTimePassers": 54,
+        "schoolPassRate": 54,
+        "stateAvgPassRate": 80.07,
+        "passDifference": -26.07
       }
     },
-    {
+    "pontifical-catholic-university-of-puerto-rico-school-of-law": {
       "name": "Pontifical Catholic University of Puerto Rico School of Law",
       "slug": "pontifical-catholic-university-of-puerto-rico-school-of-law",
       "url": "https://derecho.pucpr.edu/",
@@ -20250,9 +21567,16 @@
             "n": 3
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 102,
+        "firstTimePassers": 56,
+        "schoolPassRate": 54.9,
+        "stateAvgPassRate": 52.08,
+        "passDifference": 2.82
       }
     },
-    {
+    "university-of-massachusetts-school-of-law": {
       "name": "University of Massachusetts School of Law",
       "slug": "university-of-massachusetts-school-of-law",
       "url": "https://www.umassd.edu/law",
@@ -20347,9 +21671,16 @@
             "n": 7
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 108,
+        "firstTimePassers": 63,
+        "schoolPassRate": 58.33,
+        "stateAvgPassRate": 78.83,
+        "passDifference": -20.5
       }
     },
-    {
+    "inter-american-university-of-puerto-rico-school-of-law": {
       "name": "Inter American University of Puerto Rico School of Law",
       "slug": "inter-american-university-of-puerto-rico-school-of-law",
       "url": "https://derecho.inter.edu/",
@@ -20464,9 +21795,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 137,
+        "firstTimePassers": 66,
+        "schoolPassRate": 48.18,
+        "stateAvgPassRate": 51.95,
+        "passDifference": -3.77
       }
     },
-    {
+    "new-england-law-boston": {
       "name": "New England Law Boston",
       "slug": "new-england-law-boston",
       "url": "https://www.nesl.edu/",
@@ -20561,9 +21899,16 @@
             "n": 14
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 269,
+        "firstTimePassers": 213,
+        "schoolPassRate": 79.18,
+        "stateAvgPassRate": 83.29,
+        "passDifference": -4.11
       }
     },
-    {
+    "wilmington-university-school-of-law": {
       "name": "Wilmington University School of Law",
       "slug": "wilmington-university-school-of-law",
       "url": "https://law.wilmu.edu",
@@ -20630,9 +21975,10 @@
           "p75": 3.49
         }
       },
-      "employment": null
+      "employment": null,
+      "barPassage": null
     },
-    {
+    "atlantas-john-marshall-law-school": {
       "name": "Atlanta's John Marshall Law School",
       "slug": "atlantas-john-marshall-law-school",
       "url": "https://www.johnmarshall.edu",
@@ -20747,9 +22093,16 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 76,
+        "firstTimePassers": 52,
+        "schoolPassRate": 68.42,
+        "stateAvgPassRate": 80.24,
+        "passDifference": -11.82
       }
     },
-    {
+    "kenneth-f-kahn-school-of-law-at-high-point-university": {
       "name": "Kenneth F. Kahn School of Law at High Point University",
       "slug": "kenneth-f-kahn-school-of-law-at-high-point-university",
       "url": "https://www.highpoint.edu/law/",
@@ -20816,9 +22169,10 @@
           "p75": 3.68
         }
       },
-      "employment": null
+      "employment": null,
+      "barPassage": null
     },
-    {
+    "western-state-college-of-law-at-westcliff-university": {
       "name": "Western State College of Law at Westcliff University",
       "slug": "western-state-college-of-law-at-westcliff-university",
       "url": "https://wsulaw.edu",
@@ -20913,7 +22267,14 @@
             "n": 2
           }
         ]
+      },
+      "barPassage": {
+        "firstTimeTakers": 77,
+        "firstTimePassers": 49,
+        "schoolPassRate": 63.64,
+        "stateAvgPassRate": 77.78,
+        "passDifference": -14.14
       }
     }
-  ]
+  }
 }

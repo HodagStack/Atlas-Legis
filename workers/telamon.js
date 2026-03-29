@@ -327,6 +327,41 @@ export default {
 
     const question = sanitizeInput(rawQuestion);
 
+    // ── Off-topic pre-filter ───────────────────────────────────────────────────
+    // If the question contains no admissions-related keywords AND mentions no
+    // school names, it's almost certainly off-topic. Return the canned refusal
+    // immediately — no Gemini call, no token cost.
+    const ADMISSIONS_KEYWORDS = [
+      'lsat','gpa','score','median','percentile','admission','apply','application',
+      'scholarship','grant','aid','tuition','cost','fee','attend',
+      'employment','biglaw','clerkship','clerk','firm','job','career','salary',
+      'bar','pass','passage','rate',
+      'rank','tier','school','law','jd','lawyer','attorney','degree',
+      'accept','reject','waitlist','deposit','defer',
+    ];
+    const qLower = question.toLowerCase();
+    const hasAdmissionsKeyword = ADMISSIONS_KEYWORDS.some(kw => qLower.includes(kw));
+
+    if (!hasAdmissionsKeyword) {
+      // Also check if any school name token appears in the question
+      // (skip data fetch — use a fast heuristic on the question text alone)
+      const hasSchoolToken = [
+        'yale','harvard','stanford','columbia','chicago','nyu','penn','michigan',
+        'virginia','duke','cornell','northwestern','georgetown','texas','vanderbilt',
+        'emory','ucla','berkeley','usc','notre dame','fordham','boston','marquette',
+        'loyola','tulane','george','florida','ohio','indiana','iowa','minnesota',
+        'wisconsin','colorado','arizona','utah','byu','seton','rutgers','hofstra',
+      ].some(tok => qLower.includes(tok));
+
+      if (!hasSchoolToken) {
+        return jsonResponse(
+          { answer: "I'm Telamon, Atlas Legis's law school admissions assistant. I can only help with law school admissions questions." },
+          200,
+          corsHeaders(origin),
+        );
+      }
+    }
+
     // Parse conversation history (optional, max 4 turns)
     const rawHistory = Array.isArray(body.history) ? body.history.slice(-4) : [];
     const history = rawHistory

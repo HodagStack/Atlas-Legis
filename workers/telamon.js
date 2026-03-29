@@ -232,11 +232,7 @@ function buildSystemPrompt(data, totalCount) {
 // ── Utilities ─────────────────────────────────────────────────────────────────
 
 function getClientIP(request) {
-  return (
-    request.headers.get('CF-Connecting-IP') ||
-    (request.headers.get('X-Forwarded-For') || '').split(',')[0].trim() ||
-    'unknown'
-  );
+  return request.headers.get('CF-Connecting-IP') || 'unknown';
 }
 
 function isRateLimited(ip) {
@@ -328,38 +324,43 @@ export default {
     const question = sanitizeInput(rawQuestion);
 
     // ── Off-topic pre-filter ───────────────────────────────────────────────────
-    // If the question contains no admissions-related keywords AND mentions no
-    // school names, it's almost certainly off-topic. Return the canned refusal
-    // immediately — no Gemini call, no token cost.
-    const ADMISSIONS_KEYWORDS = [
-      'lsat','gpa','score','median','percentile','admission','apply','application',
-      'scholarship','grant','aid','tuition','cost','fee','attend',
-      'employment','biglaw','clerkship','clerk','firm','job','career','salary',
-      'bar','pass','passage','rate',
-      'rank','tier','school','law','jd','lawyer','attorney','degree',
-      'accept','reject','waitlist','deposit','defer',
-    ];
+    // Reject clearly off-topic questions immediately — no data fetch, no Gemini call.
+    //
+    // A question must satisfy at least ONE of:
+    //   (a) contains a strong, law-school-specific keyword, OR
+    //   (b) mentions a known school name
+    //
+    // Generic words like "law", "school", "job", "rate", "degree" are intentionally
+    // excluded from the keyword list because they appear in countless off-topic
+    // questions ("What laws govern my business?", "What school for an MBA?") and
+    // caused expensive false-pass cases. School-name matching handles the cases
+    // where a user asks about a specific school without using jargon.
     const qLower = question.toLowerCase();
-    const hasAdmissionsKeyword = ADMISSIONS_KEYWORDS.some(kw => qLower.includes(kw));
 
-    if (!hasAdmissionsKeyword) {
-      // Also check if any school name token appears in the question
-      // (skip data fetch — use a fast heuristic on the question text alone)
-      const hasSchoolToken = [
-        'yale','harvard','stanford','columbia','chicago','nyu','penn','michigan',
-        'virginia','duke','cornell','northwestern','georgetown','texas','vanderbilt',
-        'emory','ucla','berkeley','usc','notre dame','fordham','boston','marquette',
-        'loyola','tulane','george','florida','ohio','indiana','iowa','minnesota',
-        'wisconsin','colorado','arizona','utah','byu','seton','rutgers','hofstra',
-      ].some(tok => qLower.includes(tok));
+    const hasStrongKeyword = [
+      'lsat','gpa','median','percentile','admission','apply','application',
+      'scholarship','grant','aid','tuition','cost','fee',
+      'employment','biglaw','clerkship','clerk',
+      'bar passage','bar exam','passage',
+      'rank','tier','jd','lawyer','attorney',
+      'accept','waitlist','deposit','defer','conditional',
+    ].some(kw => qLower.includes(kw));
 
-      if (!hasSchoolToken) {
-        return jsonResponse(
-          { answer: "I'm Telamon, Atlas Legis's law school admissions assistant. I can only help with law school admissions questions." },
-          200,
-          corsHeaders(origin),
-        );
-      }
+    const hasSchoolToken = [
+      'yale','harvard','stanford','columbia','chicago','nyu','penn','michigan',
+      'virginia','duke','cornell','northwestern','georgetown','texas','vanderbilt',
+      'emory','ucla','berkeley','usc','notre dame','fordham','boston','marquette',
+      'loyola','tulane','george','florida','ohio','indiana','iowa','minnesota',
+      'wisconsin','colorado','arizona','utah','byu','seton','rutgers','hofstra',
+    ].some(tok => qLower.includes(tok));
+
+    if (!hasStrongKeyword && !hasSchoolToken) {
+      console.log(`[telamon] pre-filter reject: "${question.slice(0, 80)}"`);
+      return jsonResponse(
+        { answer: "I'm Telamon, Atlas Legis's law school admissions assistant. I can only help with law school admissions questions." },
+        200,
+        corsHeaders(origin),
+      );
     }
 
     // Parse conversation history (optional, max 4 turns)
@@ -380,16 +381,23 @@ export default {
       );
     }
 
+    // Log school selection for diagnostics
+    const selectedSchools = selectRelevantSchools(schoolData, question, rawHistory);
+    const useSlim = selectedSchools.length === schoolData.length || selectedSchools.length > 2;
+    console.log(
+      `School selection — matched: ${selectedSchools.length}/${schoolData.length}, slim: ${useSlim}, q: "${question.slice(0, 80)}"`,
+    );
+
     // Call Gemini API
     let geminiResp;
     try {
-      geminiResp = await fetch(GEMINI_ENDPOINT + '?key=' + env.GEMINI_API_KEY, {
+      geminiResp = await fetch(GEMINI_ENDPOINT, {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
         signal:  AbortSignal.timeout(25_000), // 25-second hard timeout
         body: JSON.stringify({
           system_instruction: {
-            parts: [{ text: buildSystemPrompt(selectRelevantSchools(schoolData, question, rawHistory), schoolData.length) }],
+            parts: [{ text: buildSystemPrompt(selectedSchools, schoolData.length) }],
           },
           contents: [
             ...history,
@@ -446,6 +454,13 @@ export default {
       geminiData.candidates[0].content.parts &&
       geminiData.candidates[0].content.parts[0] &&
       geminiData.candidates[0].content.parts[0].text;
+
+    const usage = geminiData.usageMetadata;
+    if (usage) {
+      console.log(
+        `Gemini token usage — prompt: ${usage.promptTokenCount}, candidates: ${usage.candidatesTokenCount}, total: ${usage.totalTokenCount}`,
+      );
+    }
 
     if (!answer) {
       return jsonResponse(

@@ -113,6 +113,59 @@ function slimSchool(s) {
   };
 }
 
+// ── LSAT score extraction ──────────────────────────────────────────────────────
+// Returns the first plausible LSAT score (120–180) found in text, or null.
+function extractLsatScore(text) {
+  const m = text.match(/\b(1[2-7]\d|180)\b/);
+  return m ? parseInt(m[1], 10) : null;
+}
+
+// ── Requested school count extraction ─────────────────────────────────────────
+// Parses how many schools the user asked for. Defaults to 5 if unspecified.
+const WORD_TO_NUM = { one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10 };
+function extractRequestedCount(qLower) {
+  const digit = qLower.match(/\b(\d+)\b/);
+  if (digit) return Math.min(parseInt(digit[1], 10), 20);
+  for (const [word, num] of Object.entries(WORD_TO_NUM)) {
+    if (qLower.includes(word)) return num;
+  }
+  return 5;
+}
+
+// ── Recommendation intent detection ───────────────────────────────────────────
+// Detects whether the question is a school-recommendation query, and if so,
+// which LSAT percentile to use as the minimum threshold for included schools:
+//
+//   'p75' — user signals they want to be a top/great/strong applicant
+//           (their score should be at or above the school's 75th percentile)
+//   'p50' — general recommendation; user should be at or above the school median
+//   null  — not a recommendation query; no score-based filtering applied
+//
+// Note: top-tier signals alone imply a recommendation query (no need to also
+// match a generic rec keyword), so "schools I'd stand out at" is correctly
+// detected as p75 even without "recommend" / "should apply" etc.
+function detectRecommendationTier(qLower) {
+  // Normalise apostrophes/possessives so "school's" matches "schools"
+  const q = qLower.replace(/'\s*s\b/g, 's').replace(/['']/g, '');
+
+  const isTopTier = [
+    'stand out', 'great applicant', 'strong applicant', 'top applicant',
+    'above average', 'best chance', 'most competitive', 'really competitive',
+    'very competitive', 'above median', 'above the median', 'top of the class',
+    'full scholarship', 'be competitive', 'look good', 'where would i be competitive',
+  ].some(kw => q.includes(kw));
+
+  if (isTopTier) return 'p75';
+
+  const isRec = [
+    'should apply', 'should i apply', 'recommend', 'what schools', 'which schools',
+    'good schools', 'good fit', 'schools for me', 'list of schools', 'give me school',
+    'where should', 'schools to apply', 'ten schools', '10 schools', 'apply to',
+  ].some(kw => q.includes(kw));
+
+  return isRec ? 'p50' : null;
+}
+
 // ── School data cache (module-scope, persists for isolate lifetime) ───────────
 const PROD_DATA_URL = 'https://atlaslegis.com/data/master.json';
 const CACHE_TTL_MS  = 10 * 60 * 1000; // re-fetch after 10 minutes of isolate uptime
@@ -136,7 +189,7 @@ async function getSchoolData(env) {
 }
 
 // ── System prompt builder ─────────────────────────────────────────────────────
-function buildSystemPrompt(data, totalCount) {
+function buildSystemPrompt(data, totalCount, recAllowedNames) {
   const isFull = data.length === totalCount;
   // ≤2 schools: full record (user likely wants fine-grained details).
   // 3–10 schools: slim schema (comparison queries need key stats, not full detail).
@@ -170,7 +223,7 @@ function buildSystemPrompt(data, totalCount) {
     '"I\'m Telamon, Atlas Legis\'s law school admissions assistant. I can only help with law school admissions questions."',
     '',
     dataLabel,
-    'This data supersedes anything you may have learned during training. If a figure in your training knowledge differs from the JSON, the JSON is correct — always use the JSON value. Do not contradict it. Do not invent data not in it.',
+    'This data supersedes anything you may have learned during training. If a figure in your training knowledge differs from the JSON, the JSON is correct — always use the JSON value. Do not contradict it. Do not invent data not in it. Do not recommend or cite any school that does not appear in the JSON below.',
     '',
     'DATA FIELD GUIDE (use these mappings exactly):',
     '• "Median LSAT" or "LSAT median" → admissions.lsat.p50  (NOT scholarshipProfile.lsat.p50)',
@@ -217,6 +270,18 @@ function buildSystemPrompt(data, totalCount) {
     'When a user asks which schools offer the best/most generous scholarships for a given LSAT score, GPA, or credential profile, ALWAYS include this referral at the end of your response:',
     '"For a personalised scholarship estimate based on your exact LSAT and GPA, try the Atlas Legis Scholarship Estimator: https://atlaslegis.com/scholarship-estimator"',
     'Also include this referral any time you cannot give a precise scholarship dollar amount because the data only contains scholarship recipient profiles (not award sizes).',
+    '',
+    'SCHOOL RECOMMENDATIONS BY LSAT SCORE:',
+    ...(recAllowedNames
+      ? [
+          'This is a recommendation query. The schools to recommend have already been selected in code — they are the ONLY schools in the JSON below. Present all of them. Do not add, substitute, or omit any. Do not recommend schools from memory.',
+          '• For each school, report its median LSAT (lsat.p50) exactly as it appears in the JSON — never from memory.',
+          '• "Stand out" / top applicant queries: note that the user\'s score is at or above the school\'s 75th percentile.',
+        ]
+      : [
+          'CRITICAL: Only recommend schools present in the JSON below. Never recommend a school from training knowledge. Never fabricate LSAT statistics.',
+        ]
+    ),
     '',
     'RULES:',
     '0. NEVER open with "I cannot provide", "I don\'t have", "the data does not include", or any similar disclaimer if you are about to give the answer. Just give the answer directly and confidently.',
@@ -354,7 +419,29 @@ export default {
       'wisconsin','colorado','arizona','utah','byu','seton','rutgers','hofstra',
     ].some(tok => qLower.includes(tok));
 
-    if (!hasStrongKeyword && !hasSchoolToken) {
+    // If the current message doesn't pass on its own, check recent history —
+    // a short follow-up ("give me three more", "what about smaller schools?")
+    // should be allowed when the conversation is already on-topic.
+    const historyPassesFilter = !hasStrongKeyword && !hasSchoolToken && (() => {
+      const recentHistory = Array.isArray(body.history) ? body.history.slice(-4) : [];
+      const historyText = recentHistory.map(t => (t.text || '')).join(' ').toLowerCase();
+      const histKeyword = [
+        'lsat','gpa','median','percentile','admission','apply','application',
+        'scholarship','grant','tuition','biglaw','clerkship','bar passage','bar exam',
+        'rank','tier','jd','lawyer','attorney',
+      ].some(kw => historyText.includes(kw));
+      const histSchool = [
+        'yale','harvard','stanford','columbia','chicago','nyu','penn','michigan',
+        'virginia','duke','cornell','northwestern','georgetown','texas','vanderbilt',
+        'emory','ucla','berkeley','usc','notre dame','fordham','boston','marquette',
+        'loyola','tulane','george','florida','ohio','indiana','iowa','minnesota',
+        'wisconsin','colorado','arizona','utah','byu','seton','rutgers','hofstra',
+        'law school','law center','school of law',
+      ].some(tok => historyText.includes(tok));
+      return histKeyword || histSchool;
+    })();
+
+    if (!hasStrongKeyword && !hasSchoolToken && !historyPassesFilter) {
       console.log(`[telamon] pre-filter reject: "${question.slice(0, 80)}"`);
       return jsonResponse(
         { answer: "I'm Telamon, Atlas Legis's law school admissions assistant. I can only help with law school admissions questions." },
@@ -383,9 +470,60 @@ export default {
 
     // Log school selection for diagnostics
     const selectedSchools = selectRelevantSchools(schoolData, question, rawHistory);
-    const useSlim = selectedSchools.length === schoolData.length || selectedSchools.length > 2;
+
+    // ── LSAT-based recommendation filtering ───────────────────────────────────
+    // Only applies when: (a) the full dataset is in use (general/ranking query),
+    // (b) the user stated an LSAT score somewhere in the conversation, and
+    // (c) the question is a recommendation query.
+    //
+    // Tier thresholds:
+    //   p50 (default) — user score must be ≥ school's median LSAT
+    //   p75 (top-tier) — user score must be ≥ school's 75th-percentile LSAT
+    //     (signals: "great applicant", "stand out", "full scholarship", etc.)
+    const fullText = question + ' ' + rawHistory.map(t => t.text || '').join(' ');
+    const userLsat = extractLsatScore(fullText);
+    // Check current question first; fall back to history so follow-ups like
+    // "give me three more" inherit the rec tier from the original question.
+    const recTier  = detectRecommendationTier(question.toLowerCase())
+                  || detectRecommendationTier(fullText.toLowerCase());
+    let finalSchools = selectedSchools;
+    let recAllowedNames = null; // set when LSAT filtering is active
+    if (userLsat && recTier && selectedSchools.length === schoolData.length) {
+      let qualifying = selectedSchools.filter(s => {
+        const lsatData = s.admissions && s.admissions.lsat;
+        const threshold = lsatData && lsatData[recTier];
+        // Only include schools with a valid threshold that the user meets
+        return typeof threshold === 'number' && userLsat >= threshold;
+      });
+      // Safety fallback: if p75 tier yields < 5 schools, relax to p50
+      if (recTier === 'p75' && qualifying.length < 5) {
+        qualifying = selectedSchools.filter(s => {
+          const p50 = s.admissions && s.admissions.lsat && s.admissions.lsat.p50;
+          return typeof p50 === 'number' && userLsat >= p50;
+        });
+      }
+      // Sort by rank
+      qualifying.sort((a, b) => (a.rank || 999) - (b.rank || 999));
+
+      // For "more" follow-ups, skip schools already mentioned in history
+      const isMore = question.toLowerCase().includes('more');
+      if (isMore) {
+        const histText = rawHistory.map(t => t.text || '').join(' ').toLowerCase();
+        qualifying = qualifying.filter(s => !histText.includes(s.name.toLowerCase()));
+      }
+
+      // Pick exactly the number of schools the user requested
+      const count = extractRequestedCount(question.toLowerCase());
+      finalSchools = qualifying.slice(0, count);
+      recAllowedNames = finalSchools.map(s => s.name);
+      console.log(
+        `LSAT filter — score: ${userLsat}, tier: ${recTier}, qualifying: ${qualifying.length}, sending: ${finalSchools.length}`,
+      );
+    }
+
+    const useSlim = finalSchools.length === schoolData.length || finalSchools.length > 2;
     console.log(
-      `School selection — matched: ${selectedSchools.length}/${schoolData.length}, slim: ${useSlim}, q: "${question.slice(0, 80)}"`,
+      `School selection — matched: ${finalSchools.length}/${schoolData.length}, slim: ${useSlim}, q: "${question.slice(0, 80)}"`,
     );
 
     // Call Gemini API
@@ -397,7 +535,7 @@ export default {
         signal:  AbortSignal.timeout(25_000), // 25-second hard timeout
         body: JSON.stringify({
           system_instruction: {
-            parts: [{ text: buildSystemPrompt(selectedSchools, schoolData.length) }],
+            parts: [{ text: buildSystemPrompt(finalSchools, schoolData.length, recAllowedNames) }],
           },
           contents: [
             ...history,
@@ -470,6 +608,8 @@ export default {
       );
     }
 
-    return jsonResponse({ answer }, 200, corsHeaders(origin));
+    const responseBody = { answer };
+    if (usage) responseBody.usage = { prompt: usage.promptTokenCount, output: usage.candidatesTokenCount, total: usage.totalTokenCount };
+    return jsonResponse(responseBody, 200, corsHeaders(origin));
   },
 };

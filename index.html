@@ -1967,25 +1967,100 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    /* Mobile footer: compact single row + Safari safe-area */
+    /* Mobile footer: compact bar with drawer toggle */
     @media (max-width: 768px) {
       #site-footer {
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        padding: 4px 8px env(safe-area-inset-bottom, 4px);
+        justify-content: space-between;
+        padding: 0 16px env(safe-area-inset-bottom, 0px);
         gap: 0;
-        min-height: calc(34px + env(safe-area-inset-bottom, 0px));
+        min-height: calc(40px + env(safe-area-inset-bottom, 0px));
       }
       #site-footer::before { display: none; }
-      .footer-brand { display: none; }
       .footer-copy { display: none; }
       .footer-nav-sep { display: none; }
-      #site-footer nav { gap: 0; flex-wrap: wrap; justify-content: center; row-gap: 0; }
-      .footer-nav-link { font-size: 0.64rem; padding: 5px 7px; min-height: 32px; display:inline-flex; align-items:center; letter-spacing: 0; }
-      /* Hide footer on mobile when sidebar or compare panel is open */
+      #site-footer nav { display: none; }
+      #footer-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--muted);
+        background: rgba(15,81,50,0.06);
+        border: 1px solid rgba(15,81,50,0.14);
+        border-radius: 999px;
+        padding: 5px 12px;
+        cursor: pointer;
+        letter-spacing: 0.01em;
+        transition: background 0.15s, color 0.15s;
+      }
+      #footer-menu-btn span { font-size: 0.6rem; transition: transform 0.25s; }
+      #footer-menu-btn[aria-expanded="true"] { color: var(--em-deep); background: rgba(15,81,50,0.1); }
+      #footer-menu-btn[aria-expanded="true"] span { transform: rotate(180deg); }
+      /* Hide footer when sidebar/compare is open */
       body.sidebar-open #site-footer,
       body.compare-open #site-footer { display: none; }
+
+      /* ── Footer nav backdrop ── */
+      #footer-nav-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.18);
+        z-index: 595;
+      }
+      #footer-nav-backdrop.open { display: block; }
+
+      /* ── Footer nav drawer (bottom sheet) ── */
+      #footer-nav-drawer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 596;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(20px) saturate(1.4);
+        -webkit-backdrop-filter: blur(20px) saturate(1.4);
+        border-radius: 18px 18px 0 0;
+        border-top: 1px solid rgba(15,81,50,0.12);
+        box-shadow: 0 -6px 40px rgba(15,81,50,0.12);
+        padding: 8px 0 env(safe-area-inset-bottom, 12px);
+        transform: translateY(100%);
+        transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+      }
+      #footer-nav-drawer.open { transform: translateY(0); }
+      .footer-drawer-handle {
+        width: 36px;
+        height: 4px;
+        background: rgba(15,81,50,0.18);
+        border-radius: 2px;
+        margin: 0 auto 10px;
+      }
+      #footer-nav-drawer nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-drawer-link {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--ink);
+        text-decoration: none;
+        padding: 13px 24px;
+        border-bottom: 1px solid rgba(15,81,50,0.07);
+        transition: background 0.12s;
+      }
+      .footer-drawer-link:last-child { border-bottom: none; }
+      .footer-drawer-link:active { background: rgba(15,81,50,0.07); }
+    }
+    /* Hide drawer elements on desktop */
+    @media (min-width: 769px) {
+      #footer-menu-btn { display: none; }
+      #footer-nav-backdrop { display: none; }
+      #footer-nav-drawer { display: none; }
     }
 
     /* Landscape phones: shorten bottom sheet so map is still visible */
@@ -4250,6 +4325,40 @@ document.getElementById('close-btn').addEventListener('click', () => {
   }
 })();
 
+// ── Footer nav drawer (mobile) ────────────────────────────────────────────────
+(function () {
+  const btn      = document.getElementById('footer-menu-btn');
+  const drawer   = document.getElementById('footer-nav-drawer');
+  const backdrop = document.getElementById('footer-nav-backdrop');
+  if (!btn || !drawer || !backdrop) return;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  btn.addEventListener('click', function () {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  backdrop.addEventListener('click', closeDrawer);
+
+  // Drag-to-dismiss
+  let startY = null;
+  drawer.addEventListener('touchstart', function (e) { startY = e.touches[0].clientY; }, { passive: true });
+  drawer.addEventListener('touchend', function (e) {
+    if (startY !== null && (e.changedTouches[0].clientY - startY) > 60) closeDrawer();
+    startY = null;
+  }, { passive: true });
+})();
+
 
 </script>
 
@@ -4275,8 +4384,25 @@ document.getElementById('close-btn').addEventListener('click', () => {
     <span class="footer-nav-sep">·</span>
     <a href="/sources.html" class="footer-nav-link">Sources</a>
   </nav>
+  <button id="footer-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="footer-nav-drawer">
+    Links <span>&#9650;</span>
+  </button>
   <span class="footer-copy">© 2026 Atlas Legis</span>
 </footer>
+
+<div id="footer-nav-backdrop" aria-hidden="true"></div>
+<div id="footer-nav-drawer" role="dialog" aria-label="Site navigation" aria-hidden="true">
+  <div class="footer-drawer-handle"></div>
+  <nav aria-label="Footer drawer navigation">
+    <a href="/schools/index.html" class="footer-drawer-link">Schools</a>
+    <a href="/scholarship-estimator.html" class="footer-drawer-link">Scholarships</a>
+    <a href="/debt-planner.html" class="footer-drawer-link">Debt Planner</a>
+    <a href="/about.html" class="footer-drawer-link">About</a>
+    <a href="/ask/" class="footer-drawer-link">Ask Telamon</a>
+    <a href="/methodology.html" class="footer-drawer-link">Methodology</a>
+    <a href="/sources.html" class="footer-drawer-link">Sources</a>
+  </nav>
+</div>
 
 <!-- Tools dropdown (positioned by JS) -->
 <div id="tools-dropdown" role="menu" aria-label="Tools menu">

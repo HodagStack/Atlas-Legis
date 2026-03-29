@@ -574,15 +574,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 24989,
-            "p50": 31378,
-            "p75": 37187
-          },
-          "amountsAlt": {
             "p25": 27000,
             "p50": 35000,
             "p75": 40000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -1426,15 +1422,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 23682,
-            "p50": 34124,
-            "p75": 46099
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 35000,
             "p75": 47500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -1654,15 +1646,11 @@
             "moreThanFull": 2.2
           },
           "amounts": {
-            "p25": 21359,
-            "p50": 31927,
-            "p75": 41106
-          },
-          "amountsAlt": {
             "p25": 17500,
             "p50": 32792,
             "p75": 44927
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -2298,15 +2286,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 23259,
-            "p50": 31073,
-            "p75": 42797
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 29000,
             "p75": 43000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -2526,15 +2510,11 @@
             "moreThanFull": 7.7
           },
           "amounts": {
-            "p25": 16990,
-            "p50": 28353,
-            "p75": 32991
-          },
-          "amountsAlt": {
             "p25": 17500,
             "p50": 26048,
             "p75": 35534
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -2650,15 +2630,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 17074,
-            "p50": 21683,
-            "p75": 28536
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 24000,
             "p75": 28000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -2878,15 +2854,11 @@
             "moreThanFull": 4.7
           },
           "amounts": {
-            "p25": 22972,
-            "p50": 38809,
-            "p75": 46837
-          },
-          "amountsAlt": {
             "p25": 30000,
             "p50": 40000,
             "p75": 55162
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -3106,15 +3078,11 @@
             "moreThanFull": 7.2
           },
           "amounts": {
-            "p25": 14965,
-            "p50": 23759,
-            "p75": 33798
-          },
-          "amountsAlt": {
             "p25": 17360,
             "p50": 29984,
             "p75": 37220
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -3542,15 +3510,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 18354,
-            "p50": 25200,
-            "p75": 33971
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 28000,
             "p75": 40000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -3770,15 +3734,11 @@
             "moreThanFull": 2.7
           },
           "amounts": {
-            "p25": 20291,
-            "p50": 26237,
-            "p75": 33509
-          },
-          "amountsAlt": {
             "p25": 21782,
             "p50": 29302,
             "p75": 37112
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -3998,15 +3958,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 18811,
-            "p50": 33603,
-            "p75": 38266
-          },
-          "amountsAlt": {
             "p25": 19000,
             "p50": 33500,
             "p75": 41500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -4226,15 +4182,11 @@
             "moreThanFull": 1.4
           },
           "amounts": {
-            "p25": 24620,
-            "p50": 35965,
-            "p75": 43346
-          },
-          "amountsAlt": {
             "p25": 28000,
             "p50": 36000,
             "p75": 45000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -4350,15 +4302,11 @@
             "moreThanFull": 12.5
           },
           "amounts": {
-            "p25": 5486,
-            "p50": 13915,
-            "p75": 19223
-          },
-          "amountsAlt": {
             "p25": 5737,
             "p50": 15464,
             "p75": 20640
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -4578,15 +4526,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 23023,
-            "p50": 31372,
-            "p75": 39334
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 35000,
             "p75": 43000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -5326,15 +5270,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 22404,
-            "p50": 36393,
-            "p75": 45195
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 40000,
             "p75": 50000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -5762,15 +5702,11 @@
             "moreThanFull": 4.2
           },
           "amounts": {
-            "p25": 17866,
-            "p50": 28405,
-            "p75": 35630
-          },
-          "amountsAlt": {
             "p25": 22271,
             "p50": 31334,
             "p75": 41500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -6510,15 +6446,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 15194,
-            "p50": 21896,
-            "p75": 29198
-          },
-          "amountsAlt": {
             "p25": 16000,
             "p50": 23000,
             "p75": 30000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -6738,15 +6670,11 @@
             "moreThanFull": 8.2
           },
           "amounts": {
-            "p25": 31416,
-            "p50": 47374,
-            "p75": 54662
-          },
-          "amountsAlt": {
             "p25": 26000,
             "p50": 36000,
             "p75": 56928
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -7278,15 +7206,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 31053,
-            "p50": 65409,
-            "p75": 67930
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 60000,
             "p75": 72630
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -7506,15 +7430,11 @@
             "moreThanFull": 4
           },
           "amounts": {
-            "p25": 14757,
-            "p50": 31895,
-            "p75": 51442
-          },
-          "amountsAlt": {
             "p25": 14666,
             "p50": 31000,
             "p75": 45000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -7630,15 +7550,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 13560,
-            "p50": 27338,
-            "p75": 47040
-          },
-          "amountsAlt": {
             "p25": 15727,
             "p50": 26000,
             "p75": 45000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -8170,15 +8086,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 19734,
-            "p50": 38613,
-            "p75": 57754
-          },
-          "amountsAlt": {
             "p25": 20500,
             "p50": 40000,
             "p75": 60000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -8294,15 +8206,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 26808,
-            "p50": 35519,
-            "p75": 42042
-          },
-          "amountsAlt": {
             "p25": 30000,
             "p50": 37500,
             "p75": 45000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -8418,15 +8326,11 @@
             "moreThanFull": 6.2
           },
           "amounts": {
-            "p25": 20233,
-            "p50": 29904,
-            "p75": 35833
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 34636,
             "p75": 38547
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -8542,15 +8446,11 @@
             "moreThanFull": 3.5
           },
           "amounts": {
-            "p25": 14890,
-            "p50": 30860,
-            "p75": 47519
-          },
-          "amountsAlt": {
             "p25": 13000,
             "p50": 28667,
             "p75": 45000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -8666,15 +8566,11 @@
             "moreThanFull": 9.2
           },
           "amounts": {
-            "p25": 6970,
-            "p50": 10221,
-            "p75": 16281
-          },
-          "amountsAlt": {
             "p25": 2336,
             "p50": 7776,
             "p75": 10627
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -9102,15 +8998,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 25273,
-            "p50": 37910,
-            "p75": 50546
-          },
-          "amountsAlt": {
             "p25": 27140,
             "p50": 40710,
             "p75": 54280
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -9226,15 +9118,11 @@
             "moreThanFull": 3.2
           },
           "amounts": {
-            "p25": 21783,
-            "p50": 30397,
-            "p75": 36619
-          },
-          "amountsAlt": {
             "p25": 24000,
             "p50": 31000,
             "p75": 37080
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -9351,14 +9239,10 @@
           },
           "amounts": {
             "p25": 7000,
-            "p50": 12800,
-            "p75": 20995
-          },
-          "amountsAlt": {
-            "p25": 7000,
             "p50": 10365,
             "p75": 20716
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -9786,15 +9670,11 @@
             "moreThanFull": 3
           },
           "amounts": {
-            "p25": 5437,
-            "p50": 10118,
-            "p75": 15866
-          },
-          "amountsAlt": {
             "p25": 5869,
             "p50": 12000,
             "p75": 17850
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -9910,15 +9790,11 @@
             "moreThanFull": 1.8
           },
           "amounts": {
-            "p25": 18835,
-            "p50": 27501,
-            "p75": 40236
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 30000,
             "p75": 43000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -10346,15 +10222,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 11205,
-            "p50": 23997,
-            "p75": 34008
-          },
-          "amountsAlt": {
             "p25": 10000,
             "p50": 22500,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -10470,15 +10342,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 13487,
-            "p50": 23589,
-            "p75": 33376
-          },
-          "amountsAlt": {
             "p25": 15000,
             "p50": 25000,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -10589,9 +10457,9 @@
           "needBased": null,
           "tiers": null,
           "amounts": {
-            "p25": 12500,
-            "p50": 25320,
-            "p75": 34750
+            "p25": 19678,
+            "p50": 26865,
+            "p75": 34490
           },
           "amountsAlt": null
         }
@@ -10802,15 +10670,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 17837,
-            "p50": 25194,
-            "p75": 33146
-          },
-          "amountsAlt": {
             "p25": 19000,
             "p50": 26000,
             "p75": 36000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -11134,15 +10998,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 13463,
-            "p50": 22719,
-            "p75": 32621
-          },
-          "amountsAlt": {
             "p25": 15000,
             "p50": 25000,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -11258,15 +11118,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 32086,
-            "p50": 39043,
-            "p75": 40000
-          },
-          "amountsAlt": {
             "p25": 40000,
             "p50": 40000,
             "p75": 40000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -11382,15 +11238,11 @@
             "moreThanFull": 12.1
           },
           "amounts": {
-            "p25": 33614,
-            "p50": 54449,
-            "p75": 62243
-          },
-          "amountsAlt": {
             "p25": 35000,
             "p50": 59500,
             "p75": 64500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -11610,15 +11462,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 30565,
-            "p50": 40844,
-            "p75": 46380
-          },
-          "amountsAlt": {
             "p25": 31000,
             "p50": 42500,
             "p75": 48500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12046,15 +11894,11 @@
             "moreThanFull": 3.8
           },
           "amounts": {
-            "p25": 9030,
-            "p50": 18038,
-            "p75": 26829
-          },
-          "amountsAlt": {
             "p25": 10000,
             "p50": 20000,
             "p75": 29000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12274,15 +12118,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 8387,
-            "p50": 17384,
-            "p75": 25512
-          },
-          "amountsAlt": {
             "p25": 7500,
             "p50": 20000,
             "p75": 27000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12398,15 +12238,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 15723,
-            "p50": 24540,
-            "p75": 36585
-          },
-          "amountsAlt": {
             "p25": 14000,
             "p50": 24351,
             "p75": 40211
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12626,15 +12462,11 @@
             "moreThanFull": 2
           },
           "amounts": {
-            "p25": 25200,
-            "p50": 34790,
-            "p75": 40391
-          },
-          "amountsAlt": {
             "p25": 35000,
             "p50": 42682,
             "p75": 47424
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12751,14 +12583,10 @@
           },
           "amounts": {
             "p25": 20000,
-            "p50": 34717,
-            "p75": 44843
-          },
-          "amountsAlt": {
-            "p25": 20000,
             "p50": 38000,
             "p75": 46000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12874,15 +12702,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 21614,
-            "p50": 32372,
-            "p75": 44416
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 34000,
             "p75": 48000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -12998,15 +12822,11 @@
             "moreThanFull": 4.5
           },
           "amounts": {
-            "p25": 7515,
-            "p50": 12210,
-            "p75": 19916
-          },
-          "amountsAlt": {
             "p25": 10848,
             "p50": 17500,
             "p75": 26110
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -13226,15 +13046,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 6164,
-            "p50": 13551,
-            "p75": 21004
-          },
-          "amountsAlt": {
             "p25": 6000,
             "p50": 11000,
             "p75": 18000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -13454,15 +13270,11 @@
             "moreThanFull": 11.7
           },
           "amounts": {
-            "p25": 17886,
-            "p50": 35485,
-            "p75": 52056
-          },
-          "amountsAlt": {
             "p25": 21300,
             "p50": 40000,
             "p75": 55000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -13578,15 +13390,11 @@
             "moreThanFull": 13.4
           },
           "amounts": {
-            "p25": 8700,
-            "p50": 13847,
-            "p75": 24962
-          },
-          "amountsAlt": {
             "p25": 11915,
             "p50": 15000,
             "p75": 21500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -13702,15 +13510,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 15498,
-            "p50": 33661,
-            "p75": 66762
-          },
-          "amountsAlt": {
             "p25": 17500,
             "p50": 35793,
             "p75": 71586
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -14034,15 +13838,11 @@
             "moreThanFull": 2
           },
           "amounts": {
-            "p25": 7739,
-            "p50": 15398,
-            "p75": 25346
-          },
-          "amountsAlt": {
             "p25": 10037,
             "p50": 23657,
             "p75": 32364
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -14158,15 +13958,11 @@
             "moreThanFull": 2
           },
           "amounts": {
-            "p25": 16892,
-            "p50": 26892,
-            "p75": 36892
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 30000,
             "p75": 40000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -14386,15 +14182,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 13285,
-            "p50": 21080,
-            "p75": 46413
-          },
-          "amountsAlt": {
             "p25": 10000,
             "p50": 22445,
             "p75": 40000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -14614,15 +14406,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 18845,
-            "p50": 29841,
-            "p75": 33934
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 34950,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -14738,15 +14526,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 12768,
-            "p50": 17900,
-            "p75": 26525
-          },
-          "amountsAlt": {
             "p25": 15000,
             "p50": 21771,
             "p75": 29850
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -15070,15 +14854,11 @@
             "moreThanFull": 2.8
           },
           "amounts": {
-            "p25": 7651,
-            "p50": 15181,
-            "p75": 20783
-          },
-          "amountsAlt": {
             "p25": 10000,
             "p50": 18000,
             "p75": 25000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -15194,15 +14974,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 3000,
-            "p50": 9357,
-            "p75": 14887
-          },
-          "amountsAlt": {
             "p25": 3399,
             "p50": 11000,
             "p75": 18000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -15526,15 +15302,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 22861,
-            "p50": 29192,
-            "p75": 33121
-          },
-          "amountsAlt": {
             "p25": 27000,
             "p50": 32000,
             "p75": 34140
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -15754,15 +15526,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 16756,
-            "p50": 23457,
-            "p75": 31089
-          },
-          "amountsAlt": {
             "p25": 16000,
             "p50": 24000,
             "p75": 32000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -15878,15 +15646,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 18824,
-            "p50": 28206,
-            "p75": 37282
-          },
-          "amountsAlt": {
             "p25": 20000,
             "p50": 29000,
             "p75": 38500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -16002,15 +15766,11 @@
             "moreThanFull": 2
           },
           "amounts": {
-            "p25": 11925,
-            "p50": 21082,
-            "p75": 34282
-          },
-          "amountsAlt": {
             "p25": 14000,
             "p50": 25000,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -16334,15 +16094,11 @@
             "moreThanFull": 9.6
           },
           "amounts": {
-            "p25": 12639,
-            "p50": 22890,
-            "p75": 34584
-          },
-          "amountsAlt": {
             "p25": 15200,
             "p50": 25600,
             "p75": 37458
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -16458,15 +16214,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 7164,
-            "p50": 11538,
-            "p75": 16381
-          },
-          "amountsAlt": {
             "p25": 8500,
             "p50": 12500,
             "p75": 17605
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -16582,15 +16334,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 4817,
-            "p50": 8229,
-            "p75": 12244
-          },
-          "amountsAlt": {
             "p25": 4137,
             "p50": 8274,
             "p75": 12411
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -16812,13 +16560,9 @@
           "amounts": {
             "p25": 10000,
             "p50": 20000,
-            "p75": 30976
-          },
-          "amountsAlt": {
-            "p25": 10000,
-            "p50": 20000,
             "p75": 30000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -16934,15 +16678,11 @@
             "moreThanFull": 6.7
           },
           "amounts": {
-            "p25": 17274,
-            "p50": 32495,
-            "p75": 46485
-          },
-          "amountsAlt": {
             "p25": 7365,
             "p50": 30000,
             "p75": 47400
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -17162,15 +16902,11 @@
             "moreThanFull": 1.4
           },
           "amounts": {
-            "p25": 11695,
-            "p50": 24925,
-            "p75": 37564
-          },
-          "amountsAlt": {
             "p25": 12500,
             "p50": 29166,
             "p75": 42372
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -17390,15 +17126,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 20118,
-            "p50": 31484,
-            "p75": 44522
-          },
-          "amountsAlt": {
             "p25": 30000,
             "p50": 40000,
             "p75": 57262
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -17514,15 +17246,11 @@
             "moreThanFull": 1.8
           },
           "amounts": {
-            "p25": 10042,
-            "p50": 19784,
-            "p75": 30937
-          },
-          "amountsAlt": {
             "p25": 11429,
             "p50": 23571,
             "p75": 32543
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -17638,15 +17366,11 @@
             "moreThanFull": 2
           },
           "amounts": {
-            "p25": 12798,
-            "p50": 19595,
-            "p75": 30339
-          },
-          "amountsAlt": {
             "p25": 14000,
             "p50": 22000,
             "p75": 32000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -17762,15 +17486,11 @@
             "moreThanFull": 4.6
           },
           "amounts": {
-            "p25": 8379,
-            "p50": 14000,
-            "p75": 18719
-          },
-          "amountsAlt": {
             "p25": 10000,
             "p50": 14000,
             "p75": 20000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -18094,15 +17814,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 18098,
-            "p50": 28139,
-            "p75": 38351
-          },
-          "amountsAlt": {
             "p25": 18000,
             "p50": 28000,
             "p75": 41250
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -18530,15 +18246,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 15795,
-            "p50": 24928,
-            "p75": 31902
-          },
-          "amountsAlt": {
             "p25": 18562,
             "p50": 28000,
             "p75": 34804
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -18654,15 +18366,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 10670,
-            "p50": 20832,
-            "p75": 34793
-          },
-          "amountsAlt": {
             "p25": 10000,
             "p50": 22000,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -18778,15 +18486,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 23615,
-            "p50": 29819,
-            "p75": 34209
-          },
-          "amountsAlt": {
             "p25": 25000,
             "p50": 32000,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -18902,15 +18606,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 12156,
-            "p50": 19552,
-            "p75": 29596
-          },
-          "amountsAlt": {
             "p25": 12000,
             "p50": 21000,
             "p75": 32000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19130,15 +18830,11 @@
             "moreThanFull": 1.4
           },
           "amounts": {
-            "p25": 5894,
-            "p50": 9533,
-            "p75": 13195
-          },
-          "amountsAlt": {
             "p25": 6000,
             "p50": 9500,
             "p75": 16540
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19254,15 +18950,11 @@
             "moreThanFull": 21.4
           },
           "amounts": {
-            "p25": 6033,
-            "p50": 14123,
-            "p75": 30602
-          },
-          "amountsAlt": {
             "p25": 5500,
             "p50": 10250,
             "p75": 24600
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19378,15 +19070,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 7480,
-            "p50": 16271,
-            "p75": 23138
-          },
-          "amountsAlt": {
             "p25": 6500,
             "p50": 16000,
             "p75": 22000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19502,15 +19190,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 18520,
-            "p50": 35318,
-            "p75": 51938
-          },
-          "amountsAlt": {
             "p25": 18720,
             "p50": 37440,
             "p75": 53040
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19626,15 +19310,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 11655,
-            "p50": 18138,
-            "p75": 28694
-          },
-          "amountsAlt": {
             "p25": 13000,
             "p50": 20000,
             "p75": 28500
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19854,15 +19534,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 4850,
-            "p50": 13435,
-            "p75": 27094
-          },
-          "amountsAlt": {
             "p25": 3990,
             "p50": 15960,
             "p75": 25935
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -19978,15 +19654,11 @@
             "moreThanFull": 5.5
           },
           "amounts": {
-            "p25": 4091,
-            "p50": 5909,
-            "p75": 8552
-          },
-          "amountsAlt": {
             "p25": 5000,
             "p50": 7500,
             "p75": 10000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20102,15 +19774,11 @@
             "moreThanFull": 7.9
           },
           "amounts": {
-            "p25": 6824,
-            "p50": 10711,
-            "p75": 17778
-          },
-          "amountsAlt": {
             "p25": 8080,
             "p50": 12982,
             "p75": 20907
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20226,15 +19894,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 10667,
-            "p50": 15077,
-            "p75": 21295
-          },
-          "amountsAlt": {
             "p25": 10750,
             "p50": 15000,
             "p75": 21310
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20350,15 +20014,11 @@
             "moreThanFull": 3.2
           },
           "amounts": {
-            "p25": 12139,
-            "p50": 19425,
-            "p75": 26077
-          },
-          "amountsAlt": {
             "p25": 9125,
             "p50": 17250,
             "p75": 25700
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20474,15 +20134,11 @@
             "moreThanFull": 1.5
           },
           "amounts": {
-            "p25": 7529,
-            "p50": 10616,
-            "p75": 12542
-          },
-          "amountsAlt": {
             "p25": 8000,
             "p50": 11000,
             "p75": 13000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20702,15 +20358,11 @@
             "moreThanFull": 1.5
           },
           "amounts": {
-            "p25": 7529,
-            "p50": 10616,
-            "p75": 12542
-          },
-          "amountsAlt": {
             "p25": 3500,
             "p50": 7363,
             "p75": 10519
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20826,15 +20478,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 14798,
-            "p50": 18000,
-            "p75": 22000
-          },
-          "amountsAlt": {
             "p25": 15000,
             "p50": 18000,
             "p75": 22000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -20896,15 +20544,11 @@
             "moreThanFull": 3.7
           },
           "amounts": {
-            "p25": 15245,
-            "p50": 24334,
-            "p75": 30279
-          },
-          "amountsAlt": {
             "p25": 15988,
             "p50": 28000,
             "p75": 32736
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -21020,15 +20664,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 8072,
-            "p50": 13293,
-            "p75": 22639
-          },
-          "amountsAlt": {
             "p25": 9279,
             "p50": 13746,
             "p75": 23463
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -21144,15 +20784,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 22897,
-            "p50": 29587,
-            "p75": 32996
-          },
-          "amountsAlt": {
             "p25": 23000,
             "p50": 30000,
             "p75": 35000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -21372,15 +21008,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 14240,
-            "p50": 23818,
-            "p75": 32142
-          },
-          "amountsAlt": {
             "p25": 15625,
             "p50": 25000,
             "p75": 34000
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -21496,15 +21128,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 1009,
-            "p50": 1556,
-            "p75": 3713
-          },
-          "amountsAlt": {
             "p25": 1000,
             "p50": 1593,
             "p75": 4372
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -21724,15 +21352,11 @@
             "moreThanFull": 1
           },
           "amounts": {
-            "p25": 32086,
-            "p50": 39043,
-            "p75": 40000
-          },
-          "amountsAlt": {
             "p25": 1189,
             "p50": 2379,
             "p75": 3568
-          }
+          },
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -21956,11 +21580,7 @@
             "p50": 6000,
             "p75": 24302
           },
-          "amountsAlt": {
-            "p25": 3000,
-            "p50": 6000,
-            "p75": 24302
-          }
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -22022,15 +21642,11 @@
             "moreThanFull": null
           },
           "amounts": {
-            "p25": 2392,
-            "p50": 8859,
-            "p75": 17049
+            "p25": 1125,
+            "p50": 4500,
+            "p75": 9000
           },
-          "amountsAlt": {
-            "p25": 10000,
-            "p50": 18000,
-            "p75": 24000
-          }
+          "amountsAlt": null
         }
       },
       "scholarshipProfile": {
@@ -22211,9 +21827,9 @@
           "needBased": null,
           "tiers": null,
           "amounts": {
-            "p25": 15000,
-            "p50": 22000,
-            "p75": 27000
+            "p25": 13120,
+            "p50": 23616,
+            "p75": 36000
           },
           "amountsAlt": null
         }

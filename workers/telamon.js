@@ -365,9 +365,10 @@ export default {
         }),
       });
     } catch (err) {
-      console.error('[telamon] Gemini fetch error:', err && err.message, err && err.name);
+      const msg = (err && err.message) || String(err);
+      console.error('[telamon] Gemini fetch error:', msg, err && err.name);
       return jsonResponse(
-        { error: 'Unable to reach the AI service. Please try again shortly.' },
+        { error: `Unable to reach the AI service (${err && err.name}: ${msg})` },
         502,
         corsHeaders(origin),
       );
@@ -377,7 +378,7 @@ export default {
       const errBody = await geminiResp.text().catch(() => '');
       console.error('[telamon] Gemini non-OK response:', geminiResp.status, errBody);
       return jsonResponse(
-        { error: 'The AI service is temporarily unavailable. Please try again.' },
+        { error: `AI service error ${geminiResp.status}: ${errBody.slice(0, 300)}` },
         502,
         corsHeaders(origin),
       );

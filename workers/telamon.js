@@ -364,7 +364,8 @@ export default {
           ],
         }),
       });
-    } catch (_) {
+    } catch (err) {
+      console.error('[telamon] Gemini fetch error:', err && err.message, err && err.name);
       return jsonResponse(
         { error: 'Unable to reach the AI service. Please try again shortly.' },
         502,
@@ -373,6 +374,8 @@ export default {
     }
 
     if (!geminiResp.ok) {
+      const errBody = await geminiResp.text().catch(() => '');
+      console.error('[telamon] Gemini non-OK response:', geminiResp.status, errBody);
       return jsonResponse(
         { error: 'The AI service is temporarily unavailable. Please try again.' },
         502,

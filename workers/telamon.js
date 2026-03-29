@@ -58,8 +58,8 @@ function schoolTokens(name, city) {
  * (e.g. ranking/comparison questions).
  */
 function selectRelevantSchools(allSchools, question, rawHistory) {
-  // Build a single search string from current question + last 6 history texts
-  const historyTexts = (rawHistory || []).slice(-6).map(t => t.text || '').join(' ');
+  // Build a single search string from current question + last 4 history texts
+  const historyTexts = (rawHistory || []).slice(-4).map(t => t.text || '').join(' ');
   const searchText   = (question + ' ' + historyTexts).toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
 
   const matched = allSchools.filter(school => {
@@ -72,6 +72,43 @@ function selectRelevantSchools(allSchools, question, rawHistory) {
   // 0 matches = comparison/general query → use all schools.
   // >5 matches = too broad (e.g. "university") → use all schools.
   return (matched.length >= 1 && matched.length <= 5) ? matched : allSchools;
+}
+
+// ── Slim school schema (used for full-dataset queries to reduce token usage) ───
+// Focused queries (1–5 schools) get the full record; full-dataset queries get
+// this compact summary so ranking/comparison questions stay cheap.
+function slimSchool(s) {
+  const emp  = s.employment  || {};
+  const lf   = emp.lawFirms  || {};
+  const cl   = emp.clerkships || {};
+  const sec  = emp.sectors   || {};
+  const bp   = s.barPassage  || {};
+  const fin  = s.financials  || {};
+  const tuit = fin.tuition   || {};
+  const gr   = fin.grants    || {};
+  const adm  = s.admissions  || {};
+  const g    = emp.graduates || null;
+  const pct  = n => (g && n != null) ? Math.round(n / g * 1000) / 10 : null;
+  return {
+    name:        s.name,
+    rank:        s.rank,
+    tier:        s.tier,
+    city:        s.city,
+    lsat:        adm.lsat,
+    gpa:         adm.gpa,
+    acceptRate:  adm.acceptRate,
+    classSize:   adm.classSize,
+    condSchol:   adm.conditionalScholarships,
+    tuition:     { res: tuit.ftResident, nonRes: tuit.ftNonResident, ptRes: tuit.ptResident },
+    grants:      { pct: gr.percentReceiving, p25: gr.amounts && gr.amounts.p25, p50: gr.amounts && gr.amounts.p50, p75: gr.amounts && gr.amounts.p75 },
+    graduates:   g,
+    bigLawPct:   pct((lf.s500 || 0) + (lf.biglaw || 0)),
+    clerkPct:    pct(cl.federal),
+    pubIntPct:   pct(sec.publicInterest),
+    govPct:      pct(sec.government),
+    barPassRate: bp.schoolPassRate,
+    stateBarAvg: bp.stateAvgPassRate,
+  };
 }
 
 // ── School data cache (module-scope, persists for isolate lifetime) ───────────
@@ -96,9 +133,12 @@ async function getSchoolData(env) {
 // ── System prompt builder ─────────────────────────────────────────────────────
 function buildSystemPrompt(data, totalCount) {
   const isFull    = data.length === totalCount;
+  // Full-dataset queries use a compact schema to reduce token usage.
+  // Focused queries (1–5 schools) get the full record for detailed lookups.
+  const displayData = isFull ? data.map(slimSchool) : data;
   const dataLabel = isFull
-    ? `DATA: Full dataset — all ${totalCount} ABA-accredited law schools. This JSON is your ONLY authoritative source.`
-    : `DATA: Focused dataset — the ${data.length} school(s) relevant to this conversation. Full data for all ${totalCount} schools is available; if asked about a school not listed below, say you don't have that school's data in this session and ask the user to start a new question.`;
+    ? `DATA: Compact summary for all ${totalCount} ABA-accredited law schools (for ranking/comparison). Fields: name, rank, tier, city, lsat{p25/p50/p75}, gpa{p25/p50/p75}, acceptRate, classSize, condSchol, tuition{res/nonRes/ptRes}, grants{pct/p25/p50/p75}, graduates, bigLawPct, clerkPct, pubIntPct, govPct, barPassRate, stateBarAvg. Percentages are already computed (e.g. bigLawPct=43.7 means 43.7%). This JSON is your ONLY authoritative source.`
+    : `DATA: Full detail for the ${data.length} school(s) relevant to this conversation. If asked about a school not listed below, say it's not in this session's focused data and ask the user to start a new question.`;
   return [
     'You are Telamon, the AI assistant for Atlas Legis (atlaslegis.com) — a free, non-commercial law school analytics platform.',
     'Your sole purpose is helping prospective law students understand law school admissions data.',
@@ -162,7 +202,7 @@ function buildSystemPrompt(data, totalCount) {
     '• "First-time bar passers" → barPassage.firstTimePassers',
     '• If barPassage is null, the school does not yet have ABA bar passage data — say so.',
     '',
-    JSON.stringify(data),
+    JSON.stringify(displayData),
     '',
     'SCHOLARSHIP ESTIMATOR:',
     'When a user asks which schools offer the best/most generous scholarships for a given LSAT score, GPA, or credential profile, ALWAYS include this referral at the end of your response:',
@@ -278,8 +318,8 @@ export default {
 
     const question = sanitizeInput(rawQuestion);
 
-    // Parse conversation history (optional, max 6 turns)
-    const rawHistory = Array.isArray(body.history) ? body.history.slice(-6) : [];
+    // Parse conversation history (optional, max 4 turns)
+    const rawHistory = Array.isArray(body.history) ? body.history.slice(-4) : [];
     const history = rawHistory
       .filter(t => (t.role === 'user' || t.role === 'model') && typeof t.text === 'string' && t.text.trim())
       .map(t => ({ role: t.role, parts: [{ text: sanitizeInput(t.text).slice(0, 2000) }] }));
@@ -312,7 +352,7 @@ export default {
             { role: 'user', parts: [{ text: question }] },
           ],
           generationConfig: {
-            maxOutputTokens: 1024,
+            maxOutputTokens: 512,
             temperature:     0.2,
             topP:            0.85,
           },

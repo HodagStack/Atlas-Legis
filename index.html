@@ -4326,7 +4326,7 @@ document.getElementById('close-btn').addEventListener('click', () => {
 })();
 
 // ── Footer nav drawer (mobile) ────────────────────────────────────────────────
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
   const btn      = document.getElementById('footer-menu-btn');
   const drawer   = document.getElementById('footer-nav-drawer');
   const backdrop = document.getElementById('footer-nav-backdrop');
@@ -4357,7 +4357,7 @@ document.getElementById('close-btn').addEventListener('click', () => {
     if (startY !== null && (e.changedTouches[0].clientY - startY) > 60) closeDrawer();
     startY = null;
   }, { passive: true });
-})();
+});
 
 
 </script>

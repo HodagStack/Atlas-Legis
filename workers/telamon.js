@@ -62,16 +62,18 @@ function selectRelevantSchools(allSchools, question, rawHistory) {
   const historyTexts = (rawHistory || []).slice(-4).map(t => t.text || '').join(' ');
   const searchText   = (question + ' ' + historyTexts).toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
 
+  // Split into a Set of whole words for exact matching (avoids "ave" matching "average")
+  const searchWords = new Set(searchText.split(/\s+/).filter(Boolean));
   const matched = allSchools.filter(school => {
     const tokens = schoolTokens(school.name, school.city);
-    // A school matches if ANY of its distinctive tokens appear in the search text
-    return tokens.some(tok => searchText.includes(tok));
+    return tokens.some(tok => searchWords.has(tok));
   });
 
-  // If we matched 1–5 specific schools, use that focused set.
-  // 0 matches = comparison/general query → use all schools.
-  // >5 matches = too broad (e.g. "university") → use all schools.
-  return (matched.length >= 1 && matched.length <= 5) ? matched : allSchools;
+  // 1–10 matches → focused set (common tokens like "chicago" or "loyola" can
+  //   match several schools at once, so allow up to 10 before falling back).
+  // 0 matches  → general/ranking query → send all schools.
+  // >10 matches → too broad (e.g. bare "university") → send all schools.
+  return (matched.length >= 1 && matched.length <= 10) ? matched : allSchools;
 }
 
 // ── Slim school schema (used for full-dataset queries to reduce token usage) ───
@@ -135,12 +137,16 @@ async function getSchoolData(env) {
 
 // ── System prompt builder ─────────────────────────────────────────────────────
 function buildSystemPrompt(data, totalCount) {
-  const isFull    = data.length === totalCount;
-  // Full-dataset queries use a compact schema to reduce token usage.
-  // Focused queries (1–5 schools) get the full record for detailed lookups.
-  const displayData = isFull ? data.map(slimSchool) : data;
+  const isFull = data.length === totalCount;
+  // ≤2 schools: full record (user likely wants fine-grained details).
+  // 3–10 schools: slim schema (comparison queries need key stats, not full detail).
+  // All 197 schools: slim schema (ranking/general queries).
+  const useSlim  = isFull || data.length > 2;
+  const displayData = useSlim ? data.map(slimSchool) : data;
   const dataLabel = isFull
     ? `DATA: Compact summary for all ${totalCount} ABA-accredited law schools (for ranking/comparison). Fields: name, rank, tier, city, lsat{p25/p50/p75}, gpa{p25/p50/p75}, acceptRate, classSize, condSchol, tuition{res/nonRes/ptRes}, grants{pct/p25/p50/p75}, graduates, bigLawPct, clerkPct, pubIntPct, govPct, barPassRate, stateBarAvg. Percentages are already computed (e.g. bigLawPct=43.7 means 43.7%). This JSON is your ONLY authoritative source.`
+    : useSlim
+    ? `DATA: Compact summary for the ${data.length} schools relevant to this conversation. Same fields as above. If asked about a school not listed, say it's not in this session and ask the user to start a new question.`
     : `DATA: Full detail for the ${data.length} school(s) relevant to this conversation. If asked about a school not listed below, say it's not in this session's focused data and ask the user to start a new question.`;
   return [
     'You are Telamon, the AI assistant for Atlas Legis (atlaslegis.com) — a free, non-commercial law school analytics platform.',

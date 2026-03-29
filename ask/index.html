@@ -548,6 +548,9 @@
       .then(function (result) {
         hideTyping();
         if (result.ok && result.data.answer) {
+          if (result.data.usage) {
+            console.log('[Telamon] tokens — prompt:', result.data.usage.prompt, '| output:', result.data.usage.output, '| total:', result.data.usage.total);
+          }
           appendMessage('bot', result.data.answer);
           chatHistory.push({ role: 'user',  text: question });
           chatHistory.push({ role: 'model', text: result.data.answer });

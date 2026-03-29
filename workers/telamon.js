@@ -125,7 +125,10 @@ async function getSchoolData(env) {
   if (!resp.ok) throw new Error('data_fetch_failed');
   const raw = await resp.json();
   // Normalise to a plain array regardless of whether master.json wraps schools in an object
-  cachedData = Array.isArray(raw) ? raw : (raw.schools || Object.values(raw).find(v => Array.isArray(v)) || []);
+  cachedData = Array.isArray(raw)        ? raw
+    : Array.isArray(raw.schools)           ? raw.schools
+    : raw.schools                          ? Object.values(raw.schools)
+    : Object.values(raw).find(Array.isArray) || [];
   cacheTime  = now;
   return cachedData;
 }
@@ -365,10 +368,9 @@ export default {
         }),
       });
     } catch (err) {
-      const msg = (err && err.message) || String(err);
-      console.error('[telamon] Gemini fetch error:', msg, err && err.name);
+      console.error('[telamon] Gemini fetch error:', err && err.message, err && err.name);
       return jsonResponse(
-        { error: `Unable to reach the AI service (${err && err.name}: ${msg})` },
+        { error: 'Unable to reach the AI service. Please try again shortly.' },
         502,
         corsHeaders(origin),
       );
@@ -378,7 +380,7 @@ export default {
       const errBody = await geminiResp.text().catch(() => '');
       console.error('[telamon] Gemini non-OK response:', geminiResp.status, errBody);
       return jsonResponse(
-        { error: `AI service error ${geminiResp.status}: ${errBody.slice(0, 300)}` },
+        { error: 'The AI service is temporarily unavailable. Please try again.' },
         502,
         corsHeaders(origin),
       );

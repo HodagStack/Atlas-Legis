@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWMH5ER9YS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date()); gtag("config", "G-LWMH5ER9YS");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <title>Law School Rankings — Employment, Bar Passage & Scholarships | Atlas Legis</title>
+  <meta name="description" content="ABA-sourced law school rankings you won't find elsewhere: bar passage vs. state average, BigLaw placement, federal clerkship rates, scholarship generosity, and best value schools. All 197 ABA-accredited schools, Class of 2024.">
+  <link rel="canonical" href="https://atlaslegis.com/rankings/">
+  <meta property="og:title" content="Law School Rankings — Employment, Bar Passage & Scholarships | Atlas Legis">
+  <meta property="og:description" content="Rankings built from raw ABA disclosures — not US News aggregations. Bar passage vs. state average, BigLaw, clerkships, scholarships, and value.">
+  <meta property="og:url" content="https://atlaslegis.com/rankings/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --em: #1a7a50; --em-deep: #0f5132; --em-mid: #22a86a; --em-pale: #d1ece0;
+      --ink: #0e2018; --ink-soft: #2d4a38; --muted: #6b8c78; --soft: #f0f7f3;
+      --border: rgba(26,122,80,0.12); --shadow: rgba(14,32,24,0.08);
+    }
+    body { font-family: 'DM Sans', sans-serif; background: #f5f8f6; min-height: 100vh; color: var(--ink); }
+
+    /* ── Nav ── */
+    .nav { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .nav-brand { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
+    .nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--em-deep); letter-spacing: -.01em; text-decoration: none; }
+    .nav-tagline { font-size: .72rem; font-weight: 500; color: var(--muted); letter-spacing: .02em; display: none; }
+    @media (min-width: 480px) { .nav-tagline { display: block; } }
+    .nav-right { display: flex; align-items: center; gap: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { font-size: .82rem; font-weight: 500; color: var(--muted); padding: 5px 11px; border-radius: 6px; transition: color .14s, background .14s; white-space: nowrap; text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); background: var(--soft); }
+    .nav-links a[aria-current="page"] { color: var(--em-deep); font-weight: 600; }
+    .nav-map { background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px; font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; margin-left: 6px; }
+    .nav-map:hover { background: var(--em-deep); color: #fff; }
+    @media (max-width: 640px) {
+      .nav-links li:nth-child(n+3) { display: none; }
+    }
+    @media (max-width: 500px) { .nav-tagline { display: none !important; } .nav-links a { padding: 5px 7px; } .nav-map { padding: 5px 10px; margin-left: 4px; } }
+
+    /* ── Hero ── */
+    .hero {
+      background:
+        radial-gradient(ellipse at 18% 50%, rgba(34,168,106,0.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 82% 15%, rgba(15,81,50,0.10) 0%, transparent 50%),
+        linear-gradient(155deg, #e8f3ed 0%, #daeae2 60%, #e4efe9 100%);
+      padding: 72px 24px 80px; border-bottom: 1px solid var(--border);
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--em); font-weight: 600; margin-bottom: 22px; }
+    .hero-eyebrow::before { content: ''; display: block; width: 22px; height: 1.5px; background: var(--em); border-radius: 2px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; color: var(--em-deep); line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: var(--em); }
+    .hero-lead { font-size: 1.08rem; color: var(--ink-soft); line-height: 1.75; font-weight: 300; max-width: 600px; }
+
+    /* ── Main ── */
+    .main { max-width: 1100px; margin: 0 auto; padding: 64px 24px 100px; }
+
+    /* ── Grid ── */
+    .rankings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .rank-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 2px 12px var(--shadow);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: box-shadow 0.15s, border-color 0.15s, transform 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .rank-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-accent, var(--em));
+      border-radius: 16px 16px 0 0;
+    }
+    .rank-card:hover {
+      box-shadow: 0 6px 28px rgba(14,32,24,0.13);
+      border-color: rgba(26,122,80,0.28);
+      transform: translateY(-2px);
+    }
+
+    .card-eyebrow {
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-weight: 700; color: var(--card-accent, var(--em));
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700; color: var(--ink);
+      line-height: 1.25; letter-spacing: -0.01em;
+    }
+    .card-desc {
+      font-size: 0.875rem; color: var(--ink-soft); line-height: 1.65; font-weight: 300;
+      flex: 1;
+    }
+    .card-unique {
+      font-size: 0.75rem; color: var(--muted); line-height: 1.5;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .card-unique strong { color: var(--em-deep); font-weight: 600; }
+    .card-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--card-accent, var(--em));
+      margin-top: 4px;
+    }
+    .card-cta::after { content: '→'; transition: transform 0.12s; }
+    .rank-card:hover .card-cta::after { transform: translateX(3px); }
+
+    /* ── Divider ── */
+    .divider { border: none; border-top: 1px solid var(--border); margin: 64px 0; }
+
+    /* ── About section ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; gap: 24px; } }
+    .about-item {}
+    .about-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--em); font-weight: 600; margin-bottom: 8px; }
+    .about-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+    .about-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.72; font-weight: 300; }
+
+    /* ── Fade-up ── */
+    .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Footer ── */
+    .footer { background: #0d1117; padding: 36px 20px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+    .footer-brand { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.05rem; font-weight: 400; color: rgba(255,255,255,.75); }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; list-style: none; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: color .14s; text-decoration: none; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-copy { font-size: .72rem; color: rgba(255,255,255,.25); }
+
+    @media (max-width: 768px) {
+      .hero { padding: 48px 20px 56px; }
+      .hero h1 { font-size: 2rem; }
+      .main { padding: 48px 16px 72px; }
+      .rankings-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="/" class="nav-wordmark">Atlas Legis</a>
+      <span class="nav-tagline">Law School Analytics</span>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/schools/">Schools</a></li>
+        <li><a href="/rankings/" aria-current="page">Rankings</a></li>
+        <li><a href="/scholarship-estimator.html">Scholarships</a></li>
+        <li><a href="/debt-planner.html">Debt Planner</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="/" class="nav-map">View Map</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Atlas Legis · Rankings</div>
+    <h1>Rankings built from <em>raw data</em></h1>
+    <p class="hero-lead">Five ranking tables derived directly from ABA 509 disclosures and Employment Summary Reports — not from US News methodology or aggregated estimates. Every metric is defined, sourced, and sortable.</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="rankings-grid fade-up">
+
+    <a href="/rankings/bar-passage/" class="rank-card" style="--card-accent: #1a7a50;">
+      <div class="card-eyebrow">Bar Passage</div>
+      <div class="card-title">Bar passage vs. state average</div>
+      <div class="card-desc">Every ABA school's first-time bar passage rate ranked against its own state's benchmark. Identifies schools that genuinely outperform — and those that fall short — relative to their local bar.</div>
+      <div class="card-unique"><strong>Only on Atlas Legis:</strong> The delta vs. state average column. No other ranking publishes this comparison.</div>
+      <div class="card-cta">View ranking</div>
+    </a>
+
+    <a href="/rankings/biglaw/" class="rank-card" style="--card-accent: #1d4ed8;">
+      <div class="card-eyebrow">BigLaw Placement</div>
+      <div class="card-title">Best schools for BigLaw</div>
+      <div class="card-desc">Schools ranked by percentage of graduates placed at large firms (251+ attorneys), with BigLaw + federal clerkship combined scores and total graduate counts.</div>
+      <div class="card-unique"><strong>Denominator transparency:</strong> Percentages use total graduates — not just those whose status is known — for an honest comparison.</div>
+      <div class="card-cta">View ranking</div>
+    </a>
+
+    <a href="/rankings/federal-clerkships/" class="rank-card" style="--card-accent: #7c3aed;">
+      <div class="card-eyebrow">Judicial Clerkships</div>
+      <div class="card-title">Best schools for federal clerkships</div>
+      <div class="card-desc">Schools ranked by federal judicial clerkship placement rate, with federal broken out separately from state, local, tribal, and international clerkships.</div>
+      <div class="card-unique"><strong>Full clerkship breakdown:</strong> Federal vs. all clerkships separated — the distinction that matters for career path planning.</div>
+      <div class="card-cta">View ranking</div>
+    </a>
+
+    <a href="/rankings/scholarships/" class="rank-card" style="--card-accent: #b45309;">
+      <div class="card-eyebrow">Scholarship Generosity</div>
+      <div class="card-title">Most generous law schools</div>
+      <div class="card-desc">Schools ranked by the share of full-time students receiving full tuition or more — the most meaningful measure of scholarship generosity, beyond median grant dollar amounts.</div>
+      <div class="card-unique"><strong>5-year ABA data:</strong> Enrollment-weighted averages across 2021–2025 for more stable, reliable estimates.</div>
+      <div class="card-cta">View ranking</div>
+    </a>
+
+    <a href="/rankings/value/" class="rank-card" style="--card-accent: #0f766e;">
+      <div class="card-eyebrow">Value</div>
+      <div class="card-title">Best value law schools</div>
+      <div class="card-desc">Tier 2 and Tier 3 schools ranked by bar-required employment outcomes relative to net tuition cost — finding the schools that deliver the strongest results per dollar spent.</div>
+      <div class="card-unique"><strong>Non-T14 focus:</strong> Designed for students weighing six-figure debt where cost efficiency is the central question.</div>
+      <div class="card-cta">View ranking</div>
+    </a>
+
+  </div>
+
+  <hr class="divider fade-up">
+
+  <div class="about-grid fade-up">
+    <div class="about-item">
+      <div class="about-label">Data source</div>
+      <div class="about-title">Directly from ABA disclosures</div>
+      <div class="about-text">Every number here originates from ABA 509 Required Disclosure Reports and ABA Employment Summary Reports — the official, audited filings all accredited law schools submit annually. No US News methodology, no scraped aggregations, no synthetic composites.</div>
+    </div>
+    <div class="about-item">
+      <div class="about-label">Coverage</div>
+      <div class="about-title">All 197 ABA-accredited schools</div>
+      <div class="about-text">Rankings include every ABA-accredited law school in the United States — not a curated subset. Tier 3 schools receive the same data depth as T14 schools. Filters let you narrow by tier if needed.</div>
+    </div>
+    <div class="about-item">
+      <div class="about-label">Methodology</div>
+      <div class="about-title">Defined, not hidden</div>
+      <div class="about-text">Each ranking page explains exactly what's being measured, how percentages are computed, and what the denominator is. Bar passage uses first-time takers. Employment uses total graduates. Nothing is left ambiguous.</div>
+    </div>
+    <div class="about-item">
+      <div class="about-label">Updates</div>
+      <div class="about-title">Class of 2024 employment · 2025 bar passage</div>
+      <div class="about-text">Employment rankings reflect ABA Class of 2024 outcome data. Bar passage reflects first-time taker results from the Class of 2024. Scholarship data uses 5-year enrollment-weighted averages through 2025.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Atlas Legis</div>
+    <ul class="footer-links" role="list">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/sources.html">Sources</a></li>
+      <li><a href="/methodology.html">Methodology</a></li>
+      <li><a href="/rankings/bar-passage/">Bar Passage</a></li>
+      <li><a href="/rankings/biglaw/">BigLaw</a></li>
+      <li><a href="/rankings/federal-clerkships/">Clerkships</a></li>
+      <li><a href="/rankings/scholarships/">Scholarships</a></li>
+      <li><a href="/rankings/value/">Value</a></li>
+    </ul>
+    <p class="footer-copy">© <span id="footer-year"></span> Atlas Legis. Data from ABA Required Disclosures. For informational purposes only.</p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.06 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Inject Scholarships nav link if not already present ─────────────────────
   var navLinks = document.querySelector('.nav-links');
-  if (navLinks && !navLinks.querySelector('a[href="/scholarship-estimator.html"]')) {
+  if (navLinks && !navLinks.querySelector('a[href="/scholarship-estimator/"]')) {
     var schLi = document.createElement('li');
-    schLi.innerHTML = '<a href="/scholarship-estimator.html">Scholarships</a>';
+    schLi.innerHTML = '<a href="/scholarship-estimator/">Scholarships</a>';
     // Insert before the About link if it exists, otherwise append
     var aboutLi = null;
     var items = navLinks.querySelectorAll('li');

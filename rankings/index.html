@@ -92,14 +92,14 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 3px;
+      height: 4px;
       background: var(--card-accent, var(--em));
       border-radius: 16px 16px 0 0;
     }
     .rank-card:hover {
-      box-shadow: 0 6px 28px rgba(14,32,24,0.13);
-      border-color: rgba(26,122,80,0.28);
-      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(14,32,24,0.16);
+      border-color: var(--card-accent, var(--em));
+      transform: translateY(-3px);
     }
 
     .card-eyebrow {
@@ -129,6 +129,8 @@
     }
     .card-cta::after { content: '→'; transition: transform 0.12s; }
     .rank-card:hover .card-cta::after { transform: translateX(3px); }
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .card-metric-chip { display: inline-flex; align-items: center; gap: 5px; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(26,122,80,0.08); color: var(--card-accent, var(--em)); padding: 3px 8px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 1px; }
 
     /* ── Divider ── */
     .divider { border: none; border-top: 1px solid var(--border); margin: 64px 0; }
@@ -140,6 +142,22 @@
     .about-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--em); font-weight: 600; margin-bottom: 8px; }
     .about-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
     .about-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.72; font-weight: 300; }
+
+    /* ── Stat strip ── */
+    .stat-strip { background: var(--em-deep); }
+    .stat-strip-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 38px; display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; gap: 0; }
+    .stat-strip-inner::-webkit-scrollbar { display: none; }
+    .stat-item { font-size: 0.72rem; font-weight: 400; color: rgba(255,255,255,0.6); white-space: nowrap; }
+    .stat-item strong { color: rgba(255,255,255,0.92); font-weight: 700; }
+    .stat-div { width: 1px; height: 13px; background: rgba(255,255,255,0.18); margin: 0 16px; flex-shrink: 0; }
+
+    /* ── Rankings cross-nav ── */
+    .rank-subnav { background: #fff; border-bottom: 1px solid var(--border); }
+    .rank-subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 40px; display: flex; align-items: center; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+    .rank-subnav-inner::-webkit-scrollbar { display: none; }
+    .rsn-link { font-size: 0.78rem; font-weight: 500; color: var(--muted); padding: 4px 12px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: color .14s, background .14s; }
+    .rsn-link:hover { color: var(--ink); background: var(--soft); }
+    .rsn-label { font-size: 0.68rem; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; padding-right: 10px; white-space: nowrap; }
 
     /* ── Fade-up ── */
     .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
@@ -184,6 +202,28 @@
   </div>
 </nav>
 
+<div class="stat-strip" role="complementary" aria-label="Data overview">
+  <div class="stat-strip-inner">
+    <span class="stat-item"><strong>197</strong> ABA-Accredited Schools</span>
+    <span class="stat-div"></span>
+    <span class="stat-item"><strong>5</strong> Data-Driven Rankings</span>
+    <span class="stat-div"></span>
+    <span class="stat-item">Direct from <strong>ABA Disclosures</strong></span>
+    <span class="stat-div"></span>
+    <span class="stat-item">Class of <strong>2024</strong></span>
+  </div>
+</div>
+
+<div class="rank-subnav" aria-label="Rankings navigation">
+  <div class="rank-subnav-inner">
+    <span class="rsn-label">Rankings:</span>
+    <a href="/rankings/bar-passage/" class="rsn-link">Bar Passage</a>
+    <a href="/rankings/biglaw/" class="rsn-link">BigLaw</a>
+    <a href="/rankings/federal-clerkships/" class="rsn-link">Clerkships</a>
+    <a href="/rankings/scholarships/" class="rsn-link">Scholarships</a>
+  </div>
+</div>
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Atlas Legis · Rankings</div>
@@ -197,7 +237,10 @@
   <div class="rankings-grid fade-up">
 
     <a href="/rankings/bar-passage/" class="rank-card" style="--card-accent: #1a7a50;">
-      <div class="card-eyebrow">Bar Passage</div>
+      <div class="card-header">
+        <div class="card-eyebrow">Bar Passage</div>
+        <span class="card-metric-chip">Pass Rate vs. State Avg</span>
+      </div>
       <div class="card-title">Bar passage vs. state average</div>
       <div class="card-desc">Every ABA school's first-time bar passage rate ranked against its own state's benchmark. Identifies schools that genuinely outperform — and those that fall short — relative to their local bar.</div>
       <div class="card-unique"><strong>Only on Atlas Legis:</strong> The delta vs. state average column. No other ranking publishes this comparison.</div>
@@ -205,7 +248,10 @@
     </a>
 
     <a href="/rankings/biglaw/" class="rank-card" style="--card-accent: #1d4ed8;">
-      <div class="card-eyebrow">BigLaw Placement</div>
+      <div class="card-header">
+        <div class="card-eyebrow">BigLaw Placement</div>
+        <span class="card-metric-chip" style="background:rgba(29,78,216,0.08);color:#1d4ed8;">% Placed at 251+ firms</span>
+      </div>
       <div class="card-title">Best schools for BigLaw</div>
       <div class="card-desc">Schools ranked by percentage of graduates placed at large firms (251+ attorneys), with BigLaw + federal clerkship combined scores and total graduate counts.</div>
       <div class="card-unique"><strong>Denominator transparency:</strong> Percentages use total graduates — not just those whose status is known — for an honest comparison.</div>
@@ -213,7 +259,10 @@
     </a>
 
     <a href="/rankings/federal-clerkships/" class="rank-card" style="--card-accent: #7c3aed;">
-      <div class="card-eyebrow">Judicial Clerkships</div>
+      <div class="card-header">
+        <div class="card-eyebrow">Judicial Clerkships</div>
+        <span class="card-metric-chip" style="background:rgba(124,58,237,0.08);color:#7c3aed;">Federal Clerkship %</span>
+      </div>
       <div class="card-title">Best schools for federal clerkships</div>
       <div class="card-desc">Schools ranked by federal judicial clerkship placement rate, with federal broken out separately from state, local, tribal, and international clerkships.</div>
       <div class="card-unique"><strong>Full clerkship breakdown:</strong> Federal vs. all clerkships separated — the distinction that matters for career path planning.</div>
@@ -221,7 +270,10 @@
     </a>
 
     <a href="/rankings/scholarships/" class="rank-card" style="--card-accent: #b45309;">
-      <div class="card-eyebrow">Scholarship Generosity</div>
+      <div class="card-header">
+        <div class="card-eyebrow">Scholarship Generosity</div>
+        <span class="card-metric-chip" style="background:rgba(180,83,9,0.08);color:#b45309;">% Full Tuition+</span>
+      </div>
       <div class="card-title">Most generous law schools</div>
       <div class="card-desc">Schools ranked by the share of full-time students receiving full tuition or more — the most meaningful measure of scholarship generosity, beyond median grant dollar amounts.</div>
       <div class="card-unique"><strong>5-year ABA data:</strong> Enrollment-weighted averages across 2021–2025 for more stable, reliable estimates.</div>

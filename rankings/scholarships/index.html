@@ -105,6 +105,45 @@
     .prose strong { font-weight: 600; color: var(--ink); }
     .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
+    /* ── Rankings cross-nav ── */
+    .rank-subnav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 56px; z-index: 190; }
+    .rank-subnav-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 40px; display: flex; align-items: center; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+    .rank-subnav-inner::-webkit-scrollbar { display: none; }
+    .rsn-link { font-size: 0.78rem; font-weight: 500; color: var(--muted); padding: 4px 12px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: color .14s, background .14s; }
+    .rsn-link:hover { color: var(--ink); background: var(--soft); }
+    .rsn-link.rsn-active { color: var(--em-deep); background: var(--em-pale); font-weight: 600; }
+    .rsn-label { font-size: 0.68rem; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; padding-right: 8px; white-space: nowrap; }
+    /* ── Podium ── */
+    .podium-wrap { display: flex; gap: 12px; margin: 32px 0 12px; flex-wrap: wrap; }
+    .podium-wrap.hidden { display: none; }
+    .podium-card { flex: 1; min-width: 170px; max-width: 280px; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px 12px; position: relative; overflow: hidden; box-shadow: 0 2px 8px var(--shadow); text-decoration: none; display: block; transition: transform .15s, box-shadow .15s; cursor: pointer; color: inherit; }
+    .podium-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--shadow); }
+    .podium-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 12px 12px 0 0; }
+    .podium-card:nth-child(1)::before { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
+    .podium-card:nth-child(2)::before { background: linear-gradient(90deg, #94A3B8, #CBD5E1); }
+    .podium-card:nth-child(3)::before { background: linear-gradient(90deg, #C27803, #D97706); }
+    .podium-medal { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+    .podium-card:nth-child(1) .podium-medal { color: #92400E; }
+    .podium-card:nth-child(2) .podium-medal { color: #475569; }
+    .podium-card:nth-child(3) .podium-medal { color: #78350F; }
+    .podium-school-name { font-size: 0.84rem; font-weight: 700; color: var(--em-deep); line-height: 1.25; margin-bottom: 2px; }
+    .podium-city { font-size: 0.71rem; color: var(--muted); margin-bottom: 8px; }
+    .podium-stat { font-size: 1.4rem; font-weight: 700; color: var(--em-deep); font-variant-numeric: tabular-nums; line-height: 1; }
+    .podium-stat-label { font-size: 0.65rem; color: var(--muted); margin-top: 3px; }
+    /* ── Medals ── */
+    .medal { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: 0.72rem; font-weight: 700; line-height: 1; }
+    .medal-gold   { background: #FEF3C7; color: #92400E; border: 1.5px solid #FCD34D; }
+    .medal-silver { background: #F1F5F9; color: #475569; border: 1.5px solid #CBD5E1; }
+    .medal-bronze { background: #FFF7ED; color: #78350F; border: 1.5px solid #FCD34D; opacity: .85; }
+    /* ── Progress bars ── */
+    .pct-bar { width: 56px; height: 3px; background: rgba(26,122,80,0.12); border-radius: 2px; margin-top: 4px; }
+    .pct-fill { height: 3px; background: var(--em); border-radius: 2px; }
+    .pct-fill.hi { background: #166534; }
+    /* ── Row hover ── */
+    tbody tr { cursor: pointer; }
+    /* ── Section headings ── */
+    .section-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--em); font-weight: 600; margin-bottom: 10px; }
+    .section-heading { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--ink); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 20px; }
     .footer { background: #0d1117; padding: 36px 20px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
     .footer-brand { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.05rem; font-weight: 400; color: rgba(255,255,255,.75); }
@@ -138,6 +177,16 @@
   </div>
 </nav>
 
+<div class="rank-subnav" aria-label="Rankings navigation">
+  <div class="rank-subnav-inner">
+    <span class="rsn-label">Rankings:</span>
+    <a href="/rankings/bar-passage/" class="rsn-link">Bar Passage</a>
+    <a href="/rankings/biglaw/" class="rsn-link">BigLaw</a>
+    <a href="/rankings/federal-clerkships/" class="rsn-link">Clerkships</a>
+    <a href="/rankings/scholarships/" class="rsn-link rsn-active" aria-current="page">Scholarships</a>
+  </div>
+</div>
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Rankings · Scholarships</div>
@@ -148,6 +197,8 @@
 
 <div class="main">
   <div class="section fade-up">
+
+    <div id="podium" class="podium-wrap hidden" aria-label="Top 3 most generous schools"></div>
 
     <div class="filter-row">
       <div class="filter-group grow">
@@ -202,8 +253,8 @@
   <hr class="divider fade-up">
 
   <div class="section fade-up">
-    <div style="font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--em); font-weight: 600; margin-bottom: 10px;">How This Works</div>
-    <div style="font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--ink); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 20px;">Beyond the median grant number</div>
+    <div class="section-label">How This Works</div>
+    <div class="section-heading">Beyond the median grant number</div>
     <div class="prose">
       <p>Most scholarship comparisons stop at the median grant amount — but that figure alone is misleading. A $20,000 median grant from a school where 95% of students receive aid tells a very different story than the same number from a school where only 40% receive anything.</p>
       <p><strong>% Full Tuition+</strong> measures the share of full-time students receiving grants that cover 100% or more of resident tuition (including stipends). This is the most meaningful measure of scholarship generosity — it tells you how realistic a "full ride" actually is at any given school.</p>
@@ -247,6 +298,36 @@ function fmt$(n) { if (n == null) return '<span class="no-data">—</span>'; ret
 function fmtPct(n) { if (n == null) return '<span class="no-data">—</span>'; return `<span class="pct">${n.toFixed(1)}%</span>`; }
 function fmtPctHi(n) { if (n == null) return '<span class="no-data">—</span>'; const cls = n >= 20 ? 'pct-hi' : 'pct'; return `<span class="${cls}">${n.toFixed(1)}%</span>`; }
 
+function fmtPctBar(n, maxVal, hi) {
+  if (n == null) return '<span class="no-data">—</span>';
+  const cls = hi ? 'pct-hi' : 'pct';
+  const w = maxVal > 0 ? Math.round((n / maxVal) * 100) : 0;
+  return `<span class="${cls}">${n.toFixed(1)}%</span><div class="pct-bar"><div class="pct-fill${hi ? ' hi' : ''}" style="width:${w}%"></div></div>`;
+}
+
+function rankCell(i) {
+  if (i === 0) return `<span class="medal medal-gold">1</span>`;
+  if (i === 1) return `<span class="medal medal-silver">2</span>`;
+  if (i === 2) return `<span class="medal medal-bronze">3</span>`;
+  return i + 1;
+}
+
+const MEDALS = ['#1 — Gold', '#2 — Silver', '#3 — Bronze'];
+function renderPodium(top3) {
+  const el = document.getElementById('podium');
+  if (!top3.length) { el.classList.add('hidden'); return; }
+  el.classList.remove('hidden');
+  el.innerHTML = top3.map((s, i) => `
+    <a href="/schools/${s.slug}/" class="podium-card">
+      <div class="podium-medal">${MEDALS[i]}</div>
+      <div class="podium-school-name">${s.name}</div>
+      <div class="podium-city">${s.city}</div>
+      <div class="podium-stat">${s.needBased ? 'Need-based' : (s.fullPct != null ? s.fullPct.toFixed(1) + '%' : '—')}</div>
+      <div class="podium-stat-label">% receiving full tuition+</div>
+    </a>
+  `).join('');
+}
+
 function cmp(a, b) {
   let av, bv;
   switch (sortCol) {
@@ -284,15 +365,16 @@ function render() {
     tbody.innerHTML = '<tr><td colspan="7" class="state-cell">No schools match your filters.</td></tr>';
     return;
   }
+  const maxFullPct = Math.max(...rows.filter(s => !s.needBased).map(s => s.fullPct ?? 0));
   tbody.innerHTML = rows.map((s, i) => `
-    <tr>
-      <td class="rank-cell">${i + 1}</td>
+    <tr onclick="if(!event.target.closest('a'))window.location='/schools/${s.slug}/'">
+      <td class="rank-cell">${rankCell(i)}</td>
       <td class="school-cell">
         <a href="/schools/${s.slug}/" class="school-link">${s.name}</a>
         <div class="school-city">${s.city}${s.needBased ? ' &nbsp;<span class="need-tag">Need-based</span>' : ''}</div>
       </td>
       <td><span class="tier-badge ${tierClass(s.tier)}">${tierLabel(s.tier)}</span></td>
-      <td>${s.needBased ? '<span class="no-data">Need-based</span>' : fmtPctHi(s.fullPct)}</td>
+      <td>${s.needBased ? '<span class="no-data">Need-based</span>' : fmtPctBar(s.fullPct, maxFullPct, s.fullPct >= 20)}</td>
       <td>${fmtPct(s.anyPct)}</td>
       <td><span class="amount">${fmt$(s.medianGrant)}</span></td>
       <td style="color:var(--muted); font-variant-numeric:tabular-nums;">${fmt$(s.tuition)}</td>
@@ -348,6 +430,8 @@ async function init() {
 
     initSortHeaders();
     render();
+    const sorted = [...allSchools].filter(s => !s.needBased).sort((a,b) => (b.fullPct ?? -1) - (a.fullPct ?? -1));
+    renderPodium(sorted.slice(0, 3));
   } catch (err) {
     document.getElementById('results-body').innerHTML =
       `<tr><td colspan="7" class="state-cell error">Failed to load data.<code>${err.message}</code></td></tr>`;

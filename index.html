@@ -2615,7 +2615,7 @@
           <span class="info-value" id="s-location">—</span>
         </div>
         <div class="info-row">
-          <span class="info-label">U.S. News Ranking</span>
+          <span class="info-label">U.S. News Ranking (2026)</span>
           <span class="info-value" id="s-rank">—</span>
         </div>
       </div>
@@ -2892,8 +2892,9 @@ function dotClass(tier) {
   return '';
 }
 
-function tierBadge(tier, rank) {
-  const r = (rank && rank < 10000) ? ` · #${rank}` : '';
+function tierBadge(tier, rank, rankDisplay) {
+  const disp = rankDisplay || (rank && rank < 10000 ? `#${rank}` : '');
+  const r = disp ? ` · ${disp}` : '';
   if (tier==='t14')   return `<span class="tier-badge tier-1">T14${r}</span>`;
   if (tier==='tier2') return `<span class="tier-badge tier-2">Tier 2${r}</span>`;
   return `<span class="tier-badge tier-3">Tier 3${r}</span>`;
@@ -3015,7 +3016,7 @@ lawSchools.forEach(s => {
 function openSidebar(s) {
   document.getElementById('s-name').textContent     = s.name;
   document.getElementById('s-location').textContent = s.city;
-  document.getElementById('s-rank').innerHTML       = tierBadge(s.tier, s.rank);
+  document.getElementById('s-rank').innerHTML       = tierBadge(s.tier, s.rank, s.rankDisplay);
   document.getElementById('s-lsat25').textContent   = fmt(s.lsat25);
   document.getElementById('s-lsat50').textContent   = fmt(s.lsat50);
   document.getElementById('s-lsat75').textContent   = fmt(s.lsat75);
@@ -4031,7 +4032,7 @@ function renderComparison() {
       <div class="cmp-card-header">
         <div>
           <div class="cmp-card-name">${school.name}</div>
-          <div class="cmp-card-city">${school.city} · ${tierBadge(school.tier, school.rank)}</div>
+          <div class="cmp-card-city">${school.city} · ${tierBadge(school.tier, school.rank, school.rankDisplay)}</div>
         </div>
         <button class="cmp-remove-btn" data-name="${school.name}" title="Remove">✕</button>
       </div>

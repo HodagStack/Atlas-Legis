@@ -22,7 +22,11 @@
     "grantP25": 34240,
     "grantP50": 52797,
     "grantP75": 72247,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 1,
+    "rankDisplay2025": "#1",
+    "rankDisplay": "#1",
+    "rankTied": false
   },
   {
     "name": "Yale Law School",
@@ -31,7 +35,7 @@
     "lat": 41.3118,
     "lng": -72.9246,
     "tier": "t14",
-    "rank": 1,
+    "rank": 2,
     "lsat25": 171,
     "lsat50": 174,
     "lsat75": 177,
@@ -47,7 +51,11 @@
     "grantP25": 24825,
     "grantP50": 34747,
     "grantP75": 47286,
-    "tuitionNonRes": 76636
+    "tuitionNonRes": 76636,
+    "rank2025": 1,
+    "rankDisplay2025": "#1",
+    "rankDisplay": "#2",
+    "rankTied": true
   },
   {
     "name": "University of Chicago Law School",
@@ -56,7 +64,7 @@
     "lat": 41.7886,
     "lng": -87.5987,
     "tier": "t14",
-    "rank": 3,
+    "rank": 2,
     "lsat25": 171,
     "lsat50": 174,
     "lsat75": 176,
@@ -72,7 +80,11 @@
     "grantP25": 10000,
     "grantP50": 15000,
     "grantP75": 30000,
-    "tuitionNonRes": 83316
+    "tuitionNonRes": 83316,
+    "rank2025": 3,
+    "rankDisplay2025": "#3",
+    "rankDisplay": "#2",
+    "rankTied": true
   },
   {
     "name": "University of Virginia School of Law",
@@ -97,7 +109,11 @@
     "grantP25": 25000,
     "grantP50": 35000,
     "grantP75": 50000,
-    "tuitionNonRes": 76396
+    "tuitionNonRes": 76396,
+    "rank2025": 4,
+    "rankDisplay2025": "#4",
+    "rankDisplay": "#4",
+    "rankTied": true
   },
   {
     "name": "Penn Carey Law",
@@ -106,7 +122,7 @@
     "lat": 39.9522,
     "lng": -75.1932,
     "tier": "t14",
-    "rank": 5,
+    "rank": 4,
     "lsat25": 167,
     "lsat50": 173,
     "lsat75": 174,
@@ -122,7 +138,11 @@
     "grantP25": 29512,
     "grantP50": 42246,
     "grantP75": 60000,
-    "tuitionNonRes": 78348
+    "tuitionNonRes": 78348,
+    "rank2025": 5,
+    "rankDisplay2025": "#5",
+    "rankDisplay": "#4",
+    "rankTied": true
   },
   {
     "name": "Duke University School of Law",
@@ -131,7 +151,7 @@
     "lat": 36.0014,
     "lng": -78.9382,
     "tier": "t14",
-    "rank": 6,
+    "rank": 7,
     "lsat25": 169,
     "lsat50": 171,
     "lsat75": 172,
@@ -147,7 +167,11 @@
     "grantP25": 27000,
     "grantP50": 35000,
     "grantP75": 40000,
-    "tuitionNonRes": 80100
+    "tuitionNonRes": 80100,
+    "rank2025": 6,
+    "rankDisplay2025": "#6",
+    "rankDisplay": "#7",
+    "rankTied": true
   },
   {
     "name": "Harvard Law School",
@@ -172,7 +196,11 @@
     "grantP25": 12106,
     "grantP50": 27510,
     "grantP75": 43338,
-    "tuitionNonRes": 77100
+    "tuitionNonRes": 77100,
+    "rank2025": 6,
+    "rankDisplay2025": "#6",
+    "rankDisplay": "#6",
+    "rankTied": false
   },
   {
     "name": "University of Michigan Law School",
@@ -181,7 +209,7 @@
     "lat": 42.3507,
     "lng": -83.7458,
     "tier": "t14",
-    "rank": 8,
+    "rank": 9,
     "lsat25": 168,
     "lsat50": 171,
     "lsat75": 173,
@@ -197,7 +225,11 @@
     "grantP25": 20000,
     "grantP50": 32000,
     "grantP75": 41000,
-    "tuitionNonRes": 79108
+    "tuitionNonRes": 79108,
+    "rank2025": 8,
+    "rankDisplay2025": "#8",
+    "rankDisplay": "#9",
+    "rankTied": true
   },
   {
     "name": "NYU School of Law",
@@ -206,7 +238,7 @@
     "lat": 40.7291,
     "lng": -73.9965,
     "tier": "t14",
-    "rank": 8,
+    "rank": 7,
     "lsat25": 169,
     "lsat50": 172,
     "lsat75": 174,
@@ -222,7 +254,11 @@
     "grantP25": 12000,
     "grantP50": 20000,
     "grantP75": 35750,
-    "tuitionNonRes": 83952
+    "tuitionNonRes": 83952,
+    "rank2025": 8,
+    "rankDisplay2025": "#8",
+    "rankDisplay": "#7",
+    "rankTied": true
   },
   {
     "name": "Columbia Law School",
@@ -231,7 +267,7 @@
     "lat": 40.8075,
     "lng": -73.9626,
     "tier": "t14",
-    "rank": 10,
+    "rank": 9,
     "lsat25": 169,
     "lsat50": 173,
     "lsat75": 175,
@@ -247,7 +283,11 @@
     "grantP25": 20000,
     "grantP50": 32000,
     "grantP75": 48000,
-    "tuitionNonRes": 85368
+    "tuitionNonRes": 85368,
+    "rank2025": 10,
+    "rankDisplay2025": "#10",
+    "rankDisplay": "#9",
+    "rankTied": true
   },
   {
     "name": "Northwestern Pritzker School of Law",
@@ -256,7 +296,7 @@
     "lat": 41.8962,
     "lng": -87.6254,
     "tier": "t14",
-    "rank": 10,
+    "rank": 9,
     "lsat25": 167,
     "lsat50": 173,
     "lsat75": 175,
@@ -272,7 +312,11 @@
     "grantP25": 20000,
     "grantP50": 40000,
     "grantP75": 50000,
-    "tuitionNonRes": 79722
+    "tuitionNonRes": 79722,
+    "rank2025": 10,
+    "rankDisplay2025": "#10",
+    "rankDisplay": "#9",
+    "rankTied": true
   },
   {
     "name": "UCLA School of Law",
@@ -281,7 +325,7 @@
     "lat": 34.0722,
     "lng": -118.44,
     "tier": "t14",
-    "rank": 12,
+    "rank": 13,
     "lsat25": 166,
     "lsat50": 171,
     "lsat75": 172,
@@ -297,7 +341,11 @@
     "grantP25": 15000,
     "grantP50": 24456,
     "grantP75": 43333,
-    "tuitionNonRes": 71329
+    "tuitionNonRes": 71329,
+    "rank2025": 12,
+    "rankDisplay2025": "#12",
+    "rankDisplay": "#13",
+    "rankTied": true
   },
   {
     "name": "UC Berkeley School of Law",
@@ -305,8 +353,8 @@
     "city": "Berkeley, CA",
     "lat": 37.8724,
     "lng": -122.2595,
-    "tier": "t14",
-    "rank": 13,
+    "tier": "tier2",
+    "rank": 16,
     "lsat25": 167,
     "lsat50": 170,
     "lsat75": 172,
@@ -322,7 +370,11 @@
     "grantP25": 20000,
     "grantP50": 31158,
     "grantP75": 42245,
-    "tuitionNonRes": 76149
+    "tuitionNonRes": 76149,
+    "rank2025": 13,
+    "rankDisplay2025": "#13",
+    "rankDisplay": "#16",
+    "rankTied": true
   },
   {
     "name": "Georgetown University Law Center",
@@ -330,8 +382,8 @@
     "city": "Washington, DC",
     "lat": 38.9027,
     "lng": -77.0014,
-    "tier": "t14",
-    "rank": 14,
+    "tier": "tier2",
+    "rank": 18,
     "lsat25": 166,
     "lsat50": 171,
     "lsat75": 173,
@@ -347,7 +399,11 @@
     "grantP25": 25000,
     "grantP50": 35000,
     "grantP75": 47500,
-    "tuitionNonRes": 83576
+    "tuitionNonRes": 83576,
+    "rank2025": 14,
+    "rankDisplay2025": "#14",
+    "rankDisplay": "#18",
+    "rankTied": true
   },
   {
     "name": "University of Texas School of Law",
@@ -355,8 +411,8 @@
     "city": "Austin, TX",
     "lat": 30.289,
     "lng": -97.7394,
-    "tier": "t14",
-    "rank": 14,
+    "tier": "tier2",
+    "rank": 16,
     "lsat25": 166,
     "lsat50": 172,
     "lsat75": 173,
@@ -372,7 +428,11 @@
     "grantP25": 10000,
     "grantP50": 23375,
     "grantP75": 38586,
-    "tuitionNonRes": 56822
+    "tuitionNonRes": 56822,
+    "rank2025": 14,
+    "rankDisplay2025": "#14",
+    "rankDisplay": "#16",
+    "rankTied": true
   },
   {
     "name": "Vanderbilt University Law School",
@@ -381,7 +441,7 @@
     "lat": 36.1447,
     "lng": -86.8027,
     "tier": "t14",
-    "rank": 14,
+    "rank": 12,
     "lsat25": 167,
     "lsat50": 170,
     "lsat75": 171,
@@ -397,7 +457,11 @@
     "grantP25": 17500,
     "grantP50": 32792,
     "grantP75": 44927,
-    "tuitionNonRes": 76440
+    "tuitionNonRes": 76440,
+    "rank2025": 14,
+    "rankDisplay2025": "#14",
+    "rankDisplay": "#12",
+    "rankTied": false
   },
   {
     "name": "Washington University in St. Louis School of Law",
@@ -406,7 +470,7 @@
     "lat": 38.6488,
     "lng": -90.3108,
     "tier": "t14",
-    "rank": 14,
+    "rank": 13,
     "lsat25": 165,
     "lsat50": 175,
     "lsat75": 176,
@@ -422,7 +486,11 @@
     "grantP25": 40000,
     "grantP50": 48000,
     "grantP75": 60000,
-    "tuitionNonRes": 72792
+    "tuitionNonRes": 72792,
+    "rank2025": 14,
+    "rankDisplay2025": "#14",
+    "rankDisplay": "#13",
+    "rankTied": true
   },
   {
     "name": "Cornell Law School",
@@ -430,8 +498,8 @@
     "city": "Ithaca, NY",
     "lat": 42.4474,
     "lng": -76.485,
-    "tier": "tier2",
-    "rank": 18,
+    "tier": "t14",
+    "rank": 13,
     "lsat25": 168,
     "lsat50": 173,
     "lsat75": 175,
@@ -447,7 +515,11 @@
     "grantP25": 28000,
     "grantP50": 30000,
     "grantP75": 45000,
-    "tuitionNonRes": 84722
+    "tuitionNonRes": 84722,
+    "rank2025": 18,
+    "rankDisplay2025": "#18",
+    "rankDisplay": "#13",
+    "rankTied": true
   },
   {
     "name": "University of North Carolina School of Law",
@@ -472,7 +544,11 @@
     "grantP25": 15000,
     "grantP50": 17000,
     "grantP75": 20000,
-    "tuitionNonRes": 51320
+    "tuitionNonRes": 51320,
+    "rank2025": 18,
+    "rankDisplay2025": "#18",
+    "rankDisplay": "#18",
+    "rankTied": true
   },
   {
     "name": "University of Minnesota Law School",
@@ -481,7 +557,7 @@
     "lat": 44.974,
     "lng": -93.2351,
     "tier": "tier2",
-    "rank": 20,
+    "rank": 22,
     "lsat25": 166,
     "lsat50": 171,
     "lsat75": 173,
@@ -497,7 +573,11 @@
     "grantP25": 25000,
     "grantP50": 35000,
     "grantP75": 48528,
-    "tuitionNonRes": 61845
+    "tuitionNonRes": 61845,
+    "rank2025": 20,
+    "rankDisplay2025": "#20",
+    "rankDisplay": "#22",
+    "rankTied": true
   },
   {
     "name": "University of Notre Dame Law School",
@@ -522,7 +602,11 @@
     "grantP25": 20000,
     "grantP50": 30000,
     "grantP75": 50000,
-    "tuitionNonRes": 73430
+    "tuitionNonRes": 73430,
+    "rank2025": 20,
+    "rankDisplay2025": "#20",
+    "rankDisplay": "#20",
+    "rankTied": true
   },
   {
     "name": "Boston University School of Law",
@@ -531,7 +615,7 @@
     "lat": 42.3487,
     "lng": -71.1016,
     "tier": "tier2",
-    "rank": 22,
+    "rank": 24,
     "lsat25": 164,
     "lsat50": 170,
     "lsat75": 171,
@@ -547,7 +631,11 @@
     "grantP25": 20000,
     "grantP50": 29000,
     "grantP75": 43000,
-    "tuitionNonRes": 69870
+    "tuitionNonRes": 69870,
+    "rank2025": 22,
+    "rankDisplay2025": "#22",
+    "rankDisplay": "#24",
+    "rankTied": true
   },
   {
     "name": "University of Georgia School of Law",
@@ -556,7 +644,7 @@
     "lat": 33.9519,
     "lng": -83.375,
     "tier": "tier2",
-    "rank": 22,
+    "rank": 26,
     "lsat25": 159,
     "lsat50": 169,
     "lsat75": 171,
@@ -572,7 +660,11 @@
     "grantP25": 5200,
     "grantP50": 19460,
     "grantP75": 22059,
-    "tuitionNonRes": 38944
+    "tuitionNonRes": 38944,
+    "rank2025": 22,
+    "rankDisplay2025": "#22",
+    "rankDisplay": "#26",
+    "rankTied": true
   },
   {
     "name": "Texas A&M University School of Law",
@@ -597,7 +689,11 @@
     "grantP25": 17500,
     "grantP50": 26048,
     "grantP75": 35534,
-    "tuitionNonRes": 48522
+    "tuitionNonRes": 48522,
+    "rank2025": 22,
+    "rankDisplay2025": "#22",
+    "rankDisplay": "#22",
+    "rankTied": true
   },
   {
     "name": "Boston College Law School",
@@ -606,7 +702,7 @@
     "lat": 42.3358,
     "lng": -71.1685,
     "tier": "tier2",
-    "rank": 25,
+    "rank": 20,
     "lsat25": 162,
     "lsat50": 168,
     "lsat75": 169,
@@ -622,7 +718,11 @@
     "grantP25": 20000,
     "grantP50": 24000,
     "grantP75": 28000,
-    "tuitionNonRes": 72380
+    "tuitionNonRes": 72380,
+    "rank2025": 25,
+    "rankDisplay2025": "#25",
+    "rankDisplay": "#20",
+    "rankTied": true
   },
   {
     "name": "USC Gould School of Law",
@@ -647,7 +747,11 @@
     "grantP25": 38220,
     "grantP50": 40092,
     "grantP75": 48160,
-    "tuitionNonRes": 84034
+    "tuitionNonRes": 84034,
+    "rank2025": 26,
+    "rankDisplay2025": "#26",
+    "rankDisplay": "#26",
+    "rankTied": true
   },
   {
     "name": "Wake Forest University School of Law",
@@ -656,7 +760,7 @@
     "lat": 36.1321,
     "lng": -80.2737,
     "tier": "tier2",
-    "rank": 26,
+    "rank": 30,
     "lsat25": 163,
     "lsat50": 166,
     "lsat75": 168,
@@ -672,7 +776,11 @@
     "grantP25": 30000,
     "grantP50": 40000,
     "grantP75": 55162,
-    "tuitionNonRes": 57920
+    "tuitionNonRes": 57920,
+    "rank2025": 26,
+    "rankDisplay2025": "#26",
+    "rankDisplay": "#30",
+    "rankTied": true
   },
   {
     "name": "BYU J. Reuben Clark Law School",
@@ -681,7 +789,7 @@
     "lat": 40.2338,
     "lng": -111.6585,
     "tier": "tier2",
-    "rank": 28,
+    "rank": 24,
     "lsat25": 168,
     "lsat50": 170,
     "lsat75": 172,
@@ -697,7 +805,11 @@
     "grantP25": 3882,
     "grantP50": 11646,
     "grantP75": 15528,
-    "tuitionNonRes": 31984
+    "tuitionNonRes": 31984,
+    "rank2025": 28,
+    "rankDisplay2025": "#28",
+    "rankDisplay": "#24",
+    "rankTied": true
   },
   {
     "name": "Ohio State University Moritz College of Law",
@@ -706,7 +818,7 @@
     "lat": 40.0017,
     "lng": -83.0157,
     "tier": "tier2",
-    "rank": 28,
+    "rank": 30,
     "lsat25": 163,
     "lsat50": 168,
     "lsat75": 169,
@@ -722,7 +834,11 @@
     "grantP25": 17360,
     "grantP50": 29984,
     "grantP75": 37220,
-    "tuitionNonRes": 50902
+    "tuitionNonRes": 50902,
+    "rank2025": 28,
+    "rankDisplay2025": "#28",
+    "rankDisplay": "#30",
+    "rankTied": true
   },
   {
     "name": "University of Wisconsin Law School",
@@ -731,7 +847,7 @@
     "lat": 43.0731,
     "lng": -89.4012,
     "tier": "tier2",
-    "rank": 28,
+    "rank": 26,
     "lsat25": 161,
     "lsat50": 167,
     "lsat75": 169,
@@ -747,7 +863,11 @@
     "grantP25": 15000,
     "grantP50": 35000,
     "grantP75": 52332,
-    "tuitionNonRes": 53640
+    "tuitionNonRes": 53640,
+    "rank2025": 28,
+    "rankDisplay2025": "#28",
+    "rankDisplay": "#26",
+    "rankTied": true
   },
   {
     "name": "University of Alabama School of Law",
@@ -756,7 +876,7 @@
     "lat": 33.2119,
     "lng": -87.5436,
     "tier": "tier2",
-    "rank": 31,
+    "rank": 40,
     "lsat25": 161,
     "lsat50": 167,
     "lsat75": 168,
@@ -772,7 +892,11 @@
     "grantP25": 12000,
     "grantP50": 21500,
     "grantP75": 30000,
-    "tuitionNonRes": 48100
+    "tuitionNonRes": 48100,
+    "rank2025": 31,
+    "rankDisplay2025": "#31",
+    "rankDisplay": "#40",
+    "rankTied": true
   },
   {
     "name": "George Mason Antonin Scalia Law School",
@@ -781,7 +905,7 @@
     "lat": 38.8847,
     "lng": -77.1008,
     "tier": "tier2",
-    "rank": 31,
+    "rank": 32,
     "lsat25": 162,
     "lsat50": 169,
     "lsat75": 171,
@@ -797,7 +921,11 @@
     "grantP25": 14000,
     "grantP50": 21000,
     "grantP75": 32000,
-    "tuitionNonRes": 40978
+    "tuitionNonRes": 40978,
+    "rank2025": 31,
+    "rankDisplay2025": "#31",
+    "rankDisplay": "#32",
+    "rankTied": true
   },
   {
     "name": "George Washington University Law School",
@@ -806,7 +934,7 @@
     "lat": 38.8998,
     "lng": -77.0473,
     "tier": "tier2",
-    "rank": 31,
+    "rank": 26,
     "lsat25": 162,
     "lsat50": 168,
     "lsat75": 170,
@@ -822,7 +950,11 @@
     "grantP25": 20000,
     "grantP50": 28000,
     "grantP75": 40000,
-    "tuitionNonRes": 75420
+    "tuitionNonRes": 75420,
+    "rank2025": 31,
+    "rankDisplay2025": "#31",
+    "rankDisplay": "#26",
+    "rankTied": true
   },
   {
     "name": "University of Utah S.J. Quinney College of Law",
@@ -831,7 +963,7 @@
     "lat": 40.7648,
     "lng": -111.8453,
     "tier": "tier2",
-    "rank": 31,
+    "rank": 44,
     "lsat25": 162,
     "lsat50": 166,
     "lsat75": 168,
@@ -847,7 +979,11 @@
     "grantP25": 14205,
     "grantP50": 28410,
     "grantP75": 37996,
-    "tuitionNonRes": 45382
+    "tuitionNonRes": 45382,
+    "rank2025": 31,
+    "rankDisplay2025": "#31",
+    "rankDisplay": "#44",
+    "rankTied": true
   },
   {
     "name": "William & Mary Law School",
@@ -856,7 +992,7 @@
     "lat": 37.2709,
     "lng": -76.7143,
     "tier": "tier2",
-    "rank": 31,
+    "rank": 34,
     "lsat25": 161,
     "lsat50": 166,
     "lsat75": 167,
@@ -872,7 +1008,11 @@
     "grantP25": 21782,
     "grantP50": 29302,
     "grantP75": 37112,
-    "tuitionNonRes": 62900
+    "tuitionNonRes": 62900,
+    "rank2025": 31,
+    "rankDisplay2025": "#31",
+    "rankDisplay": "#34",
+    "rankTied": true
   },
   {
     "name": "University of Iowa College of Law",
@@ -881,7 +1021,7 @@
     "lat": 41.6614,
     "lng": -91.5347,
     "tier": "tier2",
-    "rank": 36,
+    "rank": 32,
     "lsat25": 161,
     "lsat50": 164,
     "lsat75": 165,
@@ -897,7 +1037,11 @@
     "grantP25": 24000,
     "grantP50": 30043,
     "grantP75": 34527,
-    "tuitionNonRes": 52191
+    "tuitionNonRes": 52191,
+    "rank2025": 36,
+    "rankDisplay2025": "#36",
+    "rankDisplay": "#32",
+    "rankTied": true
   },
   {
     "name": "Washington and Lee University School of Law",
@@ -906,7 +1050,7 @@
     "lat": 37.7893,
     "lng": -79.4428,
     "tier": "tier2",
-    "rank": 36,
+    "rank": 34,
     "lsat25": 161,
     "lsat50": 167,
     "lsat75": 168,
@@ -922,7 +1066,11 @@
     "grantP25": 19000,
     "grantP50": 33500,
     "grantP75": 41500,
-    "tuitionNonRes": 57450
+    "tuitionNonRes": 57450,
+    "rank2025": 36,
+    "rankDisplay2025": "#36",
+    "rankDisplay": "#34",
+    "rankTied": true
   },
   {
     "name": "UC Irvine School of Law",
@@ -931,7 +1079,7 @@
     "lat": 33.6405,
     "lng": -117.8443,
     "tier": "tier2",
-    "rank": 38,
+    "rank": 34,
     "lsat25": 166,
     "lsat50": 169,
     "lsat75": 170,
@@ -947,7 +1095,11 @@
     "grantP25": 17500,
     "grantP50": 25000,
     "grantP75": 35000,
-    "tuitionNonRes": 71325
+    "tuitionNonRes": 71325,
+    "rank2025": 38,
+    "rankDisplay2025": "#38",
+    "rankDisplay": "#34",
+    "rankTied": true
   },
   {
     "name": "Emory University School of Law",
@@ -956,7 +1108,7 @@
     "lat": 33.7914,
     "lng": -84.3239,
     "tier": "tier2",
-    "rank": 38,
+    "rank": 40,
     "lsat25": 162,
     "lsat50": 166,
     "lsat75": 168,
@@ -972,7 +1124,11 @@
     "grantP25": 28000,
     "grantP50": 36000,
     "grantP75": 45000,
-    "tuitionNonRes": 69510
+    "tuitionNonRes": 69510,
+    "rank2025": 38,
+    "rankDisplay2025": "#38",
+    "rankDisplay": "#40",
+    "rankTied": true
   },
   {
     "name": "Florida State University College of Law",
@@ -981,7 +1137,7 @@
     "lat": 30.4415,
     "lng": -84.2983,
     "tier": "tier2",
-    "rank": 38,
+    "rank": 34,
     "lsat25": 158,
     "lsat50": 166,
     "lsat75": 167,
@@ -997,7 +1153,11 @@
     "grantP25": 5737,
     "grantP50": 15464,
     "grantP75": 20640,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 38,
+    "rankDisplay2025": "#38",
+    "rankDisplay": "#34",
+    "rankTied": true
   },
   {
     "name": "University of Florida Levin College of Law",
@@ -1006,7 +1166,7 @@
     "lat": 29.6474,
     "lng": -82.3455,
     "tier": "tier2",
-    "rank": 38,
+    "rank": 34,
     "lsat25": 165,
     "lsat50": 169,
     "lsat75": 170,
@@ -1022,7 +1182,11 @@
     "grantP25": 6000,
     "grantP50": 19000,
     "grantP75": 30804,
-    "tuitionNonRes": 36148
+    "tuitionNonRes": 36148,
+    "rank2025": 38,
+    "rankDisplay2025": "#38",
+    "rankDisplay": "#34",
+    "rankTied": true
   },
   {
     "name": "Fordham University School of Law",
@@ -1031,7 +1195,7 @@
     "lat": 40.7563,
     "lng": -74.0018,
     "tier": "tier2",
-    "rank": 38,
+    "rank": 42,
     "lsat25": 165,
     "lsat50": 168,
     "lsat75": 170,
@@ -1047,7 +1211,11 @@
     "grantP25": 25000,
     "grantP50": 35000,
     "grantP75": 43000,
-    "tuitionNonRes": 78078
+    "tuitionNonRes": 78078,
+    "rank2025": 38,
+    "rankDisplay2025": "#38",
+    "rankDisplay": "#42",
+    "rankTied": true
   },
   {
     "name": "Baylor Law School",
@@ -1055,8 +1223,8 @@
     "city": "Waco, TX",
     "lat": 31.5488,
     "lng": -97.1131,
-    "tier": "tier3",
-    "rank": 43,
+    "tier": "tier2",
+    "rank": 34,
     "lsat25": 159,
     "lsat50": 164,
     "lsat75": 165,
@@ -1072,7 +1240,11 @@
     "grantP25": 18000,
     "grantP50": 33518,
     "grantP75": 57873,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 43,
+    "rankDisplay2025": "#43",
+    "rankDisplay": "#34",
+    "rankTied": true
   },
   {
     "name": "SMU Dedman School of Law",
@@ -1080,8 +1252,8 @@
     "city": "Dallas, TX",
     "lat": 32.8434,
     "lng": -96.7844,
-    "tier": "tier3",
-    "rank": 43,
+    "tier": "tier2",
+    "rank": 42,
     "lsat25": 163,
     "lsat50": 167,
     "lsat75": 168,
@@ -1097,7 +1269,11 @@
     "grantP25": 22000,
     "grantP50": 26000,
     "grantP75": 33333,
-    "tuitionNonRes": 60844
+    "tuitionNonRes": 60844,
+    "rank2025": 43,
+    "rankDisplay2025": "#43",
+    "rankDisplay": "#42",
+    "rankTied": true
   },
   {
     "name": "Arizona State Sandra Day O'Connor College of Law",
@@ -1106,7 +1282,7 @@
     "lat": 33.4255,
     "lng": -111.94,
     "tier": "tier2",
-    "rank": 45,
+    "rank": 44,
     "lsat25": 158,
     "lsat50": 165,
     "lsat75": 167,
@@ -1122,7 +1298,11 @@
     "grantP25": 5000,
     "grantP50": 20000,
     "grantP75": 33336,
-    "tuitionNonRes": 52099
+    "tuitionNonRes": 52099,
+    "rank2025": 45,
+    "rankDisplay2025": "#45",
+    "rankDisplay": "#44",
+    "rankTied": true
   },
   {
     "name": "University of Colorado Law School",
@@ -1130,8 +1310,8 @@
     "city": "Boulder, CO",
     "lat": 40.0076,
     "lng": -105.2659,
-    "tier": "tier2",
-    "rank": 46,
+    "tier": "tier3",
+    "rank": 54,
     "lsat25": 161,
     "lsat50": 164,
     "lsat75": 167,
@@ -1147,7 +1327,11 @@
     "grantP25": 10300,
     "grantP50": 15000,
     "grantP75": 27440,
-    "tuitionNonRes": 44002
+    "tuitionNonRes": 44002,
+    "rank2025": 46,
+    "rankDisplay2025": "#46",
+    "rankDisplay": "#54",
+    "rankTied": true
   },
   {
     "name": "Indiana University Maurer School of Law",
@@ -1156,7 +1340,7 @@
     "lat": 39.1684,
     "lng": -86.523,
     "tier": "tier2",
-    "rank": 46,
+    "rank": 49,
     "lsat25": 158,
     "lsat50": 164,
     "lsat75": 166,
@@ -1172,7 +1356,11 @@
     "grantP25": 20000,
     "grantP50": 33000,
     "grantP75": 50000,
-    "tuitionNonRes": 58000
+    "tuitionNonRes": 58000,
+    "rank2025": 46,
+    "rankDisplay2025": "#46",
+    "rankDisplay": "#49",
+    "rankTied": true
   },
   {
     "name": "University of Illinois College of Law",
@@ -1181,7 +1369,7 @@
     "lat": 40.102,
     "lng": -88.2272,
     "tier": "tier2",
-    "rank": 48,
+    "rank": 46,
     "lsat25": 160,
     "lsat50": 166,
     "lsat75": 168,
@@ -1197,7 +1385,11 @@
     "grantP25": 13125,
     "grantP50": 32000,
     "grantP75": 46500,
-    "tuitionNonRes": 46500
+    "tuitionNonRes": 46500,
+    "rank2025": 48,
+    "rankDisplay2025": "#48",
+    "rankDisplay": "#46",
+    "rankTied": true
   },
   {
     "name": "Villanova University Widger School of Law",
@@ -1206,7 +1398,7 @@
     "lat": 40.0358,
     "lng": -75.3416,
     "tier": "tier2",
-    "rank": 48,
+    "rank": 49,
     "lsat25": 159,
     "lsat50": 164,
     "lsat75": 166,
@@ -1222,7 +1414,11 @@
     "grantP25": 25000,
     "grantP50": 40000,
     "grantP75": 50000,
-    "tuitionNonRes": 59800
+    "tuitionNonRes": 59800,
+    "rank2025": 48,
+    "rankDisplay2025": "#48",
+    "rankDisplay": "#49",
+    "rankTied": true
   },
   {
     "name": "UC Davis School of Law",
@@ -1230,8 +1426,8 @@
     "city": "Davis, CA",
     "lat": 38.5382,
     "lng": -121.7617,
-    "tier": "tier2",
-    "rank": 50,
+    "tier": "tier3",
+    "rank": 52,
     "lsat25": 160,
     "lsat50": 165,
     "lsat75": 167,
@@ -1247,7 +1443,11 @@
     "grantP25": 14500,
     "grantP50": 25000,
     "grantP75": 35000,
-    "tuitionNonRes": 69705
+    "tuitionNonRes": 69705,
+    "rank2025": 50,
+    "rankDisplay2025": "#50",
+    "rankDisplay": "#52",
+    "rankTied": true
   },
   {
     "name": "University of Connecticut School of Law",
@@ -1255,8 +1455,8 @@
     "city": "Hartford, CT",
     "lat": 41.778,
     "lng": -72.6908,
-    "tier": "tier2",
-    "rank": 50,
+    "tier": "tier3",
+    "rank": 58,
     "lsat25": 160,
     "lsat50": 162,
     "lsat75": 164,
@@ -1272,7 +1472,11 @@
     "grantP25": 10000,
     "grantP50": 15177,
     "grantP75": 22034,
-    "tuitionNonRes": 61396
+    "tuitionNonRes": 61396,
+    "rank2025": 50,
+    "rankDisplay2025": "#50",
+    "rankDisplay": "#58",
+    "rankTied": false
   },
   {
     "name": "University of Kansas School of Law",
@@ -1281,7 +1485,7 @@
     "lat": 38.9543,
     "lng": -95.2558,
     "tier": "tier2",
-    "rank": 50,
+    "rank": 46,
     "lsat25": 158,
     "lsat50": 162,
     "lsat75": 164,
@@ -1297,7 +1501,11 @@
     "grantP25": 5375,
     "grantP50": 15000,
     "grantP75": 24700,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 50,
+    "rankDisplay2025": "#50",
+    "rankDisplay": "#46",
+    "rankTied": true
   },
   {
     "name": "Temple University Beasley School of Law",
@@ -1306,7 +1514,7 @@
     "lat": 39.9813,
     "lng": -75.1551,
     "tier": "tier2",
-    "rank": 50,
+    "rank": 49,
     "lsat25": 162,
     "lsat50": 165,
     "lsat75": 168,
@@ -1322,7 +1530,11 @@
     "grantP25": 22271,
     "grantP50": 31334,
     "grantP75": 41500,
-    "tuitionNonRes": 48996
+    "tuitionNonRes": 48996,
+    "rank2025": 50,
+    "rankDisplay2025": "#50",
+    "rankDisplay": "#49",
+    "rankTied": true
   },
   {
     "name": "University of Washington School of Law",
@@ -1330,8 +1542,8 @@
     "city": "Seattle, WA",
     "lat": 47.6537,
     "lng": -122.3082,
-    "tier": "tier2",
-    "rank": 50,
+    "tier": "tier3",
+    "rank": 52,
     "lsat25": 162,
     "lsat50": 165,
     "lsat75": 167,
@@ -1347,7 +1559,11 @@
     "grantP25": 7500,
     "grantP50": 14000,
     "grantP75": 18930,
-    "tuitionNonRes": 57810
+    "tuitionNonRes": 57810,
+    "rank2025": 50,
+    "rankDisplay2025": "#50",
+    "rankDisplay": "#52",
+    "rankTied": true
   },
   {
     "name": "Pepperdine Caruso School of Law",
@@ -1355,8 +1571,8 @@
     "city": "Malibu, CA",
     "lat": 34.0367,
     "lng": -118.6951,
-    "tier": "tier3",
-    "rank": 55,
+    "tier": "tier2",
+    "rank": 46,
     "lsat25": 161,
     "lsat50": 164,
     "lsat75": 167,
@@ -1372,7 +1588,11 @@
     "grantP25": 30000,
     "grantP50": 30000,
     "grantP75": 55000,
-    "tuitionNonRes": 72920
+    "tuitionNonRes": 72920,
+    "rank2025": 55,
+    "rankDisplay2025": "#55",
+    "rankDisplay": "#46",
+    "rankTied": true
   },
   {
     "name": "University of Tennessee College of Law",
@@ -1381,7 +1601,7 @@
     "lat": 35.9544,
     "lng": -83.927,
     "tier": "tier3",
-    "rank": 55,
+    "rank": 57,
     "lsat25": 160,
     "lsat50": 164,
     "lsat75": 166,
@@ -1397,7 +1617,11 @@
     "grantP25": 8000,
     "grantP50": 10550,
     "grantP75": 14000,
-    "tuitionNonRes": 35140
+    "tuitionNonRes": 35140,
+    "rank2025": 55,
+    "rankDisplay2025": "#55",
+    "rankDisplay": "#57",
+    "rankTied": false
   },
   {
     "name": "University of Missouri School of Law",
@@ -1406,7 +1630,7 @@
     "lat": 38.9517,
     "lng": -92.3341,
     "tier": "tier3",
-    "rank": 57,
+    "rank": 59,
     "lsat25": 156,
     "lsat50": 161,
     "lsat75": 162,
@@ -1422,7 +1646,11 @@
     "grantP25": 8000,
     "grantP50": 17500,
     "grantP75": 24000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 57,
+    "rankDisplay2025": "#57",
+    "rankDisplay": "#59",
+    "rankTied": true
   },
   {
     "name": "University of San Diego School of Law",
@@ -1431,7 +1659,7 @@
     "lat": 32.7726,
     "lng": -117.1895,
     "tier": "tier3",
-    "rank": 57,
+    "rank": 54,
     "lsat25": 160,
     "lsat50": 163,
     "lsat75": 165,
@@ -1447,7 +1675,11 @@
     "grantP25": 27375,
     "grantP50": 32000,
     "grantP75": 50000,
-    "tuitionNonRes": 66950
+    "tuitionNonRes": 66950,
+    "rank2025": 57,
+    "rankDisplay2025": "#57",
+    "rankDisplay": "#54",
+    "rankTied": true
   },
   {
     "name": "University of Arizona James E. Rogers College of Law",
@@ -1456,7 +1688,7 @@
     "lat": 32.2319,
     "lng": -110.9501,
     "tier": "tier3",
-    "rank": 59,
+    "rank": 70,
     "lsat25": 162,
     "lsat50": 163,
     "lsat75": 165,
@@ -1472,7 +1704,11 @@
     "grantP25": 15018,
     "grantP50": 25235,
     "grantP75": 29870,
-    "tuitionNonRes": 31360
+    "tuitionNonRes": 31360,
+    "rank2025": 59,
+    "rankDisplay2025": "#59",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "Marquette University Law School",
@@ -1497,7 +1733,11 @@
     "grantP25": 16000,
     "grantP50": 23000,
     "grantP75": 30000,
-    "tuitionNonRes": 51970
+    "tuitionNonRes": 51970,
+    "rank2025": 59,
+    "rankDisplay2025": "#59",
+    "rankDisplay": "#59",
+    "rankTied": true
   },
   {
     "name": "University of Oklahoma College of Law",
@@ -1506,7 +1746,7 @@
     "lat": 35.2058,
     "lng": -97.4474,
     "tier": "tier3",
-    "rank": 59,
+    "rank": 62,
     "lsat25": 159,
     "lsat50": 162,
     "lsat75": 164,
@@ -1522,7 +1762,11 @@
     "grantP25": 7700,
     "grantP50": 12000,
     "grantP75": 17000,
-    "tuitionNonRes": 33357
+    "tuitionNonRes": 33357,
+    "rank2025": 59,
+    "rankDisplay2025": "#59",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "Penn State Dickinson Law",
@@ -1531,7 +1775,7 @@
     "lat": 40.201,
     "lng": -77.1997,
     "tier": "tier3",
-    "rank": 59,
+    "rank": 62,
     "lsat25": 157,
     "lsat50": 159,
     "lsat75": 161,
@@ -1547,7 +1791,11 @@
     "grantP25": 26000,
     "grantP50": 36000,
     "grantP75": 56928,
-    "tuitionNonRes": 60048
+    "tuitionNonRes": 60048,
+    "rank2025": 59,
+    "rankDisplay2025": "#59",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "Cardozo School of Law",
@@ -1556,7 +1804,7 @@
     "lat": 40.7298,
     "lng": -73.988,
     "tier": "tier3",
-    "rank": 63,
+    "rank": 59,
     "lsat25": 162,
     "lsat50": 165,
     "lsat75": 167,
@@ -1572,7 +1820,11 @@
     "grantP25": 30000,
     "grantP50": 40000,
     "grantP75": 50000,
-    "tuitionNonRes": 74438
+    "tuitionNonRes": 74438,
+    "rank2025": 63,
+    "rankDisplay2025": "#63",
+    "rankDisplay": "#59",
+    "rankTied": true
   },
   {
     "name": "University of Houston Law Center",
@@ -1581,7 +1833,7 @@
     "lat": 29.7216,
     "lng": -95.3403,
     "tier": "tier3",
-    "rank": 63,
+    "rank": 54,
     "lsat25": 160,
     "lsat50": 163,
     "lsat75": 165,
@@ -1597,7 +1849,11 @@
     "grantP25": 4000,
     "grantP50": 11500,
     "grantP75": 16900,
-    "tuitionNonRes": 46051
+    "tuitionNonRes": 46051,
+    "rank2025": 63,
+    "rankDisplay2025": "#63",
+    "rankDisplay": "#54",
+    "rankTied": true
   },
   {
     "name": "University of Maryland Carey School of Law",
@@ -1606,7 +1862,7 @@
     "lat": 39.2988,
     "lng": -76.5914,
     "tier": "tier3",
-    "rank": 63,
+    "rank": 62,
     "lsat25": 156,
     "lsat50": 164,
     "lsat75": 166,
@@ -1622,7 +1878,11 @@
     "grantP25": 10161,
     "grantP50": 28000,
     "grantP75": 40000,
-    "tuitionNonRes": 55844
+    "tuitionNonRes": 55844,
+    "rank2025": 63,
+    "rankDisplay2025": "#63",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "University of South Carolina School of Law",
@@ -1631,7 +1891,7 @@
     "lat": 33.9974,
     "lng": -81.0298,
     "tier": "tier3",
-    "rank": 63,
+    "rank": 62,
     "lsat25": 160,
     "lsat50": 162,
     "lsat75": 164,
@@ -1647,7 +1907,11 @@
     "grantP25": 8000,
     "grantP50": 12562,
     "grantP75": 18000,
-    "tuitionNonRes": 38100
+    "tuitionNonRes": 38100,
+    "rank2025": 63,
+    "rankDisplay2025": "#63",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "St. John's University School of Law",
@@ -1656,7 +1920,7 @@
     "lat": 40.7228,
     "lng": -73.7949,
     "tier": "tier3",
-    "rank": 63,
+    "rank": 62,
     "lsat25": 156,
     "lsat50": 164,
     "lsat75": 166,
@@ -1672,7 +1936,11 @@
     "grantP25": 25000,
     "grantP50": 60000,
     "grantP75": 72630,
-    "tuitionNonRes": 75170
+    "tuitionNonRes": 75170,
+    "rank2025": 63,
+    "rankDisplay2025": "#63",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "University of Kentucky College of Law",
@@ -1681,7 +1949,7 @@
     "lat": 38.0345,
     "lng": -84.5037,
     "tier": "tier3",
-    "rank": 68,
+    "rank": 70,
     "lsat25": 156,
     "lsat50": 159,
     "lsat75": 162,
@@ -1697,7 +1965,11 @@
     "grantP25": 6000,
     "grantP50": 11000,
     "grantP75": 18000,
-    "tuitionNonRes": 49836
+    "tuitionNonRes": 49836,
+    "rank2025": 68,
+    "rankDisplay2025": "#68",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "Northeastern University School of Law",
@@ -1706,7 +1978,7 @@
     "lat": 42.3408,
     "lng": -71.0898,
     "tier": "tier3",
-    "rank": 68,
+    "rank": 77,
     "lsat25": 161,
     "lsat50": 164,
     "lsat75": 166,
@@ -1722,7 +1994,11 @@
     "grantP25": 14666,
     "grantP50": 31000,
     "grantP75": 45000,
-    "tuitionNonRes": 65652
+    "tuitionNonRes": 65652,
+    "rank2025": 68,
+    "rankDisplay2025": "#68",
+    "rankDisplay": "#77",
+    "rankTied": true
   },
   {
     "name": "Catholic University of America Columbus School of Law",
@@ -1731,7 +2007,7 @@
     "lat": 38.9342,
     "lng": -77.0024,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 70,
     "lsat25": 158,
     "lsat50": 161,
     "lsat75": 163,
@@ -1747,7 +2023,11 @@
     "grantP25": 15727,
     "grantP50": 26000,
     "grantP75": 45000,
-    "tuitionNonRes": 61580
+    "tuitionNonRes": 61580,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "University of Cincinnati College of Law",
@@ -1756,7 +2036,7 @@
     "lat": 39.1329,
     "lng": -84.515,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 82,
     "lsat25": 156,
     "lsat50": 159,
     "lsat75": 161,
@@ -1772,7 +2052,11 @@
     "grantP25": 11700,
     "grantP50": 19000,
     "grantP75": 23400,
-    "tuitionNonRes": 29010
+    "tuitionNonRes": 29010,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#82",
+    "rankTied": true
   },
   {
     "name": "Loyola Law School Los Angeles",
@@ -1781,7 +2065,7 @@
     "lat": 34.0573,
     "lng": -118.2889,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 70,
     "lsat25": 160,
     "lsat50": 163,
     "lsat75": 165,
@@ -1797,7 +2081,11 @@
     "grantP25": 35000,
     "grantP50": 45000,
     "grantP75": 52000,
-    "tuitionNonRes": 70360
+    "tuitionNonRes": 70360,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "University of Nebraska College of Law",
@@ -1806,7 +2094,7 @@
     "lat": 40.8136,
     "lng": -96.7026,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 62,
     "lsat25": 156,
     "lsat50": 160,
     "lsat75": 162,
@@ -1822,7 +2110,11 @@
     "grantP25": 9510,
     "grantP50": 20000,
     "grantP75": 35100,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "University of Richmond School of Law",
@@ -1831,7 +2123,7 @@
     "lat": 37.5743,
     "lng": -77.5394,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 62,
     "lsat25": 159,
     "lsat50": 164,
     "lsat75": 167,
@@ -1847,7 +2139,11 @@
     "grantP25": 20000,
     "grantP50": 40000,
     "grantP75": 55550,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "Seton Hall University School of Law",
@@ -1856,7 +2152,7 @@
     "lat": 40.7425,
     "lng": -74.174,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 70,
     "lsat25": 158,
     "lsat50": 161,
     "lsat75": 164,
@@ -1872,7 +2168,11 @@
     "grantP25": 20500,
     "grantP50": 40000,
     "grantP75": 60000,
-    "tuitionNonRes": 69660
+    "tuitionNonRes": 69660,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "Tulane University Law School",
@@ -1881,7 +2181,7 @@
     "lat": 29.9399,
     "lng": -90.1184,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 70,
     "lsat25": 159,
     "lsat50": 161,
     "lsat75": 164,
@@ -1897,7 +2197,11 @@
     "grantP25": 30000,
     "grantP50": 37500,
     "grantP75": 45000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "Wayne State University Law School",
@@ -1906,7 +2210,7 @@
     "lat": 42.358,
     "lng": -83.0683,
     "tier": "tier3",
-    "rank": 71,
+    "rank": 62,
     "lsat25": 157,
     "lsat50": 164,
     "lsat75": 166,
@@ -1922,7 +2226,11 @@
     "grantP25": 25000,
     "grantP50": 34636,
     "grantP75": 38547,
-    "tuitionNonRes": 42632
+    "tuitionNonRes": 42632,
+    "rank2025": 71,
+    "rankDisplay2025": "#71",
+    "rankDisplay": "#62",
+    "rankTied": true
   },
   {
     "name": "Drexel University Kline School of Law",
@@ -1931,7 +2239,7 @@
     "lat": 39.9564,
     "lng": -75.1897,
     "tier": "tier3",
-    "rank": 79,
+    "rank": 82,
     "lsat25": 154,
     "lsat50": 160,
     "lsat75": 162,
@@ -1947,7 +2255,11 @@
     "grantP25": 13000,
     "grantP50": 28667,
     "grantP75": 45000,
-    "tuitionNonRes": 57000
+    "tuitionNonRes": 57000,
+    "rank2025": 79,
+    "rankDisplay2025": "#79",
+    "rankDisplay": "#82",
+    "rankTied": true
   },
   {
     "name": "Georgia State University College of Law",
@@ -1956,7 +2268,7 @@
     "lat": 33.753,
     "lng": -84.3863,
     "tier": "tier3",
-    "rank": 79,
+    "rank": 77,
     "lsat25": 158,
     "lsat50": 160,
     "lsat75": 163,
@@ -1972,7 +2284,11 @@
     "grantP25": 2336,
     "grantP50": 7776,
     "grantP75": 10627,
-    "tuitionNonRes": 37886
+    "tuitionNonRes": 37886,
+    "rank2025": 79,
+    "rankDisplay2025": "#79",
+    "rankDisplay": "#77",
+    "rankTied": true
   },
   {
     "name": "Loyola University Chicago School of Law",
@@ -1981,7 +2297,7 @@
     "lat": 41.8998,
     "lng": -87.6559,
     "tier": "tier3",
-    "rank": 79,
+    "rank": 77,
     "lsat25": 159,
     "lsat50": 161,
     "lsat75": 163,
@@ -1997,7 +2313,11 @@
     "grantP25": 22000,
     "grantP50": 30000,
     "grantP75": 35000,
-    "tuitionNonRes": 58670
+    "tuitionNonRes": 58670,
+    "rank2025": 79,
+    "rankDisplay2025": "#79",
+    "rankDisplay": "#77",
+    "rankTied": true
   },
   {
     "name": "UNLV William S. Boyd School of Law",
@@ -2006,7 +2326,7 @@
     "lat": 36.1156,
     "lng": -115.1423,
     "tier": "tier3",
-    "rank": 79,
+    "rank": 91,
     "lsat25": 156,
     "lsat50": 160,
     "lsat75": 162,
@@ -2022,7 +2342,11 @@
     "grantP25": 14980,
     "grantP50": 22998,
     "grantP75": 39946,
-    "tuitionNonRes": 46040
+    "tuitionNonRes": 46040,
+    "rank2025": 79,
+    "rankDisplay2025": "#79",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "University of Pittsburgh School of Law",
@@ -2031,7 +2355,7 @@
     "lat": 40.4443,
     "lng": -79.9528,
     "tier": "tier3",
-    "rank": 79,
+    "rank": 77,
     "lsat25": 158,
     "lsat50": 160,
     "lsat75": 163,
@@ -2047,7 +2371,11 @@
     "grantP25": 24000,
     "grantP50": 30000,
     "grantP75": 38000,
-    "tuitionNonRes": 53434
+    "tuitionNonRes": 53434,
+    "rank2025": 79,
+    "rankDisplay2025": "#79",
+    "rankDisplay": "#77",
+    "rankTied": true
   },
   {
     "name": "Belmont University College of Law",
@@ -2056,7 +2384,7 @@
     "lat": 36.1354,
     "lng": -86.7979,
     "tier": "tier3",
-    "rank": 84,
+    "rank": 85,
     "lsat25": 158,
     "lsat50": 161,
     "lsat75": 163,
@@ -2072,7 +2400,11 @@
     "grantP25": 27140,
     "grantP50": 40710,
     "grantP75": 54280,
-    "tuitionNonRes": 55500
+    "tuitionNonRes": 55500,
+    "rank2025": 84,
+    "rankDisplay2025": "#84",
+    "rankDisplay": "#85",
+    "rankTied": true
   },
   {
     "name": "Drake University Law School",
@@ -2081,7 +2413,7 @@
     "lat": 41.6005,
     "lng": -93.651,
     "tier": "tier3",
-    "rank": 84,
+    "rank": 91,
     "lsat25": 153,
     "lsat50": 156,
     "lsat75": 159,
@@ -2097,7 +2429,11 @@
     "grantP25": 24000,
     "grantP50": 31000,
     "grantP75": 37080,
-    "tuitionNonRes": 50920
+    "tuitionNonRes": 50920,
+    "rank2025": 84,
+    "rankDisplay2025": "#84",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "Florida International University College of Law",
@@ -2106,7 +2442,7 @@
     "lat": 25.7582,
     "lng": -80.3748,
     "tier": "tier3",
-    "rank": 84,
+    "rank": 77,
     "lsat25": 159,
     "lsat50": 161,
     "lsat75": 162,
@@ -2122,7 +2458,11 @@
     "grantP25": 7000,
     "grantP50": 10365,
     "grantP75": 20716,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 84,
+    "rankDisplay2025": "#84",
+    "rankDisplay": "#77",
+    "rankTied": true
   },
   {
     "name": "LSU Paul M. Hebert Law Center",
@@ -2131,7 +2471,7 @@
     "lat": 30.4125,
     "lng": -91.1801,
     "tier": "tier3",
-    "rank": 84,
+    "rank": 85,
     "lsat25": 155,
     "lsat50": 157,
     "lsat75": 160,
@@ -2147,7 +2487,11 @@
     "grantP25": 9937,
     "grantP50": 19750,
     "grantP75": 20600,
-    "tuitionNonRes": 19750
+    "tuitionNonRes": 19750,
+    "rank2025": 84,
+    "rankDisplay2025": "#84",
+    "rankDisplay": "#85",
+    "rankTied": true
   },
   {
     "name": "University of Denver Sturm College of Law",
@@ -2156,7 +2500,7 @@
     "lat": 39.6767,
     "lng": -104.9619,
     "tier": "tier3",
-    "rank": 88,
+    "rank": 91,
     "lsat25": 156,
     "lsat50": 160,
     "lsat75": 162,
@@ -2172,7 +2516,11 @@
     "grantP25": 23000,
     "grantP50": 30000,
     "grantP75": 41000,
-    "tuitionNonRes": 63390
+    "tuitionNonRes": 63390,
+    "rank2025": 88,
+    "rankDisplay2025": "#88",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "University of Maine School of Law",
@@ -2181,7 +2529,7 @@
     "lat": 43.6591,
     "lng": -70.2568,
     "tier": "tier3",
-    "rank": 88,
+    "rank": 91,
     "lsat25": 154,
     "lsat50": 158,
     "lsat75": 162,
@@ -2197,7 +2545,11 @@
     "grantP25": 15000,
     "grantP50": 23535,
     "grantP75": 32926,
-    "tuitionNonRes": 38160
+    "tuitionNonRes": 38160,
+    "rank2025": 88,
+    "rankDisplay2025": "#88",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "Texas Tech University School of Law",
@@ -2206,7 +2558,7 @@
     "lat": 33.5779,
     "lng": -101.8552,
     "tier": "tier3",
-    "rank": 88,
+    "rank": 85,
     "lsat25": 157,
     "lsat50": 159,
     "lsat75": 160,
@@ -2222,7 +2574,11 @@
     "grantP25": 5869,
     "grantP50": 12000,
     "grantP75": 17850,
-    "tuitionNonRes": 33840
+    "tuitionNonRes": 33840,
+    "rank2025": 88,
+    "rankDisplay2025": "#88",
+    "rankDisplay": "#85",
+    "rankTied": true
   },
   {
     "name": "Duquesne University School of Law",
@@ -2231,7 +2587,7 @@
     "lat": 40.4381,
     "lng": -79.9955,
     "tier": "tier3",
-    "rank": 92,
+    "rank": 85,
     "lsat25": 155,
     "lsat50": 157,
     "lsat75": 160,
@@ -2247,7 +2603,11 @@
     "grantP25": 20000,
     "grantP50": 30000,
     "grantP75": 43000,
-    "tuitionNonRes": 58898
+    "tuitionNonRes": 58898,
+    "rank2025": 92,
+    "rankDisplay2025": "#92",
+    "rankDisplay": "#85",
+    "rankTied": true
   },
   {
     "name": "University of Miami School of Law",
@@ -2256,7 +2616,7 @@
     "lat": 25.7218,
     "lng": -80.2789,
     "tier": "tier3",
-    "rank": 92,
+    "rank": 70,
     "lsat25": 160,
     "lsat50": 164,
     "lsat75": 165,
@@ -2272,7 +2632,11 @@
     "grantP25": 39374,
     "grantP50": 47000,
     "grantP75": 52188,
-    "tuitionNonRes": 66720
+    "tuitionNonRes": 66720,
+    "rank2025": 92,
+    "rankDisplay2025": "#92",
+    "rankDisplay": "#70",
+    "rankTied": true
   },
   {
     "name": "University at Buffalo School of Law",
@@ -2281,7 +2645,7 @@
     "lat": 43.0018,
     "lng": -78.7877,
     "tier": "tier3",
-    "rank": 94,
+    "rank": 82,
     "lsat25": 155,
     "lsat50": 157,
     "lsat75": 161,
@@ -2297,7 +2661,11 @@
     "grantP25": 3500,
     "grantP50": 7500,
     "grantP75": 11500,
-    "tuitionNonRes": 32100
+    "tuitionNonRes": 32100,
+    "rank2025": 94,
+    "rankDisplay2025": "#94",
+    "rankDisplay": "#82",
+    "rankTied": true
   },
   {
     "name": "University of Oregon School of Law",
@@ -2306,7 +2674,7 @@
     "lat": 44.0448,
     "lng": -123.0722,
     "tier": "tier3",
-    "rank": 94,
+    "rank": 91,
     "lsat25": 157,
     "lsat50": 160,
     "lsat75": 162,
@@ -2322,7 +2690,11 @@
     "grantP25": 15000,
     "grantP50": 25000,
     "grantP75": 35000,
-    "tuitionNonRes": 59495
+    "tuitionNonRes": 59495,
+    "rank2025": 94,
+    "rankDisplay2025": "#94",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "Regent University School of Law",
@@ -2331,7 +2703,7 @@
     "lat": 36.8465,
     "lng": -76.1169,
     "tier": "tier3",
-    "rank": 94,
+    "rank": 91,
     "lsat25": 153,
     "lsat50": 158,
     "lsat75": 161,
@@ -2347,7 +2719,11 @@
     "grantP25": 10000,
     "grantP50": 22500,
     "grantP75": 35000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 94,
+    "rankDisplay2025": "#94",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "Saint Louis University School of Law",
@@ -2356,7 +2732,7 @@
     "lat": 38.6375,
     "lng": -90.235,
     "tier": "tier3",
-    "rank": 94,
+    "rank": 91,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 161,
@@ -2372,7 +2748,11 @@
     "grantP25": 15000,
     "grantP50": 25000,
     "grantP75": 35000,
-    "tuitionNonRes": 55260
+    "tuitionNonRes": 55260,
+    "rank2025": 94,
+    "rankDisplay2025": "#94",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "University of St. Thomas School of Law",
@@ -2381,7 +2761,7 @@
     "lat": 44.9556,
     "lng": -93.1655,
     "tier": "tier3",
-    "rank": 94,
+    "rank": 105,
     "lsat25": 155,
     "lsat50": 159,
     "lsat75": 162,
@@ -2397,7 +2777,11 @@
     "grantP25": 12500,
     "grantP50": 25320,
     "grantP75": 34750,
-    "tuitionNonRes": 44730
+    "tuitionNonRes": 44730,
+    "rank2025": 94,
+    "rankDisplay2025": "#94",
+    "rankDisplay": "#105",
+    "rankTied": true
   },
   {
     "name": "University of Hawaii Richardson School of Law",
@@ -2406,7 +2790,7 @@
     "lat": 21.2969,
     "lng": -157.8219,
     "tier": "tier3",
-    "rank": 99,
+    "rank": 91,
     "lsat25": 155,
     "lsat50": 158,
     "lsat75": 162,
@@ -2422,7 +2806,11 @@
     "grantP25": 6000,
     "grantP50": 7000,
     "grantP75": 13000,
-    "tuitionNonRes": 46728
+    "tuitionNonRes": 46728,
+    "rank2025": 99,
+    "rankDisplay2025": "#99",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "Lewis & Clark Law School",
@@ -2431,7 +2819,7 @@
     "lat": 45.4586,
     "lng": -122.6716,
     "tier": "tier3",
-    "rank": 99,
+    "rank": 112,
     "lsat25": 158,
     "lsat50": 161,
     "lsat75": 166,
@@ -2447,7 +2835,11 @@
     "grantP25": 19000,
     "grantP50": 26000,
     "grantP75": 36000,
-    "tuitionNonRes": 61434
+    "tuitionNonRes": 61434,
+    "rank2025": 99,
+    "rankDisplay2025": "#99",
+    "rankDisplay": "#112",
+    "rankTied": true
   },
   {
     "name": "University of Missouri-Kansas City School of Law",
@@ -2456,7 +2848,7 @@
     "lat": 39.0392,
     "lng": -94.5783,
     "tier": "tier3",
-    "rank": 99,
+    "rank": 100,
     "lsat25": 154,
     "lsat50": 156,
     "lsat75": 159,
@@ -2472,7 +2864,11 @@
     "grantP25": 4000,
     "grantP50": 7270,
     "grantP75": 11250,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 99,
+    "rankDisplay2025": "#99",
+    "rankDisplay": "#100",
+    "rankTied": true
   },
   {
     "name": "University of Montana School of Law",
@@ -2481,7 +2877,7 @@
     "lat": 46.8625,
     "lng": -113.9847,
     "tier": "tier3",
-    "rank": 99,
+    "rank": 90,
     "lsat25": 153,
     "lsat50": 156,
     "lsat75": 159,
@@ -2497,7 +2893,11 @@
     "grantP25": 6630,
     "grantP50": 10000,
     "grantP75": 15585,
-    "tuitionNonRes": 51582
+    "tuitionNonRes": 51582,
+    "rank2025": 99,
+    "rankDisplay2025": "#99",
+    "rankDisplay": "#90",
+    "rankTied": false
   },
   {
     "name": "Stetson University College of Law",
@@ -2506,7 +2906,7 @@
     "lat": 27.7388,
     "lng": -82.6944,
     "tier": "tier3",
-    "rank": 99,
+    "rank": 91,
     "lsat25": 157,
     "lsat50": 159,
     "lsat75": 162,
@@ -2522,7 +2922,11 @@
     "grantP25": 15000,
     "grantP50": 25000,
     "grantP75": 35000,
-    "tuitionNonRes": 56521
+    "tuitionNonRes": 56521,
+    "rank2025": 99,
+    "rankDisplay2025": "#99",
+    "rankDisplay": "#91",
+    "rankTied": true
   },
   {
     "name": "American University Washington College of Law",
@@ -2531,7 +2935,7 @@
     "lat": 38.9342,
     "lng": -77.0861,
     "tier": "tier3",
-    "rank": 104,
+    "rank": 108,
     "lsat25": 157,
     "lsat50": 162,
     "lsat75": 163,
@@ -2547,7 +2951,11 @@
     "grantP25": 40000,
     "grantP50": 40000,
     "grantP75": 40000,
-    "tuitionNonRes": 66990
+    "tuitionNonRes": 66990,
+    "rank2025": 104,
+    "rankDisplay2025": "#104",
+    "rankDisplay": "#108",
+    "rankTied": true
   },
   {
     "name": "Chapman University Fowler School of Law",
@@ -2556,7 +2964,7 @@
     "lat": 33.7888,
     "lng": -117.8531,
     "tier": "tier3",
-    "rank": 104,
+    "rank": 112,
     "lsat25": 156,
     "lsat50": 163,
     "lsat75": 164,
@@ -2572,7 +2980,11 @@
     "grantP25": 35000,
     "grantP50": 59500,
     "grantP75": 64500,
-    "tuitionNonRes": 63126
+    "tuitionNonRes": 63126,
+    "rank2025": 104,
+    "rankDisplay2025": "#104",
+    "rankDisplay": "#112",
+    "rankTied": true
   },
   {
     "name": "Rutgers Law School",
@@ -2581,7 +2993,7 @@
     "lat": 39.9452,
     "lng": -75.1152,
     "tier": "tier3",
-    "rank": 104,
+    "rank": 100,
     "lsat25": 155,
     "lsat50": 158,
     "lsat75": 161,
@@ -2597,7 +3009,11 @@
     "grantP25": 10000,
     "grantP50": 16000,
     "grantP75": 22000,
-    "tuitionNonRes": 47863
+    "tuitionNonRes": 47863,
+    "rank2025": 104,
+    "rankDisplay2025": "#104",
+    "rankDisplay": "#100",
+    "rankTied": true
   },
   {
     "name": "Case Western Reserve University School of Law",
@@ -2606,7 +3022,7 @@
     "lat": 41.5038,
     "lng": -81.6101,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 100,
     "lsat25": 156,
     "lsat50": 162,
     "lsat75": 164,
@@ -2622,7 +3038,11 @@
     "grantP25": 31000,
     "grantP50": 42500,
     "grantP75": 48500,
-    "tuitionNonRes": 64600
+    "tuitionNonRes": 64600,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#100",
+    "rankTied": true
   },
   {
     "name": "Chicago-Kent College of Law (IIT)",
@@ -2631,7 +3051,7 @@
     "lat": 41.8658,
     "lng": -87.6298,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 105,
     "lsat25": 156,
     "lsat50": 161,
     "lsat75": 164,
@@ -2647,7 +3067,11 @@
     "grantP25": 25000,
     "grantP50": 35000,
     "grantP75": 43862,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#105",
+    "rankTied": true
   },
   {
     "name": "University of Dayton School of Law",
@@ -2656,7 +3080,7 @@
     "lat": 39.739,
     "lng": -84.1868,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 112,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 160,
@@ -2672,7 +3096,11 @@
     "grantP25": 28000,
     "grantP50": 33000,
     "grantP75": 37000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#112",
+    "rankTied": true
   },
   {
     "name": "Indiana University McKinney School of Law",
@@ -2681,7 +3109,7 @@
     "lat": 39.7684,
     "lng": -86.1581,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 124,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 159,
@@ -2697,7 +3125,11 @@
     "grantP25": 5000,
     "grantP50": 15000,
     "grantP75": 29232,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#124",
+    "rankTied": true
   },
   {
     "name": "Mercer University Walter F. George School of Law",
@@ -2706,7 +3138,7 @@
     "lat": 32.8311,
     "lng": -83.6516,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 108,
     "lsat25": 155,
     "lsat50": 157,
     "lsat75": 160,
@@ -2722,7 +3154,11 @@
     "grantP25": 10000,
     "grantP50": 20000,
     "grantP75": 29000,
-    "tuitionNonRes": 44782
+    "tuitionNonRes": 44782,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#108",
+    "rankTied": true
   },
   {
     "name": "University of New Mexico School of Law",
@@ -2731,7 +3167,7 @@
     "lat": 35.0844,
     "lng": -106.6504,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 117,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 161,
@@ -2747,7 +3183,11 @@
     "grantP25": 5000,
     "grantP50": 10000,
     "grantP75": 16000,
-    "tuitionNonRes": 43192
+    "tuitionNonRes": 43192,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#117",
+    "rankTied": true
   },
   {
     "name": "Samford University Cumberland School of Law",
@@ -2756,7 +3196,7 @@
     "lat": 33.4486,
     "lng": -86.7187,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 122,
     "lsat25": 154,
     "lsat50": 156,
     "lsat75": 160,
@@ -2772,7 +3212,11 @@
     "grantP25": 7500,
     "grantP50": 20000,
     "grantP75": 27000,
-    "tuitionNonRes": 46334
+    "tuitionNonRes": 46334,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#122",
+    "rankTied": true
   },
   {
     "name": "Syracuse University College of Law",
@@ -2781,7 +3225,7 @@
     "lat": 43.0396,
     "lng": -76.1352,
     "tier": "tier3",
-    "rank": 107,
+    "rank": 100,
     "lsat25": 154,
     "lsat50": 158,
     "lsat75": 160,
@@ -2797,7 +3241,11 @@
     "grantP25": 14000,
     "grantP50": 24351,
     "grantP75": 40211,
-    "tuitionNonRes": 64650
+    "tuitionNonRes": 64650,
+    "rank2025": 107,
+    "rankDisplay2025": "#107",
+    "rankDisplay": "#100",
+    "rankTied": true
   },
   {
     "name": "University of Arkansas School of Law",
@@ -2806,7 +3254,7 @@
     "lat": 36.0683,
     "lng": -94.176,
     "tier": "tier3",
-    "rank": 115,
+    "rank": 100,
     "lsat25": 155,
     "lsat50": 158,
     "lsat75": 161,
@@ -2822,7 +3270,11 @@
     "grantP25": 5500,
     "grantP50": 9000,
     "grantP75": 11000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 115,
+    "rankDisplay2025": "#115",
+    "rankDisplay": "#100",
+    "rankTied": true
   },
   {
     "name": "Michigan State University College of Law",
@@ -2831,7 +3283,7 @@
     "lat": 42.728,
     "lng": -84.4822,
     "tier": "tier3",
-    "rank": 115,
+    "rank": 108,
     "lsat25": 158,
     "lsat50": 162,
     "lsat75": 164,
@@ -2847,7 +3299,11 @@
     "grantP25": 35000,
     "grantP50": 42682,
     "grantP75": 47424,
-    "tuitionNonRes": 48222
+    "tuitionNonRes": 48222,
+    "rank2025": 115,
+    "rankDisplay2025": "#115",
+    "rankDisplay": "#108",
+    "rankTied": true
   },
   {
     "name": "Albany Law School",
@@ -2856,7 +3312,7 @@
     "lat": 42.657,
     "lng": -73.7742,
     "tier": "tier3",
-    "rank": 117,
+    "rank": 120,
     "lsat25": 154,
     "lsat50": 158,
     "lsat75": 161,
@@ -2872,7 +3328,11 @@
     "grantP25": 20000,
     "grantP50": 38000,
     "grantP75": 46000,
-    "tuitionNonRes": 63994
+    "tuitionNonRes": 63994,
+    "rank2025": 117,
+    "rankDisplay2025": "#117",
+    "rankDisplay": "#120",
+    "rankTied": true
   },
   {
     "name": "Brooklyn Law School",
@@ -2881,7 +3341,7 @@
     "lat": 40.694,
     "lng": -73.99,
     "tier": "tier3",
-    "rank": 117,
+    "rank": 105,
     "lsat25": 158,
     "lsat50": 161,
     "lsat75": 163,
@@ -2897,7 +3357,11 @@
     "grantP25": 25000,
     "grantP50": 34000,
     "grantP75": 48000,
-    "tuitionNonRes": 75496
+    "tuitionNonRes": 75496,
+    "rank2025": 117,
+    "rankDisplay2025": "#117",
+    "rankDisplay": "#105",
+    "rankTied": true
   },
   {
     "name": "West Virginia University College of Law",
@@ -2906,7 +3370,7 @@
     "lat": 39.635,
     "lng": -79.9551,
     "tier": "tier3",
-    "rank": 117,
+    "rank": 124,
     "lsat25": 151,
     "lsat50": 155,
     "lsat75": 159,
@@ -2922,7 +3386,11 @@
     "grantP25": 10848,
     "grantP50": 17500,
     "grantP75": 26110,
-    "tuitionNonRes": 45666
+    "tuitionNonRes": 45666,
+    "rank2025": 117,
+    "rankDisplay2025": "#117",
+    "rankDisplay": "#124",
+    "rankTied": true
   },
   {
     "name": "University of Wyoming College of Law",
@@ -2931,7 +3399,7 @@
     "lat": 41.3114,
     "lng": -105.5911,
     "tier": "tier3",
-    "rank": 117,
+    "rank": 112,
     "lsat25": 153,
     "lsat50": 156,
     "lsat75": 160,
@@ -2947,7 +3415,11 @@
     "grantP25": 6000,
     "grantP50": 8000,
     "grantP75": 13460,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 117,
+    "rankDisplay2025": "#117",
+    "rankDisplay": "#112",
+    "rankTied": true
   },
   {
     "name": "Cleveland State University College of Law",
@@ -2956,7 +3428,7 @@
     "lat": 41.502,
     "lng": -81.6747,
     "tier": "tier3",
-    "rank": 121,
+    "rank": 136,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 158,
@@ -2972,7 +3444,11 @@
     "grantP25": 6000,
     "grantP50": 11000,
     "grantP75": 18000,
-    "tuitionNonRes": 29866
+    "tuitionNonRes": 29866,
+    "rank2025": 121,
+    "rankDisplay2025": "#121",
+    "rankDisplay": "#136",
+    "rankTied": true
   },
   {
     "name": "University of Mississippi School of Law",
@@ -2981,7 +3457,7 @@
     "lat": 34.3644,
     "lng": -89.5391,
     "tier": "tier3",
-    "rank": 121,
+    "rank": 124,
     "lsat25": 155,
     "lsat50": 157,
     "lsat75": 160,
@@ -2997,7 +3473,11 @@
     "grantP25": 5000,
     "grantP50": 7000,
     "grantP75": 12000,
-    "tuitionNonRes": 26797
+    "tuitionNonRes": 26797,
+    "rank2025": 121,
+    "rankDisplay2025": "#121",
+    "rankDisplay": "#124",
+    "rankTied": true
   },
   {
     "name": "New York Law School",
@@ -3006,7 +3486,7 @@
     "lat": 40.716,
     "lng": -74.0044,
     "tier": "tier3",
-    "rank": 121,
+    "rank": 112,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 160,
@@ -3022,7 +3502,11 @@
     "grantP25": 21300,
     "grantP50": 40000,
     "grantP75": 55000,
-    "tuitionNonRes": 83952
+    "tuitionNonRes": 83952,
+    "rank2025": 121,
+    "rankDisplay2025": "#121",
+    "rankDisplay": "#112",
+    "rankTied": true
   },
   {
     "name": "Washburn University School of Law",
@@ -3031,7 +3515,7 @@
     "lat": 39.0564,
     "lng": -95.689,
     "tier": "tier3",
-    "rank": 121,
+    "rank": 108,
     "lsat25": 151,
     "lsat50": 155,
     "lsat75": 159,
@@ -3047,7 +3531,11 @@
     "grantP25": 11915,
     "grantP50": 15000,
     "grantP75": 21500,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 121,
+    "rankDisplay2025": "#121",
+    "rankDisplay": "#108",
+    "rankTied": true
   },
   {
     "name": "Hofstra University Deane School of Law",
@@ -3056,7 +3544,7 @@
     "lat": 40.713,
     "lng": -73.5996,
     "tier": "tier3",
-    "rank": 125,
+    "rank": 117,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 160,
@@ -3072,7 +3560,11 @@
     "grantP25": 17500,
     "grantP50": 35793,
     "grantP75": 71586,
-    "tuitionNonRes": 73344
+    "tuitionNonRes": 73344,
+    "rank2025": 125,
+    "rankDisplay2025": "#125",
+    "rankDisplay": "#117",
+    "rankTied": true
   },
   {
     "name": "University of New Hampshire Franklin Pierce School of Law",
@@ -3081,7 +3573,7 @@
     "lat": 43.2081,
     "lng": -71.5376,
     "tier": "tier3",
-    "rank": 125,
+    "rank": 136,
     "lsat25": 151,
     "lsat50": 155,
     "lsat75": 159,
@@ -3097,7 +3589,11 @@
     "grantP25": 7500,
     "grantP50": 20000,
     "grantP75": 34000,
-    "tuitionNonRes": 50000
+    "tuitionNonRes": 50000,
+    "rank2025": 125,
+    "rankDisplay2025": "#125",
+    "rankDisplay": "#136",
+    "rankTied": true
   },
   {
     "name": "University of Akron School of Law",
@@ -3106,7 +3602,7 @@
     "lat": 41.0814,
     "lng": -81.519,
     "tier": "tier3",
-    "rank": 127,
+    "rank": 131,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 157,
@@ -3122,7 +3618,11 @@
     "grantP25": 3000,
     "grantP50": 9000,
     "grantP75": 18300,
-    "tuitionNonRes": 22359
+    "tuitionNonRes": 22359,
+    "rank2025": 127,
+    "rankDisplay2025": "#127",
+    "rankDisplay": "#131",
+    "rankTied": true
   },
   {
     "name": "Howard University School of Law",
@@ -3131,7 +3631,7 @@
     "lat": 38.9225,
     "lng": -77.0199,
     "tier": "tier3",
-    "rank": 127,
+    "rank": 117,
     "lsat25": 153,
     "lsat50": 156,
     "lsat75": 160,
@@ -3147,7 +3647,11 @@
     "grantP25": 10037,
     "grantP50": 23657,
     "grantP75": 32364,
-    "tuitionNonRes": 39780
+    "tuitionNonRes": 39780,
+    "rank2025": 127,
+    "rankDisplay2025": "#127",
+    "rankDisplay": "#117",
+    "rankTied": true
   },
   {
     "name": "Seattle University School of Law",
@@ -3156,7 +3660,7 @@
     "lat": 47.6059,
     "lng": -122.3184,
     "tier": "tier3",
-    "rank": 127,
+    "rank": 128,
     "lsat25": 155,
     "lsat50": 159,
     "lsat75": 162,
@@ -3172,7 +3676,11 @@
     "grantP25": 20000,
     "grantP50": 30000,
     "grantP75": 40000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 127,
+    "rankDisplay2025": "#127",
+    "rankDisplay": "#128",
+    "rankTied": true
   },
   {
     "name": "University of South Dakota School of Law",
@@ -3181,7 +3689,7 @@
     "lat": 42.7797,
     "lng": -96.9295,
     "tier": "tier3",
-    "rank": 127,
+    "rank": 122,
     "lsat25": 149,
     "lsat50": 152,
     "lsat75": 156,
@@ -3197,7 +3705,11 @@
     "grantP25": 590,
     "grantP50": 5000,
     "grantP75": 10000,
-    "tuitionNonRes": 32184
+    "tuitionNonRes": 32184,
+    "rank2025": 127,
+    "rankDisplay2025": "#127",
+    "rankDisplay": "#122",
+    "rankTied": true
   },
   {
     "name": "Suffolk University Law School",
@@ -3206,7 +3718,7 @@
     "lat": 42.3573,
     "lng": -71.0618,
     "tier": "tier3",
-    "rank": 127,
+    "rank": 128,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 159,
@@ -3222,7 +3734,11 @@
     "grantP25": 10000,
     "grantP50": 22445,
     "grantP75": 40000,
-    "tuitionNonRes": 62610
+    "tuitionNonRes": 62610,
+    "rank2025": 127,
+    "rankDisplay2025": "#127",
+    "rankDisplay": "#128",
+    "rankTied": true
   },
   {
     "name": "University of Tulsa College of Law",
@@ -3231,7 +3747,7 @@
     "lat": 36.1499,
     "lng": -95.9499,
     "tier": "tier3",
-    "rank": 127,
+    "rank": 120,
     "lsat25": 155,
     "lsat50": 157,
     "lsat75": 160,
@@ -3247,7 +3763,11 @@
     "grantP25": 5950,
     "grantP50": 12500,
     "grantP75": 26633,
-    "tuitionNonRes": 30840
+    "tuitionNonRes": 30840,
+    "rank2025": 127,
+    "rankDisplay2025": "#127",
+    "rankDisplay": "#120",
+    "rankTied": true
   },
   {
     "name": "DePaul University College of Law",
@@ -3256,7 +3776,7 @@
     "lat": 41.9253,
     "lng": -87.654,
     "tier": "tier3",
-    "rank": 133,
+    "rank": 131,
     "lsat25": 154,
     "lsat50": 158,
     "lsat75": 160,
@@ -3272,7 +3792,11 @@
     "grantP25": 20000,
     "grantP50": 34950,
     "grantP75": 35000,
-    "tuitionNonRes": 55328
+    "tuitionNonRes": 55328,
+    "rank2025": 133,
+    "rankDisplay2025": "#133",
+    "rankDisplay": "#131",
+    "rankTied": true
   },
   {
     "name": "Campbell University Norman Adrian Wiggins School of Law",
@@ -3281,7 +3805,7 @@
     "lat": 35.7796,
     "lng": -78.6382,
     "tier": "tier3",
-    "rank": 134,
+    "rank": 131,
     "lsat25": 152,
     "lsat50": 156,
     "lsat75": 159,
@@ -3297,7 +3821,11 @@
     "grantP25": 15000,
     "grantP50": 21771,
     "grantP75": 29850,
-    "tuitionNonRes": 51840
+    "tuitionNonRes": 51840,
+    "rank2025": 134,
+    "rankDisplay2025": "#134",
+    "rankDisplay": "#131",
+    "rankTied": true
   },
   {
     "name": "University of Detroit Mercy School of Law",
@@ -3306,7 +3834,7 @@
     "lat": 42.4224,
     "lng": -83.1313,
     "tier": "tier3",
-    "rank": 134,
+    "rank": 142,
     "lsat25": 154,
     "lsat50": 156,
     "lsat75": 159,
@@ -3322,7 +3850,11 @@
     "grantP25": 10504,
     "grantP50": 18636,
     "grantP75": 32614,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 134,
+    "rankDisplay2025": "#134",
+    "rankDisplay": "#142",
+    "rankTied": true
   },
   {
     "name": "Loyola University New Orleans College of Law",
@@ -3331,7 +3863,7 @@
     "lat": 29.9295,
     "lng": -90.1152,
     "tier": "tier3",
-    "rank": 134,
+    "rank": 135,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 157,
@@ -3347,7 +3879,11 @@
     "grantP25": 15000,
     "grantP50": 26000,
     "grantP75": 36000,
-    "tuitionNonRes": 55024
+    "tuitionNonRes": 55024,
+    "rank2025": 134,
+    "rankDisplay2025": "#134",
+    "rankDisplay": "#135",
+    "rankTied": false
   },
   {
     "name": "Northern Kentucky University Chase College of Law",
@@ -3356,7 +3892,7 @@
     "lat": 39.0312,
     "lng": -84.4625,
     "tier": "tier3",
-    "rank": 134,
+    "rank": 131,
     "lsat25": 152,
     "lsat50": 154,
     "lsat75": 157,
@@ -3372,7 +3908,11 @@
     "grantP25": 10000,
     "grantP50": 18000,
     "grantP75": 25000,
-    "tuitionNonRes": 38454
+    "tuitionNonRes": 38454,
+    "rank2025": 134,
+    "rankDisplay2025": "#134",
+    "rankDisplay": "#131",
+    "rankTied": true
   },
   {
     "name": "South Texas College of Law Houston",
@@ -3381,7 +3921,7 @@
     "lat": 29.7563,
     "lng": -95.3677,
     "tier": "tier3",
-    "rank": 138,
+    "rank": 128,
     "lsat25": 153,
     "lsat50": 155,
     "lsat75": 158,
@@ -3397,7 +3937,11 @@
     "grantP25": 3399,
     "grantP50": 11000,
     "grantP75": 18000,
-    "tuitionNonRes": 42960
+    "tuitionNonRes": 42960,
+    "rank2025": 138,
+    "rankDisplay2025": "#138",
+    "rankDisplay": "#128",
+    "rankTied": true
   },
   {
     "name": "UA Little Rock Bowen School of Law",
@@ -3406,7 +3950,7 @@
     "lat": 34.7465,
     "lng": -92.2896,
     "tier": "tier3",
-    "rank": 139,
+    "rank": 140,
     "lsat25": 150,
     "lsat50": 153,
     "lsat75": 158,
@@ -3422,7 +3966,11 @@
     "grantP25": 3443,
     "grantP50": 7461,
     "grantP75": 13770,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 139,
+    "rankDisplay2025": "#139",
+    "rankDisplay": "#140",
+    "rankTied": true
   },
   {
     "name": "University of Baltimore School of Law",
@@ -3431,7 +3979,7 @@
     "lat": 39.312,
     "lng": -76.6177,
     "tier": "tier3",
-    "rank": 139,
+    "rank": 136,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 158,
@@ -3447,7 +3995,11 @@
     "grantP25": 7648,
     "grantP50": 15000,
     "grantP75": 22000,
-    "tuitionNonRes": 50624
+    "tuitionNonRes": 50624,
+    "rank2025": 139,
+    "rankDisplay2025": "#139",
+    "rankDisplay": "#136",
+    "rankTied": true
   },
   {
     "name": "Gonzaga University School of Law",
@@ -3456,7 +4008,7 @@
     "lat": 47.667,
     "lng": -117.402,
     "tier": "tier3",
-    "rank": 141,
+    "rank": 144,
     "lsat25": 153,
     "lsat50": 155,
     "lsat75": 158,
@@ -3472,7 +4024,11 @@
     "grantP25": 27000,
     "grantP50": 32000,
     "grantP75": 34140,
-    "tuitionNonRes": 57962
+    "tuitionNonRes": 57962,
+    "rank2025": 141,
+    "rankDisplay2025": "#141",
+    "rankDisplay": "#144",
+    "rankTied": true
   },
   {
     "name": "University of Idaho College of Law",
@@ -3481,7 +4037,7 @@
     "lat": 46.7295,
     "lng": -117.0029,
     "tier": "tier3",
-    "rank": 141,
+    "rank": 148,
     "lsat25": 149,
     "lsat50": 153,
     "lsat75": 157,
@@ -3497,7 +4053,11 @@
     "grantP25": 5000,
     "grantP50": 8000,
     "grantP75": 11000,
-    "tuitionNonRes": 46752
+    "tuitionNonRes": 46752,
+    "rank2025": 141,
+    "rankDisplay2025": "#141",
+    "rankDisplay": "#148",
+    "rankTied": false
   },
   {
     "name": "Liberty University School of Law",
@@ -3506,7 +4066,7 @@
     "lat": 37.3546,
     "lng": -79.1797,
     "tier": "tier3",
-    "rank": 141,
+    "rank": 144,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 158,
@@ -3522,7 +4082,11 @@
     "grantP25": 16000,
     "grantP50": 24000,
     "grantP75": 32000,
-    "tuitionNonRes": 43150
+    "tuitionNonRes": 43150,
+    "rank2025": 141,
+    "rankDisplay2025": "#141",
+    "rankDisplay": "#144",
+    "rankTied": true
   },
   {
     "name": "Pace University Elisabeth Haub School of Law",
@@ -3531,7 +4095,7 @@
     "lat": 41.034,
     "lng": -73.7629,
     "tier": "tier3",
-    "rank": 141,
+    "rank": 142,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 157,
@@ -3547,7 +4111,11 @@
     "grantP25": 20000,
     "grantP50": 29000,
     "grantP75": 38500,
-    "tuitionNonRes": 56648
+    "tuitionNonRes": 56648,
+    "rank2025": 141,
+    "rankDisplay2025": "#141",
+    "rankDisplay": "#142",
+    "rankTied": true
   },
   {
     "name": "Quinnipiac University School of Law",
@@ -3556,7 +4124,7 @@
     "lat": 41.3965,
     "lng": -72.8618,
     "tier": "tier3",
-    "rank": 141,
+    "rank": 136,
     "lsat25": 153,
     "lsat50": 155,
     "lsat75": 158,
@@ -3572,7 +4140,11 @@
     "grantP25": 14000,
     "grantP50": 25000,
     "grantP75": 35000,
-    "tuitionNonRes": 56610
+    "tuitionNonRes": 56610,
+    "rank2025": 141,
+    "rankDisplay2025": "#141",
+    "rankDisplay": "#136",
+    "rankTied": true
   },
   {
     "name": "University of Louisville Brandeis School of Law",
@@ -3581,7 +4153,7 @@
     "lat": 38.2527,
     "lng": -85.7585,
     "tier": "tier3",
-    "rank": 146,
+    "rank": 124,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 161,
@@ -3597,7 +4169,11 @@
     "grantP25": 5000,
     "grantP50": 12000,
     "grantP75": 20000,
-    "tuitionNonRes": 32000
+    "tuitionNonRes": 32000,
+    "rank2025": 146,
+    "rankDisplay2025": "#146",
+    "rankDisplay": "#124",
+    "rankTied": true
   },
   {
     "name": "University of Memphis Humphreys School of Law",
@@ -3606,7 +4182,7 @@
     "lat": 35.1495,
     "lng": -90.049,
     "tier": "tier3",
-    "rank": 146,
+    "rank": 140,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 159,
@@ -3622,7 +4198,11 @@
     "grantP25": 5000,
     "grantP50": 11000,
     "grantP75": 20000,
-    "tuitionNonRes": 24354
+    "tuitionNonRes": 24354,
+    "rank2025": 146,
+    "rankDisplay2025": "#146",
+    "rankDisplay": "#140",
+    "rankTied": true
   },
   {
     "name": "Creighton University School of Law",
@@ -3631,7 +4211,7 @@
     "lat": 41.2565,
     "lng": -95.9345,
     "tier": "tier3",
-    "rank": 148,
+    "rank": 144,
     "lsat25": 150,
     "lsat50": 153,
     "lsat75": 156,
@@ -3647,7 +4227,11 @@
     "grantP25": 15200,
     "grantP50": 25600,
     "grantP75": 37458,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 148,
+    "rankDisplay2025": "#148",
+    "rankDisplay": "#144",
+    "rankTied": true
   },
   {
     "name": "St. Mary's University School of Law",
@@ -3656,7 +4240,7 @@
     "lat": 29.4413,
     "lng": -98.546,
     "tier": "tier3",
-    "rank": 148,
+    "rank": 150,
     "lsat25": 151,
     "lsat50": 153,
     "lsat75": 156,
@@ -3672,7 +4256,11 @@
     "grantP25": 8500,
     "grantP50": 12500,
     "grantP75": 17605,
-    "tuitionNonRes": 44910
+    "tuitionNonRes": 44910,
+    "rank2025": 148,
+    "rankDisplay2025": "#148",
+    "rankDisplay": "#150",
+    "rankTied": true
   },
   {
     "name": "Northern Illinois University College of Law",
@@ -3681,7 +4269,7 @@
     "lat": 41.9295,
     "lng": -88.749,
     "tier": "tier3",
-    "rank": 150,
+    "rank": 161,
     "lsat25": 148,
     "lsat50": 150,
     "lsat75": 154,
@@ -3697,7 +4285,11 @@
     "grantP25": 4137,
     "grantP50": 8274,
     "grantP75": 12411,
-    "tuitionNonRes": 23667
+    "tuitionNonRes": 23667,
+    "rank2025": 150,
+    "rankDisplay2025": "#150",
+    "rankDisplay": "#161",
+    "rankTied": true
   },
   {
     "name": "University of Toledo College of Law",
@@ -3706,7 +4298,7 @@
     "lat": 41.6639,
     "lng": -83.5552,
     "tier": "tier3",
-    "rank": 150,
+    "rank": 149,
     "lsat25": 150,
     "lsat50": 153,
     "lsat75": 156,
@@ -3722,7 +4314,11 @@
     "grantP25": 8300,
     "grantP50": 20000,
     "grantP75": 25676,
-    "tuitionNonRes": 26446
+    "tuitionNonRes": 26446,
+    "rank2025": 150,
+    "rankDisplay2025": "#150",
+    "rankDisplay": "#149",
+    "rankTied": false
   },
   {
     "name": "Willamette University College of Law",
@@ -3731,7 +4327,7 @@
     "lat": 44.9429,
     "lng": -123.0351,
     "tier": "tier3",
-    "rank": 150,
+    "rank": 168,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 157,
@@ -3747,7 +4343,11 @@
     "grantP25": 10000,
     "grantP50": 20000,
     "grantP75": 30000,
-    "tuitionNonRes": 56600
+    "tuitionNonRes": 56600,
+    "rank2025": 150,
+    "rankDisplay2025": "#150",
+    "rankDisplay": "#168",
+    "rankTied": true
   },
   {
     "name": "Ave Maria School of Law",
@@ -3756,7 +4356,7 @@
     "lat": 26.142,
     "lng": -81.7948,
     "tier": "tier3",
-    "rank": 153,
+    "rank": 164,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 158,
@@ -3772,7 +4372,11 @@
     "grantP25": 7365,
     "grantP50": 30000,
     "grantP75": 47400,
-    "tuitionNonRes": 49500
+    "tuitionNonRes": 49500,
+    "rank2025": 153,
+    "rankDisplay2025": "#153",
+    "rankDisplay": "#164",
+    "rankTied": true
   },
   {
     "name": "Mitchell Hamline School of Law",
@@ -3781,7 +4385,7 @@
     "lat": 44.944,
     "lng": -93.0937,
     "tier": "tier3",
-    "rank": 154,
+    "rank": 152,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 158,
@@ -3797,7 +4401,11 @@
     "grantP25": 21372,
     "grantP50": 34730,
     "grantP75": 42744,
-    "tuitionNonRes": 55300
+    "tuitionNonRes": 55300,
+    "rank2025": 154,
+    "rankDisplay2025": "#154",
+    "rankDisplay": "#152",
+    "rankTied": true
   },
   {
     "name": "Southwestern Law School",
@@ -3806,7 +4414,7 @@
     "lat": 34.0614,
     "lng": -118.3571,
     "tier": "tier3",
-    "rank": 154,
+    "rank": 161,
     "lsat25": 154,
     "lsat50": 157,
     "lsat75": 160,
@@ -3822,7 +4430,11 @@
     "grantP25": 12500,
     "grantP50": 29166,
     "grantP75": 42372,
-    "tuitionNonRes": 63160
+    "tuitionNonRes": 63160,
+    "rank2025": 154,
+    "rankDisplay2025": "#154",
+    "rankDisplay": "#161",
+    "rankTied": true
   },
   {
     "name": "CUNY School of Law",
@@ -3831,7 +4443,7 @@
     "lat": 40.7448,
     "lng": -73.9463,
     "tier": "tier3",
-    "rank": 156,
+    "rank": 171,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 161,
@@ -3847,7 +4459,11 @@
     "grantP25": 8000,
     "grantP50": 8000,
     "grantP75": 8000,
-    "tuitionNonRes": 25640
+    "tuitionNonRes": 25640,
+    "rank2025": 156,
+    "rankDisplay2025": "#156",
+    "rankDisplay": "#171",
+    "rankTied": true
   },
   {
     "name": "Santa Clara University School of Law",
@@ -3856,7 +4472,7 @@
     "lat": 37.3496,
     "lng": -121.939,
     "tier": "tier3",
-    "rank": 156,
+    "rank": 150,
     "lsat25": 157,
     "lsat50": 159,
     "lsat75": 162,
@@ -3872,7 +4488,11 @@
     "grantP25": 30000,
     "grantP50": 40000,
     "grantP75": 57262,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 156,
+    "rankDisplay2025": "#156",
+    "rankDisplay": "#150",
+    "rankTied": true
   },
   {
     "name": "Elon University School of Law",
@@ -3881,7 +4501,7 @@
     "lat": 36.0726,
     "lng": -79.792,
     "tier": "tier3",
-    "rank": 158,
+    "rank": 144,
     "lsat25": 151,
     "lsat50": 154,
     "lsat75": 158,
@@ -3897,7 +4517,11 @@
     "grantP25": 11429,
     "grantP50": 23571,
     "grantP75": 32543,
-    "tuitionNonRes": 45333
+    "tuitionNonRes": 45333,
+    "rank2025": 158,
+    "rankDisplay2025": "#158",
+    "rankDisplay": "#144",
+    "rankTied": true
   },
   {
     "name": "Mississippi College School of Law",
@@ -3906,7 +4530,7 @@
     "lat": 32.2988,
     "lng": -90.1848,
     "tier": "tier3",
-    "rank": 158,
+    "rank": 161,
     "lsat25": 148,
     "lsat50": 152,
     "lsat75": 155,
@@ -3922,7 +4546,11 @@
     "grantP25": 14000,
     "grantP50": 22000,
     "grantP75": 32000,
-    "tuitionNonRes": 37980
+    "tuitionNonRes": 37980,
+    "rank2025": 158,
+    "rankDisplay2025": "#158",
+    "rankDisplay": "#161",
+    "rankTied": true
   },
   {
     "name": "Oklahoma City University School of Law",
@@ -3931,7 +4559,7 @@
     "lat": 35.4676,
     "lng": -97.5164,
     "tier": "tier3",
-    "rank": 158,
+    "rank": 156,
     "lsat25": 149,
     "lsat50": 151,
     "lsat75": 155,
@@ -3947,7 +4575,11 @@
     "grantP25": 10000,
     "grantP50": 14000,
     "grantP75": 20000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 158,
+    "rankDisplay2025": "#158",
+    "rankDisplay": "#156",
+    "rankTied": true
   },
   {
     "name": "University of North Dakota School of Law",
@@ -3956,7 +4588,7 @@
     "lat": 47.9212,
     "lng": -97.0775,
     "tier": "tier3",
-    "rank": 161,
+    "rank": 156,
     "lsat25": 148,
     "lsat50": 151,
     "lsat75": 155,
@@ -3972,7 +4604,11 @@
     "grantP25": 1775,
     "grantP50": 3875,
     "grantP75": 10500,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 161,
+    "rankDisplay2025": "#161",
+    "rankDisplay": "#156",
+    "rankTied": true
   },
   {
     "name": "University of the Pacific McGeorge School of Law",
@@ -3981,7 +4617,7 @@
     "lat": 38.5629,
     "lng": -121.4271,
     "tier": "tier3",
-    "rank": 163,
+    "rank": 152,
     "lsat25": 153,
     "lsat50": 156,
     "lsat75": 160,
@@ -3997,7 +4633,11 @@
     "grantP25": 3388,
     "grantP50": 30426,
     "grantP75": 60852,
-    "tuitionNonRes": 62678
+    "tuitionNonRes": 62678,
+    "rank2025": 163,
+    "rankDisplay2025": "#163",
+    "rankDisplay": "#152",
+    "rankTied": true
   },
   {
     "name": "Vermont Law School",
@@ -4006,7 +4646,7 @@
     "lat": 43.8259,
     "lng": -72.5266,
     "tier": "tier3",
-    "rank": 163,
+    "rank": 154,
     "lsat25": 148,
     "lsat50": 152,
     "lsat75": 157,
@@ -4022,7 +4662,11 @@
     "grantP25": 18000,
     "grantP50": 28000,
     "grantP75": 41250,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 163,
+    "rankDisplay2025": "#163",
+    "rankDisplay": "#154",
+    "rankTied": true
   },
   {
     "name": "UC College of the Law San Francisco",
@@ -4031,7 +4675,7 @@
     "lat": 37.7813,
     "lng": -122.4131,
     "tier": "tier3",
-    "rank": 166,
+    "rank": 85,
     "lsat25": 158,
     "lsat50": 161,
     "lsat75": 163,
@@ -4047,7 +4691,11 @@
     "grantP25": 10000,
     "grantP50": 20000,
     "grantP75": 25000,
-    "tuitionNonRes": 61773
+    "tuitionNonRes": 61773,
+    "rank2025": 166,
+    "rankDisplay2025": "#166",
+    "rankDisplay": "#85",
+    "rankTied": true
   },
   {
     "name": "University of San Francisco School of Law",
@@ -4056,7 +4704,7 @@
     "lat": 37.7763,
     "lng": -122.4517,
     "tier": "tier3",
-    "rank": 166,
+    "rank": 156,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 157,
@@ -4072,7 +4720,11 @@
     "grantP25": 24343,
     "grantP50": 33718,
     "grantP75": 43928,
-    "tuitionNonRes": 59800
+    "tuitionNonRes": 59800,
+    "rank2025": 166,
+    "rankDisplay2025": "#166",
+    "rankDisplay": "#156",
+    "rankTied": true
   },
   {
     "name": "University of Illinois Chicago School of Law",
@@ -4081,7 +4733,7 @@
     "lat": 41.8719,
     "lng": -87.6501,
     "tier": "tier3",
-    "rank": 169,
+    "rank": 167,
     "lsat25": 150,
     "lsat50": 153,
     "lsat75": 156,
@@ -4097,7 +4749,11 @@
     "grantP25": 9000,
     "grantP50": 23250,
     "grantP75": 33750,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 169,
+    "rankDisplay2025": "#169",
+    "rankDisplay": "#167",
+    "rankTied": false
   },
   {
     "name": "Roger Williams University School of Law",
@@ -4106,7 +4762,7 @@
     "lat": 41.6783,
     "lng": -71.2697,
     "tier": "tier3",
-    "rank": 169,
+    "rank": 171,
     "lsat25": 147,
     "lsat50": 150,
     "lsat75": 154,
@@ -4122,7 +4778,11 @@
     "grantP25": 18562,
     "grantP50": 28000,
     "grantP75": 34804,
-    "tuitionNonRes": 47400
+    "tuitionNonRes": 47400,
+    "rank2025": 169,
+    "rankDisplay2025": "#169",
+    "rankDisplay": "#171",
+    "rankTied": true
   },
   {
     "name": "Touro University Jacob D. Fuchsberg Law Center",
@@ -4131,7 +4791,7 @@
     "lat": 40.7889,
     "lng": -73.1927,
     "tier": "tier3",
-    "rank": 169,
+    "rank": 164,
     "lsat25": 151,
     "lsat50": 153,
     "lsat75": 156,
@@ -4147,7 +4807,11 @@
     "grantP25": 10000,
     "grantP50": 22000,
     "grantP75": 35000,
-    "tuitionNonRes": 61000
+    "tuitionNonRes": 61000,
+    "rank2025": 169,
+    "rankDisplay2025": "#169",
+    "rankDisplay": "#164",
+    "rankTied": true
   },
   {
     "name": "Widener University Delaware Law School",
@@ -4156,7 +4820,7 @@
     "lat": 39.7391,
     "lng": -75.5398,
     "tier": "tier3",
-    "rank": 169,
+    "rank": 154,
     "lsat25": 149,
     "lsat50": 152,
     "lsat75": 154,
@@ -4172,7 +4836,11 @@
     "grantP25": 25000,
     "grantP50": 32000,
     "grantP75": 35000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 169,
+    "rankDisplay2025": "#169",
+    "rankDisplay": "#154",
+    "rankTied": true
   },
   {
     "name": "Capital University Law School",
@@ -4181,7 +4849,7 @@
     "lat": 39.9612,
     "lng": -82.9988,
     "tier": "tier3",
-    "rank": 174,
+    "rank": 175,
     "lsat25": 148,
     "lsat50": 151,
     "lsat75": 157,
@@ -4197,7 +4865,11 @@
     "grantP25": 12000,
     "grantP50": 21000,
     "grantP75": 32000,
-    "tuitionNonRes": 45066
+    "tuitionNonRes": 45066,
+    "rank2025": 174,
+    "rankDisplay2025": "#174",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "University of Puerto Rico School of Law",
@@ -4222,7 +4894,11 @@
     "grantP25": 1000,
     "grantP50": 1000,
     "grantP75": 1000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 175,
+    "rankDisplay2025": "#175",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Southern Illinois University School of Law",
@@ -4247,7 +4923,11 @@
     "grantP25": 6000,
     "grantP50": 9500,
     "grantP75": 16540,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 175,
+    "rankDisplay2025": "#175",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Appalachian School of Law",
@@ -4256,7 +4936,7 @@
     "lat": 37.2726,
     "lng": -82.0974,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 145,
     "lsat50": 146,
     "lsat75": 151,
@@ -4272,7 +4952,11 @@
     "grantP25": 5500,
     "grantP50": 10250,
     "grantP75": 24600,
-    "tuitionNonRes": 41000
+    "tuitionNonRes": 41000,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Barry University Dwayne O. Andreas School of Law",
@@ -4281,7 +4965,7 @@
     "lat": 28.5026,
     "lng": -81.3679,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 148,
     "lsat50": 150,
     "lsat75": 152,
@@ -4297,7 +4981,11 @@
     "grantP25": 6500,
     "grantP50": 16000,
     "grantP75": 22000,
-    "tuitionNonRes": 42000
+    "tuitionNonRes": 42000,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "California Western School of Law",
@@ -4306,7 +4994,7 @@
     "lat": 32.726,
     "lng": -117.1623,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 158,
@@ -4322,7 +5010,11 @@
     "grantP25": 18720,
     "grantP50": 37440,
     "grantP75": 53040,
-    "tuitionNonRes": 64720
+    "tuitionNonRes": 64720,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Charleston School of Law",
@@ -4331,7 +5023,7 @@
     "lat": 32.7765,
     "lng": -79.9311,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 171,
     "lsat25": 152,
     "lsat50": 154,
     "lsat75": 157,
@@ -4347,7 +5039,11 @@
     "grantP25": 13000,
     "grantP50": 20000,
     "grantP75": 28500,
-    "tuitionNonRes": 48600
+    "tuitionNonRes": 48600,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "#171",
+    "rankTied": true
   },
   {
     "name": "University of the District of Columbia David A. Clarke School of Law",
@@ -4356,7 +5052,7 @@
     "lat": 38.9517,
     "lng": -77.0249,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 148,
     "lsat50": 151,
     "lsat75": 153,
@@ -4372,7 +5068,11 @@
     "grantP25": 5458,
     "grantP50": 8292,
     "grantP75": 12436,
-    "tuitionNonRes": 24874
+    "tuitionNonRes": 24874,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Faulkner University Thomas Goode Jones School of Law",
@@ -4381,7 +5081,7 @@
     "lat": 32.3792,
     "lng": -86.3077,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 164,
     "lsat25": 148,
     "lsat50": 150,
     "lsat75": 154,
@@ -4397,7 +5097,11 @@
     "grantP25": 3990,
     "grantP50": 15960,
     "grantP75": 25935,
-    "tuitionNonRes": 39900
+    "tuitionNonRes": 39900,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "#164",
+    "rankTied": true
   },
   {
     "name": "Florida A&M University College of Law",
@@ -4406,7 +5110,7 @@
     "lat": 28.5383,
     "lng": -81.3792,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 149,
     "lsat50": 152,
     "lsat75": 155,
@@ -4422,7 +5126,11 @@
     "grantP25": 5000,
     "grantP50": 7500,
     "grantP75": 10000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "North Carolina Central University School of Law",
@@ -4431,7 +5139,7 @@
     "lat": 35.9791,
     "lng": -78.8973,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 149,
     "lsat50": 151,
     "lsat75": 154,
@@ -4447,7 +5155,11 @@
     "grantP25": 8080,
     "grantP50": 12982,
     "grantP75": 20907,
-    "tuitionNonRes": 36116
+    "tuitionNonRes": 36116,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Nova Southeastern University Shepard Broad College of Law",
@@ -4456,7 +5168,7 @@
     "lat": 26.0677,
     "lng": -80.2395,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 152,
     "lsat50": 155,
     "lsat75": 158,
@@ -4472,7 +5184,11 @@
     "grantP25": 10750,
     "grantP50": 15000,
     "grantP75": 21310,
-    "tuitionNonRes": 49350
+    "tuitionNonRes": 49350,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Ohio Northern University Pettit College of Law",
@@ -4481,7 +5197,7 @@
     "lat": 40.7701,
     "lng": -83.8221,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 146,
     "lsat50": 149,
     "lsat75": 151,
@@ -4497,7 +5213,11 @@
     "grantP25": 9125,
     "grantP50": 17250,
     "grantP75": 25700,
-    "tuitionNonRes": 33900
+    "tuitionNonRes": 33900,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Southern University Law Center",
@@ -4506,7 +5226,7 @@
     "lat": 30.4275,
     "lng": -91.1906,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 145,
     "lsat50": 147,
     "lsat75": 150,
@@ -4522,7 +5242,11 @@
     "grantP25": 8000,
     "grantP50": 11000,
     "grantP75": 13000,
-    "tuitionNonRes": 11338
+    "tuitionNonRes": 11338,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "St. Thomas University School of Law",
@@ -4531,7 +5255,7 @@
     "lat": 25.9416,
     "lng": -80.2432,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 168,
     "lsat25": 149,
     "lsat50": 152,
     "lsat75": 156,
@@ -4547,7 +5271,11 @@
     "grantP25": 12500,
     "grantP50": 25320,
     "grantP75": 34750,
-    "tuitionNonRes": 44730
+    "tuitionNonRes": 44730,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "#168",
+    "rankTied": true
   },
   {
     "name": "Texas Southern University Thurgood Marshall School of Law",
@@ -4556,7 +5284,7 @@
     "lat": 29.7236,
     "lng": -95.3577,
     "tier": "tier3",
-    "rank": 180,
+    "rank": 175,
     "lsat25": 148,
     "lsat50": 150,
     "lsat75": 152,
@@ -4572,7 +5300,11 @@
     "grantP25": 3500,
     "grantP50": 7363,
     "grantP75": 10519,
-    "tuitionNonRes": 26331
+    "tuitionNonRes": 26331,
+    "rank2025": 180,
+    "rankDisplay2025": "#180",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Jacksonville University School of Law",
@@ -4581,7 +5313,7 @@
     "lat": 30.3322,
     "lng": -81.4557,
     "tier": "tier3",
-    "rank": null,
+    "rank": 9999,
     "lsat25": 154,
     "lsat50": 156,
     "lsat75": 159,
@@ -4597,7 +5329,11 @@
     "grantP25": 15000,
     "grantP50": 18000,
     "grantP75": 22000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "Unranked",
+    "rankTied": false
   },
   {
     "name": "Lincoln Memorial University Duncan School of Law",
@@ -4606,7 +5342,7 @@
     "lat": 35.9728,
     "lng": -83.9194,
     "tier": "tier3",
-    "rank": 169,
+    "rank": 175,
     "lsat25": 150,
     "lsat50": 153,
     "lsat75": 156,
@@ -4622,7 +5358,11 @@
     "grantP25": 15988,
     "grantP50": 28000,
     "grantP75": 32736,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": 169,
+    "rankDisplay2025": "#169",
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Thomas M. Cooley Law School",
@@ -4631,7 +5371,7 @@
     "lat": 42.7325,
     "lng": -84.5555,
     "tier": "tier3",
-    "rank": null,
+    "rank": 175,
     "lsat25": 145,
     "lsat50": 147,
     "lsat75": 151,
@@ -4647,7 +5387,11 @@
     "grantP25": 9279,
     "grantP50": 13746,
     "grantP75": 23463,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Western New England University School of Law",
@@ -4656,7 +5400,7 @@
     "lat": 42.1015,
     "lng": -72.5762,
     "tier": "tier3",
-    "rank": null,
+    "rank": 159,
     "lsat25": 149,
     "lsat50": 153,
     "lsat75": 156,
@@ -4672,7 +5416,11 @@
     "grantP25": 23000,
     "grantP50": 30000,
     "grantP75": 35000,
-    "tuitionNonRes": 50320
+    "tuitionNonRes": 50320,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "#159",
+    "rankTied": true
   },
   {
     "name": "University of North Texas Dallas College of Law",
@@ -4681,7 +5429,7 @@
     "lat": 32.7767,
     "lng": -96.797,
     "tier": "tier3",
-    "rank": null,
+    "rank": 159,
     "lsat25": 151,
     "lsat50": 153,
     "lsat75": 156,
@@ -4697,7 +5445,11 @@
     "grantP25": 2000,
     "grantP50": 5000,
     "grantP75": 7000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "#159",
+    "rankTied": true
   },
   {
     "name": "Widener University Commonwealth Law School",
@@ -4706,7 +5458,7 @@
     "lat": 40.2732,
     "lng": -76.8867,
     "tier": "tier3",
-    "rank": null,
+    "rank": 175,
     "lsat25": 147,
     "lsat50": 150,
     "lsat75": 153,
@@ -4722,7 +5474,11 @@
     "grantP25": 15625,
     "grantP50": 25000,
     "grantP75": 34000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Pontifical Catholic University of Puerto Rico School of Law",
@@ -4731,7 +5487,7 @@
     "lat": 18.0111,
     "lng": -66.6141,
     "tier": "tier3",
-    "rank": null,
+    "rank": 175,
     "lsat25": 136,
     "lsat50": 139,
     "lsat75": 143,
@@ -4747,7 +5503,11 @@
     "grantP25": 1000,
     "grantP50": 1593,
     "grantP75": 4372,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "University of Massachusetts School of Law",
@@ -4756,7 +5516,7 @@
     "lat": 41.6015,
     "lng": -70.9798,
     "tier": "tier3",
-    "rank": null,
+    "rank": 171,
     "lsat25": 149,
     "lsat50": 152,
     "lsat75": 155,
@@ -4772,7 +5532,11 @@
     "grantP25": 8000,
     "grantP50": 15000,
     "grantP75": 20787,
-    "tuitionNonRes": 41565
+    "tuitionNonRes": 41565,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "#171",
+    "rankTied": true
   },
   {
     "name": "Inter American University of Puerto Rico School of Law",
@@ -4781,7 +5545,7 @@
     "lat": 18.4013,
     "lng": -66.0527,
     "tier": "tier3",
-    "rank": null,
+    "rank": 175,
     "lsat25": 140,
     "lsat50": 144,
     "lsat75": 148,
@@ -4797,7 +5561,11 @@
     "grantP25": 1189,
     "grantP50": 2379,
     "grantP75": 3568,
-    "tuitionNonRes": 16585
+    "tuitionNonRes": 16585,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "New England Law Boston",
@@ -4806,7 +5574,7 @@
     "lat": 42.3516,
     "lng": -71.0641,
     "tier": "tier3",
-    "rank": null,
+    "rank": 168,
     "lsat25": 149,
     "lsat50": 153,
     "lsat75": 157,
@@ -4822,7 +5590,11 @@
     "grantP25": 19500,
     "grantP50": 40000,
     "grantP75": 59900,
-    "tuitionNonRes": 62896
+    "tuitionNonRes": 62896,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "#168",
+    "rankTied": true
   },
   {
     "name": "Wilmington University School of Law",
@@ -4831,7 +5603,7 @@
     "lat": 39.7447,
     "lng": -75.5484,
     "tier": "tier3",
-    "rank": null,
+    "rank": 9999,
     "lsat25": 146,
     "lsat50": 149,
     "lsat75": 152,
@@ -4847,7 +5619,11 @@
     "grantP25": 3000,
     "grantP50": 6000,
     "grantP75": 24302,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "Unranked",
+    "rankTied": false
   },
   {
     "name": "Atlanta's John Marshall Law School",
@@ -4856,7 +5632,7 @@
     "lat": 33.7899,
     "lng": -84.3913,
     "tier": "tier3",
-    "rank": null,
+    "rank": 175,
     "lsat25": 150,
     "lsat50": 152,
     "lsat75": 155,
@@ -4872,7 +5648,11 @@
     "grantP25": 10000,
     "grantP50": 18000,
     "grantP75": 24000,
-    "tuitionNonRes": 52536
+    "tuitionNonRes": 52536,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "175–194",
+    "rankTied": false
   },
   {
     "name": "Kenneth F. Kahn School of Law at High Point University",
@@ -4897,7 +5677,11 @@
     "grantP25": 0,
     "grantP50": 10000,
     "grantP75": 23000,
-    "tuitionNonRes": null
+    "tuitionNonRes": null,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankTied": false,
+    "rankDisplay": "Unranked"
   },
   {
     "name": "Western State College of Law at Westcliff University",
@@ -4906,7 +5690,7 @@
     "lat": 33.6846,
     "lng": -117.8265,
     "tier": "tier3",
-    "rank": null,
+    "rank": 175,
     "lsat25": 150,
     "lsat50": 152,
     "lsat75": 156,
@@ -4922,6 +5706,10 @@
     "grantP25": 15000,
     "grantP50": 22000,
     "grantP75": 27000,
-    "tuitionNonRes": 54840
+    "tuitionNonRes": 54840,
+    "rank2025": null,
+    "rankDisplay2025": null,
+    "rankDisplay": "175–194",
+    "rankTied": false
   }
 ]

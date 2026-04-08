@@ -1,0 +1,1775 @@
+[
+  {
+    "rank": "1",
+    "is_tied": null,
+    "name": "Stanford University",
+    "city": "Stanford",
+    "state": "CA",
+    "usn_id": "03014",
+    "fice_code": "1305"
+  },
+  {
+    "rank": "2",
+    "is_tied": true,
+    "name": "University of Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "usn_id": "03052",
+    "fice_code": "1774"
+  },
+  {
+    "rank": "2",
+    "is_tied": true,
+    "name": "Yale University",
+    "city": "New Haven",
+    "state": "CT",
+    "usn_id": "03027",
+    "fice_code": "1426"
+  },
+  {
+    "rank": "4",
+    "is_tied": true,
+    "name": "University of Pennsylvania (Carey)",
+    "city": null,
+    "state": "PA",
+    "usn_id": "03140",
+    "fice_code": "3378"
+  },
+  {
+    "rank": "4",
+    "is_tied": true,
+    "name": "University of Virginia",
+    "city": "Charlottesville",
+    "state": "VA",
+    "usn_id": "03162",
+    "fice_code": "6968"
+  },
+  {
+    "rank": "6",
+    "is_tied": null,
+    "name": "Harvard University",
+    "city": "Cambridge",
+    "state": "MA",
+    "usn_id": "03074",
+    "fice_code": "2155"
+  },
+  {
+    "rank": "7",
+    "is_tied": true,
+    "name": "Duke University",
+    "city": "Durham",
+    "state": "NC",
+    "usn_id": "03117",
+    "fice_code": "2920"
+  },
+  {
+    "rank": "7",
+    "is_tied": true,
+    "name": "New York University",
+    "city": "New York",
+    "state": "NY",
+    "usn_id": "03110",
+    "fice_code": "2785"
+  },
+  {
+    "rank": "9",
+    "is_tied": true,
+    "name": "Columbia University",
+    "city": "New York",
+    "state": "NY",
+    "usn_id": "03104",
+    "fice_code": "2707"
+  },
+  {
+    "rank": "9",
+    "is_tied": true,
+    "name": "Northwestern University (Pritzker)",
+    "city": "Chicago",
+    "state": "IL",
+    "usn_id": "03050",
+    "fice_code": "1739"
+  },
+  {
+    "rank": "9",
+    "is_tied": true,
+    "name": "University of Michigan--Ann Arbor",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "usn_id": "03082",
+    "fice_code": "9092"
+  },
+  {
+    "rank": "12",
+    "is_tied": null,
+    "name": "Vanderbilt University",
+    "city": "Nashville",
+    "state": "TN",
+    "usn_id": "03147",
+    "fice_code": "3535"
+  },
+  {
+    "rank": "13",
+    "is_tied": true,
+    "name": "Cornell University",
+    "city": "Ithaca",
+    "state": "NY",
+    "usn_id": "03105",
+    "fice_code": "2711"
+  },
+  {
+    "rank": "13",
+    "is_tied": true,
+    "name": "University of California--Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA",
+    "usn_id": "03018",
+    "fice_code": "1315"
+  },
+  {
+    "rank": "13",
+    "is_tied": true,
+    "name": "Washington University in St. Louis",
+    "city": "St. Louis",
+    "state": "MO",
+    "usn_id": "03092",
+    "fice_code": "2520"
+  },
+  {
+    "rank": "16",
+    "is_tied": true,
+    "name": "University of California, Berkeley",
+    "city": "Berkeley",
+    "state": "CA",
+    "usn_id": "03016",
+    "fice_code": "1312"
+  },
+  {
+    "rank": "16",
+    "is_tied": true,
+    "name": "University of Texas--Austin",
+    "city": "Austin",
+    "state": "TX",
+    "usn_id": "03155",
+    "fice_code": "3658"
+  },
+  {
+    "rank": "18",
+    "is_tied": true,
+    "name": "Georgetown University",
+    "city": "Washington",
+    "state": "DC",
+    "usn_id": "03032",
+    "fice_code": "1445"
+  },
+  {
+    "rank": "18",
+    "is_tied": true,
+    "name": "University of North Carolina--Chapel Hill",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "usn_id": "03119",
+    "fice_code": "2974"
+  },
+  {
+    "rank": "20",
+    "is_tied": true,
+    "name": "Boston College",
+    "city": "Newton",
+    "state": "MA",
+    "usn_id": "03072",
+    "fice_code": "2128"
+  },
+  {
+    "rank": "20",
+    "is_tied": true,
+    "name": "University of Notre Dame",
+    "city": "Notre Dame",
+    "state": "IN",
+    "usn_id": "03056",
+    "fice_code": "1840"
+  },
+  {
+    "rank": "22",
+    "is_tied": true,
+    "name": "Texas A&M University",
+    "city": "Fort Worth",
+    "state": "TX",
+    "usn_id": "03179",
+    "fice_code": "10366"
+  },
+  {
+    "rank": "22",
+    "is_tied": true,
+    "name": "University of Minnesota",
+    "city": "Minneapolis",
+    "state": "MN",
+    "usn_id": "03085",
+    "fice_code": "3969"
+  },
+  {
+    "rank": "24",
+    "is_tied": true,
+    "name": "Boston University",
+    "city": "Boston",
+    "state": "MA",
+    "usn_id": "03073",
+    "fice_code": "2130"
+  },
+  {
+    "rank": "24",
+    "is_tied": true,
+    "name": "Brigham Young University (Clark)",
+    "city": "Provo",
+    "state": "UT",
+    "usn_id": "03156",
+    "fice_code": "3670"
+  },
+  {
+    "rank": "26",
+    "is_tied": true,
+    "name": "George Washington University",
+    "city": "Washington",
+    "state": "DC",
+    "usn_id": "03031",
+    "fice_code": "1444"
+  },
+  {
+    "rank": "26",
+    "is_tied": true,
+    "name": "University of Georgia",
+    "city": "Athens",
+    "state": "GA",
+    "usn_id": "03042",
+    "fice_code": "1598"
+  },
+  {
+    "rank": "26",
+    "is_tied": true,
+    "name": "University of Southern California (Gould)",
+    "city": "Los Angeles",
+    "state": "CA",
+    "usn_id": "03021",
+    "fice_code": "1328"
+  },
+  {
+    "rank": "26",
+    "is_tied": true,
+    "name": "University of Wisconsin--Madison",
+    "city": "Madison",
+    "state": "WI",
+    "usn_id": "03170",
+    "fice_code": "3895"
+  },
+  {
+    "rank": "30",
+    "is_tied": true,
+    "name": "Ohio State University (Moritz)",
+    "city": "Columbus",
+    "state": "OH",
+    "usn_id": "03126",
+    "fice_code": "6883"
+  },
+  {
+    "rank": "30",
+    "is_tied": true,
+    "name": "Wake Forest University",
+    "city": "Winston-Salem",
+    "state": "NC",
+    "usn_id": "03120",
+    "fice_code": "2978"
+  },
+  {
+    "rank": "32",
+    "is_tied": true,
+    "name": "George Mason University (Scalia)",
+    "city": "Arlington",
+    "state": "VA",
+    "usn_id": "03159",
+    "fice_code": "3749"
+  },
+  {
+    "rank": "32",
+    "is_tied": true,
+    "name": "University of Iowa",
+    "city": "Iowa City",
+    "state": "IA",
+    "usn_id": "03059",
+    "fice_code": "1892"
+  },
+  {
+    "rank": "34",
+    "is_tied": true,
+    "name": "Baylor University",
+    "city": "Waco",
+    "state": "TX",
+    "usn_id": "03148",
+    "fice_code": "6967"
+  },
+  {
+    "rank": "34",
+    "is_tied": true,
+    "name": "Florida State University",
+    "city": "Tallahassee",
+    "state": "FL",
+    "usn_id": "03034",
+    "fice_code": "1489"
+  },
+  {
+    "rank": "34",
+    "is_tied": true,
+    "name": "University of California--Irvine",
+    "city": "Irvine",
+    "state": "CA",
+    "usn_id": "03201",
+    "fice_code": "1314"
+  },
+  {
+    "rank": "34",
+    "is_tied": true,
+    "name": "University of Florida (Levin)",
+    "city": "Gainesville",
+    "state": "FL",
+    "usn_id": "03037",
+    "fice_code": "1535"
+  },
+  {
+    "rank": "34",
+    "is_tied": true,
+    "name": "Washington and Lee University",
+    "city": "Lexington",
+    "state": "VA",
+    "usn_id": "03163",
+    "fice_code": "3768"
+  },
+  {
+    "rank": "34",
+    "is_tied": true,
+    "name": "William & Mary Law School",
+    "city": "Williamsburg",
+    "state": "VA",
+    "usn_id": "03160",
+    "fice_code": "3705"
+  },
+  {
+    "rank": "40",
+    "is_tied": true,
+    "name": "Emory University",
+    "city": "Atlanta",
+    "state": "GA",
+    "usn_id": "03039",
+    "fice_code": "1564"
+  },
+  {
+    "rank": "40",
+    "is_tied": true,
+    "name": "University of Alabama",
+    "city": "Tuscaloosa",
+    "state": "AL",
+    "usn_id": "03001",
+    "fice_code": "1051"
+  },
+  {
+    "rank": "42",
+    "is_tied": true,
+    "name": "Fordham University",
+    "city": "New York",
+    "state": "NY",
+    "usn_id": "03107",
+    "fice_code": "2722"
+  },
+  {
+    "rank": "42",
+    "is_tied": true,
+    "name": "Southern Methodist University (Dedman)",
+    "city": "Dallas",
+    "state": "TX",
+    "usn_id": "03150",
+    "fice_code": "3613"
+  },
+  {
+    "rank": "44",
+    "is_tied": true,
+    "name": "Arizona State University (O'Connor)",
+    "city": "Phoenix",
+    "state": "AZ",
+    "usn_id": "03003",
+    "fice_code": "1081"
+  },
+  {
+    "rank": "44",
+    "is_tied": true,
+    "name": "University of Utah (Quinney)",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "usn_id": "03157",
+    "fice_code": "3675"
+  },
+  {
+    "rank": "46",
+    "is_tied": true,
+    "name": "Pepperdine University (Caruso)",
+    "city": "Malibu",
+    "state": "CA",
+    "usn_id": "03011",
+    "fice_code": "1264"
+  },
+  {
+    "rank": "46",
+    "is_tied": true,
+    "name": "University of Illinois Urbana-Champaign",
+    "city": "Champaign",
+    "state": "IL",
+    "usn_id": "03053",
+    "fice_code": "1775"
+  },
+  {
+    "rank": "46",
+    "is_tied": true,
+    "name": "University of Kansas",
+    "city": "Lawrence",
+    "state": "KS",
+    "usn_id": "03060",
+    "fice_code": "1948"
+  },
+  {
+    "rank": "49",
+    "is_tied": true,
+    "name": "Indiana University--Bloomington (Maurer)",
+    "city": "Bloomington",
+    "state": "IN",
+    "usn_id": "03054",
+    "fice_code": "1809"
+  },
+  {
+    "rank": "49",
+    "is_tied": true,
+    "name": "Temple University (Beasley)",
+    "city": "Philadelphia",
+    "state": "PA",
+    "usn_id": "03139",
+    "fice_code": "3371"
+  },
+  {
+    "rank": "49",
+    "is_tied": true,
+    "name": "Villanova University (Widger)",
+    "city": "Villanova",
+    "state": "PA",
+    "usn_id": "03142",
+    "fice_code": "3388"
+  },
+  {
+    "rank": "52",
+    "is_tied": true,
+    "name": "University of California--Davis",
+    "city": "Davis",
+    "state": "CA",
+    "usn_id": "03017",
+    "fice_code": "1313"
+  },
+  {
+    "rank": "52",
+    "is_tied": true,
+    "name": "University of Washington",
+    "city": "Seattle",
+    "state": "WA",
+    "usn_id": "03167",
+    "fice_code": "3798"
+  },
+  {
+    "rank": "54",
+    "is_tied": true,
+    "name": "University of Colorado--Boulder",
+    "city": "Boulder",
+    "state": "CO",
+    "usn_id": "03023",
+    "fice_code": "1370"
+  },
+  {
+    "rank": "54",
+    "is_tied": true,
+    "name": "University of Houston Law Center",
+    "city": "Houston",
+    "state": "TX",
+    "usn_id": "03154",
+    "fice_code": "3652"
+  },
+  {
+    "rank": "54",
+    "is_tied": true,
+    "name": "University of San Diego",
+    "city": "San Diego ",
+    "state": "CA",
+    "usn_id": "03019",
+    "fice_code": "10395"
+  },
+  {
+    "rank": "57",
+    "is_tied": null,
+    "name": "University of Tennessee--Knoxville",
+    "city": "Knoxville",
+    "state": "TN",
+    "usn_id": "03146",
+    "fice_code": "3530"
+  },
+  {
+    "rank": "58",
+    "is_tied": null,
+    "name": "University of Connecticut",
+    "city": "Hartford",
+    "state": "CT",
+    "usn_id": "03026",
+    "fice_code": "29013"
+  },
+  {
+    "rank": "59",
+    "is_tied": true,
+    "name": "Marquette University",
+    "city": "Milwaukee",
+    "state": "WI",
+    "usn_id": "03169",
+    "fice_code": "3863"
+  },
+  {
+    "rank": "59",
+    "is_tied": true,
+    "name": "University of Missouri",
+    "city": "Columbia",
+    "state": "MO",
+    "usn_id": "03091",
+    "fice_code": "2516"
+  },
+  {
+    "rank": "59",
+    "is_tied": true,
+    "name": "Yeshiva University (Cardozo)",
+    "city": "New York",
+    "state": "NY",
+    "usn_id": "03103",
+    "fice_code": "2903"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "Pennsylvania State University Dickinson Law",
+    "city": "Carlisle",
+    "state": "PA",
+    "usn_id": "03207",
+    "fice_code": null
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "St. John's University",
+    "city": "Jamaica",
+    "state": "NY",
+    "usn_id": "03112",
+    "fice_code": "2823"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "The University of Oklahoma",
+    "city": "Norman",
+    "state": "OK",
+    "usn_id": "03132",
+    "fice_code": "3184"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "University of Maryland (Carey)",
+    "city": "Baltimore",
+    "state": "MD",
+    "usn_id": "03071",
+    "fice_code": "2104"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "University of Nebraska--Lincoln",
+    "city": "Lincoln",
+    "state": "NE",
+    "usn_id": "03095",
+    "fice_code": "2565"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "University of Richmond",
+    "city": "Richmond",
+    "state": "VA",
+    "usn_id": "03161",
+    "fice_code": "3744"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "University of South Carolina",
+    "city": "Columbia",
+    "state": "SC",
+    "usn_id": "03143",
+    "fice_code": "3448"
+  },
+  {
+    "rank": "62",
+    "is_tied": true,
+    "name": "Wayne State University",
+    "city": "Detroit",
+    "state": "MI",
+    "usn_id": "03083",
+    "fice_code": "2329"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "Loyola Law School",
+    "city": "Los Angeles",
+    "state": "CA",
+    "usn_id": "03009",
+    "fice_code": "11649"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "Seton Hall University",
+    "city": "Newark",
+    "state": "NJ",
+    "usn_id": "03099",
+    "fice_code": "2632"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "The Catholic University of America",
+    "city": "Washington",
+    "state": "DC",
+    "usn_id": "03030",
+    "fice_code": "1437"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "Tulane University",
+    "city": "New Orleans",
+    "state": "LA",
+    "usn_id": "03068",
+    "fice_code": "2029"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "University of Arizona (Rogers)",
+    "city": "Tucson",
+    "state": "AZ",
+    "usn_id": "03004",
+    "fice_code": "1083"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "University of Kentucky (Rosenberg)",
+    "city": "Lexington",
+    "state": "KY",
+    "usn_id": "03063",
+    "fice_code": "1989"
+  },
+  {
+    "rank": "70",
+    "is_tied": true,
+    "name": "University of Miami",
+    "city": "Coral Gables",
+    "state": "FL",
+    "usn_id": "03038",
+    "fice_code": "1536"
+  },
+  {
+    "rank": "77",
+    "is_tied": true,
+    "name": "Florida International University",
+    "city": "Miami",
+    "state": "FL",
+    "usn_id": "03190",
+    "fice_code": "9635"
+  },
+  {
+    "rank": "77",
+    "is_tied": true,
+    "name": "Georgia State University",
+    "city": "Atlanta",
+    "state": "GA",
+    "usn_id": "03040",
+    "fice_code": "1574"
+  },
+  {
+    "rank": "77",
+    "is_tied": true,
+    "name": "Loyola University Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "usn_id": "03048",
+    "fice_code": "1710"
+  },
+  {
+    "rank": "77",
+    "is_tied": true,
+    "name": "Northeastern University",
+    "city": "Boston",
+    "state": "MA",
+    "usn_id": "03076",
+    "fice_code": "2199"
+  },
+  {
+    "rank": "77",
+    "is_tied": true,
+    "name": "University of Pittsburgh",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "usn_id": "03141",
+    "fice_code": "3379"
+  },
+  {
+    "rank": "82",
+    "is_tied": true,
+    "name": "Drexel University (Kline)",
+    "city": "Philadelphia",
+    "state": "PA",
+    "usn_id": "03199",
+    "fice_code": "3256"
+  },
+  {
+    "rank": "82",
+    "is_tied": true,
+    "name": "University at Buffalo--SUNY",
+    "city": "Buffalo",
+    "state": "NY",
+    "usn_id": "03113",
+    "fice_code": "9554"
+  },
+  {
+    "rank": "82",
+    "is_tied": true,
+    "name": "University of Cincinnati",
+    "city": "Cincinnati",
+    "state": "OH",
+    "usn_id": "03128",
+    "fice_code": "3125"
+  },
+  {
+    "rank": "85",
+    "is_tied": true,
+    "name": "Belmont University",
+    "city": "Nashville",
+    "state": "TN",
+    "usn_id": "03203",
+    "fice_code": "3479"
+  },
+  {
+    "rank": "85",
+    "is_tied": true,
+    "name": "Duquesne University (Kline)",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "usn_id": "03138",
+    "fice_code": "3258"
+  },
+  {
+    "rank": "85",
+    "is_tied": true,
+    "name": "Louisiana State University--Baton Rouge (Hebert)",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "usn_id": "03065",
+    "fice_code": "2010"
+  },
+  {
+    "rank": "85",
+    "is_tied": true,
+    "name": "Texas Tech University",
+    "city": "Lubbock",
+    "state": "TX",
+    "usn_id": "03153",
+    "fice_code": "3644"
+  },
+  {
+    "rank": "85",
+    "is_tied": true,
+    "name": "University of California--San Francisco (formerly UC Hastings)",
+    "city": "San Francisco",
+    "state": "CA",
+    "usn_id": "03015",
+    "fice_code": null
+  },
+  {
+    "rank": "90",
+    "is_tied": null,
+    "name": "University of Montana (Blewett)",
+    "city": "Missoula",
+    "state": "MT",
+    "usn_id": "03093",
+    "fice_code": "2536"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "Drake University",
+    "city": "Des Moines",
+    "state": "IA",
+    "usn_id": "03058",
+    "fice_code": "1860"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "Regent University",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "usn_id": "03172",
+    "fice_code": "30913"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "Saint Louis University",
+    "city": "St. Louis",
+    "state": "MO",
+    "usn_id": "03089",
+    "fice_code": "2506"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "Stetson University",
+    "city": "Gulfport",
+    "state": "FL",
+    "usn_id": "03036",
+    "fice_code": "1531"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "University of Denver (Sturm)",
+    "city": "Denver",
+    "state": "CO",
+    "usn_id": "03024",
+    "fice_code": "1371"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "University of Hawaii--Manoa (Richardson)",
+    "city": "Honolulu",
+    "state": "HI",
+    "usn_id": "03043",
+    "fice_code": "1610"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "University of Maine School of Law",
+    "city": "Portland",
+    "state": "ME",
+    "usn_id": "03069",
+    "fice_code": "2053"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "University of Nevada--Las Vegas (Boyd)",
+    "city": "Las Vegas",
+    "state": "NV",
+    "usn_id": "03185",
+    "fice_code": "2569"
+  },
+  {
+    "rank": "91",
+    "is_tied": true,
+    "name": "University of Oregon",
+    "city": "Eugene",
+    "state": "OR",
+    "usn_id": "03135",
+    "fice_code": "3223"
+  },
+  {
+    "rank": "100",
+    "is_tied": true,
+    "name": "Case Western Reserve University",
+    "city": "Cleveland",
+    "state": "OH",
+    "usn_id": "03123",
+    "fice_code": "3024"
+  },
+  {
+    "rank": "100",
+    "is_tied": true,
+    "name": "Rutgers University",
+    "city": "Newark",
+    "state": "NJ",
+    "usn_id": "03209",
+    "fice_code": "2631"
+  },
+  {
+    "rank": "100",
+    "is_tied": true,
+    "name": "Syracuse University",
+    "city": "Syracuse",
+    "state": "NY",
+    "usn_id": "03114",
+    "fice_code": "2882"
+  },
+  {
+    "rank": "100",
+    "is_tied": true,
+    "name": "University of Arkansas--Fayetteville",
+    "city": "Fayetteville",
+    "state": "AR",
+    "usn_id": "03005",
+    "fice_code": "1108"
+  },
+  {
+    "rank": "100",
+    "is_tied": true,
+    "name": "University of Missouri--Kansas City",
+    "city": "Kansas City",
+    "state": "MO",
+    "usn_id": "03090",
+    "fice_code": "2518"
+  },
+  {
+    "rank": "105",
+    "is_tied": true,
+    "name": "Brooklyn Law School",
+    "city": "Brooklyn",
+    "state": "NY",
+    "usn_id": "03102",
+    "fice_code": null
+  },
+  {
+    "rank": "105",
+    "is_tied": true,
+    "name": "Illinois Institute of Technology (Chicago-Kent)",
+    "city": "Chicago",
+    "state": "IL",
+    "usn_id": "03046",
+    "fice_code": "1691"
+  },
+  {
+    "rank": "105",
+    "is_tied": true,
+    "name": "University of St. Thomas",
+    "city": "Minneapolis",
+    "state": "MN",
+    "usn_id": "03191",
+    "fice_code": "2345"
+  },
+  {
+    "rank": "108",
+    "is_tied": true,
+    "name": "American University (Washington)",
+    "city": "Washington",
+    "state": "DC",
+    "usn_id": "03029",
+    "fice_code": "1434"
+  },
+  {
+    "rank": "108",
+    "is_tied": true,
+    "name": "Mercer University (George)",
+    "city": "Macon",
+    "state": "GA",
+    "usn_id": "03041",
+    "fice_code": "1580"
+  },
+  {
+    "rank": "108",
+    "is_tied": true,
+    "name": "Michigan State University",
+    "city": "East Lansing",
+    "state": "MI",
+    "usn_id": "03079",
+    "fice_code": "2290"
+  },
+  {
+    "rank": "108",
+    "is_tied": true,
+    "name": "Washburn University",
+    "city": "Topeka",
+    "state": "KS",
+    "usn_id": "03061",
+    "fice_code": "1949"
+  },
+  {
+    "rank": "112",
+    "is_tied": true,
+    "name": "Chapman University (Fowler)",
+    "city": "Orange",
+    "state": "CA",
+    "usn_id": "03182",
+    "fice_code": "1164"
+  },
+  {
+    "rank": "112",
+    "is_tied": true,
+    "name": "Lewis & Clark College (Northwestern)",
+    "city": "Portland",
+    "state": "OR",
+    "usn_id": "03134",
+    "fice_code": "3197"
+  },
+  {
+    "rank": "112",
+    "is_tied": true,
+    "name": "New York Law School",
+    "city": "New York",
+    "state": "NY",
+    "usn_id": "03109",
+    "fice_code": null
+  },
+  {
+    "rank": "112",
+    "is_tied": true,
+    "name": "University of Dayton",
+    "city": "Dayton",
+    "state": "OH",
+    "usn_id": "03129",
+    "fice_code": "3127"
+  },
+  {
+    "rank": "112",
+    "is_tied": true,
+    "name": "University of Wyoming",
+    "city": "Laramie",
+    "state": "WY",
+    "usn_id": "03171",
+    "fice_code": "3932"
+  },
+  {
+    "rank": "117",
+    "is_tied": true,
+    "name": "Hofstra University (Deane)",
+    "city": "Hempstead",
+    "state": "NY",
+    "usn_id": "03108",
+    "fice_code": "2732"
+  },
+  {
+    "rank": "117",
+    "is_tied": true,
+    "name": "Howard University",
+    "city": "Washington",
+    "state": "DC",
+    "usn_id": "03033",
+    "fice_code": "1448"
+  },
+  {
+    "rank": "117",
+    "is_tied": true,
+    "name": "University of New Mexico",
+    "city": "Albuquerque",
+    "state": "NM",
+    "usn_id": "03100",
+    "fice_code": "10313"
+  },
+  {
+    "rank": "120",
+    "is_tied": true,
+    "name": "Albany Law School",
+    "city": "Albany",
+    "state": "NY",
+    "usn_id": "03101",
+    "fice_code": null
+  },
+  {
+    "rank": "120",
+    "is_tied": true,
+    "name": "University of Tulsa",
+    "city": "Tulsa",
+    "state": "OK",
+    "usn_id": "03133",
+    "fice_code": "3185"
+  },
+  {
+    "rank": "122",
+    "is_tied": true,
+    "name": "Samford University (Cumberland)",
+    "city": "Birmingham",
+    "state": "AL",
+    "usn_id": "03002",
+    "fice_code": "1036"
+  },
+  {
+    "rank": "122",
+    "is_tied": true,
+    "name": "University of South Dakota (Knudson)",
+    "city": "Vermillion",
+    "state": "SD",
+    "usn_id": "03144",
+    "fice_code": "10300"
+  },
+  {
+    "rank": "124",
+    "is_tied": true,
+    "name": "Indiana University Indianapolis (McKinney)",
+    "city": "Indianapolis",
+    "state": "IN",
+    "usn_id": "03055",
+    "fice_code": "1813"
+  },
+  {
+    "rank": "124",
+    "is_tied": true,
+    "name": "University of Louisville (Brandeis)",
+    "city": "Louisville",
+    "state": "KY",
+    "usn_id": "03064",
+    "fice_code": "1999"
+  },
+  {
+    "rank": "124",
+    "is_tied": true,
+    "name": "University of Mississippi (Ole Miss)",
+    "city": "University",
+    "state": "MS",
+    "usn_id": "03088",
+    "fice_code": "2440"
+  },
+  {
+    "rank": "124",
+    "is_tied": true,
+    "name": "West Virginia University",
+    "city": "Morgantown",
+    "state": "WV",
+    "usn_id": "03168",
+    "fice_code": "3827"
+  },
+  {
+    "rank": "128",
+    "is_tied": true,
+    "name": "Seattle University",
+    "city": "Seattle",
+    "state": "WA",
+    "usn_id": "03166",
+    "fice_code": "3790"
+  },
+  {
+    "rank": "128",
+    "is_tied": true,
+    "name": "South Texas College of Law Houston",
+    "city": "Houston",
+    "state": "TX",
+    "usn_id": "03149",
+    "fice_code": null
+  },
+  {
+    "rank": "128",
+    "is_tied": true,
+    "name": "Suffolk University",
+    "city": "Boston",
+    "state": "MA",
+    "usn_id": "03077",
+    "fice_code": "2218"
+  },
+  {
+    "rank": "131",
+    "is_tied": true,
+    "name": "Campbell University (Wiggins)",
+    "city": "Raleigh",
+    "state": "NC",
+    "usn_id": "03116",
+    "fice_code": "2913"
+  },
+  {
+    "rank": "131",
+    "is_tied": true,
+    "name": "DePaul University",
+    "city": "Chicago",
+    "state": "IL",
+    "usn_id": "03045",
+    "fice_code": "1671"
+  },
+  {
+    "rank": "131",
+    "is_tied": true,
+    "name": "Northern Kentucky University (Chase)",
+    "city": "Highland Heights",
+    "state": "KY",
+    "usn_id": "03062",
+    "fice_code": "9275"
+  },
+  {
+    "rank": "131",
+    "is_tied": true,
+    "name": "University of Akron",
+    "city": "Akron",
+    "state": "OH",
+    "usn_id": "03127",
+    "fice_code": "3123"
+  },
+  {
+    "rank": "135",
+    "is_tied": null,
+    "name": "Loyola University New Orleans",
+    "city": "New Orleans",
+    "state": "LA",
+    "usn_id": "03066",
+    "fice_code": "2016"
+  },
+  {
+    "rank": "136",
+    "is_tied": true,
+    "name": "Cleveland State University",
+    "city": "Cleveland",
+    "state": "OH",
+    "usn_id": "03124",
+    "fice_code": "3032"
+  },
+  {
+    "rank": "136",
+    "is_tied": true,
+    "name": "Quinnipiac University",
+    "city": "Hamden",
+    "state": "CT",
+    "usn_id": "03025",
+    "fice_code": "1402"
+  },
+  {
+    "rank": "136",
+    "is_tied": true,
+    "name": "University of Baltimore",
+    "city": "Baltimore",
+    "state": "MD",
+    "usn_id": "03070",
+    "fice_code": "2102"
+  },
+  {
+    "rank": "136",
+    "is_tied": true,
+    "name": "University of New Hampshire (Pierce)",
+    "city": "Concord",
+    "state": "NH",
+    "usn_id": "03096",
+    "fice_code": "2589"
+  },
+  {
+    "rank": "140",
+    "is_tied": true,
+    "name": "University of Arkansas--Little Rock (Bowen)",
+    "city": "Little Rock",
+    "state": "AR",
+    "usn_id": "03006",
+    "fice_code": "1101"
+  },
+  {
+    "rank": "140",
+    "is_tied": true,
+    "name": "University of Memphis (Humphreys)",
+    "city": "Memphis",
+    "state": "TN",
+    "usn_id": "03145",
+    "fice_code": "3509"
+  },
+  {
+    "rank": "142",
+    "is_tied": true,
+    "name": "Pace University (Haub)",
+    "city": "White Plains",
+    "state": "NY",
+    "usn_id": "03111",
+    "fice_code": "2791"
+  },
+  {
+    "rank": "142",
+    "is_tied": true,
+    "name": "University of Detroit Mercy",
+    "city": "Detroit",
+    "state": "MI",
+    "usn_id": "03081",
+    "fice_code": "2323"
+  },
+  {
+    "rank": "144",
+    "is_tied": true,
+    "name": "Creighton University",
+    "city": "Omaha",
+    "state": "NE",
+    "usn_id": "03094",
+    "fice_code": "2542"
+  },
+  {
+    "rank": "144",
+    "is_tied": true,
+    "name": "Elon University",
+    "city": "Greensboro",
+    "state": "NC",
+    "usn_id": "03200",
+    "fice_code": "2927"
+  },
+  {
+    "rank": "144",
+    "is_tied": true,
+    "name": "Gonzaga University",
+    "city": "Spokane",
+    "state": "WA",
+    "usn_id": "03165",
+    "fice_code": "3778"
+  },
+  {
+    "rank": "144",
+    "is_tied": true,
+    "name": "Liberty University",
+    "city": "Lynchburg",
+    "state": "VA",
+    "usn_id": "03196",
+    "fice_code": "10392"
+  },
+  {
+    "rank": "148",
+    "is_tied": null,
+    "name": "University of Idaho",
+    "city": "Moscow",
+    "state": "ID",
+    "usn_id": "03044",
+    "fice_code": "1626"
+  },
+  {
+    "rank": "149",
+    "is_tied": null,
+    "name": "University of Toledo",
+    "city": "Toledo",
+    "state": "OH",
+    "usn_id": "03130",
+    "fice_code": "3131"
+  },
+  {
+    "rank": "150",
+    "is_tied": true,
+    "name": "Santa Clara University",
+    "city": "Santa Clara",
+    "state": "CA",
+    "usn_id": "03012",
+    "fice_code": "1326"
+  },
+  {
+    "rank": "150",
+    "is_tied": true,
+    "name": "St. Mary's University",
+    "city": "San Antonio",
+    "state": "TX",
+    "usn_id": "03151",
+    "fice_code": "3623"
+  },
+  {
+    "rank": "152",
+    "is_tied": true,
+    "name": "Mitchell Hamline School of Law",
+    "city": "St. Paul",
+    "state": "MN",
+    "usn_id": "03212",
+    "fice_code": null
+  },
+  {
+    "rank": "152",
+    "is_tied": true,
+    "name": "University of the Pacific (McGeorge)",
+    "city": "Sacramento",
+    "state": "CA",
+    "usn_id": "03010",
+    "fice_code": "1329"
+  },
+  {
+    "rank": "154",
+    "is_tied": true,
+    "name": "Vermont Law School",
+    "city": "South Royalton",
+    "state": "VT",
+    "usn_id": "03158",
+    "fice_code": null
+  },
+  {
+    "rank": "154",
+    "is_tied": true,
+    "name": "Widener University--Delaware",
+    "city": "Wilmington",
+    "state": "DE",
+    "usn_id": "03210",
+    "fice_code": null
+  },
+  {
+    "rank": "156",
+    "is_tied": true,
+    "name": "Oklahoma City University",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "usn_id": "03131",
+    "fice_code": "3166"
+  },
+  {
+    "rank": "156",
+    "is_tied": true,
+    "name": "University of North Dakota",
+    "city": "Grand Forks",
+    "state": "ND",
+    "usn_id": "03121",
+    "fice_code": "3005"
+  },
+  {
+    "rank": "156",
+    "is_tied": true,
+    "name": "University of San Francisco",
+    "city": "San Francisco",
+    "state": "CA",
+    "usn_id": "03020",
+    "fice_code": "1325"
+  },
+  {
+    "rank": "159",
+    "is_tied": true,
+    "name": "University of North Texas--Dallas",
+    "city": "Dallas",
+    "state": "TX",
+    "usn_id": "03213",
+    "fice_code": "666992"
+  },
+  {
+    "rank": "159",
+    "is_tied": true,
+    "name": "Western New England University",
+    "city": "Springfield",
+    "state": "MA",
+    "usn_id": "03078",
+    "fice_code": "2226"
+  },
+  {
+    "rank": "161",
+    "is_tied": true,
+    "name": "Mississippi College",
+    "city": "Jackson",
+    "state": "MS",
+    "usn_id": "03087",
+    "fice_code": "2415"
+  },
+  {
+    "rank": "161",
+    "is_tied": true,
+    "name": "Northern Illinois University",
+    "city": "DeKalb",
+    "state": "IL",
+    "usn_id": "03049",
+    "fice_code": "1737"
+  },
+  {
+    "rank": "161",
+    "is_tied": true,
+    "name": "Southwestern Law School",
+    "city": "Los Angeles",
+    "state": "CA",
+    "usn_id": "03013",
+    "fice_code": null
+  },
+  {
+    "rank": "164",
+    "is_tied": true,
+    "name": "Ave Maria School of Law",
+    "city": "Naples",
+    "state": "FL",
+    "usn_id": "03188",
+    "fice_code": null
+  },
+  {
+    "rank": "164",
+    "is_tied": true,
+    "name": "Faulkner University (Jones)",
+    "city": "Montgomery",
+    "state": "AL",
+    "usn_id": "03195",
+    "fice_code": "1003"
+  },
+  {
+    "rank": "164",
+    "is_tied": true,
+    "name": "Touro University (Fuchsberg)",
+    "city": "Central Islip",
+    "state": "NY",
+    "usn_id": "03115",
+    "fice_code": "10142"
+  },
+  {
+    "rank": "167",
+    "is_tied": null,
+    "name": "University of Illinois Chicago",
+    "city": "Chicago",
+    "state": "IL",
+    "usn_id": "03678",
+    "fice_code": "1776"
+  },
+  {
+    "rank": "168",
+    "is_tied": true,
+    "name": "New England Law Boston",
+    "city": "Boston",
+    "state": "MA",
+    "usn_id": "03075",
+    "fice_code": null
+  },
+  {
+    "rank": "168",
+    "is_tied": true,
+    "name": "St. Thomas University",
+    "city": "Miami Gardens",
+    "state": "FL",
+    "usn_id": "03173",
+    "fice_code": "1468"
+  },
+  {
+    "rank": "168",
+    "is_tied": true,
+    "name": "Willamette University School of Law",
+    "city": "Salem",
+    "state": "OR",
+    "usn_id": "03136",
+    "fice_code": "3227"
+  },
+  {
+    "rank": "171",
+    "is_tied": true,
+    "name": "Charleston School of Law",
+    "city": "Charleston",
+    "state": "SC",
+    "usn_id": "03194",
+    "fice_code": null
+  },
+  {
+    "rank": "171",
+    "is_tied": true,
+    "name": "CUNY School of Law",
+    "city": "Long Island City",
+    "state": "NY",
+    "usn_id": "03106",
+    "fice_code": null
+  },
+  {
+    "rank": "171",
+    "is_tied": true,
+    "name": "Roger Williams University",
+    "city": "Bristol",
+    "state": "RI",
+    "usn_id": "03180",
+    "fice_code": "4917"
+  },
+  {
+    "rank": "171",
+    "is_tied": true,
+    "name": "University of Massachusetts--Dartmouth",
+    "city": "North Dartmouth",
+    "state": "MA",
+    "usn_id": "03202",
+    "fice_code": "2210"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Appalachian School of Law",
+    "city": null,
+    "state": "VA",
+    "usn_id": "03187",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Atlanta's John Marshall Law School",
+    "city": null,
+    "state": "GA",
+    "usn_id": "03192",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Barry University",
+    "city": null,
+    "state": "FL",
+    "usn_id": "03186",
+    "fice_code": "1466"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "California Western School of Law",
+    "city": "San Diego",
+    "state": "CA",
+    "usn_id": "03007",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Capital University",
+    "city": "Columbus",
+    "state": "OH",
+    "usn_id": "03122",
+    "fice_code": "3023"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Cooley Law School",
+    "city": "Lansing",
+    "state": "MI",
+    "usn_id": "03080",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Florida A&M University",
+    "city": "Orlando",
+    "state": "FL",
+    "usn_id": "03189",
+    "fice_code": "1480"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Inter-American University",
+    "city": "San Juan",
+    "state": "PR",
+    "usn_id": "03176",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Lincoln Memorial University (Duncan)",
+    "city": "Knoxville",
+    "state": "TN",
+    "usn_id": "03204",
+    "fice_code": "3502"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "North Carolina Central University",
+    "city": "Durham",
+    "state": "NC",
+    "usn_id": "03118",
+    "fice_code": "2950"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Nova Southeastern University (Broad)",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "usn_id": "03035",
+    "fice_code": "1509"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Ohio Northern University (Pettit)",
+    "city": "Ada",
+    "state": "OH",
+    "usn_id": "03125",
+    "fice_code": "3089"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Pontifical Catholic University of Puerto Rico",
+    "city": "Ponce",
+    "state": "PR",
+    "usn_id": "03175",
+    "fice_code": "3936"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Southern Illinois University--Carbondale",
+    "city": "Carbondale",
+    "state": "IL",
+    "usn_id": "03051",
+    "fice_code": "1758"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Southern University Law Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "usn_id": "03067",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Texas Southern University (Marshall)",
+    "city": null,
+    "state": "TX",
+    "usn_id": "03152",
+    "fice_code": "3642"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "University of Puerto Rico",
+    "city": "Rio Piedras",
+    "state": "PR",
+    "usn_id": "03177",
+    "fice_code": "7108"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "University of the District of Columbia (Clarke)",
+    "city": "Washington",
+    "state": "DC",
+    "usn_id": "03178",
+    "fice_code": "29100"
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Western State College of Law at Westcliff University",
+    "city": "Tustin",
+    "state": "CA",
+    "usn_id": "03183",
+    "fice_code": null
+  },
+  {
+    "rank": "175-194",
+    "is_tied": null,
+    "name": "Widener University--Pennsylvania (Commonwealth)",
+    "city": "Harrisburg",
+    "state": "PA",
+    "usn_id": "03206",
+    "fice_code": "3313"
+  },
+  {
+    "rank": "Unranked",
+    "is_tied": null,
+    "name": "Golden Gate University",
+    "city": null,
+    "state": "CA",
+    "usn_id": "03008",
+    "fice_code": "1205"
+  },
+  {
+    "rank": "Unranked",
+    "is_tied": null,
+    "name": "Jacksonville University",
+    "city": "Jacksonville",
+    "state": "FL",
+    "usn_id": "03778",
+    "fice_code": "1495"
+  },
+  {
+    "rank": "Unranked",
+    "is_tied": null,
+    "name": "Wilmington University",
+    "city": null,
+    "state": "DE",
+    "usn_id": "03713",
+    "fice_code": "7948"
+  }
+]

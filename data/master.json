@@ -1,13 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-03-28",
+    "generatedAt": "2026-04-08",
     "schoolCount": 197,
     "sources": [
       "law-schools.json",
       "employment.json",
       "scholarship_data.json",
       "tuition_data.json"
-    ]
+    ],
+    "rankingsUpdated": "2026"
   },
   "schools": {
     "stanford-law-school": {
@@ -112,7 +113,11 @@
         "schoolPassRate": 96.5,
         "stateAvgPassRate": 81.4,
         "passDifference": 15.1
-      }
+      },
+      "rank2025": 1,
+      "rankDisplay": "#1",
+      "rankDisplay2025": "#1",
+      "rankTied": false
     },
     "yale-law-school": {
       "name": "Yale Law School",
@@ -122,7 +127,7 @@
       "lat": 41.3118,
       "lng": -72.9246,
       "tier": "t14",
-      "rank": 1,
+      "rank": 2,
       "admissions": {
         "acceptRate": 4.06,
         "classSize": 204,
@@ -216,7 +221,11 @@
         "schoolPassRate": 96.5,
         "stateAvgPassRate": 83.57,
         "passDifference": 12.93
-      }
+      },
+      "rank2025": 1,
+      "rankDisplay": "#2",
+      "rankDisplay2025": "#1",
+      "rankTied": true
     },
     "university-of-chicago-law-school": {
       "name": "University of Chicago Law School",
@@ -226,7 +235,7 @@
       "lat": 41.7886,
       "lng": -87.5987,
       "tier": "t14",
-      "rank": 3,
+      "rank": 2,
       "admissions": {
         "acceptRate": 9.74,
         "classSize": 203,
@@ -320,7 +329,11 @@
         "schoolPassRate": 97.42,
         "stateAvgPassRate": 81.49,
         "passDifference": 15.93
-      }
+      },
+      "rank2025": 3,
+      "rankDisplay": "#2",
+      "rankDisplay2025": "#3",
+      "rankTied": true
     },
     "university-of-virginia-school-of-law": {
       "name": "University of Virginia School of Law",
@@ -424,7 +437,11 @@
         "schoolPassRate": 94.98,
         "stateAvgPassRate": 82.83,
         "passDifference": 12.15
-      }
+      },
+      "rank2025": 4,
+      "rankDisplay": "#4",
+      "rankDisplay2025": "#4",
+      "rankTied": true
     },
     "penn-carey-law": {
       "name": "Penn Carey Law",
@@ -434,7 +451,7 @@
       "lat": 39.9522,
       "lng": -75.1932,
       "tier": "t14",
-      "rank": 5,
+      "rank": 4,
       "admissions": {
         "acceptRate": 8.05,
         "classSize": 265,
@@ -528,7 +545,11 @@
         "schoolPassRate": 96.7,
         "stateAvgPassRate": 82.93,
         "passDifference": 13.77
-      }
+      },
+      "rank2025": 5,
+      "rankDisplay": "#4",
+      "rankDisplay2025": "#5",
+      "rankTied": true
     },
     "duke-university-school-of-law": {
       "name": "Duke University School of Law",
@@ -538,7 +559,7 @@
       "lat": 36.0014,
       "lng": -78.9382,
       "tier": "t14",
-      "rank": 6,
+      "rank": 7,
       "admissions": {
         "acceptRate": 12.88,
         "classSize": 227,
@@ -648,7 +669,11 @@
         "schoolPassRate": 97.48,
         "stateAvgPassRate": 82.94,
         "passDifference": 14.54
-      }
+      },
+      "rank2025": 6,
+      "rankDisplay": "#7",
+      "rankDisplay2025": "#6",
+      "rankTied": true
     },
     "harvard-law-school": {
       "name": "Harvard Law School",
@@ -752,7 +777,11 @@
         "schoolPassRate": 97.86,
         "stateAvgPassRate": 83.44,
         "passDifference": 14.42
-      }
+      },
+      "rank2025": 6,
+      "rankDisplay": "#6",
+      "rankDisplay2025": "#6",
+      "rankTied": false
     },
     "university-of-michigan-law-school": {
       "name": "University of Michigan Law School",
@@ -762,7 +791,7 @@
       "lat": 42.3507,
       "lng": -83.7458,
       "tier": "t14",
-      "rank": 8,
+      "rank": 9,
       "admissions": {
         "acceptRate": 8.57,
         "classSize": 343,
@@ -856,7 +885,11 @@
         "schoolPassRate": 95.57,
         "stateAvgPassRate": 80.44,
         "passDifference": 15.13
-      }
+      },
+      "rank2025": 8,
+      "rankDisplay": "#9",
+      "rankDisplay2025": "#8",
+      "rankTied": true
     },
     "nyu-school-of-law": {
       "name": "NYU School of Law",
@@ -866,7 +899,7 @@
       "lat": 40.7291,
       "lng": -73.9965,
       "tier": "t14",
-      "rank": 8,
+      "rank": 7,
       "admissions": {
         "acceptRate": 13.39,
         "classSize": 452,
@@ -960,7 +993,11 @@
         "schoolPassRate": 96.72,
         "stateAvgPassRate": 85.02,
         "passDifference": 11.7
-      }
+      },
+      "rank2025": 8,
+      "rankDisplay": "#7",
+      "rankDisplay2025": "#8",
+      "rankTied": true
     },
     "columbia-law-school": {
       "name": "Columbia Law School",
@@ -970,7 +1007,7 @@
       "lat": 40.8075,
       "lng": -73.9626,
       "tier": "t14",
-      "rank": 10,
+      "rank": 9,
       "admissions": {
         "acceptRate": 11.84,
         "classSize": 444,
@@ -1064,7 +1101,11 @@
         "schoolPassRate": 95.85,
         "stateAvgPassRate": 84.98,
         "passDifference": 10.87
-      }
+      },
+      "rank2025": 10,
+      "rankDisplay": "#9",
+      "rankDisplay2025": "#10",
+      "rankTied": true
     },
     "northwestern-pritzker-school-of-law": {
       "name": "Northwestern Pritzker School of Law",
@@ -1074,7 +1115,7 @@
       "lat": 41.8962,
       "lng": -87.6254,
       "tier": "t14",
-      "rank": 10,
+      "rank": 9,
       "admissions": {
         "acceptRate": 12.3,
         "classSize": 250,
@@ -1168,7 +1209,11 @@
         "schoolPassRate": 91.8,
         "stateAvgPassRate": 81,
         "passDifference": 10.8
-      }
+      },
+      "rank2025": 10,
+      "rankDisplay": "#9",
+      "rankDisplay2025": "#10",
+      "rankTied": true
     },
     "ucla-school-of-law": {
       "name": "UCLA School of Law",
@@ -1178,7 +1223,7 @@
       "lat": 34.0722,
       "lng": -118.44,
       "tier": "t14",
-      "rank": 12,
+      "rank": 13,
       "admissions": {
         "acceptRate": 12.05,
         "classSize": 328,
@@ -1272,7 +1317,11 @@
         "schoolPassRate": 94.23,
         "stateAvgPassRate": 78.85,
         "passDifference": 15.38
-      }
+      },
+      "rank2025": 12,
+      "rankDisplay": "#13",
+      "rankDisplay2025": "#12",
+      "rankTied": true
     },
     "uc-berkeley-school-of-law": {
       "name": "UC Berkeley School of Law",
@@ -1281,8 +1330,8 @@
       "city": "Berkeley, CA",
       "lat": 37.8724,
       "lng": -122.2595,
-      "tier": "t14",
-      "rank": 13,
+      "tier": "tier2",
+      "rank": 16,
       "admissions": {
         "acceptRate": 14.84,
         "classSize": 374,
@@ -1376,7 +1425,11 @@
         "schoolPassRate": 91.16,
         "stateAvgPassRate": 79.91,
         "passDifference": 11.25
-      }
+      },
+      "rank2025": 13,
+      "rankDisplay": "#16",
+      "rankDisplay2025": "#13",
+      "rankTied": true
     },
     "georgetown-university-law-center": {
       "name": "Georgetown University Law Center",
@@ -1385,8 +1438,8 @@
       "city": "Washington, DC",
       "lat": 38.9027,
       "lng": -77.0014,
-      "tier": "t14",
-      "rank": 14,
+      "tier": "tier2",
+      "rank": 18,
       "admissions": {
         "acceptRate": 15.75,
         "classSize": 672,
@@ -1496,7 +1549,11 @@
         "schoolPassRate": 93.05,
         "stateAvgPassRate": 83.29,
         "passDifference": 9.76
-      }
+      },
+      "rank2025": 14,
+      "rankDisplay": "#18",
+      "rankDisplay2025": "#14",
+      "rankTied": true
     },
     "university-of-texas-school-of-law": {
       "name": "University of Texas School of Law",
@@ -1505,8 +1562,8 @@
       "city": "Austin, TX",
       "lat": 30.289,
       "lng": -97.7394,
-      "tier": "t14",
-      "rank": 14,
+      "tier": "tier2",
+      "rank": 16,
       "admissions": {
         "acceptRate": 13.99,
         "classSize": 373,
@@ -1600,7 +1657,11 @@
         "schoolPassRate": 95.86,
         "stateAvgPassRate": 81.57,
         "passDifference": 14.29
-      }
+      },
+      "rank2025": 14,
+      "rankDisplay": "#16",
+      "rankDisplay2025": "#14",
+      "rankTied": true
     },
     "vanderbilt-university-law-school": {
       "name": "Vanderbilt University Law School",
@@ -1610,7 +1671,7 @@
       "lat": 36.1447,
       "lng": -86.8027,
       "tier": "t14",
-      "rank": 14,
+      "rank": 12,
       "admissions": {
         "acceptRate": 13.26,
         "classSize": 172,
@@ -1720,7 +1781,11 @@
         "schoolPassRate": 94.51,
         "stateAvgPassRate": 81.05,
         "passDifference": 13.46
-      }
+      },
+      "rank2025": 14,
+      "rankDisplay": "#12",
+      "rankDisplay2025": "#14",
+      "rankTied": false
     },
     "washington-university-in-st-louis-school-of-law": {
       "name": "Washington University in St. Louis School of Law",
@@ -1730,7 +1795,7 @@
       "lat": 38.6488,
       "lng": -90.3108,
       "tier": "t14",
-      "rank": 14,
+      "rank": 13,
       "admissions": {
         "acceptRate": 18.96,
         "classSize": 261,
@@ -1824,7 +1889,11 @@
         "schoolPassRate": 93.57,
         "stateAvgPassRate": 81.37,
         "passDifference": 12.2
-      }
+      },
+      "rank2025": 14,
+      "rankDisplay": "#13",
+      "rankDisplay2025": "#14",
+      "rankTied": true
     },
     "cornell-law-school": {
       "name": "Cornell Law School",
@@ -1833,8 +1902,8 @@
       "city": "Ithaca, NY",
       "lat": 42.4474,
       "lng": -76.485,
-      "tier": "tier2",
-      "rank": 18,
+      "tier": "t14",
+      "rank": 13,
       "admissions": {
         "acceptRate": 18.19,
         "classSize": 217,
@@ -1928,7 +1997,11 @@
         "schoolPassRate": 96.41,
         "stateAvgPassRate": 84.73,
         "passDifference": 11.68
-      }
+      },
+      "rank2025": 18,
+      "rankDisplay": "#13",
+      "rankDisplay2025": "#18",
+      "rankTied": true
     },
     "university-of-north-carolina-school-of-law": {
       "name": "University of North Carolina School of Law",
@@ -2032,7 +2105,11 @@
         "schoolPassRate": 92.27,
         "stateAvgPassRate": 79.6,
         "passDifference": 12.67
-      }
+      },
+      "rank2025": 18,
+      "rankDisplay": "#18",
+      "rankDisplay2025": "#18",
+      "rankTied": true
     },
     "university-of-minnesota-law-school": {
       "name": "University of Minnesota Law School",
@@ -2042,7 +2119,7 @@
       "lat": 44.974,
       "lng": -93.2351,
       "tier": "tier2",
-      "rank": 20,
+      "rank": 22,
       "admissions": {
         "acceptRate": 26.7,
         "classSize": 228,
@@ -2136,7 +2213,11 @@
         "schoolPassRate": 94.09,
         "stateAvgPassRate": 83.36,
         "passDifference": 10.73
-      }
+      },
+      "rank2025": 20,
+      "rankDisplay": "#22",
+      "rankDisplay2025": "#20",
+      "rankTied": true
     },
     "university-of-notre-dame-law-school": {
       "name": "University of Notre Dame Law School",
@@ -2240,7 +2321,11 @@
         "schoolPassRate": 92.15,
         "stateAvgPassRate": 79.83,
         "passDifference": 12.32
-      }
+      },
+      "rank2025": 20,
+      "rankDisplay": "#20",
+      "rankDisplay2025": "#20",
+      "rankTied": true
     },
     "boston-university-school-of-law": {
       "name": "Boston University School of Law",
@@ -2250,7 +2335,7 @@
       "lat": 42.3487,
       "lng": -71.1016,
       "tier": "tier2",
-      "rank": 22,
+      "rank": 24,
       "admissions": {
         "acceptRate": 12.08,
         "classSize": 238,
@@ -2360,7 +2445,11 @@
         "schoolPassRate": 92.28,
         "stateAvgPassRate": 83.3,
         "passDifference": 8.98
-      }
+      },
+      "rank2025": 22,
+      "rankDisplay": "#24",
+      "rankDisplay2025": "#22",
+      "rankTied": true
     },
     "university-of-georgia-school-of-law": {
       "name": "University of Georgia School of Law",
@@ -2370,7 +2459,7 @@
       "lat": 33.9519,
       "lng": -83.375,
       "tier": "tier2",
-      "rank": 22,
+      "rank": 26,
       "admissions": {
         "acceptRate": 12.72,
         "classSize": 186,
@@ -2464,7 +2553,11 @@
         "schoolPassRate": 90.37,
         "stateAvgPassRate": 79.72,
         "passDifference": 10.65
-      }
+      },
+      "rank2025": 22,
+      "rankDisplay": "#26",
+      "rankDisplay2025": "#22",
+      "rankTied": true
     },
     "texas-a-m-university-school-of-law": {
       "name": "Texas A&M University School of Law",
@@ -2584,7 +2677,11 @@
         "schoolPassRate": 95.98,
         "stateAvgPassRate": 81.39,
         "passDifference": 14.59
-      }
+      },
+      "rank2025": 22,
+      "rankDisplay": "#22",
+      "rankDisplay2025": "#22",
+      "rankTied": true
     },
     "boston-college-law-school": {
       "name": "Boston College Law School",
@@ -2594,7 +2691,7 @@
       "lat": 42.3358,
       "lng": -71.1685,
       "tier": "tier2",
-      "rank": 25,
+      "rank": 20,
       "admissions": {
         "acceptRate": 8.48,
         "classSize": 219,
@@ -2704,7 +2801,11 @@
         "schoolPassRate": 93.82,
         "stateAvgPassRate": 83.55,
         "passDifference": 10.27
-      }
+      },
+      "rank2025": 25,
+      "rankDisplay": "#20",
+      "rankDisplay2025": "#25",
+      "rankTied": true
     },
     "usc-gould-school-of-law": {
       "name": "USC Gould School of Law",
@@ -2808,7 +2909,11 @@
         "schoolPassRate": 94.01,
         "stateAvgPassRate": 78.74,
         "passDifference": 15.27
-      }
+      },
+      "rank2025": 26,
+      "rankDisplay": "#26",
+      "rankDisplay2025": "#26",
+      "rankTied": true
     },
     "wake-forest-university-school-of-law": {
       "name": "Wake Forest University School of Law",
@@ -2818,7 +2923,7 @@
       "lat": 36.1321,
       "lng": -80.2737,
       "tier": "tier2",
-      "rank": 26,
+      "rank": 30,
       "admissions": {
         "acceptRate": 24.63,
         "classSize": 204,
@@ -2928,7 +3033,11 @@
         "schoolPassRate": 88.24,
         "stateAvgPassRate": 79.29,
         "passDifference": 8.95
-      }
+      },
+      "rank2025": 26,
+      "rankDisplay": "#30",
+      "rankDisplay2025": "#26",
+      "rankTied": true
     },
     "byu-j-reuben-clark-law-school": {
       "name": "BYU J. Reuben Clark Law School",
@@ -2938,7 +3047,7 @@
       "lat": 40.2338,
       "lng": -111.6585,
       "tier": "tier2",
-      "rank": 28,
+      "rank": 24,
       "admissions": {
         "acceptRate": 22.8,
         "classSize": 122,
@@ -3032,7 +3141,11 @@
         "schoolPassRate": 90.44,
         "stateAvgPassRate": 83.58,
         "passDifference": 6.86
-      }
+      },
+      "rank2025": 28,
+      "rankDisplay": "#24",
+      "rankDisplay2025": "#28",
+      "rankTied": true
     },
     "ohio-state-university-moritz-college-of-law": {
       "name": "Ohio State University Moritz College of Law",
@@ -3042,7 +3155,7 @@
       "lat": 40.0017,
       "lng": -83.0157,
       "tier": "tier2",
-      "rank": 28,
+      "rank": 30,
       "admissions": {
         "acceptRate": 24.62,
         "classSize": 159,
@@ -3152,7 +3265,11 @@
         "schoolPassRate": 91.95,
         "stateAvgPassRate": 80.32,
         "passDifference": 11.63
-      }
+      },
+      "rank2025": 28,
+      "rankDisplay": "#30",
+      "rankDisplay2025": "#28",
+      "rankTied": true
     },
     "university-of-wisconsin-law-school": {
       "name": "University of Wisconsin Law School",
@@ -3162,7 +3279,7 @@
       "lat": 43.0731,
       "lng": -89.4012,
       "tier": "tier2",
-      "rank": 28,
+      "rank": 26,
       "admissions": {
         "acceptRate": 19.12,
         "classSize": 224,
@@ -3256,7 +3373,11 @@
         "schoolPassRate": 80,
         "stateAvgPassRate": 78.72,
         "passDifference": 1.28
-      }
+      },
+      "rank2025": 28,
+      "rankDisplay": "#26",
+      "rankDisplay2025": "#28",
+      "rankTied": true
     },
     "university-of-alabama-school-of-law": {
       "name": "University of Alabama School of Law",
@@ -3266,7 +3387,7 @@
       "lat": 33.2119,
       "lng": -87.5436,
       "tier": "tier2",
-      "rank": 31,
+      "rank": 40,
       "admissions": {
         "acceptRate": 25.63,
         "classSize": 140,
@@ -3360,7 +3481,11 @@
         "schoolPassRate": 91.39,
         "stateAvgPassRate": 80.44,
         "passDifference": 10.95
-      }
+      },
+      "rank2025": 31,
+      "rankDisplay": "#40",
+      "rankDisplay2025": "#31",
+      "rankTied": true
     },
     "george-mason-antonin-scalia-law-school": {
       "name": "George Mason Antonin Scalia Law School",
@@ -3370,7 +3495,7 @@
       "lat": 38.8847,
       "lng": -77.1008,
       "tier": "tier2",
-      "rank": 31,
+      "rank": 32,
       "admissions": {
         "acceptRate": 15.87,
         "classSize": 159,
@@ -3464,7 +3589,11 @@
         "schoolPassRate": 85.96,
         "stateAvgPassRate": 80.68,
         "passDifference": 5.28
-      }
+      },
+      "rank2025": 31,
+      "rankDisplay": "#32",
+      "rankDisplay2025": "#31",
+      "rankTied": true
     },
     "george-washington-university-law-school": {
       "name": "George Washington University Law School",
@@ -3474,7 +3603,7 @@
       "lat": 38.8998,
       "lng": -77.0473,
       "tier": "tier2",
-      "rank": 31,
+      "rank": 26,
       "admissions": {
         "acceptRate": 27.21,
         "classSize": 612,
@@ -3584,7 +3713,11 @@
         "schoolPassRate": 90.22,
         "stateAvgPassRate": 82.71,
         "passDifference": 7.51
-      }
+      },
+      "rank2025": 31,
+      "rankDisplay": "#26",
+      "rankDisplay2025": "#31",
+      "rankTied": true
     },
     "university-of-utah-s-j-quinney-college-of-law": {
       "name": "University of Utah S.J. Quinney College of Law",
@@ -3594,7 +3727,7 @@
       "lat": 40.7648,
       "lng": -111.8453,
       "tier": "tier2",
-      "rank": 31,
+      "rank": 44,
       "admissions": {
         "acceptRate": 25.28,
         "classSize": 107,
@@ -3688,7 +3821,11 @@
         "schoolPassRate": 94.74,
         "stateAvgPassRate": 84.88,
         "passDifference": 9.86
-      }
+      },
+      "rank2025": 31,
+      "rankDisplay": "#44",
+      "rankDisplay2025": "#31",
+      "rankTied": true
     },
     "william-mary-law-school": {
       "name": "William & Mary Law School",
@@ -3698,7 +3835,7 @@
       "lat": 37.2709,
       "lng": -76.7143,
       "tier": "tier2",
-      "rank": 31,
+      "rank": 34,
       "admissions": {
         "acceptRate": 21.97,
         "classSize": 184,
@@ -3808,7 +3945,11 @@
         "schoolPassRate": 83.63,
         "stateAvgPassRate": 79.98,
         "passDifference": 3.65
-      }
+      },
+      "rank2025": 31,
+      "rankDisplay": "#34",
+      "rankDisplay2025": "#31",
+      "rankTied": true
     },
     "university-of-iowa-college-of-law": {
       "name": "University of Iowa College of Law",
@@ -3818,7 +3959,7 @@
       "lat": 41.6614,
       "lng": -91.5347,
       "tier": "tier2",
-      "rank": 36,
+      "rank": 32,
       "admissions": {
         "acceptRate": 44.28,
         "classSize": 159,
@@ -3912,7 +4053,11 @@
         "schoolPassRate": 90.96,
         "stateAvgPassRate": 82.1,
         "passDifference": 8.86
-      }
+      },
+      "rank2025": 36,
+      "rankDisplay": "#32",
+      "rankDisplay2025": "#36",
+      "rankTied": true
     },
     "washington-and-lee-university-school-of-law": {
       "name": "Washington and Lee University School of Law",
@@ -3922,7 +4067,7 @@
       "lat": 37.7893,
       "lng": -79.4428,
       "tier": "tier2",
-      "rank": 36,
+      "rank": 34,
       "admissions": {
         "acceptRate": 22.73,
         "classSize": 131,
@@ -4032,7 +4177,11 @@
         "schoolPassRate": 89.36,
         "stateAvgPassRate": 80.09,
         "passDifference": 9.27
-      }
+      },
+      "rank2025": 36,
+      "rankDisplay": "#34",
+      "rankDisplay2025": "#36",
+      "rankTied": true
     },
     "uc-irvine-school-of-law": {
       "name": "UC Irvine School of Law",
@@ -4042,7 +4191,7 @@
       "lat": 33.6405,
       "lng": -117.8443,
       "tier": "tier2",
-      "rank": 38,
+      "rank": 34,
       "admissions": {
         "acceptRate": 14.92,
         "classSize": 189,
@@ -4136,7 +4285,11 @@
         "schoolPassRate": 85.53,
         "stateAvgPassRate": 77.98,
         "passDifference": 7.55
-      }
+      },
+      "rank2025": 38,
+      "rankDisplay": "#34",
+      "rankDisplay2025": "#38",
+      "rankTied": true
     },
     "emory-university-school-of-law": {
       "name": "Emory University School of Law",
@@ -4146,7 +4299,7 @@
       "lat": 33.7914,
       "lng": -84.3239,
       "tier": "tier2",
-      "rank": 38,
+      "rank": 40,
       "admissions": {
         "acceptRate": 30.09,
         "classSize": 391,
@@ -4256,7 +4409,11 @@
         "schoolPassRate": 88.36,
         "stateAvgPassRate": 80.47,
         "passDifference": 7.89
-      }
+      },
+      "rank2025": 38,
+      "rankDisplay": "#40",
+      "rankDisplay2025": "#38",
+      "rankTied": true
     },
     "florida-state-university-college-of-law": {
       "name": "Florida State University College of Law",
@@ -4266,7 +4423,7 @@
       "lat": 30.4415,
       "lng": -84.2983,
       "tier": "tier2",
-      "rank": 38,
+      "rank": 34,
       "admissions": {
         "acceptRate": 15.97,
         "classSize": 153,
@@ -4376,7 +4533,11 @@
         "schoolPassRate": 87.22,
         "stateAvgPassRate": 73.35,
         "passDifference": 13.87
-      }
+      },
+      "rank2025": 38,
+      "rankDisplay": "#34",
+      "rankDisplay2025": "#38",
+      "rankTied": true
     },
     "university-of-florida-levin-college-of-law": {
       "name": "University of Florida Levin College of Law",
@@ -4386,7 +4547,7 @@
       "lat": 29.6474,
       "lng": -82.3455,
       "tier": "tier2",
-      "rank": 38,
+      "rank": 34,
       "admissions": {
         "acceptRate": 16.52,
         "classSize": 229,
@@ -4480,7 +4641,11 @@
         "schoolPassRate": 88.55,
         "stateAvgPassRate": 75.2,
         "passDifference": 13.35
-      }
+      },
+      "rank2025": 38,
+      "rankDisplay": "#34",
+      "rankDisplay2025": "#38",
+      "rankTied": true
     },
     "fordham-university-school-of-law": {
       "name": "Fordham University School of Law",
@@ -4490,7 +4655,7 @@
       "lat": 40.7563,
       "lng": -74.0018,
       "tier": "tier2",
-      "rank": 38,
+      "rank": 42,
       "admissions": {
         "acceptRate": 16.22,
         "classSize": 444,
@@ -4600,7 +4765,11 @@
         "schoolPassRate": 92.98,
         "stateAvgPassRate": 85.77,
         "passDifference": 7.21
-      }
+      },
+      "rank2025": 38,
+      "rankDisplay": "#42",
+      "rankDisplay2025": "#38",
+      "rankTied": true
     },
     "baylor-law-school": {
       "name": "Baylor Law School",
@@ -4609,8 +4778,8 @@
       "city": "Waco, TX",
       "lat": 31.5488,
       "lng": -97.1131,
-      "tier": "tier3",
-      "rank": 43,
+      "tier": "tier2",
+      "rank": 34,
       "admissions": {
         "acceptRate": 20.59,
         "classSize": 165,
@@ -4704,7 +4873,11 @@
         "schoolPassRate": 94.92,
         "stateAvgPassRate": 81.44,
         "passDifference": 13.48
-      }
+      },
+      "rank2025": 43,
+      "rankDisplay": "#34",
+      "rankDisplay2025": "#43",
+      "rankTied": true
     },
     "smu-dedman-school-of-law": {
       "name": "SMU Dedman School of Law",
@@ -4713,8 +4886,8 @@
       "city": "Dallas, TX",
       "lat": 32.8434,
       "lng": -96.7844,
-      "tier": "tier3",
-      "rank": 43,
+      "tier": "tier2",
+      "rank": 42,
       "admissions": {
         "acceptRate": 24.59,
         "classSize": 254,
@@ -4808,7 +4981,11 @@
         "schoolPassRate": 90.2,
         "stateAvgPassRate": 81.36,
         "passDifference": 8.84
-      }
+      },
+      "rank2025": 43,
+      "rankDisplay": "#42",
+      "rankDisplay2025": "#43",
+      "rankTied": true
     },
     "arizona-state-sandra-day-oconnor-college-of-law": {
       "name": "Arizona State Sandra Day O'Connor College of Law",
@@ -4818,7 +4995,7 @@
       "lat": 33.4255,
       "lng": -111.94,
       "tier": "tier2",
-      "rank": 45,
+      "rank": 44,
       "admissions": {
         "acceptRate": 19.78,
         "classSize": 266,
@@ -4912,7 +5089,11 @@
         "schoolPassRate": 87.54,
         "stateAvgPassRate": 75.03,
         "passDifference": 12.51
-      }
+      },
+      "rank2025": 45,
+      "rankDisplay": "#44",
+      "rankDisplay2025": "#45",
+      "rankTied": true
     },
     "university-of-colorado-law-school": {
       "name": "University of Colorado Law School",
@@ -4921,8 +5102,8 @@
       "city": "Boulder, CO",
       "lat": 40.0076,
       "lng": -105.2659,
-      "tier": "tier2",
-      "rank": 46,
+      "tier": "tier3",
+      "rank": 54,
       "admissions": {
         "acceptRate": 27.56,
         "classSize": 199,
@@ -5016,7 +5197,11 @@
         "schoolPassRate": 90.42,
         "stateAvgPassRate": 84.93,
         "passDifference": 5.49
-      }
+      },
+      "rank2025": 46,
+      "rankDisplay": "#54",
+      "rankDisplay2025": "#46",
+      "rankTied": true
     },
     "indiana-university-maurer-school-of-law": {
       "name": "Indiana University Maurer School of Law",
@@ -5026,7 +5211,7 @@
       "lat": 39.1684,
       "lng": -86.523,
       "tier": "tier2",
-      "rank": 46,
+      "rank": 49,
       "admissions": {
         "acceptRate": 35.77,
         "classSize": 186,
@@ -5120,7 +5305,11 @@
         "schoolPassRate": 87.37,
         "stateAvgPassRate": 79.1,
         "passDifference": 8.27
-      }
+      },
+      "rank2025": 46,
+      "rankDisplay": "#49",
+      "rankDisplay2025": "#46",
+      "rankTied": true
     },
     "university-of-illinois-college-of-law": {
       "name": "University of Illinois College of Law",
@@ -5130,7 +5319,7 @@
       "lat": 40.102,
       "lng": -88.2272,
       "tier": "tier2",
-      "rank": 48,
+      "rank": 46,
       "admissions": {
         "acceptRate": 32.93,
         "classSize": 188,
@@ -5224,7 +5413,11 @@
         "schoolPassRate": 93.56,
         "stateAvgPassRate": 79.05,
         "passDifference": 14.51
-      }
+      },
+      "rank2025": 48,
+      "rankDisplay": "#46",
+      "rankDisplay2025": "#48",
+      "rankTied": true
     },
     "villanova-university-widger-school-of-law": {
       "name": "Villanova University Widger School of Law",
@@ -5234,7 +5427,7 @@
       "lat": 40.0358,
       "lng": -75.3416,
       "tier": "tier2",
-      "rank": 48,
+      "rank": 49,
       "admissions": {
         "acceptRate": 25.93,
         "classSize": 232,
@@ -5344,7 +5537,11 @@
         "schoolPassRate": 91.26,
         "stateAvgPassRate": 80.14,
         "passDifference": 11.12
-      }
+      },
+      "rank2025": 48,
+      "rankDisplay": "#49",
+      "rankDisplay2025": "#48",
+      "rankTied": true
     },
     "uc-davis-school-of-law": {
       "name": "UC Davis School of Law",
@@ -5353,8 +5550,8 @@
       "city": "Davis, CA",
       "lat": 38.5382,
       "lng": -121.7617,
-      "tier": "tier2",
-      "rank": 50,
+      "tier": "tier3",
+      "rank": 52,
       "admissions": {
         "acceptRate": 15.97,
         "classSize": 209,
@@ -5448,7 +5645,11 @@
         "schoolPassRate": 88.94,
         "stateAvgPassRate": 77.78,
         "passDifference": 11.16
-      }
+      },
+      "rank2025": 50,
+      "rankDisplay": "#52",
+      "rankDisplay2025": "#50",
+      "rankTied": true
     },
     "university-of-connecticut-school-of-law": {
       "name": "University of Connecticut School of Law",
@@ -5457,8 +5658,8 @@
       "city": "Hartford, CT",
       "lat": 41.778,
       "lng": -72.6908,
-      "tier": "tier2",
-      "rank": 50,
+      "tier": "tier3",
+      "rank": 58,
       "admissions": {
         "acceptRate": 20.05,
         "classSize": 151,
@@ -5552,7 +5753,11 @@
         "schoolPassRate": 84,
         "stateAvgPassRate": 75.84,
         "passDifference": 8.16
-      }
+      },
+      "rank2025": 50,
+      "rankDisplay": "#58",
+      "rankDisplay2025": "#50",
+      "rankTied": false
     },
     "university-of-kansas-school-of-law": {
       "name": "University of Kansas School of Law",
@@ -5562,7 +5767,7 @@
       "lat": 38.9543,
       "lng": -95.2558,
       "tier": "tier2",
-      "rank": 50,
+      "rank": 46,
       "admissions": {
         "acceptRate": 39.08,
         "classSize": 122,
@@ -5656,7 +5861,11 @@
         "schoolPassRate": 92.17,
         "stateAvgPassRate": 80.59,
         "passDifference": 11.58
-      }
+      },
+      "rank2025": 50,
+      "rankDisplay": "#46",
+      "rankDisplay2025": "#50",
+      "rankTied": true
     },
     "temple-university-beasley-school-of-law": {
       "name": "Temple University Beasley School of Law",
@@ -5666,7 +5875,7 @@
       "lat": 39.9813,
       "lng": -75.1551,
       "tier": "tier2",
-      "rank": 50,
+      "rank": 49,
       "admissions": {
         "acceptRate": 24.38,
         "classSize": 237,
@@ -5776,7 +5985,11 @@
         "schoolPassRate": 90.28,
         "stateAvgPassRate": 79.72,
         "passDifference": 10.56
-      }
+      },
+      "rank2025": 50,
+      "rankDisplay": "#49",
+      "rankDisplay2025": "#50",
+      "rankTied": true
     },
     "university-of-washington-school-of-law": {
       "name": "University of Washington School of Law",
@@ -5785,8 +5998,8 @@
       "city": "Seattle, WA",
       "lat": 47.6537,
       "lng": -122.3082,
-      "tier": "tier2",
-      "rank": 50,
+      "tier": "tier3",
+      "rank": 52,
       "admissions": {
         "acceptRate": 19.61,
         "classSize": 207,
@@ -5880,7 +6093,11 @@
         "schoolPassRate": 91.72,
         "stateAvgPassRate": 82.21,
         "passDifference": 9.51
-      }
+      },
+      "rank2025": 50,
+      "rankDisplay": "#52",
+      "rankDisplay2025": "#50",
+      "rankTied": true
     },
     "pepperdine-caruso-school-of-law": {
       "name": "Pepperdine Caruso School of Law",
@@ -5889,8 +6106,8 @@
       "city": "Malibu, CA",
       "lat": 34.0367,
       "lng": -118.6951,
-      "tier": "tier3",
-      "rank": 55,
+      "tier": "tier2",
+      "rank": 46,
       "admissions": {
         "acceptRate": 23.36,
         "classSize": 227,
@@ -5984,7 +6201,11 @@
         "schoolPassRate": 86.77,
         "stateAvgPassRate": 78.03,
         "passDifference": 8.74
-      }
+      },
+      "rank2025": 55,
+      "rankDisplay": "#46",
+      "rankDisplay2025": "#55",
+      "rankTied": true
     },
     "university-of-tennessee-college-of-law": {
       "name": "University of Tennessee College of Law",
@@ -5994,7 +6215,7 @@
       "lat": 35.9544,
       "lng": -83.927,
       "tier": "tier3",
-      "rank": 55,
+      "rank": 57,
       "admissions": {
         "acceptRate": 24.77,
         "classSize": 140,
@@ -6088,7 +6309,11 @@
         "schoolPassRate": 91.94,
         "stateAvgPassRate": 78.49,
         "passDifference": 13.45
-      }
+      },
+      "rank2025": 55,
+      "rankDisplay": "#57",
+      "rankDisplay2025": "#55",
+      "rankTied": false
     },
     "university-of-missouri-school-of-law": {
       "name": "University of Missouri School of Law",
@@ -6098,7 +6323,7 @@
       "lat": 38.9517,
       "lng": -92.3341,
       "tier": "tier3",
-      "rank": 57,
+      "rank": 59,
       "admissions": {
         "acceptRate": 41.98,
         "classSize": 129,
@@ -6192,7 +6417,11 @@
         "schoolPassRate": 83.33,
         "stateAvgPassRate": 82.12,
         "passDifference": 1.21
-      }
+      },
+      "rank2025": 57,
+      "rankDisplay": "#59",
+      "rankDisplay2025": "#57",
+      "rankTied": true
     },
     "university-of-san-diego-school-of-law": {
       "name": "University of San Diego School of Law",
@@ -6202,7 +6431,7 @@
       "lat": 32.7726,
       "lng": -117.1895,
       "tier": "tier3",
-      "rank": 57,
+      "rank": 54,
       "admissions": {
         "acceptRate": 23.51,
         "classSize": 240,
@@ -6296,7 +6525,11 @@
         "schoolPassRate": 84.8,
         "stateAvgPassRate": 77.82,
         "passDifference": 6.98
-      }
+      },
+      "rank2025": 57,
+      "rankDisplay": "#54",
+      "rankDisplay2025": "#57",
+      "rankTied": true
     },
     "university-of-arizona-james-e-rogers-college-of-law": {
       "name": "University of Arizona James E. Rogers College of Law",
@@ -6306,7 +6539,7 @@
       "lat": 32.2319,
       "lng": -110.9501,
       "tier": "tier3",
-      "rank": 59,
+      "rank": 70,
       "admissions": {
         "acceptRate": 27.91,
         "classSize": 110,
@@ -6400,7 +6633,11 @@
         "schoolPassRate": 72.17,
         "stateAvgPassRate": 75.3,
         "passDifference": -3.13
-      }
+      },
+      "rank2025": 59,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#59",
+      "rankTied": true
     },
     "marquette-university-law-school": {
       "name": "Marquette University Law School",
@@ -6520,7 +6757,11 @@
         "schoolPassRate": 50,
         "stateAvgPassRate": 70.94,
         "passDifference": -20.94
-      }
+      },
+      "rank2025": 59,
+      "rankDisplay": "#59",
+      "rankDisplay2025": "#59",
+      "rankTied": true
     },
     "university-of-oklahoma-college-of-law": {
       "name": "University of Oklahoma College of Law",
@@ -6530,7 +6771,7 @@
       "lat": 35.2058,
       "lng": -97.4474,
       "tier": "tier3",
-      "rank": 59,
+      "rank": 62,
       "admissions": {
         "acceptRate": 33.36,
         "classSize": 200,
@@ -6624,7 +6865,11 @@
         "schoolPassRate": 88.77,
         "stateAvgPassRate": 80.56,
         "passDifference": 8.21
-      }
+      },
+      "rank2025": 59,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#59",
+      "rankTied": true
     },
     "penn-state-dickinson-law": {
       "name": "Penn State Dickinson Law",
@@ -6634,7 +6879,7 @@
       "lat": 40.201,
       "lng": -77.1997,
       "tier": "tier3",
-      "rank": 59,
+      "rank": 62,
       "admissions": {
         "acceptRate": 42.99,
         "classSize": 215,
@@ -6744,7 +6989,11 @@
         "schoolPassRate": 87.04,
         "stateAvgPassRate": 79.66,
         "passDifference": 7.38
-      }
+      },
+      "rank2025": 59,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#59",
+      "rankTied": true
     },
     "cardozo-school-of-law": {
       "name": "Cardozo School of Law",
@@ -6754,7 +7003,7 @@
       "lat": 40.7298,
       "lng": -73.988,
       "tier": "tier3",
-      "rank": 63,
+      "rank": 59,
       "admissions": {
         "acceptRate": 29.56,
         "classSize": 326,
@@ -6848,7 +7097,11 @@
         "schoolPassRate": 88.47,
         "stateAvgPassRate": 85.16,
         "passDifference": 3.31
-      }
+      },
+      "rank2025": 63,
+      "rankDisplay": "#59",
+      "rankDisplay2025": "#63",
+      "rankTied": true
     },
     "university-of-houston-law-center": {
       "name": "University of Houston Law Center",
@@ -6858,7 +7111,7 @@
       "lat": 29.7216,
       "lng": -95.3403,
       "tier": "tier3",
-      "rank": 63,
+      "rank": 54,
       "admissions": {
         "acceptRate": 22.99,
         "classSize": 249,
@@ -6952,7 +7205,11 @@
         "schoolPassRate": 88.63,
         "stateAvgPassRate": 81.34,
         "passDifference": 7.29
-      }
+      },
+      "rank2025": 63,
+      "rankDisplay": "#54",
+      "rankDisplay2025": "#63",
+      "rankTied": true
     },
     "university-of-maryland-carey-school-of-law": {
       "name": "University of Maryland Carey School of Law",
@@ -6962,7 +7219,7 @@
       "lat": 39.2988,
       "lng": -76.5914,
       "tier": "tier3",
-      "rank": 63,
+      "rank": 62,
       "admissions": {
         "acceptRate": 26.08,
         "classSize": 229,
@@ -7056,7 +7313,11 @@
         "schoolPassRate": 82.1,
         "stateAvgPassRate": 72.24,
         "passDifference": 9.86
-      }
+      },
+      "rank2025": 63,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#63",
+      "rankTied": true
     },
     "university-of-south-carolina-school-of-law": {
       "name": "University of South Carolina School of Law",
@@ -7066,7 +7327,7 @@
       "lat": 33.9974,
       "lng": -81.0298,
       "tier": "tier3",
-      "rank": 63,
+      "rank": 62,
       "admissions": {
         "acceptRate": 29.9,
         "classSize": 221,
@@ -7160,7 +7421,11 @@
         "schoolPassRate": 83.25,
         "stateAvgPassRate": 75.81,
         "passDifference": 7.44
-      }
+      },
+      "rank2025": 63,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#63",
+      "rankTied": true
     },
     "st-johns-university-school-of-law": {
       "name": "St. John's University School of Law",
@@ -7170,7 +7435,7 @@
       "lat": 40.7228,
       "lng": -73.7949,
       "tier": "tier3",
-      "rank": 63,
+      "rank": 62,
       "admissions": {
         "acceptRate": 23.05,
         "classSize": 241,
@@ -7280,7 +7545,11 @@
         "schoolPassRate": 87.74,
         "stateAvgPassRate": 86.11,
         "passDifference": 1.63
-      }
+      },
+      "rank2025": 63,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#63",
+      "rankTied": true
     },
     "university-of-kentucky-college-of-law": {
       "name": "University of Kentucky College of Law",
@@ -7290,7 +7559,7 @@
       "lat": 38.0345,
       "lng": -84.5037,
       "tier": "tier3",
-      "rank": 68,
+      "rank": 70,
       "admissions": {
         "acceptRate": 40.78,
         "classSize": 147,
@@ -7384,7 +7653,11 @@
         "schoolPassRate": 83.09,
         "stateAvgPassRate": 78.83,
         "passDifference": 4.26
-      }
+      },
+      "rank2025": 68,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#68",
+      "rankTied": true
     },
     "northeastern-university-school-of-law": {
       "name": "Northeastern University School of Law",
@@ -7394,7 +7667,7 @@
       "lat": 42.3408,
       "lng": -71.0898,
       "tier": "tier3",
-      "rank": 68,
+      "rank": 77,
       "admissions": {
         "acceptRate": 24.22,
         "classSize": 283,
@@ -7504,7 +7777,11 @@
         "schoolPassRate": 87.39,
         "stateAvgPassRate": 82.85,
         "passDifference": 4.54
-      }
+      },
+      "rank2025": 68,
+      "rankDisplay": "#77",
+      "rankDisplay2025": "#68",
+      "rankTied": true
     },
     "catholic-university-of-america-columbus-school-of-law": {
       "name": "Catholic University of America Columbus School of Law",
@@ -7514,7 +7791,7 @@
       "lat": 38.9342,
       "lng": -77.0024,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 70,
       "admissions": {
         "acceptRate": 32.4,
         "classSize": 182,
@@ -7624,7 +7901,11 @@
         "schoolPassRate": 83.08,
         "stateAvgPassRate": 81.09,
         "passDifference": 1.99
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "university-of-cincinnati-college-of-law": {
       "name": "University of Cincinnati College of Law",
@@ -7634,7 +7915,7 @@
       "lat": 39.1329,
       "lng": -84.515,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 82,
       "admissions": {
         "acceptRate": 32.74,
         "classSize": 139,
@@ -7728,7 +8009,11 @@
         "schoolPassRate": 85.59,
         "stateAvgPassRate": 80.62,
         "passDifference": 4.97
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#82",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "loyola-law-school-los-angeles": {
       "name": "Loyola Law School Los Angeles",
@@ -7738,7 +8023,7 @@
       "lat": 34.0573,
       "lng": -118.2889,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 70,
       "admissions": {
         "acceptRate": 26.05,
         "classSize": 338,
@@ -7832,7 +8117,11 @@
         "schoolPassRate": 84.19,
         "stateAvgPassRate": 77.65,
         "passDifference": 6.54
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "university-of-nebraska-college-of-law": {
       "name": "University of Nebraska College of Law",
@@ -7842,7 +8131,7 @@
       "lat": 40.8136,
       "lng": -96.7026,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 62,
       "admissions": {
         "acceptRate": 40.15,
         "classSize": 154,
@@ -7936,7 +8225,11 @@
         "schoolPassRate": 90.54,
         "stateAvgPassRate": 83.11,
         "passDifference": 7.43
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "university-of-richmond-school-of-law": {
       "name": "University of Richmond School of Law",
@@ -7946,7 +8239,7 @@
       "lat": 37.5743,
       "lng": -77.5394,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 62,
       "admissions": {
         "acceptRate": 39.64,
         "classSize": 146,
@@ -8040,7 +8333,11 @@
         "schoolPassRate": 80.13,
         "stateAvgPassRate": 77.32,
         "passDifference": 2.81
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "seton-hall-university-school-of-law": {
       "name": "Seton Hall University School of Law",
@@ -8050,7 +8347,7 @@
       "lat": 40.7425,
       "lng": -74.174,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 70,
       "admissions": {
         "acceptRate": 34.27,
         "classSize": 302,
@@ -8160,7 +8457,11 @@
         "schoolPassRate": 87.21,
         "stateAvgPassRate": 75.69,
         "passDifference": 11.52
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "tulane-university-law-school": {
       "name": "Tulane University Law School",
@@ -8170,7 +8471,7 @@
       "lat": 29.9399,
       "lng": -90.1184,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 70,
       "admissions": {
         "acceptRate": 39.97,
         "classSize": 241,
@@ -8280,7 +8581,11 @@
         "schoolPassRate": 77.73,
         "stateAvgPassRate": 79.22,
         "passDifference": -1.49
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "wayne-state-university-law-school": {
       "name": "Wayne State University Law School",
@@ -8290,7 +8595,7 @@
       "lat": 42.358,
       "lng": -83.0683,
       "tier": "tier3",
-      "rank": 71,
+      "rank": 62,
       "admissions": {
         "acceptRate": 24.81,
         "classSize": 129,
@@ -8400,7 +8705,11 @@
         "schoolPassRate": 86.05,
         "stateAvgPassRate": 72.93,
         "passDifference": 13.12
-      }
+      },
+      "rank2025": 71,
+      "rankDisplay": "#62",
+      "rankDisplay2025": "#71",
+      "rankTied": true
     },
     "drexel-university-kline-school-of-law": {
       "name": "Drexel University Kline School of Law",
@@ -8410,7 +8719,7 @@
       "lat": 39.9564,
       "lng": -75.1897,
       "tier": "tier3",
-      "rank": 79,
+      "rank": 82,
       "admissions": {
         "acceptRate": 29.64,
         "classSize": 181,
@@ -8520,7 +8829,11 @@
         "schoolPassRate": 85,
         "stateAvgPassRate": 79.48,
         "passDifference": 5.52
-      }
+      },
+      "rank2025": 79,
+      "rankDisplay": "#82",
+      "rankDisplay2025": "#79",
+      "rankTied": true
     },
     "georgia-state-university-college-of-law": {
       "name": "Georgia State University College of Law",
@@ -8530,7 +8843,7 @@
       "lat": 33.753,
       "lng": -84.3863,
       "tier": "tier3",
-      "rank": 79,
+      "rank": 77,
       "admissions": {
         "acceptRate": 30.57,
         "classSize": 237,
@@ -8640,7 +8953,11 @@
         "schoolPassRate": 89.95,
         "stateAvgPassRate": 79.87,
         "passDifference": 10.08
-      }
+      },
+      "rank2025": 79,
+      "rankDisplay": "#77",
+      "rankDisplay2025": "#79",
+      "rankTied": true
     },
     "loyola-university-chicago-school-of-law": {
       "name": "Loyola University Chicago School of Law",
@@ -8650,7 +8967,7 @@
       "lat": 41.8998,
       "lng": -87.6559,
       "tier": "tier3",
-      "rank": 79,
+      "rank": 77,
       "admissions": {
         "acceptRate": 28.18,
         "classSize": 296,
@@ -8744,7 +9061,11 @@
         "schoolPassRate": 80,
         "stateAvgPassRate": 78.82,
         "passDifference": 1.18
-      }
+      },
+      "rank2025": 79,
+      "rankDisplay": "#77",
+      "rankDisplay2025": "#79",
+      "rankTied": true
     },
     "unlv-william-s-boyd-school-of-law": {
       "name": "UNLV William S. Boyd School of Law",
@@ -8754,7 +9075,7 @@
       "lat": 36.1156,
       "lng": -115.1423,
       "tier": "tier3",
-      "rank": 79,
+      "rank": 91,
       "admissions": {
         "acceptRate": 30.78,
         "classSize": 156,
@@ -8848,7 +9169,11 @@
         "schoolPassRate": 77.16,
         "stateAvgPassRate": 70.94,
         "passDifference": 6.22
-      }
+      },
+      "rank2025": 79,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#79",
+      "rankTied": true
     },
     "university-of-pittsburgh-school-of-law": {
       "name": "University of Pittsburgh School of Law",
@@ -8858,7 +9183,7 @@
       "lat": 40.4443,
       "lng": -79.9528,
       "tier": "tier3",
-      "rank": 79,
+      "rank": 77,
       "admissions": {
         "acceptRate": 34.87,
         "classSize": 155,
@@ -8952,7 +9277,11 @@
         "schoolPassRate": 86.33,
         "stateAvgPassRate": 80.21,
         "passDifference": 6.12
-      }
+      },
+      "rank2025": 79,
+      "rankDisplay": "#77",
+      "rankDisplay2025": "#79",
+      "rankTied": true
     },
     "belmont-university-college-of-law": {
       "name": "Belmont University College of Law",
@@ -8962,7 +9291,7 @@
       "lat": 36.1354,
       "lng": -86.7979,
       "tier": "tier3",
-      "rank": 84,
+      "rank": 85,
       "admissions": {
         "acceptRate": 37.62,
         "classSize": 136,
@@ -9072,7 +9401,11 @@
         "schoolPassRate": 95,
         "stateAvgPassRate": 77.95,
         "passDifference": 17.05
-      }
+      },
+      "rank2025": 84,
+      "rankDisplay": "#85",
+      "rankDisplay2025": "#84",
+      "rankTied": true
     },
     "drake-university-law-school": {
       "name": "Drake University Law School",
@@ -9082,7 +9415,7 @@
       "lat": 41.6005,
       "lng": -93.651,
       "tier": "tier3",
-      "rank": 84,
+      "rank": 91,
       "admissions": {
         "acceptRate": 54.82,
         "classSize": 141,
@@ -9192,7 +9525,11 @@
         "schoolPassRate": 85.71,
         "stateAvgPassRate": 83.73,
         "passDifference": 1.98
-      }
+      },
+      "rank2025": 84,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#84",
+      "rankTied": true
     },
     "florida-international-university-college-of-law": {
       "name": "Florida International University College of Law",
@@ -9202,7 +9539,7 @@
       "lat": 25.7582,
       "lng": -80.3748,
       "tier": "tier3",
-      "rank": 84,
+      "rank": 77,
       "admissions": {
         "acceptRate": 18.77,
         "classSize": 175,
@@ -9312,7 +9649,11 @@
         "schoolPassRate": 88.34,
         "stateAvgPassRate": 72.91,
         "passDifference": 15.43
-      }
+      },
+      "rank2025": 84,
+      "rankDisplay": "#77",
+      "rankDisplay2025": "#84",
+      "rankTied": true
     },
     "lsu-paul-m-hebert-law-center": {
       "name": "LSU Paul M. Hebert Law Center",
@@ -9322,7 +9663,7 @@
       "lat": 30.4125,
       "lng": -91.1801,
       "tier": "tier3",
-      "rank": 84,
+      "rank": 85,
       "admissions": {
         "acceptRate": 38.55,
         "classSize": 230,
@@ -9416,7 +9757,11 @@
         "schoolPassRate": 84.92,
         "stateAvgPassRate": 74.57,
         "passDifference": 10.35
-      }
+      },
+      "rank2025": 84,
+      "rankDisplay": "#85",
+      "rankDisplay2025": "#84",
+      "rankTied": true
     },
     "university-of-denver-sturm-college-of-law": {
       "name": "University of Denver Sturm College of Law",
@@ -9426,7 +9771,7 @@
       "lat": 39.6767,
       "lng": -104.9619,
       "tier": "tier3",
-      "rank": 88,
+      "rank": 91,
       "admissions": {
         "acceptRate": 41.33,
         "classSize": 285,
@@ -9520,7 +9865,11 @@
         "schoolPassRate": 84.89,
         "stateAvgPassRate": 85.07,
         "passDifference": -0.18
-      }
+      },
+      "rank2025": 88,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#88",
+      "rankTied": true
     },
     "university-of-maine-school-of-law": {
       "name": "University of Maine School of Law",
@@ -9530,7 +9879,7 @@
       "lat": 43.6591,
       "lng": -70.2568,
       "tier": "tier3",
-      "rank": 88,
+      "rank": 91,
       "admissions": {
         "acceptRate": 37.27,
         "classSize": 104,
@@ -9624,7 +9973,11 @@
         "schoolPassRate": 84.42,
         "stateAvgPassRate": 75.15,
         "passDifference": 9.27
-      }
+      },
+      "rank2025": 88,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#88",
+      "rankTied": true
     },
     "texas-tech-university-school-of-law": {
       "name": "Texas Tech University School of Law",
@@ -9634,7 +9987,7 @@
       "lat": 33.5779,
       "lng": -101.8552,
       "tier": "tier3",
-      "rank": 88,
+      "rank": 85,
       "admissions": {
         "acceptRate": 25.61,
         "classSize": 168,
@@ -9744,7 +10097,11 @@
         "schoolPassRate": 86.3,
         "stateAvgPassRate": 81.48,
         "passDifference": 4.82
-      }
+      },
+      "rank2025": 88,
+      "rankDisplay": "#85",
+      "rankDisplay2025": "#88",
+      "rankTied": true
     },
     "duquesne-university-school-of-law": {
       "name": "Duquesne University School of Law",
@@ -9754,7 +10111,7 @@
       "lat": 40.4381,
       "lng": -79.9955,
       "tier": "tier3",
-      "rank": 92,
+      "rank": 85,
       "admissions": {
         "acceptRate": 43.23,
         "classSize": 184,
@@ -9864,7 +10221,11 @@
         "schoolPassRate": 88.74,
         "stateAvgPassRate": 80.14,
         "passDifference": 8.6
-      }
+      },
+      "rank2025": 92,
+      "rankDisplay": "#85",
+      "rankDisplay2025": "#92",
+      "rankTied": true
     },
     "university-of-miami-school-of-law": {
       "name": "University of Miami School of Law",
@@ -9874,7 +10235,7 @@
       "lat": 25.7218,
       "lng": -80.2789,
       "tier": "tier3",
-      "rank": 92,
+      "rank": 70,
       "admissions": {
         "acceptRate": 24.65,
         "classSize": 313,
@@ -9968,7 +10329,11 @@
         "schoolPassRate": 81.28,
         "stateAvgPassRate": 74.6,
         "passDifference": 6.68
-      }
+      },
+      "rank2025": 92,
+      "rankDisplay": "#70",
+      "rankDisplay2025": "#92",
+      "rankTied": true
     },
     "university-at-buffalo-school-of-law": {
       "name": "University at Buffalo School of Law",
@@ -9978,7 +10343,7 @@
       "lat": 43.0018,
       "lng": -78.7877,
       "tier": "tier3",
-      "rank": 94,
+      "rank": 82,
       "admissions": {
         "acceptRate": 42.37,
         "classSize": 167,
@@ -10072,7 +10437,11 @@
         "schoolPassRate": 85.71,
         "stateAvgPassRate": 86.24,
         "passDifference": -0.53
-      }
+      },
+      "rank2025": 94,
+      "rankDisplay": "#82",
+      "rankDisplay2025": "#94",
+      "rankTied": true
     },
     "university-of-oregon-school-of-law": {
       "name": "University of Oregon School of Law",
@@ -10082,7 +10451,7 @@
       "lat": 44.0448,
       "lng": -123.0722,
       "tier": "tier3",
-      "rank": 94,
+      "rank": 91,
       "admissions": {
         "acceptRate": 54.97,
         "classSize": 186,
@@ -10176,7 +10545,11 @@
         "schoolPassRate": 85.06,
         "stateAvgPassRate": 76.32,
         "passDifference": 8.74
-      }
+      },
+      "rank2025": 94,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#94",
+      "rankTied": true
     },
     "regent-university-school-of-law": {
       "name": "Regent University School of Law",
@@ -10186,7 +10559,7 @@
       "lat": 36.8465,
       "lng": -76.1169,
       "tier": "tier3",
-      "rank": 94,
+      "rank": 91,
       "admissions": {
         "acceptRate": 44.32,
         "classSize": 127,
@@ -10296,7 +10669,11 @@
         "schoolPassRate": 88.18,
         "stateAvgPassRate": 77.6,
         "passDifference": 10.58
-      }
+      },
+      "rank2025": 94,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#94",
+      "rankTied": true
     },
     "saint-louis-university-school-of-law": {
       "name": "Saint Louis University School of Law",
@@ -10306,7 +10683,7 @@
       "lat": 38.6375,
       "lng": -90.235,
       "tier": "tier3",
-      "rank": 94,
+      "rank": 91,
       "admissions": {
         "acceptRate": 56.43,
         "classSize": 222,
@@ -10416,7 +10793,11 @@
         "schoolPassRate": 83.98,
         "stateAvgPassRate": 81.88,
         "passDifference": 2.1
-      }
+      },
+      "rank2025": 94,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#94",
+      "rankTied": true
     },
     "university-of-st-thomas-school-of-law": {
       "name": "University of St. Thomas School of Law",
@@ -10426,7 +10807,7 @@
       "lat": 44.9556,
       "lng": -93.1655,
       "tier": "tier3",
-      "rank": 94,
+      "rank": 105,
       "admissions": {
         "acceptRate": 60.25,
         "classSize": 431,
@@ -10520,7 +10901,11 @@
         "schoolPassRate": 74.7,
         "stateAvgPassRate": 84.41,
         "passDifference": -9.71
-      }
+      },
+      "rank2025": 94,
+      "rankDisplay": "#105",
+      "rankDisplay2025": "#94",
+      "rankTied": true
     },
     "university-of-hawaii-richardson-school-of-law": {
       "name": "University of Hawaii Richardson School of Law",
@@ -10530,7 +10915,7 @@
       "lat": 21.2969,
       "lng": -157.8219,
       "tier": "tier3",
-      "rank": 99,
+      "rank": 91,
       "admissions": {
         "acceptRate": 26.24,
         "classSize": 140,
@@ -10624,7 +11009,11 @@
         "schoolPassRate": 76.92,
         "stateAvgPassRate": 74.94,
         "passDifference": 1.98
-      }
+      },
+      "rank2025": 99,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#99",
+      "rankTied": true
     },
     "lewis-clark-law-school": {
       "name": "Lewis & Clark Law School",
@@ -10634,7 +11023,7 @@
       "lat": 45.4586,
       "lng": -122.6716,
       "tier": "tier3",
-      "rank": 99,
+      "rank": 112,
       "admissions": {
         "acceptRate": 54.72,
         "classSize": 176,
@@ -10744,7 +11133,11 @@
         "schoolPassRate": 85.03,
         "stateAvgPassRate": 75.03,
         "passDifference": 10
-      }
+      },
+      "rank2025": 99,
+      "rankDisplay": "#112",
+      "rankDisplay2025": "#99",
+      "rankTied": true
     },
     "university-of-missouri-kansas-city-school-of-law": {
       "name": "University of Missouri-Kansas City School of Law",
@@ -10754,7 +11147,7 @@
       "lat": 39.0392,
       "lng": -94.5783,
       "tier": "tier3",
-      "rank": 99,
+      "rank": 100,
       "admissions": {
         "acceptRate": 45.94,
         "classSize": 143,
@@ -10848,7 +11241,11 @@
         "schoolPassRate": 84.13,
         "stateAvgPassRate": 82.17,
         "passDifference": 1.96
-      }
+      },
+      "rank2025": 99,
+      "rankDisplay": "#100",
+      "rankDisplay2025": "#99",
+      "rankTied": true
     },
     "university-of-montana-school-of-law": {
       "name": "University of Montana School of Law",
@@ -10858,7 +11255,7 @@
       "lat": 46.8625,
       "lng": -113.9847,
       "tier": "tier3",
-      "rank": 99,
+      "rank": 90,
       "admissions": {
         "acceptRate": 51.41,
         "classSize": 95,
@@ -10952,7 +11349,11 @@
         "schoolPassRate": 82.05,
         "stateAvgPassRate": 80.67,
         "passDifference": 1.38
-      }
+      },
+      "rank2025": 99,
+      "rankDisplay": "#90",
+      "rankDisplay2025": "#99",
+      "rankTied": false
     },
     "stetson-university-college-of-law": {
       "name": "Stetson University College of Law",
@@ -10962,7 +11363,7 @@
       "lat": 27.7388,
       "lng": -82.6944,
       "tier": "tier3",
-      "rank": 99,
+      "rank": 91,
       "admissions": {
         "acceptRate": 36.44,
         "classSize": 336,
@@ -11072,7 +11473,11 @@
         "schoolPassRate": 77.03,
         "stateAvgPassRate": 73.18,
         "passDifference": 3.85
-      }
+      },
+      "rank2025": 99,
+      "rankDisplay": "#91",
+      "rankDisplay2025": "#99",
+      "rankTied": true
     },
     "american-university-washington-college-of-law": {
       "name": "American University Washington College of Law",
@@ -11082,7 +11487,7 @@
       "lat": 38.9342,
       "lng": -77.0861,
       "tier": "tier3",
-      "rank": 104,
+      "rank": 108,
       "admissions": {
         "acceptRate": 33.28,
         "classSize": 405,
@@ -11192,7 +11597,11 @@
         "schoolPassRate": 81.28,
         "stateAvgPassRate": 81.98,
         "passDifference": -0.7
-      }
+      },
+      "rank2025": 104,
+      "rankDisplay": "#108",
+      "rankDisplay2025": "#104",
+      "rankTied": true
     },
     "chapman-university-fowler-school-of-law": {
       "name": "Chapman University Fowler School of Law",
@@ -11202,7 +11611,7 @@
       "lat": 33.7888,
       "lng": -117.8531,
       "tier": "tier3",
-      "rank": 104,
+      "rank": 112,
       "admissions": {
         "acceptRate": 20.53,
         "classSize": 153,
@@ -11312,7 +11721,11 @@
         "schoolPassRate": 74.13,
         "stateAvgPassRate": 77.65,
         "passDifference": -3.52
-      }
+      },
+      "rank2025": 104,
+      "rankDisplay": "#112",
+      "rankDisplay2025": "#104",
+      "rankTied": true
     },
     "rutgers-law-school": {
       "name": "Rutgers Law School",
@@ -11322,7 +11735,7 @@
       "lat": 39.9452,
       "lng": -75.1152,
       "tier": "tier3",
-      "rank": 104,
+      "rank": 100,
       "admissions": {
         "acceptRate": 33.54,
         "classSize": 489,
@@ -11416,7 +11829,11 @@
         "schoolPassRate": 72.81,
         "stateAvgPassRate": 75.12,
         "passDifference": -2.31
-      }
+      },
+      "rank2025": 104,
+      "rankDisplay": "#100",
+      "rankDisplay2025": "#104",
+      "rankTied": true
     },
     "case-western-reserve-university-school-of-law": {
       "name": "Case Western Reserve University School of Law",
@@ -11426,7 +11843,7 @@
       "lat": 41.5038,
       "lng": -81.6101,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 100,
       "admissions": {
         "acceptRate": 34.8,
         "classSize": 180,
@@ -11536,7 +11953,11 @@
         "schoolPassRate": 81.99,
         "stateAvgPassRate": 81,
         "passDifference": 0.99
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#100",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "chicago-kent-college-of-law-iit": {
       "name": "Chicago-Kent College of Law (IIT)",
@@ -11546,7 +11967,7 @@
       "lat": 41.8658,
       "lng": -87.6298,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 105,
       "admissions": {
         "acceptRate": 38.61,
         "classSize": 245,
@@ -11640,7 +12061,11 @@
         "schoolPassRate": 79.02,
         "stateAvgPassRate": 78.68,
         "passDifference": 0.34
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#105",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "university-of-dayton-school-of-law": {
       "name": "University of Dayton School of Law",
@@ -11650,7 +12075,7 @@
       "lat": 39.739,
       "lng": -84.1868,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 112,
       "admissions": {
         "acceptRate": 30.66,
         "classSize": 168,
@@ -11744,7 +12169,11 @@
         "schoolPassRate": 87.96,
         "stateAvgPassRate": 80.1,
         "passDifference": 7.86
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#112",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "indiana-university-mckinney-school-of-law": {
       "name": "Indiana University McKinney School of Law",
@@ -11754,7 +12183,7 @@
       "lat": 39.7684,
       "lng": -86.1581,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 124,
       "admissions": {
         "acceptRate": 55.86,
         "classSize": 280,
@@ -11848,7 +12277,11 @@
         "schoolPassRate": 73.87,
         "stateAvgPassRate": 77.95,
         "passDifference": -4.08
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#124",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "mercer-university-walter-f-george-school-of-law": {
       "name": "Mercer University Walter F. George School of Law",
@@ -11858,7 +12291,7 @@
       "lat": 32.8311,
       "lng": -83.6516,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 108,
       "admissions": {
         "acceptRate": 37.75,
         "classSize": 152,
@@ -11968,7 +12401,11 @@
         "schoolPassRate": 84,
         "stateAvgPassRate": 79.31,
         "passDifference": 4.69
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#108",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "university-of-new-mexico-school-of-law": {
       "name": "University of New Mexico School of Law",
@@ -11978,7 +12415,7 @@
       "lat": 35.0844,
       "lng": -106.6504,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 117,
       "admissions": {
         "acceptRate": 41.41,
         "classSize": 108,
@@ -12072,7 +12509,11 @@
         "schoolPassRate": 85.71,
         "stateAvgPassRate": 81.2,
         "passDifference": 4.51
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#117",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "samford-university-cumberland-school-of-law": {
       "name": "Samford University Cumberland School of Law",
@@ -12082,7 +12523,7 @@
       "lat": 33.4486,
       "lng": -86.7187,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 122,
       "admissions": {
         "acceptRate": 48.97,
         "classSize": 170,
@@ -12192,7 +12633,11 @@
         "schoolPassRate": 78.81,
         "stateAvgPassRate": 80.15,
         "passDifference": -1.34
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#122",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "syracuse-university-college-of-law": {
       "name": "Syracuse University College of Law",
@@ -12202,7 +12647,7 @@
       "lat": 43.0396,
       "lng": -76.1352,
       "tier": "tier3",
-      "rank": 107,
+      "rank": 100,
       "admissions": {
         "acceptRate": 34.59,
         "classSize": 271,
@@ -12312,7 +12757,11 @@
         "schoolPassRate": 82.9,
         "stateAvgPassRate": 82.61,
         "passDifference": 0.29
-      }
+      },
+      "rank2025": 107,
+      "rankDisplay": "#100",
+      "rankDisplay2025": "#107",
+      "rankTied": true
     },
     "university-of-arkansas-school-of-law": {
       "name": "University of Arkansas School of Law",
@@ -12322,7 +12771,7 @@
       "lat": 36.0683,
       "lng": -94.176,
       "tier": "tier3",
-      "rank": 115,
+      "rank": 100,
       "admissions": {
         "acceptRate": 26.63,
         "classSize": 135,
@@ -12416,7 +12865,11 @@
         "schoolPassRate": 80,
         "stateAvgPassRate": 77.09,
         "passDifference": 2.91
-      }
+      },
+      "rank2025": 115,
+      "rankDisplay": "#100",
+      "rankDisplay2025": "#115",
+      "rankTied": true
     },
     "michigan-state-university-college-of-law": {
       "name": "Michigan State University College of Law",
@@ -12426,7 +12879,7 @@
       "lat": 42.728,
       "lng": -84.4822,
       "tier": "tier3",
-      "rank": 115,
+      "rank": 108,
       "admissions": {
         "acceptRate": 26.02,
         "classSize": 150,
@@ -12536,7 +12989,11 @@
         "schoolPassRate": 78.34,
         "stateAvgPassRate": 74.39,
         "passDifference": 3.95
-      }
+      },
+      "rank2025": 115,
+      "rankDisplay": "#108",
+      "rankDisplay2025": "#115",
+      "rankTied": true
     },
     "albany-law-school": {
       "name": "Albany Law School",
@@ -12546,7 +13003,7 @@
       "lat": 42.657,
       "lng": -73.7742,
       "tier": "tier3",
-      "rank": 117,
+      "rank": 120,
       "admissions": {
         "acceptRate": 37.45,
         "classSize": 237,
@@ -12656,7 +13113,11 @@
         "schoolPassRate": 74.27,
         "stateAvgPassRate": 85.75,
         "passDifference": -11.48
-      }
+      },
+      "rank2025": 117,
+      "rankDisplay": "#120",
+      "rankDisplay2025": "#117",
+      "rankTied": true
     },
     "brooklyn-law-school": {
       "name": "Brooklyn Law School",
@@ -12666,7 +13127,7 @@
       "lat": 40.694,
       "lng": -73.99,
       "tier": "tier3",
-      "rank": 117,
+      "rank": 105,
       "admissions": {
         "acceptRate": 44,
         "classSize": 414,
@@ -12776,7 +13237,11 @@
         "schoolPassRate": 84.48,
         "stateAvgPassRate": 85.73,
         "passDifference": -1.25
-      }
+      },
+      "rank2025": 117,
+      "rankDisplay": "#105",
+      "rankDisplay2025": "#117",
+      "rankTied": true
     },
     "west-virginia-university-college-of-law": {
       "name": "West Virginia University College of Law",
@@ -12786,7 +13251,7 @@
       "lat": 39.635,
       "lng": -79.9551,
       "tier": "tier3",
-      "rank": 117,
+      "rank": 124,
       "admissions": {
         "acceptRate": 40.34,
         "classSize": 114,
@@ -12896,7 +13361,11 @@
         "schoolPassRate": 78.3,
         "stateAvgPassRate": 76.46,
         "passDifference": 1.84
-      }
+      },
+      "rank2025": 117,
+      "rankDisplay": "#124",
+      "rankDisplay2025": "#117",
+      "rankTied": true
     },
     "university-of-wyoming-college-of-law": {
       "name": "University of Wyoming College of Law",
@@ -12906,7 +13375,7 @@
       "lat": 41.3114,
       "lng": -105.5911,
       "tier": "tier3",
-      "rank": 117,
+      "rank": 112,
       "admissions": {
         "acceptRate": 35.82,
         "classSize": 74,
@@ -13000,7 +13469,11 @@
         "schoolPassRate": 78.21,
         "stateAvgPassRate": 72.71,
         "passDifference": 5.5
-      }
+      },
+      "rank2025": 117,
+      "rankDisplay": "#112",
+      "rankDisplay2025": "#117",
+      "rankTied": true
     },
     "cleveland-state-university-college-of-law": {
       "name": "Cleveland State University College of Law",
@@ -13010,7 +13483,7 @@
       "lat": 41.502,
       "lng": -81.6747,
       "tier": "tier3",
-      "rank": 121,
+      "rank": 136,
       "admissions": {
         "acceptRate": 34.45,
         "classSize": 195,
@@ -13120,7 +13593,11 @@
         "schoolPassRate": 75.45,
         "stateAvgPassRate": 80.52,
         "passDifference": -5.07
-      }
+      },
+      "rank2025": 121,
+      "rankDisplay": "#136",
+      "rankDisplay2025": "#121",
+      "rankTied": true
     },
     "university-of-mississippi-school-of-law": {
       "name": "University of Mississippi School of Law",
@@ -13130,7 +13607,7 @@
       "lat": 34.3644,
       "lng": -89.5391,
       "tier": "tier3",
-      "rank": 121,
+      "rank": 124,
       "admissions": {
         "acceptRate": 41.96,
         "classSize": 160,
@@ -13224,7 +13701,11 @@
         "schoolPassRate": 73.17,
         "stateAvgPassRate": 79.74,
         "passDifference": -6.57
-      }
+      },
+      "rank2025": 121,
+      "rankDisplay": "#124",
+      "rankDisplay2025": "#121",
+      "rankTied": true
     },
     "new-york-law-school": {
       "name": "New York Law School",
@@ -13234,7 +13715,7 @@
       "lat": 40.716,
       "lng": -74.0044,
       "tier": "tier3",
-      "rank": 121,
+      "rank": 112,
       "admissions": {
         "acceptRate": 39.67,
         "classSize": 409,
@@ -13344,7 +13825,11 @@
         "schoolPassRate": 81.9,
         "stateAvgPassRate": 84.68,
         "passDifference": -2.78
-      }
+      },
+      "rank2025": 121,
+      "rankDisplay": "#112",
+      "rankDisplay2025": "#121",
+      "rankTied": true
     },
     "washburn-university-school-of-law": {
       "name": "Washburn University School of Law",
@@ -13354,7 +13839,7 @@
       "lat": 39.0564,
       "lng": -95.689,
       "tier": "tier3",
-      "rank": 121,
+      "rank": 108,
       "admissions": {
         "acceptRate": 46.45,
         "classSize": 137,
@@ -13464,7 +13949,11 @@
         "schoolPassRate": 71.11,
         "stateAvgPassRate": 79.97,
         "passDifference": -8.86
-      }
+      },
+      "rank2025": 121,
+      "rankDisplay": "#108",
+      "rankDisplay2025": "#121",
+      "rankTied": true
     },
     "hofstra-university-deane-school-of-law": {
       "name": "Hofstra University Deane School of Law",
@@ -13474,7 +13963,7 @@
       "lat": 40.713,
       "lng": -73.5996,
       "tier": "tier3",
-      "rank": 125,
+      "rank": 117,
       "admissions": {
         "acceptRate": 40.56,
         "classSize": 263,
@@ -13584,7 +14073,11 @@
         "schoolPassRate": 78.91,
         "stateAvgPassRate": 85.69,
         "passDifference": -6.78
-      }
+      },
+      "rank2025": 125,
+      "rankDisplay": "#117",
+      "rankDisplay2025": "#125",
+      "rankTied": true
     },
     "university-of-new-hampshire-franklin-pierce-school-of-law": {
       "name": "University of New Hampshire Franklin Pierce School of Law",
@@ -13594,7 +14087,7 @@
       "lat": 43.2081,
       "lng": -71.5376,
       "tier": "tier3",
-      "rank": 125,
+      "rank": 136,
       "admissions": {
         "acceptRate": 51.96,
         "classSize": 248,
@@ -13688,7 +14181,11 @@
         "schoolPassRate": 79.49,
         "stateAvgPassRate": 79.2,
         "passDifference": 0.29
-      }
+      },
+      "rank2025": 125,
+      "rankDisplay": "#136",
+      "rankDisplay2025": "#125",
+      "rankTied": true
     },
     "university-of-akron-school-of-law": {
       "name": "University of Akron School of Law",
@@ -13698,7 +14195,7 @@
       "lat": 41.0814,
       "lng": -81.519,
       "tier": "tier3",
-      "rank": 127,
+      "rank": 131,
       "admissions": {
         "acceptRate": 58.53,
         "classSize": 203,
@@ -13792,7 +14289,11 @@
         "schoolPassRate": 72.09,
         "stateAvgPassRate": 80.46,
         "passDifference": -8.37
-      }
+      },
+      "rank2025": 127,
+      "rankDisplay": "#131",
+      "rankDisplay2025": "#127",
+      "rankTied": true
     },
     "howard-university-school-of-law": {
       "name": "Howard University School of Law",
@@ -13802,7 +14303,7 @@
       "lat": 38.9225,
       "lng": -77.0199,
       "tier": "tier3",
-      "rank": 127,
+      "rank": 117,
       "admissions": {
         "acceptRate": 24.05,
         "classSize": 176,
@@ -13912,7 +14413,11 @@
         "schoolPassRate": 76.77,
         "stateAvgPassRate": 82.24,
         "passDifference": -5.47
-      }
+      },
+      "rank2025": 127,
+      "rankDisplay": "#117",
+      "rankDisplay2025": "#127",
+      "rankTied": true
     },
     "seattle-university-school-of-law": {
       "name": "Seattle University School of Law",
@@ -13922,7 +14427,7 @@
       "lat": 47.6059,
       "lng": -122.3184,
       "tier": "tier3",
-      "rank": 127,
+      "rank": 128,
       "admissions": {
         "acceptRate": 38.93,
         "classSize": 209,
@@ -14032,7 +14537,11 @@
         "schoolPassRate": 78.74,
         "stateAvgPassRate": 82.24,
         "passDifference": -3.5
-      }
+      },
+      "rank2025": 127,
+      "rankDisplay": "#128",
+      "rankDisplay2025": "#127",
+      "rankTied": true
     },
     "university-of-south-dakota-school-of-law": {
       "name": "University of South Dakota School of Law",
@@ -14042,7 +14551,7 @@
       "lat": 42.7797,
       "lng": -96.9295,
       "tier": "tier3",
-      "rank": 127,
+      "rank": 122,
       "admissions": {
         "acceptRate": 62.62,
         "classSize": 88,
@@ -14136,7 +14645,11 @@
         "schoolPassRate": 72.6,
         "stateAvgPassRate": 78.62,
         "passDifference": -6.02
-      }
+      },
+      "rank2025": 127,
+      "rankDisplay": "#122",
+      "rankDisplay2025": "#127",
+      "rankTied": true
     },
     "suffolk-university-law-school": {
       "name": "Suffolk University Law School",
@@ -14146,7 +14659,7 @@
       "lat": 42.3573,
       "lng": -71.0618,
       "tier": "tier3",
-      "rank": 127,
+      "rank": 128,
       "admissions": {
         "acceptRate": 61.85,
         "classSize": 544,
@@ -14256,7 +14769,11 @@
         "schoolPassRate": 79.37,
         "stateAvgPassRate": 83.51,
         "passDifference": -4.14
-      }
+      },
+      "rank2025": 127,
+      "rankDisplay": "#128",
+      "rankDisplay2025": "#127",
+      "rankTied": true
     },
     "university-of-tulsa-college-of-law": {
       "name": "University of Tulsa College of Law",
@@ -14266,7 +14783,7 @@
       "lat": 36.1499,
       "lng": -95.9499,
       "tier": "tier3",
-      "rank": 127,
+      "rank": 120,
       "admissions": {
         "acceptRate": 56.58,
         "classSize": 118,
@@ -14360,7 +14877,11 @@
         "schoolPassRate": 78.99,
         "stateAvgPassRate": 80.12,
         "passDifference": -1.13
-      }
+      },
+      "rank2025": 127,
+      "rankDisplay": "#120",
+      "rankDisplay2025": "#127",
+      "rankTied": true
     },
     "depaul-university-college-of-law": {
       "name": "DePaul University College of Law",
@@ -14370,7 +14891,7 @@
       "lat": 41.9253,
       "lng": -87.654,
       "tier": "tier3",
-      "rank": 133,
+      "rank": 131,
       "admissions": {
         "acceptRate": 34.81,
         "classSize": 186,
@@ -14480,7 +15001,11 @@
         "schoolPassRate": 76.02,
         "stateAvgPassRate": 78.56,
         "passDifference": -2.54
-      }
+      },
+      "rank2025": 133,
+      "rankDisplay": "#131",
+      "rankDisplay2025": "#133",
+      "rankTied": true
     },
     "campbell-university-norman-adrian-wiggins-school-of-law": {
       "name": "Campbell University Norman Adrian Wiggins School of Law",
@@ -14490,7 +15015,7 @@
       "lat": 35.7796,
       "lng": -78.6382,
       "tier": "tier3",
-      "rank": 134,
+      "rank": 131,
       "admissions": {
         "acceptRate": 50.68,
         "classSize": 202,
@@ -14600,7 +15125,11 @@
         "schoolPassRate": 85.37,
         "stateAvgPassRate": 79.05,
         "passDifference": 6.32
-      }
+      },
+      "rank2025": 134,
+      "rankDisplay": "#131",
+      "rankDisplay2025": "#134",
+      "rankTied": true
     },
     "university-of-detroit-mercy-school-of-law": {
       "name": "University of Detroit Mercy School of Law",
@@ -14610,7 +15139,7 @@
       "lat": 42.4224,
       "lng": -83.1313,
       "tier": "tier3",
-      "rank": 134,
+      "rank": 142,
       "admissions": {
         "acceptRate": 41.41,
         "classSize": 247,
@@ -14704,7 +15233,11 @@
         "schoolPassRate": 70.83,
         "stateAvgPassRate": 73.25,
         "passDifference": -2.42
-      }
+      },
+      "rank2025": 134,
+      "rankDisplay": "#142",
+      "rankDisplay2025": "#134",
+      "rankTied": true
     },
     "loyola-university-new-orleans-college-of-law": {
       "name": "Loyola University New Orleans College of Law",
@@ -14714,7 +15247,7 @@
       "lat": 29.9295,
       "lng": -90.1152,
       "tier": "tier3",
-      "rank": 134,
+      "rank": 135,
       "admissions": {
         "acceptRate": 50.93,
         "classSize": 223,
@@ -14808,7 +15341,11 @@
         "schoolPassRate": 68.98,
         "stateAvgPassRate": 76.04,
         "passDifference": -7.06
-      }
+      },
+      "rank2025": 134,
+      "rankDisplay": "#135",
+      "rankDisplay2025": "#134",
+      "rankTied": false
     },
     "northern-kentucky-university-chase-college-of-law": {
       "name": "Northern Kentucky University Chase College of Law",
@@ -14818,7 +15355,7 @@
       "lat": 39.0312,
       "lng": -84.4625,
       "tier": "tier3",
-      "rank": 134,
+      "rank": 131,
       "admissions": {
         "acceptRate": 58.7,
         "classSize": 155,
@@ -14928,7 +15465,11 @@
         "schoolPassRate": 73.85,
         "stateAvgPassRate": 79.5,
         "passDifference": -5.65
-      }
+      },
+      "rank2025": 134,
+      "rankDisplay": "#131",
+      "rankDisplay2025": "#134",
+      "rankTied": true
     },
     "south-texas-college-of-law-houston": {
       "name": "South Texas College of Law Houston",
@@ -14938,7 +15479,7 @@
       "lat": 29.7563,
       "lng": -95.3677,
       "tier": "tier3",
-      "rank": 138,
+      "rank": 128,
       "admissions": {
         "acceptRate": 33.65,
         "classSize": 437,
@@ -15048,7 +15589,11 @@
         "schoolPassRate": 91.13,
         "stateAvgPassRate": 81.42,
         "passDifference": 9.71
-      }
+      },
+      "rank2025": 138,
+      "rankDisplay": "#128",
+      "rankDisplay2025": "#138",
+      "rankTied": true
     },
     "ua-little-rock-bowen-school-of-law": {
       "name": "UA Little Rock Bowen School of Law",
@@ -15058,7 +15603,7 @@
       "lat": 34.7465,
       "lng": -92.2896,
       "tier": "tier3",
-      "rank": 139,
+      "rank": 140,
       "admissions": {
         "acceptRate": 54.89,
         "classSize": 154,
@@ -15152,7 +15697,11 @@
         "schoolPassRate": 73.53,
         "stateAvgPassRate": 76.51,
         "passDifference": -2.98
-      }
+      },
+      "rank2025": 139,
+      "rankDisplay": "#140",
+      "rankDisplay2025": "#139",
+      "rankTied": true
     },
     "university-of-baltimore-school-of-law": {
       "name": "University of Baltimore School of Law",
@@ -15162,7 +15711,7 @@
       "lat": 39.312,
       "lng": -76.6177,
       "tier": "tier3",
-      "rank": 139,
+      "rank": 136,
       "admissions": {
         "acceptRate": 49.5,
         "classSize": 248,
@@ -15256,7 +15805,11 @@
         "schoolPassRate": 70.71,
         "stateAvgPassRate": 70.64,
         "passDifference": 0.07
-      }
+      },
+      "rank2025": 139,
+      "rankDisplay": "#136",
+      "rankDisplay2025": "#139",
+      "rankTied": true
     },
     "gonzaga-university-school-of-law": {
       "name": "Gonzaga University School of Law",
@@ -15266,7 +15819,7 @@
       "lat": 47.667,
       "lng": -117.402,
       "tier": "tier3",
-      "rank": 141,
+      "rank": 144,
       "admissions": {
         "acceptRate": 51.14,
         "classSize": 203,
@@ -15376,7 +15929,11 @@
         "schoolPassRate": 79.74,
         "stateAvgPassRate": 81.33,
         "passDifference": -1.59
-      }
+      },
+      "rank2025": 141,
+      "rankDisplay": "#144",
+      "rankDisplay2025": "#141",
+      "rankTied": true
     },
     "university-of-idaho-college-of-law": {
       "name": "University of Idaho College of Law",
@@ -15386,7 +15943,7 @@
       "lat": 46.7295,
       "lng": -117.0029,
       "tier": "tier3",
-      "rank": 141,
+      "rank": 148,
       "admissions": {
         "acceptRate": 66.76,
         "classSize": 197,
@@ -15480,7 +16037,11 @@
         "schoolPassRate": 68.38,
         "stateAvgPassRate": 78.38,
         "passDifference": -10
-      }
+      },
+      "rank2025": 141,
+      "rankDisplay": "#148",
+      "rankDisplay2025": "#141",
+      "rankTied": false
     },
     "liberty-university-school-of-law": {
       "name": "Liberty University School of Law",
@@ -15490,7 +16051,7 @@
       "lat": 37.3546,
       "lng": -79.1797,
       "tier": "tier3",
-      "rank": 141,
+      "rank": 144,
       "admissions": {
         "acceptRate": 58.76,
         "classSize": 141,
@@ -15600,7 +16161,11 @@
         "schoolPassRate": 84.82,
         "stateAvgPassRate": 77.78,
         "passDifference": 7.04
-      }
+      },
+      "rank2025": 141,
+      "rankDisplay": "#144",
+      "rankDisplay2025": "#141",
+      "rankTied": true
     },
     "pace-university-elisabeth-haub-school-of-law": {
       "name": "Pace University Elisabeth Haub School of Law",
@@ -15610,7 +16175,7 @@
       "lat": 41.034,
       "lng": -73.7629,
       "tier": "tier3",
-      "rank": 141,
+      "rank": 142,
       "admissions": {
         "acceptRate": 44.13,
         "classSize": 324,
@@ -15720,7 +16285,11 @@
         "schoolPassRate": 68.55,
         "stateAvgPassRate": 84.39,
         "passDifference": -15.84
-      }
+      },
+      "rank2025": 141,
+      "rankDisplay": "#142",
+      "rankDisplay2025": "#141",
+      "rankTied": true
     },
     "quinnipiac-university-school-of-law": {
       "name": "Quinnipiac University School of Law",
@@ -15730,7 +16299,7 @@
       "lat": 41.3965,
       "lng": -72.8618,
       "tier": "tier3",
-      "rank": 141,
+      "rank": 136,
       "admissions": {
         "acceptRate": 43.1,
         "classSize": 135,
@@ -15840,7 +16409,11 @@
         "schoolPassRate": 73.68,
         "stateAvgPassRate": 73.89,
         "passDifference": -0.21
-      }
+      },
+      "rank2025": 141,
+      "rankDisplay": "#136",
+      "rankDisplay2025": "#141",
+      "rankTied": true
     },
     "university-of-louisville-brandeis-school-of-law": {
       "name": "University of Louisville Brandeis School of Law",
@@ -15850,7 +16423,7 @@
       "lat": 38.2527,
       "lng": -85.7585,
       "tier": "tier3",
-      "rank": 146,
+      "rank": 124,
       "admissions": {
         "acceptRate": 63.39,
         "classSize": 145,
@@ -15944,7 +16517,11 @@
         "schoolPassRate": 75.61,
         "stateAvgPassRate": 78.52,
         "passDifference": -2.91
-      }
+      },
+      "rank2025": 146,
+      "rankDisplay": "#124",
+      "rankDisplay2025": "#146",
+      "rankTied": true
     },
     "university-of-memphis-humphreys-school-of-law": {
       "name": "University of Memphis Humphreys School of Law",
@@ -15954,7 +16531,7 @@
       "lat": 35.1495,
       "lng": -90.049,
       "tier": "tier3",
-      "rank": 146,
+      "rank": 140,
       "admissions": {
         "acceptRate": 41.07,
         "classSize": 96,
@@ -16048,7 +16625,11 @@
         "schoolPassRate": 73.4,
         "stateAvgPassRate": 78.52,
         "passDifference": -5.12
-      }
+      },
+      "rank2025": 146,
+      "rankDisplay": "#140",
+      "rankDisplay2025": "#146",
+      "rankTied": true
     },
     "creighton-university-school-of-law": {
       "name": "Creighton University School of Law",
@@ -16058,7 +16639,7 @@
       "lat": 41.2565,
       "lng": -95.9345,
       "tier": "tier3",
-      "rank": 148,
+      "rank": 144,
       "admissions": {
         "acceptRate": 64.54,
         "classSize": 162,
@@ -16168,7 +16749,11 @@
         "schoolPassRate": 72.6,
         "stateAvgPassRate": 82.74,
         "passDifference": -10.14
-      }
+      },
+      "rank2025": 148,
+      "rankDisplay": "#144",
+      "rankDisplay2025": "#148",
+      "rankTied": true
     },
     "st-marys-university-school-of-law": {
       "name": "St. Mary's University School of Law",
@@ -16178,7 +16763,7 @@
       "lat": 29.4413,
       "lng": -98.546,
       "tier": "tier3",
-      "rank": 148,
+      "rank": 150,
       "admissions": {
         "acceptRate": 25.98,
         "classSize": 282,
@@ -16288,7 +16873,11 @@
         "schoolPassRate": 65.84,
         "stateAvgPassRate": 81.51,
         "passDifference": -15.67
-      }
+      },
+      "rank2025": 148,
+      "rankDisplay": "#150",
+      "rankDisplay2025": "#148",
+      "rankTied": true
     },
     "northern-illinois-university-college-of-law": {
       "name": "Northern Illinois University College of Law",
@@ -16298,7 +16887,7 @@
       "lat": 41.9295,
       "lng": -88.749,
       "tier": "tier3",
-      "rank": 150,
+      "rank": 161,
       "admissions": {
         "acceptRate": 44.27,
         "classSize": 134,
@@ -16408,7 +16997,11 @@
         "schoolPassRate": 57.14,
         "stateAvgPassRate": 78.65,
         "passDifference": -21.51
-      }
+      },
+      "rank2025": 150,
+      "rankDisplay": "#161",
+      "rankDisplay2025": "#150",
+      "rankTied": true
     },
     "university-of-toledo-college-of-law": {
       "name": "University of Toledo College of Law",
@@ -16418,7 +17011,7 @@
       "lat": 41.6639,
       "lng": -83.5552,
       "tier": "tier3",
-      "rank": 150,
+      "rank": 149,
       "admissions": {
         "acceptRate": 52.52,
         "classSize": 126,
@@ -16512,7 +17105,11 @@
         "schoolPassRate": 72.27,
         "stateAvgPassRate": 77.23,
         "passDifference": -4.96
-      }
+      },
+      "rank2025": 150,
+      "rankDisplay": "#149",
+      "rankDisplay2025": "#150",
+      "rankTied": false
     },
     "willamette-university-college-of-law": {
       "name": "Willamette University College of Law",
@@ -16522,7 +17119,7 @@
       "lat": 44.9429,
       "lng": -123.0351,
       "tier": "tier3",
-      "rank": 150,
+      "rank": 168,
       "admissions": {
         "acceptRate": 61.42,
         "classSize": 139,
@@ -16632,7 +17229,11 @@
         "schoolPassRate": 66.67,
         "stateAvgPassRate": 75.22,
         "passDifference": -8.55
-      }
+      },
+      "rank2025": 150,
+      "rankDisplay": "#168",
+      "rankDisplay2025": "#150",
+      "rankTied": true
     },
     "ave-maria-school-of-law": {
       "name": "Ave Maria School of Law",
@@ -16642,7 +17243,7 @@
       "lat": 26.142,
       "lng": -81.7948,
       "tier": "tier3",
-      "rank": 153,
+      "rank": 164,
       "admissions": {
         "acceptRate": 46.95,
         "classSize": 165,
@@ -16752,7 +17353,11 @@
         "schoolPassRate": 65.88,
         "stateAvgPassRate": 73.82,
         "passDifference": -7.94
-      }
+      },
+      "rank2025": 153,
+      "rankDisplay": "#164",
+      "rankDisplay2025": "#153",
+      "rankTied": true
     },
     "mitchell-hamline-school-of-law": {
       "name": "Mitchell Hamline School of Law",
@@ -16762,7 +17367,7 @@
       "lat": 44.944,
       "lng": -93.0937,
       "tier": "tier3",
-      "rank": 154,
+      "rank": 152,
       "admissions": {
         "acceptRate": 51.4,
         "classSize": 364,
@@ -16856,7 +17461,11 @@
         "schoolPassRate": 70.98,
         "stateAvgPassRate": 81.61,
         "passDifference": -10.63
-      }
+      },
+      "rank2025": 154,
+      "rankDisplay": "#152",
+      "rankDisplay2025": "#154",
+      "rankTied": true
     },
     "southwestern-law-school": {
       "name": "Southwestern Law School",
@@ -16866,7 +17475,7 @@
       "lat": 34.0614,
       "lng": -118.3571,
       "tier": "tier3",
-      "rank": 154,
+      "rank": 161,
       "admissions": {
         "acceptRate": 36.47,
         "classSize": 459,
@@ -16976,7 +17585,11 @@
         "schoolPassRate": 64.93,
         "stateAvgPassRate": 77.76,
         "passDifference": -12.83
-      }
+      },
+      "rank2025": 154,
+      "rankDisplay": "#161",
+      "rankDisplay2025": "#154",
+      "rankTied": true
     },
     "cuny-school-of-law": {
       "name": "CUNY School of Law",
@@ -16986,7 +17599,7 @@
       "lat": 40.7448,
       "lng": -73.9463,
       "tier": "tier3",
-      "rank": 156,
+      "rank": 171,
       "admissions": {
         "acceptRate": 28.65,
         "classSize": 219,
@@ -17080,7 +17693,11 @@
         "schoolPassRate": 65.67,
         "stateAvgPassRate": 86,
         "passDifference": -20.33
-      }
+      },
+      "rank2025": 156,
+      "rankDisplay": "#171",
+      "rankDisplay2025": "#156",
+      "rankTied": true
     },
     "santa-clara-university-school-of-law": {
       "name": "Santa Clara University School of Law",
@@ -17090,7 +17707,7 @@
       "lat": 37.3496,
       "lng": -121.939,
       "tier": "tier3",
-      "rank": 156,
+      "rank": 150,
       "admissions": {
         "acceptRate": 52.58,
         "classSize": 256,
@@ -17200,7 +17817,11 @@
         "schoolPassRate": 74.77,
         "stateAvgPassRate": 77.97,
         "passDifference": -3.2
-      }
+      },
+      "rank2025": 156,
+      "rankDisplay": "#150",
+      "rankDisplay2025": "#156",
+      "rankTied": true
     },
     "elon-university-school-of-law": {
       "name": "Elon University School of Law",
@@ -17210,7 +17831,7 @@
       "lat": 36.0726,
       "lng": -79.792,
       "tier": "tier3",
-      "rank": 158,
+      "rank": 144,
       "admissions": {
         "acceptRate": 53.21,
         "classSize": 228,
@@ -17320,7 +17941,11 @@
         "schoolPassRate": 76.81,
         "stateAvgPassRate": 78.83,
         "passDifference": -2.02
-      }
+      },
+      "rank2025": 158,
+      "rankDisplay": "#144",
+      "rankDisplay2025": "#158",
+      "rankTied": true
     },
     "mississippi-college-school-of-law": {
       "name": "Mississippi College School of Law",
@@ -17330,7 +17955,7 @@
       "lat": 32.2988,
       "lng": -90.1848,
       "tier": "tier3",
-      "rank": 158,
+      "rank": 161,
       "admissions": {
         "acceptRate": 59.8,
         "classSize": 179,
@@ -17440,7 +18065,11 @@
         "schoolPassRate": 63.41,
         "stateAvgPassRate": 79.66,
         "passDifference": -16.25
-      }
+      },
+      "rank2025": 158,
+      "rankDisplay": "#161",
+      "rankDisplay2025": "#158",
+      "rankTied": true
     },
     "oklahoma-city-university-school-of-law": {
       "name": "Oklahoma City University School of Law",
@@ -17450,7 +18079,7 @@
       "lat": 35.4676,
       "lng": -97.5164,
       "tier": "tier3",
-      "rank": 158,
+      "rank": 156,
       "admissions": {
         "acceptRate": 51.61,
         "classSize": 160,
@@ -17560,7 +18189,11 @@
         "schoolPassRate": 75.2,
         "stateAvgPassRate": 80.27,
         "passDifference": -5.07
-      }
+      },
+      "rank2025": 158,
+      "rankDisplay": "#156",
+      "rankDisplay2025": "#158",
+      "rankTied": true
     },
     "university-of-north-dakota-school-of-law": {
       "name": "University of North Dakota School of Law",
@@ -17570,7 +18203,7 @@
       "lat": 47.9212,
       "lng": -97.0775,
       "tier": "tier3",
-      "rank": 161,
+      "rank": 156,
       "admissions": {
         "acceptRate": 63.09,
         "classSize": 97,
@@ -17664,7 +18297,11 @@
         "schoolPassRate": 68.35,
         "stateAvgPassRate": 73.32,
         "passDifference": -4.97
-      }
+      },
+      "rank2025": 161,
+      "rankDisplay": "#156",
+      "rankDisplay2025": "#161",
+      "rankTied": true
     },
     "university-of-the-pacific-mcgeorge-school-of-law": {
       "name": "University of the Pacific McGeorge School of Law",
@@ -17674,7 +18311,7 @@
       "lat": 38.5629,
       "lng": -121.4271,
       "tier": "tier3",
-      "rank": 163,
+      "rank": 152,
       "admissions": {
         "acceptRate": 54.41,
         "classSize": 213,
@@ -17768,7 +18405,11 @@
         "schoolPassRate": 70.55,
         "stateAvgPassRate": 77.62,
         "passDifference": -7.07
-      }
+      },
+      "rank2025": 163,
+      "rankDisplay": "#152",
+      "rankDisplay2025": "#163",
+      "rankTied": true
     },
     "vermont-law-school": {
       "name": "Vermont Law School",
@@ -17778,7 +18419,7 @@
       "lat": 43.8259,
       "lng": -72.5266,
       "tier": "tier3",
-      "rank": 163,
+      "rank": 154,
       "admissions": {
         "acceptRate": 58.53,
         "classSize": 290,
@@ -17888,7 +18529,11 @@
         "schoolPassRate": 64.93,
         "stateAvgPassRate": 76.45,
         "passDifference": -11.52
-      }
+      },
+      "rank2025": 163,
+      "rankDisplay": "#154",
+      "rankDisplay2025": "#163",
+      "rankTied": true
     },
     "uc-college-of-the-law-san-francisco": {
       "name": "UC College of the Law San Francisco",
@@ -17898,7 +18543,7 @@
       "lat": 37.7813,
       "lng": -122.4131,
       "tier": "tier3",
-      "rank": 166,
+      "rank": 85,
       "admissions": {
         "acceptRate": 27.48,
         "classSize": 380,
@@ -17992,7 +18637,11 @@
         "schoolPassRate": 83.84,
         "stateAvgPassRate": 77.87,
         "passDifference": 5.97
-      }
+      },
+      "rank2025": 166,
+      "rankDisplay": "#85",
+      "rankDisplay2025": "#166",
+      "rankTied": true
     },
     "university-of-san-francisco-school-of-law": {
       "name": "University of San Francisco School of Law",
@@ -18002,7 +18651,7 @@
       "lat": 37.7763,
       "lng": -122.4517,
       "tier": "tier3",
-      "rank": 166,
+      "rank": 156,
       "admissions": {
         "acceptRate": 42.38,
         "classSize": 201,
@@ -18096,7 +18745,11 @@
         "schoolPassRate": 74.56,
         "stateAvgPassRate": 77.74,
         "passDifference": -3.18
-      }
+      },
+      "rank2025": 166,
+      "rankDisplay": "#156",
+      "rankDisplay2025": "#166",
+      "rankTied": true
     },
     "university-of-illinois-chicago-school-of-law": {
       "name": "University of Illinois Chicago School of Law",
@@ -18106,7 +18759,7 @@
       "lat": 41.8719,
       "lng": -87.6501,
       "tier": "tier3",
-      "rank": 169,
+      "rank": 167,
       "admissions": {
         "acceptRate": 52.57,
         "classSize": 379,
@@ -18200,7 +18853,11 @@
         "schoolPassRate": 60.14,
         "stateAvgPassRate": 78.83,
         "passDifference": -18.69
-      }
+      },
+      "rank2025": 169,
+      "rankDisplay": "#167",
+      "rankDisplay2025": "#169",
+      "rankTied": false
     },
     "roger-williams-university-school-of-law": {
       "name": "Roger Williams University School of Law",
@@ -18210,7 +18867,7 @@
       "lat": 41.6783,
       "lng": -71.2697,
       "tier": "tier3",
-      "rank": 169,
+      "rank": 171,
       "admissions": {
         "acceptRate": 61.32,
         "classSize": 189,
@@ -18320,7 +18977,11 @@
         "schoolPassRate": 57.06,
         "stateAvgPassRate": 76.37,
         "passDifference": -19.31
-      }
+      },
+      "rank2025": 169,
+      "rankDisplay": "#171",
+      "rankDisplay2025": "#169",
+      "rankTied": true
     },
     "touro-university-jacob-d-fuchsberg-law-center": {
       "name": "Touro University Jacob D. Fuchsberg Law Center",
@@ -18330,7 +18991,7 @@
       "lat": 40.7889,
       "lng": -73.1927,
       "tier": "tier3",
-      "rank": 169,
+      "rank": 164,
       "admissions": {
         "acceptRate": 45.62,
         "classSize": 223,
@@ -18440,7 +19101,11 @@
         "schoolPassRate": 61.69,
         "stateAvgPassRate": 85.78,
         "passDifference": -24.09
-      }
+      },
+      "rank2025": 169,
+      "rankDisplay": "#164",
+      "rankDisplay2025": "#169",
+      "rankTied": true
     },
     "widener-university-delaware-law-school": {
       "name": "Widener University Delaware Law School",
@@ -18450,7 +19115,7 @@
       "lat": 39.7391,
       "lng": -75.5398,
       "tier": "tier3",
-      "rank": 169,
+      "rank": 154,
       "admissions": {
         "acceptRate": 59.68,
         "classSize": 277,
@@ -18560,7 +19225,11 @@
         "schoolPassRate": 66.3,
         "stateAvgPassRate": 76.55,
         "passDifference": -10.25
-      }
+      },
+      "rank2025": 169,
+      "rankDisplay": "#154",
+      "rankDisplay2025": "#169",
+      "rankTied": true
     },
     "capital-university-law-school": {
       "name": "Capital University Law School",
@@ -18570,7 +19239,7 @@
       "lat": 39.9612,
       "lng": -82.9988,
       "tier": "tier3",
-      "rank": 174,
+      "rank": 175,
       "admissions": {
         "acceptRate": 65.9,
         "classSize": 180,
@@ -18680,7 +19349,11 @@
         "schoolPassRate": 72.22,
         "stateAvgPassRate": 80.4,
         "passDifference": -8.18
-      }
+      },
+      "rank2025": 174,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#174",
+      "rankTied": false
     },
     "university-of-puerto-rico-school-of-law": {
       "name": "University of Puerto Rico School of Law",
@@ -18784,7 +19457,11 @@
         "schoolPassRate": 58.27,
         "stateAvgPassRate": 53.17,
         "passDifference": 5.1
-      }
+      },
+      "rank2025": 175,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#175",
+      "rankTied": false
     },
     "southern-illinois-university-school-of-law": {
       "name": "Southern Illinois University School of Law",
@@ -18904,7 +19581,11 @@
         "schoolPassRate": 59.49,
         "stateAvgPassRate": 79.22,
         "passDifference": -19.73
-      }
+      },
+      "rank2025": 175,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#175",
+      "rankTied": false
     },
     "appalachian-school-of-law": {
       "name": "Appalachian School of Law",
@@ -18914,7 +19595,7 @@
       "lat": 37.2726,
       "lng": -82.0974,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 60.93,
         "classSize": 92,
@@ -19024,7 +19705,11 @@
         "schoolPassRate": 63.16,
         "stateAvgPassRate": 77.16,
         "passDifference": -14
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "barry-university-dwayne-o-andreas-school-of-law": {
       "name": "Barry University Dwayne O. Andreas School of Law",
@@ -19034,7 +19719,7 @@
       "lat": 28.5026,
       "lng": -81.3679,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 55.94,
         "classSize": 258,
@@ -19144,7 +19829,11 @@
         "schoolPassRate": 68.62,
         "stateAvgPassRate": 73.45,
         "passDifference": -4.83
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "california-western-school-of-law": {
       "name": "California Western School of Law",
@@ -19154,7 +19843,7 @@
       "lat": 32.726,
       "lng": -117.1623,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 46.92,
         "classSize": 242,
@@ -19264,7 +19953,11 @@
         "schoolPassRate": 62.91,
         "stateAvgPassRate": 77.53,
         "passDifference": -14.62
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "charleston-school-of-law": {
       "name": "Charleston School of Law",
@@ -19274,7 +19967,7 @@
       "lat": 32.7765,
       "lng": -79.9311,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 171,
       "admissions": {
         "acceptRate": 50.2,
         "classSize": 241,
@@ -19384,7 +20077,11 @@
         "schoolPassRate": 74.07,
         "stateAvgPassRate": 76.83,
         "passDifference": -2.76
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "#171",
+      "rankDisplay2025": "#180",
+      "rankTied": true
     },
     "university-of-the-district-of-columbia-david-a-clarke-school-of-law": {
       "name": "University of the District of Columbia David A. Clarke School of Law",
@@ -19394,7 +20091,7 @@
       "lat": 38.9517,
       "lng": -77.0249,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 36.98,
         "classSize": 83,
@@ -19488,7 +20185,11 @@
         "schoolPassRate": 65.57,
         "stateAvgPassRate": 80.64,
         "passDifference": -15.07
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "faulkner-university-thomas-goode-jones-school-of-law": {
       "name": "Faulkner University Thomas Goode Jones School of Law",
@@ -19498,7 +20199,7 @@
       "lat": 32.3792,
       "lng": -86.3077,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 164,
       "admissions": {
         "acceptRate": 53.87,
         "classSize": 167,
@@ -19608,7 +20309,11 @@
         "schoolPassRate": 71.43,
         "stateAvgPassRate": 80.6,
         "passDifference": -9.17
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "#164",
+      "rankDisplay2025": "#180",
+      "rankTied": true
     },
     "florida-a-m-university-college-of-law": {
       "name": "Florida A&M University College of Law",
@@ -19618,7 +20323,7 @@
       "lat": 28.5383,
       "lng": -81.3792,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 34.67,
         "classSize": 177,
@@ -19728,7 +20433,11 @@
         "schoolPassRate": 75.38,
         "stateAvgPassRate": 73.28,
         "passDifference": 2.1
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "north-carolina-central-university-school-of-law": {
       "name": "North Carolina Central University School of Law",
@@ -19738,7 +20447,7 @@
       "lat": 35.9791,
       "lng": -78.8973,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 39.06,
         "classSize": 133,
@@ -19848,7 +20557,11 @@
         "schoolPassRate": 55.94,
         "stateAvgPassRate": 79.92,
         "passDifference": -23.98
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "nova-southeastern-university-shepard-broad-college-of-law": {
       "name": "Nova Southeastern University Shepard Broad College of Law",
@@ -19858,7 +20571,7 @@
       "lat": 26.0677,
       "lng": -80.2395,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 47.33,
         "classSize": 225,
@@ -19968,7 +20681,11 @@
         "schoolPassRate": 67.37,
         "stateAvgPassRate": 72.78,
         "passDifference": -5.41
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "ohio-northern-university-pettit-college-of-law": {
       "name": "Ohio Northern University Pettit College of Law",
@@ -19978,7 +20695,7 @@
       "lat": 40.7701,
       "lng": -83.8221,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 31.96,
         "classSize": 129,
@@ -20088,7 +20805,11 @@
         "schoolPassRate": 68.42,
         "stateAvgPassRate": 79.73,
         "passDifference": -11.31
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "southern-university-law-center": {
       "name": "Southern University Law Center",
@@ -20098,7 +20819,7 @@
       "lat": 30.4275,
       "lng": -91.1906,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 56.55,
         "classSize": 300,
@@ -20208,7 +20929,11 @@
         "schoolPassRate": 60.33,
         "stateAvgPassRate": 75.91,
         "passDifference": -15.58
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "st-thomas-university-school-of-law": {
       "name": "St. Thomas University School of Law",
@@ -20218,7 +20943,7 @@
       "lat": 25.9416,
       "lng": -80.2432,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 168,
       "admissions": {
         "acceptRate": 60.25,
         "classSize": 431,
@@ -20312,7 +21037,11 @@
         "schoolPassRate": 80.89,
         "stateAvgPassRate": 72.73,
         "passDifference": 8.16
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "#168",
+      "rankDisplay2025": "#180",
+      "rankTied": true
     },
     "texas-southern-university-thurgood-marshall-school-of-law": {
       "name": "Texas Southern University Thurgood Marshall School of Law",
@@ -20322,7 +21051,7 @@
       "lat": 29.7236,
       "lng": -95.3577,
       "tier": "tier3",
-      "rank": 180,
+      "rank": 175,
       "admissions": {
         "acceptRate": 33.12,
         "classSize": 221,
@@ -20432,7 +21161,11 @@
         "schoolPassRate": 72.36,
         "stateAvgPassRate": 81.3,
         "passDifference": -8.94
-      }
+      },
+      "rank2025": 180,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#180",
+      "rankTied": false
     },
     "jacksonville-university-school-of-law": {
       "name": "Jacksonville University School of Law",
@@ -20442,7 +21175,7 @@
       "lat": 30.3322,
       "lng": -81.4557,
       "tier": "tier3",
-      "rank": null,
+      "rank": 9999,
       "admissions": {
         "acceptRate": 35.14,
         "classSize": 70,
@@ -20498,7 +21231,11 @@
         }
       },
       "employment": null,
-      "barPassage": null
+      "barPassage": null,
+      "rank2025": null,
+      "rankDisplay": "Unranked",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "lincoln-memorial-university-duncan-school-of-law": {
       "name": "Lincoln Memorial University Duncan School of Law",
@@ -20508,7 +21245,7 @@
       "lat": 35.9728,
       "lng": -83.9194,
       "tier": "tier3",
-      "rank": 169,
+      "rank": 175,
       "admissions": {
         "acceptRate": 52.17,
         "classSize": 163,
@@ -20618,7 +21355,11 @@
         "schoolPassRate": 63.73,
         "stateAvgPassRate": 78.36,
         "passDifference": -14.63
-      }
+      },
+      "rank2025": 169,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": "#169",
+      "rankTied": false
     },
     "thomas-m-cooley-law-school": {
       "name": "Thomas M. Cooley Law School",
@@ -20628,7 +21369,7 @@
       "lat": 42.7325,
       "lng": -84.5555,
       "tier": "tier3",
-      "rank": null,
+      "rank": 175,
       "admissions": {
         "acceptRate": 52.91,
         "classSize": 237,
@@ -20738,7 +21479,11 @@
         "schoolPassRate": 51.54,
         "stateAvgPassRate": 74.12,
         "passDifference": -22.58
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "western-new-england-university-school-of-law": {
       "name": "Western New England University School of Law",
@@ -20748,7 +21493,7 @@
       "lat": 42.1015,
       "lng": -72.5762,
       "tier": "tier3",
-      "rank": null,
+      "rank": 159,
       "admissions": {
         "acceptRate": 51.89,
         "classSize": 115,
@@ -20858,7 +21603,11 @@
         "schoolPassRate": 77.23,
         "stateAvgPassRate": 80.82,
         "passDifference": -3.59
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "#159",
+      "rankDisplay2025": null,
+      "rankTied": true
     },
     "university-of-north-texas-dallas-college-of-law": {
       "name": "University of North Texas Dallas College of Law",
@@ -20868,7 +21617,7 @@
       "lat": 32.7767,
       "lng": -96.797,
       "tier": "tier3",
-      "rank": null,
+      "rank": 159,
       "admissions": {
         "acceptRate": 24.22,
         "classSize": 130,
@@ -20962,7 +21711,11 @@
         "schoolPassRate": 72.53,
         "stateAvgPassRate": 81.48,
         "passDifference": -8.95
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "#159",
+      "rankDisplay2025": null,
+      "rankTied": true
     },
     "widener-university-commonwealth-law-school": {
       "name": "Widener University Commonwealth Law School",
@@ -20972,7 +21725,7 @@
       "lat": 40.2732,
       "lng": -76.8867,
       "tier": "tier3",
-      "rank": null,
+      "rank": 175,
       "admissions": {
         "acceptRate": 60.4,
         "classSize": 159,
@@ -21082,7 +21835,11 @@
         "schoolPassRate": 54,
         "stateAvgPassRate": 80.07,
         "passDifference": -26.07
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "pontifical-catholic-university-of-puerto-rico-school-of-law": {
       "name": "Pontifical Catholic University of Puerto Rico School of Law",
@@ -21092,7 +21849,7 @@
       "lat": 18.0111,
       "lng": -66.6141,
       "tier": "tier3",
-      "rank": null,
+      "rank": 175,
       "admissions": {
         "acceptRate": 61.54,
         "classSize": 161,
@@ -21202,7 +21959,11 @@
         "schoolPassRate": 54.9,
         "stateAvgPassRate": 52.08,
         "passDifference": 2.82
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "university-of-massachusetts-school-of-law": {
       "name": "University of Massachusetts School of Law",
@@ -21212,7 +21973,7 @@
       "lat": 41.6015,
       "lng": -70.9798,
       "tier": "tier3",
-      "rank": null,
+      "rank": 171,
       "admissions": {
         "acceptRate": 52.17,
         "classSize": 141,
@@ -21306,7 +22067,11 @@
         "schoolPassRate": 58.33,
         "stateAvgPassRate": 78.83,
         "passDifference": -20.5
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "#171",
+      "rankDisplay2025": null,
+      "rankTied": true
     },
     "inter-american-university-of-puerto-rico-school-of-law": {
       "name": "Inter American University of Puerto Rico School of Law",
@@ -21316,7 +22081,7 @@
       "lat": 18.4013,
       "lng": -66.0527,
       "tier": "tier3",
-      "rank": null,
+      "rank": 175,
       "admissions": {
         "acceptRate": 50.92,
         "classSize": 205,
@@ -21426,7 +22191,11 @@
         "schoolPassRate": 48.18,
         "stateAvgPassRate": 51.95,
         "passDifference": -3.77
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "new-england-law-boston": {
       "name": "New England Law Boston",
@@ -21436,7 +22205,7 @@
       "lat": 42.3516,
       "lng": -71.0641,
       "tier": "tier3",
-      "rank": null,
+      "rank": 168,
       "admissions": {
         "acceptRate": 61.3,
         "classSize": 451,
@@ -21530,7 +22299,11 @@
         "schoolPassRate": 79.18,
         "stateAvgPassRate": 83.29,
         "passDifference": -4.11
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "#168",
+      "rankDisplay2025": null,
+      "rankTied": true
     },
     "wilmington-university-school-of-law": {
       "name": "Wilmington University School of Law",
@@ -21540,7 +22313,7 @@
       "lat": 39.7447,
       "lng": -75.5484,
       "tier": "tier3",
-      "rank": null,
+      "rank": 9999,
       "admissions": {
         "acceptRate": 52.01,
         "classSize": 75,
@@ -21596,7 +22369,11 @@
         }
       },
       "employment": null,
-      "barPassage": null
+      "barPassage": null,
+      "rank2025": null,
+      "rankDisplay": "Unranked",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "atlantas-john-marshall-law-school": {
       "name": "Atlanta's John Marshall Law School",
@@ -21606,7 +22383,7 @@
       "lat": 33.7899,
       "lng": -84.3913,
       "tier": "tier3",
-      "rank": null,
+      "rank": 175,
       "admissions": {
         "acceptRate": 68,
         "classSize": 138,
@@ -21716,7 +22493,11 @@
         "schoolPassRate": 68.42,
         "stateAvgPassRate": 80.24,
         "passDifference": -11.82
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "kenneth-f-kahn-school-of-law-at-high-point-university": {
       "name": "Kenneth F. Kahn School of Law at High Point University",
@@ -21786,7 +22567,11 @@
         }
       },
       "employment": null,
-      "barPassage": null
+      "barPassage": null,
+      "rank2025": null,
+      "rankDisplay": "Unranked",
+      "rankDisplay2025": null,
+      "rankTied": false
     },
     "western-state-college-of-law-at-westcliff-university": {
       "name": "Western State College of Law at Westcliff University",
@@ -21796,7 +22581,7 @@
       "lat": 33.6846,
       "lng": -117.8265,
       "tier": "tier3",
-      "rank": null,
+      "rank": 175,
       "admissions": {
         "acceptRate": 58,
         "classSize": 117,
@@ -21890,7 +22675,11 @@
         "schoolPassRate": 63.64,
         "stateAvgPassRate": 77.78,
         "passDifference": -14.14
-      }
+      },
+      "rank2025": null,
+      "rankDisplay": "175–194",
+      "rankDisplay2025": null,
+      "rankTied": false
     }
   }
 }

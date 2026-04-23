@@ -2673,7 +2673,7 @@
 
       <!-- ── EMPLOYMENT: HEADLINE ── -->
       <div class="info-section" id="emp-section">
-        <div class="section-title">Employment Outcomes · Class of 2024</div>
+        <div class="section-title">Employment Outcomes · Class of 2025</div>
 
         <!-- Headline score card -->
         <div class="emp-headline-card">
@@ -3736,7 +3736,7 @@ function populateEmployment(schoolName) {
   el('emp-headline-score').className   = 'emp-headline-score '
     + (score >= 80 ? 'score-great' : score >= 60 ? 'score-ok' : 'score-low');
   el('emp-headline-label').textContent  = 'Full-Time, Long-Term Employed';
-  el('emp-headline-sub').textContent    = `${r.ftlt_emp} of ${m.G} graduates · Class of 2024`;
+  el('emp-headline-sub').textContent    = `${r.ftlt_emp} of ${m.G} graduates · Class of 2025`;
   el('emp-score-fill').style.width      = Math.min(score, 100) + '%';
   el('emp-score-fill').style.background = score >= 80
     ? 'linear-gradient(90deg,#22c55e,#15803d)'
@@ -4073,7 +4073,7 @@ function renderComparison() {
       </div>
 
       <div class="cmp-section">
-        <div class="cmp-section-title">Employment · Class of 2024</div>
+        <div class="cmp-section-title">Employment · Class of 2025</div>
         ${empRow('FTLT Employed', null, 'ftlt_pct', false)}
         ${empRow('Bar-Required Jobs', null, 'bar_req_pct', true)}
         ${empRow('BigLaw (251+ attorneys)', null, 'biglaw_pct', true)}
@@ -4203,7 +4203,7 @@ function renderSEOContent(s) {
     const gov    = emp.gov != null ? Math.round((emp.gov / g) * 100) : 0;
     const pi     = emp.pi  != null ? Math.round((emp.pi  / g) * 100) : 0;
     empHtml = `
-    <h3>Employment Outcomes — Class of 2024 (${g} graduates)</h3>
+    <h3>Employment Outcomes — Class of 2025 (${g} graduates)</h3>
     <p>BigLaw (251+ attorneys): ${biglaw}%</p>
     <p>Federal Clerkships: ${fedClerk}%</p>
     <p>Government: ${gov}%</p>

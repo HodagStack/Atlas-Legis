@@ -819,7 +819,7 @@
 
     /* ── TOOLTIP ── */
     #map-tooltip {
-      position: absolute;
+      position: fixed;
       z-index: 800;
       pointer-events: none;
       background: rgba(255,255,255,0.82);
@@ -2332,11 +2332,201 @@
       background: var(--em-deep);
       box-shadow: 0 4px 16px var(--em-glow);
     }
+
+    /* ══════════════════════════════════════════════════════
+       LEFT SIDEBAR NAVIGATION (desktop only)
+       ══════════════════════════════════════════════════════ */
+    #left-nav {
+      display: none; /* hidden on mobile by default */
+    }
+
+    @media (min-width: 769px) {
+      #left-nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0; top: 0; bottom: 0;
+        width: 220px;
+        z-index: 500;
+        background: linear-gradient(to bottom, rgba(240,247,243,0.98) 0%, rgba(232,244,238,0.97) 100%);
+        border-right: 1px solid rgba(15,81,50,0.16);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      #content-area {
+        position: fixed;
+        left: 220px; top: 0; right: 0; bottom: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      header .logo { display: none; }
+      #tools-btn { display: none; }
+      .header-main-row { display: flex; justify-content: center; align-items: center; gap: 8px; }
+      .header-controls { width: auto; flex: 0 1 620px; justify-self: unset; }
+
+      #compare-tray {
+        left: calc(50% + 110px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #content-area { display: contents; }
+    }
+
+    .left-nav__brand {
+      padding: 22px 20px 18px;
+      flex-shrink: 0;
+    }
+    .left-nav__logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--em-deep);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .left-nav__logo-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.52rem;
+      font-weight: 500;
+      color: #9ab8a8;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 4px;
+    }
+
+    .left-nav__tiles {
+      flex: 1;
+      overflow-y: auto;
+      padding: 6px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .left-nav__section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: #9ab8a8;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 14px 10px 5px;
+    }
+    .left-nav__tile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 7px;
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: background 0.12s ease, color 0.12s ease;
+    }
+    .left-nav__tile:hover {
+      background: rgba(15,81,50,0.07);
+      color: var(--em-deep);
+    }
+    .left-nav__tile.active {
+      background: rgba(15,81,50,0.09);
+      color: var(--em-deep);
+      font-weight: 600;
+    }
+    .left-nav__tile svg {
+      flex-shrink: 0;
+      opacity: 0.45;
+      transition: opacity 0.12s ease;
+    }
+    .left-nav__tile:hover svg,
+    .left-nav__tile.active svg {
+      opacity: 0.8;
+    }
+
+    .left-nav__bottom {
+      padding: 10px 10px 16px;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(15,81,50,0.08);
+    }
+    .left-nav__tile-sm {
+      display: flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #9ab8a8;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 400;
+      transition: color 0.12s ease, background 0.12s ease;
+    }
+    .left-nav__tile-sm:hover {
+      color: var(--em-deep);
+      background: rgba(15,81,50,0.05);
+    }
+    .left-nav__copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.67rem;
+      color: #b8cfc4;
+      padding: 10px 10px 0;
+      letter-spacing: 0.02em;
+    }
   </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
 </head>
 <body>
+
+<nav id="left-nav" aria-label="Site navigation">
+  <div class="left-nav__brand">
+    <div class="left-nav__logo-title">Atlas Legis</div>
+    <div class="left-nav__logo-sub">Law School Analytics</div>
+  </div>
+
+  <div class="left-nav__tiles">
+    <div class="left-nav__section-label">Explore</div>
+    <a href="/" class="left-nav__tile active" aria-current="page">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      Map
+    </a>
+    <a href="/schools/index.html" class="left-nav__tile">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Schools Directory
+    </a>
+    <a href="/rankings/" class="left-nav__tile">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      Rankings
+    </a>
+
+    <div class="left-nav__section-label">Tools</div>
+    <a href="/scholarship-estimator/" class="left-nav__tile">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Scholarship Estimator
+    </a>
+    <a href="/debt-planner/" class="left-nav__tile">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
+      Debt Planner
+    </a>
+    <a href="/ask/" class="left-nav__tile">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Ask Telamon
+    </a>
+  </div>
+
+  <div class="left-nav__bottom">
+    <a href="/methodology.html" class="left-nav__tile-sm">Methodology</a>
+    <a href="/sources.html" class="left-nav__tile-sm">Sources</a>
+    <a href="/about.html" class="left-nav__tile-sm">About</a>
+    <div class="left-nav__copy">© 2026 Atlas Legis</div>
+  </div>
+</nav>
+
+<div id="content-area">
 
 <header>
   <div class="header-main-row">
@@ -2355,7 +2545,7 @@
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" id="search-input" placeholder="Search schools by name, city, or state…" autocomplete="off" />
+          <input type="text" id="search-input" placeholder="Search by name, city, or state…" autocomplete="off" />
         </div>
       </div>
       <div class="header-center">
@@ -2388,7 +2578,7 @@
       </div>
     </div>
 
-    <!-- School count: right -->
+    <!-- School count: right of pill -->
     <span class="school-count" id="count-label"></span>
   </div>
 
@@ -3307,13 +3497,9 @@ filterBtn.addEventListener('click', () => {
     // Don't clear wdisBtn active — standing may still be applied
     if (!standingOn) wdisBtn.classList.remove('active');
     wdisBtn.classList.remove('open');
-    // On mobile, anchor drawer just below the actual header height
-    if (window.innerWidth <= 600) {
-      const hdrH = document.querySelector('header').getBoundingClientRect().height;
-      filterDrawer.style.top = hdrH + 'px';
-    } else {
-      filterDrawer.style.top = '';
-    }
+    // Always anchor drawer just below the actual header height
+    const hdrH = document.querySelector('header').getBoundingClientRect().height;
+    filterDrawer.style.top = hdrH + 'px';
   }
 });
 
@@ -4376,30 +4562,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </main><!-- /site-main -->
 
-<footer id="site-footer" aria-label="Site footer">
-  <div class="footer-brand">Atlas Legis<span>Law School Analytics</span></div>
-  <nav aria-label="Footer navigation">
-    <a href="/schools/index.html" class="footer-nav-link">Schools</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/rankings/" class="footer-nav-link">Rankings</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/scholarship-estimator/" class="footer-nav-link">Scholarships</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/debt-planner/" class="footer-nav-link">Debt Planner</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/about.html" class="footer-nav-link">About</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/ask/" class="footer-nav-link">Ask Telamon</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/methodology.html" class="footer-nav-link">Methodology</a>
-    <span class="footer-nav-sep">·</span>
-    <a href="/sources.html" class="footer-nav-link">Sources</a>
-  </nav>
-  <button id="footer-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="footer-nav-drawer">
-    Links <span>&#9650;</span>
-  </button>
-  <span class="footer-copy">© 2026 Atlas Legis</span>
-</footer>
+</div><!-- /content-area -->
 
 <div id="footer-nav-backdrop" aria-hidden="true"></div>
 <div id="footer-nav-drawer" role="dialog" aria-label="Site navigation" aria-hidden="true">

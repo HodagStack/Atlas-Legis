@@ -2364,6 +2364,7 @@
 
       header .logo { display: none; }
       #tools-btn { display: none; }
+      #site-footer { display: none; }
       .header-main-row { display: flex; justify-content: center; align-items: center; gap: 8px; }
       .header-controls { width: auto; flex: 0 1 620px; justify-self: unset; }
 
@@ -2504,6 +2505,10 @@
     </a>
 
     <div class="left-nav__section-label">Tools</div>
+    <a href="/finder/" class="left-nav__tile">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      School Finder
+    </a>
     <a href="/scholarship-estimator/" class="left-nav__tile">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
       Scholarship Estimator
@@ -4562,6 +4567,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </main><!-- /site-main -->
 
+<footer id="site-footer" aria-label="Site footer">
+  <div class="footer-brand">Atlas Legis<span>Law School Analytics</span></div>
+  <nav aria-label="Footer navigation">
+    <a href="/schools/index.html" class="footer-nav-link">Schools</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/rankings/" class="footer-nav-link">Rankings</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/finder/" class="footer-nav-link">School Finder</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/scholarship-estimator/" class="footer-nav-link">Scholarships</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/debt-planner/" class="footer-nav-link">Debt Planner</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/about.html" class="footer-nav-link">About</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/ask/" class="footer-nav-link">Ask Telamon</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/methodology.html" class="footer-nav-link">Methodology</a>
+    <span class="footer-nav-sep">·</span>
+    <a href="/sources.html" class="footer-nav-link">Sources</a>
+  </nav>
+  <button id="footer-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="footer-nav-drawer">
+    Links <span>&#9650;</span>
+  </button>
+  <span class="footer-copy">© 2026 Atlas Legis</span>
+</footer>
+
 </div><!-- /content-area -->
 
 <div id="footer-nav-backdrop" aria-hidden="true"></div>
@@ -4570,6 +4602,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <nav aria-label="Footer drawer navigation">
     <a href="/schools/index.html" class="footer-drawer-link">Schools</a>
     <a href="/rankings/" class="footer-drawer-link">Rankings</a>
+    <a href="/finder/" class="footer-drawer-link">School Finder</a>
     <a href="/scholarship-estimator/" class="footer-drawer-link">Scholarships</a>
     <a href="/debt-planner/" class="footer-drawer-link">Debt Planner</a>
     <a href="/about.html" class="footer-drawer-link">About</a>
@@ -4581,6 +4614,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- Tools dropdown (positioned by JS) -->
 <div id="tools-dropdown" role="menu" aria-label="Tools menu">
+  <a class="tools-dd-item" href="/finder/" role="menuitem">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    School Finder
+  </a>
   <a class="tools-dd-item" href="/scholarship-estimator/" role="menuitem">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
     Scholarship Estimator

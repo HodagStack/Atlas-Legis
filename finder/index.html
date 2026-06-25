@@ -798,6 +798,7 @@ function getFilteredSorted() {
       const dist = haversineDistance(lat, lng, item.school.lat, item.school.lng);
       item.distanceMiles = Math.round(dist);
       const bonus = dist <= 50 ? 15 : dist <= 150 ? 8 : 3;
+      item.result.proximityBonus = bonus;
       item.result.score = Math.min(100, item.result.score + bonus);
     });
   }
@@ -895,9 +896,13 @@ function renderResults(scored) {
     const netDisplay   = r.netCost != null ? money(r.netCost) : '—';
     const scoreLabel   = state.lsat && state.gpa ? r.score : '—';
     // Why breakdown bar widths
-    const admW = r.admMax > 0 ? Math.round(r.admissionPts / r.admMax * 100) : 0;
-    const carW = r.carMax > 0 ? Math.round(r.careerPts    / r.carMax * 100) : 0;
-    const finW = r.finMax > 0 ? Math.round(r.financePts   / r.finMax * 100) : 0;
+    const admW  = r.admMax > 0 ? Math.round(r.admissionPts / r.admMax * 100) : 0;
+    const carW  = r.carMax > 0 ? Math.round(r.careerPts    / r.carMax * 100) : 0;
+    const finW  = r.finMax > 0 ? Math.round(r.financePts   / r.finMax * 100) : 0;
+    const proxB = r.proximityBonus ?? 0;
+    const proxMax = 15;
+    const proxW = Math.round(proxB / proxMax * 100);
+    const proxNote = distanceMiles != null ? `${distanceMiles} mi away` : '';
 
     return `
 <article class="finder-card" id="card-${idx}">
@@ -944,6 +949,12 @@ function renderResults(scored) {
           <span class="why-pts">${r.financePts}/${r.finMax}</span>
           <span class="why-note">${esc(r.financeNote)}</span>
         </div>
+        ${proxB > 0 ? `<div class="why-row">
+          <span class="why-label">Location</span>
+          <div class="why-bar-wrap"><div class="why-bar-fill" style="width:${proxW}%"></div></div>
+          <span class="why-pts">+${proxB}/${proxMax}</span>
+          <span class="why-note">${esc(proxNote)}</span>
+        </div>` : ''}
       </div>
     </div>
   </div>

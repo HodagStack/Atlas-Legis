@@ -291,6 +291,15 @@
     .rank-up   { color: #059669; font-weight: 700; }
     .rank-down { color: #dc2626; font-weight: 700; }
     .rank-same { color: var(--muted); }
+
+    /* ── Medians trend chart ──────────────────────────────────── */
+    .medians-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 480px) { .medians-grid { grid-template-columns: 1fr; } }
+    .medians-panel { min-width: 0; }
+    .medians-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px;
+                      justify-content: center; }
+    .medians-legend-item { display: flex; align-items: center; gap: 6px;
+                           font-size: .75rem; color: var(--muted); }
   </style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
@@ -308,6 +317,8 @@
         <ul class="nav-links" role="list">
           <li><a href="/schools/">Schools</a></li>
           <li><a href="/rankings/">Rankings</a></li>
+          <li><a href="/finder/">School Finder</a></li>
+          <li><a href="/scholarship-estimator/">Scholarships</a></li>
           <li><a href="/debt-planner/">Debt Planner</a></li>
           <li><a href="/ask/">Ask Telamon</a></li>
         </ul>
@@ -406,6 +417,21 @@
           </div>
         </article>
       </section>
+
+      <script>window.SCHOOL_MEDIANS={"years":[2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],"lsat25":[171.0,170.0,170.0,170.0,170.0,170.0,170.0,170.0,170.0,170.0,170.0,170.0,171.0,171.0,171.0],"lsat50":[173.0,173.0,173.0,173.0,173.0,172.0,173.0,173.0,173.0,173.0,174.0,174.0,174.0,174.0,174.0],"lsat75":[176.0,175.0,175.0,175.0,175.0,175.0,175.0,175.0,175.0,175.0,176.0,176.0,176.0,176.0,176.0],"gpa25":[3.78,3.77,3.77,3.75,3.75,3.76,3.76,3.8,3.79,3.78,3.82,3.82,3.84,3.89,3.89],"gpa50":[3.89,3.88,3.88,3.87,3.86,3.86,3.86,3.9,3.89,3.88,3.92,3.92,3.93,3.95,3.96],"gpa75":[3.97,3.95,3.95,3.95,3.96,3.94,3.96,3.97,3.96,3.96,3.98,3.99,3.99,4.0,4.0]};</script>
+      <!-- MEDIANS-TREND-START -->
+      <section aria-labelledby="medians-trend-h">
+        <article class="card">
+          <div class="card-head">
+            <h2 id="medians-trend-h">Admissions Trends</h2>
+            <span class="card-note">2011–2025</span>
+          </div>
+          <div class="card-body">
+            <div id="medians-charts"><!-- rendered by medians-chart.js --></div>
+          </div>
+        </article>
+      </section>
+      <!-- MEDIANS-TREND-END -->
 
       <!-- ── Employment ─────────────────────────────────────── -->
       <section aria-labelledby="employment-h">
@@ -815,5 +841,6 @@
   </footer>
 
 <script src="/schools/schol-pct.js"></script>
+<script src="/schools/medians-chart.js"></script>
 </body>
 </html>

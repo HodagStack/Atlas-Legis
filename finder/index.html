@@ -48,16 +48,8 @@
     .nav-active{color:var(--em-deep)!important;font-weight:600!important;}
     .nav-map{background:var(--em);color:#fff!important;padding:5px 14px;border-radius:var(--r-sm);font-size:.82rem;font-weight:500;white-space:nowrap;transition:background .14s;margin-left:6px;}
     .nav-map:hover{background:var(--em-deep)!important;}
-    @media(max-width:560px){.nav-links li:not(:last-child){display:none;}.nav-tagline{display:none!important;}}
-
-    /* TOOLS SUBNAV */
-    .tools-subnav{background:#fff;border-bottom:1px solid var(--border);}
-    .tools-subnav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:40px;display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;}
-    .tools-subnav-inner::-webkit-scrollbar{display:none;}
-    .tsn-label{font-size:.68rem;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding-right:10px;white-space:nowrap;}
-    .tsn-link{font-size:.78rem;font-weight:500;color:var(--muted);padding:4px 12px;border-radius:6px;text-decoration:none;white-space:nowrap;transition:color .14s,background .14s;}
-    .tsn-link:hover{color:var(--ink);background:var(--soft);}
-    .tsn-active{color:var(--em-deep)!important;font-weight:600!important;}
+    @media(max-width:700px){.nav-right{overflow-x:auto;}.nav-links a{font-size:.76rem;padding:5px 7px;}.nav-map{padding:5px 10px;margin-left:4px;}}
+    @media(max-width:480px){.nav-tagline{display:none!important;}}
 
     /* HERO */
     .finder-hero{background:radial-gradient(ellipse at 18% 50%,rgba(34,168,106,.15) 0%,transparent 55%),radial-gradient(ellipse at 82% 15%,rgba(15,81,50,.10) 0%,transparent 50%),linear-gradient(155deg,#e8f3ed 0%,#daeae2 60%,#e4efe9 100%);padding:56px 24px 60px;border-bottom:1px solid var(--border);}
@@ -255,6 +247,20 @@
       .modal-band-grid{grid-template-columns:1fr;}
     }
 
+    /* PROXIMITY SEARCH */
+    .prox-toggle-label{display:flex;align-items:center;gap:8px;margin-top:11px;font-size:.8rem;font-weight:500;color:var(--ink-soft);cursor:pointer;user-select:none;}
+    .prox-checkbox{width:15px;height:15px;accent-color:var(--em);cursor:pointer;flex-shrink:0;}
+    .prox-inputs{margin-top:12px;display:none;}
+    .prox-inputs.visible{display:block;}
+    .prox-addr-wrap{position:relative;}
+    .prox-addr-input{padding-right:40px!important;font-size:.85rem!important;height:38px!important;}
+    .prox-locate-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:6px;border:1px solid rgba(15,81,50,.2);background:rgba(15,81,50,.07);color:var(--em-deep);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .13s;padding:0;}
+    .prox-locate-btn:hover{background:rgba(15,81,50,.15);}
+    .prox-status{font-size:.69rem;color:var(--muted);margin-top:5px;min-height:.9em;line-height:1.4;word-break:break-word;}
+    .prox-status.error{color:var(--red);}
+    .prox-status.success{color:var(--em-deep);}
+    .region-disabled{opacity:.4;pointer-events:none;}
+
     /* FOOTER */
     .footer{background:#0d1117;padding:36px 20px;margin-top:40px;}
     .footer-inner{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;}
@@ -280,6 +286,8 @@
         <li><a href="/schools/">Schools</a></li>
         <li><a href="/rankings/">Rankings</a></li>
         <li><a href="/finder/" class="nav-active" aria-current="page">School Finder</a></li>
+        <li><a href="/scholarship-estimator/">Scholarships</a></li>
+        <li><a href="/debt-planner/">Debt Planner</a></li>
         <li><a href="/ask/">Ask Telamon</a></li>
       </ul>
       <a href="/" class="nav-map">View Map</a>
@@ -287,15 +295,6 @@
   </div>
 </nav>
 
-<div class="tools-subnav" aria-label="Tools navigation">
-  <div class="tools-subnav-inner">
-    <span class="tsn-label">Tools:</span>
-    <a href="/finder/" class="tsn-link tsn-active" aria-current="page">School Finder</a>
-    <a href="/scholarship-estimator/" class="tsn-link">Scholarship Estimator</a>
-    <a href="/debt-planner/" class="tsn-link">Debt Planner</a>
-    <a href="/ask/" class="tsn-link">Ask Telamon</a>
-  </div>
-</div>
 
 <section class="finder-hero" aria-label="Page introduction">
   <div class="finder-hero-inner">
@@ -361,7 +360,7 @@
         <hr class="panel-divider"/>
 
         <div class="panel-section">
-          <h2 class="panel-heading">Region <span class="info-icon" tabindex="0" data-tip="Filters to schools in a specific part of the country. Where you attend law school often shapes where you'll practice — local alumni networks and bar exam preparation are closely tied to location.">?</span></h2>
+          <h2 class="panel-heading">Location <span class="info-icon" tabindex="0" data-tip="Filter by broad US region, or enable proximity search to find schools within a set distance from any address. Proximity mode ranks closer schools higher and disables the region filter.">?</span></h2>
           <select id="inp-region" class="panel-select" aria-label="Preferred region">
             <option value="">All US</option>
             <option value="northeast">Northeast</option>
@@ -369,6 +368,31 @@
             <option value="midwest">Midwest</option>
             <option value="west">West Coast / Mountain West</option>
           </select>
+          <label class="prox-toggle-label" for="prox-toggle">
+            <input type="checkbox" id="prox-toggle" class="prox-checkbox" aria-controls="prox-inputs"/>
+            <span>Search by proximity</span>
+          </label>
+          <div id="prox-inputs" class="prox-inputs" aria-hidden="true">
+            <div class="input-row" style="margin-bottom:10px;">
+              <div class="input-label">Address or City</div>
+              <div class="prox-addr-wrap">
+                <input class="num-input prox-addr-input" type="text" id="prox-address" placeholder="e.g. Chicago, IL" autocomplete="off" aria-label="Proximity address"/>
+                <button class="prox-locate-btn" id="prox-locate-btn" type="button" aria-label="Use my current location" title="Use my current location">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="9" stroke-dasharray="3 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-label">Radius</div>
+              <select id="prox-radius" class="panel-select" aria-label="Search radius">
+                <option value="50">Within 50 miles</option>
+                <option value="100">Within 100 miles</option>
+                <option value="250" selected>Within 250 miles</option>
+                <option value="500">Within 500 miles</option>
+              </select>
+            </div>
+            <div id="prox-status" class="prox-status" aria-live="polite"></div>
+          </div>
         </div>
 
         <hr class="panel-divider"/>
@@ -521,7 +545,10 @@ const state = {
   scholWeight: 'medium',
   region:      '',
   tier:        '',
-  sortBy:      'score'
+  sortBy:      'score',
+  proximityEnabled: false,
+  proximityCoords:  null,   // { lat, lng }
+  proximityRadius:  250
 };
 
 let allSchools = [];
@@ -540,6 +567,23 @@ const REGION_MAP = {
   AK:'west',AZ:'west',CA:'west',CO:'west',HI:'west',ID:'west',MT:'west',NV:'west',NM:'west',OR:'west',UT:'west',WA:'west',WY:'west'
 };
 function stateToRegion(a) { return REGION_MAP[a] || 'other'; }
+
+// ─── PROXIMITY HELPERS ───────────────────────────────────────────────────────
+function haversineDistance(lat1, lng1, lat2, lng2) {
+  const R = 3958.8, toRad = d => d * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1), dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+async function geocodeAddress(address) {
+  const url = 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(address) + '&format=json&limit=1&countrycodes=us';
+  const resp = await fetch(url, { headers: { 'Accept-Language': 'en-US,en' } });
+  if (!resp.ok) throw new Error('geocode ' + resp.status);
+  const data = await resp.json();
+  if (!data.length) return null;
+  return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon), display: data[0].display_name };
+}
 
 // ─── SCHOLARSHIP ESTIMATOR MATH (from scholarship-estimator) ──────────────────
 function scorePercentile(value, p25, p50, p75) {
@@ -732,13 +776,31 @@ function scoreSchool(school) {
 // ─── FILTER + SORT ────────────────────────────────────────────────────────────
 function getFilteredSorted() {
   let schools = allSchools.slice();
-  if (state.region) schools = schools.filter(s => s.region === state.region);
-  if (state.tier === 't14')         schools = schools.filter(s => s.tier === 't14');
+
+  if (state.proximityEnabled && state.proximityCoords) {
+    const { lat, lng } = state.proximityCoords;
+    schools = schools.filter(s => s.lat != null && s.lng != null &&
+      haversineDistance(lat, lng, s.lat, s.lng) <= state.proximityRadius);
+  } else if (state.region) {
+    schools = schools.filter(s => s.region === state.region);
+  }
+
+  if (state.tier === 't14')            schools = schools.filter(s => s.tier === 't14');
   else if (state.tier === 't14_tier2') schools = schools.filter(s => s.tier === 't14' || s.tier === 'tier2');
   else if (state.tier === 'tier2only') schools = schools.filter(s => s.tier === 'tier2');
-  else if (state.tier === 'tier3')  schools = schools.filter(s => s.tier === 'tier3');
+  else if (state.tier === 'tier3')     schools = schools.filter(s => s.tier === 'tier3');
 
-  const scored = schools.map(s => ({ school: s, result: scoreSchool(s) }));
+  let scored = schools.map(s => ({ school: s, result: scoreSchool(s), distanceMiles: null }));
+
+  if (state.proximityEnabled && state.proximityCoords) {
+    const { lat, lng } = state.proximityCoords;
+    scored.forEach(item => {
+      const dist = haversineDistance(lat, lng, item.school.lat, item.school.lng);
+      item.distanceMiles = Math.round(dist);
+      const bonus = dist <= 50 ? 15 : dist <= 150 ? 8 : 3;
+      item.result.score = Math.min(100, item.result.score + bonus);
+    });
+  }
 
   const sortFns = {
     score:     (a, b) => b.result.score - a.result.score,
@@ -770,7 +832,13 @@ function renderChips() {
   if (state.gpa)                    chips.push({ label:`GPA: ${state.gpa}`,               key:'gpa' });
   state.priorities.forEach(p =>     chips.push({ label:PL[p],                             key:`pri_${p}` }));
   if (state.scholWeight !== 'medium') chips.push({ label:`Scholarship: ${state.scholWeight}`, key:'schol' });
-  if (state.region)                 chips.push({ label:`Region: ${RL[state.region]}`,     key:'region' });
+  if (state.proximityEnabled && state.proximityCoords) {
+    const raw = document.getElementById('prox-address')?.value?.trim() || 'your location';
+    const label = raw.length > 22 ? raw.slice(0, 22) + '…' : raw;
+    chips.push({ label: `Within ${state.proximityRadius}mi of ${label}`, key: 'proximity' });
+  } else if (state.region) {
+    chips.push({ label:`Region: ${RL[state.region]}`, key:'region' });
+  }
   if (state.tier)                   chips.push({ label:`Tier: ${TL[state.tier]}`,         key:'tier' });
   if (!chips.length) { bar.innerHTML = ''; return; }
   bar.innerHTML = chips.map(c =>
@@ -787,6 +855,13 @@ function clearFilter(key) {
   if (key === 'schol')  { state.scholWeight='medium'; document.querySelectorAll('.qbtn').forEach(b=>b.classList.toggle('active',b.dataset.val==='medium')); }
   if (key === 'region') { state.region=''; document.getElementById('inp-region').value=''; }
   if (key === 'tier')   { state.tier='';   document.getElementById('inp-tier').value=''; }
+  if (key === 'proximity') {
+    state.proximityEnabled = false; state.proximityCoords = null;
+    const tog = document.getElementById('prox-toggle'); if (tog) tog.checked = false;
+    const inp = document.getElementById('prox-inputs'); if (inp) { inp.classList.remove('visible'); inp.setAttribute('aria-hidden','true'); }
+    const reg = document.getElementById('inp-region'); if (reg) { reg.disabled = false; reg.classList.remove('region-disabled'); }
+    const st  = document.getElementById('prox-status'); if (st) { st.textContent=''; st.className='prox-status'; }
+  }
   if (key.startsWith('pri_')) {
     const p = key.slice(4);
     state.priorities = state.priorities.filter(x => x !== p);
@@ -805,7 +880,7 @@ function renderResults(scored) {
   }
   count.textContent = `${scored.length} school${scored.length !== 1 ? 's' : ''}`;
 
-  list.innerHTML = scored.map(({ school: s, result: r }, idx) => {
+  list.innerHTML = scored.map(({ school: s, result: r, distanceMiles }, idx) => {
     const bandKey  = r.band.toLowerCase().replace(' ', '-');
     const scoreCls = r.score >= 70 ? 'score-a' : r.score >= 50 ? 'score-b' : r.score >= 30 ? 'score-c' : 'score-d';
     let tierLabel, tierCls;
@@ -843,7 +918,7 @@ function renderResults(scored) {
       <div class="card-chip"><span class="chip-val">${esc(netDisplay)}</span><span class="chip-label">Net Cost</span></div>
     </div>
     <div class="card-footer">
-      <span class="card-stats-sm">Accept: ${s.acceptRate != null ? s.acceptRate + '%' : '—'} &nbsp;·&nbsp; LSAT median: ${s.lsat50 ?? '—'} &nbsp;·&nbsp; GPA median: ${s.gpa50 != null ? s.gpa50.toFixed(2) : '—'}</span>
+      <span class="card-stats-sm">Accept: ${s.acceptRate != null ? s.acceptRate + '%' : '—'} &nbsp;·&nbsp; LSAT median: ${s.lsat50 ?? '—'} &nbsp;·&nbsp; GPA median: ${s.gpa50 != null ? s.gpa50.toFixed(2) : '—'}${distanceMiles != null ? ' &nbsp;·&nbsp; ' + distanceMiles + ' mi away' : ''}</span>
       <a href="${esc(url)}" class="card-link">View Profile →</a>
     </div>
     <div class="card-why">
@@ -953,6 +1028,64 @@ function wireInputs() {
   // Region + Tier
   document.getElementById('inp-region').addEventListener('change', e => { state.region = e.target.value; recompute(); });
   document.getElementById('inp-tier').addEventListener('change',   e => { state.tier   = e.target.value; recompute(); });
+
+  // Proximity search
+  const proxToggle  = document.getElementById('prox-toggle');
+  const proxInputs  = document.getElementById('prox-inputs');
+  const proxAddr    = document.getElementById('prox-address');
+  const proxStatus  = document.getElementById('prox-status');
+  const proxLocate  = document.getElementById('prox-locate-btn');
+  const regionSel   = document.getElementById('inp-region');
+
+  function setProxStatus(msg, cls) { proxStatus.textContent = msg; proxStatus.className = 'prox-status' + (cls ? ' ' + cls : ''); }
+
+  proxToggle.addEventListener('change', () => {
+    state.proximityEnabled = proxToggle.checked;
+    proxInputs.classList.toggle('visible', proxToggle.checked);
+    proxInputs.setAttribute('aria-hidden', String(!proxToggle.checked));
+    regionSel.disabled = proxToggle.checked;
+    regionSel.classList.toggle('region-disabled', proxToggle.checked);
+    if (!proxToggle.checked) { state.proximityCoords = null; setProxStatus('', ''); }
+    recompute();
+  });
+
+  document.getElementById('prox-radius').addEventListener('change', e => {
+    state.proximityRadius = parseInt(e.target.value);
+    recompute();
+  });
+
+  let geocodeTimer;
+  async function doGeocode() {
+    const addr = proxAddr.value.trim();
+    if (!addr) { state.proximityCoords = null; setProxStatus('', ''); recompute(); return; }
+    setProxStatus('Locating…', '');
+    try {
+      const coords = await geocodeAddress(addr);
+      if (!coords) { state.proximityCoords = null; setProxStatus('Address not found. Try a city + state.', 'error'); }
+      else {
+        state.proximityCoords = coords;
+        const short = coords.display.split(',').slice(0, 3).join(',');
+        setProxStatus('Found: ' + short, 'success');
+      }
+      recompute();
+    } catch (e) { setProxStatus('Geocoding failed. Check your connection.', 'error'); }
+  }
+  proxAddr.addEventListener('input', () => { clearTimeout(geocodeTimer); geocodeTimer = setTimeout(doGeocode, 900); });
+  proxAddr.addEventListener('keydown', e => { if (e.key === 'Enter') { clearTimeout(geocodeTimer); doGeocode(); } });
+
+  proxLocate.addEventListener('click', () => {
+    if (!navigator.geolocation) { setProxStatus('Geolocation not supported.', 'error'); return; }
+    setProxStatus('Detecting location…', '');
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        state.proximityCoords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        proxAddr.value = 'My current location';
+        setProxStatus(`Set (${pos.coords.latitude.toFixed(2)}°, ${pos.coords.longitude.toFixed(2)}°)`, 'success');
+        recompute();
+      },
+      () => setProxStatus('Location access denied.', 'error')
+    );
+  });
 
   // Sort
   document.getElementById('sort-select').addEventListener('change', e => { state.sortBy = e.target.value; recompute(); });

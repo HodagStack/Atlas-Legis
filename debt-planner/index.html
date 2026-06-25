@@ -40,11 +40,12 @@
     .nav-links .nav-active{color:var(--em-deep);font-weight:600;}
     .nav-map{background:var(--em);color:#fff!important;padding:5px 14px;border-radius:var(--r-sm);font-size:.82rem;font-weight:500;white-space:nowrap;text-decoration:none;transition:background .14s;margin-left:6px;}
     .nav-map:hover{background:var(--em-deep)!important;}
-    @media(max-width:500px){
-      .nav-tagline{display:none!important;}
-      .nav-links a{padding:5px 7px;}
+    @media(max-width:700px){
+      .nav-right{overflow-x:auto;}
+      .nav-links a{font-size:.76rem;padding:5px 7px;}
       .nav-map{padding:5px 10px;margin-left:4px;}
     }
+    @media(max-width:480px){.nav-tagline{display:none!important;}}
 
     /* PAGE WRAP */
     .page{max-width:1100px;margin:0 auto;padding:48px 20px 80px;}
@@ -57,14 +58,6 @@
     .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;color:var(--em-deep);line-height:1.12;letter-spacing:-.02em;margin-bottom:24px;}
     .hero h1 em{font-style:italic;color:var(--em);}
     .hero-lead{font-size:1.08rem;color:var(--ink-soft);line-height:1.75;font-weight:300;max-width:580px;}
-    /* TOOLS CROSS-NAV */
-    .tools-subnav{background:#fff;border-bottom:1px solid var(--border);}
-    .tools-subnav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:40px;display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;}
-    .tools-subnav-inner::-webkit-scrollbar{display:none;}
-    .tsn-link{font-size:.78rem;font-weight:500;color:var(--muted);padding:4px 12px;border-radius:6px;text-decoration:none;white-space:nowrap;transition:color .14s,background .14s;}
-    .tsn-link:hover{color:var(--ink);background:var(--soft);}
-    .tsn-active{color:var(--em-deep)!important;font-weight:600!important;}
-    .tsn-label{font-size:.68rem;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding-right:10px;white-space:nowrap;}
     /* STAT STRIP */
     .stat-strip{background:var(--em-deep);}
     .stat-strip-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:38px;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;gap:0;}
@@ -178,6 +171,8 @@
       <ul class="nav-links" role="list">
         <li><a href="/schools/">Schools</a></li>
         <li><a href="/rankings/">Rankings</a></li>
+        <li><a href="/finder/">School Finder</a></li>
+        <li><a href="/scholarship-estimator/">Scholarships</a></li>
         <li><a href="/debt-planner/" class="nav-active">Debt Planner</a></li>
         <li><a href="/ask/">Ask Telamon</a></li>
       </ul>
@@ -186,14 +181,6 @@
   </div>
 </nav>
 
-<div class="tools-subnav" aria-label="Tools navigation">
-  <div class="tools-subnav-inner">
-    <span class="tsn-label">Tools:</span>
-    <a href="/debt-planner/" class="tsn-link tsn-active" aria-current="page">Debt Planner</a>
-    <a href="/scholarship-estimator/" class="tsn-link">Scholarship Estimator</a>
-    <a href="/ask/" class="tsn-link">Ask Telamon</a>
-  </div>
-</div>
 
 <div class="stat-strip" role="complementary" aria-label="Loan rate overview">
   <div class="stat-strip-inner">

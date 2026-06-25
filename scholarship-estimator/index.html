@@ -81,11 +81,12 @@
       transition: background .14s; margin-left: 6px;
     }
     .nav-map:hover { background: var(--em-deep); color: #fff; }
-    @media (max-width: 500px) {
-      .nav-tagline { display: none !important; }
-      .nav-links a { padding: 5px 7px; }
+    @media (max-width: 700px) {
+      .nav-right { overflow-x: auto; }
+      .nav-links a { font-size: .76rem; padding: 5px 7px; }
       .nav-map { padding: 5px 10px; margin-left: 4px; }
     }
+    @media (max-width: 480px) { .nav-tagline { display: none !important; } }
 
     /* ── Hero ── */
     .hero {
@@ -416,14 +417,6 @@
     .prose p:last-child { margin-bottom: 0; }
     .prose strong { font-weight: 600; color: var(--ink); }
 
-    /* ── Tools cross-nav ── */
-    .tools-subnav { background: #fff; border-bottom: 1px solid var(--border); }
-    .tools-subnav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 40px; display: flex; align-items: center; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-    .tools-subnav-inner::-webkit-scrollbar { display: none; }
-    .tsn-link { font-size: 0.78rem; font-weight: 500; color: var(--muted); padding: 4px 12px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: color .14s, background .14s; }
-    .tsn-link:hover { color: var(--ink); background: var(--soft); }
-    .tsn-active { color: var(--em-deep) !important; font-weight: 600 !important; }
-    .tsn-label { font-size: 0.68rem; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; padding-right: 10px; white-space: nowrap; }
     /* ── Medals ── */
     .medal { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: 0.72rem; font-weight: 700; line-height: 1; }
     .medal-gold   { background: #FEF3C7; color: #92400E; border: 1.5px solid #FCD34D; }
@@ -548,6 +541,8 @@
       <ul class="nav-links" role="list">
         <li><a href="/schools/">Schools</a></li>
         <li><a href="/rankings/">Rankings</a></li>
+        <li><a href="/finder/">School Finder</a></li>
+        <li><a href="/scholarship-estimator/" aria-current="page">Scholarships</a></li>
         <li><a href="/debt-planner/">Debt Planner</a></li>
         <li><a href="/ask/">Ask Telamon</a></li>
       </ul>
@@ -556,14 +551,6 @@
   </div>
 </nav>
 
-<div class="tools-subnav" aria-label="Tools navigation">
-  <div class="tools-subnav-inner">
-    <span class="tsn-label">Tools:</span>
-    <a href="/debt-planner/" class="tsn-link">Debt Planner</a>
-    <a href="/scholarship-estimator/" class="tsn-link tsn-active" aria-current="page">Scholarship Estimator</a>
-    <a href="/ask/" class="tsn-link">Ask Telamon</a>
-  </div>
-</div>
 
 <!-- Hero -->
 <section class="hero">

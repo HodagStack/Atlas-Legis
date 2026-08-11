@@ -580,7 +580,7 @@
                 Each circle represents <strong>1%</strong> of the entering class, colored by scholarship level received.
               </p>
               <div class="schol-grid" id="schol-people-grid" role="img"
-                   aria-label="Scholarship distribution: 163 students with no scholarship, 99 with less than half tuition, 125 with half to full tuition, 0 with full tuition, 4 with more than full tuition">
+                   aria-label="Scholarship distribution: 62 students with no scholarship, 48 with less than half tuition, 41 with half to full tuition, 0 with full tuition, 4 with more than full tuition">
                 <!-- 100 dots injected by inline script below -->
               </div>
               <div class="schol-grid-legend" aria-hidden="true">
@@ -596,9 +596,9 @@
 
             <!-- Proportional bar -->
             <div class="schol-bar-track" role="presentation" aria-hidden="true">
-              <div class="schol-seg s-none"    style="flex: 163;"           title="No scholarship"></div>
-              <div class="schol-seg s-less"    style="flex: 99;"  title="Less than half tuition"></div>
-              <div class="schol-seg s-half"    style="flex: 125;"    title="Half to full tuition"></div>
+              <div class="schol-seg s-none"    style="flex: 62;"           title="No scholarship"></div>
+              <div class="schol-seg s-less"    style="flex: 48;"  title="Less than half tuition"></div>
+              <div class="schol-seg s-half"    style="flex: 41;"    title="Half to full tuition"></div>
               <div class="schol-seg s-full"    style="flex: 0;"    title="Full tuition"></div>
               <div class="schol-seg s-stipend" style="flex: 4;"         title="More than full tuition"></div>
             </div>
@@ -608,17 +608,17 @@
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-none" aria-hidden="true"></div>
                 <span class="schol-lbl">No scholarship</span>
-                <span class="schol-val">163</span>
+                <span class="schol-val">62</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-less" aria-hidden="true"></div>
                 <span class="schol-lbl">Less than ½ tuition</span>
-                <span class="schol-val">99</span>
+                <span class="schol-val">48</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-half" aria-hidden="true"></div>
                 <span class="schol-lbl">Half to full tuition</span>
-                <span class="schol-val">125</span>
+                <span class="schol-val">41</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-full" aria-hidden="true"></div>
@@ -777,9 +777,9 @@
 
     // Raw headcounts from template tokens
     var raw = {
-      none:    Number('163'.replace(/[^0-9.]/g, '')) || 0,
-      less:    Number('99'.replace(/[^0-9.]/g, '')) || 0,
-      half:    Number('125'.replace(/[^0-9.]/g, '')) || 0,
+      none:    Number('62'.replace(/[^0-9.]/g, '')) || 0,
+      less:    Number('48'.replace(/[^0-9.]/g, '')) || 0,
+      half:    Number('41'.replace(/[^0-9.]/g, '')) || 0,
       full:    Number('0'.replace(/[^0-9.]/g, '')) || 0,
       stipend: Number('4'.replace(/[^0-9.]/g, '')) || 0,
     };

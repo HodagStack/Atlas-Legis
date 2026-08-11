@@ -1,6 +1,6 @@
 # Atlas Legis
 
-**Atlas Legis** is a free, data-driven law school analytics platform for prospective law students. It combines an interactive map of every ABA-accredited school with deep per-school profiles, data-driven rankings, financial planning tools, and an AI research assistant — all built directly from official ABA required disclosures.
+**Atlas Legis** is a free, data-driven law school analytics platform for prospective law students. It combines an interactive map of every ABA-accredited school with deep per-school profiles, data-driven rankings, and financial planning tools — all built directly from official ABA required disclosures.
 
 Live at **[atlaslegis.com](https://atlaslegis.com)**
 
@@ -42,9 +42,6 @@ Includes a Chart.js loan balance visualization, school-specific tuition autofill
 ### Scholarship Estimator (`/scholarship-estimator/`)
 Enter your LSAT and GPA to see estimated merit scholarship amounts at every ABA school, calculated from official 509 grant distribution data. Includes grant estimate, 3-year total, estimated net cost, applicant strength tiers (Strong / Competitive / Reach), and confidence indicators.
 
-### Ask Telamon (`/ask/`)
-An AI research assistant powered by a Cloudflare Worker. Answers questions about law school admissions, employment outcomes, and financial planning using Atlas Legis data as context.
-
 ---
 
 ## Data Sources
@@ -63,7 +60,6 @@ No affiliation with any law school or accrediting body.
 - **Frontend:** Vanilla HTML, CSS, JavaScript — no framework, no bundler
 - **Data:** Static JSON files in `/data/` loaded via `fetch()`
 - **Charts:** Chart.js 4.4
-- **AI backend:** Cloudflare Worker (`workers/telamon.js`)
 - **Hosting:** GitHub Pages (custom domain via `CNAME`)
 - **Fonts:** Playfair Display · DM Sans · Instrument Serif (Google Fonts)
 
@@ -83,10 +79,8 @@ No affiliation with any law school or accrediting body.
 │   └── scholarships/
 ├── debt-planner/index.html
 ├── scholarship-estimator/index.html
-├── ask/index.html                # Ask Telamon
 ├── data/                         # JSON data files
 ├── reports/<slug>.pdf            # Per-school PDF reports
-├── workers/telamon.js            # Cloudflare AI worker
 └── theme.css / theme.js          # Sitewide dark mode toggle
 ```
 

@@ -580,7 +580,7 @@
                 Each circle represents <strong>1%</strong> of the entering class, colored by scholarship level received.
               </p>
               <div class="schol-grid" id="schol-people-grid" role="img"
-                   aria-label="Scholarship distribution: 67 students with no scholarship, 96 with less than half tuition, 107 with half to full tuition, 17 with full tuition, 9 with more than full tuition">
+                   aria-label="Scholarship distribution: 26 students with no scholarship, 51 with less than half tuition, 25 with half to full tuition, 7 with full tuition, 5 with more than full tuition">
                 <!-- 100 dots injected by inline script below -->
               </div>
               <div class="schol-grid-legend" aria-hidden="true">
@@ -596,11 +596,11 @@
 
             <!-- Proportional bar -->
             <div class="schol-bar-track" role="presentation" aria-hidden="true">
-              <div class="schol-seg s-none"    style="flex: 67;"           title="No scholarship"></div>
-              <div class="schol-seg s-less"    style="flex: 96;"  title="Less than half tuition"></div>
-              <div class="schol-seg s-half"    style="flex: 107;"    title="Half to full tuition"></div>
-              <div class="schol-seg s-full"    style="flex: 17;"    title="Full tuition"></div>
-              <div class="schol-seg s-stipend" style="flex: 9;"         title="More than full tuition"></div>
+              <div class="schol-seg s-none"    style="flex: 26;"           title="No scholarship"></div>
+              <div class="schol-seg s-less"    style="flex: 51;"  title="Less than half tuition"></div>
+              <div class="schol-seg s-half"    style="flex: 25;"    title="Half to full tuition"></div>
+              <div class="schol-seg s-full"    style="flex: 7;"    title="Full tuition"></div>
+              <div class="schol-seg s-stipend" style="flex: 5;"         title="More than full tuition"></div>
             </div>
 
             <!-- Detail rows -->
@@ -608,27 +608,27 @@
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-none" aria-hidden="true"></div>
                 <span class="schol-lbl">No scholarship</span>
-                <span class="schol-val">67</span>
+                <span class="schol-val">26</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-less" aria-hidden="true"></div>
                 <span class="schol-lbl">Less than ½ tuition</span>
-                <span class="schol-val">96</span>
+                <span class="schol-val">51</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-half" aria-hidden="true"></div>
                 <span class="schol-lbl">Half to full tuition</span>
-                <span class="schol-val">107</span>
+                <span class="schol-val">25</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-full" aria-hidden="true"></div>
                 <span class="schol-lbl">Full tuition</span>
-                <span class="schol-val">17</span>
+                <span class="schol-val">7</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-stipend" aria-hidden="true"></div>
                 <span class="schol-lbl">More than full tuition</span>
-                <span class="schol-val">9</span>
+                <span class="schol-val">5</span>
               </div>
             </div>
 
@@ -777,11 +777,11 @@
 
     // Raw headcounts from template tokens
     var raw = {
-      none:    Number('67'.replace(/[^0-9.]/g, '')) || 0,
-      less:    Number('96'.replace(/[^0-9.]/g, '')) || 0,
-      half:    Number('107'.replace(/[^0-9.]/g, '')) || 0,
-      full:    Number('17'.replace(/[^0-9.]/g, '')) || 0,
-      stipend: Number('9'.replace(/[^0-9.]/g, '')) || 0,
+      none:    Number('26'.replace(/[^0-9.]/g, '')) || 0,
+      less:    Number('51'.replace(/[^0-9.]/g, '')) || 0,
+      half:    Number('25'.replace(/[^0-9.]/g, '')) || 0,
+      full:    Number('7'.replace(/[^0-9.]/g, '')) || 0,
+      stipend: Number('5'.replace(/[^0-9.]/g, '')) || 0,
     };
 
     var total = raw.none + raw.less + raw.half + raw.full + raw.stipend;

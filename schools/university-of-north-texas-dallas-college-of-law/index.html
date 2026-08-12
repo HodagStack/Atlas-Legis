@@ -570,17 +570,17 @@
         <article class="card">
           <div class="card-head">
             <h2 id="scholarships-h">Scholarship Distribution</h2>
-            <span class="card-note">Full-time students · entering class</span>
+            <span class="card-note">Full-time J.D. students</span>
           </div>
           <div class="card-body">
 
             <!-- People grid: 100 circles = 100% of class, color = scholarship tier -->
             <div class="schol-grid-wrap">
               <p class="schol-grid-title">
-                Each circle represents <strong>1%</strong> of the entering class, colored by scholarship level received.
+                Each circle represents <strong>1%</strong> of full-time J.D. students, colored by scholarship level received.
               </p>
               <div class="schol-grid" id="schol-people-grid" role="img"
-                   aria-label="Scholarship distribution: 50 students with no scholarship, 68 with less than half tuition, 5 with half to full tuition, 3 with full tuition, 4 with more than full tuition">
+                   aria-label="Scholarship distribution: 108 students with no scholarship, 143 with less than half tuition, 21 with half to full tuition, 0 with full tuition, 7 with more than full tuition">
                 <!-- 100 dots injected by inline script below -->
               </div>
               <div class="schol-grid-legend" aria-hidden="true">
@@ -596,11 +596,11 @@
 
             <!-- Proportional bar -->
             <div class="schol-bar-track" role="presentation" aria-hidden="true">
-              <div class="schol-seg s-none"    style="flex: 50;"           title="No scholarship"></div>
-              <div class="schol-seg s-less"    style="flex: 68;"  title="Less than half tuition"></div>
-              <div class="schol-seg s-half"    style="flex: 5;"    title="Half to full tuition"></div>
-              <div class="schol-seg s-full"    style="flex: 3;"    title="Full tuition"></div>
-              <div class="schol-seg s-stipend" style="flex: 4;"         title="More than full tuition"></div>
+              <div class="schol-seg s-none"    style="flex: 108;"           title="No scholarship"></div>
+              <div class="schol-seg s-less"    style="flex: 143;"  title="Less than half tuition"></div>
+              <div class="schol-seg s-half"    style="flex: 21;"    title="Half to full tuition"></div>
+              <div class="schol-seg s-full"    style="flex: 0;"    title="Full tuition"></div>
+              <div class="schol-seg s-stipend" style="flex: 7;"         title="More than full tuition"></div>
             </div>
 
             <!-- Detail rows -->
@@ -608,27 +608,27 @@
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-none" aria-hidden="true"></div>
                 <span class="schol-lbl">No scholarship</span>
-                <span class="schol-val">50</span>
+                <span class="schol-val">108</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-less" aria-hidden="true"></div>
                 <span class="schol-lbl">Less than ½ tuition</span>
-                <span class="schol-val">68</span>
+                <span class="schol-val">143</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-half" aria-hidden="true"></div>
                 <span class="schol-lbl">Half to full tuition</span>
-                <span class="schol-val">5</span>
+                <span class="schol-val">21</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-full" aria-hidden="true"></div>
                 <span class="schol-lbl">Full tuition</span>
-                <span class="schol-val">3</span>
+                <span class="schol-val">0</span>
               </div>
               <div class="schol-row" role="listitem">
                 <div class="schol-dot s-stipend" aria-hidden="true"></div>
                 <span class="schol-lbl">More than full tuition</span>
-                <span class="schol-val">4</span>
+                <span class="schol-val">7</span>
               </div>
             </div>
 
@@ -764,11 +764,11 @@
 
     // Raw headcounts from template tokens
     var raw = {
-      none:    Number('50'.replace(/[^0-9.]/g, '')) || 0,
-      less:    Number('68'.replace(/[^0-9.]/g, '')) || 0,
-      half:    Number('5'.replace(/[^0-9.]/g, '')) || 0,
-      full:    Number('3'.replace(/[^0-9.]/g, '')) || 0,
-      stipend: Number('4'.replace(/[^0-9.]/g, '')) || 0,
+      none:    Number('108'.replace(/[^0-9.]/g, '')) || 0,
+      less:    Number('143'.replace(/[^0-9.]/g, '')) || 0,
+      half:    Number('21'.replace(/[^0-9.]/g, '')) || 0,
+      full:    Number('0'.replace(/[^0-9.]/g, '')) || 0,
+      stipend: Number('7'.replace(/[^0-9.]/g, '')) || 0,
     };
 
     var total = raw.none + raw.less + raw.half + raw.full + raw.stipend;

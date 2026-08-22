@@ -29,6 +29,7 @@ const ICONS = {
   trending: '<path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/>',
   gift: '<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 8h18"/>',
   hamburger: '<path d="M3 6h18M3 12h18M3 18h18"/>',
+  map: '<polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>',
 };
 function svg(name, attrs = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"') {
   return `<svg ${attrs}>${ICONS[name]}</svg>`;
@@ -81,6 +82,9 @@ const CSS = `
   .sb-brand { padding: 2px 8px 4px; }
   .sb-wordmark { font-family: var(--serif); font-size: 1.32rem; color: var(--em-700); letter-spacing: -.01em; line-height: 1; }
   .sb-tagline { font-size: .68rem; font-weight: 500; color: var(--subtle); letter-spacing: .03em; margin-top: 4px; }
+  .sb-map-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--em-600); color: #fff; font-size: .82rem; font-weight: 600; padding: 9px 14px; border-radius: var(--r-sm); margin: 12px 8px 4px; transition: background .14s; }
+  .sb-map-btn:hover { background: var(--em-700); }
+  .sb-map-btn svg { width: 15px; height: 15px; color: #fff; }
   .sb-school { padding: 16px 8px 18px; border-top: 1px solid var(--border-2); margin-top: 14px; }
   .sb-school-name { font-size: .82rem; font-weight: 600; color: var(--ink-2); line-height: 1.35; }
   .sb-school-loc { font-size: .74rem; color: var(--subtle); margin-top: 3px; }
@@ -107,8 +111,6 @@ const CSS = `
   .topbar-loc { display: flex; align-items: center; gap: 5px; font-size: .84rem; color: var(--muted); margin-top: 8px; }
   .topbar-loc svg { width: 13px; height: 13px; color: var(--em-500); }
   .topbar-actions { display: flex; align-items: center; gap: 10px; }
-  .pill-select { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--ink-2); }
-  .pill-select svg { width: 14px; height: 14px; color: var(--subtle); }
   .btn-ghost { display: flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--ink-2); transition: border-color .12s, color .12s; }
   .btn-ghost:hover { border-color: var(--em-500); color: var(--em-700); }
   .btn-ghost svg { width: 13px; height: 13px; }
@@ -235,6 +237,7 @@ const CSS = `
     .sb-scrim.open { display: block; }
     .main { margin-left: 0; padding: 20px 18px 56px; }
     .metric-row { grid-template-columns: 1fr 1fr; }
+    .btn-ghost { display: none; }
   }
   @media (max-width: 760px) {
     .trend-grid { grid-template-columns: 1fr; }
@@ -251,8 +254,6 @@ const CSS = `
   }
   @media (max-width: 520px) {
     .metric-row { grid-template-columns: 1fr !important; }
-    .topbar-actions { width: 100%; }
-    .pill-select, .btn-ghost { flex: 1; justify-content: center; }
   }
 `;
 
@@ -606,8 +607,6 @@ function renderPage(d) {
   if (d.barPassage && d.barPassage.rate != null) sidebarLinks.push(['#bar-passage', 'barPassage', 'Bar Passage']);
   if (d.ranking && d.ranking.overall) sidebarLinks.push(['#rankings', 'rankings', 'Rankings']);
 
-  const empClassLabel = d.empClassNote || 'Most recent class';
-
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -636,6 +635,7 @@ ${d.gtagBlock}${d.headBlock}
     <div class="sb-wordmark">Atlas Legis</div>
     <div class="sb-tagline">Law School Analytics</div>
   </div>
+  <a class="sb-map-btn" href="https://atlaslegis.com/">${svg('map')}View Map</a>
   <div class="sb-school">
     <div class="sb-school-name">${esc(d.name)}</div>
     <div class="sb-school-loc">${esc(d.location)}</div>
@@ -668,7 +668,6 @@ ${d.gtagBlock}${d.headBlock}
       <div class="topbar-loc">${svg('pin', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"')}${esc(d.location)}</div>
     </div>
     <div class="topbar-actions">
-      <div class="pill-select">${esc(empClassLabel)}${svg('chevronDown', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"')}</div>
       ${d.pdfHref ? `<a class="btn-ghost" href="${d.pdfHref}" target="_blank" rel="noopener">ABA 509 Report${svg('externalLink', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"')}</a>` : ''}
     </div>
   </div>

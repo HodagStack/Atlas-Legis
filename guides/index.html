@@ -11,37 +11,20 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Get in touch with Atlas Legis — corrections, questions about the data, or anything else. Email contact@atlaslegis.com." />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <title>Contact — Atlas Legis</title>
+  <meta name="description" content="Answers to the questions law school applicants ask most — application fee waivers, scholarships, and more, from Atlas Legis." />
+  <link rel="canonical" href="https://atlaslegis.com/guides/" />
+  <title>Guides — Atlas Legis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/theme.css">
-  <script src="/theme.js"></script>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    :root {
-      --em:       #1a7a50;
-      --em-deep:  #0f5132;
-      --em-mid:   #22a86a;
-      --em-pale:  #d1ece0;
-      --ink:      #0e2018;
-      --ink-soft: #2d4a38;
-      --muted:    #6b8c78;
-      --soft:     #f0f7f3;
-      --border:   rgba(26,122,80,0.12);
-      --shadow:   rgba(14,32,24,0.08);
-    }
-
     body {
       font-family: 'DM Sans', sans-serif;
-      background:
-        radial-gradient(ellipse at 15% 10%, rgba(34,197,94,0.13) 0%, transparent 45%),
-        radial-gradient(ellipse at 85% 80%, rgba(16,120,70,0.10) 0%, transparent 45%),
-        linear-gradient(160deg, #eef5f1 0%, #ddeee5 50%, #e8f2ed 100%);
+      background: #f5f8f6;
       min-height: 100vh;
-      color: var(--ink);
+      color: #0e2018;
     }
 
     /* ── Global sidebar (site-wide) ── */
@@ -80,159 +63,25 @@
       .al-shell { margin-left: 0; }
     }
 
-    /* ── PAGE LAYOUT ── */
-    .page {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 60px 24px 100px;
-    }
+    /* ── PAGE ── */
+    .page { max-width: 640px; margin: 0 auto; padding: 56px 24px 100px; }
+    .bc { font-size: .78rem; color: #94a3b8; margin-bottom: 20px; }
+    .bc span { color: #cbd5e1; margin: 0 4px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: #0f5132; letter-spacing: -.01em; margin-bottom: 12px; }
+    .lede { font-size: .95rem; color: #2d4a38; font-weight: 300; line-height: 1.6; margin-bottom: 36px; max-width: 56ch; }
 
-    /* ── HERO ── */
-    .hero { margin-bottom: 48px; }
-    .hero-eyebrow {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--em);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: var(--em-deep);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 18px;
-    }
-    .hero-lead {
-      font-size: 1.05rem;
-      color: var(--ink-soft);
-      line-height: 1.7;
-      font-weight: 300;
-      max-width: 540px;
-    }
+    .guide-list { list-style: none; border-top: 1px solid rgba(26,122,80,0.14); }
+    .guide-list li { border-bottom: 1px solid rgba(26,122,80,0.14); }
+    .guide-list a { display: block; padding: 18px 2px; font-size: 1rem; font-weight: 500; color: #0e2018; text-decoration: none; }
+    .guide-list a:hover { color: #1a7a50; }
 
-    /* ── EMAIL CARD ── */
-    .email-card {
-      background: rgba(255,255,255,0.55);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: 16px;
-      padding: 28px 32px;
-      box-shadow: 0 2px 14px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.8);
-      margin-bottom: 44px;
-    }
-    .email-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--em);
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .email-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--em-deep);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-      word-break: break-word;
-    }
-    .email-link svg { width: 20px; height: 20px; flex-shrink: 0; stroke: var(--em); }
-    .email-link:hover { color: var(--em); }
-    .email-link:hover svg { stroke: var(--em-deep); }
-    .email-note {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-
-    /* ── DIVIDER ── */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 44px 0;
-    }
-
-    /* ── TOPIC LIST ── */
-    .section-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--em);
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-    .topic-list {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .topic-item {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 16px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .topic-item:last-child { border-bottom: none; }
-    .topic-name {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .topic-desc {
-      font-size: 0.85rem;
-      color: var(--ink-soft);
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    /* ── NOTE CARD ── */
-    .note-card {
-      background: rgba(26,122,80,0.05);
-      border: 1px solid rgba(26,122,80,0.15);
-      border-radius: 12px;
-      padding: 18px 22px;
-      margin-top: 40px;
-    }
-    .note-card p {
-      font-size: 0.87rem;
-      color: var(--ink-soft);
-      line-height: 1.7;
-      margin: 0;
-      font-weight: 300;
-    }
-    .note-card p strong { font-weight: 600; color: var(--em-deep); }
-
-    /* ── MOBILE ── */
     @media (max-width: 768px) {
       .page { padding: 32px 16px 64px; }
-      .hero { margin-bottom: 32px; }
-      .hero h1 { font-size: 1.9rem; line-height: 1.2; }
-      .hero-lead { font-size: 0.93rem; }
-      .email-card { padding: 22px 20px; }
-      .email-link { font-size: 1.2rem; }
-      .divider { margin: 32px 0; }
-      .topic-item { grid-template-columns: 1fr; gap: 4px; padding: 12px 0; }
+      h1 { font-size: 1.8rem; }
     }
-
-    /* ── FOOTER ── */
-    .footer { background: #0d1117; padding: 36px 20px; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex;
-                    flex-direction: column; align-items: center; gap: 14px; text-align: center; }
-    .footer-brand { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.05rem; font-weight: 400; color: rgba(255,255,255,.75); }
-    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; list-style: none; }
-    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: color .14s; text-decoration: none; }
-    .footer-links a:hover { color: rgba(255,255,255,.7); }
-    .footer-copy { font-size: .72rem; color: rgba(255,255,255,.25); }
   </style>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
 </head>
 <body>
 
@@ -253,7 +102,7 @@
   <div class="al-sb-nav">
     <a class="al-sb-link" href="/schools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>All Schools</a>
     <a class="al-sb-link" href="/rankings/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Rankings</a>
-    <a class="al-sb-link" href="/guides/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Guides</a>
+    <a class="al-sb-link active" href="/guides/" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Guides</a>
     <a class="al-sb-link" href="/finder/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM4 12h10v8H4zM18 12h2v8h-2z"/></svg>School Finder</a>
     <a class="al-sb-link" href="/scholarship-estimator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1 3 2.3c0 3-6 1.4-6 4.3 0 1.4 1.3 2.4 3 2.4s3-1 3-2.4"/></svg>Scholarship Estimator</a>
     <a class="al-sb-link" href="/debt-planner/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="7" cy="14.5" r="1"/></svg>Debt Planner</a>
@@ -268,69 +117,21 @@
     <a class="al-sb-link" href="/methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.5"/><path d="M12 17h.01"/></svg>Methodology</a>
     <a class="al-sb-link" href="/sources.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Sources</a>
     <a class="al-sb-link" href="/about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>About</a>
-    <a class="al-sb-link active" href="/contact.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Contact</a>
+    <a class="al-sb-link" href="/contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Contact</a>
   </div>
 </aside>
 
 <div class="al-shell">
 
 <div class="page">
+  <div class="bc">Home<span>&rsaquo;</span>Guides</div>
+  <h1>Guides</h1>
+  <p class="lede">Answers to the questions law school applicants ask most.</p>
 
-  <div class="hero">
-    <div class="hero-eyebrow">Get in Touch</div>
-    <h1>Contact</h1>
-    <p class="hero-lead">Found an error in the data, have a question about the site, or want to flag something that looks off on a school's page? Send it over.</p>
-  </div>
-
-  <div class="email-card">
-    <div class="email-label">Email</div>
-    <a href="mailto:contact@atlaslegis.com" class="email-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      contact@atlaslegis.com
-    </a>
-    <p class="email-note">Direct email only — there's no contact form, no support ticket queue, and no chatbot. A person reads every message.</p>
-  </div>
-
-  <hr class="divider">
-
-  <div class="section-label">What to write in about</div>
-  <div class="topic-list">
-    <div class="topic-item">
-      <div class="topic-name">Data corrections</div>
-      <div class="topic-desc">A number that doesn't match a school's ABA 509 report or employment summary. Include the school name and which figure looks wrong — a link to the source document speeds things up.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-name">Bugs</div>
-      <div class="topic-desc">Something broken on the map, a school page that won't load, or a calculation in the debt planner or scholarship estimator that doesn't add up.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-name">Missing schools</div>
-      <div class="topic-desc">An ABA-accredited school you'd expect to see that isn't on the map.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-name">Everything else</div>
-      <div class="topic-desc">Feedback, questions about methodology, or anything that didn't fit the categories above.</div>
-    </div>
-  </div>
-
-  <div class="note-card">
-    <p><strong>Response time:</strong> This is a small, independent project, so replies aren't instant — but every email gets read, and corrections to the underlying data get prioritized.</p>
-  </div>
-
-</div><!-- /page -->
-
-<footer class="footer" aria-label="Site footer">
-  <div class="footer-inner">
-    <div class="footer-brand">Atlas Legis</div>
-    <ul class="footer-links" role="list">
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html" aria-current="page">Contact</a></li>
-      <li><a href="/sources.html">Sources</a></li>
-      <li><a href="/methodology.html">Methodology</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Atlas Legis. Data from ABA Required Disclosures.</p>
-  </div>
-</footer>
+  <ul class="guide-list">
+    <li><a href="/guides/application-fee-waivers/">How Do I Request Law School Application Fee Waivers?</a></li>
+  </ul>
+</div>
 
 </div><!-- /al-shell -->
 

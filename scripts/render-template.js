@@ -1,0 +1,724 @@
+// render-template.js — turns extracted school data into the new dashboard-style page.
+const {
+  deriveEmploymentBars, deriveScholarshipRows, niceLsatDomain, niceGpaDomain,
+  pctPos, buildTrendChart, buildMiniChart, deltaBadge,
+} = require('./generate-school-pages.js');
+
+const ICONS = {
+  overview: '<path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/>',
+  admissions: '<path d="M22 10l-10-5-10 5 10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>',
+  employment: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  scholarships: '<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 8h18M12 8c-1.7-2.5-3.8-4-5.2-2.6-1.4 1.4.4 2.6 5.2 2.6zm0 0c1.7-2.5 3.8-4 5.2-2.6 1.4 1.4-.4 2.6-5.2 2.6z"/>',
+  barPassage: '<path d="M12 3v18M5 7l-3 6a3.5 3.5 0 0 0 6 0l-3-6zM19 7l-3 6a3.5 3.5 0 0 0 6 0l-3-6zM5 7h14M9 21h6"/>',
+  rankings: '<path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 5M17 6h3a3 3 0 0 1-3 5"/>',
+  schools: '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
+  rankingsAlt: '<path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/>',
+  finder: '<path d="M4 4h16v4H4zM4 12h10v8H4zM18 12h2v8h-2z"/>',
+  estimator: '<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1 3 2.3c0 3-6 1.4-6 4.3 0 1.4 1.3 2.4 3 2.4s3-1 3-2.4"/>',
+  debtPlanner: '<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="7" cy="14.5" r="1"/>',
+  methodology: '<circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.5"/><path d="M12 17h.01"/>',
+  sources: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+  contact: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/>',
+  pin: '<path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+  chevronDown: '<path d="M6 9l6 6 6-6"/>',
+  externalLink: '<path d="M7 17L17 7M7 7h10v10"/>',
+  up: '<path d="M12 19V5M5 12l7-7 7 7"/>',
+  down: '<path d="M12 5v14M5 12l7 7 7-7"/>',
+  flatLine: '<path d="M5 12h14"/>',
+  arrowRight: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  trending: '<path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/>',
+  gift: '<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 8h18"/>',
+  hamburger: '<path d="M3 6h18M3 12h18M3 18h18"/>',
+};
+function svg(name, attrs = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"') {
+  return `<svg ${attrs}>${ICONS[name]}</svg>`;
+}
+
+const CSS = `
+  :root {
+    --em-50:  #ecfdf5; --em-100: #d1fae5; --em-200: #a7f3d0;
+    --em-300: #6ee7b7; --em-400: #34d399; --em-500: #10b981;
+    --em-600: #059669; --em-700: #047857; --em-800: #065f46; --em-900: #064e3b;
+    --ink:    #0d1117; --ink-2: #1e2a3a; --ink-3: #334155;
+    --muted:  #64748b; --subtle: #94a3b8;
+    --border: #e2e8f0; --border-2: #f1f5f9;
+    --surface: #ffffff; --bg: #f6f8fb; --bg-2: #f0f4f8;
+    --rank-up: #059669; --rank-down: #dc2626;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans:  'Inter', system-ui, sans-serif;
+    --r-sm: 7px; --r-md: 10px; --r-lg: 14px;
+    --sh-card: 0 1px 2px rgba(13,17,23,.04);
+    --sbw: 252px;
+  }
+  * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans); background: var(--bg); color: var(--ink);
+    line-height: 1.5; -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  svg { display: block; }
+  .mobile-topbar {
+    display: none; position: sticky; top: 0; z-index: 150; background: var(--surface);
+    border-bottom: 1px solid var(--border); align-items: center; gap: 10px; padding: 10px 14px;
+  }
+  .mobile-topbar-word { font-family: var(--serif); font-size: 1.05rem; color: var(--em-700); letter-spacing: -.01em; }
+  .mt-toggle {
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    width: 34px; height: 34px; border-radius: var(--r-sm); background: var(--surface);
+    border: 1px solid var(--border); cursor: pointer;
+  }
+  .mt-toggle svg { width: 17px; height: 17px; color: var(--ink); }
+  .sb-scrim { display: none; position: fixed; inset: 0; background: rgba(13,17,23,.35); z-index: 155; }
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0; width: var(--sbw);
+    background: var(--surface); border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; padding: 22px 16px 18px;
+    overflow-y: auto; z-index: 160; transition: transform .22s ease;
+  }
+  .sb-brand { padding: 2px 8px 4px; }
+  .sb-wordmark { font-family: var(--serif); font-size: 1.32rem; color: var(--em-700); letter-spacing: -.01em; line-height: 1; }
+  .sb-tagline { font-size: .68rem; font-weight: 500; color: var(--subtle); letter-spacing: .03em; margin-top: 4px; }
+  .sb-school { padding: 16px 8px 18px; border-top: 1px solid var(--border-2); margin-top: 14px; }
+  .sb-school-name { font-size: .82rem; font-weight: 600; color: var(--ink-2); line-height: 1.35; }
+  .sb-school-loc { font-size: .74rem; color: var(--subtle); margin-top: 3px; }
+  .sb-group-lbl { font-size: .66rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--subtle); padding: 4px 8px; margin-top: 4px; }
+  .sb-nav { display: flex; flex-direction: column; gap: 1px; margin-bottom: 6px; }
+  .sb-link { display: flex; align-items: center; gap: 10px; padding: 8px 9px; border-radius: var(--r-sm); font-size: .84rem; font-weight: 500; color: var(--muted); transition: background .12s, color .12s; position: relative; }
+  .sb-link svg { width: 17px; height: 17px; flex-shrink: 0; color: var(--subtle); transition: color .12s; }
+  .sb-link:hover { background: var(--em-50); color: var(--ink); }
+  .sb-link:hover svg { color: var(--em-600); }
+  .sb-link.active { background: var(--em-50); color: var(--ink); font-weight: 600; }
+  .sb-link.active svg { color: var(--em-600); }
+  .sb-link.active::before { content: ''; position: absolute; left: -16px; top: 8px; bottom: 8px; width: 3px; border-radius: 0 3px 3px 0; background: var(--em-600); }
+  .sb-divider { height: 1px; background: var(--border-2); margin: 12px 6px; }
+  .sb-spacer { flex: 1; }
+  .sb-foot { display: flex; flex-direction: column; gap: 1px; padding-top: 6px; border-top: 1px solid var(--border-2); }
+  .sb-foot .sb-link { color: var(--subtle); font-size: .8rem; }
+  .sb-foot .sb-link svg { width: 16px; height: 16px; }
+  .main { margin-left: var(--sbw); padding: 30px 36px 64px; max-width: 1180px; }
+  .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+  .topbar-bc { font-size: .78rem; color: var(--subtle); margin-bottom: 8px; }
+  .topbar-bc a:hover { color: var(--em-600); }
+  .topbar-bc span { color: var(--border); margin: 0 4px; }
+  .topbar h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3.4vw, 2.2rem); letter-spacing: -.02em; color: var(--ink); line-height: 1.15; }
+  .topbar-loc { display: flex; align-items: center; gap: 5px; font-size: .84rem; color: var(--muted); margin-top: 8px; }
+  .topbar-loc svg { width: 13px; height: 13px; color: var(--em-500); }
+  .topbar-actions { display: flex; align-items: center; gap: 10px; }
+  .pill-select { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--ink-2); }
+  .pill-select svg { width: 14px; height: 14px; color: var(--subtle); }
+  .btn-ghost { display: flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--ink-2); transition: border-color .12s, color .12s; }
+  .btn-ghost:hover { border-color: var(--em-500); color: var(--em-700); }
+  .btn-ghost svg { width: 13px; height: 13px; }
+  .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+  .metric-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px 18px 17px; box-shadow: var(--sh-card); }
+  .metric-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  .metric-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; }
+  .metric-val { font-family: var(--serif); font-size: 2rem; font-weight: 400; letter-spacing: -.02em; color: var(--ink); }
+  .metric-val sup { font-family: var(--sans); font-size: .9rem; font-weight: 500; margin-left: 1px; color: var(--ink-2); }
+  .metric-delta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .delta-badge { display: inline-flex; align-items: center; gap: 3px; font-size: .82rem; font-weight: 700; }
+  .delta-badge svg { width: 11px; height: 11px; }
+  .delta-badge.up { color: var(--rank-up); }
+  .delta-badge.down { color: var(--rank-down); }
+  .delta-badge.flat { color: var(--subtle); font-weight: 600; }
+  .metric-sub { font-size: .71rem; color: var(--subtle); text-align: right; max-width: 140px; line-height: 1.4; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); box-shadow: var(--sh-card); margin-bottom: 16px; overflow: hidden; }
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 16px 20px 14px; border-bottom: 1px solid var(--border-2); }
+  .card-head h2 { font-family: var(--serif); font-weight: 400; font-size: 1.1rem; letter-spacing: -.005em; color: var(--ink); }
+  .card-note { font-size: .73rem; color: var(--subtle); font-weight: 500; white-space: nowrap; }
+  .card-body { padding: 20px; }
+  .trend-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0; }
+  .trend-main { padding: 18px 20px; position: relative; }
+  .trend-side { padding: 18px 20px; border-left: 1px solid var(--border-2); }
+  .trend-title { font-size: .78rem; font-weight: 700; color: var(--ink-2); margin-bottom: 2px; }
+  .trend-caption { font-size: .72rem; color: var(--subtle); margin-bottom: 14px; }
+  .chart-wrap { position: relative; }
+  .gridline { stroke: var(--border-2); stroke-width: 1; }
+  .axis-lbl { font-family: var(--sans); font-size: 9.5px; fill: var(--subtle); font-weight: 500; }
+  .line-path { fill: none; stroke: var(--em-600); stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; }
+  .area-path { fill: url(#areaGrad); }
+  .pt { fill: var(--em-600); stroke: #fff; stroke-width: 2; }
+  .pt-ghost { fill: var(--surface); stroke: var(--em-600); stroke-width: 1.5; }
+  .range-row { margin-bottom: 22px; }
+  .range-row:last-child { margin-bottom: 0; }
+  .range-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+  .range-name { font-size: .85rem; font-weight: 600; color: var(--ink-2); }
+  .range-vals { font-family: var(--serif); font-size: 1rem; color: var(--ink); letter-spacing: -.005em; }
+  .range-vals b { font-weight: 400; color: var(--em-700); }
+  .range-track { position: relative; height: 8px; background: var(--bg-2); border-radius: 100px; margin-bottom: 8px; }
+  .range-band { position: absolute; top: 0; bottom: 0; background: var(--em-200); border-radius: 100px; }
+  .range-marker { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--em-700); border: 2.5px solid var(--surface); box-shadow: 0 0 0 1.5px var(--em-700); transform: translate(-50%, -50%); }
+  .range-scale { display: flex; justify-content: space-between; font-size: .68rem; color: var(--subtle); }
+  .range-info-rows { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-2); display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 16px; }
+  .range-info-item { min-width: 0; }
+  .range-info-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .range-info-val { font-size: .88rem; font-weight: 600; color: var(--ink); }
+  .insight-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .insight-grid.single { grid-template-columns: 1fr; }
+  .insight { padding: 20px 20px 22px; }
+  .insight-grid:not(.single) .insight:first-child { border-right: 1px solid var(--border-2); }
+  .insight-icon { width: 36px; height: 36px; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .insight-icon.a { background: var(--em-50); }
+  .insight-icon.a svg { color: var(--em-700); }
+  .insight-icon.b { background: var(--bg-2); }
+  .insight-icon.b svg { color: var(--em-800); }
+  .insight-icon svg { width: 18px; height: 18px; }
+  .insight h3 { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; color: var(--ink); margin-bottom: 6px; letter-spacing: -.005em; }
+  .insight p { font-size: .82rem; color: var(--muted); line-height: 1.55; margin-bottom: 12px; max-width: 42ch; }
+  .insight-link { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; font-weight: 600; color: var(--em-600); }
+  .insight-link svg { width: 13px; height: 13px; transition: transform .14s; }
+  .insight-link:hover { color: var(--em-700); }
+  .insight-link:hover svg { transform: translateX(2px); }
+  .kpi-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; background: linear-gradient(135deg, var(--em-800) 0%, var(--em-600) 100%); border-radius: var(--r-lg); padding: 20px 22px; margin: 20px 20px 4px; }
+  .kpi-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 6px; }
+  .kpi-val { font-family: var(--serif); font-weight: 400; font-size: 2.2rem; color: #fff; letter-spacing: -.02em; line-height: 1; }
+  .kpi-val span { font-family: var(--sans); font-size: 1rem; font-weight: 300; opacity: .75; }
+  .kpi-sub { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 4px; }
+  .kpi-tag { flex-shrink: 0; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: var(--r-sm); padding: 5px 12px; font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.85); white-space: nowrap; }
+  .bar-chart { padding: 20px; }
+  .bar-list { display: flex; flex-direction: column; gap: 13px; }
+  .bar-item { display: grid; grid-template-columns: 150px 1fr 54px; align-items: center; gap: 12px; }
+  .bar-item-lbl { font-size: .79rem; color: var(--ink-2); font-weight: 500; }
+  .bar-item-lbl small { display: block; font-size: .68rem; font-weight: 400; color: var(--subtle); margin-top: 1px; }
+  .bar-track { position: relative; height: 18px; background: var(--bg-2); border-radius: 5px; overflow: hidden; }
+  .bar-fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 5px; background: var(--em-500); }
+  .bar-fill.sub { background: var(--em-800); z-index: 2; }
+  .bar-item-val { font-family: var(--serif); font-size: .98rem; color: var(--ink); text-align: right; }
+  .bar-legend-note { font-size: .72rem; color: var(--subtle); margin-top: 16px; line-height: 1.55; }
+  .bar-legend-note .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+  .compare-wrap { padding: 4px 20px 20px; }
+  .compare-row { margin-bottom: 16px; }
+  .compare-row:last-child { margin-bottom: 0; }
+  .compare-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 7px; }
+  .compare-lbl { font-size: .8rem; font-weight: 600; color: var(--ink-2); }
+  .compare-num { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+  .compare-track { position: relative; height: 20px; background: var(--bg-2); border-radius: 6px; overflow: visible; }
+  .compare-fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 6px; }
+  .compare-fill.school { background: var(--em-600); }
+  .compare-fill.bench { background: var(--subtle); opacity: .55; }
+  .compare-ref-line { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink-2); }
+  .compare-gap-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; padding: 10px 12px; border-radius: var(--r-sm); font-size: .78rem; color: var(--ink-2); }
+  .compare-gap-note.neg { background: #fdecea; }
+  .compare-gap-note.pos { background: var(--em-50); }
+  .compare-gap-note strong.neg { color: var(--rank-down); }
+  .compare-gap-note strong.pos { color: var(--rank-up); }
+  .compare-caption { font-size: .72rem; color: var(--subtle); margin-top: 12px; line-height: 1.5; }
+  .rank-hero { padding: 20px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  .rank-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+  .rank-num-lbl { font-size: .74rem; color: var(--subtle); margin-top: 6px; }
+  .rank-badge-flat { display: inline-flex; align-items: center; gap: 6px; border-radius: 100px; padding: 6px 12px 6px 8px; font-size: .78rem; font-weight: 600; }
+  .rank-badge-flat.up { background: var(--em-50); color: var(--rank-up); }
+  .rank-badge-flat.down { background: #fdecea; color: var(--rank-down); }
+  .rank-badge-flat.same { background: var(--bg); color: var(--muted); border: 1px solid var(--border-2); }
+  .rank-timeline { display: flex; align-items: center; padding: 0 20px 20px; gap: 10px; }
+  .rank-tl-pt { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
+  .rank-tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--em-600); }
+  .rank-tl-dot.ghost { background: var(--border); }
+  .rank-tl-yr { font-size: .68rem; color: var(--subtle); }
+  .rank-tl-line { flex: 1; height: 1px; background: var(--border); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .page-footer { margin-top: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .data-note { font-size: .75rem; color: var(--subtle); line-height: 1.6; margin-bottom: 20px; }
+  .data-note a { color: var(--em-600); font-weight: 500; }
+  .data-note a:hover { text-decoration: underline; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 10px; }
+  .footer-links a { font-size: .78rem; color: var(--muted); font-weight: 500; }
+  .footer-links a:hover { color: var(--em-700); }
+  .footer-copy { font-size: .72rem; color: var(--subtle); }
+  @media (max-width: 900px) {
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); }
+    .mobile-topbar { display: flex; }
+    .sb-scrim.open { display: block; }
+    .main { margin-left: 0; padding: 20px 18px 56px; }
+    .metric-row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 760px) {
+    .trend-grid { grid-template-columns: 1fr; }
+    .trend-side { border-left: none; border-top: 1px solid var(--border-2); }
+  }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) {
+    .insight-grid { grid-template-columns: 1fr; }
+    .insight-grid:not(.single) .insight:first-child { border-right: none; border-bottom: 1px solid var(--border-2); }
+  }
+  @media (max-width: 560px) {
+    .bar-item { grid-template-columns: 108px 1fr 44px; }
+    .range-info-rows { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .metric-row { grid-template-columns: 1fr !important; }
+    .topbar-actions { width: 100%; }
+    .pill-select, .btn-ghost { flex: 1; justify-content: center; }
+  }
+`;
+
+function esc(s) { return s == null ? '' : String(s); }
+
+function renderMetricRow(d) {
+  const cards = [];
+  const medians = d.medians;
+  let lsatBadge, gpaBadge;
+  if (medians && medians.lsat50 && medians.lsat50.length > 1) {
+    const n = medians.lsat50.length;
+    const priorLsat = medians.lsat50[n - 2];
+    const priorYear = medians.years[n - 2];
+    lsatBadge = deltaBadge(d.lsat.p50, priorLsat, { decimals: 0, unit: ' pts' });
+    if (lsatBadge.sub) lsatBadge.sub = `vs. Class of ${priorYear} (${priorLsat})`;
+    const maxLsat = Math.max(...medians.lsat50);
+    if (d.lsat.p50 >= maxLsat) lsatBadge.sub += ` · ${n}-yr high`;
+  } else {
+    lsatBadge = { cls: 'flat', text: d.admissionsNote || null, sub: 'Entering class' };
+  }
+  if (medians && medians.gpa50 && medians.gpa50.length > 1) {
+    const n = medians.gpa50.length;
+    const priorGpa = medians.gpa50[n - 2];
+    const priorYear = medians.years[n - 2];
+    gpaBadge = deltaBadge(d.gpa.p50, priorGpa, { decimals: 2, unit: '' });
+    if (gpaBadge.sub) gpaBadge.sub = `vs. Class of ${priorYear} (${priorGpa.toFixed(2)})`;
+    const maxGpa = Math.max(...medians.gpa50);
+    if (d.gpa.p50 >= maxGpa) gpaBadge.sub += ` · ${n}-yr high`;
+  } else {
+    gpaBadge = { cls: 'flat', text: d.admissionsNote || null, sub: 'Entering class' };
+  }
+
+  cards.push(`
+    <div class="metric-card">
+      <div class="metric-lbl">Median LSAT</div>
+      <div class="metric-bottom">
+        <div class="metric-val">${d.lsat.p50}</div>
+        <div class="metric-delta">
+          <span class="delta-badge ${lsatBadge.cls}">${lsatBadge.cls !== 'flat' ? svg(lsatBadge.cls === 'up' ? 'up' : 'down', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"') : ''}${esc(lsatBadge.text)}</span>
+          <span class="metric-sub">${esc(lsatBadge.sub)}</span>
+        </div>
+      </div>
+    </div>`);
+  cards.push(`
+    <div class="metric-card">
+      <div class="metric-lbl">Median GPA</div>
+      <div class="metric-bottom">
+        <div class="metric-val">${d.gpa.p50.toFixed(2)}</div>
+        <div class="metric-delta">
+          <span class="delta-badge ${gpaBadge.cls}">${gpaBadge.cls !== 'flat' ? svg(gpaBadge.cls === 'up' ? 'up' : 'down', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"') : ''}${esc(gpaBadge.text)}</span>
+          <span class="metric-sub">${esc(gpaBadge.sub)}</span>
+        </div>
+      </div>
+    </div>`);
+  if (d.barRequiredPct != null) {
+    cards.push(`
+    <div class="metric-card">
+      <div class="metric-lbl">Bar-Required Jobs (FTLT)</div>
+      <div class="metric-bottom">
+        <div class="metric-val">${d.barRequiredPct}<sup>%</sup></div>
+        <div class="metric-delta">
+          <span class="delta-badge flat">${esc(d.empClassNote || 'Most recent class')}</span>
+          <span class="metric-sub">Full-time, long-term</span>
+        </div>
+      </div>
+    </div>`);
+  }
+  const style = cards.length < 3 ? ' style="grid-template-columns:repeat(' + cards.length + ',1fr)"' : '';
+  return `<div class="metric-row"${style}>${cards.join('')}</div>`;
+}
+
+function renderTrendCard(d) {
+  if (!d.medians || !d.medians.years || d.medians.years.length < 2) return '';
+  const m = d.medians;
+  const lsatChart = buildTrendChart(m.years, m.lsat50);
+  const gpaChart = buildMiniChart(m.gpa50);
+  const yr0 = m.years[0], yr1 = m.years[m.years.length - 1];
+  return `
+  <div class="card">
+    <div class="card-head">
+      <h2>Admissions Trends</h2>
+      <span class="card-note">${yr0} – ${yr1}</span>
+    </div>
+    <div class="trend-grid">
+      <div class="trend-main">
+        <div class="trend-title">Median LSAT</div>
+        <div class="trend-caption">50th-percentile score, entering class by year</div>
+        <div class="chart-wrap">
+          <svg viewBox="0 0 ${lsatChart.width} ${lsatChart.height}" width="100%" style="overflow: visible;" role="img" aria-label="Median LSAT from ${yr0} to ${yr1}">
+            <defs>
+              <linearGradient id="areaGrad-${d.slug}" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#059669" stop-opacity="0.16"/>
+                <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            ${lsatChart.gridlines.map(g => `<line class="gridline" x1="40" y1="${g.y}" x2="${lsatChart.width - 16}" y2="${g.y}"/>`).join('')}
+            ${lsatChart.gridlines.map(g => `<text class="axis-lbl" x="34" y="${(parseFloat(g.y) + 3).toFixed(1)}" text-anchor="end">${g.label}</text>`).join('')}
+            <path class="area-path" style="fill:url(#areaGrad-${d.slug})" d="${lsatChart.areaPath}"/>
+            <path class="line-path" d="${lsatChart.linePath}"/>
+            ${lsatChart.dots.map(p => `<circle class="${p.last ? 'pt' : 'pt-ghost'}" cx="${p.x}" cy="${p.y}" r="${p.last ? 4.5 : 3}"/>`).join('')}
+            ${lsatChart.xLabels.map(l => `<text class="axis-lbl" x="${l.x}" y="${lsatChart.height - 12}" text-anchor="middle">${l.yr}</text>`).join('')}
+          </svg>
+        </div>
+      </div>
+      <div class="trend-side">
+        <div class="trend-title">Median GPA</div>
+        <div class="trend-caption">50th-percentile GPA, entering class by year</div>
+        <svg viewBox="0 0 ${gpaChart.width} ${gpaChart.height}" width="100%" style="overflow: visible;" role="img" aria-label="Median GPA from ${yr0} to ${yr1}">
+          <line class="gridline" x1="14" y1="${gpaChart.gridTop}" x2="${gpaChart.width - 14}" y2="${gpaChart.gridTop}"/>
+          <line class="gridline" x1="14" y1="${gpaChart.gridBottom}" x2="${gpaChart.width - 14}" y2="${gpaChart.gridBottom}"/>
+          <path class="line-path" d="${gpaChart.linePath}"/>
+          ${gpaChart.dots.map(p => `<circle class="${p.last ? 'pt' : 'pt-ghost'}" cx="${p.x}" cy="${p.y}" r="${p.last ? 4 : 2.5}"/>`).join('')}
+        </svg>
+        <div class="mini-chart-lbl" style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--subtle);margin-top:6px;"><span>${yr0}</span><span>${yr1}</span></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderInsights(d) {
+  const items = [];
+  const medians = d.medians;
+  if (medians && medians.lsat50 && medians.lsat50.length > 1) {
+    const n = medians.lsat50.length;
+    const lsatDelta = d.lsat.p50 - medians.lsat50[n - 2];
+    const gpaDelta = d.gpa.p50 - medians.gpa50[n - 2];
+    const lsatHigh = d.lsat.p50 >= Math.max(...medians.lsat50);
+    const gpaHigh = d.gpa.p50 >= Math.max(...medians.gpa50);
+    const yr0 = medians.years[0], yr1 = medians.years[n - 1];
+    let title;
+    if (lsatHigh || gpaHigh) title = `Admissions medians reach a ${n}-year high`;
+    else if (lsatDelta > 0 && gpaDelta > 0) title = `Admissions medians climbed this cycle`;
+    else if (lsatDelta < 0 && gpaDelta < 0) title = `Admissions medians eased this cycle`;
+    else title = `Admissions profile, Class of ${yr1}`;
+    const phrase = (delta, dec, unit) => delta === 0 ? 'unchanged' : `${delta > 0 ? 'up' : 'down'} ${Math.abs(delta).toFixed(dec)}${unit}`;
+    const body = `Median LSAT is ${d.lsat.p50} (${phrase(lsatDelta, 0, ' pts')}) and median GPA is ${d.gpa.p50.toFixed(2)} (${phrase(gpaDelta, 2, '')}) for the entering class${(lsatHigh || gpaHigh) ? ` — both among the strongest marks in Atlas Legis's tracked history (${yr0}–${yr1})` : ''}.`;
+    items.push({ icon: 'trending', variant: 'a', title, body, href: '#admissions', linkText: 'View admissions range' });
+  } else {
+    const title = `Admissions Profile, ${esc(d.admissionsNote)}`;
+    const body = `Median LSAT is ${d.lsat.p50} and median GPA is ${d.gpa.p50.toFixed(2)} for the entering class (25th–75th: ${d.lsat.p25}–${d.lsat.p75} LSAT, ${d.gpa.p25.toFixed(2)}–${d.gpa.p75.toFixed(2)} GPA).`;
+    items.push({ icon: 'trending', variant: 'a', title, body, href: '#admissions', linkText: 'View admissions range' });
+  }
+
+  const s = deriveScholarshipRows(d.scholarship);
+  if (s.total > 0) {
+    const pctAward = Math.round(100 * (s.total - d.scholarship.none) / s.total);
+    const largest = s.rows.reduce((a, b) => (b.count > a.count ? b : a), s.rows[0]);
+    let title, body;
+    if (pctAward === 0) {
+      title = 'Full tuition is standard here';
+      body = `None of the school's ${s.total} full-time J.D. students report a tuition scholarship in the most recent reporting year.`;
+    } else {
+      title = pctAward >= 50 ? 'Most students receive a scholarship' : 'A minority of students receive a scholarship';
+      body = `${pctAward}% of the school's ${s.total} full-time J.D. students hold some level of tuition scholarship — the largest share falls in the ${largest.label.toLowerCase()} tier.`;
+    }
+    items.push({ icon: 'gift', variant: 'b', title, body, href: '#scholarships', linkText: 'View scholarship breakdown' });
+  }
+
+  if (items.length === 0) return '';
+  const single = items.length === 1;
+  return `
+  <div class="card">
+    <div class="card-head"><h2>Insights</h2></div>
+    <div class="insight-grid${single ? ' single' : ''}">
+      ${items.map(it => `
+      <div class="insight">
+        <div class="insight-icon ${it.variant}">${svg(it.icon)}</div>
+        <h3>${esc(it.title)}</h3>
+        <p>${esc(it.body)}</p>
+        <a class="insight-link" href="${it.href}">${it.linkText} ${svg('arrowRight', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"')}</a>
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderAdmissionsRange(d) {
+  const [lsatLo, lsatHi] = niceLsatDomain(d.lsat.p25, d.lsat.p75);
+  const [gpaLo, gpaHi] = niceGpaDomain(d.gpa.p25, d.gpa.p75);
+  const lsatBandStart = pctPos(d.lsat.p25, lsatLo, lsatHi);
+  const lsatBandWidth = pctPos(d.lsat.p75, lsatLo, lsatHi) - lsatBandStart;
+  const lsatMarker = pctPos(d.lsat.p50, lsatLo, lsatHi);
+  const gpaBandStart = pctPos(d.gpa.p25, gpaLo, gpaHi);
+  const gpaBandWidth = pctPos(d.gpa.p75, gpaLo, gpaHi) - gpaBandStart;
+  const gpaMarker = pctPos(d.gpa.p50, gpaLo, gpaHi);
+  return `
+  <div class="card" id="admissions">
+    <div class="card-head">
+      <h2>Admissions Range</h2>
+      <span class="card-note">${esc(d.admissionsNote)}</span>
+    </div>
+    <div class="card-body">
+      <div class="range-row">
+        <div class="range-top"><span class="range-name">LSAT</span><span class="range-vals">${d.lsat.p25} – <b>${d.lsat.p50}</b> – ${d.lsat.p75}</span></div>
+        <div class="range-track">
+          <div class="range-band" style="left:${lsatBandStart.toFixed(1)}%; width:${lsatBandWidth.toFixed(1)}%;"></div>
+          <div class="range-marker" style="left:${lsatMarker.toFixed(1)}%;"></div>
+        </div>
+        <div class="range-scale"><span>${lsatLo}</span><span>${lsatHi}</span></div>
+      </div>
+      <div class="range-row">
+        <div class="range-top"><span class="range-name">Undergraduate GPA</span><span class="range-vals">${d.gpa.p25.toFixed(2)} – <b>${d.gpa.p50.toFixed(2)}</b> – ${d.gpa.p75.toFixed(2)}</span></div>
+        <div class="range-track">
+          <div class="range-band" style="left:${gpaBandStart.toFixed(1)}%; width:${gpaBandWidth.toFixed(1)}%;"></div>
+          <div class="range-marker" style="left:${gpaMarker.toFixed(1)}%;"></div>
+        </div>
+        <div class="range-scale"><span>${gpaLo.toFixed(1)}</span><span>${gpaHi.toFixed(1)}</span></div>
+      </div>
+      <div class="range-info-rows">
+        <div class="range-info-item"><div class="range-info-lbl">1L Class Size</div><div class="range-info-val">${d.classSize}</div></div>
+        <div class="range-info-item"><div class="range-info-lbl">Annual Tuition</div><div class="range-info-val">${esc(d.tuition)}</div></div>
+        <div class="range-info-item"><div class="range-info-lbl">App. Deadline</div><div class="range-info-val">${esc(d.appDeadline) || '—'}</div></div>
+        <div class="range-info-item"><div class="range-info-lbl">App. Fee</div><div class="range-info-val">${esc(d.appFee) || '—'}</div></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderEmployment(d) {
+  if (!d.employment.length || d.barRequiredPct == null) return '';
+  const bars = deriveEmploymentBars(d.employment);
+  const subNotes = { 'Any Law Firm': 'incl. BigLaw', 'All Clerkships': 'incl. federal' };
+  const hasSub = bars.some(b => b.sub != null);
+  return `
+  <div class="card" id="employment">
+    <div class="card-head">
+      <h2>Employment Outcomes</h2>
+      <span class="card-note">${esc(d.empClassNote || '')}</span>
+    </div>
+    <div class="kpi-banner">
+      <div>
+        <div class="kpi-lbl">Bar-Required Jobs (FTLT)</div>
+        <div class="kpi-val">${d.barRequiredPct}<span>%</span></div>
+        <div class="kpi-sub">Full-time, long-term · of total graduates</div>
+      </div>
+      <div class="kpi-tag">${esc(d.empClassNote || '')}</div>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-list">
+        ${bars.map(b => `
+        <div class="bar-item">
+          <div class="bar-item-lbl">${esc(b.label)}${subNotes[b.label] ? `<small>${subNotes[b.label]}</small>` : ''}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.max(0, Math.min(100, b.value))}%;"></div>${b.sub != null ? `<div class="bar-fill sub" style="width:${Math.max(0, Math.min(100, b.sub))}%;"></div>` : ''}</div>
+          <div class="bar-item-val">${b.value}%</div>
+        </div>`).join('')}
+      </div>
+      ${hasSub ? `<p class="bar-legend-note"><span class="dot" style="background:var(--em-500);"></span>Share of the total graduating class (ABA denominator).<span class="dot" style="background:var(--em-800); margin-left:10px;"></span>Darker segment = subset already counted in the bar above it.</p>` : `<p class="bar-legend-note"><span class="dot" style="background:var(--em-500);"></span>Share of the total graduating class (ABA denominator).</p>`}
+    </div>
+  </div>`;
+}
+
+function renderScholarships(d) {
+  const s = deriveScholarshipRows(d.scholarship);
+  if (s.total === 0) return '';
+  return `
+  <div class="card" id="scholarships">
+    <div class="card-head">
+      <h2>Scholarship Distribution</h2>
+      <span class="card-note">${s.total} full-time J.D. students</span>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-list">
+        ${s.rows.map(r => `
+        <div class="bar-item">
+          <div class="bar-item-lbl">${esc(r.label)}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${r.pct.toFixed(1)}%; background:${r.color};"></div></div>
+          <div class="bar-item-val">${r.count}</div>
+        </div>`).join('')}
+      </div>
+      <p class="bar-legend-note">Bars scale to share of all ${s.total} full-time J.D. students.</p>
+    </div>
+  </div>`;
+}
+
+function renderBarPassageCard(d) {
+  if (!d.barPassage || d.barPassage.rate == null) return null;
+  const bp = d.barPassage;
+  const schoolPct = Math.max(0, Math.min(100, bp.rate));
+  const benchPct = bp.abaAvg != null ? Math.max(0, Math.min(100, bp.abaAvg)) : null;
+  const vsNum = bp.vsAba != null ? parseFloat(bp.vsAba) : null;
+  const isNeg = vsNum != null && vsNum < 0;
+  const takersNum = bp.takers != null ? parseFloat(bp.takers) : null;
+  return `
+      <div class="card" id="bar-passage">
+        <div class="card-head">
+          <h2>First-Time Bar Passage</h2>
+          <span class="card-note">${esc(bp.note || '')}</span>
+        </div>
+        <div class="compare-wrap">
+          <div class="compare-row">
+            <div class="compare-top"><span class="compare-lbl">This School</span><span class="compare-num">${bp.rate}%</span></div>
+            <div class="compare-track">
+              <div class="compare-fill school" style="width:${schoolPct}%;"></div>
+              ${benchPct != null ? `<div class="compare-ref-line" style="left:${benchPct}%;"></div>` : ''}
+            </div>
+          </div>
+          ${bp.abaAvg != null ? `
+          <div class="compare-row">
+            <div class="compare-top"><span class="compare-lbl">ABA Weighted Avg</span><span class="compare-num">${bp.abaAvg}%</span></div>
+            <div class="compare-track"><div class="compare-fill bench" style="width:${benchPct}%;"></div></div>
+          </div>` : ''}
+          ${vsNum != null ? `
+          <div class="compare-gap-note ${isNeg ? 'neg' : 'pos'}">
+            <strong class="${isNeg ? 'neg' : 'pos'}">${vsNum > 0 ? '+' : ''}${bp.vsAba} pts</strong>&nbsp;${isNeg ? 'below' : 'above'} the ABA weighted average for peer schools in the same jurisdictions.
+          </div>` : ''}
+          ${takersNum != null ? `<p class="compare-caption">Based on ${bp.takers} first-time taker${takersNum === 1 ? '' : 's'}${takersNum < 10 ? ' — a small sample, so this rate can swing sharply year to year.' : '.'}</p>` : ''}
+        </div>
+      </div>`;
+}
+
+function renderRankingCard(d) {
+  if (!d.ranking || !d.ranking.overall) return null;
+  const r = d.ranking;
+  const cls = r.changeClass === 'rank-up' ? 'up' : r.changeClass === 'rank-down' ? 'down' : 'same';
+  const icon = cls === 'up' ? 'up' : cls === 'down' ? 'down' : 'flatLine';
+  return `
+      <div class="card" id="rankings">
+        <div class="card-head">
+          <h2>U.S. News Ranking</h2>
+          <span class="card-note">${esc(r.year || '')}</span>
+        </div>
+        <div class="rank-hero">
+          <div>
+            <div class="rank-num">${esc(r.overall)}</div>
+            <div class="rank-num-lbl">${esc(r.year || '')} Overall Rank</div>
+          </div>
+          ${r.changeText ? `<div class="rank-badge-flat ${cls}">${svg(icon, 'width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"')}${esc(r.changeText)}</div>` : ''}
+        </div>
+        ${r.prevYear ? `
+        <div class="rank-timeline">
+          <div class="rank-tl-pt"><div class="rank-tl-dot ghost"></div><div class="rank-tl-yr">2025 · ${esc(r.prevYear)}</div></div>
+          <div class="rank-tl-line"></div>
+          <div class="rank-tl-pt"><div class="rank-tl-dot"></div><div class="rank-tl-yr">${esc(r.year || '')} · ${esc(r.overall)}</div></div>
+        </div>` : ''}
+      </div>`;
+}
+
+function renderTwoCol(d) {
+  const cards = [renderBarPassageCard(d), renderRankingCard(d)].filter(Boolean);
+  if (cards.length === 0) return '';
+  if (cards.length === 1) return cards[0].replace('<div class="card"', '<div class="card" style="margin-bottom:16px;"');
+  return `<div class="two-col">${cards.join('')}</div>`;
+}
+
+function renderPage(d) {
+  const sidebarLinks = [
+    ['#overview', 'overview', 'Overview', true],
+    ['#admissions', 'admissions', 'Admissions'],
+  ];
+  if (d.employment.length && d.barRequiredPct != null) sidebarLinks.push(['#employment', 'employment', 'Employment']);
+  if (deriveScholarshipRows(d.scholarship).total > 0) sidebarLinks.push(['#scholarships', 'scholarships', 'Scholarships']);
+  if (d.barPassage && d.barPassage.rate != null) sidebarLinks.push(['#bar-passage', 'barPassage', 'Bar Passage']);
+  if (d.ranking && d.ranking.overall) sidebarLinks.push(['#rankings', 'rankings', 'Rankings']);
+
+  const empClassLabel = d.empClassNote || 'Most recent class';
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${d.gtagBlock}${d.headBlock}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  ${d.jsonLd}
+
+  <style>${CSS}</style>
+<link rel="stylesheet" href="/theme.css">
+<script src="/theme.js"></script>
+</head>
+<body>
+
+<div class="mobile-topbar">
+  <button class="mt-toggle" id="sbToggle" aria-label="Open navigation">${svg('hamburger')}</button>
+  <span class="mobile-topbar-word">Atlas Legis</span>
+</div>
+<div class="sb-scrim" id="sbScrim"></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <div class="sb-brand">
+    <div class="sb-wordmark">Atlas Legis</div>
+    <div class="sb-tagline">Law School Analytics</div>
+  </div>
+  <div class="sb-school">
+    <div class="sb-school-name">${esc(d.name)}</div>
+    <div class="sb-school-loc">${esc(d.location)}</div>
+  </div>
+  <div class="sb-nav">
+    ${sidebarLinks.map(([href, icon, label, active]) => `<a class="sb-link${active ? ' active' : ''}" href="${href}">${svg(icon)}${label}</a>`).join('\n    ')}
+  </div>
+  <div class="sb-divider"></div>
+  <div class="sb-group-lbl">Tools &amp; Directory</div>
+  <div class="sb-nav">
+    <a class="sb-link" href="https://atlaslegis.com/schools/">${svg('schools')}All Schools</a>
+    <a class="sb-link" href="https://atlaslegis.com/rankings/">${svg('rankingsAlt')}Rankings</a>
+    <a class="sb-link" href="https://atlaslegis.com/finder/">${svg('finder')}School Finder</a>
+    <a class="sb-link" href="https://atlaslegis.com/scholarship-estimator/">${svg('estimator')}Scholarship Estimator</a>
+    <a class="sb-link" href="https://atlaslegis.com/debt-planner/">${svg('debtPlanner')}Debt Planner</a>
+  </div>
+  <div class="sb-spacer"></div>
+  <div class="sb-foot">
+    <a class="sb-link" href="https://atlaslegis.com/methodology.html">${svg('methodology')}Methodology</a>
+    <a class="sb-link" href="https://atlaslegis.com/sources.html">${svg('sources')}Sources</a>
+    <a class="sb-link" href="https://atlaslegis.com/contact.html">${svg('contact')}Contact</a>
+  </div>
+</aside>
+
+<main class="main" id="overview">
+  <div class="topbar">
+    <div>
+      <div class="topbar-bc"><a href="https://atlaslegis.com/">Home</a><span>›</span><a href="https://atlaslegis.com/schools/">Schools</a><span>›</span>${esc(d.name)}</div>
+      <h1>${esc(d.name)}</h1>
+      <div class="topbar-loc">${svg('pin', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"')}${esc(d.location)}</div>
+    </div>
+    <div class="topbar-actions">
+      <div class="pill-select">${esc(empClassLabel)}${svg('chevronDown', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"')}</div>
+      ${d.pdfHref ? `<a class="btn-ghost" href="${d.pdfHref}" target="_blank" rel="noopener">ABA 509 Report${svg('externalLink', 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"')}</a>` : ''}
+    </div>
+  </div>
+
+  ${renderMetricRow(d)}
+  ${renderTrendCard(d)}
+  ${renderInsights(d)}
+  ${renderAdmissionsRange(d)}
+  ${renderEmployment(d)}
+  ${renderScholarships(d)}
+  ${renderTwoCol(d)}
+
+  <div class="page-footer">
+    <p class="data-note">
+      Data sourced from ABA Standard 509 Information Reports and ABA Employment Summary disclosures.
+      Employment percentages use total graduating class as denominator, matching ABA reporting standards.
+      <a href="https://atlaslegis.com/methodology.html">View methodology →</a>${d.pdfHref ? `<br><a href="${d.pdfHref}" target="_blank" rel="noopener">ABA 509 Report (PDF) →</a>` : ''}
+    </p>
+    <div class="footer-links">
+      <a href="https://atlaslegis.com/about.html">About</a>
+      <a href="https://atlaslegis.com/contact.html">Contact</a>
+      <a href="https://atlaslegis.com/sources.html">Sources</a>
+      <a href="https://atlaslegis.com/methodology.html">Methodology</a>
+      <a href="https://atlaslegis.com/schools/">All Schools</a>
+      <a href="https://atlaslegis.com/rankings/">Rankings</a>
+    </div>
+    <div class="footer-copy">© 2026 Atlas Legis. Data from ABA Required Disclosures.</div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var sidebar = document.getElementById('sidebar');
+    var toggle = document.getElementById('sbToggle');
+    var scrim = document.getElementById('sbScrim');
+    function close() { sidebar.classList.remove('open'); scrim.classList.remove('open'); }
+    function open() { sidebar.classList.add('open'); scrim.classList.add('open'); }
+    toggle.addEventListener('click', function () {
+      sidebar.classList.contains('open') ? close() : open();
+    });
+    scrim.addEventListener('click', close);
+    sidebar.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { if (window.innerWidth <= 900) close(); });
+    });
+  })();
+</script>
+
+</body>
+</html>
+`;
+}
+
+module.exports = { renderPage };

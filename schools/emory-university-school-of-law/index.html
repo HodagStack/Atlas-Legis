@@ -1,8 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWMH5ER9YS"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LWMH5ER9YS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -17,7 +16,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
   {
@@ -32,815 +31,581 @@
   </script>
 
   <style>
-    /* ── Variables ────────────────────────────────────────────── */
-    :root {
-      --em-50:  #ecfdf5; --em-100: #d1fae5; --em-200: #a7f3d0;
-      --em-300: #6ee7b7; --em-400: #34d399; --em-500: #10b981;
-      --em-600: #059669; --em-700: #047857; --em-800: #065f46; --em-900: #064e3b;
-
-      --ink:    #0d1117; --ink-2: #1e2a3a; --ink-3: #334155;
-      --muted:  #64748b; --subtle: #94a3b8;
-      --border: #e2e8f0; --border-2: #f1f5f9;
-      --surface: #ffffff; --bg: #f6f8fb; --bg-2: #f0f4f8;
-
-      --serif: 'Instrument Serif', Georgia, serif;
-      --sans:  'Inter', system-ui, sans-serif;
-      --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-xl: 20px;
-      --sh-xs: 0 1px 2px rgba(0,0,0,.05);
-      --sh-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.04);
-    }
-
-    /* ── Reset ────────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body { font-family: var(--sans); background: var(--bg); color: var(--ink);
-           line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ── Nav ──────────────────────────────────────────────────── */
-    .nav { position: sticky; top: 0; z-index: 200;
-           background: rgba(255,255,255,.88); backdrop-filter: blur(16px);
-           -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 56px;
-                 display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .nav-brand { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
-    .nav-wordmark { font-family: var(--serif); font-size: 1.15rem; color: var(--em-700); letter-spacing: -.01em; }
-    .nav-tagline { font-size: .72rem; font-weight: 500; color: var(--subtle); letter-spacing: .02em; display: none; }
-    @media (min-width: 480px) { .nav-tagline { display: block; } }
-    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
-    .nav-links a { font-size: .82rem; font-weight: 500; color: var(--muted); padding: 5px 11px;
-                   border-radius: var(--r-sm); transition: color .14s, background .14s; white-space: nowrap; }
-    .nav-links a:hover { color: var(--ink); background: var(--bg); }
-    .nav-right { display: flex; align-items: center; gap: 2px; }
-    .nav-map { background: var(--em-600); color: #fff !important; padding: 5px 14px; border-radius: var(--r-sm); font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; margin-left: 6px; }
-    .nav-map:hover { background: var(--em-700) !important; }
-    @media (max-width: 500px) {
-      .nav-tagline { display: none !important; }
-      .nav-links a { padding: 5px 7px; }
-      .nav-map { padding: 5px 10px; margin-left: 4px; }
-    }
-
-    /* ── Breadcrumb ───────────────────────────────────────────── */
-    .bc-wrap { max-width: 1200px; margin: 0 auto; padding: 12px 20px 0; }
-    .bc { display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
-          list-style: none; font-size: .76rem; color: var(--subtle); }
-    .bc li { display: flex; align-items: center; gap: 2px; }
-    .bc a { color: var(--subtle); transition: color .14s; }
-    .bc a:hover { color: var(--em-600); }
-    .bc-sep { font-size: .65rem; color: var(--border); padding: 0 2px; }
-    .bc-current { color: var(--ink-3); font-weight: 500; max-width: 260px;
-                  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
-    /* ── Hero ─────────────────────────────────────────────────── */
-    .hero { max-width: 1200px; margin: 0 auto; padding: 28px 20px 0; }
-
-    .hero h1 { font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 400;
-               line-height: 1.15; letter-spacing: -.025em; color: var(--ink); max-width: 800px; margin-bottom: 10px; }
-    .hero-loc { display: flex; align-items: center; gap: 5px; font-size: .85rem;
-                color: var(--muted); margin-bottom: 14px; }
-    .hero-loc svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--em-500); }
-    .hero-desc { font-size: .95rem; font-weight: 300; line-height: 1.75;
-                 color: var(--ink-3); max-width: 680px; margin-bottom: 28px; }
-
-    /* Quick stats */
-    .stats-bar { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    @media (min-width: 560px) { .stats-bar { grid-template-columns: repeat(4, 1fr); } }
-    .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
-            padding: 14px 18px; box-shadow: var(--sh-xs); position: relative; overflow: hidden; }
-    .stat::after { content: ''; position: absolute; inset: 0 0 auto; height: 2px;
-                   background: linear-gradient(90deg, var(--em-400), var(--em-600));
-                   transform: scaleX(0); transform-origin: left; transition: transform .25s; }
-    .stat:hover::after { transform: scaleX(1); }
-    .stat-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
-                color: var(--muted); margin-bottom: 5px; }
-    .stat-val { font-family: var(--serif); font-size: 1.7rem; line-height: 1;
-                letter-spacing: -.02em; color: var(--ink); }
-    .stat-val sup { font-family: var(--sans); font-size: .7rem; font-weight: 500;
-                    color: var(--muted); vertical-align: super; margin-left: 1px; }
-
-    /* ── Layout ───────────────────────────────────────────────── */
-    .layout { max-width: 1200px; margin: 0 auto; padding: 32px 20px 72px;
-              display: grid; grid-template-columns: 1fr; gap: 20px; }
-    @media (min-width: 960px) {
-      .layout { grid-template-columns: minmax(0, 1fr) 316px; align-items: start; }
-      .main { grid-column: 1; }
-      .side { grid-column: 2; grid-row: 1 / 10; }
-    }
-    .main { display: flex; flex-direction: column; gap: 20px; }
-    .side { display: flex; flex-direction: column; gap: 16px; }
-
-    /* ── Card ─────────────────────────────────────────────────── */
-    .card { background: var(--surface); border: 1px solid var(--border);
-            border-radius: var(--r-xl); box-shadow: var(--sh-sm); overflow: hidden; }
-    .card-head { padding: 20px 22px 16px; border-bottom: 1px solid var(--border-2);
-                 display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
-    .card-head h2 { font-family: var(--serif); font-size: 1.08rem; font-weight: 400;
-                    color: var(--ink); letter-spacing: -.01em; }
-    .card-note { font-size: .73rem; color: var(--subtle); white-space: nowrap; }
-    .card-body { padding: 20px 22px 22px; }
-
-    /* ── Admissions ───────────────────────────────────────────── */
-    .pct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 440px) { .pct-grid { grid-template-columns: 1fr; } }
-    .pct-group-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .08em;
-                     text-transform: uppercase; color: var(--em-600); margin-bottom: 10px; }
-    .pct-list { display: flex; flex-direction: column; gap: 3px; }
-    .pct-item { display: flex; align-items: center; justify-content: space-between;
-                padding: 9px 12px; border-radius: var(--r-sm); background: var(--bg);
-                transition: background .14s; }
-    .pct-item:hover { background: var(--em-50); }
-    .pct-item-lbl { font-size: .8rem; color: var(--muted); font-weight: 500; }
-    .pct-item-val { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); letter-spacing: -.01em; }
-
-    /* ── Employment ───────────────────────────────────────────── */
-    .emp-hero { background: linear-gradient(135deg, var(--em-800) 0%, var(--em-600) 100%);
-                border-radius: var(--r-lg); padding: 20px 22px; display: flex;
-                align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-    .emp-hero .emp-lbl { color: rgba(255,255,255,.65); font-size: .68rem; font-weight: 600;
-                         letter-spacing: .07em; text-transform: uppercase; margin-bottom: 6px; }
-    .emp-hero .emp-num { font-family: var(--serif); font-size: 2.2rem; line-height: 1;
-                         color: #fff; letter-spacing: -.02em; }
-    .emp-hero .emp-num span { font-family: var(--sans); font-size: 1rem; font-weight: 300; opacity: .75; }
-    .emp-hero .emp-sub { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 4px; }
-    .emp-badge { flex-shrink: 0; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18);
-                 border-radius: var(--r-sm); padding: 5px 12px; font-size: .72rem;
-                 font-weight: 600; color: rgba(255,255,255,.85); white-space: nowrap; }
-
-    /* Section label above a row of cells */
-    .emp-section-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .07em;
-                       text-transform: uppercase; color: var(--muted); margin: 16px 0 8px; }
-    .emp-section-lbl:first-of-type { margin-top: 0; }
-
-    .emp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    @media (min-width: 500px) { .emp-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 700px) { .emp-grid { grid-template-columns: repeat(4, 1fr); } }
-
-    .emp-cell { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg);
-                padding: 14px 16px; transition: border-color .14s, box-shadow .14s; }
-    .emp-cell:hover { border-color: var(--em-200); box-shadow: 0 0 0 3px var(--em-50); }
-    .emp-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-               color: var(--muted); margin-bottom: 7px; }
-    .emp-num { font-family: var(--serif); font-size: 1.55rem; line-height: 1;
-               color: var(--ink); letter-spacing: -.02em; }
-    .emp-num span { font-family: var(--sans); font-size: .8rem; color: var(--muted); font-weight: 400; }
-    .emp-sub { font-size: .71rem; color: var(--subtle); margin-top: 3px; }
-
-    /* Outcome divider row */
-    .emp-divider { border: none; border-top: 1px solid var(--border-2); margin: 6px 0 2px; }
-
-    /* ── Scholarship section ──────────────────────────────────── */
-
-    /* People grid */
-    .schol-grid-wrap { margin-bottom: 22px; }
-    .schol-grid-title { font-size: .73rem; font-weight: 600; color: var(--muted);
-                        letter-spacing: .03em; margin-bottom: 12px; }
-    .schol-grid-title strong { color: var(--ink); font-weight: 600; }
-    .schol-grid { display: grid; grid-template-columns: repeat(10, 1fr);
-                  gap: 3px; margin-bottom: 12px; max-width: 320px; }
-    /* Each cell is a student dot */
-    .sg-dot { width: 100%; aspect-ratio: 1; border-radius: 50%;
-              transition: transform .15s; cursor: default; }
-    .sg-dot:hover { transform: scale(1.25); }
-    .sg-dot.s-none    { background: #cbd5e1; }
-    .sg-dot.s-less    { background: var(--em-200); }
-    .sg-dot.s-half    { background: var(--em-400); }
-    .sg-dot.s-full    { background: var(--em-600); }
-    .sg-dot.s-stipend { background: var(--em-800); }
-
-    /* Legend below grid */
-    .schol-grid-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; }
-    .sgl-item { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--muted); }
-    .sgl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-    .sgl-dot.s-none    { background: #cbd5e1; }
-    .sgl-dot.s-less    { background: var(--em-200); }
-    .sgl-dot.s-half    { background: var(--em-400); }
-    .sgl-dot.s-full    { background: var(--em-600); }
-    .sgl-dot.s-stipend { background: var(--em-800); }
-
-    /* Existing bar */
-    .schol-bar-track { height: 14px; border-radius: 100px; background: var(--bg-2);
-                       display: flex; overflow: hidden; gap: 2px; margin-bottom: 18px; }
-    .schol-seg { transition: opacity .2s; }
-    .schol-seg:hover { opacity: .8; }
-    .schol-seg:first-child { border-radius: 100px 0 0 100px; }
-    .schol-seg:last-child  { border-radius: 0 100px 100px 0; }
-    .schol-seg.s-none    { background: #cbd5e1; }
-    .schol-seg.s-less    { background: var(--em-200); }
-    .schol-seg.s-half    { background: var(--em-400); }
-    .schol-seg.s-full    { background: var(--em-600); }
-    .schol-seg.s-stipend { background: var(--em-800); }
-
-    /* Existing rows */
-    .schol-rows { display: flex; flex-direction: column; gap: 2px; }
-    .schol-row { display: grid; grid-template-columns: 10px 1fr auto;
-                 align-items: center; gap: 10px; padding: 9px 12px;
-                 border-radius: var(--r-sm); background: var(--bg); transition: background .14s; }
-    .schol-row:hover { background: var(--em-50); }
-    .schol-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-    .schol-dot.s-none    { background: #cbd5e1; }
-    .schol-dot.s-less    { background: var(--em-200); }
-    .schol-dot.s-half    { background: var(--em-400); }
-    .schol-dot.s-full    { background: var(--em-600); }
-    .schol-dot.s-stipend { background: var(--em-800); }
-    .schol-lbl { font-size: .82rem; color: var(--muted); }
-    .schol-val { font-family: var(--serif); font-size: 1.05rem; color: var(--ink);
-                 letter-spacing: -.01em; text-align: right; }
-
-    /* Divider between grid and bar */
-    .schol-section-sep { border: none; border-top: 1px solid var(--border-2); margin: 20px 0; }
-
-    /* ── Sidebar info rows ────────────────────────────────────── */
-    .info-rows { display: flex; flex-direction: column; }
-    .info-row { display: flex; align-items: baseline; justify-content: space-between;
-                gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border-2); }
-    .info-row:last-child { border-bottom: none; padding-bottom: 0; }
-    .info-row:first-child { padding-top: 0; }
-    .info-lbl { font-size: .8rem; color: var(--muted); flex-shrink: 0; }
-    .info-val { font-size: .88rem; font-weight: 600; color: var(--ink); text-align: right; }
-
-    .data-note { font-size: .75rem; color: var(--subtle); line-height: 1.6; }
-    .data-note a { color: var(--em-600); font-weight: 500; }
-    .data-note a:hover { text-decoration: underline; }
-
-    /* ── Footer ───────────────────────────────────────────────── */
-    .footer { background: var(--ink); padding: 36px 20px; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex;
-                    flex-direction: column; align-items: center; gap: 14px; text-align: center; }
-    .footer-brand { font-family: var(--serif); font-size: 1.05rem; color: rgba(255,255,255,.75); }
-    .footer-links { display: flex; flex-wrap: wrap; justify-content: center;
-                    gap: 4px 20px; list-style: none; }
-    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: color .14s; }
-    .footer-links a:hover { color: rgba(255,255,255,.7); }
-    .footer-copy { font-size: .72rem; color: rgba(255,255,255,.25); }
-
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-               overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-
-    /* ── Ranking card comparison ────────────────────────────────── */
-    .rank-compare { margin-top: 10px; border-top: 1px solid var(--border-2); padding-top: 8px; }
-    .rank-compare summary {
-      font-size: .78rem; font-weight: 600; color: var(--muted);
-      cursor: pointer; user-select: none; letter-spacing: .02em;
-      list-style: none; display: flex; align-items: center; gap: 6px;
-    }
-    .rank-compare summary::-webkit-details-marker { display: none; }
-    .rank-compare summary::after {
-      content: '▸'; font-size: .65rem; transition: transform .18s;
-    }
-    .rank-compare[open] summary::after { transform: rotate(90deg); }
-    .rank-up   { color: #059669; font-weight: 700; }
-    .rank-down { color: #dc2626; font-weight: 700; }
-    .rank-same { color: var(--muted); }
-
-    /* ── Medians trend chart ──────────────────────────────────── */
-    .medians-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 480px) { .medians-grid { grid-template-columns: 1fr; } }
-    .medians-panel { min-width: 0; }
-    .medians-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px;
-                      justify-content: center; }
-    .medians-legend-item { display: flex; align-items: center; gap: 6px;
-                           font-size: .75rem; color: var(--muted); }
-  </style>
+  :root {
+    --em-50:  #ecfdf5; --em-100: #d1fae5; --em-200: #a7f3d0;
+    --em-300: #6ee7b7; --em-400: #34d399; --em-500: #10b981;
+    --em-600: #059669; --em-700: #047857; --em-800: #065f46; --em-900: #064e3b;
+    --ink:    #0d1117; --ink-2: #1e2a3a; --ink-3: #334155;
+    --muted:  #64748b; --subtle: #94a3b8;
+    --border: #e2e8f0; --border-2: #f1f5f9;
+    --surface: #ffffff; --bg: #f6f8fb; --bg-2: #f0f4f8;
+    --rank-up: #059669; --rank-down: #dc2626;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans:  'Inter', system-ui, sans-serif;
+    --r-sm: 7px; --r-md: 10px; --r-lg: 14px;
+    --sh-card: 0 1px 2px rgba(13,17,23,.04);
+    --sbw: 252px;
+  }
+  * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans); background: var(--bg); color: var(--ink);
+    line-height: 1.5; -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  svg { display: block; }
+  .mobile-topbar {
+    display: none; position: sticky; top: 0; z-index: 150; background: var(--surface);
+    border-bottom: 1px solid var(--border); align-items: center; gap: 10px; padding: 10px 14px;
+  }
+  .mobile-topbar-word { font-family: var(--serif); font-size: 1.05rem; color: var(--em-700); letter-spacing: -.01em; }
+  .mt-toggle {
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    width: 34px; height: 34px; border-radius: var(--r-sm); background: var(--surface);
+    border: 1px solid var(--border); cursor: pointer;
+  }
+  .mt-toggle svg { width: 17px; height: 17px; color: var(--ink); }
+  .sb-scrim { display: none; position: fixed; inset: 0; background: rgba(13,17,23,.35); z-index: 155; }
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0; width: var(--sbw);
+    background: var(--surface); border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; padding: 22px 16px 18px;
+    overflow-y: auto; z-index: 160; transition: transform .22s ease;
+  }
+  .sb-brand { padding: 2px 8px 4px; }
+  .sb-wordmark { font-family: var(--serif); font-size: 1.32rem; color: var(--em-700); letter-spacing: -.01em; line-height: 1; }
+  .sb-tagline { font-size: .68rem; font-weight: 500; color: var(--subtle); letter-spacing: .03em; margin-top: 4px; }
+  .sb-school { padding: 16px 8px 18px; border-top: 1px solid var(--border-2); margin-top: 14px; }
+  .sb-school-name { font-size: .82rem; font-weight: 600; color: var(--ink-2); line-height: 1.35; }
+  .sb-school-loc { font-size: .74rem; color: var(--subtle); margin-top: 3px; }
+  .sb-group-lbl { font-size: .66rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--subtle); padding: 4px 8px; margin-top: 4px; }
+  .sb-nav { display: flex; flex-direction: column; gap: 1px; margin-bottom: 6px; }
+  .sb-link { display: flex; align-items: center; gap: 10px; padding: 8px 9px; border-radius: var(--r-sm); font-size: .84rem; font-weight: 500; color: var(--muted); transition: background .12s, color .12s; position: relative; }
+  .sb-link svg { width: 17px; height: 17px; flex-shrink: 0; color: var(--subtle); transition: color .12s; }
+  .sb-link:hover { background: var(--em-50); color: var(--ink); }
+  .sb-link:hover svg { color: var(--em-600); }
+  .sb-link.active { background: var(--em-50); color: var(--ink); font-weight: 600; }
+  .sb-link.active svg { color: var(--em-600); }
+  .sb-link.active::before { content: ''; position: absolute; left: -16px; top: 8px; bottom: 8px; width: 3px; border-radius: 0 3px 3px 0; background: var(--em-600); }
+  .sb-divider { height: 1px; background: var(--border-2); margin: 12px 6px; }
+  .sb-spacer { flex: 1; }
+  .sb-foot { display: flex; flex-direction: column; gap: 1px; padding-top: 6px; border-top: 1px solid var(--border-2); }
+  .sb-foot .sb-link { color: var(--subtle); font-size: .8rem; }
+  .sb-foot .sb-link svg { width: 16px; height: 16px; }
+  .main { margin-left: var(--sbw); padding: 30px 36px 64px; max-width: 1180px; }
+  .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+  .topbar-bc { font-size: .78rem; color: var(--subtle); margin-bottom: 8px; }
+  .topbar-bc a:hover { color: var(--em-600); }
+  .topbar-bc span { color: var(--border); margin: 0 4px; }
+  .topbar h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3.4vw, 2.2rem); letter-spacing: -.02em; color: var(--ink); line-height: 1.15; }
+  .topbar-loc { display: flex; align-items: center; gap: 5px; font-size: .84rem; color: var(--muted); margin-top: 8px; }
+  .topbar-loc svg { width: 13px; height: 13px; color: var(--em-500); }
+  .topbar-actions { display: flex; align-items: center; gap: 10px; }
+  .pill-select { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--ink-2); }
+  .pill-select svg { width: 14px; height: 14px; color: var(--subtle); }
+  .btn-ghost { display: flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 14px; font-size: .82rem; font-weight: 600; color: var(--ink-2); transition: border-color .12s, color .12s; }
+  .btn-ghost:hover { border-color: var(--em-500); color: var(--em-700); }
+  .btn-ghost svg { width: 13px; height: 13px; }
+  .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+  .metric-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px 18px 17px; box-shadow: var(--sh-card); }
+  .metric-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  .metric-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; }
+  .metric-val { font-family: var(--serif); font-size: 2rem; font-weight: 400; letter-spacing: -.02em; color: var(--ink); }
+  .metric-val sup { font-family: var(--sans); font-size: .9rem; font-weight: 500; margin-left: 1px; color: var(--ink-2); }
+  .metric-delta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .delta-badge { display: inline-flex; align-items: center; gap: 3px; font-size: .82rem; font-weight: 700; }
+  .delta-badge svg { width: 11px; height: 11px; }
+  .delta-badge.up { color: var(--rank-up); }
+  .delta-badge.down { color: var(--rank-down); }
+  .delta-badge.flat { color: var(--subtle); font-weight: 600; }
+  .metric-sub { font-size: .71rem; color: var(--subtle); text-align: right; max-width: 140px; line-height: 1.4; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); box-shadow: var(--sh-card); margin-bottom: 16px; overflow: hidden; }
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 16px 20px 14px; border-bottom: 1px solid var(--border-2); }
+  .card-head h2 { font-family: var(--serif); font-weight: 400; font-size: 1.1rem; letter-spacing: -.005em; color: var(--ink); }
+  .card-note { font-size: .73rem; color: var(--subtle); font-weight: 500; white-space: nowrap; }
+  .card-body { padding: 20px; }
+  .trend-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0; }
+  .trend-main { padding: 18px 20px; position: relative; }
+  .trend-side { padding: 18px 20px; border-left: 1px solid var(--border-2); }
+  .trend-title { font-size: .78rem; font-weight: 700; color: var(--ink-2); margin-bottom: 2px; }
+  .trend-caption { font-size: .72rem; color: var(--subtle); margin-bottom: 14px; }
+  .chart-wrap { position: relative; }
+  .gridline { stroke: var(--border-2); stroke-width: 1; }
+  .axis-lbl { font-family: var(--sans); font-size: 9.5px; fill: var(--subtle); font-weight: 500; }
+  .line-path { fill: none; stroke: var(--em-600); stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; }
+  .area-path { fill: url(#areaGrad); }
+  .pt { fill: var(--em-600); stroke: #fff; stroke-width: 2; }
+  .pt-ghost { fill: var(--surface); stroke: var(--em-600); stroke-width: 1.5; }
+  .range-row { margin-bottom: 22px; }
+  .range-row:last-child { margin-bottom: 0; }
+  .range-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+  .range-name { font-size: .85rem; font-weight: 600; color: var(--ink-2); }
+  .range-vals { font-family: var(--serif); font-size: 1rem; color: var(--ink); letter-spacing: -.005em; }
+  .range-vals b { font-weight: 400; color: var(--em-700); }
+  .range-track { position: relative; height: 8px; background: var(--bg-2); border-radius: 100px; margin-bottom: 8px; }
+  .range-band { position: absolute; top: 0; bottom: 0; background: var(--em-200); border-radius: 100px; }
+  .range-marker { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--em-700); border: 2.5px solid var(--surface); box-shadow: 0 0 0 1.5px var(--em-700); transform: translate(-50%, -50%); }
+  .range-scale { display: flex; justify-content: space-between; font-size: .68rem; color: var(--subtle); }
+  .range-info-rows { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-2); display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 16px; }
+  .range-info-item { min-width: 0; }
+  .range-info-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .range-info-val { font-size: .88rem; font-weight: 600; color: var(--ink); }
+  .insight-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .insight-grid.single { grid-template-columns: 1fr; }
+  .insight { padding: 20px 20px 22px; }
+  .insight-grid:not(.single) .insight:first-child { border-right: 1px solid var(--border-2); }
+  .insight-icon { width: 36px; height: 36px; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .insight-icon.a { background: var(--em-50); }
+  .insight-icon.a svg { color: var(--em-700); }
+  .insight-icon.b { background: var(--bg-2); }
+  .insight-icon.b svg { color: var(--em-800); }
+  .insight-icon svg { width: 18px; height: 18px; }
+  .insight h3 { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; color: var(--ink); margin-bottom: 6px; letter-spacing: -.005em; }
+  .insight p { font-size: .82rem; color: var(--muted); line-height: 1.55; margin-bottom: 12px; max-width: 42ch; }
+  .insight-link { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; font-weight: 600; color: var(--em-600); }
+  .insight-link svg { width: 13px; height: 13px; transition: transform .14s; }
+  .insight-link:hover { color: var(--em-700); }
+  .insight-link:hover svg { transform: translateX(2px); }
+  .kpi-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; background: linear-gradient(135deg, var(--em-800) 0%, var(--em-600) 100%); border-radius: var(--r-lg); padding: 20px 22px; margin: 20px 20px 4px; }
+  .kpi-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 6px; }
+  .kpi-val { font-family: var(--serif); font-weight: 400; font-size: 2.2rem; color: #fff; letter-spacing: -.02em; line-height: 1; }
+  .kpi-val span { font-family: var(--sans); font-size: 1rem; font-weight: 300; opacity: .75; }
+  .kpi-sub { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 4px; }
+  .kpi-tag { flex-shrink: 0; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: var(--r-sm); padding: 5px 12px; font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.85); white-space: nowrap; }
+  .bar-chart { padding: 20px; }
+  .bar-list { display: flex; flex-direction: column; gap: 13px; }
+  .bar-item { display: grid; grid-template-columns: 150px 1fr 54px; align-items: center; gap: 12px; }
+  .bar-item-lbl { font-size: .79rem; color: var(--ink-2); font-weight: 500; }
+  .bar-item-lbl small { display: block; font-size: .68rem; font-weight: 400; color: var(--subtle); margin-top: 1px; }
+  .bar-track { position: relative; height: 18px; background: var(--bg-2); border-radius: 5px; overflow: hidden; }
+  .bar-fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 5px; background: var(--em-500); }
+  .bar-fill.sub { background: var(--em-800); z-index: 2; }
+  .bar-item-val { font-family: var(--serif); font-size: .98rem; color: var(--ink); text-align: right; }
+  .bar-legend-note { font-size: .72rem; color: var(--subtle); margin-top: 16px; line-height: 1.55; }
+  .bar-legend-note .dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+  .compare-wrap { padding: 4px 20px 20px; }
+  .compare-row { margin-bottom: 16px; }
+  .compare-row:last-child { margin-bottom: 0; }
+  .compare-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 7px; }
+  .compare-lbl { font-size: .8rem; font-weight: 600; color: var(--ink-2); }
+  .compare-num { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+  .compare-track { position: relative; height: 20px; background: var(--bg-2); border-radius: 6px; overflow: visible; }
+  .compare-fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 6px; }
+  .compare-fill.school { background: var(--em-600); }
+  .compare-fill.bench { background: var(--subtle); opacity: .55; }
+  .compare-ref-line { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink-2); }
+  .compare-gap-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; padding: 10px 12px; border-radius: var(--r-sm); font-size: .78rem; color: var(--ink-2); }
+  .compare-gap-note.neg { background: #fdecea; }
+  .compare-gap-note.pos { background: var(--em-50); }
+  .compare-gap-note strong.neg { color: var(--rank-down); }
+  .compare-gap-note strong.pos { color: var(--rank-up); }
+  .compare-caption { font-size: .72rem; color: var(--subtle); margin-top: 12px; line-height: 1.5; }
+  .rank-hero { padding: 20px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  .rank-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+  .rank-num-lbl { font-size: .74rem; color: var(--subtle); margin-top: 6px; }
+  .rank-badge-flat { display: inline-flex; align-items: center; gap: 6px; border-radius: 100px; padding: 6px 12px 6px 8px; font-size: .78rem; font-weight: 600; }
+  .rank-badge-flat.up { background: var(--em-50); color: var(--rank-up); }
+  .rank-badge-flat.down { background: #fdecea; color: var(--rank-down); }
+  .rank-badge-flat.same { background: var(--bg); color: var(--muted); border: 1px solid var(--border-2); }
+  .rank-timeline { display: flex; align-items: center; padding: 0 20px 20px; gap: 10px; }
+  .rank-tl-pt { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
+  .rank-tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--em-600); }
+  .rank-tl-dot.ghost { background: var(--border); }
+  .rank-tl-yr { font-size: .68rem; color: var(--subtle); }
+  .rank-tl-line { flex: 1; height: 1px; background: var(--border); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .page-footer { margin-top: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .data-note { font-size: .75rem; color: var(--subtle); line-height: 1.6; margin-bottom: 20px; }
+  .data-note a { color: var(--em-600); font-weight: 500; }
+  .data-note a:hover { text-decoration: underline; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 10px; }
+  .footer-links a { font-size: .78rem; color: var(--muted); font-weight: 500; }
+  .footer-links a:hover { color: var(--em-700); }
+  .footer-copy { font-size: .72rem; color: var(--subtle); }
+  @media (max-width: 900px) {
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); }
+    .mobile-topbar { display: flex; }
+    .sb-scrim.open { display: block; }
+    .main { margin-left: 0; padding: 20px 18px 56px; }
+    .metric-row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 760px) {
+    .trend-grid { grid-template-columns: 1fr; }
+    .trend-side { border-left: none; border-top: 1px solid var(--border-2); }
+  }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) {
+    .insight-grid { grid-template-columns: 1fr; }
+    .insight-grid:not(.single) .insight:first-child { border-right: none; border-bottom: 1px solid var(--border-2); }
+  }
+  @media (max-width: 560px) {
+    .bar-item { grid-template-columns: 108px 1fr 44px; }
+    .range-info-rows { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .metric-row { grid-template-columns: 1fr !important; }
+    .topbar-actions { width: 100%; }
+    .pill-select, .btn-ghost { flex: 1; justify-content: center; }
+  }
+</style>
 <link rel="stylesheet" href="/theme.css">
 <script src="/theme.js"></script>
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="nav" aria-label="Site navigation">
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <a href="/" class="nav-wordmark" aria-label="Atlas Legis — home">Atlas Legis</a>
-        <span class="nav-tagline">Law School Analytics</span>
-      </div>
-      <div class="nav-right">
-        <ul class="nav-links" role="list">
-          <li><a href="/schools/">Schools</a></li>
-          <li><a href="/rankings/">Rankings</a></li>
-          <li><a href="/finder/">School Finder</a></li>
-          <li><a href="/scholarship-estimator/">Scholarships</a></li>
-          <li><a href="/debt-planner/">Debt Planner</a></li>
-        </ul>
-        <a href="/" class="nav-map">View Map</a>
-      </div>
+<div class="mobile-topbar">
+  <button class="mt-toggle" id="sbToggle" aria-label="Open navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <span class="mobile-topbar-word">Atlas Legis</span>
+</div>
+<div class="sb-scrim" id="sbScrim"></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <div class="sb-brand">
+    <div class="sb-wordmark">Atlas Legis</div>
+    <div class="sb-tagline">Law School Analytics</div>
+  </div>
+  <div class="sb-school">
+    <div class="sb-school-name">Emory University School of Law</div>
+    <div class="sb-school-loc">Atlanta, GA</div>
+  </div>
+  <div class="sb-nav">
+    <a class="sb-link active" href="#overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg>Overview</a>
+    <a class="sb-link" href="#admissions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10l-10-5-10 5 10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Admissions</a>
+    <a class="sb-link" href="#employment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Employment</a>
+    <a class="sb-link" href="#scholarships"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 8h18M12 8c-1.7-2.5-3.8-4-5.2-2.6-1.4 1.4.4 2.6 5.2 2.6zm0 0c1.7-2.5 3.8-4 5.2-2.6 1.4 1.4-.4 2.6-5.2 2.6z"/></svg>Scholarships</a>
+    <a class="sb-link" href="#bar-passage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l-3 6a3.5 3.5 0 0 0 6 0l-3-6zM19 7l-3 6a3.5 3.5 0 0 0 6 0l-3-6zM5 7h14M9 21h6"/></svg>Bar Passage</a>
+    <a class="sb-link" href="#rankings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 5M17 6h3a3 3 0 0 1-3 5"/></svg>Rankings</a>
+  </div>
+  <div class="sb-divider"></div>
+  <div class="sb-group-lbl">Tools &amp; Directory</div>
+  <div class="sb-nav">
+    <a class="sb-link" href="https://atlaslegis.com/schools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>All Schools</a>
+    <a class="sb-link" href="https://atlaslegis.com/rankings/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Rankings</a>
+    <a class="sb-link" href="https://atlaslegis.com/finder/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM4 12h10v8H4zM18 12h2v8h-2z"/></svg>School Finder</a>
+    <a class="sb-link" href="https://atlaslegis.com/scholarship-estimator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1 3 2.3c0 3-6 1.4-6 4.3 0 1.4 1.3 2.4 3 2.4s3-1 3-2.4"/></svg>Scholarship Estimator</a>
+    <a class="sb-link" href="https://atlaslegis.com/debt-planner/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="7" cy="14.5" r="1"/></svg>Debt Planner</a>
+  </div>
+  <div class="sb-spacer"></div>
+  <div class="sb-foot">
+    <a class="sb-link" href="https://atlaslegis.com/methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.5"/><path d="M12 17h.01"/></svg>Methodology</a>
+    <a class="sb-link" href="https://atlaslegis.com/sources.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Sources</a>
+    <a class="sb-link" href="https://atlaslegis.com/contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Contact</a>
+  </div>
+</aside>
+
+<main class="main" id="overview">
+  <div class="topbar">
+    <div>
+      <div class="topbar-bc"><a href="https://atlaslegis.com/">Home</a><span>›</span><a href="https://atlaslegis.com/schools/">Schools</a><span>›</span>Emory University School of Law</div>
+      <h1>Emory University School of Law</h1>
+      <div class="topbar-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Atlanta, GA</div>
     </div>
-  </nav>
-
-  <!-- Breadcrumb -->
-  <nav class="bc-wrap" aria-label="Breadcrumb">
-    <ol class="bc">
-      <li><a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span></li>
-      <li><a href="/schools/">Schools</a><span class="bc-sep" aria-hidden="true">›</span></li>
-      <li><span class="bc-current" aria-current="page">Emory University School of Law</span></li>
-    </ol>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <h1>Emory University School of Law</h1>
-    <p class="hero-loc" aria-label="Location: Atlanta, GA">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-      </svg>
-      Atlanta, GA
-    </p>
-    <p class="hero-desc">Emory University School of Law is located in Atlanta, GA and enrolls approximately 391 first-year (1L) students. The median LSAT is 166 and median GPA is 3.82. In the most recent reporting year, 87.9% of graduates secured full-time, bar-required employment, with 35.3% at large firms (251+ attorneys) and 3.6% in federal clerkships.</p>
-    <div class="stats-bar" role="list" aria-label="Key statistics">
-      <div class="stat" role="listitem">
-        <div class="stat-lbl">1L Class Size</div>
-        <div class="stat-val" aria-label="391 students">391</div>
-      </div>
-      <div class="stat" role="listitem">
-        <div class="stat-lbl">Median LSAT</div>
-        <div class="stat-val">166</div>
-      </div>
-      <div class="stat" role="listitem">
-        <div class="stat-lbl">Median GPA</div>
-        <div class="stat-val">3.82</div>
-      </div>
-      <div class="stat" role="listitem">
-        <div class="stat-lbl">Bar-Required Jobs</div>
-        <div class="stat-val">88.9<sup>%</sup></div>
-      </div>
+    <div class="topbar-actions">
+      <div class="pill-select">Class of 2025<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+      <a class="btn-ghost" href="https://atlaslegis.com/reports/emory-university-school-of-law.pdf" target="_blank" rel="noopener">ABA 509 Report<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
-  </header>
-
-  <!-- Main layout -->
-  <div class="layout">
-    <main class="main" id="main-content">
-
-      <!-- ── Admissions ─────────────────────────────────────── -->
-      <section aria-labelledby="admissions-h">
-        <article class="card">
-          <div class="card-head">
-            <h2 id="admissions-h">Admissions Profile</h2>
-            <span class="card-note">Entering class 2024–25</span>
-          </div>
-          <div class="card-body">
-            <div class="pct-grid">
-              <div>
-                <div class="pct-group-lbl" aria-hidden="true">LSAT Scores</div>
-                <div class="pct-list" role="list" aria-label="LSAT percentiles">
-                  <div class="pct-item" role="listitem">
-                    <span class="pct-item-lbl">75th Percentile</span>
-                    <span class="pct-item-val">168</span>
-                  </div>
-                  <div class="pct-item" role="listitem">
-                    <span class="pct-item-lbl">50th Percentile</span>
-                    <span class="pct-item-val">166</span>
-                  </div>
-                  <div class="pct-item" role="listitem">
-                    <span class="pct-item-lbl">25th Percentile</span>
-                    <span class="pct-item-val">162</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="pct-group-lbl" aria-hidden="true">Undergraduate GPA</div>
-                <div class="pct-list" role="list" aria-label="GPA percentiles">
-                  <div class="pct-item" role="listitem">
-                    <span class="pct-item-lbl">75th Percentile</span>
-                    <span class="pct-item-val">3.87</span>
-                  </div>
-                  <div class="pct-item" role="listitem">
-                    <span class="pct-item-lbl">50th Percentile</span>
-                    <span class="pct-item-val">3.82</span>
-                  </div>
-                  <div class="pct-item" role="listitem">
-                    <span class="pct-item-lbl">25th Percentile</span>
-                    <span class="pct-item-val">3.68</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <script>window.SCHOOL_MEDIANS={"years":[2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],"lsat25":[159.0,161.0,157.0,158.0,156.0,157.0,156.0,158.0,158.0,159.0,160.0,161.0,161.0,162.0,162.0],"lsat50":[165.0,165.0,165.0,165.0,165.0,165.0,165.0,165.0,165.0,166.0,167.0,168.0,166.0,165.0,166.0],"lsat75":[166.0,166.0,166.0,166.0,166.0,166.0,166.0,166.0,166.0,167.0,169.0,169.0,168.0,167.0,168.0],"gpa25":[3.4,3.35,3.38,3.3,3.45,3.4,3.45,3.51,3.43,3.47,3.47,3.43,3.62,3.63,3.68],"gpa50":[3.7,3.7,3.75,3.75,3.77,3.78,3.81,3.79,3.8,3.8,3.8,3.8,3.82,3.81,3.82],"gpa75":[3.79,3.82,3.84,3.85,3.88,3.87,3.9,3.91,3.9,3.89,3.9,3.9,3.93,3.88,3.87]};</script>
-      <!-- MEDIANS-TREND-START -->
-      <section aria-labelledby="medians-trend-h">
-        <article class="card">
-          <div class="card-head">
-            <h2 id="medians-trend-h">Admissions Trends</h2>
-            <span class="card-note">2011–2025</span>
-          </div>
-          <div class="card-body">
-            <div id="medians-charts"><!-- rendered by medians-chart.js --></div>
-          </div>
-        </article>
-      </section>
-      <!-- MEDIANS-TREND-END -->
-
-      <!-- ── Employment ─────────────────────────────────────── -->
-      <section aria-labelledby="employment-h">
-        <article class="card">
-          <div class="card-head">
-            <h2 id="employment-h">Employment Outcomes</h2>
-            <span class="card-note">Class of 2025</span>
-          </div>
-          <div class="card-body">
-
-            <!-- Overall hero banner -->
-            <div class="emp-hero" aria-label="87.9 percent bar-required employment">
-              <div>
-                <div class="emp-lbl">Bar-Required Jobs (FTLT)</div>
-                <div class="emp-num">87.9<span>%</span></div>
-                <div class="emp-sub">Full-time, long-term · of total graduates</div>
-              </div>
-              <div class="emp-badge" aria-hidden="true">Class of 2025</div>
-            </div>
-
-            <!-- Private practice -->
-            <div class="emp-section-lbl">Private Practice</div>
-            <div class="emp-grid">
-              <div class="emp-cell" aria-label="Any law firm 69.2 percent">
-                <div class="emp-lbl">Any Law Firm</div>
-                <div class="emp-num">69.2<span>%</span></div>
-                <div class="emp-sub">All firm sizes combined</div>
-              </div>
-              <div class="emp-cell" aria-label="BigLaw 35.3 percent">
-                <div class="emp-lbl">BigLaw (251+ atty)</div>
-                <div class="emp-num">35.3<span>%</span></div>
-                <div class="emp-sub">Large firm placement</div>
-              </div>
-            </div>
-
-            <!-- Clerkships -->
-            <div class="emp-section-lbl">Clerkships</div>
-            <div class="emp-grid">
-              <div class="emp-cell" aria-label="All clerkships 4.9 percent">
-                <div class="emp-lbl">All Clerkships</div>
-                <div class="emp-num">4.9<span>%</span></div>
-                <div class="emp-sub">Federal, state &amp; other</div>
-              </div>
-              <div class="emp-cell" aria-label="Federal clerkship 3.6 percent">
-                <div class="emp-lbl">Federal Clerkship</div>
-                <div class="emp-num">3.6<span>%</span></div>
-                <div class="emp-sub">Article III &amp; federal courts</div>
-              </div>
-            </div>
-
-            <!-- Public sector & other -->
-            <div class="emp-section-lbl">Public Sector &amp; Other</div>
-            <div class="emp-grid">
-              <div class="emp-cell" aria-label="Government 6.2 percent">
-                <div class="emp-lbl">Government</div>
-                <div class="emp-num">6.2<span>%</span></div>
-                <div class="emp-sub">Federal, state &amp; local</div>
-              </div>
-              <div class="emp-cell" aria-label="Public interest 7.6 percent">
-                <div class="emp-lbl">Public Interest</div>
-                <div class="emp-num">7.6<span>%</span></div>
-                <div class="emp-sub">Nonprofits &amp; advocacy</div>
-              </div>
-              <div class="emp-cell" aria-label="Business and industry 3.6 percent">
-                <div class="emp-lbl">Business &amp; Industry</div>
-                <div class="emp-num">3.6<span>%</span></div>
-                <div class="emp-sub">In-house &amp; corporate</div>
-              </div>
-              <div class="emp-cell" aria-label="Education 0 percent">
-                <div class="emp-lbl">Education</div>
-                <div class="emp-num">0<span>%</span></div>
-                <div class="emp-sub">Academia &amp; teaching</div>
-              </div>
-            </div>
-
-            <!-- Non-bar & outcomes -->
-            <div class="emp-section-lbl">Other Outcomes</div>
-            <div class="emp-grid">
-              <div class="emp-cell" aria-label="JD advantage 3.6 percent">
-                <div class="emp-lbl">JD Advantage</div>
-                <div class="emp-num">3.6<span>%</span></div>
-                <div class="emp-sub">Non-bar-required roles</div>
-              </div>
-              <div class="emp-cell" aria-label="Unemployed seeking 4.5 percent">
-                <div class="emp-lbl">Unemployed, Seeking</div>
-                <div class="emp-num">4.5<span>%</span></div>
-                <div class="emp-sub">Actively job searching</div>
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </section>
-
-      <!-- ── Scholarships ────────────────────────────────────── -->
-
-      <!-- ++ Bar Passage ++++++++++++++++++++++++++++++++++++++ -->
-      <section aria-labelledby="bar-passage-h">
-        <article class="card">
-          <div class="card-head">
-            <h2 id="bar-passage-h">First-Time Bar Passage</h2>
-            <span class="card-note">Class of 2024</span>
-          </div>
-          <div class="card-body">
-
-            <div class="emp-hero" aria-label="88.36 percent first-time bar passage rate">
-              <div>
-                <div class="emp-lbl">First-Time Pass Rate</div>
-                <div class="emp-num">88.36<span>%</span></div>
-                <div class="emp-sub">Across all jurisdictions &middot; first-time takers</div>
-              </div>
-              <div class="emp-badge" aria-hidden="true">Class of 2024</div>
-            </div>
-
-            <div class="emp-grid">
-              <div class="emp-cell">
-                <div class="emp-lbl">ABA Avg (Weighted)</div>
-                <div class="emp-num">80.47<span>%</span></div>
-                <div class="emp-sub">Peer schools, same jurisdictions</div>
-              </div>
-              <div class="emp-cell">
-                <div class="emp-lbl">vs. ABA Avg</div>
-                <div class="emp-num" style="color: #059669;">+7.89<span>%</span></div>
-                <div class="emp-sub">Above weighted average</div>
-              </div>
-              <div class="emp-cell">
-                <div class="emp-lbl">First-Time Takers</div>
-                <div class="emp-num">292</div>
-                <div class="emp-sub">Graduates sitting for bar</div>
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </section>
-      <section aria-labelledby="scholarships-h">
-        <article class="card">
-          <div class="card-head">
-            <h2 id="scholarships-h">Scholarship Distribution</h2>
-            <span class="card-note">Full-time J.D. students</span>
-          </div>
-          <div class="card-body">
-
-            <!-- People grid: 100 circles = 100% of class, color = scholarship tier -->
-            <div class="schol-grid-wrap">
-              <p class="schol-grid-title">
-                Each circle represents <strong>1%</strong> of full-time J.D. students, colored by scholarship level received.
-              </p>
-              <div class="schol-grid" id="schol-people-grid" role="img"
-                   aria-label="Scholarship distribution: 14 students with no scholarship, 340 with less than half tuition, 394 with half to full tuition, 0 with full tuition, 10 with more than full tuition">
-                <!-- 100 dots injected by inline script below -->
-              </div>
-              <div class="schol-grid-legend" aria-hidden="true">
-                <div class="sgl-item"><div class="sgl-dot s-none"></div> No scholarship</div>
-                <div class="sgl-item"><div class="sgl-dot s-less"></div> &lt;½ tuition</div>
-                <div class="sgl-item"><div class="sgl-dot s-half"></div> ½ to full tuition</div>
-                <div class="sgl-item"><div class="sgl-dot s-full"></div> Full tuition</div>
-                <div class="sgl-item"><div class="sgl-dot s-stipend"></div> More than full</div>
-              </div>
-            </div>
-
-            <hr class="schol-section-sep" aria-hidden="true" />
-
-            <!-- Proportional bar -->
-            <div class="schol-bar-track" role="presentation" aria-hidden="true">
-              <div class="schol-seg s-none"    style="flex: 14;"           title="No scholarship"></div>
-              <div class="schol-seg s-less"    style="flex: 340;"  title="Less than half tuition"></div>
-              <div class="schol-seg s-half"    style="flex: 394;"    title="Half to full tuition"></div>
-              <div class="schol-seg s-full"    style="flex: 0;"    title="Full tuition"></div>
-              <div class="schol-seg s-stipend" style="flex: 10;"         title="More than full tuition"></div>
-            </div>
-
-            <!-- Detail rows -->
-            <div class="schol-rows" role="list" aria-label="Scholarship headcounts">
-              <div class="schol-row" role="listitem">
-                <div class="schol-dot s-none" aria-hidden="true"></div>
-                <span class="schol-lbl">No scholarship</span>
-                <span class="schol-val">14</span>
-              </div>
-              <div class="schol-row" role="listitem">
-                <div class="schol-dot s-less" aria-hidden="true"></div>
-                <span class="schol-lbl">Less than ½ tuition</span>
-                <span class="schol-val">340</span>
-              </div>
-              <div class="schol-row" role="listitem">
-                <div class="schol-dot s-half" aria-hidden="true"></div>
-                <span class="schol-lbl">Half to full tuition</span>
-                <span class="schol-val">394</span>
-              </div>
-              <div class="schol-row" role="listitem">
-                <div class="schol-dot s-full" aria-hidden="true"></div>
-                <span class="schol-lbl">Full tuition</span>
-                <span class="schol-val">0</span>
-              </div>
-              <div class="schol-row" role="listitem">
-                <div class="schol-dot s-stipend" aria-hidden="true"></div>
-                <span class="schol-lbl">More than full tuition</span>
-                <span class="schol-val">10</span>
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </section>
-
-    </main>
-
-    <!-- Sidebar -->
-    <aside class="side" aria-label="School details">
-
-      <article class="card" aria-labelledby="tuition-h">
-        <div class="card-head"><h2 id="tuition-h">Tuition &amp; Enrollment</h2></div>
-        <div class="card-body">
-          <div class="info-rows">
-            <div class="info-row">
-              <span class="info-lbl">Annual Tuition</span>
-              <span class="info-val">$69,510</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">1L Class Size</span>
-              <span class="info-val">391</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Location</span>
-              <span class="info-val">Atlanta, GA</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" aria-labelledby="glance-h">
-        <div class="card-head"><h2 id="glance-h">At a Glance</h2></div>
-        <div class="card-body">
-          <div class="info-rows">
-            <div class="info-row">
-              <span class="info-lbl">Median LSAT</span>
-              <span class="info-val">166</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">LSAT Range</span>
-              <span class="info-val">162 – 168</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Median GPA</span>
-              <span class="info-val">3.82</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">GPA Range</span>
-              <span class="info-val">3.68 – 3.87</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Bar-Required FTLT</span>
-              <span class="info-val">87.9%</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Bar Passage (1st Time)</span>
-              <span class="info-val">88.36%</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">BigLaw (251+)</span>
-              <span class="info-val">35.3%</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Federal Clerkship</span>
-              <span class="info-val">3.6%</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Government</span>
-              <span class="info-val">6.2%</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Public Interest</span>
-              <span class="info-val">7.6%</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Application Deadline</span>
-              <span class="info-val">March 15</span>
-            </div>
-            <div class="info-row">
-              <span class="info-lbl">Application Fee</span>
-              <span class="info-val">$85</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      
-
-      
-
-      <!-- RANKING-CARD-START (auto-generated 2026) -->
-      <article class="card" aria-labelledby="ranking-h">
-        <div class="card-head">
-          <h2 id="ranking-h">U.S. News Ranking</h2>
-          <span class="card-note">2026</span>
-        </div>
-        <div class="card-body">
-          <div class="info-rows">
-            <div class="info-row">
-              <span class="info-lbl">Overall Rank</span>
-              <span class="info-val">#40</span>
-            </div>
-          </div>
-          <details class="rank-compare">
-            <summary>Compare to 2025</summary>
-            <div class="info-rows" style="margin-top:6px">
-              <div class="info-row">
-                <span class="info-lbl">2025 Rank</span>
-                <span class="info-val">#38</span>
-              </div>
-              <div class="info-row">
-                <span class="info-lbl">Change</span>
-                <span class="info-val rank-down">↓2 spots</span>
-              </div>
-            </div>
-          </details>
-        </div>
-      </article>
-      <!-- RANKING-CARD-END -->
-
-      <div class="card">
-        <div class="card-body">
-          <p class="data-note">
-            Data sourced from ABA Standard 509 Information Reports (2025) and ABA Employment Summary for the Class of 2025.
-            Employment percentages use total graduating class as denominator, matching ABA reporting standards.
-            <a href="/methodology.html">View methodology →</a><br><a href="/reports/emory-university-school-of-law.pdf" target="_blank" rel="noopener">ABA 509 Report (PDF) →</a>
-          </p>
-        </div>
-      </div>
-
-    </aside>
   </div>
 
-  <!-- Scholarship people-grid: inline script populates 100 circles -->
-  <!-- This is the only JS on the page; it runs once at parse time and is idempotent -->
-  <script>
-  (function () {
-    var grid = document.getElementById('schol-people-grid');
-    if (!grid) return;
-
-    // Raw headcounts from template tokens
-    var raw = {
-      none:    Number('14'.replace(/[^0-9.]/g, '')) || 0,
-      less:    Number('340'.replace(/[^0-9.]/g, '')) || 0,
-      half:    Number('394'.replace(/[^0-9.]/g, '')) || 0,
-      full:    Number('0'.replace(/[^0-9.]/g, '')) || 0,
-      stipend: Number('10'.replace(/[^0-9.]/g, '')) || 0,
-    };
-
-    var total = raw.none + raw.less + raw.half + raw.full + raw.stipend;
-    if (total === 0) return; // no data — leave grid empty
-
-    // Convert to counts out of 100 using largest-remainder rounding
-    var order = ['none', 'less', 'half', 'full', 'stipend'];
-    var exact = {};
-    order.forEach(function (k) { exact[k] = (raw[k] / total) * 100; });
-
-    var floored = {};
-    var remainders = [];
-    var floorSum = 0;
-    order.forEach(function (k) {
-      floored[k] = Math.floor(exact[k]);
-      floorSum += floored[k];
-      remainders.push({ key: k, rem: exact[k] - floored[k] });
-    });
-
-    // Distribute remaining dots (100 - floorSum) to tiers with largest remainders
-    var deficit = 100 - floorSum;
-    remainders.sort(function (a, b) { return b.rem - a.rem; });
-    for (var i = 0; i < deficit; i++) {
-      floored[remainders[i % remainders.length].key]++;
-    }
-
-    // Build the 100 dots in reading order (none first → stipend last)
-    var classes = {
-      none: 's-none', less: 's-less', half: 's-half',
-      full: 's-full', stipend: 's-stipend'
-    };
-    var labels = {
-      none: 'No scholarship', less: 'Less than half tuition',
-      half: 'Half to full tuition', full: 'Full tuition', stipend: 'More than full tuition'
-    };
-    var frag = document.createDocumentFragment();
-    order.forEach(function (k) {
-      for (var n = 0; n < floored[k]; n++) {
-        var dot = document.createElement('div');
-        dot.className = 'sg-dot ' + classes[k];
-        dot.setAttribute('title', labels[k]);
-        frag.appendChild(dot);
-      }
-    });
-    grid.appendChild(frag);
-  })();
-  </script>
-
-  <!-- Footer -->
-  <footer class="footer" aria-label="Site footer">
-    <div class="footer-inner">
-      <div class="footer-brand">Atlas Legis</div>
-      <ul class="footer-links" role="list">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sources.html">Sources</a></li>
-        <li><a href="/methodology.html">Methodology</a></li>
-      </ul>
-      <p class="footer-copy">© 2026 Atlas Legis. Data from ABA Required Disclosures.</p>
+  <div class="metric-row">
+    <div class="metric-card">
+      <div class="metric-lbl">Median LSAT</div>
+      <div class="metric-bottom">
+        <div class="metric-val">166</div>
+        <div class="metric-delta">
+          <span class="delta-badge up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>1 pts</span>
+          <span class="metric-sub">vs. Class of 2024 (165)</span>
+        </div>
+      </div>
     </div>
-  </footer>
+    <div class="metric-card">
+      <div class="metric-lbl">Median GPA</div>
+      <div class="metric-bottom">
+        <div class="metric-val">3.82</div>
+        <div class="metric-delta">
+          <span class="delta-badge up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>0.01</span>
+          <span class="metric-sub">vs. Class of 2024 (3.81) · 15-yr high</span>
+        </div>
+      </div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-lbl">Bar-Required Jobs (FTLT)</div>
+      <div class="metric-bottom">
+        <div class="metric-val">87.9<sup>%</sup></div>
+        <div class="metric-delta">
+          <span class="delta-badge flat">Class of 2025</span>
+          <span class="metric-sub">Full-time, long-term</span>
+        </div>
+      </div>
+    </div></div>
+  
+  <div class="card">
+    <div class="card-head">
+      <h2>Admissions Trends</h2>
+      <span class="card-note">2011 – 2025</span>
+    </div>
+    <div class="trend-grid">
+      <div class="trend-main">
+        <div class="trend-title">Median LSAT</div>
+        <div class="trend-caption">50th-percentile score, entering class by year</div>
+        <div class="chart-wrap">
+          <svg viewBox="0 0 640 220" width="100%" style="overflow: visible;" role="img" aria-label="Median LSAT from 2011 to 2025">
+            <defs>
+              <linearGradient id="areaGrad-emory-university-school-of-law" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#059669" stop-opacity="0.16"/>
+                <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line class="gridline" x1="40" y1="16.0" x2="624" y2="16.0"/><line class="gridline" x1="40" y1="74.7" x2="624" y2="74.7"/><line class="gridline" x1="40" y1="133.3" x2="624" y2="133.3"/><line class="gridline" x1="40" y1="192.0" x2="624" y2="192.0"/>
+            <text class="axis-lbl" x="34" y="19.0" text-anchor="end">170</text><text class="axis-lbl" x="34" y="77.7" text-anchor="end">167</text><text class="axis-lbl" x="34" y="136.3" text-anchor="end">165</text><text class="axis-lbl" x="34" y="195.0" text-anchor="end">162</text>
+            <path class="area-path" style="fill:url(#areaGrad-emory-university-school-of-law)" d="M40.0,126.0 L81.7,126.0 L123.4,126.0 L165.1,126.0 L206.9,126.0 L248.6,126.0 L290.3,126.0 L332.0,126.0 L373.7,126.0 L415.4,104.0 L457.1,82.0 L498.9,60.0 L540.6,104.0 L582.3,126.0 L624.0,104.0 L624.0,192.0 L40.0,192.0 Z"/>
+            <path class="line-path" d="M40.0,126.0 L81.7,126.0 L123.4,126.0 L165.1,126.0 L206.9,126.0 L248.6,126.0 L290.3,126.0 L332.0,126.0 L373.7,126.0 L415.4,104.0 L457.1,82.0 L498.9,60.0 L540.6,104.0 L582.3,126.0 L624.0,104.0"/>
+            <circle class="pt-ghost" cx="40.0" cy="126.0" r="3"/><circle class="pt-ghost" cx="81.7" cy="126.0" r="3"/><circle class="pt-ghost" cx="123.4" cy="126.0" r="3"/><circle class="pt-ghost" cx="165.1" cy="126.0" r="3"/><circle class="pt-ghost" cx="206.9" cy="126.0" r="3"/><circle class="pt-ghost" cx="248.6" cy="126.0" r="3"/><circle class="pt-ghost" cx="290.3" cy="126.0" r="3"/><circle class="pt-ghost" cx="332.0" cy="126.0" r="3"/><circle class="pt-ghost" cx="373.7" cy="126.0" r="3"/><circle class="pt-ghost" cx="415.4" cy="104.0" r="3"/><circle class="pt-ghost" cx="457.1" cy="82.0" r="3"/><circle class="pt-ghost" cx="498.9" cy="60.0" r="3"/><circle class="pt-ghost" cx="540.6" cy="104.0" r="3"/><circle class="pt-ghost" cx="582.3" cy="126.0" r="3"/><circle class="pt" cx="624.0" cy="104.0" r="4.5"/>
+            <text class="axis-lbl" x="40.0" y="208" text-anchor="middle">2011</text><text class="axis-lbl" x="165.1" y="208" text-anchor="middle">2014</text><text class="axis-lbl" x="290.3" y="208" text-anchor="middle">2017</text><text class="axis-lbl" x="415.4" y="208" text-anchor="middle">2020</text><text class="axis-lbl" x="540.6" y="208" text-anchor="middle">2023</text><text class="axis-lbl" x="624.0" y="208" text-anchor="middle">2025</text>
+          </svg>
+        </div>
+      </div>
+      <div class="trend-side">
+        <div class="trend-title">Median GPA</div>
+        <div class="trend-caption">50th-percentile GPA, entering class by year</div>
+        <svg viewBox="0 0 320 140" width="100%" style="overflow: visible;" role="img" aria-label="Median GPA from 2011 to 2025">
+          <line class="gridline" x1="14" y1="12.0" x2="306" y2="12.0"/>
+          <line class="gridline" x1="14" y1="118.0" x2="306" y2="118.0"/>
+          <path class="line-path" d="M14.0,91.5 L34.9,91.5 L55.7,78.3 L76.6,78.3 L97.4,73.0 L118.3,70.3 L139.1,62.3 L160.0,67.7 L180.9,65.0 L201.7,65.0 L222.6,65.0 L243.4,65.0 L264.3,59.7 L285.1,62.3 L306.0,59.7"/>
+          <circle class="pt-ghost" cx="14.0" cy="91.5" r="2.5"/><circle class="pt-ghost" cx="34.9" cy="91.5" r="2.5"/><circle class="pt-ghost" cx="55.7" cy="78.3" r="2.5"/><circle class="pt-ghost" cx="76.6" cy="78.3" r="2.5"/><circle class="pt-ghost" cx="97.4" cy="73.0" r="2.5"/><circle class="pt-ghost" cx="118.3" cy="70.3" r="2.5"/><circle class="pt-ghost" cx="139.1" cy="62.3" r="2.5"/><circle class="pt-ghost" cx="160.0" cy="67.7" r="2.5"/><circle class="pt-ghost" cx="180.9" cy="65.0" r="2.5"/><circle class="pt-ghost" cx="201.7" cy="65.0" r="2.5"/><circle class="pt-ghost" cx="222.6" cy="65.0" r="2.5"/><circle class="pt-ghost" cx="243.4" cy="65.0" r="2.5"/><circle class="pt-ghost" cx="264.3" cy="59.7" r="2.5"/><circle class="pt-ghost" cx="285.1" cy="62.3" r="2.5"/><circle class="pt" cx="306.0" cy="59.7" r="4"/>
+        </svg>
+        <div class="mini-chart-lbl" style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--subtle);margin-top:6px;"><span>2011</span><span>2025</span></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-head"><h2>Insights</h2></div>
+    <div class="insight-grid">
+      
+      <div class="insight">
+        <div class="insight-icon a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg></div>
+        <h3>Admissions medians reach a 15-year high</h3>
+        <p>Median LSAT is 166 (up 1 pts) and median GPA is 3.82 (up 0.01) for the entering class — both among the strongest marks in Atlas Legis's tracked history (2011–2025).</p>
+        <a class="insight-link" href="#admissions">View admissions range <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="insight">
+        <div class="insight-icon b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 8h18"/></svg></div>
+        <h3>Most students receive a scholarship</h3>
+        <p>98% of the school's 758 full-time J.D. students hold some level of tuition scholarship — the largest share falls in the half to full tuition tier.</p>
+        <a class="insight-link" href="#scholarships">View scholarship breakdown <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card" id="admissions">
+    <div class="card-head">
+      <h2>Admissions Range</h2>
+      <span class="card-note">Entering class 2024–25</span>
+    </div>
+    <div class="card-body">
+      <div class="range-row">
+        <div class="range-top"><span class="range-name">LSAT</span><span class="range-vals">162 – <b>166</b> – 168</span></div>
+        <div class="range-track">
+          <div class="range-band" style="left:40.0%; width:20.0%;"></div>
+          <div class="range-marker" style="left:53.3%;"></div>
+        </div>
+        <div class="range-scale"><span>150</span><span>180</span></div>
+      </div>
+      <div class="range-row">
+        <div class="range-top"><span class="range-name">Undergraduate GPA</span><span class="range-vals">3.68 – <b>3.82</b> – 3.87</span></div>
+        <div class="range-track">
+          <div class="range-band" style="left:54.3%; width:27.1%;"></div>
+          <div class="range-marker" style="left:74.3%;"></div>
+        </div>
+        <div class="range-scale"><span>3.3</span><span>4.0</span></div>
+      </div>
+      <div class="range-info-rows">
+        <div class="range-info-item"><div class="range-info-lbl">1L Class Size</div><div class="range-info-val">391</div></div>
+        <div class="range-info-item"><div class="range-info-lbl">Annual Tuition</div><div class="range-info-val">$69,510</div></div>
+        <div class="range-info-item"><div class="range-info-lbl">App. Deadline</div><div class="range-info-val">March 15</div></div>
+        <div class="range-info-item"><div class="range-info-lbl">App. Fee</div><div class="range-info-val">$85</div></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card" id="employment">
+    <div class="card-head">
+      <h2>Employment Outcomes</h2>
+      <span class="card-note">Class of 2025</span>
+    </div>
+    <div class="kpi-banner">
+      <div>
+        <div class="kpi-lbl">Bar-Required Jobs (FTLT)</div>
+        <div class="kpi-val">87.9<span>%</span></div>
+        <div class="kpi-sub">Full-time, long-term · of total graduates</div>
+      </div>
+      <div class="kpi-tag">Class of 2025</div>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-list">
+        
+        <div class="bar-item">
+          <div class="bar-item-lbl">Any Law Firm<small>incl. BigLaw</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:69.2%;"></div><div class="bar-fill sub" style="width:35.3%;"></div></div>
+          <div class="bar-item-val">69.2%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Public Interest</div>
+          <div class="bar-track"><div class="bar-fill" style="width:7.6%;"></div></div>
+          <div class="bar-item-val">7.6%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Government</div>
+          <div class="bar-track"><div class="bar-fill" style="width:6.2%;"></div></div>
+          <div class="bar-item-val">6.2%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">All Clerkships<small>incl. federal</small></div>
+          <div class="bar-track"><div class="bar-fill" style="width:4.9%;"></div><div class="bar-fill sub" style="width:3.6%;"></div></div>
+          <div class="bar-item-val">4.9%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Unemployed, Seeking</div>
+          <div class="bar-track"><div class="bar-fill" style="width:4.5%;"></div></div>
+          <div class="bar-item-val">4.5%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Business &amp; Industry</div>
+          <div class="bar-track"><div class="bar-fill" style="width:3.6%;"></div></div>
+          <div class="bar-item-val">3.6%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">JD Advantage</div>
+          <div class="bar-track"><div class="bar-fill" style="width:3.6%;"></div></div>
+          <div class="bar-item-val">3.6%</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Education</div>
+          <div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div>
+          <div class="bar-item-val">0%</div>
+        </div>
+      </div>
+      <p class="bar-legend-note"><span class="dot" style="background:var(--em-500);"></span>Share of the total graduating class (ABA denominator).<span class="dot" style="background:var(--em-800); margin-left:10px;"></span>Darker segment = subset already counted in the bar above it.</p>
+    </div>
+  </div>
+  
+  <div class="card" id="scholarships">
+    <div class="card-head">
+      <h2>Scholarship Distribution</h2>
+      <span class="card-note">758 full-time J.D. students</span>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-list">
+        
+        <div class="bar-item">
+          <div class="bar-item-lbl">No scholarship</div>
+          <div class="bar-track"><div class="bar-fill" style="width:1.8%; background:#cbd5e1;"></div></div>
+          <div class="bar-item-val">14</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Less than ½ tuition</div>
+          <div class="bar-track"><div class="bar-fill" style="width:44.9%; background:var(--em-200);"></div></div>
+          <div class="bar-item-val">340</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Half to full tuition</div>
+          <div class="bar-track"><div class="bar-fill" style="width:52.0%; background:var(--em-400);"></div></div>
+          <div class="bar-item-val">394</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">Full tuition</div>
+          <div class="bar-track"><div class="bar-fill" style="width:0.0%; background:var(--em-600);"></div></div>
+          <div class="bar-item-val">0</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-lbl">More than full tuition</div>
+          <div class="bar-track"><div class="bar-fill" style="width:1.3%; background:var(--em-800);"></div></div>
+          <div class="bar-item-val">10</div>
+        </div>
+      </div>
+      <p class="bar-legend-note">Bars scale to share of all 758 full-time J.D. students.</p>
+    </div>
+  </div>
+  <div class="two-col">
+      <div class="card" id="bar-passage">
+        <div class="card-head">
+          <h2>First-Time Bar Passage</h2>
+          <span class="card-note">Class of 2024</span>
+        </div>
+        <div class="compare-wrap">
+          <div class="compare-row">
+            <div class="compare-top"><span class="compare-lbl">This School</span><span class="compare-num">88.36%</span></div>
+            <div class="compare-track">
+              <div class="compare-fill school" style="width:88.36%;"></div>
+              <div class="compare-ref-line" style="left:80.47%;"></div>
+            </div>
+          </div>
+          
+          <div class="compare-row">
+            <div class="compare-top"><span class="compare-lbl">ABA Weighted Avg</span><span class="compare-num">80.47%</span></div>
+            <div class="compare-track"><div class="compare-fill bench" style="width:80.47%;"></div></div>
+          </div>
+          
+          <p class="compare-caption">Based on 292 first-time takers.</p>
+        </div>
+      </div>
+      <div class="card" id="rankings">
+        <div class="card-head">
+          <h2>U.S. News Ranking</h2>
+          <span class="card-note">2026</span>
+        </div>
+        <div class="rank-hero">
+          <div>
+            <div class="rank-num">#40</div>
+            <div class="rank-num-lbl">2026 Overall Rank</div>
+          </div>
+          <div class="rank-badge-flat down"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>↓2 spots</div>
+        </div>
+        
+        <div class="rank-timeline">
+          <div class="rank-tl-pt"><div class="rank-tl-dot ghost"></div><div class="rank-tl-yr">2025 · #38</div></div>
+          <div class="rank-tl-line"></div>
+          <div class="rank-tl-pt"><div class="rank-tl-dot"></div><div class="rank-tl-yr">2026 · #40</div></div>
+        </div>
+      </div></div>
 
-<script src="/schools/schol-pct.js"></script>
-<script src="/schools/medians-chart.js"></script>
+  <div class="page-footer">
+    <p class="data-note">
+      Data sourced from ABA Standard 509 Information Reports and ABA Employment Summary disclosures.
+      Employment percentages use total graduating class as denominator, matching ABA reporting standards.
+      <a href="https://atlaslegis.com/methodology.html">View methodology →</a><br><a href="https://atlaslegis.com/reports/emory-university-school-of-law.pdf" target="_blank" rel="noopener">ABA 509 Report (PDF) →</a>
+    </p>
+    <div class="footer-links">
+      <a href="https://atlaslegis.com/about.html">About</a>
+      <a href="https://atlaslegis.com/contact.html">Contact</a>
+      <a href="https://atlaslegis.com/sources.html">Sources</a>
+      <a href="https://atlaslegis.com/methodology.html">Methodology</a>
+      <a href="https://atlaslegis.com/schools/">All Schools</a>
+      <a href="https://atlaslegis.com/rankings/">Rankings</a>
+    </div>
+    <div class="footer-copy">© 2026 Atlas Legis. Data from ABA Required Disclosures.</div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var sidebar = document.getElementById('sidebar');
+    var toggle = document.getElementById('sbToggle');
+    var scrim = document.getElementById('sbScrim');
+    function close() { sidebar.classList.remove('open'); scrim.classList.remove('open'); }
+    function open() { sidebar.classList.add('open'); scrim.classList.add('open'); }
+    toggle.addEventListener('click', function () {
+      sidebar.classList.contains('open') ? close() : open();
+    });
+    scrim.addEventListener('click', close);
+    sidebar.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { if (window.innerWidth <= 900) close(); });
+    });
+  })();
+</script>
+
 </body>
 </html>

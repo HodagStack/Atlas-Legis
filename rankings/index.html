@@ -28,22 +28,41 @@
     }
     body { font-family: 'DM Sans', sans-serif; background: #f5f8f6; min-height: 100vh; color: var(--ink); }
 
-    /* ── Nav ── */
-    .nav { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .nav-brand { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
-    .nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--em-deep); letter-spacing: -.01em; text-decoration: none; }
-    .nav-tagline { font-size: .72rem; font-weight: 500; color: var(--muted); letter-spacing: .02em; display: none; }
-    @media (min-width: 480px) { .nav-tagline { display: block; } }
-    .nav-right { display: flex; align-items: center; gap: 2px; }
-    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
-    .nav-links a { font-size: .82rem; font-weight: 500; color: var(--muted); padding: 5px 11px; border-radius: 6px; transition: color .14s, background .14s; white-space: nowrap; text-decoration: none; }
-    .nav-links a:hover { color: var(--ink); background: var(--soft); }
-    .nav-links a[aria-current="page"] { color: var(--em-deep); font-weight: 600; }
-    .nav-map { background: var(--em); color: #fff; padding: 5px 14px; border-radius: 6px; font-size: .82rem; font-weight: 500; white-space: nowrap; text-decoration: none; transition: background .14s; margin-left: 6px; }
-    .nav-map:hover { background: var(--em-deep); color: #fff; }
-    @media (max-width: 700px) { .nav-right { overflow-x: auto; } .nav-links a { font-size: .76rem; padding: 5px 7px; } .nav-map { padding: 5px 10px; margin-left: 4px; } }
-    @media (max-width: 480px) { .nav-tagline { display: none !important; } }
+    /* ── Global sidebar (site-wide) ── */
+    .al-mobile-topbar { display: none; position: sticky; top: 0; z-index: 250; background: #ffffff; border-bottom: 1px solid #e2e8f0; align-items: center; gap: 10px; padding: 10px 14px; }
+    .al-mobile-topbar-word { font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif; font-size: 1.05rem; color: #047857; letter-spacing: -.01em; }
+    .al-mt-toggle { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 34px; height: 34px; border-radius: 7px; background: #ffffff; border: 1px solid #e2e8f0; cursor: pointer; }
+    .al-mt-toggle svg { width: 17px; height: 17px; color: #0d1117; }
+    .al-sb-scrim { display: none; position: fixed; inset: 0; background: rgba(13,17,23,.35); z-index: 255; }
+    .al-sb-scrim.open { display: block; }
+    .al-sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 252px; background: #ffffff; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; padding: 22px 16px 18px; overflow-y: auto; z-index: 260; transition: transform .22s ease; font-family: 'DM Sans', system-ui, sans-serif; }
+    .al-sb-brand { padding: 2px 8px 4px; text-decoration: none; display: block; }
+    .al-sb-wordmark { font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif; font-size: 1.32rem; color: #047857; letter-spacing: -.01em; line-height: 1; }
+    .al-sb-tagline { font-size: .68rem; font-weight: 500; color: #94a3b8; letter-spacing: .03em; margin-top: 4px; }
+    .al-sb-map-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: #059669; color: #fff; font-size: .82rem; font-weight: 600; padding: 9px 14px; border-radius: 7px; margin: 12px 8px 4px; transition: background .14s; text-decoration: none; }
+    .al-sb-map-btn:hover { background: #047857; }
+    .al-sb-map-btn svg { width: 15px; height: 15px; color: #fff; flex-shrink: 0; }
+    .al-sb-group-lbl { font-size: .66rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #94a3b8; padding: 4px 8px; margin-top: 14px; }
+    .al-sb-nav { display: flex; flex-direction: column; gap: 1px; margin-bottom: 6px; }
+    .al-sb-link { display: flex; align-items: center; gap: 10px; padding: 8px 9px; border-radius: 7px; font-size: .84rem; font-weight: 500; color: #64748b; transition: background .12s, color .12s; position: relative; text-decoration: none; }
+    .al-sb-link svg { width: 17px; height: 17px; flex-shrink: 0; color: #94a3b8; transition: color .12s; }
+    .al-sb-link:hover { background: #ecfdf5; color: #0d1117; }
+    .al-sb-link:hover svg { color: #059669; }
+    .al-sb-link.active { background: #ecfdf5; color: #0d1117; font-weight: 600; }
+    .al-sb-link.active svg { color: #059669; }
+    .al-sb-link.active::before { content: ''; position: absolute; left: -16px; top: 8px; bottom: 8px; width: 3px; border-radius: 0 3px 3px 0; background: #059669; }
+    .al-sb-spacer { flex: 1; }
+    .al-sb-foot { display: flex; flex-direction: column; gap: 1px; padding-top: 6px; border-top: 1px solid #f1f5f9; }
+    .al-sb-foot .al-sb-link { color: #94a3b8; font-size: .8rem; }
+    .al-sb-foot .al-sb-link svg { width: 16px; height: 16px; }
+    .al-sb-foot button.al-sb-link { border: none; background: none; font: inherit; cursor: pointer; width: 100%; text-align: left; }
+    .al-shell { margin-left: 252px; }
+    @media (max-width: 900px) {
+      .al-sidebar { transform: translateX(-100%); }
+      .al-sidebar.open { transform: translateX(0); }
+      .al-mobile-topbar { display: flex; }
+      .al-shell { margin-left: 0; }
+    }
 
     /* ── Hero ── */
     .hero {
@@ -182,24 +201,42 @@
 </head>
 <body>
 
-<nav class="nav" aria-label="Site navigation">
-  <div class="nav-inner">
-    <div class="nav-brand">
-      <a href="/" class="nav-wordmark" aria-label="Atlas Legis — home">Atlas Legis</a>
-      <span class="nav-tagline">Law School Analytics</span>
-    </div>
-    <div class="nav-right">
-      <ul class="nav-links" role="list">
-        <li><a href="/schools/">Schools</a></li>
-        <li><a href="/rankings/" aria-current="page">Rankings</a></li>
-        <li><a href="/finder/">School Finder</a></li>
-        <li><a href="/scholarship-estimator/">Scholarships</a></li>
-        <li><a href="/debt-planner/">Debt Planner</a></li>
-      </ul>
-      <a href="/" class="nav-map">View Map</a>
-    </div>
+<div class="al-mobile-topbar">
+  <button class="al-mt-toggle" id="alSbToggle" aria-label="Open navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <span class="al-mobile-topbar-word">Atlas Legis</span>
+</div>
+<div class="al-sb-scrim" id="alSbScrim"></div>
+
+<aside class="al-sidebar" id="alSidebar" aria-label="Site navigation">
+  <a href="/" class="al-sb-brand">
+    <div class="al-sb-wordmark">Atlas Legis</div>
+    <div class="al-sb-tagline">Law School Analytics</div>
+  </a>
+  <a class="al-sb-map-btn" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>View Map</a>
+
+  <div class="al-sb-group-lbl">Explore</div>
+  <div class="al-sb-nav">
+    <a class="al-sb-link" href="/schools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>All Schools</a>
+    <a class="al-sb-link active" href="/rankings/" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>Rankings</a>
+    <a class="al-sb-link" href="/finder/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM4 12h10v8H4zM18 12h2v8h-2z"/></svg>School Finder</a>
+    <a class="al-sb-link" href="/scholarship-estimator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1 3 2.3c0 3-6 1.4-6 4.3 0 1.4 1.3 2.4 3 2.4s3-1 3-2.4"/></svg>Scholarship Estimator</a>
+    <a class="al-sb-link" href="/debt-planner/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="7" cy="14.5" r="1"/></svg>Debt Planner</a>
   </div>
-</nav>
+
+  <div class="al-sb-spacer"></div>
+  <div class="al-sb-foot">
+    <button class="al-sb-link al-theme-toggle" id="alThemeToggle" type="button" aria-label="Toggle dark mode">
+      <svg id="alThemeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg id="alThemeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a class="al-sb-link" href="/methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.5"/><path d="M12 17h.01"/></svg>Methodology</a>
+    <a class="al-sb-link" href="/sources.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Sources</a>
+    <a class="al-sb-link" href="/about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>About</a>
+    <a class="al-sb-link" href="/contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Contact</a>
+  </div>
+</aside>
+
+<div class="al-shell">
 
 <div class="stat-strip" role="complementary" aria-label="Data overview">
   <div class="stat-strip-inner">
@@ -332,5 +369,40 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 </script>
+
+</div><!-- /al-shell -->
+
+<script>
+(function () {
+  var sidebar = document.getElementById('alSidebar');
+  var toggle = document.getElementById('alSbToggle');
+  var scrim = document.getElementById('alSbScrim');
+  var themeBtn = document.getElementById('alThemeToggle');
+  var iconMoon = document.getElementById('alThemeIconMoon');
+  var iconSun = document.getElementById('alThemeIconSun');
+  function syncTheme() {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    iconMoon.style.display = isDark ? 'none' : 'block';
+    iconSun.style.display = isDark ? 'block' : 'none';
+  }
+  syncTheme();
+  themeBtn.addEventListener('click', function () {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('atlas-theme', isDark ? 'light' : 'dark');
+    syncTheme();
+  });
+  function closeNav() { sidebar.classList.remove('open'); scrim.classList.remove('open'); }
+  function openNav() { sidebar.classList.add('open'); scrim.classList.add('open'); }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('open') ? closeNav() : openNav();
+  });
+  scrim.addEventListener('click', closeNav);
+  sidebar.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { if (window.innerWidth <= 900) closeNav(); });
+  });
+})();
+</script>
+
 </body>
 </html>

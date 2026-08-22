@@ -53,7 +53,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/180x180 Favicon.png">
   <style>
@@ -2346,17 +2346,15 @@
         flex-direction: column;
         position: fixed;
         left: 0; top: 0; bottom: 0;
-        width: 220px;
+        width: 252px;
         z-index: 500;
-        background: linear-gradient(to bottom, rgba(240,247,243,0.98) 0%, rgba(232,244,238,0.97) 100%);
-        border-right: 1px solid rgba(15,81,50,0.16);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        background: #ffffff;
+        border-right: 1px solid #e2e8f0;
       }
 
       #content-area {
         position: fixed;
-        left: 220px; top: 0; right: 0; bottom: 0;
+        left: 252px; top: 0; right: 0; bottom: 0;
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -2367,13 +2365,31 @@
       #site-footer { display: none; }
       .header-main-row { display: flex; justify-content: center; align-items: center; gap: 8px; }
       .header-controls { width: auto; flex: 0 1 620px; justify-self: unset; }
+      .header-tagline-row { display: none; }
+      #context-strip { display: none; }
+
+      /* Header floats as a bare pill row directly over the map — no bar behind it */
+      header {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        z-index: 600;
+        background: none;
+        border-bottom: none;
+        box-shadow: none;
+        overflow: visible;
+        pointer-events: none;
+      }
+      header::before, header::after { display: none; }
+      .header-main-row { padding: 16px 28px; pointer-events: none; }
+      .header-main-row > * { pointer-events: auto; }
+      #site-main { padding-top: 0; }
 
       #compare-tray {
         left: calc(50% + 110px);
       }
 
       #comparison-panel {
-        left: 220px;
+        left: 252px;
       }
     }
 
@@ -2382,24 +2398,24 @@
     }
 
     .left-nav__brand {
-      padding: 22px 20px 18px;
+      padding: 22px 24px 18px;
       flex-shrink: 0;
     }
     .left-nav__logo-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--em-deep);
-      letter-spacing: -0.02em;
+      font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+      font-size: 1.32rem;
+      font-weight: 400;
+      color: #047857;
+      letter-spacing: -0.01em;
       line-height: 1;
     }
     .left-nav__logo-sub {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.52rem;
+      font-size: 0.68rem;
       font-weight: 500;
-      color: #9ab8a8;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
+      color: #94a3b8;
+      letter-spacing: 0.03em;
+      text-transform: none;
       line-height: 1;
       margin-top: 4px;
     }
@@ -2407,78 +2423,89 @@
     .left-nav__tiles {
       flex: 1;
       overflow-y: auto;
-      padding: 6px 10px 10px;
+      padding: 6px 16px 10px;
       display: flex;
       flex-direction: column;
       gap: 1px;
     }
     .left-nav__section-label {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.6rem;
-      font-weight: 600;
-      color: #9ab8a8;
-      letter-spacing: 0.18em;
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      padding: 14px 10px 5px;
+      padding: 14px 9px 5px;
     }
     .left-nav__tile {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 10px;
+      padding: 8px 9px;
       border-radius: 7px;
       text-decoration: none;
-      color: var(--ink-soft);
+      color: #64748b;
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 500;
+      position: relative;
       transition: background 0.12s ease, color 0.12s ease;
     }
     .left-nav__tile:hover {
-      background: rgba(15,81,50,0.07);
-      color: var(--em-deep);
+      background: #ecfdf5;
+      color: #0d1117;
     }
     .left-nav__tile.active {
-      background: rgba(15,81,50,0.09);
-      color: var(--em-deep);
+      background: #ecfdf5;
+      color: #0d1117;
       font-weight: 600;
+    }
+    .left-nav__tile.active::before {
+      content: '';
+      position: absolute;
+      left: -16px; top: 8px; bottom: 8px;
+      width: 3px;
+      border-radius: 0 3px 3px 0;
+      background: #059669;
     }
     .left-nav__tile svg {
       flex-shrink: 0;
-      opacity: 0.45;
-      transition: opacity 0.12s ease;
+      color: #94a3b8;
+      opacity: 1;
+      transition: color 0.12s ease;
     }
     .left-nav__tile:hover svg,
     .left-nav__tile.active svg {
-      opacity: 0.8;
+      color: #059669;
+      opacity: 1;
     }
 
     .left-nav__bottom {
-      padding: 10px 10px 16px;
+      padding: 10px 16px 16px;
       flex-shrink: 0;
-      border-top: 1px solid rgba(15,81,50,0.08);
+      border-top: 1px solid #f1f5f9;
     }
     .left-nav__tile-sm {
       display: flex;
       align-items: center;
-      padding: 6px 10px;
+      padding: 6px 9px;
       border-radius: 6px;
       text-decoration: none;
-      color: #9ab8a8;
+      color: #94a3b8;
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.76rem;
+      font-size: 0.8rem;
       font-weight: 400;
       transition: color 0.12s ease, background 0.12s ease;
     }
     .left-nav__tile-sm:hover {
-      color: var(--em-deep);
-      background: rgba(15,81,50,0.05);
+      color: #0d1117;
+      background: #ecfdf5;
     }
     .left-nav__copy {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.67rem;
-      color: #b8cfc4;
-      padding: 10px 10px 0;
+      color: #94a3b8;
+      padding: 10px 9px 0;
       letter-spacing: 0.02em;
     }
   </style>

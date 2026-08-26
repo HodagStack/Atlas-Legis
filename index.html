@@ -3087,7 +3087,7 @@ Promise.all([
 // ─── MAP ─────────────────────────────────────────────────────────────────────
 const map = L.map('map', { center:[38.5,-96.5], zoom:5, minZoom:3, maxZoom:14, maxBounds:[[-15,-230],[85,-10]], maxBoundsViscosity:0.85, worldCopyJump:false, zoomControl:false });
 L.control.zoom({ position:'bottomright' }).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_25v8_1_eee508bdc5cff714ad7b61c5', {
   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
   subdomains:'abcd', maxZoom:19
 }).addTo(map);

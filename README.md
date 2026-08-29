@@ -1,89 +1,60 @@
-# Atlas Legis
+Atlas Legis
 
-**Atlas Legis** is a free, data-driven law school analytics platform for prospective law students. It combines an interactive map of every ABA-accredited school with deep per-school profiles, data-driven rankings, and financial planning tools — all built directly from official ABA required disclosures.
+Atlas Legis is a free, independent law-school research platform for prospective students. It turns public ABA disclosures into a map, school profiles, comparisons, rankings, and planning tools—without reputation surveys or paywalled data.
 
-Live at **[atlaslegis.com](https://atlaslegis.com)**
+Live at atlaslegis.com
 
----
+What it includes
 
-## Features
+* Interactive map — Explore ABA-accredited U.S. law schools and surface core admissions and outcomes data directly from the map.
+* School profiles — 197 data-rich pages at /schools/<slug>/, covering admissions ranges, employment outcomes, bar passage, tuition, scholarships, cost of attendance, historical admissions trends, and downloadable reports.
+* Rankings — Sortable, filterable views for bar passage, BigLaw placement, federal clerkships, and scholarship data. They use disclosed data rather than reputation surveys.
+* Where Do I Stand? — An LSAT/GPA positioning tool.
+* Scholarship Estimator — Estimates merit-scholarship ranges from each school’s disclosed 509 grant-distribution data, with net-cost context and confidence indicators.
+* Debt Planner — Models borrowing and repayment under standard, scholarship-loss, and public-interest/PSLF scenarios; it includes school-specific tuition autofill and shareable URLs.
+* Guides — Plain-language admissions resources, beginning with application-fee waivers.
 
-### Interactive Map
-The homepage displays all ABA-accredited law schools on a pannable, zoomable map. Markers are clickable and surface key stats at a glance.
+Data and methodology
 
-### School Profiles (~198 pages)
-Every accredited school has a dedicated profile at `/schools/<slug>/` with:
-- Employment outcomes (BigLaw, federal clerkships, public interest, JD advantage)
-- Bar passage rates vs. state averages
-- Tuition, scholarship, and cost of attendance data
-- Admissions statistics (LSAT/GPA 25th–75th percentiles)
-- Downloadable PDF reports
+Atlas Legis is built primarily from official, public ABA required disclosures:
 
-### Rankings
-Ranked entirely from ABA 509 disclosure data — no reputation surveys, no opaque methodology.
+* ABA Standard 509 reports: admissions, enrollment, tuition, scholarships, and bar-passage data
+* ABA employment summaries: Class of 2024 employment outcomes
+* Federal loan rates: 2026 FAFSA rates
 
-| Ranking | URL |
-|---|---|
-| Bar Passage | `/rankings/bar-passage/` |
-| BigLaw Placement | `/rankings/biglaw/` |
-| Federal Clerkships | `/rankings/federal-clerkships/` |
-| Scholarships | `/rankings/scholarships/` |
+Employment percentages are calculated from disclosed raw counts, using total graduates—including graduates of unknown status—as the denominator. The project does not use reputation surveys, subjective composite scores, or third-party estimated employment outcomes.
 
-All ranking pages feature sortable/filterable tables, gold/silver/bronze podium cards for the top 3, and inline progress bars.
+See the site’s sources and methodology pages for additional detail.
 
-### Debt Planner (`/debt-planner/`)
-Projects total law school borrowing across three scenarios using 2026 federal loan rates (7.94% Unsubsidized / 8.94% PLUS):
-- **Standard** — normal repayment
-- **High Risk** — scholarship loss after Year 1
-- **Public Interest (PSLF)** — income-based repayment toward forgiveness
+Built with
 
-Includes a Chart.js loan balance visualization, school-specific tuition autofill, and a shareable URL.
+* Vanilla HTML, CSS, and JavaScript—no framework or bundler
+* Static JSON datasets in /data/
+* Leaflet for the interactive map and Chart.js for visualizations
+* GitHub Pages with the custom domain atlaslegis.com
+* Google Analytics
+* Playfair Display, DM Sans, and Instrument Serif
 
-### Scholarship Estimator (`/scholarship-estimator/`)
-Enter your LSAT and GPA to see estimated merit scholarship amounts at every ABA school, calculated from official 509 grant distribution data. Includes grant estimate, 3-year total, estimated net cost, applicant strength tiers (Strong / Competitive / Reach), and confidence indicators.
+Repository layout
 
----
-
-## Data Sources
-
-All data comes from ABA required disclosures:
-- **ABA 509 reports** — admissions, enrollment, bar passage, tuition, scholarships
-- **ABA employment summaries** — Class of 2024 outcomes
-- **Federal loan rates** — 2026 FAFSA rates
-
-No affiliation with any law school or accrediting body.
-
----
-
-## Tech Stack
-
-- **Frontend:** Vanilla HTML, CSS, JavaScript — no framework, no bundler
-- **Data:** Static JSON files in `/data/` loaded via `fetch()`
-- **Charts:** Chart.js 4.4
-- **Hosting:** GitHub Pages (custom domain via `CNAME`)
-- **Fonts:** Playfair Display · DM Sans · Instrument Serif (Google Fonts)
-
----
-
-## Project Structure
-
-```
 /
-├── index.html                    # Homepage + map
-├── schools/<slug>/index.html     # ~198 individual school profiles
-├── rankings/
-│   ├── index.html                # Rankings hub
-│   ├── bar-passage/
-│   ├── biglaw/
-│   ├── federal-clerkships/
-│   └── scholarships/
-├── debt-planner/index.html
-├── scholarship-estimator/index.html
-├── data/                         # JSON data files
-├── reports/<slug>.pdf            # Per-school PDF reports
-└── theme.css / theme.js          # Sitewide dark mode toggle
-```
+├── index.html                    # Homepage and interactive map
+├── schools/<slug>/               # Individual school profiles
+├── rankings/                     # Rankings hub and metric pages
+├── debt-planner/                 # Law-school borrowing planner
+├── scholarship-estimator/        # Merit-scholarship estimator
+├── finder/                       # Admissions-positioning tool
+├── guides/                       # Admissions guides
+├── data/                         # Source-derived JSON datasets
+├── reports/                      # Downloadable school reports
+├── scripts/                      # Page generation and data-maintenance scripts
+├── theme.css / theme.js          # Shared interface and theme behavior
+└── sitemap.xml                   # Search-engine discovery
 
----
+Updating the site
 
-*Atlas Legis is an independent project and is not affiliated with any law school or accrediting body. Data is sourced from public ABA disclosures and is provided for informational purposes only.*
+The site is static. Most data and profile-page changes begin in /data/ and are propagated with the scripts in /scripts/; profile pages are generated rather than hand-authored. Changes pushed to main deploy through GitHub Pages.
+
+⸻
+
+Atlas Legis is an independent project, unaffiliated with the ABA, any law school, or U.S. News. Its data is provided for informational purposes only.
